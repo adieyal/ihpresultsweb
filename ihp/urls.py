@@ -162,9 +162,9 @@ urlpatterns = patterns('',
 
     # dashboard is URL to access underlying data indirectly
     (r'^dashboard/$', direct_to_template, {"template" : "home.html", "extra_context" : {
-    "agencies" : Agency.objects.filter(type="Agency"),
+    "agencies" : Agency.objects.filter(type="Agency").order_by("display_name"),
     "gbsagencies" : Agency.objects.get_by_type("GBS"),
-    "countries" : Country.objects.all()}},
+    "countries" : Country.objects.all().order_by("country")}},
      "home"))
 
 _media_url = settings.MEDIA_URL
