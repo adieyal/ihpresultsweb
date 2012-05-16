@@ -285,6 +285,10 @@ class Command(BaseCommand):
     @transaction.commit_on_success
     def process_responses2(self, db):
         # Process the 2012 responses first
+        DPQuestion.objects.all().update(
+            latest_year="",
+            latest_value=""
+        )
         responses2012 = db["js"]["responses_2012"]
         
         dp_submissions = db["js"]["response_sets_dp"]
@@ -294,13 +298,14 @@ class Command(BaseCommand):
             for pk, rs in responses2012.items() 
             if rs.response_set["pk"] in dp_submissions
         ])
-
+            
         rm = ResponseManager(db)
 
         for pk, response in dp_responses.items():
             rm.add(response) 
 
         for submission, responses in rm.latest_responses.items():
+
             for response in responses.values():
                 v1_qn = response.v1_question
                 v1_qtype = response.question_type
