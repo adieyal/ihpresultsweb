@@ -181,7 +181,12 @@ class Response(object):
 
     @property
     def value(self):
-        v = json.loads(self.js["fields"]["value"])["value"]
+        value = json.loads(self.js["fields"]["value"])
+        if type(value) == dict:
+            v = value["value"]
+        else:
+            v = value
+
         if self.question_type == "currency" and v:
             return self._currency_value(v)
         return v
@@ -308,7 +313,7 @@ class Command(BaseCommand):
                 if v1_qtype == "comment":
                     dpq.comment = response.value
                 else:
-                    dpq.latest_value = response.value or ""
+                    dpq.latest_value = response.value if response.value != None else ""
                 dpq.save()
         
         # Now process baseline values
@@ -340,7 +345,7 @@ class Command(BaseCommand):
                         pass
                     else:
                         if not dpq.baseline_value:
-                            dpq.baseline_value = response.value or ""
+                            dpq.baseline_value = response.value if response.value != None else ""
                     dpq.save()
                 except DPQuestion.DoesNotExist:
                     print "Could not find submission for response: %s" % response.pk
