@@ -16,8 +16,6 @@ def calc_indicator(qs, agency_or_country, indicator, funcs=None):
     funcs - used to override the indicator functions
     """
 
-    #if indicator == "6DP" and qs[0].submission.country.country == "Sierra Leone":
-    #    import pdb; pdb.set_trace()
     if type(qs) == QuerySet: qs = list(qs)
     is_none = lambda x : x == None or (unicode(x)).strip() == ""
 
@@ -25,6 +23,13 @@ def calc_indicator(qs, agency_or_country, indicator, funcs=None):
     func, args = funcs[indicator]
     
     qs2 = [q for q in qs if q.question_number in args]
+    if indicator == "6DP" and qs[0].submission.country.country == "Sierra Leone":
+        print qs2
+        #import pdb; pdb.set_trace()
+        #print qs2[0].baseline_value, qs2[1].baseline_value
+        #print qs2[0].latest_value, qs2[1].latest_value
+        print qs2[0].baseline_value
+        print qs2[0].latest_value
     
     comments = [(question.question_number, question.submission.country, question.comments) for question in qs2]
 
@@ -132,8 +137,8 @@ def calc_agency_country_indicator(qs, agency, country, indicator, funcs=None):
     funcs = funcs or dict(indicator_funcs)
     try:
         funcs["1DP"] = (equals_or_zero("yes"), ("1",))
-        funcs["6DP"] = (equals_or_zero("yes"), ("17",))
-        funcs["7DP"] = (equals_or_zero("yes"), ("18",))
+        funcs["6DP"] = (equals_or_zero("yes"), ("14",))
+        funcs["7DP"] = (equals_or_zero("yes"), ("15",))
         return calc_indicator(qs, agency, indicator, funcs)
     except:
         traceback.print_exc()
