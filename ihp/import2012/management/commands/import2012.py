@@ -282,13 +282,63 @@ class Command(BaseCommand):
 
                 db["models"]["submissions"][pk] = s
 
-    @transaction.commit_on_success
-    def process_responses2(self, db):
-        # Process the 2012 responses first
+
+    def prepare_dp_questions(self):
+        # Remove all the latest year values
         DPQuestion.objects.all().update(
             latest_year="",
             latest_value=""
         )
+
+        # Since question numbers changed between the 2010 and 2012 surveys
+        # and since baseline don't is retained, there is a need to move these values around into the correct question numbers
+
+        # TODO - this code is not yet ready from prime time
+        # map new question numbers to old
+        # order matters take care to ensure that
+        # a question appears on the left before
+        # it appears on the right
+        #mapping = [
+        #    ("16", "20"),
+        #    ("15", "18"),
+        #    ("14", "17"),
+        #    ("13", "16"),
+        #    ("12", "15"),
+        #    ("2", "14"),
+        #    ("11", "13"),
+        #    ("10", "12"),
+        #    ("6", "11"),
+        #    ("9", "10"),
+        #    ("8", "9"),
+        #    ("6", "8"),
+        #]
+        #for submission in Submission.objects.filter(type="DP"):
+        #    questions = submission.dpquestion_set.all()
+        #    for (fq, tq) in mapping:
+        #        print fq, tq
+        #        
+        #        from_question = questions.get(question_number=fq)
+        #        try:
+        #            print submission.agency, submission.country
+        #            to_question = questions.get(question_number=tq)
+        #        except DPQuestion.DoesNotExist:
+        #            to_question = DPQuestion.objects.create(
+        #                submission=submission,
+        #                question_number=tq,
+        #                baseline_year="", baseline_value="",
+        #                latest_year="", latest_value="",
+        #                comments=""
+        #            )
+
+        #        from_question.baseline_year = to_question.baseline_year
+        #        from_question.baseline_value = to_question.baseline_value
+        #        to_question.save()
+
+    @transaction.commit_on_success
+    def process_responses(self, db):
+        self.prepare_dp_questions()
+
+        # Process the 2012 responses first
         responses2012 = db["js"]["responses_2012"]
         
         dp_submissions = db["js"]["response_sets_dp"]
@@ -434,4 +484,4 @@ class Command(BaseCommand):
         self.process_agencies(db)
         self.process_countries(db)
         self.process_responsesets2012(db)
-        self.process_responses2(db)
+        self.process_responses(db)
