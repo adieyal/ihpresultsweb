@@ -16,6 +16,8 @@ def calc_indicator(qs, agency_or_country, indicator, funcs=None):
     funcs - used to override the indicator functions
     """
 
+    #if indicator == "6DP" and qs[0].submission.country.country == "Sierra Leone":
+    #    import pdb; pdb.set_trace()
     if type(qs) == QuerySet: qs = list(qs)
     is_none = lambda x : x == None or (unicode(x)).strip() == ""
 
@@ -263,7 +265,7 @@ indicator_questions = {
 # Functions that calculate values in a positive sense - i.e. how much on budget, not how much off budget
 positive_funcs = dict(indicator_funcs)
 positive_funcs["2DPa"] = (calc_numdenom, ("3", "2"))
-positive_funcs["4DP"] = (calc_numdenom, ("11", "10"))
-positive_funcs["5DPa"] = (calc_numdenom, ("13", "12"))
-positive_funcs["5DPb"] = (calc_numdenom, ("15", "14"))
+positive_funcs["4DP"] = (calc_numdenom, ("9", "6"))
+positive_funcs["5DPa"] = (calc_numdenom, ("11", "10"))
+positive_funcs["5DPb"] = (calc_numdenom, ("12", "2"))
 positive_funcs["4G"] = (calc_numdenom, ("8", "7"))
