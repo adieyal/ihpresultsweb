@@ -23,13 +23,6 @@ def calc_indicator(qs, agency_or_country, indicator, funcs=None):
     func, args = funcs[indicator]
     
     qs2 = [q for q in qs if q.question_number in args]
-    if indicator == "6DP" and qs[0].submission.country.country == "Sierra Leone":
-        print qs2
-        #import pdb; pdb.set_trace()
-        #print qs2[0].baseline_value, qs2[1].baseline_value
-        #print qs2[0].latest_value, qs2[1].latest_value
-        print qs2[0].baseline_value
-        print qs2[0].latest_value
     
     comments = [(question.question_number, question.submission.country, question.comments) for question in qs2]
 
