@@ -116,7 +116,7 @@ def calc_numdenom(qs, agency_or_country, selector, numq, denomq):
     num = _sum_values([q for q in qs if q.question_number==numq], selector)
 
     if den in [NA_STR, None] or num in [NA_STR, None]:
-        return den
+        return None
     ratio = NA_STR
     if den > 0: ratio = num / den * 100
     return ratio
