@@ -291,48 +291,40 @@ class Command(BaseCommand):
         )
 
         # Since question numbers changed between the 2010 and 2012 surveys
-        # and since baseline don't is retained, there is a need to move these values around into the correct question numbers
+        # and since baseline is retained, there is a need to move these values around into the correct question numbers
 
-        # TODO - this code is not yet ready from prime time
-        # map new question numbers to old
+        # map baseline answers from old question numbers to new
         # order matters take care to ensure that
         # a question appears on the left before
         # it appears on the right
-        #mapping = [
-        #    ("16", "20"),
-        #    ("15", "18"),
-        #    ("14", "17"),
-        #    ("13", "16"),
-        #    ("12", "15"),
-        #    ("2", "14"),
-        #    ("11", "13"),
-        #    ("10", "12"),
-        #    ("6", "11"),
-        #    ("9", "10"),
-        #    ("8", "9"),
-        #    ("6", "8"),
-        #]
-        #for submission in Submission.objects.filter(type="DP"):
-        #    questions = submission.dpquestion_set.all()
-        #    for (fq, tq) in mapping:
-        #        print fq, tq
-        #        
-        #        from_question = questions.get(question_number=fq)
-        #        try:
-        #            print submission.agency, submission.country
-        #            to_question = questions.get(question_number=tq)
-        #        except DPQuestion.DoesNotExist:
-        #            to_question = DPQuestion.objects.create(
-        #                submission=submission,
-        #                question_number=tq,
-        #                baseline_year="", baseline_value="",
-        #                latest_year="", latest_value="",
-        #                comments=""
-        #            )
 
-        #        from_question.baseline_year = to_question.baseline_year
-        #        from_question.baseline_value = to_question.baseline_value
-        #        to_question.save()
+        mapping = [
+            ("14", "2"),
+            ("17", "14"),
+            ("9", "8"),
+            ("10", "9"),
+            ("12", "10"),
+            ("15", "12"),
+            ("18", "15"),
+            ("11", "6"),
+            ("13", "11"),
+            ("16", "13"),
+            ("20", "16"),
+            #("8", "6"),
+        ]
+
+        for submission in Submission.objects.filter(type="DP"):
+            questions = submission.dpquestion_set.all()
+            for (fq, tq) in mapping:
+                print fq, tq
+                
+                try:
+                    questions.filter(question_number=tq).delete()
+                    from_question = questions.get(question_number=fq)
+                    from_question.question_number=tq
+                    from_question.save()
+                except DPQuestion.DoesNotExist:
+                    print "Question %s does not question for %s" % (fq, submission)
 
     @transaction.commit_on_success
     def process_responses(self, db):
@@ -388,6 +380,10 @@ class Command(BaseCommand):
             for response in responses.values():
                 v1_qn = response.v1_question
                 v1_qtype = response.question_type
+                key = (submission.agency, submission.country)
+                if submission.agency.agency == "GFATM" and submission.country.country == "Burkina Faso":
+                    print v1_qn, response.value
+                    
 
                 try:
                     dpq = DPQuestion.objects.get(
