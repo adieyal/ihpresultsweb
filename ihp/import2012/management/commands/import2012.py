@@ -301,23 +301,21 @@ class Command(BaseCommand):
         mapping = [
             ("14", "2"),
             ("17", "14"),
+            ("8", "6"),
             ("9", "8"),
-            ("10", "9"),
+            ("10", "10old"),
             ("12", "10"),
             ("15", "12"),
             ("18", "15"),
-            ("11", "6"),
+            ("11", "11old"),
             ("13", "11"),
             ("16", "13"),
             ("20", "16"),
-            #("8", "6"),
         ]
 
         for submission in Submission.objects.filter(type="DP"):
             questions = submission.dpquestion_set.all()
             for (fq, tq) in mapping:
-                print fq, tq
-                
                 try:
                     questions.filter(question_number=tq).delete()
                     from_question = questions.get(question_number=fq)

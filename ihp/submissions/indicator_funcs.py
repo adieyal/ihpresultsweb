@@ -22,6 +22,13 @@ def _sum_values(qs, selector):
         return None if len(nones) > 0 else NA_STR
     
     return sum([float(selector(q)) for q in qs])
+
+def func_4dpspecial(qs, agency_or_country, selector, base_numq, base_denomq, latest_numq, latest_denomq):
+
+    if selector == base_selector:
+        return calc_numdenom(qs, agency_or_country, selector, base_numq, base_denomq)
+    else:
+        return calc_numdenom(qs, agency_or_country, selector, latest_numq, latest_denomq)
     
 def func_8dpfix(qs, agency, selector, q):
     qs_countries = [q.submission.country for q in qs]

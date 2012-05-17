@@ -23,8 +23,8 @@ def calc_indicator(qs, agency_or_country, indicator, funcs=None):
     func, args = funcs[indicator]
     
     qs2 = [q for q in qs if q.question_number in args]
-    #if agency_or_country.agency == "UNFPA":
-    #    if indicator == "3DP" and qs[0].submission.country.country == "Sierra Leone":
+    #if agency_or_country.agency == "WHO":
+    #    if indicator == "8DP" and qs[0].submission.country.country == "DRC":
     #        import pdb; pdb.set_trace()
     
     comments = [(question.question_number, question.submission.country, question.comments) for question in qs2]
@@ -209,7 +209,8 @@ indicator_funcs = {
     "2DPb" : (calc_numdenom, ("5", "4")),
     "2DPc" : (calc_numdenom, ("7", "6")),
     "3DP"  : (calc_numdenom, ("8", "6")),
-    "4DP"  : (calc_numdenom, ("6", "9")),
+    #"4DP"  : (calc_numdenom, ("6", "9")),
+    "4DP"  : (func_4dpspecial, ("11old", "10old", "6", "9")),
     "5DPa" : (calc_one_minus_numdenom, ("11", "10")),
     "5DPb" : (calc_one_minus_numdenom, ("12", "2")),
     "5DPc" : (sum_values, ("13",)),
@@ -242,7 +243,7 @@ indicator_questions = dict([
 # Functions that calculate values in a positive sense - i.e. how much on budget, not how much off budget
 positive_funcs = dict(indicator_funcs)
 positive_funcs["2DPa"] = (calc_numdenom, indicator_funcs["2DPa"][1])
-positive_funcs["4DP"] = (calc_numdenom, indicator_funcs["4DP"][1])
+positive_funcs["4DP"] = indicator_funcs["4DP"]
 positive_funcs["5DPa"] = (calc_numdenom, indicator_funcs["5DPa"][1])
 positive_funcs["5DPb"] = (calc_numdenom, indicator_funcs["5DPb"][1])
 positive_funcs["4G"] = (calc_numdenom, indicator_funcs["4G"][1])
