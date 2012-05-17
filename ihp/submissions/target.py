@@ -332,13 +332,17 @@ def country_agency_indicator_ratings(country, agency):
 
     for indicator in country_indicators:
         v = country_indicators[indicator]
-        debug("extracting %s from %s" % (indicator, str(country_indicators)))
-        values, comments = v
-        (base_val, base_year, cur_val, cur_year) = values
+        #TODO - temporary hack until 8DP is fixed
+        if indicator == "8DP":
+            indicators[indicator] = "tick"
+        else:
+            debug("extracting %s from %s" % (indicator, str(country_indicators)))
+            values, comments = v
+            (base_val, base_year, cur_val, cur_year) = values
 
-        target = targets[indicator]
-        result = evaluate_agency_country_indicator(agency, country, target, base_val, cur_val)
-        indicators[indicator] = result
+            target = targets[indicator]
+            result = evaluate_agency_country_indicator(agency, country, target, base_val, cur_val)
+            indicators[indicator] = result
     return indicators
 
 def country_agency_progress(country, agency):
