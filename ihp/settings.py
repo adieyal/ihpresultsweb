@@ -10,8 +10,9 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'sqlite3' 
-DATABASE_NAME = 'ihp.db'
+DATABASE_ENGINE = 'sqlite3'
+#DATABASE_NAME = 'ihp.db'
+DATABASE_NAME = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'ihp.db.sample')
 
 TIME_ZONE = 'Africa/Johannesburg'
 LANGUAGE_CODE = 'en-us'
@@ -70,9 +71,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django_jenkins',
     "debug_toolbar",
-
     'south',
-   
     'submissions',
     'publicweb',
 )
@@ -94,4 +93,4 @@ POLL_USERNAME = "ihpresults2010survey@human-scale.net"
 POLL_PASSWORD = "changeme"
 POLL_HOST = "pop.gmail.com"
 
-from local_settings import *
+
