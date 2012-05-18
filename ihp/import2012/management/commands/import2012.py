@@ -354,12 +354,33 @@ class Command(BaseCommand):
                     submission=submission,
                     question_number=v1_qn
                 )
+
                 dpq.latest_year = response.year
                 if v1_qtype == "comment":
-                    dpq.comment = response.value
+                    dpq.comments = response.value
                 else:
                     dpq.latest_value = response.value if response.value != None else ""
                 dpq.save()
+
+                # This is really ugly - but it's better to keep the ugliness
+                # in the import logic. In the 2012 survey - 4DP is a different
+                # indicator to the 2010 survey. In short, Q9 in 2012 doesn't
+                # map to anything in 2010. In order to accurately calculate 
+                # DP in both the baseline and latest year, we copy across values
+                # in both surveys to a new question
+                # for the baseline the mapping is 10 => 10old and 11 => 11old
+                # in the 2012 survey the mapping is 6 => 10old and 9 => 11old
+                mapping = {"6" : "10old", "9" : "11old"}
+                if v1_qn in mapping:
+                    new_q = mapping[v1_qn]
+                    dpq2, created = DPQuestion.objects.get_or_create(
+                        submission=submission,
+                        question_number=new_q
+                    )
+                    dpq2.comment = dpq.comments
+                    dpq2.latest_value = dpq.latest_value
+                    dpq2.latest_year = dpq.latest_year
+                    dpq2.save()
         
         # Now process baseline values
         responses_baseline = db["js"]["responses_baseline"]
@@ -379,9 +400,6 @@ class Command(BaseCommand):
                 v1_qn = response.v1_question
                 v1_qtype = response.question_type
                 key = (submission.agency, submission.country)
-                if submission.agency.agency == "GFATM" and submission.country.country == "Burkina Faso":
-                    print v1_qn, response.value
-                    
 
                 try:
                     dpq = DPQuestion.objects.get(

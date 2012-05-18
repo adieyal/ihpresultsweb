@@ -23,16 +23,16 @@ def calc_indicator(qs, agency_or_country, indicator, funcs=None):
     func, args = funcs[indicator]
     
     qs2 = [q for q in qs if q.question_number in args]
-    #if agency_or_country.agency == "WHO":
-    #    if indicator == "8DP" and qs[0].submission.country.country == "DRC":
-    #        import pdb; pdb.set_trace()
-    
     comments = [(question.question_number, question.submission.country, question.comments) for question in qs2]
 
     exclude_baseline = []
     exclude_latest = []
     baseline_questions = latest_questions = 0
     baseline_excluded_count = latest_excluded_count = 0
+    #if agency_or_country.agency == "UNFPA":
+    #    if indicator == "4DP" and qs[0].submission.country.country == "Burundi":
+    #        import pdb; pdb.set_trace()
+    
     
     for q in qs2:
         if type(q) == DPQuestion:
@@ -210,7 +210,7 @@ indicator_funcs = {
     "2DPc" : (calc_numdenom, ("7", "6")),
     "3DP"  : (calc_numdenom, ("8", "6")),
     #"4DP"  : (calc_numdenom, ("6", "9")),
-    "4DP"  : (func_4dpspecial, ("11old", "10old", "6", "9")),
+    "4DP"  : (calc_numdenom, ("11old", "10old")),
     "5DPa" : (calc_one_minus_numdenom, ("11", "10")),
     "5DPb" : (calc_one_minus_numdenom, ("12", "2")),
     "5DPc" : (sum_values, ("13",)),
