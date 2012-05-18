@@ -16,7 +16,7 @@
     <tr class="head2">
         {% for country, _ in abs_values %}
             <th>2007</th>
-            <th>2009</th>
+            <th>2011</th>
             <th>{{ translation.rating }} ∆</th>
         {% endfor %}
 
@@ -26,7 +26,7 @@
         <td>{{ spm_map.1DP }}</td>
         {% for country, data in abs_values %}
             <td>{{ data.1DP.base_val|default_if_none:"-" }}<br/>{% if data.1DP.base_year != "2007" %}<span class="year">({{ data.1DP.base_year }})</span>{% endif %}</td>
-            <td>{{ data.1DP.latest_val|default_if_none:"-" }}<br/>{% if data.1DP.latest_year != "2009" %}<span class="year">({{ data.1DP.latest_year }})</span>{% endif %}</td>
+            <td>{{ data.1DP.latest_val|default_if_none:"-" }}<br/>{% if data.1DP.latest_year != "2011" %}<span class="year">({{ data.1DP.latest_year }})</span>{% endif %}</td>
             <td><img src="{{ MEDIA_URL }}/images/{{data.1DP.rating}}.png"></td>
         {% endfor %}
     </tr>
@@ -35,7 +35,7 @@
         <td>{{ spm_map.2DPa }}</td>
         {% for country, data in abs_values %}
             <td>{{ data.2DPa.base_val|default_if_none:"-" }} {% if data.2DPa.base_year != "2007" %}<br/><span class="year">({{ data.2DPa.base_year }})</span>{% endif %}</td>
-            <td>{{ data.2DPa.latest_val|default_if_none:"-" }}<br/>{% if data.2DPa.latest_year != "2009" %}<span class="year">({{ data.2DPa.latest_year }})</span>{% endif %}</td>
+            <td>{{ data.2DPa.latest_val|default_if_none:"-" }}<br/>{% if data.2DPa.latest_year != "2011" %}<span class="year">({{ data.2DPa.latest_year }})</span>{% endif %}</td>
             <td><img src="{{ MEDIA_URL }}/images/{{data.2DPa.rating}}.png"></td>
         {% endfor %}
     </tr>
@@ -44,7 +44,7 @@
         <td>{{ spm_map.2DPb }}</td>
         {% for country, data in abs_values %}
             <td>{{ data.2DPb.base_val|default_if_none:"-" }} {% if data.2DPb.base_year != "2007" %}<br/><span class="year">({{ data.2DPb.base_year }})</span>{% endif %}</td>
-            <td>{{ data.2DPb.latest_val|default_if_none:"-" }}<br/>{% if data.2DPb.latest_year != "2009" %}<span class="year">({{ data.2DPb.latest_year }})</span>{% endif %}</td>
+            <td>{{ data.2DPb.latest_val|default_if_none:"-" }}<br/>{% if data.2DPb.latest_year != "2011" %}<span class="year">({{ data.2DPb.latest_year }})</span>{% endif %}</td>
             <td><img src="{{ MEDIA_URL }}/images/{{data.2DPb.rating}}.png"></td>
         {% endfor %}
     </tr>
@@ -53,7 +53,7 @@
         <td>{{ spm_map.2DPc }}</td>
         {% for country, data in abs_values %}
             <td>{{ data.2DPc.base_val|default_if_none:"-" }} {% if data.2DPc.base_year != "2007" %}<br/><span class="year">({{ data.2DPc.base_year }})</span>{% endif %}</td>
-            <td>{{ data.2DPc.latest_val|default_if_none:"-" }}<br/>{% if data.2DPc.latest_year != "2009" %}<span class="year">({{ data.2DPc.latest_year }})</span>{% endif %}</td>
+            <td>{{ data.2DPc.latest_val|default_if_none:"-" }}<br/>{% if data.2DPc.latest_year != "2011" %}<span class="year">({{ data.2DPc.latest_year }})</span>{% endif %}</td>
             <td><img src="{{ MEDIA_URL }}/images/{{data.2DPc.rating}}.png"></td>
         {% endfor %}
     </tr>
@@ -62,7 +62,7 @@
         <td>{{ spm_map.3DP }}</td>
         {% for country, data in abs_values %}
             <td>{{ data.3DP.base_val|default_if_none:"-" }} {% if data.3DP.base_year != "2007" %}<br/><span class="year">({{ data.3DP.base_year }})</span>{% endif %}</td>
-            <td>{{ data.3DP.latest_val|default_if_none:"-" }}<br/>{% if data.3DP.latest_year != "2009" %}<span class="year">({{ data.3DP.latest_year }})</span>{% endif %}</td>
+            <td>{{ data.3DP.latest_val|default_if_none:"-" }}<br/>{% if data.3DP.latest_year != "2011" %}<span class="year">({{ data.3DP.latest_year }})</span>{% endif %}</td>
             <td><img src="{{ MEDIA_URL }}/images/{{data.3DP.rating}}.png"></td>
         {% endfor %}
     </tr>
@@ -71,7 +71,7 @@
         <td>{{ spm_map.4DP }}</td>
         {% for country, data in abs_values %}
             <td>{{ data.4DP.base_val|default_if_none:"-" }} {% if data.4DP.base_year != "2007" %}<br/><span class="year">({{ data.4DP.base_year }})</span>{% endif %}</td>
-            <td>{{ data.4DP.latest_val|default_if_none:"-" }}<br/>{% if data.4DP.latest_year != "2009" %}<span class="year">({{ data.4DP.latest_year }})</span>{% endif %}</td>
+            <td>{{ data.4DP.latest_val|default_if_none:"-" }}<br/>{% if data.4DP.latest_year != "2011" %}<span class="year">({{ data.4DP.latest_year }})</span>{% endif %}</td>
             <td><img src="{{ MEDIA_URL }}/images/{{data.4DP.rating}}.png"></td>
         {% endfor %}
     </tr>
@@ -80,7 +80,7 @@
         <td>{{ spm_map.5DPa }}</td>
         {% for country, data in abs_values %}
             <td>{{ data.5DPa.base_val|default_if_none:"-" }} {% if data.5DPa.base_year != "2007" %}<br/><span class="year">({{ data.5DPa.base_year }})</span>{% endif %}</td>
-            <td>{{ data.5DPa.latest_val|default_if_none:"-" }}<br/>{% if data.5DPa.latest_year != "2009" %}<span class="year">({{ data.5DPa.latest_year }})</span>{% endif %}</td>
+            <td>{{ data.5DPa.latest_val|default_if_none:"-" }}<br/>{% if data.5DPa.latest_year != "2011" %}<span class="year">({{ data.5DPa.latest_year }})</span>{% endif %}</td>
             <td><img src="{{ MEDIA_URL }}/images/{{data.5DPa.rating}}.png"></td>
         {% endfor %}
     </tr>
@@ -89,7 +89,7 @@
         <td>{{ spm_map.5DPb }}</td>
         {% for country, data in abs_values %}
             <td>{{ data.5DPb.base_val|default_if_none:"-" }} {% if data.5DPb.base_year != "2007" %}<br/><span class="year">({{ data.5DPb.base_year }})</span>{% endif %}</td>
-            <td>{{ data.5DPb.latest_val|default_if_none:"-" }}<br/>{% if data.5DPb.latest_year != "2009" %}<span class="year">({{ data.5DPb.latest_year }})</span>{% endif %}</td>
+            <td>{{ data.5DPb.latest_val|default_if_none:"-" }}<br/>{% if data.5DPb.latest_year != "2011" %}<span class="year">({{ data.5DPb.latest_year }})</span>{% endif %}</td>
             <td><img src="{{ MEDIA_URL }}/images/{{data.5DPb.rating}}.png"></td>
         {% endfor %}
     </tr>
@@ -98,7 +98,7 @@
         <td>{{ spm_map.5DPc }}</td>
         {% for country, data in abs_values %}
             <td>{{ data.5DPc.base_val|default_if_none:"-" }} {% if data.5DPc.base_year != "2007" %}<br/><span class="year">({{ data.5DPc.base_year }})</span>{% endif %}</td>
-            <td>{{ data.5DPc.latest_val|default_if_none:"-" }}<br/>{% if data.5DPc.latest_year != "2009" %}<span class="year">({{ data.5DPc.latest_year }})</span>{% endif %}</td>
+            <td>{{ data.5DPc.latest_val|default_if_none:"-" }}<br/>{% if data.5DPc.latest_year != "2011" %}<span class="year">({{ data.5DPc.latest_year }})</span>{% endif %}</td>
             <td><img src="{{ MEDIA_URL }}/images/{{data.5DPc.rating}}.png"></td>
         {% endfor %}
     </tr>
@@ -107,7 +107,7 @@
         <td>{{ spm_map.6DP }}</td>
         {% for country, data in abs_values %}
             <td>{{ data.6DP.base_val|default_if_none:"-" }} {% if data.6DP.base_year != "2007" %}<br/><span class="year">({{ data.6DP.base_year }})</span>{% endif %}</td>
-            <td>{{ data.6DP.latest_val|default_if_none:"-" }}<br/>{% if data.6DP.latest_year != "2009" %}<span class="year">({{ data.6DP.latest_year }})</span>{% endif %}</td>
+            <td>{{ data.6DP.latest_val|default_if_none:"-" }}<br/>{% if data.6DP.latest_year != "2011" %}<span class="year">({{ data.6DP.latest_year }})</span>{% endif %}</td>
             <td><img src="{{ MEDIA_URL }}/images/{{data.6DP.rating}}.png"></td>
         {% endfor %}
     </tr>
@@ -116,7 +116,7 @@
         <td>{{ spm_map.7DP }}</td>
         {% for country, data in abs_values %}
             <td>{{ data.7DP.base_val|default_if_none:"-" }} {% if data.7DP.base_year != "2007" %}<br/><span class="year">({{ data.7DP.base_year }})</span>{% endif %}</td>
-            <td>{{ data.7DP.latest_val|default_if_none:"-" }}<br/>{% if data.7DP.latest_year != "2009" %}<span class="year">({{ data.7DP.latest_year }})</span>{% endif %}</td>
+            <td>{{ data.7DP.latest_val|default_if_none:"-" }}<br/>{% if data.7DP.latest_year != "2011" %}<span class="year">({{ data.7DP.latest_year }})</span>{% endif %}</td>
             <td><img src="{{ MEDIA_URL }}/images/{{data.7DP.rating}}.png"></td>
         {% endfor %}
     </tr>
@@ -125,7 +125,7 @@
         <td>{{ spm_map.8DP }}</td>
         {% for country, data in abs_values %}
             <td>{{ data.8DP.base_val|default_if_none:"-" }} {% if data.8DP.base_year != "2007" %}<br/><span class="year">({{ data.8DP.base_year }})</span>{% endif %}</td>
-            <td>{{ data.8DP.latest_val|default_if_none:"-" }}<br/>{% if data.8DP.latest_year != "2009" %}<span class="year">({{ data.8DP.latest_year }})</span>{% endif %}</td>
+            <td>{{ data.8DP.latest_val|default_if_none:"-" }}<br/>{% if data.8DP.latest_year != "2011" %}<span class="year">({{ data.8DP.latest_year }})</span>{% endif %}</td>
             <td><img src="{{ MEDIA_URL }}/images/{{data.8DP.rating}}.png"></td>
         {% endfor %}
     </tr>

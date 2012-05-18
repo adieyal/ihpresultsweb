@@ -25,7 +25,7 @@
     <tr class="head2">
         {% for country in countries %}
             <th>2007</th>
-            <th>2009</th>
+            <th>2011</th>
             <th>{{ translation.rating }} ∆</th>
         {% endfor %}
 
@@ -50,7 +50,7 @@
             {% endif %}
             </td>
             <td class="{{ data.cellclass }}">{{ data.latest_value|default_if_none:"-" }}<br/>
-            {% if data.cur_year != "2009" and data.cur_year != "" %}
+            {% if data.cur_year != "2011" and data.cur_year != "" %}
                 <span class="year">({{ data.cur_year }})</span>
             {% endif %}
             </td>

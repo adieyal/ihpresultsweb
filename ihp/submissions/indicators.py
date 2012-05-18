@@ -23,6 +23,9 @@ def calc_indicator(qs, agency_or_country, indicator, funcs=None):
     func, args = funcs[indicator]
     
     qs2 = [q for q in qs if q.question_number in args]
+    #if agency_or_country.agency == "UNFPA":
+    #    if indicator == "3DP" and qs[0].submission.country.country == "Sierra Leone":
+    #        import pdb; pdb.set_trace()
     
     comments = [(question.question_number, question.submission.country, question.comments) for question in qs2]
 
@@ -129,9 +132,9 @@ def calc_agency_country_indicator(qs, agency, country, indicator, funcs=None):
     """
     funcs = funcs or dict(indicator_funcs)
     try:
-        funcs["1DP"] = (equals_or_zero("yes"), ("1",))
-        funcs["6DP"] = (equals_or_zero("yes"), ("17",))
-        funcs["7DP"] = (equals_or_zero("yes"), ("18",))
+        funcs["1DP"] = (equals_or_zero("yes"), indicator_funcs["1DP"][1])
+        funcs["6DP"] = (equals_or_zero("yes"), indicator_funcs["6DP"][1])
+        funcs["7DP"] = (equals_or_zero("yes"), indicator_funcs["7DP"][1])
         return calc_indicator(qs, agency, indicator, funcs)
     except:
         traceback.print_exc()
@@ -205,14 +208,14 @@ indicator_funcs = {
     "2DPa" : (calc_one_minus_numdenom, ("3", "2")),
     "2DPb" : (calc_numdenom, ("5", "4")),
     "2DPc" : (calc_numdenom, ("7", "6")),
-    "3DP"  : (calc_numdenom, ("9", "8")),
-    "4DP"  : (calc_numdenom, ("11", "10")),
-    "5DPa" : (calc_one_minus_numdenom, ("13", "12")),
-    "5DPb" : (calc_one_minus_numdenom, ("15", "14")),
-    "5DPc" : (sum_values, ("16",)),
-    "6DP"  : (country_perc_factory("yes"), ("17",)),
-    "7DP"  : (country_perc_factory("yes"), ("18",)),
-    "8DP"  : (func_8dpfix, ("20",)),
+    "3DP"  : (calc_numdenom, ("8", "6")),
+    "4DP"  : (calc_numdenom, ("6", "9")),
+    "5DPa" : (calc_one_minus_numdenom, ("11", "10")),
+    "5DPb" : (calc_one_minus_numdenom, ("12", "2")),
+    "5DPc" : (sum_values, ("13",)),
+    "6DP"  : (country_perc_factory("yes"), ("14",)),
+    "7DP"  : (country_perc_factory("yes"), ("15",)),
+    "8DP"  : (func_8dpfix, ("16",)),
     "1G"   : (equals_yes_or_no("yes"), ("1",)),
     "2Ga"  : (combine_yesnos, ("2", "3")),
     "2Gb"  : (equals_or_zero("yes"), ("4",)),
@@ -231,39 +234,15 @@ indicator_funcs = {
 
 # This data is duplicated above but the order is important above
 # whereas it isn't here
-indicator_questions = {
-    "1DP"  : ("1",),
-    "2DPa" : ("2", "3"),
-    "2DPb" : ("4", "5"),
-    "2DPc" : ("6", "7"),
-    "3DP"  : ("9", "8"),
-    "4DP"  : ("10", "11"),
-    "5DPa" : ("12", "13"),
-    "5DPb" : ("14", "15"),
-    "5DPc" : ("16",),
-    "6DP"  : ("17",),
-    "7DP"  : ("18",),
-    "8DP"  : ("20",),
-    "1G"   : ("1",),
-    "2Ga"  : ("2", "3"),
-    "2Gb"  : ("4",),
-    "3G"   : ("6", "5"),
-    "4G"   : ("8", "7"),
-    "5Ga"  : ("9",),
-    "5Gb"  : ("10",),
-    "6G"   : ("11",),
-    "7G"   : ("12",),
-    "8G"   : ("13", "14"),
-    "Q2G" : ("2",),
-    "Q3G" : ("3",),
-    "Q12G" : ("12",),
-    "Q21G" : ("21",),
-}
+indicator_questions = dict([
+    (k, qs)
+    for k, (_, qs) in indicator_funcs.items()
+])
 
 # Functions that calculate values in a positive sense - i.e. how much on budget, not how much off budget
 positive_funcs = dict(indicator_funcs)
-positive_funcs["2DPa"] = (calc_numdenom, ("3", "2"))
-positive_funcs["4DP"] = (calc_numdenom, ("11", "10"))
-positive_funcs["5DPa"] = (calc_numdenom, ("13", "12"))
-positive_funcs["5DPb"] = (calc_numdenom, ("15", "14"))
-positive_funcs["4G"] = (calc_numdenom, ("8", "7"))
+positive_funcs["2DPa"] = (calc_numdenom, indicator_funcs["2DPa"][1])
+positive_funcs["4DP"] = (calc_numdenom, indicator_funcs["4DP"][1])
+positive_funcs["5DPa"] = (calc_numdenom, indicator_funcs["5DPa"][1])
+positive_funcs["5DPb"] = (calc_numdenom, indicator_funcs["5DPb"][1])
+positive_funcs["4G"] = (calc_numdenom, indicator_funcs["4G"][1])

@@ -74,6 +74,7 @@ INSTALLED_APPS = (
     'south',
     'submissions',
     'publicweb',
+    'import2012',
 )
 
 # Debug Toolbar

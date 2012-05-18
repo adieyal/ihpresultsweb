@@ -12,3 +12,4 @@ South==0.7.3
 django-jenkins
 Dozer==0.1
 PIL==1.1.7
+iso8601
