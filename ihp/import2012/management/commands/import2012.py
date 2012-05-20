@@ -369,8 +369,8 @@ class Command(BaseCommand):
                 # DP in both the baseline and latest year, we copy across values
                 # in both surveys to a new question
                 # for the baseline the mapping is 10 => 10old and 11 => 11old
-                # in the 2012 survey the mapping is 6 => 10old and 9 => 11old
-                mapping = {"6" : "10old", "9" : "11old"}
+                # in the 2012 survey the mapping is 6 => 11old and 9 => 10old
+                mapping = {"6" : "11old", "9" : "10old"}
                 if v1_qn in mapping:
                     new_q = mapping[v1_qn]
                     dpq2, created = DPQuestion.objects.get_or_create(
