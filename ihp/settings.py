@@ -11,8 +11,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASE_ENGINE = 'sqlite3'
-#DATABASE_NAME = 'ihp.db'
-DATABASE_NAME = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'ihp_2012.db')
+DATABASE_NAME = os.path.join(PROJECT_HOME, 'ihp.db')
 
 TIME_ZONE = 'Africa/Johannesburg'
 LANGUAGE_CODE = 'en-us'
