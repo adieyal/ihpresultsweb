@@ -4,7 +4,7 @@ from django.conf import settings
 from django.core import management
 from submissions.models import *
 from submissions.indicators import *
-from ihp.snapshots.models import Version,Case,CaseRun
+from ihp.snapshots.models import Version,Case,CaseRun,CaseRunManualData
 
 
 class Command(BaseCommand):
@@ -36,11 +36,24 @@ class Command(BaseCommand):
                                                indicator=j, agency=agency,
                                                country=country, funcs=funcs)
 
+                manual_data = CaseRunManualData.objects.filter(case=c)
+
+                if len(manual_data) == 0:
+                    base_val = a[0]
+                    base_year = a[1]
+                    cur_val = a[2]
+                    cur_year = a[3]
+                else:
+                    base_val = manual_data[0].base_val if manual_data[0].base_val else a[0]
+                    base_year = manual_data[0].base_year if manual_data[0].base_year else a[1]
+                    cur_val = manual_data[0].cur_val if manual_data[0].cur_val else a[2]
+                    cur_year = manual_data[0].cur_year if manual_data[0].cur_year else a[3]
+
                 CaseRun(version=version, case=c,
-                            base_val=a[0],
-                            base_year=a[1],
-                            cur_val=a[2],
-                            cur_year=a[3]).save()
+                            base_val=base_val,
+                            base_year=base_year,
+                            cur_val=cur_val,
+                            cur_year=cur_year).save()
 
     def snapshot(self, desc=None):
         v = Version(description=desc)

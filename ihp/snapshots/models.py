@@ -48,3 +48,20 @@ class CaseRun(models.Model):
 
     def __unicode__(self):
         return '%s-%s' % (self.case, self.version)
+
+
+class CaseRunManualData(models.Model):
+    """
+    model holds each run(version) of saved case set
+    with description field version number or note can be saved
+    """
+
+    case = models.ForeignKey(Case)
+
+    base_val = models.CharField(max_length=150, null=True)
+    base_year = models.CharField(max_length=150, null=True)
+    cur_val = models.CharField(max_length=150, null=True)
+    cur_year = models.CharField(max_length=150, null=True)
+
+    def __unicode__(self):
+        return '%s' % self.case
