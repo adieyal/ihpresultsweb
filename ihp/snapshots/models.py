@@ -52,8 +52,7 @@ class CaseRun(models.Model):
 
 class CaseRunManualData(models.Model):
     """
-    model holds each run(version) of saved case set
-    with description field version number or note can be saved
+    Manual Data model holds write protected values for snapshots
     """
 
     case = models.ForeignKey(Case)
