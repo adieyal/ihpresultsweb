@@ -5,7 +5,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Aptivate', 'carers-reactionscorecards@aptivate.org'),
+    ('Adi Eyal', 'adi@burgercom.co.za'),
 )
 
 MANAGERS = ADMINS
