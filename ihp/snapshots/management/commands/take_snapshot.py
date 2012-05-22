@@ -6,11 +6,13 @@ from submissions.models import *
 from submissions.indicators import *
 from ihp.snapshots.models import Version,Case,CaseRun,CaseRunManualData
 
+from django.db import transaction
 
 class Command(BaseCommand):
     args = "Optional description for version"
     help = "Take snaphot of function results for current state of submissions"
 
+    @transaction.commit_on_success
     def calc_agency_country_indicator_dp(self, version):
         calc_function = 'calc_agency_country_indicator'
         print "processing %s " % calc_function
