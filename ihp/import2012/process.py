@@ -21,7 +21,7 @@ class SubmissionParser(object):
         for sheet in book.sheets():
             if sheet.name == "Survey Tool":
                 if sheet.cell(7, 0).value == "1DP":
-                    self.parse_dp(sheet)
+                    return self.parse_dp(sheet)
                 elif sheet.cell(4, 0).value == "1G":
                     parse_gov(sheet)
         else:
@@ -91,6 +91,7 @@ class SubmissionParser(object):
                 q.latest_value=latest_value
                 q.comments=comment
                 q.save()
+        return submission
 
 if __name__ == "__main__":
     parser = SubmissionParser(sys.argv[1])
