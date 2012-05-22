@@ -183,7 +183,8 @@ class AgencyCountries(models.Model):
         return "<<AgencyCountry Object>>%s %s" % (self.agency, self.country)
 
     class Meta:
-       verbose_name_plural = "Agency Countries" 
+        verbose_name_plural = "Agency Countries" 
+        unique_together = ("agency", "country")
 
 class AgencyTargets(models.Model):
     indicator = models.CharField(max_length=10, null=False)
@@ -398,10 +399,19 @@ class NotApplicableManager(models.Manager):
         return list(self.all())
 
     def is_not_applicable(self, val):
-        if val == None:
+        try:
+            if val == None:
+                return False
+
+            # TODO Need to figure this out
+            val = str(val).strip().lower()
+        except:
+            import traceback
+            import sys
+            traceback.print_exc()
             return False
 
-        val = str(val).strip().lower()
+
         variations = [na.variation for na in self._get_variations()]
         if val in variations:
             return True
