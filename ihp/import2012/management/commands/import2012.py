@@ -1,9 +1,11 @@
 import sys
+import os
 from collections import defaultdict, Counter
 import iso8601
 import datetime
 from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
+from ihp.import2012.process import SubmissionParser
 
 from submissions.models import *
 import json
@@ -324,6 +326,18 @@ class Command(BaseCommand):
                 except DPQuestion.DoesNotExist:
                     print "Question %s does not question for %s" % (fq, submission)
 
+    def additional_imports(self):
+        from django.conf import settings
+        from glob import glob
+        import_dir = os.path.join(settings.PROJECT_HOME, "dropbox") 
+        if not os.path.exists(import_dir):
+            sys.stderr.write("No drop folder found at %s" % import_dir)
+            return
+
+        for f in glob("%s/*.xls" % import_dir):
+            parser = SubmissionParser(f)
+            parser.parse()
+
     @transaction.commit_on_success
     def process_responses(self, db):
         self.prepare_dp_questions()
@@ -416,6 +430,9 @@ class Command(BaseCommand):
                     dpq.save()
                 except DPQuestion.DoesNotExist:
                     print "Could not find submission for response: %s" % response.pk
+        self.additional_imports()
+
+
         
     def read_database(self, js):
         db = {}
