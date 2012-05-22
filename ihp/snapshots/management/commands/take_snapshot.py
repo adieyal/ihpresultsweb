@@ -12,16 +12,14 @@ class Command(BaseCommand):
     help = "Take snaphot of function results for current state of submissions"
 
     def calc_agency_country_indicator_dp(self, version):
-        print "processing %s " % "calc_agency_country_indicator_dp"
+        calc_function = 'calc_agency_country_indicator'
+        print "processing %s " % calc_function
         agency_countries = AgencyCountries.objects.all()
         funcs = None
 
         for i in agency_countries:
             agency = i.agency
             country = i.country
-
-            calc_function = 'calc_agency_country_indicator'
-
             qs = DPQuestion.objects.filter(submission__agency=agency,
                             submission__country=country).select_related()
 
