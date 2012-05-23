@@ -335,9 +335,9 @@ class Command(BaseCommand):
         # it appears on the right
 
         mapping = [
-            ("14", "2"),
+            #("14", "2"),
             ("17", "14"),
-            ("8", "6"),
+            #("8", "6"),
             ("9", "8"),
             ("10", "10old"),
             ("12", "10"),
@@ -350,6 +350,8 @@ class Command(BaseCommand):
         ]
 
         for submission in Submission.objects.filter(type="DP"):
+            #if submission.agency.agency == "Sweden" and submission.country.country == "Burkina Faso":
+            #    import pdb; pdb.set_trace()
             questions = submission.dpquestion_set.all()
             for (fq, tq) in mapping:
                 try:
