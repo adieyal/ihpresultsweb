@@ -34,6 +34,11 @@ def perc_change(base_val, latest_val):
 def agency_table_by_indicator(request, indicator, language="English", template_name="submissions/agency_table_by_indicator.html", extra_context=None):
     dp_gov_map = {
         "1DP" : "1G",
+        "2DPb" : "2Gb",
+        "3DP" : "3G",
+        "4DP" : "4G",
+        "5DPa" : "5Ga",
+        "5DPb" : "5Gb",
         "6DP" : "6G",
         "7DP" : "7G",
         "8DP" : "8G",
