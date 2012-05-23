@@ -10,6 +10,9 @@ from ihp.import2012.process import SubmissionParser
 from submissions.models import *
 import json
 
+dp_survey = 3
+gov_survey = 4
+
 conversion = {
     "AUD" : {"2005" : 0.7627,  "2006" : 0.7532,  "2007" : 0.8384,  "2010" : 0.9195,  "2011" : 1.0331},
     "BIF" : {"2005" : 0.0009,  "2006" : 0.001 ,  "2007" : 0.0009,  "2010" : 0.0008,  "2011" : 0.0008},
@@ -122,6 +125,10 @@ gov_question_map = {
 
 
 class ResponseManager(object):
+    """
+    Class used to keep track of the latest responses
+    overriding older ones for the same entity
+    """
     def __init__(self, db):
         self.db = db
         self._responses = defaultdict(dict, {})
@@ -140,6 +147,27 @@ class ResponseManager(object):
     @property
     def latest_responses(self):
         return self._responses
+
+class Survey(object):
+    def __init__(self, id):
+        self.id = id
+        assert self.id in [3, 4]
+
+    @property
+    def type(self):
+        if self.id == 3:
+            return "DP"
+        elif self.id == 4:
+            return "Gov"
+
+    @property
+    def is_dp(self):
+        return self.type == "DP"
+
+    @property
+    def is_gov(self):
+        return self.type == "Gov"
+
 
 class ResponseSet(object):
     @staticmethod
@@ -174,12 +202,19 @@ class Response(object):
         return self.js["fields"]["question"]
 
     @property
+    def question_mapper(self):
+        if self.response_set["fields"]["survey"].is_dp:
+            return dp_question_map
+        elif self.response_set["fields"]["survey"].is_gov:
+            return gov_question_map
+
+    @property
     def v1_question(self):
-        return dp_question_map[self.question]["q"]
+        return self.question_mapper[self.question]["q"]
 
     @property
     def question_type(self):
-        return dp_question_map[self.question]["type"]
+        return self.question_mapper[self.question]["type"]
 
     @property
     def value(self):
@@ -271,11 +306,10 @@ class Command(BaseCommand):
                     if cpk in db["models"]["countries"]
                 ][0]
 
-                survey_type = {3 : "DP", 4 : "Gov"}[rs["fields"]["survey"]]
                 s, created = Submission.objects.get_or_create(
                     country=country,
                     agency=agency,
-                    type=survey_type
+                    type=rs["fields"]["survey"].type
                 )
                 s.docversion = "XXX"
                 s.date_submitted = iso8601.parse_date(rs["fields"]["submission_date"])
@@ -347,7 +381,7 @@ class Command(BaseCommand):
             DPQuestion.objects.filter(submission=submission, question_number="11").update(question_number="11old")
 
     @transaction.commit_on_success
-    def process_responses(self, db):
+    def process_dp_responses(self, db):
         self.prepare_dp_questions()
 
         # Process the 2012 responses first
@@ -441,12 +475,90 @@ class Command(BaseCommand):
         self.additional_imports()
 
 
+    def prepare_gov_questions(self):
+        # Remove all the latest year values
+        GovQuestion.objects.all().update(
+            latest_year="",
+            latest_value=""
+        )
+
+    @transaction.commit_on_success
+    def process_gov_responses(self, db):
+        self.prepare_gov_questions()
+
+        # Process the 2012 responses first
+        responses2012 = db["js"]["responses_2012"]
+        
+        gov_submissions = db["js"]["response_sets_gov"]
+
+        gov_responses = dict([
+            (pk, rs) 
+            for pk, rs in responses2012.items() 
+            if rs.response_set["pk"] in gov_submissions
+        ])
+            
+        rm = ResponseManager(db)
+
+        for pk, response in gov_responses.items():
+            rm.add(response) 
+
+        for submission, responses in rm.latest_responses.items():
+
+            for response in responses.values():
+                v1_qn = response.v1_question
+                v1_qtype = response.question_type
+
+                gpq, created = GovQuestion.objects.get_or_create(
+                    submission=submission,
+                    question_number=v1_qn
+                )
+
+                gpq.latest_year = response.year
+                if v1_qtype == "comment":
+                    gpq.comments = response.value
+                else:
+                    gpq.latest_value = response.value if response.value != None else ""
+                gpq.save()
+
+        # Now process baseline values
+        responses_baseline = db["js"]["responses_baseline"]
+        gov_responses = dict([
+            (pk, rs) 
+            for pk, rs in responses_baseline.items() 
+            if rs.response_set["pk"] in gov_submissions
+        ])
+
+        rm = ResponseManager(db)
+
+        for pk, response in gov_responses.items():
+            rm.add(response) 
+
+        for submission, responses in rm.latest_responses.items():
+            for response in responses.values():
+                v1_qn = response.v1_question
+                v1_qtype = response.question_type
+                key = (submission.agency, submission.country)
+
+                try:
+                    gpq = GovQuestion.objects.get(
+                        submission=submission,
+                        question_number=v1_qn
+                    )
+
+                    gpq.baseline_year = response.year
+                    if v1_qtype == "comment":
+                        pass
+                    else:
+                        if not gpq.baseline_value:
+                            gpq.baseline_value = response.value if response.value != None else ""
+                    gpq.save()
+                except GovQuestion.DoesNotExist:
+                    print "Could not find submission for response: %s" % response.pk
+        # TODO Figure out what to do with Gov imports when needed
+        #self.additional_imports()
         
     def read_database(self, js):
         db = {}
-        dp_survey = 3
-        gov_survey = 4
-        surveys2012 = [dp_survey, gov_survey]
         collection2012 = 22
         collection_baseline = 20
 
@@ -458,12 +570,14 @@ class Command(BaseCommand):
         years = dict([(pk, el["fields"]["name"]) for pk, el in dataseries.items() if el["fields"]["group"] == "Year"])
 
         response_sets = self.get_models(js, "scorecard_processor.responseset")
+        for rs in response_sets.values():
+            rs["fields"]["survey"] = Survey(rs["fields"]["survey"])
 
         def response_sets_by_collection(collection):
             return dict([
                 (pk, rs)
                 for pk, rs in response_sets.items() 
-                if rs["fields"]["survey"] in surveys2012 and collection in rs["fields"]["data_series"]
+                if rs["fields"]["survey"].type in ["DP", "Gov"] and collection in rs["fields"]["data_series"]
             ])
 
         def responses_by_response_set(response_set):
@@ -479,13 +593,13 @@ class Command(BaseCommand):
         response_sets_dp = dict([
             (pk, rs)
             for pk, rs in response_sets.items() 
-            if rs["fields"]["survey"] == dp_survey
+            if rs["fields"]["survey"].is_dp
         ])
 
         response_sets_gov = dict([
             (pk, rs)
             for pk, rs in response_sets.items() 
-            if rs["fields"]["survey"] == gov_survey
+            if rs["fields"]["survey"].is_gov
         ])
 
         responses = self.get_models(js, "scorecard_processor.response")
@@ -521,4 +635,5 @@ class Command(BaseCommand):
         self.process_agencies(db)
         self.process_countries(db)
         self.process_responsesets2012(db)
-        self.process_responses(db)
+        self.process_dp_responses(db)
+        self.process_gov_responses(db)
