@@ -57,10 +57,10 @@ class CaseRunManualData(models.Model):
 
     case = models.ForeignKey(Case)
 
-    base_val = models.CharField(max_length=150, null=True)
-    base_year = models.CharField(max_length=150, null=True)
-    cur_val = models.CharField(max_length=150, null=True)
-    cur_year = models.CharField(max_length=150, null=True)
+    base_val = models.CharField(max_length=150, null=True, blank=True)
+    base_year = models.CharField(max_length=150, null=True, blank=True)
+    cur_val = models.CharField(max_length=150, null=True, blank=True)
+    cur_year = models.CharField(max_length=150, null=True, blank=True)
 
     def __unicode__(self):
         return '%s' % self.case
