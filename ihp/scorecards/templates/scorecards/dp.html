@@ -2,12 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
     <title>SVG</title>
-    <script type='text/javascript' src='{{ MEDIA_URL}}d3graph/d3.v2.min.js'></script>
-    <script type='text/javascript' src='{{ MEDIA_URL}}d3graph/horizontalbargraph.js'></script>
+    <script type='text/javascript' src='{{ MEDIA_URL }}js/svg-lib.js'></script>
+    <script type='text/javascript' src='{{ MEDIA_URL }}js/d3.v2.min.js'></script>
+    <script type='text/javascript' src='{{ MEDIA_URL }}js/horizontalbargraph.js'></script>
     <style>
         svg, #figure { width:1200px; height:1700px;}
         .additional-information {
             font-size:7px;
+        }
+
+        .summary {
+            font-size:9px;
         }
 
         .hb-rect-text, .hb-line{
@@ -28,45 +33,50 @@
         .agency-country-text{
             font-size:7px;
         }
+
+        .agency-profile {
+            font-size: 8px;
+        }
+
+        .hb-rect-text-value {
+            display: none; /* Hide the value labels in graphs */
+        }
+
+        @font-face {
+            font-family: 'ArialMT';
+            src: url('{{ MEDIA_URL }}fonts/arialmt.ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
     </style>
 </head>
 <body style="">
     <div id="figure"></div>
-    <script type='text/javascript'>
-   
-    
-    var pages = ['{{ MEDIA_URL}}ihp-page-1.svg', '{{ MEDIA_URL}}ihp-page-2.svg'];
-    
-    var json = {{agency_scorecard|safe}}
-    
+    <script type="text/javascript">
+    var pages = ['{{ MEDIA_URL }}svg/ihp-page-1.svg', '{{ MEDIA_URL }}svg/ihp-page-2.svg'];
+    var json = '{% url dp_scorecard_json agency_id language %}'
 
-
-
-    load_json = function(json){
+    load_front = function(json){
         d3.select('#agency-name').text(json.agency.name)
 
         var profile = json.agency.profile;
         profile = profile.split('\n')
 
-        d3.select('#agency-profile').selectAll('tspan')
-            .data(profile).enter()
-            .append('tspan')
-            .attr('x', 0)
-            .attr('y', function(d, i){ return (i + (i * 0.1))  + 'em'; })
-            .text(String)
-            .attr('class', 'agency-profile')
+        var p_node = d3.select('#g2326 rect');
+        insert_text(p_node, profile, 'agency-profile');
+
 
 
         var c_length = json.agency.active_countries.length / 2;
         var countries_x = d3.scale.linear()
                 .domain([0, c_length])
-                .range([30, 330]);
+                .range([0, 315]);
         var countries = d3.select('#agency-countries').selectAll('g')
             .data(json.agency.active_countries);
 
         countries.enter()
             .append('image')
-            .attr('xlink:href', function(d){ console.log(d.logo_url); return d.logo_url})
+            .attr('xlink:href', function(d){ return d.logo_url})
             .attr('x', function(d, i){ return i >= c_length ? countries_x(i - c_length ) : countries_x(i);})
             .attr('y', function(d, i) { return i >= c_length ? 35 : 5})
             .attr('width', 30)
@@ -94,7 +104,7 @@
             .attr('y', -20)
             .attr('width', 100)
             .attr('height', 70)
-            .attr('class', 'agency-logo')
+            .attr('class', 'agency-logo');
 
 
         for (var img in json.ratings){
@@ -111,27 +121,12 @@
 
         for (var x in json.additional_information){
             var info = json.additional_information[x];
+            var info_node = d3.select('#info_' + x);
+            insert_text(info_node, info, 'additional-information ' + x + '-info');
 
-            var nodes = d3.select('#info-' + x).selectAll('tspan')
-            if (nodes.node() === null){
-                console.log('no-info')
-                continue;
-            }
-
-            // remove the extra tspans
-            for (var j = 2; j < nodes[0].length; j ++){
-                d3.select(nodes[0][j]).remove();
-            }
-
-            d3.select('#info-' + x).selectAll('tspan .additional-information')
-                .data(info.split('\n'))
-                .enter().append('tspan')
-                .attr('x', 15)
-                .attr('y', 0)
-                .attr('dy', function(d, i){ return (i * 10) + 10 + 'px'; })
-                .text(String)
-                .attr('class', 'additional-information ' + x + '-info')
         }
+
+        d3.select("#info_dummy_text").remove();
 
 
         for (var x in json.overall_progress){
@@ -140,7 +135,7 @@
 
             var ctx = {
                 'node': '#graph-' + x,
-                'width': 173,
+                'width': 213,
                 'height': prog.height || 40,
                 'data': prog.data,
                 'line': {
@@ -160,7 +155,16 @@
             hbg = new HorizontalBarGraph(ctx);
 
         }
-        console.log('done')
+    }
+
+    load_back = function(json){
+        d3.selectAll("#summary_blocks text").remove();
+        for (var x in json.summary){
+            console.log(x);
+            var summary = json.summary[x];
+            var summary_node = d3.select('#summary-' + x);
+            insert_text(summary_node, summary, 'summary ' + x + '-summary');
+        }
     }
 
     function getParameterByName(name) {
@@ -186,16 +190,18 @@
     var page = getParameterByName('page');
     if (page == "" || isNaN(page)){
         page = pages[0];
+        load_fn = load_front;
     } else {
         page = parseInt(page)
+        load_fn = page == 1 ? load_front : load_back
         page = pages[page - 1];
     }
 
-    console.log(page)
+    console.log(page);
     d3.json(json, function(e){
         d3.xml(page, 'image/svg+xml', function(xml){
             document.getElementById('figure').appendChild(xml.documentElement);
-            load_json(e);
+            load_fn(e);
         });
     });
     // load the template

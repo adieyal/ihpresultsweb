@@ -72,6 +72,7 @@ INSTALLED_APPS = (
     "debug_toolbar",
     'south',
     'submissions',
+    'scorecards',
     'publicweb',
     'import2012',
 )
