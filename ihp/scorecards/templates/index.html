@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>SVG</title>
+    <script type='text/javascript' src='{{ MEDIA_URL}}d3graph/d3.v2.min.js'></script>
+    <script type='text/javascript' src='{{ MEDIA_URL}}d3graph/horizontalbargraph.js'></script>
+    <style>
+        svg, #figure { width:1200px; height:1700px;}
+        .additional-information {
+            font-size:7px;
+        }
+
+        .hb-rect-text, .hb-line{
+            font-size:7px;
+            font-weight:bold;
+        }
+
+        .hb-line{
+            stroke-width:0.5px;
+            stroke-dasharray: 1;
+
+        }
+        body{
+            background-color:#fefefe;
+            font-family:ArialMT, 'Droid Sans';
+        }
+
+        .agency-country-text{
+            font-size:7px;
+        }
+    </style>
+</head>
+<body style="">
+    <div id="figure"></div>
+    <script type='text/javascript'>
+   
+    
+    var pages = ['{{ MEDIA_URL}}ihp-page-1.svg', '{{ MEDIA_URL}}ihp-page-2.svg'];
+    
+    var json = {{agency_scorecard|safe}}
+    
+
+
+
+    load_json = function(json){
+        d3.select('#agency-name').text(json.agency.name)
+
+        var profile = json.agency.profile;
+        profile = profile.split('\n')
+
+        d3.select('#agency-profile').selectAll('tspan')
+            .data(profile).enter()
+            .append('tspan')
+            .attr('x', 0)
+            .attr('y', function(d, i){ return (i + (i * 0.1))  + 'em'; })
+            .text(String)
+            .attr('class', 'agency-profile')
+
+
+        var c_length = json.agency.active_countries.length / 2;
+        var countries_x = d3.scale.linear()
+                .domain([0, c_length])
+                .range([30, 330]);
+        var countries = d3.select('#agency-countries').selectAll('g')
+            .data(json.agency.active_countries);
+
+        countries.enter()
+            .append('image')
+            .attr('xlink:href', function(d){ console.log(d.logo_url); return d.logo_url})
+            .attr('x', function(d, i){ return i >= c_length ? countries_x(i - c_length ) : countries_x(i);})
+            .attr('y', function(d, i) { return i >= c_length ? 35 : 5})
+            .attr('width', 30)
+            .attr('height', 25)
+            .attr('class', 'agency-country-image')
+
+        countries.enter()
+            .append('text')
+            .attr('x', function(d, i){
+                var x = i >= c_length ? countries_x(i - c_length ) : countries_x(i);
+                return x + 15;
+            })
+            .attr('y', function(d, i) { return i >= c_length ? 64 : 34})
+            .style('font-size', 6)
+            .attr('text-anchor', 'middle')
+            .text(function(d) { return d.name; })
+            .attr('class', 'agency-country-text')
+
+
+        d3.select('#agency-logo').selectAll('image')
+            .data([json.agency.logo_url])
+            .enter().append('image')
+            .attr('xlink:href', function(d){ return d})
+            .attr('x', 0)
+            .attr('y', -20)
+            .attr('width', 100)
+            .attr('height', 70)
+            .attr('class', 'agency-logo')
+
+
+        for (var img in json.ratings){
+            var url = json.ratings[img];
+            var node = '#icon-' + img;
+            var x = d3.select(node)
+            if (x.node() === null){
+                continue
+            }
+            d3.selectAll(node + ' g').remove();
+            load_svg(url, node);
+        }
+
+
+        for (var x in json.additional_information){
+            var info = json.additional_information[x];
+
+            var nodes = d3.select('#info-' + x).selectAll('tspan')
+            if (nodes.node() === null){
+                console.log('no-info')
+                continue;
+            }
+
+            // remove the extra tspans
+            for (var j = 2; j < nodes[0].length; j ++){
+                d3.select(nodes[0][j]).remove();
+            }
+
+            d3.select('#info-' + x).selectAll('tspan .additional-information')
+                .data(info.split('\n'))
+                .enter().append('tspan')
+                .attr('x', 15)
+                .attr('y', 0)
+                .attr('dy', function(d, i){ return (i * 10) + 10 + 'px'; })
+                .text(String)
+                .attr('class', 'additional-information ' + x + '-info')
+        }
+
+
+        for (var x in json.overall_progress){
+            var prog = json.overall_progress[x];
+            d3.select('#graph-' + x + ' g').remove();
+
+            var ctx = {
+                'node': '#graph-' + x,
+                'width': 173,
+                'height': prog.height || 40,
+                'data': prog.data,
+                'line': {
+                    'constant': prog.target,
+                    'text': prog.target + '%'
+                },
+
+                bar: {
+                    'max': 100,
+                    'margin' : 5, // pixels between bars
+                    'height': prog.bar_height || 6, // width of bars
+                    'background': '#dfe7e5'
+                },
+
+            }
+
+            hbg = new HorizontalBarGraph(ctx);
+
+        }
+        console.log('done')
+    }
+
+    function getParameterByName(name) {
+          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+          var regexS = "[\\?&]" + name + "=([^&#]*)";
+          var regex = new RegExp(regexS);
+          var results = regex.exec(window.location.search);
+          if(results == null)
+            return "";
+          else
+            return decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    load_svg = function(url, node){
+        var func = function(xml){
+            var icon = document.importNode(d3.select(xml).select('g').node(), true);
+
+            d3.select(node).append('g').node().appendChild(icon);
+        }
+        d3.xml(url, 'image/svg+xml', func);
+    }
+
+    var page = getParameterByName('page');
+    if (page == "" || isNaN(page)){
+        page = pages[0];
+    } else {
+        page = parseInt(page)
+        page = pages[page - 1];
+    }
+
+    console.log(page)
+    d3.json(json, function(e){
+        d3.xml(page, 'image/svg+xml', function(xml){
+            document.getElementById('figure').appendChild(xml.documentElement);
+            load_json(e);
+        });
+    });
+    // load the template
+    </script>
+</body>
+</html>
