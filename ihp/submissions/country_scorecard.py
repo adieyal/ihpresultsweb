@@ -175,8 +175,14 @@ def get_country_indicators(country, questions, agencies_data):
     indicators["other"] = {}
 
     other_indicators = indicators["other"]
-    baseline_denom = questions["18"]["baseline_value"] / 10000.0
-    latest_denom = questions["18"]["latest_value"] / 10000.0
+    baseline_denom = latest_denom = 0
+
+    try:
+        baseline_denom = questions["18"]["baseline_value"] / 10000.0
+        latest_denom = questions["18"]["latest_value"] / 10000.0
+    except TypeError:
+        import traceback
+        traceback.print_exc()
 
     # Outpatient Visits
     other_indicators["outpatient_visits_baseline"] = questions["19"]["baseline_value"] / baseline_denom
