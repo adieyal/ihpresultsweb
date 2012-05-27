@@ -9,6 +9,18 @@ def unfloat(val):
         return str(int(val))
     return val
 
+new_countries = [
+    "Benin",
+    "El Salvador",
+    "Mauritania",
+    "Rwanda",
+    "Senegal",
+    "Sierra Leone",
+    "Sudan",
+    "Togo",
+    "Uganda"
+]
+
 class SubmissionParser(object):
     def __init__(self, f):
         self.f = f
@@ -39,17 +51,25 @@ class SubmissionParser(object):
         agency = Agency.objects.all_types().get(agency=agency)
         country = Country.objects.get(country=country)
 
-        DPQuestion.objects.filter(
-            submission__country=country,
-            submission__agency=agency,
-            submission__type="DP"
-        ).update(latest_value="", latest_year="")
+        if country.country in new_countries:
+            DPQuestion.objects.filter(
+                submission__country=country,
+                submission__agency=agency,
+                submission__type="DP",
+            ).delete()
+            Submission.objects.filter(
+                country=country,
+                agency=agency,
+                type="DP"
+            ).delete()
 
         submission, _ = Submission.objects.get_or_create(
             country=country,
             agency=agency,
             type="DP"
         )
+        DPQuestion.objects.filter(submission=submission).update(latest_value="", latest_year="")
+
 
         submission.completed_by = completed_by
         submission.job_title = job
@@ -91,6 +111,40 @@ class SubmissionParser(object):
                 q.latest_value=latest_value
                 q.comments=comment
                 q.save()
+
+        # Now update the 4DP questions
+        my_questions = DPQuestion.objects.filter(submission=submission)
+        my_questions.filter(question_number__in=["10old", "11old"]).delete()
+        if country.country in new_countries:
+            q6 = my_questions.get(question_number="6")
+            q9 = my_questions.get(question_number="9")
+            q6.question_number = "11old"
+            q6.pk = None
+            q6.save()
+
+            q9.question_number = "10old"
+            q9.pk = None
+            q9.save()
+        else:
+            q11old = DPQuestion.objects.create(submission=submission, question_number="11old")
+            q10old = DPQuestion.objects.create(submission=submission, question_number="10old")
+            
+            q6 = my_questions.get(question_number="6")
+            q9 = my_questions.get(question_number="9")
+            q10 = my_questions.get(question_number="10")
+            q11 = my_questions.get(question_number="11")
+
+            q11old.baseline_value = q11.baseline_value
+            q11old.baseline_year = q11.baseline_year
+            q11old.latest_value = q6.latest_value
+            q11old.latest_year = q6.latest_year
+
+            q10old.baseline_value = q10.baseline_value
+            q10old.baseline_year = q10.baseline_year
+            q10old.latest_value = q9.latest_value
+            q10old.latest_year = q9.latest_year
+
+        
         return submission
 
 if __name__ == "__main__":

@@ -373,14 +373,10 @@ class Command(BaseCommand):
         for f in glob("%s/*.xls" % import_dir):
             parser = SubmissionParser(f)
             submission = parser.parse()
-            # This is a little clumsy but I'm not sure what a better alternative would be
             # Ideally, the additional import could be injected in at the beginning of process responses
             # But there is a danger that the newly imported values would be overriden by older responses.
             # In this case I prefer to run it at the end of the import and manually copy across 10 and 11.
             # This is not fantastic though because of duplication of business logic
-            DPQuestion.objects.filter(submission=submission, question_number__in=["10old", "11old"]).delete()
-            DPQuestion.objects.filter(submission=submission, question_number="10").update(question_number="10old")
-            DPQuestion.objects.filter(submission=submission, question_number="11").update(question_number="11old")
 
     @transaction.commit_on_success
     def process_dp_responses(self, db):
