@@ -124,9 +124,12 @@ class DPQuestion(models.Model):
         try:
             val = val.replace("'", '"')
             arr = json.loads(val)
-            if type(arr) == list and len(arr) > 0:
+            if (type(arr) == list and len(arr) > 0:
                 return "yes"
-        except ValueError:
+            if float(arr) > 0:
+                return "yes"
+            
+        except ValueError, TypeError:
             print "Warning: I don't know how to deal with this: ", self.submission.agency, self.submission.country, self.latest_value
             return old_val
         return "no"
