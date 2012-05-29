@@ -29,9 +29,11 @@ def calc_indicator(qs, agency_or_country, indicator, funcs=None):
     exclude_latest = []
     baseline_questions = latest_questions = 0
     baseline_excluded_count = latest_excluded_count = 0
-    #if agency_or_country.agency == "UNFPA":
-    #    if indicator == "4DP" and qs[0].submission.country.country == "Burundi":
-    #        import pdb; pdb.set_trace()
+    
+    #if hasattr(agency_or_country, "agency"):
+    #    if agency_or_country.agency == "UNFPA":
+    #        if indicator == "1DP" and qs[0].submission.country.country == "Benin":
+    #            import pdb; pdb.set_trace()
     
     
     for q in qs2:
