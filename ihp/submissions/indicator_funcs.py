@@ -1,5 +1,6 @@
-from models import AgencyCountries, Country8DPFix, CountryExclusion, NotApplicable, Rating
+from models import AgencyCountries, CountryExclusion, NotApplicable, Rating
 from consts import NA_STR
+import json
 
 
 base_selector = lambda q : q.baseline_value
@@ -23,20 +24,27 @@ def _sum_values(qs, selector):
     
     return sum([float(selector(q)) for q in qs])
 
-def func_8dpfix(qs, agency, selector, q):
+def func_8dp2012(qs, agency, selector, question_number):
     qs_countries = [q.submission.country for q in qs]
-    countries = Country8DPFix.objects.filter(agency=agency, country__in=qs_countries)
     denom = float(len(agency.countries.filter(country__in=qs_countries)))
 
-    if selector == base_selector:
-        num = len([country for country in countries if country.baseline_progress == Rating.TICK])
-    elif selector == cur_selector:
-        num = len([country for country in countries if country.latest_progress == Rating.TICK])
+    num_ticks = 0.0
+    for q in qs:
+        try:
+            # TODO I know the coding gods are going to strike me down for this
+            # quick fixes - the root of all evil
+            q.latest_value = q.latest_value.replace("'", '"')
+            arr = json.loads(q.latest_value)
+            if type(arr) == list and len(arr) > 0:
+                num_ticks += 1
+        except ValueError:
+            print "Warning: I don't know how to deal with this: ", agency, q.submission.country, q.latest_value, __file__
 
-    if denom > 0:
-        return num / denom * 100
-    else:
-        return None
+    try:
+        return (num_ticks / denom) * 100
+    except ZeroDivisionError:
+        return NA_STR
+    
 
 def count_factory(value):
     def count_value(qs, agency_or_country, selector, q):
@@ -46,9 +54,9 @@ def count_factory(value):
             return 0
 
         if selector == base_selector:
-            return len([q for q in qs if q.baseline_value.lower() == value.lower()])
+            return len([q for q in qs if q.base_val.lower() == value.lower()])
         elif selector == cur_selector:
-            return len([q for q in qs if q.latest_value.lower() == value.lower()])
+            return len([q for q in qs if q.cur_val.lower() == value.lower()])
     return count_value
 
 def country_perc_factory(value):

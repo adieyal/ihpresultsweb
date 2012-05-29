@@ -95,12 +95,6 @@ class GovScorecardRatingsAdmin(admin.ModelAdmin):
 admin.site.register(GovScorecardRatings, GovScorecardRatingsAdmin)
 admin.site.register(CountryScorecardOverrideComments)
 
-class Country8DPFixAdmin(admin.ModelAdmin):
-    list_filter = ("agency", "country")
-    list_display = ("agency", "country", "baseline_progress", "latest_progress")
-
-admin.site.register(Country8DPFix, Country8DPFixAdmin)
-
 class MDGDataAdminForm(forms.ModelForm):
     class Meta:
         model = MDGData

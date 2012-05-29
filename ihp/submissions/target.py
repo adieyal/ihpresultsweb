@@ -4,7 +4,7 @@ from django.template import Context, Template
 from django.utils.functional import memoize
 from indicators import NA_STR
 from indicators import calc_agency_indicators, calc_country_indicators, dp_indicators, g_indicators, calc_agency_country_indicators, calc_country_agency_indicators
-from models import AgencyTargets, AgencyCountries, Submission, CountryTargets, Country8DPFix, GovScorecardRatings, GovScorecardComments, DPScorecardRatings, Rating, Language
+from models import AgencyTargets, AgencyCountries, Submission, CountryTargets, GovScorecardRatings, GovScorecardComments, DPScorecardRatings, Rating, Language
 import models
 from target_criteria import criteria_funcs, MissingValueException, CannotCalculateException
 import math
@@ -66,15 +66,6 @@ def evaluate_indicator(target, base_val, cur_val):
     except CannotCalculateException:
         return Rating.NONE
 
-def evaluate_agency_country_indicator(agency, country, target, base_val, cur_val):
-    if target.indicator == "8DP":
-        try:
-            fix = Country8DPFix.objects.get(agency=agency, country=country)
-            return fix.latest_progress
-        except Country8DPFix.DoesNotExist:
-            return Rating.QUESTION
-
-    return evaluate_indicator(target, base_val, cur_val)
 
 def calc_agency_ratings(agency, language=None):
     """
@@ -332,17 +323,12 @@ def country_agency_indicator_ratings(country, agency):
 
     for indicator in country_indicators:
         v = country_indicators[indicator]
-        #TODO - temporary hack until 8DP is fixed
-        if indicator == "8DP":
-            indicators[indicator] = "tick"
-        else:
-            debug("extracting %s from %s" % (indicator, str(country_indicators)))
-            values, comments = v
-            (base_val, base_year, cur_val, cur_year) = values
+        values, comments = v
+        (base_val, base_year, cur_val, cur_year) = values
 
-            target = targets[indicator]
-            result = evaluate_agency_country_indicator(agency, country, target, base_val, cur_val)
-            indicators[indicator] = result
+        target = targets[indicator]
+        result = evaluate_indicator(target, base_val, cur_val)
+        indicators[indicator] = result
     return indicators
 
 def country_agency_progress(country, agency):
@@ -375,7 +361,7 @@ def agency_country_indicator_ratings(agency, country):
         values, comments = v
         (base_val, base_year, cur_val, cur_year) = values
         target = targets[indicator]
-        result = evaluate_agency_country_indicator(agency, country, target, base_val, cur_val)
+        result = evaluate_indicator(target, base_val, cur_val)
 
         indicators[indicator] = result
     return indicators

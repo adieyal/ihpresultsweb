@@ -1,4 +1,5 @@
 from django.db import models
+import json
 import math
 from django.utils.functional import curry
 from utils import memoize
@@ -116,24 +117,30 @@ class DPQuestion(models.Model):
             self.submission.country, self.submission.agency, self.question_number
         )
 
+    def _process8dp(self, val):
+        # TODO I know the coding gods are going to strike me down for this
+        # quick fixes - the root of all evil
+        old_val = val
+        try:
+            val = val.replace("'", '"')
+            arr = json.loads(val)
+            if type(arr) == list and len(arr) > 0:
+                return "yes"
+        except ValueError:
+            print "Warning: I don't know how to deal with this: ", self.submission.agency, self.submission.country, self.latest_value
+            return old_val
+        return "no"
+
     @property
     def base_val(self):
-        if self.question_number == "20":
-            try:
-                fix = Country8DPFix.objects.get(agency=self.submission.agency, country=self.submission.country)
-                return fix.baseline_progress
-            except Country8DPFix.DoesNotExist:
-                return ""
+        if self.question_number == "16":
+            return self._process8dp(self.baseline_value)
         return self.baseline_value
 
     @property
     def cur_val(self):
-        if self.question_number == "20":
-            try:
-                fix = Country8DPFix.objects.get(agency=self.submission.agency, country=self.submission.country)
-                return fix.latest_progress
-            except Country8DPFix.DoesNotExist:
-                return ""
+        if self.question_number == "16":
+            return self._process8dp(self.latest_value)
         return self.latest_value
 
     class Meta:
@@ -379,19 +386,6 @@ class CountryScorecardOverrideComments(models.Model):
     class Meta:
         verbose_name_plural = "Country Scorecard Override Comments"
         unique_together = ["country", "language"]
-
-class Country8DPFix(models.Model):
-    agency = models.ForeignKey(Agency, null=False)
-    country = models.ForeignKey(Country, null=False)
-    baseline_progress = RatingsField()
-    latest_progress = RatingsField()
-
-    def __unicode__(self):
-        return "%s - %s" % (self.agency, self.country)
-
-    class Meta:
-        verbose_name_plural = "Country 8DP Fixes" 
-        unique_together = ["agency", "country"]
 
 class NotApplicableManager(models.Manager):
     @memoize

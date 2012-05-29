@@ -3,6 +3,7 @@ from submissions.models import Agency, Submission, Country, DPQuestion
 import os
 import sys
 from django.db import transaction
+import json
 
 def unfloat(val):
     if type(val) == float:
@@ -75,6 +76,9 @@ class SubmissionParser(object):
         submission.job_title = job
         submission.save()
 
+        baseline_year = 2007
+        latest_year = 2011
+
         i8dp_map = {
             23 : "financial",
             24 : "technical",
@@ -104,14 +108,35 @@ class SubmissionParser(object):
                 )
 
                 if not q.baseline_value:
-                    q.baseline_year=2007
+                    q.baseline_year=baseline_year
                     q.baseline_value=baseline_value
 
-                q.latest_year=2011
+                q.latest_year=latest_year
                 q.latest_value=latest_value
                 q.comments=comment
                 q.save()
+        
+        ###########################################################
+        # Process 8DP
+        q, _ = DPQuestion.objects.get_or_create(
+           submission=submission,
+           question_number=16
+        )
 
+        # No need to capture the baseline values for 8DP
+        # because they are different to last year
+        #if not q.baseline_value:
+        #    q.baseline_year=baseline_year
+        #    q.baseline_value=baseline_value
+
+        q18_comments = v(22, 7)
+        q.latest_year=latest_year
+        q.latest_value=json.dumps(i8dp_values["latest"])
+        q.comments = q18_comments
+        q.save()
+        ###########################################################
+
+        ###########################################################
         # Now update the 4DP questions
         my_questions = DPQuestion.objects.filter(submission=submission)
         my_questions.filter(question_number__in=["10old", "11old"]).delete()
@@ -143,6 +168,8 @@ class SubmissionParser(object):
             q10old.baseline_year = q10.baseline_year
             q10old.latest_value = q9.latest_value
             q10old.latest_year = q9.latest_year
+
+        ###########################################################
 
         
         return submission
