@@ -129,7 +129,7 @@ class DPQuestion(models.Model):
             if float(arr) > 0:
                 return "yes"
             
-        except ValueError, TypeError:
+        except (ValueError, TypeError):
             print "Warning: I don't know how to deal with this: ", self.submission.agency, self.submission.country, self.latest_value
             return old_val
         return "no"
