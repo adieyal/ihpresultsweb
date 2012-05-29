@@ -132,8 +132,6 @@ def calc_agency_ratings(agency, language=None):
             "agency_name" : agency.agency,
         }
 
-        if agency.agency == "Norway" and indicator == "2DPa":
-            import pdb; pdb.set_trace()
         result["target"] = ratings_target(indicator) or evaluate_indicator(target, base_val, cur_val)
         result["target_val"] = target.tick_criterion_value
 
