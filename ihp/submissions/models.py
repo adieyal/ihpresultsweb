@@ -124,7 +124,7 @@ class DPQuestion(models.Model):
         try:
             val = val.replace("'", '"')
             arr = json.loads(val)
-            if (type(arr) == list and len(arr) > 0:
+            if type(arr) == list and len(arr) > 0:
                 return "yes"
             if float(arr) > 0:
                 return "yes"
