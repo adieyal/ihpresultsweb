@@ -2,11 +2,117 @@ from models import Submission, DPQuestion, AgencyCountries, GovQuestion, Country
 from indicator_funcs import *
 import traceback
 from utils import memoize
-from consts import NA_STR
+from consts import NA_STR, MISSING
 from django.db.models.query import QuerySet
 import logging
 
+is_none = lambda x : x == None or (unicode(x)).strip() == ""
+
+class IndicatorCalculator(object):
+    def __init__(self, func, args):
+        self.func = func
+        self.args = args 
+
+    def calc(self, qs, agency_or_country):
+        countries = set(q.submission.country for q in qs)
+        questions = set(q.question_number for q in qs)
+
+        # Get all the countries excluded from this indicator
+        excluded_countries = reduce(
+            lambda s1, s2: s1 | s2,  # union of two sets
+            (set(self._excluded_countries(q)) for q in questions),  
+            set()
+        )
+
+        excluded_countries = set(c for c in excluded_countries if c in countries)
+
+        # Add any countries with N/A in one of their answers to the excluded list
+        excluded_countries |= set(
+            q.submission.country 
+            for q in qs 
+            if NotApplicable.objects.is_not_applicable(self._getvalue(q))
+        )
+
+        # If we no longer have any countries to check then return N/A
+        if len(excluded_countries) == len(countries):
+            return NA_STR
+
+        # Add any countries with a missing answer in one of their answers to the excluded list
+        excluded_countries |= set(
+            q.submission.country 
+            for q in qs 
+            if is_none(self._getvalue(q))
+        )
+
+        # If we no longer have any countries to check then return MISSING
+        if len(excluded_countries) == len(countries):
+            return MISSING
+
+        remaining_countries = [c for c in countries if not c in excluded_countries]
+
+        remaining_qs = [q for q in qs if not q.submission.country in excluded_countries]
+        if len(remaining_qs) == 0:
+            return MISSING
+            
+        val = self.func(remaining_qs, agency_or_country, self._selector, *self.args)
+        return val
+
+
+class BaselineIndicatorCalculator(IndicatorCalculator):
+    def _getvalue(self, q):
+        return q.base_val
+
+    def _getyear(self, q):
+        return q.baseline_year
+
+    def _excluded_countries(self, qnum):
+        return CountryExclusion.objects.baseline_excluded_countries(qnum)
+
+    @property
+    def _selector(self):
+        return base_selector
+        
+
+class LatestIndicatorCalculator(IndicatorCalculator):
+    def _getvalue(self, q):
+        return q.cur_val
+
+    def _getyear(self, q):
+        return q.latest_year
+
+    def _excluded_countries(self, qnum):
+        return CountryExclusion.objects.latest_excluded_countries(qnum)
+
+    @property
+    def _selector(self):
+        return cur_selector
+
 def calc_indicator(qs, agency_or_country, indicator, funcs=None):
+    if type(qs) == QuerySet: qs = list(qs)
+    is_none = lambda x : x == None or (unicode(x)).strip() == ""
+
+    funcs = funcs or indicator_funcs
+    func, args = funcs[indicator]
+        
+    qs2 = [q for q in qs if q.question_number in args]
+    comments = [(question.question_number, question.submission.country, question.comments) for question in qs2]
+
+    #if len(qs2) > 0 and qs2[0].submission.country.country == "Burkina Faso" and qs2[0].submission.agency.agency == "AfDB":
+    #if len(qs2) > 0 and qs2[0].submission.agency.agency == "Norway" and indicator == "2DPa":
+    #    import pdb; pdb.set_trace()
+    base_val = BaselineIndicatorCalculator(func, args).calc(qs2, agency_or_country)
+    cur_val = LatestIndicatorCalculator(func, args).calc(qs2, agency_or_country)
+
+    
+    base_year = MISSING
+    cur_year = MISSING
+    if len(qs2) > 0:
+        base_year = qs2[0].baseline_year
+        cur_year = qs2[0].latest_year
+    return (base_val, base_year, cur_val, cur_year), comments
+
+    
+def calc_indicator_old(qs, agency_or_country, indicator, funcs=None):
     """
     Core function that calculates indicators. 
 
@@ -36,6 +142,13 @@ def calc_indicator(qs, agency_or_country, indicator, funcs=None):
     #            import pdb; pdb.set_trace()
     
     
+    
+    
+
+    # If there are no questions for this indicator then mark it as missing
+    if len(qs2) == 0:
+        return (MISSING, MISSING, MISSING, MISSING), comments
+        
     for q in qs2:
         if type(q) == DPQuestion:
             baseline_not_excluded, latest_not_excluded = CountryExclusion.objects.is_applicable(q.question_number, q.submission.country)

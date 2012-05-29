@@ -2,7 +2,7 @@
 import numbers
 from django.template import Context, Template
 from django.utils.functional import memoize
-from indicators import NA_STR
+from consts import NA_STR, MISSING
 from indicators import calc_agency_indicators, calc_country_indicators, dp_indicators, g_indicators, calc_agency_country_indicators, calc_country_agency_indicators
 from models import AgencyTargets, AgencyCountries, Submission, CountryTargets, GovScorecardRatings, GovScorecardComments, DPScorecardRatings, Rating, Language
 import models
@@ -36,7 +36,7 @@ def evaluate_indicator(target, base_val, cur_val):
     tick_func = criteria_funcs[target.tick_criterion_type]
     arrow_func = criteria_funcs[target.arrow_criterion_type]
 
-    if cur_val not in [None, NA_STR]:
+    if cur_val not in [MISSING, NA_STR]:
         if target.indicator in ["5DPa", "5DPb"]:
             if cur_val <= 20:
                 return Rating.TICK
@@ -132,6 +132,8 @@ def calc_agency_ratings(agency, language=None):
             "agency_name" : agency.agency,
         }
 
+        if agency.agency == "Norway" and indicator == "2DPa":
+            import pdb; pdb.set_trace()
         result["target"] = ratings_target(indicator) or evaluate_indicator(target, base_val, cur_val)
         result["target_val"] = target.tick_criterion_value
 

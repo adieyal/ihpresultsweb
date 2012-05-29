@@ -1,5 +1,5 @@
 from models import AgencyCountries, CountryExclusion, NotApplicable, Rating
-from consts import NA_STR
+from consts import NA_STR, MISSING
 import json
 
 
@@ -123,15 +123,15 @@ def calc_numdenom(qs, agency_or_country, selector, numq, denomq):
     den = _sum_values([q for q in qs if q.question_number==denomq], selector)
     num = _sum_values([q for q in qs if q.question_number==numq], selector)
 
-    if den in [NA_STR, None] or num in [NA_STR, None]:
-        return None
+    if den in [NA_STR, MISSING] or num in [NA_STR, MISSING]:
+        return MISSING
     ratio = NA_STR
     if den > 0: ratio = num / den * 100
     return ratio
 
 def calc_one_minus_numdenom(qs, agency_or_country, selector, numq, denomq):
     ratio = calc_numdenom(qs, agency_or_country, selector, numq, denomq)
-    ratio = 100 - ratio if ratio not in [NA_STR, None] else ratio
+    ratio = 100 - ratio if ratio not in [NA_STR, MISSING] else ratio
     return ratio
 
 def sum_values(qs, agency_or_country, selector, *args):
