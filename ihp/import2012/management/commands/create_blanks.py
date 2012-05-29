@@ -11,6 +11,7 @@ class Command(BaseCommand):
     def __init__(self, *args, **kwargs):
         super(BaseCommand, self).__init__(*args, **kwargs)
 
+    @transaction.commit_on_success
     def handle(self, *args, **options):
         questions = [
             "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
