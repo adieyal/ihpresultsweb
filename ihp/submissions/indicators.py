@@ -17,12 +17,16 @@ class IndicatorCalculator(object):
         countries = set(q.submission.country for q in qs)
         questions = set(q.question_number for q in qs)
 
-        # Get all the countries excluded from this indicator
-        excluded_countries = reduce(
-            lambda s1, s2: s1 | s2,  # union of two sets
-            (set(self._excluded_countries(q)) for q in questions),  
-            set()
-        )
+        excluded_countries = set()
+
+        if not GovQuestion in set(type(q) for q in qs): # only exclude if this is a DP query
+            # Get all the countries excluded from this indicator
+            excluded_countries = reduce(
+                lambda s1, s2: s1 | s2,  # union of two sets
+                (set(self._excluded_countries(q)) for q in questions),  
+                excluded_countries
+
+            )
 
         excluded_countries = set(c for c in excluded_countries if c in countries)
 
@@ -136,15 +140,6 @@ def calc_indicator_old(qs, agency_or_country, indicator, funcs=None):
     baseline_questions = latest_questions = 0
     baseline_excluded_count = latest_excluded_count = 0
     
-    #if hasattr(agency_or_country, "agency"):
-    #    if agency_or_country.agency == "UNFPA":
-    #        if indicator == "1DP" and qs[0].submission.country.country == "Benin":
-    #            import pdb; pdb.set_trace()
-    
-    
-    
-    
-
     # If there are no questions for this indicator then mark it as missing
     if len(qs2) == 0:
         return (MISSING, MISSING, MISSING, MISSING), comments
