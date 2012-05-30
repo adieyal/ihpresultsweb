@@ -24,28 +24,6 @@ def _sum_values(qs, selector):
     
     return sum([float(selector(q)) for q in qs])
 
-def func_8dp2012(qs, agency, selector, question_number):
-    qs_countries = [q.submission.country for q in qs]
-    denom = float(len(agency.countries.filter(country__in=qs_countries)))
-
-    num_ticks = 0.0
-    for q in qs:
-        try:
-            # TODO I know the coding gods are going to strike me down for this
-            # quick fixes - the root of all evil
-            q.latest_value = q.latest_value.replace("'", '"')
-            arr = json.loads(q.latest_value)
-            if type(arr) == list and len(arr) > 0:
-                num_ticks += 1
-        except ValueError:
-            print "Warning: I don't know how to deal with this: ", agency, q.submission.country, q.latest_value, __file__
-
-    try:
-        return (num_ticks / denom) * 100
-    except ZeroDivisionError:
-        return NA_STR
-    
-
 def count_factory(value):
     def count_value(qs, agency_or_country, selector, q):
         qs = [qq for qq in qs if qq.question_number==q]

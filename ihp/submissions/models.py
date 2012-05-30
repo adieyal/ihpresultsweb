@@ -124,13 +124,17 @@ class DPQuestion(models.Model):
         try:
             val = val.replace("'", '"')
             arr = json.loads(val)
-            if type(arr) == list and len(arr) > 0:
-                return "yes"
+            if type(arr) == list:
+                if len(arr) > 0:
+                    return "yes"
+                return "no"
             if float(arr) > 0:
                 return "yes"
             
         except (ValueError, TypeError):
-            print "Warning: I don't know how to deal with this: ", self.submission.agency, self.submission.country, self.latest_value
+            if old_val == None or old_val.strip() == "":
+                return "no"
+            print "Warning: I don't know how to deal with this: ", self.submission.agency, self.submission.country, old_val, type(old_val)
             return old_val
         return "no"
 
@@ -400,14 +404,19 @@ class NotApplicableManager(models.Manager):
             if val == None:
                 return False
 
-            # TODO Need to figure this out
-            val = str(val).strip().lower()
+            # TODO This decoding should be moved into import
+            for encoding in ["utf-8", "latin1"]:
+                try:
+                    val = val.decode(encoding)
+                    break
+                except Exception:
+                    pass
+            val = val.strip().lower()
         except:
             import traceback
             import sys
             traceback.print_exc()
             return False
-
 
         variations = [na.variation for na in self._get_variations()]
         if val in variations:
