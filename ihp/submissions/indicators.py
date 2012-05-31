@@ -7,7 +7,6 @@ from django.db.models.query import QuerySet
 import logging
 
 is_none = lambda x : x == None or (unicode(x)).strip() == ""
-
 class IndicatorCalculator(object):
     def __init__(self, func, args):
         self.func = func
@@ -15,6 +14,8 @@ class IndicatorCalculator(object):
 
     def calc(self, qs, agency_or_country):
         countries = set(q.submission.country for q in qs)
+        # TODO this will probably be super slow
+        agency_countries = [(q.submission.agency, q.submission.country) for q in qs]
         questions = set(q.question_number for q in qs)
 
         excluded_countries = set()
@@ -25,42 +26,45 @@ class IndicatorCalculator(object):
                 lambda s1, s2: s1 | s2,  # union of two sets
                 (set(self._excluded_countries(q)) for q in questions),  
                 excluded_countries
-
             )
+
 
         excluded_countries = set(c for c in excluded_countries if c in countries)
 
-        # Add any countries with N/A in one of their answers to the excluded list
-        excluded_countries |= set(
-            q.submission.country 
+        excluded_agency_countries = set((a, c) for (a, c) in agency_countries if c in excluded_countries)
+        excluded_agency_countries |= set(
+            (q.submission.agency, q.submission.country)
             for q in qs 
             if NotApplicable.objects.is_not_applicable(self._getvalue(q))
         )
 
         # If we no longer have any countries to check then return N/A
-        if len(excluded_countries) == len(countries):
+        if len(excluded_agency_countries) == len(agency_countries):
             return NA_STR
 
         # Add any countries with a missing answer in one of their answers to the excluded list
-        excluded_countries |= set(
-            q.submission.country 
+        excluded_agency_countries |= set(
+            (q.submission.agency, q.submission.country)
             for q in qs 
             if is_none(self._getvalue(q))
         )
 
         # If we no longer have any countries to check then return MISSING
-        if len(excluded_countries) == len(countries):
+        if len(excluded_agency_countries) == len(agency_countries):
             return MISSING
 
-        remaining_countries = [c for c in countries if not c in excluded_countries]
+        remaining_agency_countries = [ac for ac in agency_countries if not ac in excluded_agency_countries]
 
-        remaining_qs = [q for q in qs if not q.submission.country in excluded_countries]
+        remaining_qs = [
+            q for q in qs 
+            if not (q.submission.agency, q.submission.country) in excluded_agency_countries
+        ]
+
         if len(remaining_qs) == 0:
             return MISSING
             
         val = self.func(remaining_qs, agency_or_country, self._selector, *self.args)
         return val
-
 
 class BaselineIndicatorCalculator(IndicatorCalculator):
     def _getvalue(self, q):
@@ -92,7 +96,7 @@ class LatestIndicatorCalculator(IndicatorCalculator):
         return cur_selector
 
 def calc_indicator(qs, agency_or_country, indicator, funcs=None):
-    if type(qs) == QuerySet: qs = list(qs)
+    #if type(qs) == QuerySet: qs = list(qs)
     is_none = lambda x : x == None or (unicode(x)).strip() == ""
 
     funcs = funcs or indicator_funcs
@@ -226,11 +230,9 @@ def calc_overall_agency_indicators(funcs=None):
     i.e. there will be two values per indicator, baseline value and latest value
     currently only calculating for 2DPa, 2DPb, 2DPc, 3DP, 5DPa, 5DPb, 5DPc
 
-    2008 base years are excluded
-
     """
     indicators = ["2DPa", "2DPb", "2DPc", "3DP", "4DP", "5DPa", "5DPb", "5DPc"]
-    qs = DPQuestion.objects.filter(submission__agency__type="Agency").exclude(baseline_year="2008").select_related()
+    qs = DPQuestion.objects.filter(submission__agency__type="Agency").select_related()
 
     results = [calc_indicator(qs, None, indicator, funcs) for indicator in indicators]
     return dict(zip(indicators, results))
