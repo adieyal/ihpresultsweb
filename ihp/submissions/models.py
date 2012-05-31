@@ -134,7 +134,7 @@ class DPQuestion(models.Model):
         except (ValueError, TypeError):
             if old_val == None or old_val.strip() == "":
                 return "no"
-            print "Warning: I don't know how to deal with this: ", self.submission.agency, self.submission.country, old_val, type(old_val)
+            #print "Warning: I don't know how to deal with this: ", self.submission.agency, self.submission.country, old_val, type(old_val)
             return old_val
         return "no"
 
