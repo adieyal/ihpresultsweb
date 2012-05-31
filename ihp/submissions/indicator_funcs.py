@@ -84,6 +84,9 @@ def equals_yes_or_no(val):
         return _val
     return test
 
+def identity(qs, agency_or_country, selector, *args):
+    return selector(qs[0])
+
 def combine_yesnos(qs, agency_or_country, selector, *args):
     values = []
     for arg in args:

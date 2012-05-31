@@ -197,6 +197,14 @@ def country_table(request, language="English", template_name="submissions/countr
                     base_year,
                     rating,
                 ) 
+            elif indicator == "5Gb":
+                country_abs_values["5Gb"] = (
+                    base_val,
+                    latest_val,
+                    0,
+                    base_year,
+                    rating
+                )
             else:
                 decimal_places = {
                     "5Ga" : 1

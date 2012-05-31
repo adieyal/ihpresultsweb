@@ -8,6 +8,7 @@ from django.db import transaction
 from ihp.import2012.process import SubmissionParser
 from ihp.import2012.consts import conversion
 import override_5ga
+import override_5gb
 
 from submissions.models import *
 import json
@@ -533,6 +534,7 @@ class Command(BaseCommand):
         # TODO Figure out what to do with Gov imports when needed
         #self.additional_imports()
         override_5ga.override_5Ga()
+        override_5gb.override_5Gb()
 
         
     def read_database(self, js):

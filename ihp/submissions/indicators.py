@@ -334,7 +334,7 @@ indicator_funcs = {
     "3G"   : (calc_numdenom, ("6", "5")),
     "4G"   : (calc_one_minus_numdenom, ("8", "7")),
     "5Ga"  : (sum_values, ("9",)),
-    "5Gb"  : (sum_values, ("10",)),
+    "5Gb"  : (identity, ("10",)),
     "6G"   : (equals_yes_or_no("yes"), ("11",)),
     "7G"   : (equals_yes_or_no("yes"), ("12",)),
     "8G"   : (calc_numdenom, ("13", "14")),
