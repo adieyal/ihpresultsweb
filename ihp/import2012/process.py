@@ -4,11 +4,20 @@ import os
 import sys
 from django.db import transaction
 import json
+from consts import conversion
 
 def unfloat(val):
     if type(val) == float:
         return str(int(val))
     return val
+
+def safe_mul(v1, v2):
+    try:
+        v1 = float(v1)
+        v2 = float(v2)
+    except (ValueError, TypeError):
+        return None
+    return v1 * v2
 
 new_countries = [
     "Benin",
@@ -22,14 +31,17 @@ new_countries = [
     "Uganda"
 ]
 
+dp_conversion_questions = [
+    "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12",
+    "17", "18"
+]
+
 class SubmissionParser(object):
     def __init__(self, f):
         self.f = f
 
     @transaction.commit_on_success
     def parse(self):
-        # TODO - this code doesn't currently cater you years other than 2007 and 2011 
-        # It also doesn't cater for currency conversion
         book = xlrd.open_workbook(self.f)
         for sheet in book.sheets():
             if sheet.name == "Survey Tool":
@@ -45,12 +57,26 @@ class SubmissionParser(object):
 
         country = v(0, 3)
         agency = v(1, 3)
-        currency = v(2, 3)
+        currency = v(2, 3).strip()
         completed_by = v(0, 6)
         job = v(1, 6)
 
+        try:
+            baseline_year = str(int(v(3, 3)))
+        except ValueError:
+            baseline_year = None
+
+        try:
+            latest_year = str(int(v(4, 3)))
+        except ValueError:
+            latest_year = None
+
+        base_factor = conversion[currency].get(baseline_year, None)
+        latest_factor = conversion[currency].get(latest_year, None)
+
         agency = Agency.objects.all_types().get(agency=agency)
         country = Country.objects.get(country=country)
+
 
         if country.country in new_countries:
             DPQuestion.objects.filter(
@@ -76,8 +102,6 @@ class SubmissionParser(object):
         submission.job_title = job
         submission.save()
 
-        baseline_year = 2007
-        latest_year = 2011
 
         i8dp_map = {
             23 : "financial",
@@ -93,6 +117,10 @@ class SubmissionParser(object):
             question_number = unfloat(v(row, 3))
             baseline_value = v(row, 5)
             latest_value = v(row, 6)
+            if question_number in dp_conversion_questions:
+                baseline_value = safe_mul(baseline_value, base_factor)
+                latest_value = safe_mul(latest_value, latest_factor)
+
             comment = v(row, 7)
 
             yes_values = ["y", "yes"]
