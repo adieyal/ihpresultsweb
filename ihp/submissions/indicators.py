@@ -15,7 +15,7 @@ class IndicatorCalculator(object):
     def calc(self, qs, agency_or_country):
         countries = set(q.submission.country for q in qs)
         # TODO this will probably be super slow
-        agency_countries = [(q.submission.agency, q.submission.country) for q in qs]
+        agency_countries = set((q.submission.agency, q.submission.country) for q in qs)
         questions = set(q.question_number for q in qs)
 
         excluded_countries = set()
@@ -106,10 +106,12 @@ def calc_indicator(qs, agency_or_country, indicator, funcs=None):
     comments = [(question.question_number, question.submission.country, question.comments) for question in qs2]
 
     #if len(qs2) > 0 and qs2[0].submission.country.country == "Burkina Faso" and qs2[0].submission.agency.agency == "AfDB":
-    #if len(qs2) > 0 and qs2[0].submission.agency.agency == "Norway" and indicator == "2DPa":
-    #    import pdb; pdb.set_trace()
     base_val = BaselineIndicatorCalculator(func, args).calc(qs2, agency_or_country)
+    
     cur_val = LatestIndicatorCalculator(func, args).calc(qs2, agency_or_country)
+    #if len(qs2) > 0 and qs2[0].submission.agency.agency == "AfDB" and indicator == "5DPa":
+    #    print base_val, cur_val, len(qs2)
+    #    #import pdb; pdb.set_trace()
 
     
     base_year = MISSING
