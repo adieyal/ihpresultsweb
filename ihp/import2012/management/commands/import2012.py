@@ -435,8 +435,6 @@ class Command(BaseCommand):
                 v1_qtype = response.question_type
                 key = (submission.agency, submission.country)
 
-                mapping = {"6" : "11old", "9" : "10old"}
-
                 try:
                     dpq = DPQuestion.objects.get(
                         submission=submission,
@@ -451,10 +449,17 @@ class Command(BaseCommand):
                             dpq.baseline_value = response.value if response.value != None else ""
                     dpq.save()
                      
-                    #if v1_qn in mapping:
-                    #    dpq.id = None
-                    #    dpq.question_number = mapping[v1_qn]
-                    #    dpq.save()
+                    mapping = {"6" : "11old", "9" : "10old"}
+
+                    if v1_qn in mapping:
+                        v1_qn2 = mapping[v1_qn]
+                        dpq2 = DPQuestion.objects.get(
+                            submission=submission, question_number=v1_qn2
+                        )
+                        if not dpq2.baseline_value:
+                            dpq2.baseline_value = response.value
+                            dpq2.baseline_year = response.year
+                            dpq2.save()
                 except DPQuestion.DoesNotExist:
                     print "Could not find submission for response: %s" % response.pk
         self.additional_imports()
