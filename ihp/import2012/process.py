@@ -42,6 +42,7 @@ class SubmissionParser(object):
 
     @transaction.commit_on_success
     def parse(self):
+        print "Processing Book: %s" % self.f
         book = xlrd.open_workbook(self.f)
         for sheet in book.sheets():
             if sheet.name == "Survey Tool":
