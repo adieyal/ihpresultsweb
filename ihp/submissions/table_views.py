@@ -1,3 +1,4 @@
+from collections import OrderedDict
 from django.views.generic.simple import direct_to_template
 from django.shortcuts import get_object_or_404
 
@@ -96,9 +97,9 @@ def agency_table_by_agency(request, agency_id, language="English", template_name
     agency = get_object_or_404(models.Agency, pk=agency_id)
 
     extra_context["translation"] = translation = request.translation
-    abs_values = {}
+    abs_values = OrderedDict()
     for country in agency.countries:
-        country_abs_values = {}
+        country_abs_values = OrderedDict()
         inds = indicators.calc_agency_country_indicators(agency, country, indicators.positive_funcs)
         ratings = target.country_agency_indicator_ratings(country, agency)
         for indicator in inds:
@@ -123,10 +124,10 @@ def agency_table_by_country(request, country_id, language="English", template_na
     country = get_object_or_404(models.Country, pk=country_id)
 
     extra_context["translation"] = translation = request.translation
-    abs_values = {}
+    abs_values = OrderedDict()
     for agency in country.agencies:
         ratings = target.country_agency_indicator_ratings(country, agency)
-        agency_abs_values = {}
+        agency_abs_values = OrderedDict()
         inds = indicators.calc_agency_country_indicators(agency, country, indicators.positive_funcs)
         for indicator in inds:
             base_val, base_year, latest_val, latest_year = inds[indicator][0]
@@ -159,9 +160,9 @@ def gbs_table(request, agency_id, template_name="submissions/gbs_table.html", ex
 def country_table(request, language="English", template_name="submissions/country_table.html", extra_context=None):
     extra_context = extra_context or {}
     extra_context["translation"] = translation = request.translation
-    abs_values = {}
+    abs_values = OrderedDict()
     for country in models.Country.objects.all().order_by("country"):
-        country_abs_values = {}
+        country_abs_values = OrderedDict()
         country_ratings = target.calc_country_ratings(country)
         inds = indicators.calc_country_indicators(country, indicators.positive_funcs)
         for indicator in inds:
@@ -231,7 +232,7 @@ def agency_ratings(request, language="English", template_name="submissions/agenc
 
     agencies = models.Agency.objects.all().order_by("agency")
     for indicator in indicators.dp_indicators:
-        rating = {}
+        rating = OrderedDict()
         for agency in agencies:
             cur_val = data[agency][indicator]["cur_val"]
             base_val = data[agency][indicator]["base_val"]
