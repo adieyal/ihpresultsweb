@@ -24,11 +24,32 @@ def dp_scorecard_json(request, agency_id, language):
 
     data = calc_agency_ratings(agency, language)
 
+    # TODO - ugly hack to return the correct target values
+    for indicator in dp_indicators:
+        if data[indicator]["target_val"] != round(data[indicator]["target_val"]):
+            data[indicator]["target_val"] += 0.5
+
+        if indicator in ["2DPa", "5DPa", "5DPb"]:
+            if "one_minus_base_val" in data[indicator]:
+                data[indicator]["base_val"] = data[indicator]["one_minus_base_val"]
+            if "one_minus_cur_val" in data[indicator]:
+                data[indicator]["cur_val"] = data[indicator]["one_minus_cur_val"]
+
+        if indicator in ["2DPa"]:
+            data[indicator]["target_val"] = 85
+
+        if indicator in ["5DPa", "5DPb"]:
+            data[indicator]["target_val"] = 80
+
+        if indicator in ["5DPc"]:
+            data[indicator]["target_val"] = ""
+            
+
     a = {
         'agency': {
             'name': agency.agency,
             'profile': profile.description,
-            'logo_url': '/media/flags/%s.png' % normalise_name(agency.agency),
+            'logo_url': '/media/logos/%s.png' % normalise_name(agency.agency),
             'active_countries': [
                 {
                     'name':x.country,

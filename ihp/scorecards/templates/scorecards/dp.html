@@ -68,8 +68,8 @@
         insert_text(p_node, profile, 'agency-profile');
 
 
-
         var c_length = json.agency.active_countries.length / 2;
+        c_length = 9.5;
         var countries_x = d3.scale.linear()
                 .domain([0, c_length])
                 .range([0, 315]);
@@ -98,14 +98,16 @@
             .attr('class', 'agency-country-text')
 
 
-        d3.select('#agency-logo').selectAll('image')
+        console.log(json.agency.logo_url)
+
+        d3.select('#agency-logo').selectAll('g')
             .data([json.agency.logo_url])
             .enter().append('image')
             .attr('xlink:href', function(d){ return d})
-            .attr('x', 0)
-            .attr('y', -20)
-            .attr('width', 100)
-            .attr('height', 70)
+            .attr('x', 1000)
+            .attr('y', 60)
+            .attr('width', 460)
+            .attr('height', 80)
             .attr('class', 'agency-logo');
 
 
@@ -131,8 +133,13 @@
         d3.select("#info_dummy_text").remove();
 
 
+        console.log(json.overall_progress);
         for (var x in json.overall_progress){
             var prog = json.overall_progress[x];
+            for (i = 0; i < 2; i++) {
+                if (prog.data[i].value > 100)
+                    prog.data[i].value = 100;
+            }
             d3.select('#graph-' + x + ' g').remove();
 
             var ctx = {
@@ -140,19 +147,19 @@
                 'width': 213,
                 'height': prog.height || 40,
                 'data': prog.data,
-                'line': {
-                    'constant': prog.target,
-                    'text': prog.target + '%'
-                },
-
                 bar: {
                     'max': 100,
                     'margin' : 5, // pixels between bars
                     'height': prog.bar_height || 6, // width of bars
                     'background': '#dfe7e5'
                 },
-
             }
+
+            if (prog.target != undefined && prog.target != "") 
+                ctx['line'] = {
+                    'constant': prog.target,
+                    'text': prog.target + '%'
+                }
 
             hbg = new HorizontalBarGraph(ctx);
 
