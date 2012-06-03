@@ -9,6 +9,7 @@ from ihp.import2012.process import SubmissionParser
 from ihp.import2012.consts import conversion
 import override_5ga
 import override_5gb
+import override_8dp
 
 from submissions.models import *
 import json
@@ -290,6 +291,8 @@ class Command(BaseCommand):
                     agency=agency,
                     type=rs["fields"]["survey"].type
                 )
+                if created:
+                    print "Created submission for %s in %s" % (agency, country)
                 s.docversion = "XXX"
                 s.date_submitted = iso8601.parse_date(rs["fields"]["submission_date"])
                 #s.collection = collection2012 # TODO don't forget about resolving this
@@ -329,8 +332,6 @@ class Command(BaseCommand):
         ]
 
         for submission in Submission.objects.filter(type="DP"):
-            #if submission.agency.agency == "Sweden" and submission.country.country == "Burkina Faso":
-            #    import pdb; pdb.set_trace()
             questions = submission.dpquestion_set.all()
             for (fq, tq) in mapping:
                 try:
@@ -434,6 +435,8 @@ class Command(BaseCommand):
                 v1_qtype = response.question_type
                 key = (submission.agency, submission.country)
 
+                mapping = {"6" : "11old", "9" : "10old"}
+
                 try:
                     dpq = DPQuestion.objects.get(
                         submission=submission,
@@ -447,9 +450,15 @@ class Command(BaseCommand):
                         if not dpq.baseline_value:
                             dpq.baseline_value = response.value if response.value != None else ""
                     dpq.save()
+                     
+                    #if v1_qn in mapping:
+                    #    dpq.id = None
+                    #    dpq.question_number = mapping[v1_qn]
+                    #    dpq.save()
                 except DPQuestion.DoesNotExist:
                     print "Could not find submission for response: %s" % response.pk
         self.additional_imports()
+        override_8dp.override_8DP()
 
 
     def prepare_gov_questions(self):
