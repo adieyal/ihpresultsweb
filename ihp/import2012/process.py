@@ -1,4 +1,5 @@
 import xlrd
+import datetime
 from submissions.models import Agency, Submission, Country, DPQuestion
 import os
 import sys
@@ -19,6 +20,7 @@ def safe_mul(v1, v2):
         return None
     return v1 * v2
 
+# countries that were added in 2012
 new_countries = [
     "Benin",
     "El Salvador",
@@ -31,14 +33,53 @@ new_countries = [
     "Uganda"
 ]
 
+# question that need currency conversions
 dp_conversion_questions = [
     "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12",
     "17", "18"
 ]
 
+def cellgrabber(sheet):
+    return lambda r, c : sheet.cell(r, c).value
+
 class SubmissionParser(object):
+    DP_SHEET = "DP"
+    GOV_SHEET = "Gov"
+    YES_VALUE = "yes"
+    NO_VALUE = "no"
+
+    @classmethod
+    def get_parser(cls, f):
+        sheet = cls.get_data_sheet(f)
+        if not sheet:
+            raise Exception("Could not detect file type")
+
+        if sheet["type"] == SubmissionParser.DP_SHEET:
+            return self
+        elif sheet["type"] == SubmissionParser.GOV_SHEET:
+            return GovSubmissionParser(sheet["sheet"])
+
+    # TODO to be removed
     def __init__(self, f):
         self.f = f
+        self.book = xlrd.open_workbook(self.f)
+
+    @classmethod
+    def get_data_sheet(cls, fname):
+        book = xlrd.open_workbook(fname)
+        for sheet in book.sheets():
+            if sheet.name in ["Survey Tool", "Questionnaire"]:
+                if sheet.cell(7, 0).value == "1DP":
+                    return {
+                        "sheet" :  sheet,
+                        "type" : SubmissionParser.DP_SHEET
+                    }
+                elif sheet.cell(6, 0).value == "1G":
+                    return {
+                        "sheet" :  sheet,
+                        "type" : SubmissionParser.GOV_SHEET
+                    }
+        return None
 
     @transaction.commit_on_success
     def parse(self):
@@ -202,6 +243,148 @@ class SubmissionParser(object):
 
         
         return submission
+
+class GovSubmissionParser(SubmissionParser):
+    def __init__(self, sheet):
+        self.sheet = sheet
+        self.datemode = sheet.book.datemode
+        self._v = cellgrabber(sheet)
+
+    def extract_metadata(self):
+        
+        return {
+            "country" : self._v(0, 1),
+            "currency" : self._v(1, 1),
+            "baseline_year" : unfloat(self._v(2, 1)),
+            "latest_year" : unfloat(self._v(3, 1)),
+            "completed_by" : self._v(0, 5),
+            "job_title" : self._v(1, 5)
+        }
+
+    def extract_answers(self):
+        q14_labels = [
+            "maternal_health", 
+            "child_health", 
+            "malaria", 
+            "hiv_aids", 
+            "tb", 
+            "hss", 
+            "nutrition", 
+            "international_ngo", 
+            "national_ngo", 
+            "fbo", 
+            "umbrella_organisation", 
+            "pa"
+        ]
+        
+        q15_labels = [
+            "joint_reviews", 
+            "monthy_meetings", 
+            "working_groups", 
+            "budget_development"
+        ]
+
+        yes_values = ["oui", "yes", "y"]
+        no_values = ["non", "no", "n"]
+
+        base_col = 3
+        cur_col = 4
+        comments_col = 5
+
+        def extract_answer(row):
+
+            def s(t):
+                if isinstance(t, basestring):
+                    if t.strip() == "": return None
+                    return t.strip()
+                return t
+
+            return {
+                "base_val" : s(self._v(row, base_col)),
+                "cur_val" : s(self._v(row, cur_col)),
+                "comments" : extract_comment(row)
+            }
+
+        def extract_comment(row):
+            return self._v(row, comments_col).strip()
+
+        def extract_list(rows, col, labels):
+
+            lst = [
+                label 
+                for row, label in zip(rows, labels) 
+                if extract_yesno(row, col) == SubmissionParser.YES_VALUE
+            ]
+
+            return lst
+
+        def extract_yesno(row, col):
+            val = self._v(row, col)
+            if val in yes_values:
+                return SubmissionParser.YES_VALUE
+            elif val in no_values:
+                return SubmissionParser.NO_VALUE
+            else:
+                sys.stderr.write("WARNING: Unknown yes/no value: %s in row: %d, col: %d\n" % (val, row, col))
+                return None
+
+        def extract_yesno_value(row):
+            return {
+                "base_val" : extract_yesno(row, base_col),
+                "cur_val" : extract_yesno(row, cur_col),
+                "comments" : extract_comment(row),
+            }
+
+        def extract_date(row, col):
+            val = self._v(row, col)
+            if str(val).strip() == "": return None
+
+            date_tuple = xlrd.xldate_as_tuple(val, self.datemode)
+            return datetime.datetime(*date_tuple)
+
+        
+        def extract_date_value(row):
+            return {
+                "base_val" : extract_date(row, base_col),
+                "cur_val" : extract_date(row, cur_col),
+                "comments" : extract_comment(row),
+            }
+            
+        return {
+            "1" : extract_yesno_value(6),
+            "2" : extract_yesno_value(7),
+            "3" : extract_yesno_value(8),
+            "4" : extract_yesno_value(9),
+            "5" : extract_answer(10),
+            "6" : extract_answer(11),
+            "7" : extract_answer(12),
+            "8" : extract_answer(13),
+            "9" : extract_answer(14),
+            "10" : extract_answer(15),
+            "11" : extract_yesno_value(16),
+            "12" : extract_yesno_value(17),
+            "13" : extract_answer(18),
+            "14" : {
+                "base_val" : extract_list(range(20, 32), base_col, q14_labels),
+                "cur_val" : extract_list(range(20, 32), cur_col, q14_labels),
+                "comments" : extract_comment(20),
+            },
+            "15" : {
+                "base_val" : extract_list(range(33, 37), base_col, q15_labels),
+                "cur_val" : extract_list(range(33, 37), cur_col, q15_labels),
+                "comments" : extract_comment(32),
+            },
+            "16" : extract_answer(37),
+            "17" : extract_answer(38),
+            "18" : extract_answer(39),
+            "19" : extract_answer(40),
+            "20" : extract_answer(41),
+            "21" : extract_answer(42),
+            "22" : extract_yesno_value(43),
+            "23" : extract_answer(44),
+            "24" : extract_answer(45),
+            "25" : extract_date_value(46),
+        }
 
 if __name__ == "__main__":
     parser = SubmissionParser(sys.argv[1])
