@@ -39,8 +39,17 @@ dp_conversion_questions = [
     "17", "18"
 ]
 
+yes_values = ["oui", "yes", "y"]
+no_values = ["non", "no", "n"]
+
+
 def cellgrabber(sheet):
-    return lambda r, c : sheet.cell(r, c).value
+    def _v(r, c):
+        value = sheet.cell(r, c).value
+        if isinstance(value, basestring):
+            return value.strip()
+        return value
+    return _v
 
 class SubmissionParser(object):
     DP_SHEET = "DP"
@@ -55,14 +64,9 @@ class SubmissionParser(object):
             raise Exception("Could not detect file type")
 
         if sheet["type"] == SubmissionParser.DP_SHEET:
-            return self
+            return DPSubmissionParser(sheet["sheet"])
         elif sheet["type"] == SubmissionParser.GOV_SHEET:
             return GovSubmissionParser(sheet["sheet"])
-
-    # TODO to be removed
-    def __init__(self, f):
-        self.f = f
-        self.book = xlrd.open_workbook(self.f)
 
     @classmethod
     def get_data_sheet(cls, fname):
@@ -80,6 +84,115 @@ class SubmissionParser(object):
                         "type" : SubmissionParser.GOV_SHEET
                     }
         return None
+
+    def __init__(self, sheet):
+        self.sheet = sheet
+        self.datemode = sheet.book.datemode
+        self._v = cellgrabber(sheet)
+
+    def extract_yesno(self, row, col):
+        val = self._v(row, col).lower()
+        if val in yes_values:
+            return SubmissionParser.YES_VALUE
+        elif val in no_values:
+            return SubmissionParser.NO_VALUE
+        else:
+            sys.stderr.write("WARNING: Unknown yes/no value: %s in row: %d, col: %d\n" % (val, row, col))
+            return None
+
+    def extract_yesno_value(self, row):
+        return {
+            "base_val" : self.extract_yesno(row, self.base_col),
+            "cur_val" : self.extract_yesno(row, self.cur_col),
+            "comments" : self.extract_comment(row),
+        }
+
+    def extract_answer(self, row):
+
+        def s(t):
+            if isinstance(t, basestring):
+                if t.strip() == "": return None
+                return t.strip()
+            return t
+
+        return {
+            "base_val" : s(self._v(row, self.base_col)),
+            "cur_val" : s(self._v(row, self.cur_col)),
+            "comments" : self.extract_comment(row)
+        }
+
+    def extract_amounts(self, row, baseline_rate, cur_rate):
+        answer = self.extract_answer(row)
+        answer["base_val"] = safe_mul(answer["base_val"], baseline_rate)
+        answer["cur_val"]  = safe_mul(answer["cur_val"], cur_rate)
+        return answer
+
+    def extract_list(self, rows, col, labels):
+
+        lst = [
+            label 
+            for row, label in zip(rows, labels) 
+            if self.extract_yesno(row, col) == SubmissionParser.YES_VALUE
+        ]
+
+        return lst
+
+
+    def extract_comment(self, row):
+        return self._v(row, self.comments_col).strip()
+
+
+class DPSubmissionParser(SubmissionParser):
+    def __init__(self, sheet):
+        super(DPSubmissionParser, self).__init__(sheet)
+        self.base_col = 5
+        self.cur_col = 6
+        self.comments_col = 7
+
+    def extract_metadata(self):
+        
+        return {
+            "country" : self._v(0, 3),
+            "agency" : self._v(1, 3),
+            "currency" : self._v(2, 3),
+            "baseline_year" : unfloat(self._v(3, 3)),
+            "latest_year" : unfloat(self._v(4, 3)),
+            "completed_by" : self._v(0, 6),
+            "job_title" : self._v(1, 6)
+        }
+
+    def extract_answers(self):
+        q16_labels = ["financial", "technical", "lobbying", "other"]
+
+        metadata = self.extract_metadata()
+        currency = metadata["currency"]
+        rate_baseline = conversion[currency].get(metadata["baseline_year"], None)
+        rate_current = conversion[currency].get(metadata["latest_year"], None)
+
+        return {
+            "1" : self.extract_yesno_value(7),
+            "2" : self.extract_amounts(8, rate_baseline, rate_current),
+            "3" : self.extract_amounts(9, rate_baseline, rate_current),
+            "4" : self.extract_amounts(10, rate_baseline, rate_current),
+            "5" : self.extract_amounts(11, rate_baseline, rate_current),
+            "6" : self.extract_amounts(12, rate_baseline, rate_current),
+            "7" : self.extract_amounts(13, rate_baseline, rate_current),
+            "8" : self.extract_amounts(14, rate_baseline, rate_current),
+            "9" : self.extract_amounts(15, rate_baseline, rate_current),
+            "10" : self.extract_amounts(16, rate_baseline, rate_current),
+            "11" : self.extract_amounts(17, rate_baseline, rate_current),
+            "12" : self.extract_amounts(18, rate_baseline, rate_current),
+            "13" : self.extract_answer(19),
+            "14" : self.extract_yesno_value(20),
+            "15" : self.extract_yesno_value(21),
+            "16" : {
+                "base_val" : self.extract_list(range(23, 27), self.base_col, q16_labels),
+                "cur_val" : self.extract_list(range(23, 27), self.cur_col, q16_labels),
+                "comments" : self.extract_comment(22),
+            },
+            "17" : self.extract_amounts(27, rate_baseline, rate_current),
+            "18" : self.extract_amounts(28, rate_baseline, rate_current),
+        }
 
     @transaction.commit_on_success
     def parse(self):
@@ -246,9 +359,11 @@ class SubmissionParser(object):
 
 class GovSubmissionParser(SubmissionParser):
     def __init__(self, sheet):
-        self.sheet = sheet
-        self.datemode = sheet.book.datemode
-        self._v = cellgrabber(sheet)
+        super(GovSubmissionParser, self).__init__(sheet)
+        self.base_col = 3
+        self.cur_col = 4
+        self.comments_col = 5
+
 
     def extract_metadata(self):
         
@@ -284,56 +399,7 @@ class GovSubmissionParser(SubmissionParser):
             "budget_development"
         ]
 
-        yes_values = ["oui", "yes", "y"]
-        no_values = ["non", "no", "n"]
-
-        base_col = 3
-        cur_col = 4
-        comments_col = 5
-
-        def extract_answer(row):
-
-            def s(t):
-                if isinstance(t, basestring):
-                    if t.strip() == "": return None
-                    return t.strip()
-                return t
-
-            return {
-                "base_val" : s(self._v(row, base_col)),
-                "cur_val" : s(self._v(row, cur_col)),
-                "comments" : extract_comment(row)
-            }
-
-        def extract_comment(row):
-            return self._v(row, comments_col).strip()
-
-        def extract_list(rows, col, labels):
-
-            lst = [
-                label 
-                for row, label in zip(rows, labels) 
-                if extract_yesno(row, col) == SubmissionParser.YES_VALUE
-            ]
-
-            return lst
-
-        def extract_yesno(row, col):
-            val = self._v(row, col)
-            if val in yes_values:
-                return SubmissionParser.YES_VALUE
-            elif val in no_values:
-                return SubmissionParser.NO_VALUE
-            else:
-                sys.stderr.write("WARNING: Unknown yes/no value: %s in row: %d, col: %d\n" % (val, row, col))
-                return None
-
-        def extract_yesno_value(row):
-            return {
-                "base_val" : extract_yesno(row, base_col),
-                "cur_val" : extract_yesno(row, cur_col),
-                "comments" : extract_comment(row),
-            }
+        
 
         def extract_date(row, col):
             val = self._v(row, col)
@@ -345,44 +411,49 @@ class GovSubmissionParser(SubmissionParser):
         
         def extract_date_value(row):
             return {
-                "base_val" : extract_date(row, base_col),
-                "cur_val" : extract_date(row, cur_col),
-                "comments" : extract_comment(row),
+                "base_val" : extract_date(row, self.base_col),
+                "cur_val" : extract_date(row, self.cur_col),
+                "comments" : self.extract_comment(row),
             }
             
+        metadata = self.extract_metadata()
+        currency = metadata["currency"]
+        rate_baseline = conversion[currency].get(metadata["baseline_year"], None)
+        rate_current = conversion[currency].get(metadata["latest_year"], None)
+
         return {
-            "1" : extract_yesno_value(6),
-            "2" : extract_yesno_value(7),
-            "3" : extract_yesno_value(8),
-            "4" : extract_yesno_value(9),
-            "5" : extract_answer(10),
-            "6" : extract_answer(11),
-            "7" : extract_answer(12),
-            "8" : extract_answer(13),
-            "9" : extract_answer(14),
-            "10" : extract_answer(15),
-            "11" : extract_yesno_value(16),
-            "12" : extract_yesno_value(17),
-            "13" : extract_answer(18),
+            "1" : self.extract_yesno_value(6),
+            "2" : self.extract_yesno_value(7),
+            "3" : self.extract_yesno_value(8),
+            "4" : self.extract_yesno_value(9),
+            "5" : self.extract_amounts(10, rate_baseline, rate_current),
+            "6" : self.extract_amounts(11, rate_baseline, rate_current),
+            "7" : self.extract_amounts(12, rate_baseline, rate_current),
+            "8" : self.extract_amounts(13, rate_baseline, rate_current),
+            "9" : self.extract_answer(14),
+            "10" : self.extract_answer(15),
+            "11" : self.extract_yesno_value(16),
+            "12" : self.extract_yesno_value(17),
+            "13" : self.extract_answer(18),
             "14" : {
-                "base_val" : extract_list(range(20, 32), base_col, q14_labels),
-                "cur_val" : extract_list(range(20, 32), cur_col, q14_labels),
-                "comments" : extract_comment(20),
+                "base_val" : self.extract_list(range(20, 32), self.base_col, q14_labels),
+                "cur_val" : self.extract_list(range(20, 32), self.cur_col, q14_labels),
+                "comments" : self.extract_comment(20),
             },
             "15" : {
-                "base_val" : extract_list(range(33, 37), base_col, q15_labels),
-                "cur_val" : extract_list(range(33, 37), cur_col, q15_labels),
-                "comments" : extract_comment(32),
+                "base_val" : self.extract_list(range(33, 37), self.base_col, q15_labels),
+                "cur_val" : self.extract_list(range(33, 37), self.cur_col, q15_labels),
+                "comments" : self.extract_comment(32),
             },
-            "16" : extract_answer(37),
-            "17" : extract_answer(38),
-            "18" : extract_answer(39),
-            "19" : extract_answer(40),
-            "20" : extract_answer(41),
-            "21" : extract_answer(42),
-            "22" : extract_yesno_value(43),
-            "23" : extract_answer(44),
-            "24" : extract_answer(45),
+            "16" : self.extract_answer(37),
+            "17" : self.extract_answer(38),
+            "18" : self.extract_answer(39),
+            "19" : self.extract_answer(40),
+            "20" : self.extract_answer(41),
+            "21" : self.extract_amounts(42, rate_baseline, rate_current),
+            "22" : self.extract_yesno_value(43),
+            "23" : self.extract_answer(44),
+            "24" : self.extract_answer(45),
             "25" : extract_date_value(46),
         }
 
