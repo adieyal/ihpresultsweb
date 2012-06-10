@@ -1,0 +1,380 @@
+[
+    {
+        "pk": 1, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "AusAID", 
+            "display_name": "AUSAID"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "Belgium", 
+            "display_name": "BELGIUM"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "EC", 
+            "display_name": "THE EUROPEAN COMMISSION"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "GAVI", 
+            "display_name": "THE GAVI ALLIANCE"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "GFATM", 
+            "display_name": "THE GLOBAL FUND TO FIGHT AIDS, TB & MALARIA"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "Netherlands", 
+            "display_name": "THE NETHERLANDS"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "Norway", 
+            "display_name": "NORWAY"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "Spain", 
+            "display_name": "SPAIN"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "Sweden", 
+            "display_name": "SWEDEN"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "UK", 
+            "display_name": "THE UNITED KINGDOM"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "UNAIDS", 
+            "display_name": "UNAIDS"
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "UNFPA", 
+            "display_name": "UNFPA"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "UNICEF", 
+            "display_name": "UNICEF"
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "WHO", 
+            "display_name": "THE WORLD HEALTH ORGANIZATION"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "World Bank", 
+            "display_name": "THE WORLD BANK"
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Burkina Faso", 
+            "display_name": "Government of Burkina Faso"
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Burundi", 
+            "display_name": "Government of Burundi"
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Djibouti", 
+            "display_name": "Government of Djibouti"
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of DRC", 
+            "display_name": "Government of DRC"
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Ethiopia", 
+            "display_name": "Government of Ethiopia"
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Mali", 
+            "display_name": "Government of Mali"
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Mozambique", 
+            "display_name": "Government of Mozambique"
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Nepal", 
+            "display_name": "Government of Nepal"
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Niger", 
+            "display_name": "Government of Niger"
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Nigeria", 
+            "display_name": "Government of Nigeria"
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "GBS", 
+            "agency": "ECGBS", 
+            "display_name": null
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "GBS", 
+            "agency": "NetherlandsGBS", 
+            "display_name": null
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "GBS", 
+            "agency": "NorwayGBS", 
+            "display_name": null
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "GBS", 
+            "agency": "SpainGBS", 
+            "display_name": null
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "GBS", 
+            "agency": "SwedenGBS", 
+            "display_name": null
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "GBS", 
+            "agency": "UKGBS", 
+            "display_name": null
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "AfDB", 
+            "display_name": "African Development Bank"
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Agency", 
+            "agency": "Germany", 
+            "display_name": "Germany"
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Senegal", 
+            "display_name": "Government of Senegal"
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Sierra Leone", 
+            "display_name": "Government of Sierra Leone"
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Sudan", 
+            "display_name": "Government of Sudan"
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Togo", 
+            "display_name": "Government of Togo"
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Uganda", 
+            "display_name": "Government of Uganda"
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Benin", 
+            "display_name": "Government of Benin"
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of El Salvador", 
+            "display_name": "Government of El Salvador"
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Mauritania", 
+            "display_name": "Government of Mauritania"
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "submissions.agency", 
+        "fields": {
+            "type": "Government", 
+            "agency": "Government of Rwanda", 
+            "display_name": "Government of Rwanda"
+        }
+    }
+]

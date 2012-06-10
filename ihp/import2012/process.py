@@ -1,6 +1,6 @@
 import xlrd
 import datetime
-from submissions.models import Agency, Submission, Country, DPQuestion
+from submissions.models import Agency, Submission, Country, DPQuestion, GovQuestion
 import os
 import sys
 from django.db import transaction
@@ -194,168 +194,56 @@ class DPSubmissionParser(SubmissionParser):
             "18" : self.extract_amounts(28, rate_baseline, rate_current),
         }
 
+    def _4dp_switcheroo(self, submission, answers):
+        answers["10old"] = answers["9"]
+        answers["11old"] = answers["6"]
+        if submission.country not in new_countries: 
+            try:
+                q10 = DPQuestion.objects.get(submission=submission, question_number="10")
+                answers["10old"]["base_val"] = q10.baseline_value
+                answers["10old"]["base_year"] = q10.baseline_year
+            except DPQuestion.DoesNotExist:
+                pass  
+
+            try:
+                q11 = DPQuestion.objects.get(submission=submission, question_number="11")
+                answers["11old"]["base_val"] = q11.baseline_value
+                answers["11old"]["base_year"] = q11.baseline_year
+            except DPQuestion.DoesNotExist:
+                pass  
+            
+
     @transaction.commit_on_success
-    def parse(self):
-        print "Processing Book: %s" % self.f
-        book = xlrd.open_workbook(self.f)
-        for sheet in book.sheets():
-            if sheet.name == "Survey Tool":
-                if sheet.cell(7, 0).value == "1DP":
-                    return self.parse_dp(sheet)
-                elif sheet.cell(4, 0).value == "1G":
-                    parse_gov(sheet)
-        else:
-            print >> sys.stderr, "Unknown sheet: %s" % sheet.name
-
-    def parse_dp(self, sheet):
-        v = lambda r, c : sheet.cell(r, c).value
-
-        country = v(0, 3)
-        agency = v(1, 3)
-        currency = v(2, 3).strip()
-        completed_by = v(0, 6)
-        job = v(1, 6)
-
-        try:
-            baseline_year = str(int(v(3, 3)))
-        except ValueError:
-            baseline_year = None
-
-        try:
-            latest_year = str(int(v(4, 3)))
-        except ValueError:
-            latest_year = None
-
-        base_factor = conversion[currency].get(baseline_year, None)
-        latest_factor = conversion[currency].get(latest_year, None)
-
-        agency = Agency.objects.all_types().get(agency=agency)
-        country = Country.objects.get(country=country)
-
-
-        if country.country in new_countries:
-            DPQuestion.objects.filter(
-                submission__country=country,
-                submission__agency=agency,
-                submission__type="DP",
-            ).delete()
-            Submission.objects.filter(
-                country=country,
-                agency=agency,
-                type="DP"
-            ).delete()
-
+    def process(self):
+        metadata = self.extract_metadata()
+        country = Country.objects.get(country=metadata["country"])
+        agency_name = metadata["agency"]
+        agency = Agency.objects.all_types().get(agency=agency_name)
         submission, _ = Submission.objects.get_or_create(
             country=country,
             agency=agency,
-            type="DP"
-        )
-        DPQuestion.objects.filter(submission=submission).update(latest_value="", latest_year="")
-
-
-        submission.completed_by = completed_by
-        submission.job_title = job
-        submission.save()
-
-
-        i8dp_map = {
-            23 : "financial",
-            24 : "technical",
-            25 : "lobbying",
-            26 : "other",
-        }
-        i8dp_values = {
-            "baseline" : [],
-            "latest" : [],
-        }
-        for row in range(7, sheet.nrows):
-            question_number = unfloat(v(row, 3))
-            baseline_value = v(row, 5)
-            latest_value = v(row, 6)
-            if question_number in dp_conversion_questions:
-                baseline_value = safe_mul(baseline_value, base_factor)
-                latest_value = safe_mul(latest_value, latest_factor)
-
-            comment = v(row, 7)
-
-            yes_values = ["y", "yes"]
-            if row in i8dp_map.keys():
-                if baseline_value.lower() in yes_values:
-                    i8dp_values["baseline"].append(i8dp_map[row])
-                if latest_value.lower() in yes_values:
-                    i8dp_values["latest"].append(i8dp_map[row])
-            else:
-                q, _ = DPQuestion.objects.get_or_create(
-                   submission=submission,
-                   question_number=question_number
-                )
-
-                if not q.baseline_value:
-                    q.baseline_year=baseline_year
-                    q.baseline_value=baseline_value
-
-                q.latest_year=latest_year
-                q.latest_value=latest_value
-                q.comments=comment
-                q.save()
-        
-        ###########################################################
-        # Process 8DP
-        q, _ = DPQuestion.objects.get_or_create(
-           submission=submission,
-           question_number=16
+            type=Submission.DP
         )
 
-        # No need to capture the baseline values for 8DP
-        # because they are different to last year
-        #if not q.baseline_value:
-        #    q.baseline_year=baseline_year
-        #    q.baseline_value=baseline_value
 
-        q18_comments = v(22, 7)
-        q.latest_year=latest_year
-        q.latest_value=json.dumps(i8dp_values["latest"])
-        q.comments = q18_comments
-        q.save()
-        ###########################################################
+        answers = self.extract_answers()
+        self._4dp_switcheroo(submission, answers)
+        for qnum, qhash in answers.items():
+            question, _ = DPQuestion.objects.get_or_create(
+                submission=submission,
+                question_number=qnum
+            )
 
-        ###########################################################
-        # Now update the 4DP questions
-        my_questions = DPQuestion.objects.filter(submission=submission)
-        my_questions.filter(question_number__in=["10old", "11old"]).delete()
-        if country.country in new_countries:
-            q6 = my_questions.get(question_number="6")
-            q9 = my_questions.get(question_number="9")
-            q6.question_number = "11old"
-            q6.pk = None
-            q6.save()
+            if qnum == "16":
+                qhash["base_val"] = json.dumps(qhash["base_val"])
+                qhash["cur_val"] = json.dumps(qhash["cur_val"])
 
-            q9.question_number = "10old"
-            q9.pk = None
-            q9.save()
-        else:
-            q11old = DPQuestion.objects.create(submission=submission, question_number="11old")
-            q10old = DPQuestion.objects.create(submission=submission, question_number="10old")
-            
-            q6 = my_questions.get(question_number="6")
-            q9 = my_questions.get(question_number="9")
-            q10 = my_questions.get(question_number="10")
-            q11 = my_questions.get(question_number="11")
-
-            q11old.baseline_value = q11.baseline_value
-            q11old.baseline_year = q11.baseline_year
-            q11old.latest_value = q6.latest_value
-            q11old.latest_year = q6.latest_year
-
-            q10old.baseline_value = q10.baseline_value
-            q10old.baseline_year = q10.baseline_year
-            q10old.latest_value = q9.latest_value
-            q10old.latest_year = q9.latest_year
-
-        ###########################################################
-
-        
-        return submission
+            question.baseline_value = qhash["base_val"]
+            question.baseline_year = qhash["base_year"] if "base_year" in qhash else metadata["baseline_year"]
+            question.latest_value = qhash["cur_val"]
+            question.latest_year = metadata["latest_year"]
+            question.comments = qhash["comments"]
+            question.save()
 
 class GovSubmissionParser(SubmissionParser):
     def __init__(self, sheet):
@@ -364,13 +252,44 @@ class GovSubmissionParser(SubmissionParser):
         self.cur_col = 4
         self.comments_col = 5
 
+    @transaction.commit_on_success
+    def process(self):
+
+        metadata = self.extract_metadata()
+        country = Country.objects.get(country=metadata["country"])
+        agency_name = "Government of " + metadata["country"]
+        agency = Agency.objects.all_types().get(agency=agency_name)
+        submission, _ = Submission.objects.get_or_create(
+            country=country,
+            agency=agency,
+            type=Submission.Gov
+        )
+
+        for qnum, qhash in self.extract_answers().items():
+            if qnum in ["15", "16"]:
+                qhash["base_val"] = json.dumps(qhash["base_val"])
+                qhash["cur_val"] = json.dumps(qhash["cur_val"])
+
+            GovQuestion.objects.create(
+                submission=submission,
+                question_number=qnum,
+                baseline_value=qhash["base_val"],
+                baseline_year=metadata["baseline_year"],
+                latest_value=qhash["cur_val"],
+                latest_year=metadata["latest_year"],
+                comments=qhash["comments"]
+            )
 
     def extract_metadata(self):
         
+        baseline_year = unfloat(self._v(2, 1))
+        if baseline_year not in [str(y) for y in range(1990, 2020)]:
+            baseline_year = None
+
         return {
             "country" : self._v(0, 1),
             "currency" : self._v(1, 1),
-            "baseline_year" : unfloat(self._v(2, 1)),
+            "baseline_year" : baseline_year,
             "latest_year" : unfloat(self._v(3, 1)),
             "completed_by" : self._v(0, 5),
             "job_title" : self._v(1, 5)
@@ -457,6 +376,3 @@ class GovSubmissionParser(SubmissionParser):
             "25" : extract_date_value(46),
         }
 
-if __name__ == "__main__":
-    parser = SubmissionParser(sys.argv[1])
-    parser.parse()

@@ -86,6 +86,9 @@ class CountryWorkingDraft(models.Model):
 
 
 class Submission(models.Model):
+    DP = "DP"
+    Gov = "Gov"
+
     country = models.ForeignKey(Country, null=False)
     agency = models.ForeignKey(Agency, null=True)
     docversion = models.CharField(max_length=10, null=False)

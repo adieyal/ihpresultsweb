@@ -3,14 +3,17 @@ import datetime
 import os
 from django.test import TestCase
 from import2012.process import SubmissionParser, GovSubmissionParser, DPSubmissionParser
+import submissions.models as smodels
 
 testdir = os.path.join(
     os.path.dirname(os.path.realpath(__file__)), "testfiles"
 )
 gov_file = os.path.join(testdir, "Niger.2012.xls")
 dp_file = os.path.join(testdir, "GAVI Togo.xls")
+dp_file2 = os.path.join(testdir, "UNICEF Mali.xls")
 
 class TestGovernmentParser(TestCase):
+    fixtures = ['basic.json', 'agencies.json']
     def test_parse_detect_gov_file(self):
         """
         Tests that a government file is correctly detected 
@@ -26,7 +29,7 @@ class TestGovernmentParser(TestCase):
         metadata = parser.extract_metadata()
         self.assertEquals(metadata["country"], "Niger")
         self.assertEquals(metadata["currency"], "XOF")
-        self.assertEquals(metadata["baseline_year"], u"Données de base (NB: Compléter seulement si votre pays n'a pas participé au 2012 processus de suivi  d'IHP+Results)")
+        self.assertEquals(metadata["baseline_year"], None)
         self.assertEquals(metadata["latest_year"], "2011")
         self.assertEquals(metadata["completed_by"], "Ousmane Oumarou")
         self.assertEquals(metadata["job_title"], "Directeur des Etudes et de la Planification")
@@ -138,7 +141,29 @@ class TestGovernmentParser(TestCase):
         self.assertEquals(answers["25"]["cur_val"].day, 12)
         self.assertEquals(answers["25"]["comments"], u"12 au 16 décembre 2011 Tous les secteurs membres de chacun des 2 comités (Comité Technique National de Santé et Comité National de Santé) ont participé. Toutefois, certains partenaires techniques et financiers n'ont pas pris part aux travaux. Sur le plan redevabilité, ces revues ne donnent pas les résultats escomptés.")
 
+    def test_load_file(self):
+        self.assertEquals(smodels.Submission.objects.count(), 0)
+        parser = SubmissionParser.get_parser(gov_file)
+        parser.process()
+        self.assertEquals(smodels.Submission.objects.count(), 1)
+        submission = smodels.Submission.objects.all()[0]
+        self.assertEquals(submission.govquestion_set.count(), 25)
+        q = smodels.GovQuestion.objects.get(question_number=2, submission=submission)
+
+        self.assertEquals(q.baseline_value, None)
+        self.assertEquals(q.baseline_year, None)
+        self.assertEquals(q.latest_value, "yes")
+        self.assertEquals(q.latest_year, "2011")
+        self.assertEquals(q.comments, u"PDS 2011-2015")
+
+        q = smodels.GovQuestion.objects.get(question_number=15, submission=submission)
+        self.assertEquals(q.baseline_value, "[]")
+        self.assertEquals(q.latest_value, '["joint_reviews", "monthy_meetings", "working_groups", "budget_development"]')
+
+
 class TestPartnerParser(TestCase):
+    fixtures = ['basic.json', 'agencies.json']
+
     def test_parse_detect_gov_file(self):
         """
         Tests that a dp file is correctly detected 
@@ -234,3 +259,70 @@ class TestPartnerParser(TestCase):
         self.assertEquals(answers["18"]["base_val"], None)
         self.assertEquals(answers["18"]["cur_val"],  None)
         self.assertEquals(answers["18"]["comments"], u"")
+
+    def test_load_file(self):
+        self.assertEquals(smodels.Submission.objects.count(), 0)
+        parser = SubmissionParser.get_parser(dp_file)
+        parser.process()
+        self.assertEquals(smodels.Submission.objects.count(), 1)
+        submission = smodels.Submission.objects.all()[0]
+        self.assertEquals(submission.dpquestion_set.count(), 20)
+        q = smodels.DPQuestion.objects.get(question_number=2, submission=submission)
+
+        self.assertEquals(q.baseline_value, "765096.46")
+        self.assertEquals(q.baseline_year, "2007")
+        self.assertEquals(q.latest_value, "2287729.24")
+        self.assertEquals(q.latest_year, "2011")
+        self.assertEquals(q.comments, u"GAVI encourages countries to record GAVI contributions on national budgets")
+
+        q = smodels.DPQuestion.objects.get(question_number=16, submission=submission)
+        self.assertEquals(q.baseline_value, "[]")
+        self.assertEquals(q.latest_value, '["financial"]')
+
+
+    def test_4dp_switcheroo_new_country(self):
+        parser = SubmissionParser.get_parser(dp_file)
+        parser.process()
+        submission = smodels.Submission.objects.all()[0]
+        q = smodels.DPQuestion.objects.get(question_number="10old", submission=submission)
+
+        self.assertEquals(q.baseline_value, "767680.0")
+        self.assertEquals(q.latest_value, "2490500.0")
+        self.assertEquals(q.comments, u"Amounts not disbursed in the baseline year have been subsequently reprogrammed or written-off.")
+
+        q = smodels.DPQuestion.objects.get(question_number="11old", submission=submission)
+
+        self.assertEquals(q.baseline_value, "765096.0")
+        self.assertEquals(q.latest_value, "2287729.0")
+        self.assertEquals(q.comments, u"GAVI's support to the country for immunisation and health system activities is programme-based.")
+
+    def test_4dp_switcheroo_old_country(self):
+        agency = smodels.Agency.objects.get(agency="UNICEF")
+        country = smodels.Country.objects.get(country="Mali")
+        submission, _ = smodels.Submission.objects.get_or_create(
+            agency=agency, country=country, type=smodels.Submission.DP
+        )
+        smodels.DPQuestion.objects.create(
+            question_number=10, submission=submission, baseline_value="1", baseline_year=2000
+        )
+        smodels.DPQuestion.objects.create(
+            question_number=11, submission=submission, baseline_value="2", baseline_year=2001
+        )
+    
+        parser = SubmissionParser.get_parser(dp_file2)
+        parser.process()
+        self.assertEquals(smodels.Submission.objects.count(), 1)
+        q = smodels.DPQuestion.objects.get(question_number="10old", submission=submission)
+
+        self.assertEquals(q.baseline_value, "1")
+        self.assertEquals(q.baseline_year, "2000")
+        self.assertEquals(q.latest_value, "277828.53")
+        self.assertEquals(q.comments, u"Les ressources non planifiees ont ete engagees en 2011 comme par exemple les 8 campagnes de JNV et l'étude ABCE")
+
+        q = smodels.DPQuestion.objects.get(question_number="11old", submission=submission)
+
+        self.assertEquals(q.baseline_value, "2")
+        self.assertEquals(q.baseline_year, "2001")
+        self.assertEquals(q.latest_value, "13104165.17")
+        self.assertEquals(q.comments, u"Ce montant correspondant aux décaissement réels, contient des appuis pour le secteur eau-hygiène-assainissement. Il ne contient pas les coûts de staffing.")
+

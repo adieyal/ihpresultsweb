@@ -1,0 +1,154 @@
+[
+    {
+        "pk": 1, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Nepal", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "DRC", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Burundi", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Burkina Faso", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Djibouti", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Ethiopia", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Mali", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Mozambique", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Niger", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Nigeria", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Benin", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "El Salvador", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Mauritania", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Rwanda", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Senegal", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Sierra Leone", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Sudan", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Togo", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "submissions.country", 
+        "fields": {
+            "country": "Uganda", 
+            "description": ""
+        }
+    }
+]
