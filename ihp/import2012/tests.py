@@ -260,6 +260,18 @@ class TestPartnerParser(TestCase):
         self.assertEquals(answers["18"]["cur_val"],  None)
         self.assertEquals(answers["18"]["comments"], u"")
 
+    def test_created_submission(self):
+        self.assertEquals(smodels.Submission.objects.count(), 0)
+        parser = SubmissionParser.get_parser(dp_file)
+        parser.process()
+        self.assertEquals(smodels.Submission.objects.count(), 1)
+        submission = smodels.Submission.objects.all()[0]
+
+        self.assertEquals(submission.country.country, "Togo")
+        self.assertEquals(submission.agency.agency, "GAVI")
+        self.assertEquals(submission.completed_by, "Farouk Shamas Jiwa (Mato)")
+        self.assertEquals(submission.job_title, "Programme Officer")
+
     def test_load_file(self):
         self.assertEquals(smodels.Submission.objects.count(), 0)
         parser = SubmissionParser.get_parser(dp_file)
@@ -326,3 +338,19 @@ class TestPartnerParser(TestCase):
         self.assertEquals(q.latest_value, "13104165.17")
         self.assertEquals(q.comments, u"Ce montant correspondant aux décaissement réels, contient des appuis pour le secteur eau-hygiène-assainissement. Il ne contient pas les coûts de staffing.")
 
+    def test_baseline_retained(self):
+        agency = smodels.Agency.objects.get(agency="UNICEF")
+        country = smodels.Country.objects.get(country="Mali")
+        submission, _ = smodels.Submission.objects.get_or_create(
+            agency=agency, country=country, type=smodels.Submission.DP
+        )
+        smodels.DPQuestion.objects.create(
+            question_number=1, submission=submission, baseline_value="no!!!", baseline_year=2000
+        )
+    
+        parser = SubmissionParser.get_parser(dp_file2)
+        parser.process()
+        q = smodels.DPQuestion.objects.get(question_number="1", submission=submission)
+
+        self.assertEquals(q.baseline_value, "no!!!")
+        self.assertEquals(q.baseline_year, "2000")

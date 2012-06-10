@@ -342,7 +342,7 @@ class Command(BaseCommand):
                 except DPQuestion.DoesNotExist:
                     print "Question %s does not question for %s" % (fq, submission)
 
-    def additional_imports(self):
+    def additional_imports(self, submission_type):
         from django.conf import settings
         from glob import glob
         import_dir = os.path.join(settings.PROJECT_HOME, "dropbox") 
@@ -351,8 +351,9 @@ class Command(BaseCommand):
             return
 
         for f in glob("%s/*.xls" % import_dir):
-            parser = SubmissionParser(f)
-            submission = parser.parse()
+            parser = SubmissionParser.get_parser(f)
+            if parser.type == submission_type:
+                submission = parser.process()
             # Ideally, the additional import could be injected in at the beginning of process responses
             # But there is a danger that the newly imported values would be overriden by older responses.
             # In this case I prefer to run it at the end of the import and manually copy across 10 and 11.
@@ -462,7 +463,7 @@ class Command(BaseCommand):
                             dpq2.save()
                 except DPQuestion.DoesNotExist:
                     print "Could not find submission for response: %s" % response.pk
-        self.additional_imports()
+        self.additional_imports("DP")
         override_8dp.override_8DP()
 
 
@@ -546,7 +547,7 @@ class Command(BaseCommand):
                 except GovQuestion.DoesNotExist:
                     print "Could not find submission for response: %s" % response.pk
         # TODO Figure out what to do with Gov imports when needed
-        #self.additional_imports()
+        self.additional_imports("Gov")
         override_5ga.override_5Ga()
         override_5gb.override_5Gb()
 

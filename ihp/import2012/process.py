@@ -90,6 +90,12 @@ class SubmissionParser(object):
         self.datemode = sheet.book.datemode
         self._v = cellgrabber(sheet)
 
+
+    def parse_year(self, year):
+        if year not in [str(y) for y in range(1990, 2020)]:
+            return None
+        return year
+
     def extract_yesno(self, row, col):
         val = self._v(row, col).lower()
         if val in yes_values:
@@ -148,6 +154,7 @@ class DPSubmissionParser(SubmissionParser):
         self.base_col = 5
         self.cur_col = 6
         self.comments_col = 7
+        self.type = "DP"
 
     def extract_metadata(self):
         
@@ -155,8 +162,8 @@ class DPSubmissionParser(SubmissionParser):
             "country" : self._v(0, 3),
             "agency" : self._v(1, 3),
             "currency" : self._v(2, 3),
-            "baseline_year" : unfloat(self._v(3, 3)),
-            "latest_year" : unfloat(self._v(4, 3)),
+            "baseline_year" : self.parse_year(unfloat(self._v(3, 3))),
+            "latest_year" : self.parse_year(unfloat(self._v(4, 3))),
             "completed_by" : self._v(0, 6),
             "job_title" : self._v(1, 6)
         }
@@ -219,12 +226,15 @@ class DPSubmissionParser(SubmissionParser):
         country = Country.objects.get(country=metadata["country"])
         agency_name = metadata["agency"]
         agency = Agency.objects.all_types().get(agency=agency_name)
-        submission, _ = Submission.objects.get_or_create(
+        submission, created = Submission.objects.get_or_create(
             country=country,
             agency=agency,
             type=Submission.DP
         )
 
+        submission.job_title = metadata["job_title"]
+        submission.completed_by = metadata["completed_by"]
+        submission.save()
 
         answers = self.extract_answers()
         self._4dp_switcheroo(submission, answers)
@@ -238,12 +248,14 @@ class DPSubmissionParser(SubmissionParser):
                 qhash["base_val"] = json.dumps(qhash["base_val"])
                 qhash["cur_val"] = json.dumps(qhash["cur_val"])
 
-            question.baseline_value = qhash["base_val"]
-            question.baseline_year = qhash["base_year"] if "base_year" in qhash else metadata["baseline_year"]
+            if created or qnum in ["10old", "11old"]:
+                question.baseline_value = qhash["base_val"]
+                question.baseline_year = qhash["base_year"] if "base_year" in qhash else metadata["baseline_year"]
             question.latest_value = qhash["cur_val"]
             question.latest_year = metadata["latest_year"]
             question.comments = qhash["comments"]
             question.save()
+        return submission
 
 class GovSubmissionParser(SubmissionParser):
     def __init__(self, sheet):
@@ -251,6 +263,7 @@ class GovSubmissionParser(SubmissionParser):
         self.base_col = 3
         self.cur_col = 4
         self.comments_col = 5
+        self.type = "Gov"
 
     @transaction.commit_on_success
     def process(self):
@@ -279,18 +292,15 @@ class GovSubmissionParser(SubmissionParser):
                 latest_year=metadata["latest_year"],
                 comments=qhash["comments"]
             )
+        return submission
 
     def extract_metadata(self):
         
-        baseline_year = unfloat(self._v(2, 1))
-        if baseline_year not in [str(y) for y in range(1990, 2020)]:
-            baseline_year = None
-
         return {
             "country" : self._v(0, 1),
             "currency" : self._v(1, 1),
-            "baseline_year" : baseline_year,
-            "latest_year" : unfloat(self._v(3, 1)),
+            "baseline_year" : self.parse_year(self._v(2, 1)),
+            "latest_year" : self.parse_year(unfloat(self._v(3, 1))),
             "completed_by" : self._v(0, 5),
             "job_title" : self._v(1, 5)
         }
