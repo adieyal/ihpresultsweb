@@ -272,7 +272,7 @@ class GovSubmissionParser(SubmissionParser):
         country = Country.objects.get(country=metadata["country"])
         agency_name = "Government of " + metadata["country"]
         agency = Agency.objects.all_types().get(agency=agency_name)
-        submission, _ = Submission.objects.get_or_create(
+        submission, created = Submission.objects.get_or_create(
             country=country,
             agency=agency,
             type=Submission.Gov
@@ -283,15 +283,19 @@ class GovSubmissionParser(SubmissionParser):
                 qhash["base_val"] = json.dumps(qhash["base_val"])
                 qhash["cur_val"] = json.dumps(qhash["cur_val"])
 
-            GovQuestion.objects.create(
+            q, _ = GovQuestion.objects.get_or_create(
                 submission=submission,
-                question_number=qnum,
-                baseline_value=qhash["base_val"],
-                baseline_year=metadata["baseline_year"],
-                latest_value=qhash["cur_val"],
-                latest_year=metadata["latest_year"],
-                comments=qhash["comments"]
+                question_number=qnum
             )
+            
+            if created:
+                q.baseline_value = qhash["base_val"]
+                q.baseline_year = metadata["baseline_year"]
+            q.latest_value = qhash["cur_val"]
+            q.latest_year = metadata["latest_year"]
+            q.comments = qhash["comments"]
+            q.save()
+            
         return submission
 
     def extract_metadata(self):

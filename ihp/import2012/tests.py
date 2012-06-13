@@ -160,6 +160,25 @@ class TestGovernmentParser(TestCase):
         self.assertEquals(q.baseline_value, "[]")
         self.assertEquals(q.latest_value, '["joint_reviews", "monthy_meetings", "working_groups", "budget_development"]')
 
+    def test_baseline_retained(self):
+        parser = SubmissionParser.get_parser(gov_file)
+        submission = parser.process()
+
+        q = smodels.GovQuestion.objects.get(
+            question_number=1, submission=submission
+        )
+        q.baseline_value = "don't overwrite me"
+        q.baseline_year = "2000"
+        q.save()
+
+        parser = SubmissionParser.get_parser(gov_file)
+        submission = parser.process()
+        
+        q = smodels.GovQuestion.objects.get(question_number="1", submission=submission)
+
+        self.assertEquals(q.baseline_value, "don't overwrite me")
+        self.assertEquals(q.baseline_year, "2000")
+
 
 class TestPartnerParser(TestCase):
     fixtures = ['basic.json', 'agencies.json']
