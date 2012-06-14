@@ -11,4 +11,14 @@ urlpatterns = patterns('ihp.scorecards.views',
         'dp_scorecard',
         name='dp_scorecard'
     ),
+    url(
+        r'^gov/(?P<country_id>\d+)/(?P<language>\w+)/json$', # Gov Scorecard json
+        'gov_scorecard_json',
+        name='gov_scorecard_json'
+    ),
+    url(
+        r'^gov/(?P<country_id>\d+)/(?P<language>\w+)/$', # Gov Scorecard svg
+        'gov_scorecard',
+        name='gov_scorecard'
+    ),
 )

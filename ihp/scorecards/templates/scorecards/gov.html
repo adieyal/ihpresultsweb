@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Country - SVG</title>
+    <script type='text/javascript' src='{{ MEDIA_URL }}js/d3.v2.min.js'></script>
+    <script type='text/javascript' src='{{ MEDIA_URL }}js/horizontalbargraph.js'></script>
+    <script type='text/javascript' src='{{ MEDIA_URL }}js/segmentpie.js'></script>
+    <script>
+        var SVG = '{{ MEDIA_URL }}svg/country';
+        var json = '{% url gov_scorecard_json country_id language %}'
+    </script>
+    <script type='text/javascript' src='{{ MEDIA_URL }}js/svg-lib.js'></script>
+    <style>
+        svg, #figure { width:1800px; height:1325px;}
+        body{
+            background-color:#fefefe;
+            font-family:'Calibri';
+            font-size:8px;
+        }
+        text {
+            font-family:'Calibri';
+        }
+        .header-text, .health-value {
+            color:#0E3D3D;
+            font-size:11px;
+            font-family:"Calibri-Bold";
+        }
+
+        .commitment-text {
+            color:black;
+            font-size:8px;
+            font-family:"Calibri";
+        }
+        .description-text{
+
+            font-size:7px;
+        }
+
+        .health_red{
+            fill: #CE181E;
+        }
+        .health_green{
+            fill: #B1C529;
+        }
+
+        #budget_chart .spg-arc-text{
+            display:none;
+        }
+
+        .hb-line{
+            stroke-width:1px;
+            stroke-dasharray:1;
+        }
+
+        .hb-rect-text {
+           font-color:#0E3D3D;
+
+        }
+
+        .good {
+            fill: #8DC63F !important;
+        }
+        .bad {
+            fill: #CE181E !important;
+        }
+
+        .background {
+            stroke: #013333;
+            stroke-width: 1.5px;
+            fill:013333;
+        }
+        .domestic{
+            fill: #c4d82e;
+            stroke: #013333;
+            stroke-width: 1.5px;
+        }
+
+        .external{
+            fill: #88d1d1;
+            stroke: #013333;
+            stroke-width: 1.5px;
+        }
+
+    </style>
+</head>
+<body style="">
+    <div id="figure"></div> <br />
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/countryscorecard-d3.js" ></script>
+</body>
+</html>
