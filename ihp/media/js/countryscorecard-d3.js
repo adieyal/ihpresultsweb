@@ -178,7 +178,7 @@ var fill_svg = function(json){
                     series.push({'key': d.year, 'value': d.value});
                 }
                 var hb = {
-                    width:160,
+                    width:165,
                     height: 45,
                     node: id + ' .graph',
 
@@ -225,11 +225,8 @@ var fill_svg = function(json){
                 .text(data.change_value + change_mode);
 
             var color = data.color;
-            load_svg_image('icons/arrow_' + data.arrow + '_' + data.color + '.svg',
+            load_svg_image('/media/icons/arrow_' + data.arrow + '_' + data.color + '.svg',
                 id + ' .arrow');
-
-
-
         }
     }
 

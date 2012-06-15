@@ -77,7 +77,7 @@ HorizontalBarGraph.prototype = {
         }
 
         if (this.legend.enabled){
-            this.bar.start = this.w * 0.1;
+            this.bar.start = this.w * 0.2;
         } else {
             this.bar.start = 0;
         }
@@ -108,7 +108,6 @@ HorizontalBarGraph.prototype = {
             .domain([0, 1])
             .range([this.bar.start, this.bar.end]);
 
-        /* bar background */
         if (this.bar.background !== false){
             rects.enter().append('rect')
                 .attr('x', this.bar.start)
@@ -118,7 +117,6 @@ HorizontalBarGraph.prototype = {
                 .attr('class', function(d, i){ return 'hb-rect-background hg-group-' + i; })
                 .attr('fill', this.bar.background);
         }
-        /* bar foreground */
         if (this.stacked_bar){
             for (i = 0; i < this.data.length; i++){
                 var tmpdata = this.data[i].values;
@@ -158,13 +156,12 @@ HorizontalBarGraph.prototype = {
                 .text(function(d, i) { return d.value; });
         }
 
-        /* bar legend */
         if (this.legend.enabled){
             rects.enter().append('text')
-                .attr('x', 0)
-                .attr('text-anchor', 'start')
+                .attr('x', 25)
+                .attr('text-anchor', 'end')
                 .attr('y', function(d, i){ return (y(i) + y(i + 1)) / 2; })
-                .attr('dy', '-0.3em')
+                .attr('dy', '0.2em')
                 .attr('height', this.bar.height)
                 .attr('text-align', 'right')
                 .attr('class', function(d, i) { return 'hb-rect hb-rect-text hg-group-' + i; })
@@ -193,7 +190,7 @@ HorizontalBarGraph.prototype = {
                 .attr('x1', line_x_offset)
                 .attr('x2', line_x_offset)
                 .attr('y1', this.bar.height / 3)
-                .attr('y2', y(this.data.length) - 5)
+                .attr('y2', y(this.data.length) )
                 .attr('stroke-dasharray', '4')
                 .attr('stroke-width', '3')
                 .attr('fill', this.line.color)

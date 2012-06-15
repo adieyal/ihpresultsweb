@@ -252,8 +252,15 @@ class MDGData(models.Model):
         else:
             val = math.fabs(self.latest_value - self.baseline_value)
             if round(val, 3) == 0:
-                return "same"
+                return 0
             return val
+
+    @property
+    def is_increase(self):
+        if self.latest_value == None or self.baseline_value == None:
+            return False
+        else:
+            return self.latest_value > self.baseline_value
 
     class Meta:
         verbose_name_plural = "MDG Data" 
