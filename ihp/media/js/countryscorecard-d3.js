@@ -328,7 +328,7 @@ var add_stop = function(node, color, offset){
 };
 
 build_text_element = function(n, id, data, index){
-    var h = 35;
+    var h = 40;
     var w = 140;
     var d = data[index];
 
