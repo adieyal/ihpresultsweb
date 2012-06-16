@@ -498,3 +498,19 @@ class CountryExclusion(models.Model):
     class Meta:
        verbose_name_plural = "Country Exclusions" 
        unique_together = ["country", "question_number"]
+
+currencies = [
+    "AUD", "BIF", "CDF", "DJF", "ETB", "EUR", 
+    "GBP", "MRO", "MZN", "NGN", "NPR", "RWF", 
+    "SDG", "SEK", "SLL", "SVC", "UGX", "XOF", 
+    "USD", "Cur", "NOK", 
+]
+
+years = range(2000, 2012)
+class CurrencyConversion(models.Model):
+    currency = models.CharField(max_length=10, choices=zip(currencies, currencies))
+    year = models.CharField(max_length=10, choices=zip(years, years))
+    rate = models.FloatField()
+
+    def __unicode__(self):
+        return "%s (%s)" % (self.currency, self.year)

@@ -117,3 +117,4 @@ class CountryExclusionAdmin(admin.ModelAdmin):
 
 admin.site.register(CountryExclusion, CountryExclusionAdmin)
 admin.site.register(Language)
+admin.site.register(CurrencyConversion)
