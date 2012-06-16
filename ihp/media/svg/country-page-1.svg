@@ -41,15 +41,15 @@
    guidetolerance="10"
    inkscape:pageopacity="0"
    inkscape:pageshadow="2"
-   inkscape:window-width="1068"
-   inkscape:window-height="530"
+   inkscape:window-width="851"
+   inkscape:window-height="1034"
    id="namedview2108"
    showgrid="false"
-   inkscape:zoom="1.2847288"
-   inkscape:cx="1437.5977"
-   inkscape:cy="739.51374"
-   inkscape:window-x="0"
-   inkscape:window-y="519"
+   inkscape:zoom="2.5694576"
+   inkscape:cx="459.05574"
+   inkscape:cy="12.409697"
+   inkscape:window-x="1067"
+   inkscape:window-y="15"
    inkscape:window-maximized="0"
    inkscape:current-layer="svg2" />
 <metadata
@@ -1906,6 +1906,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    class="country_name"
    id="tspan365">ETHIOPIA</tspan> COUNTRY SCORECARD 2012</text>
 
+
 					</g>
 				</switch>
 				<g
@@ -1941,9 +1942,9 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
 										<image
    sodipodi:absref="/home/adi/Development/ihp/2012/ihpresultsweb2012/ihp/media/svg/../../FLAGS/EthiopiaF.gif"
    xlink:href="../../FLAGS/EthiopiaF.gif"
-   height="788"
+   id="country_flag"
    width="1181"
-   id="country_flag">
+   height="788">
 									</image>
 								</switch>
 							</g>
@@ -2001,6 +2002,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-size="8"
    transform="translate(379.24 832.44)">*  Ratings are calculated using data up to and including 2009. Data from 2010 will be reported in IHP+Results’ 2011 monitoring.</text>
 
+
 					</g>
 				</switch>
 				<switch
@@ -2018,6 +2020,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri'"
    font-size="7"
    transform="matrix(0 -1 1 0 1176.8 796.7)">This work is licensed under the Creative Commons Atribution-NonCommercial 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org.licenses/by-nc/3.0</text>
+
 
 				</switch>
 			</g>
@@ -2085,6 +2088,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    transform="translate(91.878 482.48)"
    font-family="'Calibri-Bold'"
    fill="#FFFFFF">HEALTH SYSTEMS STRENGTHENING</text>
+
 
 						</g>
 					</switch>
@@ -2239,6 +2243,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri'"
    fill="#013333">0%</text>
 
+
                         </g>
                      </switch>
                      <switch
@@ -2266,6 +2271,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    transform="translate(58.581 584.16)"
    font-family="'Calibri'"
    fill="#013333">25%</text>
+
 
                         </g>
                      </switch>
@@ -2295,6 +2301,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri'"
    fill="#013333">50%</text>
 
+
                         </g>
                      </switch>
                      <switch
@@ -2322,6 +2329,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    transform="translate(58.581 539.87)"
    font-family="'Calibri'"
    fill="#013333">75%</text>
+
 
                         </g>
                      </switch>
@@ -2351,6 +2359,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri'"
    fill="#013333">100%</text>
 
+
                         </g>
                      </switch>
                      <switch
@@ -2378,6 +2387,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    transform="translate(52.609 694.91)"
    font-family="'Calibri'"
    fill="#013333">-100%</text>
+
 
                         </g>
                      </switch>
@@ -2407,6 +2417,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri'"
    fill="#013333">-75%</text>
 
+
                         </g>
                      </switch>
                      <switch
@@ -2435,6 +2446,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri'"
    fill="#013333">-50%</text>
 
+
                         </g>
                      </switch>
                      <switch
@@ -2462,6 +2474,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    transform="translate(56.297 628.46)"
    font-family="'Calibri'"
    fill="#013333">-25%</text>
+
 
                         </g>
                      </switch>
@@ -2569,6 +2582,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri-Bold'"
    fill="#013333">20%</text>
 
+
                         </g>
                      </switch>
                      <switch
@@ -2598,6 +2612,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri-Bold'"
    fill="#013333">20%</text>
 
+
                         </g>
                      </switch>
                      <switch
@@ -2626,6 +2641,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    transform="translate(228.23 643.81)"
    font-family="'Calibri-Bold'"
    fill="#013333">-50%</text>
+
 
                         </g>
                      </switch>
@@ -2659,6 +2675,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    text-anchor="middle"
    y="0"
    id="text598" />
+
 
                </g>
 
@@ -2709,6 +2726,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri-Bold'"
    fill="#FFFFFF">ACCESS TO PHC CLINICS</text>
 
+
 						</g>
 					</switch>
 					<switch
@@ -2736,14 +2754,11 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    fill="#FFFFFF"
    transform="translate(108.66 760.24)"><tspan
      class="value"
+     id="tspan625"
+     style="font-family:Calibri-Bold">5404</tspan><tspan
      y="0"
-     x="0"
-     font-family="'Calibri-Bold'"
-     id="tspan625">5404</tspan><tspan
-     y="0"
-     x="15.899"
-     font-family="'Calibri'"
-     id="tspan627"> outpatient  </tspan><tspan
+     id="tspan627"
+     style="font-family:Calibri"> outpatient  </tspan><tspan
      y="9.151"
      x="6.612"
      font-family="'Calibri'"
@@ -2756,6 +2771,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      x="-5.691"
      font-family="'Calibri'"
      id="tspan633">population per year</tspan></text>
+
 
 						</g>
 					</switch>
@@ -2787,6 +2803,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    text-anchor="middle"
    y="0"
    id="text644" />
+
 
                </g>
 
@@ -2833,6 +2850,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      x="-9.984"
      id="tspan661">HEALTH SYSTEMS</tspan></text>
 
+
 						</g>
 					</switch>
 					<switch
@@ -2846,36 +2864,22 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    id="foreignObject665">
 						</foreignObject>
 						<g
-   id="g667">
-							<rect
+   id="g667"><rect
    height="28.451"
    width="95.75"
    y="761.11"
    x="299.11"
    fill="none"
-   id="rect669" />
-							<text
+   id="rect669" /><text
    id="SVGID_14_"
    font-size="8"
-   fill="#FFFFFF"
-   transform="translate(322.66 768.88)"><tspan
-     y="0"
-     x="0"
-     font-family="'Calibri-Bold'"
+   x="346.95959"
+   y="768.88"
+   style="font-size:8px;text-align:center;text-anchor:middle;fill:#ffffff"><tspan
      class="value"
-     id="tspan672">US$48,723,933</tspan><tspan
-     y="0"
-     x="48.581"
-     font-family="'Calibri'"
-     id="tspan674">  </tspan><tspan
-     y="9.151"
-     x="-0.594"
-     font-family="'Calibri'"
-     id="tspan676">spent on health  </tspan><tspan
-     y="18.392"
-     x="-8.88"
-     font-family="'Calibri'"
-     id="tspan678">workforce increasing</tspan></text>
+     id="tspan672"
+     style="text-align:center;text-anchor:middle;font-family:Calibri-Bold">US$48,723,933</tspan></text>
+
 
 						</g>
 					</switch>
@@ -2913,6 +2917,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    text-anchor="middle"
    y="0"
    id="text690" />
+
 
                </g>
 
@@ -2963,6 +2968,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      x="25.1"
      id="tspan708">WORKERS</tspan></text>
 
+
 						</g>
 					</switch>
 					<switch
@@ -2990,14 +2996,10 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    fill="#FFFFFF"
    transform="translate(210.67 767.71)"><tspan
      class="value"
-     y="0"
-     x="0"
-     font-family="'Calibri-Bold'"
-     id="tspan719">8.3</tspan><tspan
-     y="0"
-     x="10.006"
-     font-family="'Calibri'"
-     id="tspan721"> skilled medical  </tspan><tspan
+     id="tspan719"
+     style="font-family:Calibri-Bold">8.3</tspan><tspan
+     id="tspan721"
+     style="font-family:Calibri"> skilled medical  </tspan><tspan
      y="9.151"
      x="13.219"
      font-family="'Calibri'"
@@ -3006,6 +3008,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      x="-6.187"
      font-family="'Calibri'"
      id="tspan725">per 10,000 population</tspan></text>
+
 
 						</g>
 					</switch>
@@ -3073,6 +3076,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    transform="translate(507.63 610.84)"
    font-family="'Calibri-Bold'"
    fill="#FFFFFF">COUNTRY SYSTEMS</text>
+
 
 						</g>
 					</switch>
@@ -3161,6 +3165,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      x="0"
      id="tspan775">(OR REFORM IN PROGRESS)</tspan></text>
 
+
 						</g>
 					</switch>
 					<path
@@ -3195,6 +3200,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    transform="translate(477.98 657.64)"
    font-family="'Calibri-Bold'"
    fill="#FFFFFF">PUBLIC FINANCIAL MANAGEMENT</text>
+
 
 						</g>
 					</switch>
@@ -3430,6 +3436,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      x="0"
      id="tspan919">sententiad, utei suprad scriptum est.</tspan></text>
 
+
 							</g>
 						</switch>
 				</g>
@@ -3473,6 +3480,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      x="0"
      id="tspan934">(OR REFORM IN PROGRESS)</tspan></text>
 
+
 							</g>
 						</switch>
 						<path
@@ -3506,6 +3514,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    transform="translate(706.14 658)"
    font-family="'Calibri-Bold'"
    fill="#FFFFFF">PROCUREMENT</text>
+
 
 							</g>
 						</switch>
@@ -3746,6 +3755,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      x="0"
      id="tspan1077">sententiad, utei suprad scriptum est.</tspan></text>
 
+
 							</g>
 						</switch>
 				</g>
@@ -3795,6 +3805,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      x="0"
      id="tspan1095">PROGRAMMES</tspan></text>
 
+
 						</g>
 					</switch>
 					<path
@@ -3828,6 +3839,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    transform="translate(933.92 658)"
    font-family="'Calibri-Bold'"
    fill="#FFFFFF">TECHNICAL ASSISTANCE</text>
+
 
 						</g>
 					</switch>
@@ -4063,6 +4075,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      x="0"
      id="tspan1236">sententiad, utei suprad scriptum est.</tspan></text>
 
+
 						</g>
 					</switch>
 				</g>
@@ -4128,6 +4141,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    transform="translate(505.63 354.21)"
    font-family="'Calibri-Bold'"
    fill="#FFFFFF">HEALTH FINANCING</text>
+
 
 						</g>
 					</switch>
@@ -4284,6 +4298,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri-Bold'"
    fill="#0E3D3D">TOTAL HEALTH FINANCING</text>
 
+
 							</g>
 						</switch>
 					</g>
@@ -4373,11 +4388,13 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-size="8"
    transform="matrix(.9999 0 0 1 488.97 522.08)">US$0m</text>
 
+
                      <text
    id="SVGID_47_"
    font-family="'Calibri'"
    font-size="8"
    transform="matrix(.9999 0 0 1 480.7 503.55)">US$100m</text>
+
 
                      <text
    id="SVGID_48_"
@@ -4385,11 +4402,13 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-size="8"
    transform="matrix(.9999 0 0 1 480.7 483.02)">US$200m</text>
 
+
                      <text
    id="SVGID_49_"
    font-family="'Calibri'"
    font-size="8"
    transform="matrix(.9999 0 0 1 480.7 462.48)">US$300m</text>
+
 
                      <text
    id="SVGID_50_"
@@ -4397,11 +4416,13 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-size="8"
    transform="matrix(.9999 0 0 1 480.7 441.95)">US$400m</text>
 
+
                      <text
    id="SVGID_46_"
    font-family="'Calibri'"
    font-size="8"
    transform="matrix(.9999 0 0 1 480.7 421.42)">US$500m</text>
+
 
 						</g>
 
@@ -4457,6 +4478,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-size="7.9865"
    transform="matrix(.9999 0 0 1 709.12 431.34)">Domestic Financing</text>
 
+
 								</g>
 							</switch>
 						</g>
@@ -4486,6 +4508,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri'"
    font-size="7.9865"
    transform="matrix(.9999 0 0 1 709.12 445.94)">External Financing</text>
+
 
 								</g>
 							</switch>
@@ -4532,6 +4555,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-size="9.2407"
    transform="matrix(.9999 0 0 1 530.98 536.23)">2007</text>
 
+
 							</g>
 						</switch>
 						<switch
@@ -4559,6 +4583,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-size="9.2407"
    transform="matrix(.9999 0 0 1 585.04 536.23)">2009</text>
 
+
 							</g>
 						</switch>
 						<switch
@@ -4585,6 +4610,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri-Bold'"
    font-size="9.2407"
    transform="matrix(.9999 0 0 1 639.1 536.23)">2010</text>
+
 
 							</g>
 						</switch>
@@ -4688,6 +4714,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri-Bold'"
    fill="#F68B1F">$539.1m</text>
 
+
 							</g>
 						</switch>
 						<switch
@@ -4716,6 +4743,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri-Bold'"
    fill="#F68B1F">$684.3m</text>
 
+
 							</g>
 						</switch>
 						<switch
@@ -4743,6 +4771,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    transform="matrix(.9999 0 0 1 633.29 452.81)"
    font-family="'Calibri-Bold'"
    fill="#F68B1F">$657.3m</text>
+
 
 							</g>
 						</switch>
@@ -4811,6 +4840,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      x="0"
      id="tspan1450">TO HEALTH</tspan></text>
 
+
 							</g>
 						</switch>
 							<switch
@@ -4839,6 +4869,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri-Bold'"
    fill="#B1C529">14.6%</text>
 
+
 								</g>
 							</switch>
 							<switch
@@ -4865,6 +4896,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri'"
    font-size="7"
    transform="matrix(.9999 0 0 1 915.85 444.71)">Allocated to Health</text>
+
 
 								</g>
 							</switch>
@@ -4893,6 +4925,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    transform="matrix(.9999 0 0 1 917.89 506.9)"
    font-family="'Calibri-Bold'"
    fill="#FAA627">3%</text>
+
 
 								</g>
 							</switch>
@@ -4929,6 +4962,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      y="16"
      x="0"
      id="tspan1492">target</tspan></text>
+
 
 								</g>
 							</switch>
@@ -5003,6 +5037,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri-Bold'"
    fill="#0E3D3D">POOLED FUNDING</text>
 
+
 							</g>
 						</switch>
 					</g>
@@ -5040,6 +5075,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      y="18"
      x="22.551"
      id="tspan1529">Mechanisms</tspan></text>
+
 
 						</g>
 					</switch>
@@ -5340,6 +5376,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri-Bold'"
    fill="#FFFFFF">COUNTRY OWNERSHIP &amp; ACCOUNTABILITY</text>
 
+
 						</g>
 					</switch>
 					<g
@@ -5481,6 +5518,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      x="11.147"
      id="tspan1654">civil society</tspan></text>
 
+
 							</g>
 						</switch>
 							<line
@@ -5583,6 +5621,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri-Bold'"
    fill="#013333">50</text>
 
+
 							</g>
 						</switch>
 						<g
@@ -5659,6 +5698,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    transform="translate(933.4 136.07)"
    font-family="'Calibri-Bold'"
    fill="#FFFFFF">HEALTH SECTOR AID EFFECTIVENESS MONITORING</text>
+
 
 							</g>
 						</switch>
@@ -5780,6 +5820,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      y="28.56"
      x="9.661"
      id="tspan1794">Jointly Assessed</tspan></text>
+
 
 							</g>
 						</switch>
@@ -5910,6 +5951,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri-Bold'"
    fill="#FFFFFF">HEALTH SECTOR &amp; AIDS STRATEGIES</text>
 
+
 							</g>
 						</switch>
 						<g
@@ -6024,6 +6066,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      y="18.396"
      x="0"
      id="tspan1878">IHP+ Compact signed in August 2008.</tspan></text>
+
 
 						</g>
 					</switch>
@@ -6154,6 +6197,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri-Bold'"
    fill="#FFFFFF">COMMITMENTS DOCUMENTED</text>
 
+
 							</g>
 						</switch>
 					</g>
@@ -6261,6 +6305,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    font-family="'Calibri-Bold'"
    fill="#FFFFFF">MANAGING FOR RESULTS</text>
 
+
 						</g>
 					</switch>
 					<g
@@ -6353,6 +6398,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      x="21.298"
      id="tspan1982">ON RESULTS</tspan></text>
 
+
 						</g>
 					</switch>
                <g
@@ -6430,6 +6476,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      y="9.9"
      x="0"
      id="tspan2015">REVIEWS CONDUCTED</tspan></text>
+
 
 						</g>
 					</switch>
@@ -6515,6 +6562,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      x="0"
      id="tspan2052">(HMIS)</tspan></text>
 
+
 						</g>
 					</switch>
                <g
@@ -6596,6 +6644,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
      x="49.71"
      id="tspan2087">AGREED</tspan></text>
 
+
 						</g>
 					</switch>
                <g
@@ -6644,4 +6693,18 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
 		</g>
 	</g>
 </switch>
+<text
+   xml:space="preserve"
+   style="font-size:12px;text-align:center;text-anchor:middle;fill:#ffffff"
+   x="520.77045"
+   y="1169.7452"
+   id="text4168"><tspan
+     sodipodi:role="line"
+     id="tspan4170"
+     x="522.6806"
+     y="1169.7452">spent on health </tspan><tspan
+     sodipodi:role="line"
+     x="520.77045"
+     y="1184.7452"
+     id="tspan4174">workforce increasing</tspan></text>
 </svg>
