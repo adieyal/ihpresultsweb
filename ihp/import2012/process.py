@@ -1,11 +1,16 @@
 import xlrd
 import datetime
-from submissions.models import Agency, Submission, Country, DPQuestion, GovQuestion
+from submissions.models import Agency, Submission, Country, DPQuestion, GovQuestion, CurrencyConversion
 import os
 import sys
 from django.db import transaction
 import json
-from consts import conversion
+
+def get_or_none(obj, **kwargs):
+    try:
+        return obj.objects.get(**kwargs)
+    except obj.DoesNotExist:
+        return None
 
 def unfloat(val):
     if type(val) == float:
@@ -173,8 +178,14 @@ class DPSubmissionParser(SubmissionParser):
 
         metadata = self.extract_metadata()
         currency = metadata["currency"]
-        rate_baseline = conversion[currency].get(metadata["baseline_year"], None)
-        rate_current = conversion[currency].get(metadata["latest_year"], None)
+        rate_baseline = get_or_none(CurrencyConversion, currency=currency, year=metadata["baseline_year"])
+        rate_current = get_or_none(CurrencyConversion, currency=currency, year=metadata["latest_year"])
+
+        if rate_baseline:
+            rate_baseline = rate_baseline.rate
+
+        if rate_current:
+            rate_current = rate_current.rate
 
         return {
             "1" : self.extract_yesno_value(7),
@@ -351,8 +362,14 @@ class GovSubmissionParser(SubmissionParser):
             
         metadata = self.extract_metadata()
         currency = metadata["currency"]
-        rate_baseline = conversion[currency].get(metadata["baseline_year"], None)
-        rate_current = conversion[currency].get(metadata["latest_year"], None)
+        rate_baseline = get_or_none(CurrencyConversion, currency=currency, year=metadata["baseline_year"])
+        rate_current = get_or_none(CurrencyConversion, currency=currency, year=metadata["latest_year"])
+
+        if rate_baseline:
+            rate_baseline = rate_baseline.rate
+
+        if rate_current:
+            rate_current = rate_current.rate
 
         return {
             "1" : self.extract_yesno_value(6),

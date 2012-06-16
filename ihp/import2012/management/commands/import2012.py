@@ -6,7 +6,6 @@ import datetime
 from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
 from ihp.import2012.process import SubmissionParser
-from ihp.import2012.consts import conversion
 import override_5ga
 import override_5gb
 import override_8dp
@@ -210,7 +209,7 @@ class Response(object):
 
     def _currency_value(self, value):
         currency = value[0:3]
-        factor = conversion[currency][self.year]
+        factor = conversion.objects.get(currency=currency, year=self.year).rate
             
         return factor * float(value[3:])
         
