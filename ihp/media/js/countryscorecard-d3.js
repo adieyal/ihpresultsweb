@@ -56,6 +56,12 @@ var fill_svg = function(json){
         }
     }
 
+    var rounding = {
+        phcclinincs : 0,
+        healthworkers : 1,
+        healthsystems : 0,
+    }
+
     for (i in json.health_systems){
         height = 75;
 
@@ -64,7 +70,13 @@ var fill_svg = function(json){
 
         if (n.node() !== null){
             data = json.health_systems[i];
-            n.select('.value').text(data.value.formatThousands(1));
+            
+            var r = rounding[i];
+            if (i == "healthsystems")
+                n.select('.value').text("US$" + data.value.formatThousands(r));
+            else
+                n.select('.value').text(data.value.formatThousands(r));
+        
 
             var g = n.select('.graph');
             g.select('.point');

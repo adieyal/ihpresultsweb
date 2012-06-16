@@ -67,7 +67,7 @@ class GovScorecard(object):
                 "percent": latest_div_baseline("18")
             },
             "healthsystems": {
-                "value": self.question("21").latest_value,
+                "value": self.question("21").cur_val_as_dollars,
                 "percent": latest_div_baseline("21")
             }
         }
