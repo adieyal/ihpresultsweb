@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 import submissions.models as smodels
-from submissions.models import Agency, GovQuestion, MDGData
+from submissions.models import Agency, GovQuestion, MDGData, DPQuestion, AgencyTargets 
+from submissions import indicators
 from submissions import target
 from django.conf import settings
 
@@ -139,6 +140,19 @@ class GovScorecard(object):
             "pooled": self.question("17").latest_value
         }
 
+    def donor_capacity(self):
+        qs = DPQuestion.objects.filter(
+            submission__country=self.country, 
+            submission__agency__in=self.country.agencies
+        )
+        agencytarget = AgencyTargets.objects.get(agency=None, indicator="2DPb")
+        val = indicators.calc_indicator(qs, self.country, "2DPb")
+        baseline = val[0][0]
+        latest = val[0][2]
+
+        rating = target.evaluate_indicator(agencytarget, baseline, latest)
+        return rating_icon(rating)
+        
     def get_systems(self):
         return {
             "management":{
@@ -155,7 +169,7 @@ class GovScorecard(object):
 
             "technical": {
                 "header": "DONOR CAPACITY DEVELOPMENT PROVIDED THROUGH COORDINATED PROGRAMMES",
-                "logo": "icons/question.svg",
+                "logo": self.donor_capacity(),
                 "description": "Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est."
             }
         }
