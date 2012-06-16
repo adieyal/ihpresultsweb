@@ -407,7 +407,7 @@ build_total_health = function(data){
     var values = d3.selectAll('#_x5F_values text');
 
     var ticks = y.ticks(values[0].length);
-    for (i =0; i < values[0].length; i++){
+    for (i = 0; i < values[0].length - 1; i++){
         d3.select(values[0][i]).text( 'US $' + ticks[i] + 'm');
     }
 
