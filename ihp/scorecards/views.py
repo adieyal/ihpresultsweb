@@ -168,21 +168,7 @@ def gov_scorecard_json(request, country_id, language):
             "joint_health": gov_rating("12"),
         },
         "countries": [agency_logo(agency.agency) for agency in agencies],
-        "health_systems": {
-            "phcclinincs": {
-                "value": round(foz(gov_ltv("20")) / 10000.0),
-                "percent": 45
-            },
-            "healthworkers": {
-                "value": round(float(gov_ltv("18")) / 10000.0, 1),
-                "percent": -55
-            },
-            "healthsystems": {
-                #"value": "US$48,213,213",
-                "value": gov_ltv("21"),
-                "percent": 20
-            }
-        },
+        "health_systems": gov_scorecard.get_health_systems(),
 
         "country_ownership":{
             "commitments": [

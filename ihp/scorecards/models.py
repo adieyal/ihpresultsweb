@@ -48,6 +48,30 @@ class GovScorecard(object):
     def question(self, qnum):
         return smodels.GovQuestion.objects.get(question_number=qnum, submission=self.submission)
 
+    def get_health_systems(self):
+        def latest_div_baseline(qnum):
+            q = self.question(qnum)
+            latest = foz(q.latest_value)
+            baseline = foz(q.baseline_value)
+            if baseline == 0:
+                return 0
+            return r1((latest / baseline) * 100)
+
+        return {
+            "phcclinincs": {
+                "value": round(foz(self.question("20").latest_value) / 10000.0),
+                "percent": latest_div_baseline("20")
+            },
+            "healthworkers": {
+                "value": round(foz(self.question("18").latest_value) / 10000.0, 1),
+                "percent": latest_div_baseline("18")
+            },
+            "healthsystems": {
+                "value": self.question("21").latest_value,
+                "percent": latest_div_baseline("21")
+            }
+        }
+
     def get_health_finance(self):
         external_baseline = r0(in_millions(foz(self.question("6").baseline_value)))
         external_latest = r0(in_millions(foz(self.question("6").latest_value)))
