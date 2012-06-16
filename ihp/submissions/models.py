@@ -178,6 +178,34 @@ class GovQuestion(models.Model):
     def cur_val(self):
         return self.latest_value
 
+    @property
+    def base_val_as_dollars(self):
+        return self._as_dollars(self.base_val, self.baseline_year)
+
+    @property
+    def cur_val_as_dollars(self):
+        return self._as_dollars(self.cur_val, self.latest_year)
+
+    def _as_dollars(self, val, year):
+        try:
+            # If no currency is provided then assume dollars
+            return float(val)
+        except ValueError:
+            pass
+        sval = str(val).strip()
+        if len(sval) < 3:
+            raise Exception("Invalid currency string")
+
+        cur = val[0:3].strip()
+        val = val[3:].strip()
+
+        try:
+            cc = CurrencyConversion.objects.get(currency=cur, year=year)
+            return cc.rate * float(val)
+        except CurrencyConversion.DoesNotExist:
+            raise Exception("Invalid currency string or rate for currency/year combination not available")
+
+
 class AgencyCountriesManager(models.Manager):
     
     @memoize
@@ -499,6 +527,7 @@ class CountryExclusion(models.Model):
        verbose_name_plural = "Country Exclusions" 
        unique_together = ["country", "question_number"]
 
+# TODO might need to remove this to allow for other currencies
 currencies = [
     "AUD", "BIF", "CDF", "DJF", "ETB", "EUR", 
     "GBP", "MRO", "MZN", "NGN", "NPR", "RWF", 
