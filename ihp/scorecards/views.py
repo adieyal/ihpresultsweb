@@ -129,64 +129,19 @@ def gov_scorecard_json(request, country_id, language):
     gov_scorecard = GovScorecard(country) 
     media_url = settings.MEDIA_URL
     agencies = AgencyCountries.objects.get_country_agencies(country)
-    def foz(x):
-        try:
-            return float(x)
-        except:
-            return 0
-
-    r0 = lambda x : round(float(x), 0)
 
     country_flag = lambda country : "%sflags/%s.png" % (media_url, country.lower())
     agency_logo = lambda agency : "%slogos/%s.png" % (media_url, agency.lower())
-    rating_icon = lambda icon : "%sicons/%s.svg" % (media_url, icon)
-    answers = {
-        "yes" : "tick",
-        True : "tick",
-        "no" : "cross",
-        False : "cross",
-        "under_development" : "cross",
-        "" : "line",
-    }
-    submission = GovQuestion.objects.get(question_number=1, submission__country=country).submission
-    gov_ltv = lambda qnum : GovQuestion.objects.get(question_number=qnum, submission=submission).latest_value
-    gov_lty = lambda qnum : GovQuestion.objects.get(question_number=qnum, submission=submission).latest_year
-    gov_blv = lambda qnum : GovQuestion.objects.get(question_number=qnum, submission=submission).baseline_value
-    gov_bly = lambda qnum : GovQuestion.objects.get(question_number=qnum, submission=submission).baseline_year
-    gov_comment = lambda qnum : GovQuestion.objects.get(question_number=qnum, submission=submission).comments
-    gov_rating = lambda qnum : rating_icon(answers[gov_ltv(qnum)])
     a = {
         "info": {
             "country": country.country.upper(),
             "flag": country_flag(country.country)
         },
 
-        "managing_results":{
-            "national_results": gov_rating("11"),
-            "functional_health": gov_rating("22"),
-            "decisons_results": gov_rating("11"),
-            "joint_health": gov_rating("12"),
-        },
+        "managing_results": gov_scorecard.get_managing_for_results(),
         "countries": [agency_logo(agency.agency) for agency in agencies],
         "health_systems": gov_scorecard.get_health_systems(),
-
-        "country_ownership":{
-            "commitments": [
-                {"description": "Signed Agreement", "logo": gov_rating("1")},
-                {"description": gov_comment("1"), "bullet": False}
-            ],
-            "health_sector":[
-                {"description": "Includes current targets and budgets", "logo": gov_rating("2")},
-                {"description": "Jointly Assessed", "logo": gov_rating("3")},
-            ],
-            "aid_effectiveness": [
-                {"description": "Active joint monitoring", "logo": gov_rating("12")},
-                {"description": "Number of development partner missions", "text": float(gov_ltv("16"))},
-                {"description": "10% of seats in the health sector coordination mechanism are allocated to civil society", "logo": rating_icon(answers[foz(gov_ltv("13")) >= 10])},
-                {"description": "", "logo": "icons/tick.svg", "bullet" : False}
-            ]
-        },
-
+        "country_ownership": gov_scorecard.get_country_ownership(),
         "health_finance": gov_scorecard.get_health_finance(),
         "systems": gov_scorecard.get_systems(),
         "progress": gov_scorecard.get_mdg_progress(),

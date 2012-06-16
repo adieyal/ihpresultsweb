@@ -32,6 +32,7 @@ class GovScorecard(object):
         self.gov_lty = lambda qnum : GovQuestion.objects.get(question_number=qnum, submission=submission).latest_year
         self.gov_blv = lambda qnum : GovQuestion.objects.get(question_number=qnum, submission=submission).baseline_value
         self.gov_bly = lambda qnum : GovQuestion.objects.get(question_number=qnum, submission=submission).baseline_year
+        self.gov_comment = lambda qnum : GovQuestion.objects.get(question_number=qnum, submission=submission).comments
         self.mdgs = MDGData.objects.filter(country=country)
 
         answers = {
@@ -43,10 +44,20 @@ class GovScorecard(object):
             "" : "line",
         }
         self.gov_rating = lambda qnum : rating_icon(answers[self.gov_ltv(qnum)])
+        self.gov_rating = lambda qnum : rating_icon(answers[self.gov_ltv(qnum)])
+        self.tick_if_true = lambda val : rating_icon("tick") if val else rating_icon("cross")
         self.ratings = target.calc_country_ratings(country)
     
     def question(self, qnum):
         return smodels.GovQuestion.objects.get(question_number=qnum, submission=self.submission)
+
+    def get_managing_for_results(self):
+        return {
+            "national_results": self.gov_rating("11"),
+            "functional_health": self.gov_rating("22"),
+            "decisons_results": self.gov_rating("11"),
+            "joint_health": self.gov_rating("12"),
+        }
 
     def get_health_systems(self):
         def latest_div_baseline(qnum):
@@ -70,6 +81,24 @@ class GovScorecard(object):
                 "value": self.question("21").cur_val_as_dollars,
                 "percent": latest_div_baseline("21")
             }
+        }
+
+    def get_country_ownership(self):
+        return {
+            "commitments": [
+                {"description": "Signed Agreement", "logo": self.gov_rating("1")},
+                {"description": self.gov_comment("1"), "bullet": False}
+            ],
+            "health_sector":[
+                {"description": "Includes current targets and budgets", "logo": self.gov_rating("2")},
+                {"description": "Jointly Assessed", "logo": self.gov_rating("3")},
+            ],
+            "aid_effectiveness": [
+                {"description": "Active joint monitoring", "logo": self.gov_rating("12")},
+                {"description": "Number of development partner missions", "text": float(self.gov_ltv("16"))},
+                {"description": "10% of seats in the health sector coordination mechanism are allocated to civil society", "logo": self.tick_if_true(foz(self.gov_ltv("13")) >= 10)},
+                {"description": "", "logo": "icons/tick.svg", "bullet" : False}
+            ]
         }
 
     def get_health_finance(self):
