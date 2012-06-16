@@ -116,6 +116,8 @@ var fill_svg = function(json){
                     .text(data.percent + '%');
 
             }
+            if (Math.abs(data.percent) < 0.1)
+                g.select('polygon').remove()
         }
     }
 
