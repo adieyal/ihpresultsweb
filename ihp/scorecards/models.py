@@ -44,8 +44,10 @@ class GovScorecard(object):
             "under_development" : "cross",
             "" : "line",
         }
-        self.gov_rating = lambda qnum : rating_icon(answers[self.gov_ltv(qnum)])
-        self.gov_rating = lambda qnum : rating_icon(answers[self.gov_ltv(qnum)])
+
+        def get_rating(val):
+            return answers.get(val.lower(), "question")
+        self.gov_rating = lambda qnum : rating_icon(get_rating(self.gov_ltv(qnum)))
         self.tick_if_true = lambda val : rating_icon("tick") if val else rating_icon("cross")
         self.ratings = target.calc_country_ratings(country)
     
@@ -69,6 +71,12 @@ class GovScorecard(object):
                 return 0
             return r1((latest / baseline) * 100)
 
+        try:
+            healthsystems = self.question("21").cur_val_as_dollars
+        except Exception:
+            # TODO Perhaps this isn't the best value
+            healthsystems = 0
+            
         return {
             "phcclinincs": {
                 "value": round(foz(self.question("20").latest_value) / 10000.0),
@@ -79,7 +87,7 @@ class GovScorecard(object):
                 "percent": latest_div_baseline("18")
             },
             "healthsystems": {
-                "value": self.question("21").cur_val_as_dollars,
+                "value": healthsystems,
                 "percent": latest_div_baseline("21")
             }
         }
@@ -236,8 +244,13 @@ class GovScorecard(object):
         def progress_to_int(val):
             return {
                 "y" : 2, "yy" : 2, 100 : 2,
-                0 : 0, "n" : 0, None : 0
+                0 : 0, "n" : 0, None : 0, "nn" : 0
             }[val]
+
+        def cs_progress(val):
+            if val >= 10:
+                return 2
+            return 0
 
         return {
             "mutual_agreement":{
@@ -251,7 +264,7 @@ class GovScorecard(object):
                 ]
             },
             "health_plan":{
-                "description": "A NationalHealth Sector Plan/ Strategy is in place with current targets & budgets that have been jointly assessed.",
+                "description": "A National Health Sector Plan/ Strategy is in place with current targets & budgets that have been jointly assessed.",
                 "rating": rating_icon(r2Ga["target"]),
                 "max": 2,
                 "progress": [
@@ -308,9 +321,9 @@ class GovScorecard(object):
                 "rating": rating_icon(r5Gb["target"]),
                 "type":"dot",
                 "progress": [
-                    {"year": r5Gb["base_year"], "value":foz(r5Gb["base_val"])},
-                    {"year":"0", "value":0},
-                    {"year": r5Gb["cur_year"], "value":foz(r5Gb["cur_val"])},
+                    {"year": r5Gb["base_year"], "value":r5Gb["base_val"]},
+                    {"year":"0", "value":"0"},
+                    {"year": r5Gb["cur_year"], "value":r5Gb["cur_val"]},
                 ]
             },
 
@@ -339,9 +352,10 @@ class GovScorecard(object):
                 "rating": rating_icon(r8G["target"]),
                 "max": 2,
                 "progress": [
-                    {"year": r8G["base_year"], "value":progress_to_int(r8G["base_val"])},
+                    {"year": r8G["base_year"], "value":cs_progress(foz(r8G["base_val"]))},
                     {"year":"0", "value":0},
-                    {"year": r8G["cur_year"], "value":progress_to_int(r8G["cur_val"])},
+                    {"year": r8G["cur_year"], "value":cs_progress(foz(r8G["cur_val"]))},
                 ]
             }
         }
+
