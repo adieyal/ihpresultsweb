@@ -372,7 +372,7 @@ build_text_element = function(n, id, data, index){
     if (d.text !== undefined){
         g.append('g')
             .attr('class', 'logo')
-            .attr('transform', 'translate(152, 20)')
+            .attr('transform', 'translate(146, 20)')
             .append('text')
             .style('font-size', '20px')
             .style('text-align', 'center')
