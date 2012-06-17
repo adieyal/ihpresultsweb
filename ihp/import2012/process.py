@@ -44,7 +44,7 @@ dp_conversion_questions = [
     "17", "18"
 ]
 
-yes_values = ["oui", "yes", "y"]
+yes_values = ["oui", "yes", "y", "si"]
 no_values = ["non", "no", "n"]
 
 
