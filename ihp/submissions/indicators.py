@@ -281,6 +281,7 @@ def calc_country_indicators(country, funcs=None):
     """
     qs = GovQuestion.objects.filter(submission__country=country).select_related()
     results = [calc_country_indicator(qs, country, indicator, funcs) for indicator in g_indicators]
+    print dict(zip(g_indicators, results))["8Gb"]
     return dict(zip(g_indicators, results))
 
 def calc_country_agency_indicator(qs, country, agency, indicator, funcs=None):
@@ -309,7 +310,7 @@ dp_indicators = [
 g_indicators = [
     "1G" , "2Ga", "2Gb",
     "3G" , "4G", "5Ga", "5Gb",
-    "6G" , "7G", "8G",
+    "6G" , "7G", "8G", "8Gb",
     "Q2G", "Q3G",
     "Q12G", "Q21G",
 ]
@@ -338,9 +339,8 @@ indicator_funcs = {
     "5Gb"  : (identity, ("10",)),
     "6G"   : (equals_yes_or_no("yes"), ("11",)),
     "7G"   : (equals_yes_or_no("yes"), ("12",)),
-    #"8G"   : (calc_numdenom, ("13", "14")),
     "8G"   : (sum_values, ("13",)),
-    #"8Gb"   : (sum_values, ("15",)),
+    "8Gb"  : (count_array, ("15",)),
     "Q2G" : (equals_yes_or_no("yes"), ("2",)),
     "Q3G" : (equals_yes_or_no("yes"), ("3",)),
     "Q12G" : (equals_yes_or_no("yes"), ("12",)),

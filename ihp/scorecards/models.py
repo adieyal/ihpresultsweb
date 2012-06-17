@@ -240,6 +240,7 @@ class GovScorecard(object):
         r6G = self.ratings["6G"]
         r7G = self.ratings["7G"]
         r8G = self.ratings["8G"]
+        r8Gb = self.ratings["8Gb"]
 
         def progress_to_int(val):
             return {
@@ -248,8 +249,10 @@ class GovScorecard(object):
             }[val]
 
         def cs_progress(val):
-            if val >= 10:
+            if val == 4:
                 return 2
+            elif val > 0:
+                return 1
             return 0
 
         return {
@@ -349,12 +352,12 @@ class GovScorecard(object):
             },
             "civilsociety":{
                 "description": "At least 10% of seats in the country’s Health Sector Coordination mechanisms are allocated to Civil Society",
-                "rating": rating_icon(r8G["target"]),
+                "rating": rating_icon(r8Gb["target"]),
                 "max": 2,
                 "progress": [
-                    {"year": r8G["base_year"], "value":cs_progress(foz(r8G["base_val"]))},
+                    {"year": r8G["base_year"], "value":cs_progress(foz(r8Gb["base_val"]))},
                     {"year":"0", "value":0},
-                    {"year": r8G["cur_year"], "value":cs_progress(foz(r8G["cur_val"]))},
+                    {"year": r8G["cur_year"], "value":cs_progress(foz(r8Gb["cur_val"]))},
                 ]
             }
         }

@@ -24,6 +24,19 @@ def _sum_values(qs, selector):
     
     return sum([float(selector(q)) for q in qs])
 
+def count_array(qs, agency, selector, q):
+    qs = [qq for qq in qs if qq.question_number==q]
+    assert len(qs) == 1
+
+    try:
+        question = qs[0]
+        if selector == base_selector:
+            return len(eval(question.base_val))
+        elif selector == cur_selector:
+            return len(eval(question.cur_val))
+    except TypeError:
+        return None
+    
 def count_factory(value):
     def count_value(qs, agency_or_country, selector, q):
         qs = [qq for qq in qs if qq.question_number==q]
@@ -31,10 +44,14 @@ def count_factory(value):
         if len(qs) == 0:
             return 0
 
+        matches = lambda x : x
+        if value:
+            matches = lambda x : x == value.lower()
+
         if selector == base_selector:
-            return len([q for q in qs if q.base_val.lower() == value.lower()])
+            return len([q for q in qs if matches(q.base_val.lower())])
         elif selector == cur_selector:
-            return len([q for q in qs if q.cur_val.lower() == value.lower()])
+            return len([q for q in qs if matches(q.cur_val.lower())])
     return count_value
 
 def country_perc_factory(value):
