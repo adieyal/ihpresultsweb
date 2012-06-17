@@ -194,7 +194,7 @@ class GovQuestion(models.Model):
             pass
         sval = str(val).strip()
         if len(sval) < 3:
-            raise Exception("Invalid currency string")
+            raise Exception("%s is an invalid currency string" % sval)
 
         cur = val[0:3].strip()
         val = val[3:].strip()
