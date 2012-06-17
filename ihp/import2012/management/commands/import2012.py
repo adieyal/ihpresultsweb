@@ -209,7 +209,7 @@ class Response(object):
 
     def _currency_value(self, value):
         currency = value[0:3]
-        factor = conversion.objects.get(currency=currency, year=self.year).rate
+        factor = CurrencyConversion.objects.get(currency=currency, year=self.year).rate
             
         return factor * float(value[3:])
         
