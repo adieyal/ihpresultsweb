@@ -325,11 +325,10 @@ class GovScorecard(object):
                 "description": "Halve the proportion of health sector funding not disbursed against the approved annual budget.",
                 "rating": rating_icon(r4G["target"]),
                 "progress": [
-                    {"year": r4G["base_year"], "value":foz(r4G["one_minus_base_val"])},
+                    {"year": r4G["base_year"], "value":foz(r4G["base_val"])},
                     {"year":"0", "value":0},
-                    {"year": r4G["cur_year"], "value":foz(r4G["one_minus_cur_val"])},
+                    {"year": r4G["cur_year"], "value":foz(r4G["cur_val"])},
                 ],
-                "line": {"constant": 71},
                 "max": 100
             },
             "cipa_scale":{
