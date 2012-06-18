@@ -47,7 +47,7 @@ dp_conversion_questions = [
 
 yes_values = ["oui", "yes", "y", "si"]
 no_values = ["non", "no", "n"]
-empty_values = ["", "sélectionner", "précisez s'il vous plaît", "select"]
+empty_values = ["", "sélectionner", "précisez s'il vous plaît", "select", "Please select"]
 
 def cellgrabber(sheet):
     def _v(r, c):
