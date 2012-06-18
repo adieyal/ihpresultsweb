@@ -72,10 +72,14 @@ var fill_svg = function(json){
             data = json.health_systems[i];
             
             var r = rounding[i];
-            if (i == "healthsystems")
-                n.select('.value').text("US$" + data.value.formatThousands(r));
-            else
-                n.select('.value').text(data.value.formatThousands(r));
+            /*
+            if (data.value != NaN) {
+                if (i == "healthsystems")
+                    n.select('.value').text("US$" + data.value.formatThousands(r));
+                else
+                    n.select('.value').text(data.value.formatThousands(r));
+            }
+            */
         
 
             var g = n.select('.graph');
@@ -401,6 +405,8 @@ build_total_health = function(data){
     }
     max = sigFigs(max * 1.2, 1);
 
+    if (isNaN(max))
+        max = 100;
     var y = d3.scale.linear()
         .domain([0, max])
         .rangeRound([0, -100]);

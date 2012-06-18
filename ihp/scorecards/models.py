@@ -102,6 +102,11 @@ class GovScorecard(object):
         }
 
     def get_country_ownership(self):
+        if self.gov_ltv("13") == None:
+            cs_logo = rating_icon("question")
+        else:
+            cs_logo = self.tick_if_true(foz(self.gov_ltv("13")) >= 10)
+
         return {
             "commitments": [
                 {"description": "Signed Agreement", "logo": self.gov_rating("1")},
@@ -114,16 +119,20 @@ class GovScorecard(object):
             "aid_effectiveness": [
                 {"description": "Active joint monitoring", "logo": self.gov_rating("12")},
                 {"description": "Number of development partner missions", "text": foz(self.gov_ltv("16"))},
-                {"description": "10% of seats in the health sector coordination mechanism are allocated to civil society", "logo": self.tick_if_true(foz(self.gov_ltv("13")) >= 10)},
-                {"description": "", "logo": "icons/tick.svg", "bullet" : False}
+                {"description": "10% of seats in the health sector coordination mechanism are allocated to civil society", "logo": cs_logo},
             ]
         }
 
     def get_health_finance(self):
-        external_baseline = r0(in_millions(foz(self.question("6").baseline_value)))
-        external_latest = r0(in_millions(foz(self.question("6").latest_value)))
-        domestic_baseline = r0(in_millions(foz(self.question("7").baseline_value))) - external_baseline
-        domestic_latest = r0(in_millions(foz(self.question("7").latest_value))) - external_latest
+        
+        
+        domestic_baseline = r0(in_millions(foz(self.question("6").baseline_value)))
+        domestic_latest = r0(in_millions(foz(self.question("6").latest_value)))
+        all_baseline = r0(in_millions(foz(self.question("7").baseline_value)))
+        all_latest = r0(in_millions(foz(self.question("7").latest_value)))
+
+        external_baseline = all_baseline - domestic_baseline if all_baseline > domestic_baseline else 0
+        external_latest = all_latest - domestic_latest if all_latest > domestic_latest else 0
 
         try:
             allocated_to_health = external_latest / r0(in_millions(foz(self.question("5").latest_value))) * 100
@@ -255,7 +264,6 @@ class GovScorecard(object):
         r8G = self.ratings["8G"]
         r8Gb = self.ratings["8Gb"]
 
-        print r4G
         def progress_to_int(val):
             return {
                 "y" : 2, "yy" : 2, 100 : 2,
