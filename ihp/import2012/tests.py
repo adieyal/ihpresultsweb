@@ -40,7 +40,7 @@ class TestGovernmentParser(TestCase):
         rate = 0.0021
         self.assertEquals(answers["1"]["base_val"], None)
         self.assertEquals(answers["1"]["cur_val"], "yes")
-        self.assertEquals(answers["1"]["comments"], u"")
+        self.assertEquals(answers["1"]["comments"], None)
 
         self.assertEquals(answers["2"]["base_val"], None)
         self.assertEquals(answers["2"]["cur_val"], "yes")
@@ -48,7 +48,7 @@ class TestGovernmentParser(TestCase):
 
         self.assertEquals(answers["3"]["base_val"], None)
         self.assertEquals(answers["3"]["cur_val"], "yes")
-        self.assertEquals(answers["3"]["comments"], u"")
+        self.assertEquals(answers["3"]["comments"], None)
 
         self.assertEquals(answers["4"]["base_val"], None)
         self.assertEquals(answers["4"]["cur_val"], "yes")
@@ -60,7 +60,7 @@ class TestGovernmentParser(TestCase):
 
         self.assertEquals(answers["6"]["base_val"], None)
         self.assertEquals(answers["6"]["cur_val"],  40539337611.0 * rate)
-        self.assertEquals(answers["6"]["comments"], u"")
+        self.assertEquals(answers["6"]["comments"], None)
 
         self.assertEquals(answers["7"]["base_val"], None)
         self.assertEquals(answers["7"]["cur_val"],  107318471563.0 * rate)
@@ -68,7 +68,7 @@ class TestGovernmentParser(TestCase):
 
         self.assertEquals(answers["8"]["base_val"], None)
         self.assertEquals(answers["8"]["cur_val"],  61072093186.0 * rate)
-        self.assertEquals(answers["8"]["comments"], u"")
+        self.assertEquals(answers["8"]["comments"], None)
 
         self.assertEquals(answers["9"]["base_val"], u"Consultez fiche 'les systèmes nationaux de données'")
         self.assertEquals(answers["9"]["cur_val"],  u"Consultez fiche 'les systèmes nationaux de données'")
@@ -80,7 +80,7 @@ class TestGovernmentParser(TestCase):
 
         self.assertEquals(answers["11"]["base_val"], None)
         self.assertEquals(answers["11"]["cur_val"],  "yes")
-        self.assertEquals(answers["11"]["comments"], u"")
+        self.assertEquals(answers["11"]["comments"], None)
 
         self.assertEquals(answers["12"]["base_val"], None)
         self.assertEquals(answers["12"]["cur_val"],  "yes")
@@ -96,7 +96,7 @@ class TestGovernmentParser(TestCase):
 
         self.assertEquals(answers["15"]["base_val"], [])
         self.assertEquals(answers["15"]["cur_val"],  ["joint_reviews", "monthy_meetings", "working_groups", "budget_development"])
-        self.assertEquals(answers["15"]["comments"], u"")
+        self.assertEquals(answers["15"]["comments"], None)
 
         self.assertEquals(answers["16"]["base_val"], None)
         self.assertEquals(answers["16"]["cur_val"],  77)
@@ -112,7 +112,7 @@ class TestGovernmentParser(TestCase):
 
         self.assertEquals(answers["19"]["base_val"], None)
         self.assertEquals(answers["19"]["cur_val"],  15730754)
-        self.assertEquals(answers["19"]["comments"], u"")
+        self.assertEquals(answers["19"]["comments"], None)
 
         self.assertEquals(answers["20"]["base_val"], None)
         self.assertEquals(answers["20"]["cur_val"],  12441357)
@@ -128,11 +128,11 @@ class TestGovernmentParser(TestCase):
 
         self.assertEquals(answers["23"]["base_val"], None)
         self.assertEquals(answers["23"]["cur_val"],  45)
-        self.assertEquals(answers["23"]["comments"], u"")
+        self.assertEquals(answers["23"]["comments"], None)
 
         self.assertEquals(answers["24"]["base_val"], None)
         self.assertEquals(answers["24"]["cur_val"],  150)
-        self.assertEquals(answers["24"]["comments"], u"")
+        self.assertEquals(answers["24"]["comments"], None)
 
         self.assertEquals(answers["25"]["base_val"], None)
         self.assertEquals(type(answers["25"]["cur_val"]),  datetime.datetime)
@@ -217,7 +217,7 @@ class TestPartnerParser(TestCase):
 
         self.assertEquals(answers["3"]["base_val"], None)
         self.assertEquals(answers["3"]["cur_val"],  None)
-        self.assertEquals(answers["3"]["comments"], u"")
+        self.assertEquals(answers["3"]["comments"], None)
 
         self.assertEquals(answers["4"]["base_val"], 0)
         self.assertEquals(answers["4"]["cur_val"],  0)
@@ -225,7 +225,7 @@ class TestPartnerParser(TestCase):
 
         self.assertEquals(answers["5"]["base_val"], 0)
         self.assertEquals(answers["5"]["cur_val"],  0)
-        self.assertEquals(answers["5"]["comments"], u"")
+        self.assertEquals(answers["5"]["comments"], None)
 
         self.assertEquals(answers["6"]["base_val"], 765096)
         self.assertEquals(answers["6"]["cur_val"],  2287729)
@@ -233,7 +233,7 @@ class TestPartnerParser(TestCase):
 
         self.assertEquals(answers["7"]["base_val"], 765096.46)
         self.assertEquals(answers["7"]["cur_val"],  2287729.24)
-        self.assertEquals(answers["7"]["comments"], u"")
+        self.assertEquals(answers["7"]["comments"], None)
 
         self.assertEquals(answers["8"]["base_val"], 765096.46)
         self.assertEquals(answers["8"]["cur_val"],  2042691.24)
@@ -249,7 +249,7 @@ class TestPartnerParser(TestCase):
 
         self.assertEquals(answers["11"]["base_val"], 0)
         self.assertEquals(answers["11"]["cur_val"],  0)
-        self.assertEquals(answers["11"]["comments"], u"")
+        self.assertEquals(answers["11"]["comments"], None)
 
         self.assertEquals(answers["12"]["base_val"], None)
         self.assertEquals(answers["12"]["cur_val"],  None)
@@ -273,11 +273,11 @@ class TestPartnerParser(TestCase):
 
         self.assertEquals(answers["17"]["base_val"], 0)
         self.assertEquals(answers["17"]["cur_val"],  0)
-        self.assertEquals(answers["17"]["comments"], u"")
+        self.assertEquals(answers["17"]["comments"], None)
 
         self.assertEquals(answers["18"]["base_val"], None)
         self.assertEquals(answers["18"]["cur_val"],  None)
-        self.assertEquals(answers["18"]["comments"], u"")
+        self.assertEquals(answers["18"]["comments"], None)
 
     def test_created_submission(self):
         self.assertEquals(smodels.Submission.objects.count(), 0)

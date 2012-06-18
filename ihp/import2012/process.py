@@ -1,3 +1,4 @@
+# encoding: utf-8
 import xlrd
 import datetime
 from submissions.models import Agency, Submission, Country, DPQuestion, GovQuestion, CurrencyConversion
@@ -46,13 +47,16 @@ dp_conversion_questions = [
 
 yes_values = ["oui", "yes", "y", "si"]
 no_values = ["non", "no", "n"]
-
+empty_values = ["", "sélectionner", "précisez s'il vous plaît", "select"]
 
 def cellgrabber(sheet):
     def _v(r, c):
         value = sheet.cell(r, c).value
         if isinstance(value, basestring):
-            return value.strip()
+            value = value.strip()
+            if value in empty_values:
+                return None
+            return value
         return value
     return _v
 
@@ -102,14 +106,16 @@ class SubmissionParser(object):
         return year
 
     def extract_yesno(self, row, col):
-        val = self._v(row, col).lower()
-        if val in yes_values:
-            return SubmissionParser.YES_VALUE
-        elif val in no_values:
-            return SubmissionParser.NO_VALUE
-        else:
-            sys.stderr.write("WARNING: Unknown yes/no value: %s in row: %d, col: %d\n" % (val, row, col))
-            return None
+        val = self._v(row, col)
+        if isinstance(val, basestring):
+            val = val.lower()
+            if val in yes_values:
+                return SubmissionParser.YES_VALUE
+            elif val in no_values:
+                return SubmissionParser.NO_VALUE
+
+        sys.stderr.write("WARNING: Unknown yes/no value: %s in row: %d, col: %d\n" % (val, row, col))
+        return None
 
     def extract_yesno_value(self, row):
         return {
@@ -120,15 +126,9 @@ class SubmissionParser(object):
 
     def extract_answer(self, row):
 
-        def s(t):
-            if isinstance(t, basestring):
-                if t.strip() == "": return None
-                return t.strip()
-            return t
-
         return {
-            "base_val" : s(self._v(row, self.base_col)),
-            "cur_val" : s(self._v(row, self.cur_col)),
+            "base_val" : self._v(row, self.base_col),
+            "cur_val" : self._v(row, self.cur_col),
             "comments" : self.extract_comment(row)
         }
 
@@ -150,7 +150,7 @@ class SubmissionParser(object):
 
 
     def extract_comment(self, row):
-        return self._v(row, self.comments_col).strip()
+        return self._v(row, self.comments_col)
 
 
 class DPSubmissionParser(SubmissionParser):
@@ -346,11 +346,13 @@ class GovSubmissionParser(SubmissionParser):
         
 
         def extract_date(row, col):
-            val = self._v(row, col)
-            if str(val).strip() == "": return None
+            try:
+                val = self._v(row, col)
 
-            date_tuple = xlrd.xldate_as_tuple(val, self.datemode)
-            return datetime.datetime(*date_tuple)
+                date_tuple = xlrd.xldate_as_tuple(val, self.datemode)
+                return datetime.datetime(*date_tuple)
+            except ValueError:
+                return None
 
         
         def extract_date_value(row):
