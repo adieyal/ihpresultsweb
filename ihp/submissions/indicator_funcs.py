@@ -34,7 +34,7 @@ def count_array(qs, agency, selector, q):
             return len(eval(question.base_val))
         elif selector == cur_selector:
             return len(eval(question.cur_val))
-    except TypeError:
+    except:
         return None
     
 def count_factory(value):
