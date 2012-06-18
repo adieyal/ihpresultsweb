@@ -11,6 +11,13 @@ def foz(x):
         return float(x)
     except:
         return 0
+
+def safe_diff(x, y):
+    try:
+        return x - y
+    except:
+        return None
+
 def myround(x, places=0):
     return round(foz(x), places)
 r0 = lambda x : myround(x, 0)
@@ -46,6 +53,8 @@ class GovScorecard(object):
         }
 
         def get_rating(val):
+            if val == None:
+                return "question"
             return answers.get(val.lower(), "question")
         self.gov_rating = lambda qnum : rating_icon(get_rating(self.gov_ltv(qnum)))
         self.tick_if_true = lambda val : rating_icon("tick") if val else rating_icon("cross")
@@ -104,7 +113,7 @@ class GovScorecard(object):
             ],
             "aid_effectiveness": [
                 {"description": "Active joint monitoring", "logo": self.gov_rating("12")},
-                {"description": "Number of development partner missions", "text": float(self.gov_ltv("16"))},
+                {"description": "Number of development partner missions", "text": foz(self.gov_ltv("16"))},
                 {"description": "10% of seats in the health sector coordination mechanism are allocated to civil society", "logo": self.tick_if_true(foz(self.gov_ltv("13")) >= 10)},
                 {"description": "", "logo": "icons/tick.svg", "bullet" : False}
             ]
@@ -116,8 +125,12 @@ class GovScorecard(object):
         domestic_baseline = r0(in_millions(foz(self.question("7").baseline_value))) - external_baseline
         domestic_latest = r0(in_millions(foz(self.question("7").latest_value))) - external_latest
 
-        allocated_to_health = external_latest / r0(in_millions(foz(self.question("5").latest_value))) * 100
-        increase = 15 - allocated_to_health
+        try:
+            allocated_to_health = external_latest / r0(in_millions(foz(self.question("5").latest_value))) * 100
+        except ZeroDivisionError:
+            allocated_to_health = None
+
+        increase = safe_diff(15, allocated_to_health)
 
         return {
             "total": {
@@ -245,7 +258,8 @@ class GovScorecard(object):
         def progress_to_int(val):
             return {
                 "y" : 2, "yy" : 2, 100 : 2,
-                0 : 0, "n" : 0, None : 0, "nn" : 0
+                0 : 0, "n" : 0, None : 0, "nn" : 0,
+                "yn" : 0,
             }[val]
 
         def cs_progress(val):
