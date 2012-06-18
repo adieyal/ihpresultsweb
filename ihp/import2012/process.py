@@ -49,6 +49,8 @@ yes_values = ["oui", "yes", "y", "si"]
 no_values = ["non", "no", "n"]
 empty_values = ["", "sélectionner", "précisez s'il vous plaît", "select", "Please select"]
 
+under_development = [u"en cours de développement"]
+
 def cellgrabber(sheet):
     def _v(r, c):
         value = sheet.cell(r, c).value
@@ -56,6 +58,8 @@ def cellgrabber(sheet):
             value = value.strip()
             if value in empty_values:
                 return None
+            if value in under_development:
+                return "under_development"
             return value
         return value
     return _v
