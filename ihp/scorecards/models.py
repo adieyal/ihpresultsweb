@@ -255,6 +255,7 @@ class GovScorecard(object):
         r8G = self.ratings["8G"]
         r8Gb = self.ratings["8Gb"]
 
+        print r4G
         def progress_to_int(val):
             return {
                 "y" : 2, "yy" : 2, 100 : 2,
@@ -316,9 +317,9 @@ class GovScorecard(object):
                 "description": "Halve the proportion of health sector funding not disbursed against the approved annual budget.",
                 "rating": rating_icon(r4G["target"]),
                 "progress": [
-                    {"year": r4G["base_year"], "value":foz(r4G["base_val"])},
+                    {"year": r4G["base_year"], "value":foz(r4G["one_minus_base_val"])},
                     {"year":"0", "value":0},
-                    {"year": r4G["cur_year"], "value":foz(r4G["cur_val"])},
+                    {"year": r4G["cur_year"], "value":foz(r4G["one_minus_cur_val"])},
                 ],
                 "line": {"constant": 71},
                 "max": 100
