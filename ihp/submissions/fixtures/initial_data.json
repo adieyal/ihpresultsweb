@@ -943,5 +943,2722 @@
             "rate": 1.2456, 
             "year": "2005"
         }
+    },
+    {
+        "pk": 1, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2003", 
+            "arrow": null, 
+            "country": 12, 
+            "baseline_value": null, 
+            "baseline_year": null, 
+            "latest_value": 47.3, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 12, 
+            "baseline_value": 87.1, 
+            "baseline_year": "2005", 
+            "latest_value": 94.4, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 12, 
+            "baseline_value": 0.8, 
+            "baseline_year": "2005", 
+            "latest_value": 0.88, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "downgreen", 
+            "country": 12, 
+            "baseline_value": 129.0, 
+            "baseline_year": "2005", 
+            "latest_value": 115.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 12, 
+            "baseline_value": 460.0, 
+            "baseline_year": "2005", 
+            "latest_value": 410.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2006", 
+            "arrow": "downgreen", 
+            "country": 12, 
+            "baseline_value": 27.2, 
+            "baseline_year": "2001", 
+            "latest_value": 26.4, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen", 
+            "country": 12, 
+            "baseline_value": 1.3, 
+            "baseline_year": "2005", 
+            "latest_value": 1.2, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2006", 
+            "arrow": "upgreen", 
+            "country": 12, 
+            "baseline_value": 7.4, 
+            "baseline_year": "2002", 
+            "latest_value": 20.1, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upred", 
+            "country": 12, 
+            "baseline_value": 89.0, 
+            "baseline_year": "2005", 
+            "latest_value": 93.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 12, 
+            "baseline_value": 72.0, 
+            "baseline_year": "2005", 
+            "latest_value": 75.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 12, 
+            "baseline_value": 11.0, 
+            "baseline_year": "2005", 
+            "latest_value": 12.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2003", 
+            "arrow": "downgreen", 
+            "country": 4, 
+            "baseline_value": 70.0, 
+            "baseline_year": "1998", 
+            "latest_value": 56.5, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 4, 
+            "baseline_value": 61.2, 
+            "baseline_year": "2008", 
+            "latest_value": 64.4, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 4, 
+            "baseline_value": 0.87, 
+            "baseline_year": "2008", 
+            "latest_value": 0.89, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 4, 
+            "baseline_value": 184.0, 
+            "baseline_year": "2005", 
+            "latest_value": 180.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 4, 
+            "baseline_value": 600.0, 
+            "baseline_year": "2005", 
+            "latest_value": 560.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2003", 
+            "arrow": "upred", 
+            "country": 4, 
+            "baseline_value": 25.8, 
+            "baseline_year": "1999", 
+            "latest_value": 28.8, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen", 
+            "country": 4, 
+            "baseline_value": 1.5, 
+            "baseline_year": "2005", 
+            "latest_value": 1.2, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2006", 
+            "arrow": "upgreen", 
+            "country": 4, 
+            "baseline_value": 1.6, 
+            "baseline_year": "2003", 
+            "latest_value": 9.6, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen ", 
+            "country": 4, 
+            "baseline_value": 238.0, 
+            "baseline_year": "2005", 
+            "latest_value": 215.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 4, 
+            "baseline_value": 70.0, 
+            "baseline_year": "2005", 
+            "latest_value": 76.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "equal", 
+            "country": 4, 
+            "baseline_value": 11.0, 
+            "baseline_year": "2005", 
+            "latest_value": 11.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2006", 
+            "arrow": "downgreen", 
+            "country": 3, 
+            "baseline_value": 86.4, 
+            "baseline_year": "1998", 
+            "latest_value": 81.3, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 3, 
+            "baseline_value": 89.7, 
+            "baseline_year": "2007", 
+            "latest_value": 99.1, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 3, 
+            "baseline_value": 0.93, 
+            "baseline_year": "2007", 
+            "latest_value": 0.97, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "downgreen", 
+            "country": 3, 
+            "baseline_value": 154.0, 
+            "baseline_year": "2005", 
+            "latest_value": 142.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 3, 
+            "baseline_value": 1100.0, 
+            "baseline_year": "2005", 
+            "latest_value": 970.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2002", 
+            "arrow": null, 
+            "country": 3, 
+            "baseline_value": null, 
+            "baseline_year": null, 
+            "latest_value": 29.0, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen", 
+            "country": 3, 
+            "baseline_value": 4.0, 
+            "baseline_year": "2005", 
+            "latest_value": 3.3, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "upgreen", 
+            "country": 3, 
+            "baseline_value": 8.3, 
+            "baseline_year": "2005", 
+            "latest_value": 45.2, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen ", 
+            "country": 3, 
+            "baseline_value": 390.0, 
+            "baseline_year": "2005", 
+            "latest_value": 348.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "equal", 
+            "country": 3, 
+            "baseline_value": 72.0, 
+            "baseline_year": "2005", 
+            "latest_value": 72.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "equal", 
+            "country": 3, 
+            "baseline_value": 46.0, 
+            "baseline_year": "2005", 
+            "latest_value": 46.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2006", 
+            "arrow": null, 
+            "country": 2, 
+            "baseline_value": null, 
+            "baseline_year": null, 
+            "latest_value": 59.2, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "1999", 
+            "arrow": "downred", 
+            "country": 2, 
+            "baseline_value": 55.9, 
+            "baseline_year": "1991", 
+            "latest_value": 32.6, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 2, 
+            "baseline_value": 0.81, 
+            "baseline_year": "2007", 
+            "latest_value": 0.85, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "downgreen", 
+            "country": 2, 
+            "baseline_value": 181.0, 
+            "baseline_year": "2005", 
+            "latest_value": 170.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 2, 
+            "baseline_value": 740.0, 
+            "baseline_year": "2005", 
+            "latest_value": 670.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2007", 
+            "arrow": null, 
+            "country": 2, 
+            "baseline_value": null, 
+            "baseline_year": null, 
+            "latest_value": 26.2, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "equal", 
+            "country": 2, 
+            "baseline_value": 1.3, 
+            "baseline_year": "2001", 
+            "latest_value": 1.3, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "upgreen", 
+            "country": 2, 
+            "baseline_value": 5.8, 
+            "baseline_year": "2007", 
+            "latest_value": 38.1, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen ", 
+            "country": 2, 
+            "baseline_value": 410.0, 
+            "baseline_year": "2005", 
+            "latest_value": 372.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 2, 
+            "baseline_value": 45.0, 
+            "baseline_year": "2005", 
+            "latest_value": 46.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 2, 
+            "baseline_value": 20.0, 
+            "baseline_year": "2005", 
+            "latest_value": 23.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2002", 
+            "arrow": "upred", 
+            "country": 5, 
+            "baseline_value": 4.8, 
+            "baseline_year": "1996", 
+            "latest_value": 18.8, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 5, 
+            "baseline_value": 41.7, 
+            "baseline_year": "2007", 
+            "latest_value": 44.6, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 5, 
+            "baseline_value": 0.86, 
+            "baseline_year": "2007", 
+            "latest_value": 0.89, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "downgreen", 
+            "country": 5, 
+            "baseline_value": 98.0, 
+            "baseline_year": "2005", 
+            "latest_value": 91.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 5, 
+            "baseline_value": 320.0, 
+            "baseline_year": "2005", 
+            "latest_value": 300.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": null, 
+            "arrow": null, 
+            "country": 5, 
+            "baseline_value": null, 
+            "baseline_year": null, 
+            "latest_value": null, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen", 
+            "country": 5, 
+            "baseline_value": 2.7, 
+            "baseline_year": "2005", 
+            "latest_value": 2.5, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 5, 
+            "baseline_value": 1.3, 
+            "baseline_year": "2006", 
+            "latest_value": 19.9, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "equal", 
+            "country": 5, 
+            "baseline_value": 620.0, 
+            "baseline_year": "2005", 
+            "latest_value": 620.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 5, 
+            "baseline_value": 89.0, 
+            "baseline_year": "2005", 
+            "latest_value": 92.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downred", 
+            "country": 5, 
+            "baseline_value": 58.0, 
+            "baseline_year": "2005", 
+            "latest_value": 56.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 13, 
+            "baseline_value": 11.0, 
+            "baseline_year": "2005", 
+            "latest_value": 5.1, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downred", 
+            "country": 13, 
+            "baseline_value": 96.1, 
+            "baseline_year": "2005", 
+            "latest_value": 95.6, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downred", 
+            "country": 13, 
+            "baseline_value": 0.98, 
+            "baseline_year": "2005", 
+            "latest_value": 0.97, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "downgreen", 
+            "country": 13, 
+            "baseline_value": 23.0, 
+            "baseline_year": "2005", 
+            "latest_value": 16.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 13, 
+            "baseline_value": 120.0, 
+            "baseline_year": "2005", 
+            "latest_value": 110.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2003", 
+            "arrow": "downgreen", 
+            "country": 13, 
+            "baseline_value": 14.2, 
+            "baseline_year": "1998", 
+            "latest_value": 8.9, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "equal", 
+            "country": 13, 
+            "baseline_value": 0.8, 
+            "baseline_year": "2005", 
+            "latest_value": 0.8, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": null, 
+            "arrow": null, 
+            "country": 13, 
+            "baseline_value": null, 
+            "baseline_year": null, 
+            "latest_value": null, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen ", 
+            "country": 13, 
+            "baseline_value": 39.0, 
+            "baseline_year": "2005", 
+            "latest_value": 30.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 13, 
+            "baseline_value": 86.0, 
+            "baseline_year": "2005", 
+            "latest_value": 87.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgren", 
+            "country": 13, 
+            "baseline_value": 85.0, 
+            "baseline_year": "2005", 
+            "latest_value": 87.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2005", 
+            "arrow": "downgreen", 
+            "country": 6, 
+            "baseline_value": 55.6, 
+            "baseline_year": "2000", 
+            "latest_value": 39.0, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 6, 
+            "baseline_value": 75.7, 
+            "baseline_year": "2007", 
+            "latest_value": 83.5, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 6, 
+            "baseline_value": 0.88, 
+            "baseline_year": "2007", 
+            "latest_value": 0.91, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "downgreen", 
+            "country": 6, 
+            "baseline_value": 122.0, 
+            "baseline_year": "2005", 
+            "latest_value": 106.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 6, 
+            "baseline_value": 560.0, 
+            "baseline_year": "2005", 
+            "latest_value": 470.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2005", 
+            "arrow": "downgreen", 
+            "country": 6, 
+            "baseline_value": 35.2, 
+            "baseline_year": "2000", 
+            "latest_value": 33.8, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen", 
+            "country": 6, 
+            "baseline_value": 2.4, 
+            "baseline_year": "2001", 
+            "latest_value": null, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2007", 
+            "arrow": "upgreen", 
+            "country": 6, 
+            "baseline_value": 1.5, 
+            "baseline_year": "2005", 
+            "latest_value": 33.1, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 75, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen ", 
+            "country": 6, 
+            "baseline_value": 400.0, 
+            "baseline_year": "2005", 
+            "latest_value": 359.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 76, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 6, 
+            "baseline_value": 35.0, 
+            "baseline_year": "2005", 
+            "latest_value": 38.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 77, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 6, 
+            "baseline_value": 10.0, 
+            "baseline_year": "2005", 
+            "latest_value": 12.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 78, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2006", 
+            "arrow": "downgreen", 
+            "country": 8, 
+            "baseline_value": 61.2, 
+            "baseline_year": "2001", 
+            "latest_value": 51.4, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 79, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 8, 
+            "baseline_value": 74.7, 
+            "baseline_year": "2008", 
+            "latest_value": 76.9, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 80, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 8, 
+            "baseline_value": 0.83, 
+            "baseline_year": "2008", 
+            "latest_value": 0.84, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 81, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "downgreen", 
+            "country": 8, 
+            "baseline_value": 195.0, 
+            "baseline_year": "2005", 
+            "latest_value": 178.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 82, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 8, 
+            "baseline_value": 880.0, 
+            "baseline_year": "2005", 
+            "latest_value": 830.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 83, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2006", 
+            "arrow": "downgreen", 
+            "country": 8, 
+            "baseline_value": 28.5, 
+            "baseline_year": "2001", 
+            "latest_value": 26.7, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 84, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen", 
+            "country": 8, 
+            "baseline_value": 1.2, 
+            "baseline_year": "2005", 
+            "latest_value": 1.0, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 85, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "upgreen", 
+            "country": 8, 
+            "baseline_value": 27.1, 
+            "baseline_year": "2006", 
+            "latest_value": 70.2, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 86, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upred", 
+            "country": 8, 
+            "baseline_value": 310.0, 
+            "baseline_year": "2005", 
+            "latest_value": 324.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 87, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 8, 
+            "baseline_value": 51.0, 
+            "baseline_year": "2005", 
+            "latest_value": 56.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 88, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 8, 
+            "baseline_value": 35.0, 
+            "baseline_year": "2005", 
+            "latest_value": 36.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 89, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2000", 
+            "arrow": "downgreen", 
+            "country": 14, 
+            "baseline_value": 23.4, 
+            "baseline_year": "1996", 
+            "latest_value": 21.2, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 90, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 14, 
+            "baseline_value": 75.9, 
+            "baseline_year": "2005", 
+            "latest_value": 76.3, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 91, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 14, 
+            "baseline_value": 1.06, 
+            "baseline_year": "2005", 
+            "latest_value": 1.08, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 92, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "downgreen", 
+            "country": 14, 
+            "baseline_value": 114.0, 
+            "baseline_year": "2005", 
+            "latest_value": 111.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 93, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 14, 
+            "baseline_value": 590.0, 
+            "baseline_year": "2005", 
+            "latest_value": 550.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 94, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2001", 
+            "arrow": null, 
+            "country": 14, 
+            "baseline_value": null, 
+            "baseline_year": null, 
+            "latest_value": 31.6, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 95, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "equal", 
+            "country": 14, 
+            "baseline_value": 0.7, 
+            "baseline_year": "2005", 
+            "latest_value": 0.7, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 96, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2004", 
+            "arrow": null, 
+            "country": 14, 
+            "baseline_value": null, 
+            "baseline_year": null, 
+            "latest_value": 7.4, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 97, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upred", 
+            "country": 14, 
+            "baseline_value": 305.0, 
+            "baseline_year": "2005", 
+            "latest_value": 330.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 98, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 14, 
+            "baseline_value": 45.0, 
+            "baseline_year": "2005", 
+            "latest_value": 49.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 99, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 14, 
+            "baseline_value": 24.0, 
+            "baseline_year": "2005", 
+            "latest_value": 26.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 100, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 9, 
+            "baseline_value": 81.3, 
+            "baseline_year": "1997", 
+            "latest_value": 60.0, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 101, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 9, 
+            "baseline_value": 80.3, 
+            "baseline_year": "2006", 
+            "latest_value": 90.7, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 102, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 9, 
+            "baseline_value": 0.87, 
+            "baseline_year": "2007", 
+            "latest_value": 0.88, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 103, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "downgreen", 
+            "country": 9, 
+            "baseline_value": 159.0, 
+            "baseline_year": "2005", 
+            "latest_value": 135.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 104, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 9, 
+            "baseline_value": 640.0, 
+            "baseline_year": "2005", 
+            "latest_value": 550.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 105, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2004", 
+            "arrow": "downgreen", 
+            "country": 9, 
+            "baseline_value": 22.5, 
+            "baseline_year": "1997", 
+            "latest_value": 18.4, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 106, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upred", 
+            "country": 9, 
+            "baseline_value": 11.2, 
+            "baseline_year": "2005", 
+            "latest_value": 11.5, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 107, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 9, 
+            "baseline_value": 6.7, 
+            "baseline_year": "2007", 
+            "latest_value": 22.8, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 108, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen ", 
+            "country": 9, 
+            "baseline_value": 450.0, 
+            "baseline_year": "2005", 
+            "latest_value": 409.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 109, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 9, 
+            "baseline_value": 45.0, 
+            "baseline_year": "2005", 
+            "latest_value": 47.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 110, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 9, 
+            "baseline_value": 15.0, 
+            "baseline_year": "2005", 
+            "latest_value": 17.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 111, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2004", 
+            "arrow": "downgreen", 
+            "country": 1, 
+            "baseline_value": 68.4, 
+            "baseline_year": "1996", 
+            "latest_value": 55.1, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 112, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2000", 
+            "arrow": "upgreen", 
+            "country": 1, 
+            "baseline_value": 67.5, 
+            "baseline_year": "1999", 
+            "latest_value": 73.6, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 113, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2002", 
+            "arrow": "upgreen", 
+            "country": 1, 
+            "baseline_value": 0.84, 
+            "baseline_year": "2001", 
+            "latest_value": 0.86, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 114, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "downgreen", 
+            "country": 1, 
+            "baseline_value": 65.0, 
+            "baseline_year": "2005", 
+            "latest_value": 50.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 115, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 1, 
+            "baseline_value": 440.0, 
+            "baseline_year": "2005", 
+            "latest_value": 380.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 116, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2006", 
+            "arrow": "downgreen", 
+            "country": 1, 
+            "baseline_value": 27.8, 
+            "baseline_year": "2001", 
+            "latest_value": 24.6, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 117, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "equal", 
+            "country": 1, 
+            "baseline_value": 0.4, 
+            "baseline_year": "2005", 
+            "latest_value": 0.4, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 118, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": null, 
+            "arrow": null, 
+            "country": 1, 
+            "baseline_value": null, 
+            "baseline_year": null, 
+            "latest_value": null, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 119, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upred", 
+            "country": 1, 
+            "baseline_value": 160.0, 
+            "baseline_year": "2005", 
+            "latest_value": 163.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 120, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 1, 
+            "baseline_value": 86.0, 
+            "baseline_year": "2005", 
+            "latest_value": 88.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 121, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 1, 
+            "baseline_value": 28.0, 
+            "baseline_year": "2005", 
+            "latest_value": 31.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 122, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2005", 
+            "arrow": "downgreen", 
+            "country": 10, 
+            "baseline_value": 78.2, 
+            "baseline_year": "1994", 
+            "latest_value": 65.9, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 123, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 10, 
+            "baseline_value": 49.5, 
+            "baseline_year": "2008", 
+            "latest_value": 54.0, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 124, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 10, 
+            "baseline_value": 0.78, 
+            "baseline_year": "2008", 
+            "latest_value": 0.8, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 125, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 10, 
+            "baseline_value": 187.0, 
+            "baseline_year": "2005", 
+            "latest_value": 167.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 126, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2005", 
+            "arrow": "upred", 
+            "country": 10, 
+            "baseline_value": 910.0, 
+            "baseline_year": "2005", 
+            "latest_value": 1800.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 127, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2006", 
+            "arrow": "downgreen", 
+            "country": 10, 
+            "baseline_value": 16.6, 
+            "baseline_year": "1998", 
+            "latest_value": 15.8, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 128, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen", 
+            "country": 10, 
+            "baseline_value": 0.9, 
+            "baseline_year": "2005", 
+            "latest_value": 0.8, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 129, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2006", 
+            "arrow": "upgreen", 
+            "country": 10, 
+            "baseline_value": 1.0, 
+            "baseline_year": "2000", 
+            "latest_value": 7.4, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 130, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upred", 
+            "country": 10, 
+            "baseline_value": 170.0, 
+            "baseline_year": "2005", 
+            "latest_value": 180.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 131, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 10, 
+            "baseline_value": 45.0, 
+            "baseline_year": "2005", 
+            "latest_value": 48.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 132, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "equal", 
+            "country": 10, 
+            "baseline_value": 9.0, 
+            "baseline_year": "2005", 
+            "latest_value": 9.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 133, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2004", 
+            "arrow": "downgreen", 
+            "country": 11, 
+            "baseline_value": 68.5, 
+            "baseline_year": "1996", 
+            "latest_value": 64.4, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 134, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2007", 
+            "arrow": "downred", 
+            "country": 11, 
+            "baseline_value": 67.8, 
+            "baseline_year": "2006", 
+            "latest_value": 62.8, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 135, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2007", 
+            "arrow": "upgreen", 
+            "country": 11, 
+            "baseline_value": 0.85, 
+            "baseline_year": "2006", 
+            "latest_value": 0.88, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 136, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 11, 
+            "baseline_value": 194.0, 
+            "baseline_year": "2005", 
+            "latest_value": 186.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 137, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2005", 
+            "arrow": "upred", 
+            "country": 11, 
+            "baseline_value": 900.0, 
+            "baseline_year": "2005", 
+            "latest_value": 1100.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 138, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upred", 
+            "country": 11, 
+            "baseline_value": 16.9, 
+            "baseline_year": "2003", 
+            "latest_value": 20.2, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 139, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen", 
+            "country": 11, 
+            "baseline_value": 3.7, 
+            "baseline_year": "2005", 
+            "latest_value": 3.6, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 140, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 11, 
+            "baseline_value": 1.2, 
+            "baseline_year": "2003", 
+            "latest_value": 5.5, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 141, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen ", 
+            "country": 11, 
+            "baseline_value": 330.0, 
+            "baseline_year": "2005", 
+            "latest_value": 300.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 142, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 11, 
+            "baseline_value": 57.0, 
+            "baseline_year": "2005", 
+            "latest_value": 58.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 143, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "equal", 
+            "country": 11, 
+            "baseline_value": 32.0, 
+            "baseline_year": "2005", 
+            "latest_value": 32.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 144, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2005", 
+            "arrow": "upred", 
+            "country": 15, 
+            "baseline_value": 76.6, 
+            "baseline_year": "2000", 
+            "latest_value": 76.8, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 145, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 15, 
+            "baseline_value": 84.0, 
+            "baseline_year": "2005", 
+            "latest_value": 95.9, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 146, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 15, 
+            "baseline_value": 1.02, 
+            "baseline_year": "2005", 
+            "latest_value": 1.08, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 147, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "downgreen", 
+            "country": 15, 
+            "baseline_value": 128.0, 
+            "baseline_year": "2005", 
+            "latest_value": 91.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 148, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 15, 
+            "baseline_value": 720.0, 
+            "baseline_year": "2005", 
+            "latest_value": 540.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 149, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2005", 
+            "arrow": "upred", 
+            "country": 15, 
+            "baseline_value": 35.6, 
+            "baseline_year": "2000", 
+            "latest_value": 37.9, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 150, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen", 
+            "country": 15, 
+            "baseline_value": 3.1, 
+            "baseline_year": "2005", 
+            "latest_value": 2.9, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 151, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 15, 
+            "baseline_value": 13.0, 
+            "baseline_year": "2005", 
+            "latest_value": 55.7, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 152, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen ", 
+            "country": 15, 
+            "baseline_value": 418.0, 
+            "baseline_year": "2005", 
+            "latest_value": 376.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 153, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downred", 
+            "country": 15, 
+            "baseline_value": 66.0, 
+            "baseline_year": "2005", 
+            "latest_value": 65.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 154, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 15, 
+            "baseline_value": 49.0, 
+            "baseline_year": "2005", 
+            "latest_value": 54.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 155, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2005", 
+            "arrow": "downgreen", 
+            "country": 16, 
+            "baseline_value": 44.2, 
+            "baseline_year": "2001", 
+            "latest_value": 33.5, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 156, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 16, 
+            "baseline_value": 72.4, 
+            "baseline_year": "2005", 
+            "latest_value": 75.0, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 157, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 16, 
+            "baseline_value": 0.96, 
+            "baseline_year": "2005", 
+            "latest_value": 1.04, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 158, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "downgreen", 
+            "country": 16, 
+            "baseline_value": 95.0, 
+            "baseline_year": "2005", 
+            "latest_value": 75.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 159, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 16, 
+            "baseline_value": 460.0, 
+            "baseline_year": "2005", 
+            "latest_value": 410.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 160, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2005", 
+            "arrow": "upred", 
+            "country": 16, 
+            "baseline_value": 29.3, 
+            "baseline_year": "1993", 
+            "latest_value": 31.6, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 161, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upred", 
+            "country": 16, 
+            "baseline_value": 0.8, 
+            "baseline_year": "2005", 
+            "latest_value": 0.9, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 162, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 16, 
+            "baseline_value": 16.4, 
+            "baseline_year": "2006", 
+            "latest_value": 29.2, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 163, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upred", 
+            "country": 16, 
+            "baseline_value": 261.0, 
+            "baseline_year": "2005", 
+            "latest_value": 282.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 164, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 16, 
+            "baseline_value": 68.0, 
+            "baseline_year": "2005", 
+            "latest_value": 69.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 165, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 16, 
+            "baseline_value": 49.0, 
+            "baseline_year": "2005", 
+            "latest_value": 51.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 166, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2003", 
+            "arrow": "downgreen", 
+            "country": 17, 
+            "baseline_value": 62.8, 
+            "baseline_year": "1990", 
+            "latest_value": 53.4, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 167, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": null, 
+            "arrow": null, 
+            "country": 17, 
+            "baseline_value": null, 
+            "baseline_year": null, 
+            "latest_value": null, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 168, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2001", 
+            "arrow": "upgreen", 
+            "country": 17, 
+            "baseline_value": 0.67, 
+            "baseline_year": "1991", 
+            "latest_value": 0.68, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 169, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "downgreen", 
+            "country": 17, 
+            "baseline_value": 202.0, 
+            "baseline_year": "2005", 
+            "latest_value": 174.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 170, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 17, 
+            "baseline_value": 1100.0, 
+            "baseline_year": "2005", 
+            "latest_value": 970.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 171, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": null, 
+            "country": 17, 
+            "baseline_value": null, 
+            "baseline_year": null, 
+            "latest_value": 27.6, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 172, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upred", 
+            "country": 17, 
+            "baseline_value": 1.5, 
+            "baseline_year": "2005", 
+            "latest_value": 1.6, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 173, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 17, 
+            "baseline_value": 5.3, 
+            "baseline_year": "2005", 
+            "latest_value": 25.8, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 174, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upred", 
+            "country": 17, 
+            "baseline_value": 509.0, 
+            "baseline_year": "2005", 
+            "latest_value": 644.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 175, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downred", 
+            "country": 17, 
+            "baseline_value": 51.0, 
+            "baseline_year": "2005", 
+            "latest_value": 49.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 176, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 17, 
+            "baseline_value": 12.0, 
+            "baseline_year": "2005", 
+            "latest_value": 13.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 177, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": null, 
+            "arrow": null, 
+            "country": 18, 
+            "baseline_value": null, 
+            "baseline_year": null, 
+            "latest_value": null, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 178, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2000", 
+            "arrow": null, 
+            "country": 18, 
+            "baseline_value": null, 
+            "baseline_year": null, 
+            "latest_value": 41.9, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 179, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 18, 
+            "baseline_value": 0.87, 
+            "baseline_year": "2005", 
+            "latest_value": 0.9, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 180, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "downgreen", 
+            "country": 18, 
+            "baseline_value": 109.0, 
+            "baseline_year": "2005", 
+            "latest_value": 103.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 181, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 18, 
+            "baseline_value": 760.0, 
+            "baseline_year": "2005", 
+            "latest_value": 750.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 182, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "1993", 
+            "arrow": "downgreen", 
+            "country": 18, 
+            "baseline_value": 28.9, 
+            "baseline_year": "1990", 
+            "latest_value": 26.0, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 183, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upred", 
+            "country": 18, 
+            "baseline_value": 0.6, 
+            "baseline_year": "2005", 
+            "latest_value": 1.1, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 184, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2006", 
+            "arrow": "upgreen", 
+            "country": 18, 
+            "baseline_value": 0.4, 
+            "baseline_year": "2000", 
+            "latest_value": 27.6, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 185, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "equal", 
+            "country": 18, 
+            "baseline_value": 119.0, 
+            "baseline_year": "2005", 
+            "latest_value": 119.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 186, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downred", 
+            "country": 18, 
+            "baseline_value": 59.0, 
+            "baseline_year": "2005", 
+            "latest_value": 57.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 187, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "equal", 
+            "country": 18, 
+            "baseline_value": 34.0, 
+            "baseline_year": "2005", 
+            "latest_value": 34.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 188, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2006", 
+            "arrow": null, 
+            "country": 19, 
+            "baseline_value": null, 
+            "baseline_year": null, 
+            "latest_value": 38.7, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 189, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 19, 
+            "baseline_value": 85.8, 
+            "baseline_year": "2005", 
+            "latest_value": 95.1, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 190, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 19, 
+            "baseline_value": 0.85, 
+            "baseline_year": "2005", 
+            "latest_value": 0.94, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 191, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "downgreen", 
+            "country": 19, 
+            "baseline_value": 113.0, 
+            "baseline_year": "2005", 
+            "latest_value": 103.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 192, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 19, 
+            "baseline_value": 380.0, 
+            "baseline_year": "2005", 
+            "latest_value": 350.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 193, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "1998", 
+            "arrow": null, 
+            "country": 19, 
+            "baseline_value": null, 
+            "baseline_year": null, 
+            "latest_value": 32.3, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 194, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen", 
+            "country": 19, 
+            "baseline_value": 3.4, 
+            "baseline_year": "2005", 
+            "latest_value": 3.2, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 195, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2006", 
+            "arrow": "upgreen", 
+            "country": 19, 
+            "baseline_value": 2.0, 
+            "baseline_year": "2000", 
+            "latest_value": 38.4, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 196, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upred", 
+            "country": 19, 
+            "baseline_value": 413.0, 
+            "baseline_year": "2005", 
+            "latest_value": 446.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 197, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upred", 
+            "country": 19, 
+            "baseline_value": 58.0, 
+            "baseline_year": "2005", 
+            "latest_value": 60.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 198, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "equal", 
+            "country": 19, 
+            "baseline_value": 12.0, 
+            "baseline_year": "2005", 
+            "latest_value": 12.0, 
+            "mdg_target": "MDG7b"
+        }
+    }, 
+    {
+        "pk": 199, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen", 
+            "country": 20, 
+            "baseline_value": 51.5, 
+            "baseline_year": "2005", 
+            "latest_value": 28.7, 
+            "mdg_target": "MDG1"
+        }
+    }, 
+    {
+        "pk": 200, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": null, 
+            "country": 20, 
+            "baseline_value": null, 
+            "baseline_year": null, 
+            "latest_value": 92.3, 
+            "mdg_target": "MDG2"
+        }
+    }, 
+    {
+        "pk": 201, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 20, 
+            "baseline_value": 1.0, 
+            "baseline_year": "2005", 
+            "latest_value": 1.01, 
+            "mdg_target": "MDG3"
+        }
+    }, 
+    {
+        "pk": 202, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2010", 
+            "arrow": "downgreen", 
+            "country": 20, 
+            "baseline_value": 120.0, 
+            "baseline_year": "2005", 
+            "latest_value": 99.0, 
+            "mdg_target": "MDG4"
+        }
+    }, 
+    {
+        "pk": 203, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "downgreen", 
+            "country": 20, 
+            "baseline_value": 510.0, 
+            "baseline_year": "2005", 
+            "latest_value": 430.0, 
+            "mdg_target": "MDG5a"
+        }
+    }, 
+    {
+        "pk": 204, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2006", 
+            "arrow": "upred", 
+            "country": 20, 
+            "baseline_value": 34.6, 
+            "baseline_year": "2001", 
+            "latest_value": 37.8, 
+            "mdg_target": "MDG5b"
+        }
+    }, 
+    {
+        "pk": 205, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upred", 
+            "country": 20, 
+            "baseline_value": 6.4, 
+            "baseline_year": "2005", 
+            "latest_value": 6.5, 
+            "mdg_target": "MDG6a"
+        }
+    }, 
+    {
+        "pk": 206, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "upgreen", 
+            "country": 20, 
+            "baseline_value": 9.7, 
+            "baseline_year": "2006", 
+            "latest_value": 32.8, 
+            "mdg_target": "MDG6b"
+        }
+    }, 
+    {
+        "pk": 207, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2009", 
+            "arrow": "downgreen ", 
+            "country": 20, 
+            "baseline_value": 370.0, 
+            "baseline_year": "2005", 
+            "latest_value": 293.0, 
+            "mdg_target": "MDG6c"
+        }
+    }, 
+    {
+        "pk": 208, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upred", 
+            "country": 20, 
+            "baseline_value": 64.0, 
+            "baseline_year": "2005", 
+            "latest_value": 67.0, 
+            "mdg_target": "MDG7a"
+        }
+    }, 
+    {
+        "pk": 209, 
+        "model": "submissions.mdgdata", 
+        "fields": {
+            "latest_year": "2008", 
+            "arrow": "upgreen", 
+            "country": 20, 
+            "baseline_value": 47.0, 
+            "baseline_year": "2005", 
+            "latest_value": 48.0, 
+            "mdg_target": "MDG7b"
+        }
     }
 ]
