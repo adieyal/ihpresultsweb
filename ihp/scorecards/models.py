@@ -6,6 +6,9 @@ from submissions import indicators
 from submissions import target
 from django.conf import settings
 
+#Nasty, I know.
+from previous_data import get2010value
+
 def foz(x):
     try:
         return float(x)
@@ -133,7 +136,7 @@ class GovScorecard(object):
 
         external_baseline = all_baseline - domestic_baseline if all_baseline > domestic_baseline else 0
         external_latest = all_latest - domestic_latest if all_latest > domestic_latest else 0
-
+        
         try:
             allocated_to_health = external_latest / r0(in_millions(foz(self.question("5").latest_value))) * 100
         except ZeroDivisionError:
@@ -149,11 +152,7 @@ class GovScorecard(object):
                         "domestic": domestic_baseline,
                         "external": external_baseline
                     },
-                    {
-                        "name": 2010, 
-                        "domestic": 0, 
-                        "external": 0
-                    },
+                    get2010value(self.country, 'financing.health_finance'),
                     {
                         "name": self.question("6").latest_year, 
                         "domestic": domestic_latest,
@@ -285,7 +284,7 @@ class GovScorecard(object):
                 "max": 2,
                 "progress": [
                     {"year": r1G["base_year"], "value":progress_to_int(r1G["base_val"])},
-                    {"year":"0", "value":0},
+                    get2010value(self.country, 'commitments.mutual_agreement'),
                     {"year": r1G["cur_year"], "value":progress_to_int(r1G["cur_val"])},
                 ]
             },
@@ -295,7 +294,7 @@ class GovScorecard(object):
                 "max": 2,
                 "progress": [
                     {"year": r2Ga["base_year"], "value":progress_to_int(r2Ga["base_val"])},
-                    {"year":"0", "value":0},
+                    get2010value(self.country, 'commitments.health_plan'),
                     {"year": r2Ga["cur_year"], "value":progress_to_int(r2Ga["cur_val"])},
                 ]
             },
@@ -305,7 +304,7 @@ class GovScorecard(object):
                 "max": 2,
                 "progress": [
                     {"year": r2Gb["base_year"], "value":progress_to_int(r2Gb["base_val"])},
-                    {"year":"0", "value":0},
+                    get2010value(self.country, 'commitments.hrh_plan'),
                     {"year": r2Gb["cur_year"], "value":progress_to_int(r2Gb["cur_val"])},
                 ]
             },
@@ -315,7 +314,7 @@ class GovScorecard(object):
                 "rating": rating_icon(r3G["target"]),
                 "progress": [
                     {"year": r3G["base_year"], "value":foz(r3G["base_val"])},
-                    {"year":"0", "value":0},
+                    get2010value(self.country, 'commitments.fundingcommitments'),
                     {"year": r3G["cur_year"], "value":foz(r3G["cur_val"])},
                 ],
                 "line": { "constant": 15},
@@ -326,7 +325,7 @@ class GovScorecard(object):
                 "rating": rating_icon(r4G["target"]),
                 "progress": [
                     {"year": r4G["base_year"], "value":foz(r4G["one_minus_base_val"])},
-                    {"year":"0", "value":0},
+                    get2010value(self.country, 'commitments.health_funding'),
                     {"year": r4G["cur_year"], "value":foz(r4G["one_minus_cur_val"])},
                 ],
                 "line": {"constant": 71},
@@ -337,7 +336,7 @@ class GovScorecard(object):
                 "rating": rating_icon(r5Ga["target"]),
                 "progress": [
                     {"year": r5Ga["base_year"], "value":foz(r5Ga["base_val"])},
-                    {"year":"0", "value":0},
+                    get2010value(self.country, 'commitments.cipa_scale'),
                     {"year": r5Ga["cur_year"], "value":foz(r5Ga["cur_val"])},
                 ],
                 "max": 5
@@ -348,7 +347,7 @@ class GovScorecard(object):
                 "type":"dot",
                 "progress": [
                     {"year": r5Gb["base_year"], "value":r5Gb["base_val"]},
-                    {"year":"0", "value":"0"},
+                    get2010value(self.country, 'commitments.performance_scale'),
                     {"year": r5Gb["cur_year"], "value":r5Gb["cur_val"]},
                 ]
             },
@@ -359,7 +358,7 @@ class GovScorecard(object):
                 "max": 2,
                 "progress": [
                     {"year": r6G["base_year"], "value":progress_to_int(r6G["base_val"])},
-                    {"year":"0", "value":0},
+                    get2010value(self.country, 'commitments.resources'),
                     {"year": r6G["cur_year"], "value":progress_to_int(r6G["cur_val"])},
                 ]
             },
@@ -369,7 +368,7 @@ class GovScorecard(object):
                 "max": 2,
                 "progress": [
                     {"year": r7G["base_year"], "value":progress_to_int(r7G["base_val"])},
-                    {"year":"0", "value":0},
+                    get2010value(self.country, 'commitments.accountability'),
                     {"year": r7G["cur_year"], "value":progress_to_int(r7G["cur_val"])},
                 ]
             },
@@ -379,7 +378,7 @@ class GovScorecard(object):
                 "max": 2,
                 "progress": [
                     {"year": r8G["base_year"], "value":cs_progress(foz(r8Gb["base_val"]))},
-                    {"year":"0", "value":0},
+                    get2010value(self.country, 'commitments.civilsociety'),
                     {"year": r8G["cur_year"], "value":cs_progress(foz(r8Gb["cur_val"]))},
                 ]
             }

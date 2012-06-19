@@ -1,0 +1,472 @@
+{
+  "Niger": {
+    "commitments.hrh_plan": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.health_funding": {
+      "value": 62.98286695838262, 
+      "year": "2009"
+    }, 
+    "commitments.civilsociety": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.accountability": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.fundingcommitments": {
+      "value": 9.625686000730276, 
+      "year": "2009"
+    }, 
+    "commitments.performance_scale": {
+      "value": null, 
+      "year": "2009"
+    }, 
+    "commitments.mutual_agreement": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "financing.health_finance": {
+      "domestic": 153.0, 
+      "name": "2010", 
+      "external": 0
+    }, 
+    "commitments.health_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.cipa_scale": {
+      "value": 3.5, 
+      "year": "2009"
+    }, 
+    "commitments.resources": {
+      "value": 2, 
+      "year": "2009"
+    }
+  }, 
+  "Nepal": {
+    "commitments.hrh_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.health_funding": {
+      "value": 84.99846565253605, 
+      "year": "2009"
+    }, 
+    "commitments.civilsociety": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.accountability": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.fundingcommitments": {
+      "value": 7.6, 
+      "year": "2009"
+    }, 
+    "commitments.performance_scale": {
+      "value": null, 
+      "year": "2009"
+    }, 
+    "commitments.mutual_agreement": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "financing.health_finance": {
+      "domestic": 278.0, 
+      "name": "2010", 
+      "external": 0
+    }, 
+    "commitments.health_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.cipa_scale": {
+      "value": 3.0, 
+      "year": "2009"
+    }, 
+    "commitments.resources": {
+      "value": 2, 
+      "year": "2009"
+    }
+  }, 
+  "Ethiopia": {
+    "commitments.hrh_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.health_funding": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.civilsociety": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.accountability": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.fundingcommitments": {
+      "value": 10.0, 
+      "year": "2009"
+    }, 
+    "commitments.performance_scale": {
+      "value": null, 
+      "year": "2009"
+    }, 
+    "commitments.mutual_agreement": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "financing.health_finance": {
+      "domestic": 209.0, 
+      "name": "2010", 
+      "external": 0
+    }, 
+    "commitments.health_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.cipa_scale": {
+      "value": 3.5, 
+      "year": "2009"
+    }, 
+    "commitments.resources": {
+      "value": 2, 
+      "year": "2009"
+    }
+  }, 
+  "Djibouti": {
+    "commitments.hrh_plan": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.health_funding": {
+      "value": 142.05197435032062, 
+      "year": "2009"
+    }, 
+    "commitments.civilsociety": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.accountability": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.fundingcommitments": {
+      "value": 6.944444444444445, 
+      "year": "2008"
+    }, 
+    "commitments.performance_scale": {
+      "value": null, 
+      "year": "2009"
+    }, 
+    "commitments.mutual_agreement": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "financing.health_finance": {
+      "domestic": 24.0, 
+      "name": "2010", 
+      "external": 20.0
+    }, 
+    "commitments.health_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.cipa_scale": {
+      "value": 3.0, 
+      "year": "2009"
+    }, 
+    "commitments.resources": {
+      "value": 0, 
+      "year": "2009"
+    }
+  }, 
+  "Mozambique": {
+    "commitments.hrh_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.health_funding": {
+      "value": 72.66535436480864, 
+      "year": "2009"
+    }, 
+    "commitments.civilsociety": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.accountability": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.fundingcommitments": {
+      "value": 6.79949338024874, 
+      "year": "2009"
+    }, 
+    "commitments.performance_scale": {
+      "value": null, 
+      "year": "2009"
+    }, 
+    "commitments.mutual_agreement": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "financing.health_finance": {
+      "domestic": 139.0, 
+      "name": "2010", 
+      "external": 268.0
+    }, 
+    "commitments.health_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.cipa_scale": {
+      "value": 4.0, 
+      "year": "2009"
+    }, 
+    "commitments.resources": {
+      "value": 2, 
+      "year": "2009"
+    }
+  }, 
+  "Mali": {
+    "commitments.hrh_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.health_funding": {
+      "value": 64.80740612570027, 
+      "year": "2009"
+    }, 
+    "commitments.civilsociety": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.accountability": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.fundingcommitments": {
+      "value": 6.699999995294386, 
+      "year": "2009"
+    }, 
+    "commitments.performance_scale": {
+      "value": null, 
+      "year": "2009"
+    }, 
+    "commitments.mutual_agreement": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "financing.health_finance": {
+      "domestic": 154.0, 
+      "name": "2010", 
+      "external": 112.0
+    }, 
+    "commitments.health_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.cipa_scale": {
+      "value": 3.5, 
+      "year": "2009"
+    }, 
+    "commitments.resources": {
+      "value": 2, 
+      "year": "2009"
+    }
+  }, 
+  "Burundi": {
+    "commitments.hrh_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.health_funding": {
+      "value": 38.28862026454839, 
+      "year": "2009"
+    }, 
+    "commitments.civilsociety": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.accountability": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.fundingcommitments": {
+      "value": 4.905164200393757, 
+      "year": "2009"
+    }, 
+    "commitments.performance_scale": {
+      "value": null, 
+      "year": "2009"
+    }, 
+    "commitments.mutual_agreement": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "financing.health_finance": {
+      "domestic": 34.0, 
+      "name": "2010", 
+      "external": 55.0
+    }, 
+    "commitments.health_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.cipa_scale": {
+      "value": 3.0, 
+      "year": "2009"
+    }, 
+    "commitments.resources": {
+      "value": 2, 
+      "year": "2009"
+    }
+  }, 
+  "Drc": {
+    "commitments.hrh_plan": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.health_funding": {
+      "value": 14.8047167301105, 
+      "year": "2009"
+    }, 
+    "commitments.civilsociety": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.accountability": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.fundingcommitments": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.performance_scale": {
+      "value": null, 
+      "year": "2009"
+    }, 
+    "commitments.mutual_agreement": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "financing.health_finance": {
+      "domestic": 0.0, 
+      "name": "2010", 
+      "external": 201.0
+    }, 
+    "commitments.health_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.cipa_scale": {
+      "value": 2.5, 
+      "year": "2009"
+    }, 
+    "commitments.resources": {
+      "value": 0, 
+      "year": "2009"
+    }
+  }, 
+  "Burkina Faso": {
+    "commitments.hrh_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.health_funding": {
+      "value": 67.95029624811276, 
+      "year": "2008"
+    }, 
+    "commitments.civilsociety": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.accountability": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.fundingcommitments": {
+      "value": 14.579344300730726, 
+      "year": "2009"
+    }, 
+    "commitments.performance_scale": {
+      "value": null, 
+      "year": "2009"
+    }, 
+    "commitments.mutual_agreement": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "financing.health_finance": {
+      "domestic": 219.0, 
+      "name": "2010", 
+      "external": 89.0
+    }, 
+    "commitments.health_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.cipa_scale": {
+      "value": 4.5, 
+      "year": "2009"
+    }, 
+    "commitments.resources": {
+      "value": 2, 
+      "year": "2009"
+    }
+  }, 
+  "Nigeria": {
+    "commitments.hrh_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.health_funding": {
+      "value": 100.0, 
+      "year": "2009"
+    }, 
+    "commitments.civilsociety": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.accountability": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "commitments.fundingcommitments": {
+      "value": 4.786602870813398, 
+      "year": "2009"
+    }, 
+    "commitments.performance_scale": {
+      "value": null, 
+      "year": "2009"
+    }, 
+    "commitments.mutual_agreement": {
+      "value": 0, 
+      "year": "2009"
+    }, 
+    "financing.health_finance": {
+      "domestic": 1000.0, 
+      "name": "2010", 
+      "external": 0
+    }, 
+    "commitments.health_plan": {
+      "value": 2, 
+      "year": "2009"
+    }, 
+    "commitments.cipa_scale": {
+      "value": 3.0, 
+      "year": "2009"
+    }, 
+    "commitments.resources": {
+      "value": 0, 
+      "year": "2009"
+    }
+  }
+}
