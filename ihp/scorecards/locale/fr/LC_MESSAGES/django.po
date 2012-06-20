@@ -1,0 +1,184 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-21 00:42+0200\n"
+"PO-Revision-Date: 2012-06-21 00:43\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Translated-Using: django-rosetta 0.6.8\n"
+
+#: templates/scorecards/country-page-1.svg:5829
+msgid "ETHIOPIA"
+msgstr ""
+
+#: templates/scorecards/country-page-1.svg:5829
+msgid "COUNTRY SCORECARD 2012"
+msgstr "SCORECARD DE PAYS 2012"
+
+#: templates/scorecards/country-page-1.svg:5832
+msgid ""
+"Ratings are calculated using data up to and including 2009. Data from 2010 "
+"will be reported in IHP+Results’ 2011 monitoring."
+msgstr ""
+
+#: templates/scorecards/country-page-1.svg:5835
+msgid ""
+"This work is licensed under the Creative Commons Atribution-NonCommercial "
+"3.0 Unported License. To view a copy of this license, visit "
+"http://creativecommons.org.licenses/by-nc/3.0"
+msgstr ""
+
+#: templates/scorecards/country-page-1.svg:5839
+msgid "HEALTH SYSTEMS STRENGTHENING"
+msgstr "RENFORCEMENT DES SYSTEMES DE SANTE"
+
+#: templates/scorecards/country-page-1.svg:5842
+msgid "ACCESS TO PHC CLINICS"
+msgstr "L’ACCESS A DECS CENTRES DE SANTE PRIMAIRE"
+
+#: templates/scorecards/country-page-1.svg:5845
+msgid "outpatient department visits per 10,000 population per year"
+msgstr ""
+"visites ambulatoires aux services sanitaires pour 10,000 habitants par an"
+
+#: templates/scorecards/country-page-1.svg:5848
+msgid "AVAILABILITY OF HEALTH WORKERS"
+msgstr "DISPONIBILITE DES EFFECTIFS"
+
+#: templates/scorecards/country-page-1.svg:5851
+msgid "skilled medical personnel per 10,000 population"
+msgstr "employés médicaux qualifiés pour 10,000 habitants"
+
+#: templates/scorecards/country-page-1.svg:5854
+msgid "FUNDS FOR HEALTH SYSTEMS"
+msgstr "FONDS POUR LES SYSTÈMES DE SANTÉ"
+
+#: templates/scorecards/country-page-1.svg:5857
+msgid "spent on health workforce increasing"
+msgstr "dépensés sur le personnel de la santé"
+
+#: templates/scorecards/country-page-1.svg:5861
+msgid "COUNTRY SYSTEMS"
+msgstr "SYSTEMES NATIONAUX"
+
+#: templates/scorecards/country-page-1.svg:5864
+msgid "PUBLIC FINANCIAL MANAGEMENT"
+msgstr "GESTION DES FINANCES PUBLIQUES"
+
+#: templates/scorecards/country-page-1.svg:5867
+msgid "PROCUREMENT"
+msgstr "APPROVISIONNEMENT"
+
+#: templates/scorecards/country-page-1.svg:5870
+msgid "TECHNICAL ASSISTANCE"
+msgstr "ASSISTANCE TECHNIQUE"
+
+#: templates/scorecards/country-page-1.svg:5874
+msgid "HEALTH FINANCING"
+msgstr "FINANCEMENT DE LA SANTE"
+
+#: templates/scorecards/country-page-1.svg:5877
+msgid "TOTAL HEALTH FINANCING"
+msgstr "FINANCEMENT DE LA SANTE TOTALE"
+
+#: templates/scorecards/country-page-1.svg:5880
+msgid "Domestic Financing"
+msgstr "Financement na􀀉onal"
+
+#: templates/scorecards/country-page-1.svg:5883
+msgid "External Financing"
+msgstr "Financement exterieur"
+
+#: templates/scorecards/country-page-1.svg:5886
+msgid "NATIONAL BUDGET ALLOCATED TO HEALTH"
+msgstr "Budget national alloué à la santé"
+
+#: templates/scorecards/country-page-1.svg:5889
+msgid "Allocated to Health"
+msgstr "alloué à la santé"
+
+#: templates/scorecards/country-page-1.svg:5892
+msgid "Increase needed to meet the Abuja target"
+msgstr "Augmentation nécessaire pour atteindre la cible d'Abuja"
+
+#: templates/scorecards/country-page-1.svg:5895
+msgid "POOLED FUNDING"
+msgstr ""
+"MECANISMES DE\n"
+"FINANCEMENT COMMUN"
+
+#: templates/scorecards/country-page-1.svg:5898
+msgid "Number of Development Partners using Pooled Mechanisms"
+msgstr ""
+"Nombre de partenaires de développement en utilisant les mécanismes de "
+"financement commun"
+
+#: templates/scorecards/country-page-1.svg:5902
+msgid "COUNTRY OWNERSHIP &amp; ACCOUNTABILITY"
+msgstr "APPROPRIATION ET RESPONSABILITE"
+
+#: templates/scorecards/country-page-1.svg:5905
+msgid "COMMITMENTS DOCUMENTED"
+msgstr "ENGAGEMENTS DOCUMENTES"
+
+#: templates/scorecards/country-page-1.svg:5908
+msgid "HEALTH SECTOR &amp; AIDS STRATEGIES"
+msgstr ""
+"PLAN DU SECTEUR DE LA SANTE ET\n"
+"STRATEGIE CONTRE LE SIDA"
+
+#: templates/scorecards/country-page-1.svg:5912
+msgid "HEALTH SECTOR AID EFFECTIVENESS MONITORING"
+msgstr "SECTEUR DE LA SANTE SUIVI DE L'EFFICACITE DE L'AIDE"
+
+#: templates/scorecards/country-page-1.svg:5917
+msgid "• Active joint monitoring"
+msgstr "• Suivi conjoint actif"
+
+#: templates/scorecards/country-page-1.svg:5922
+msgid "• Number of development partner missions"
+msgstr ""
+"• Nombre de missions effectuées par les\n"
+"partenaires de développement"
+
+#: templates/scorecards/country-page-1.svg:5927
+#, python-format
+msgid ""
+"• 10%% of seats in the health sector coordination mechanism are allocated to"
+" civil society"
+msgstr ""
+"• 10%% des sièges alloués à la société civile dans\n"
+"le mécanisme de coordina􀀉on du secteur de la\n"
+"santé"
+
+#: templates/scorecards/country-page-1.svg:5932
+msgid "MANAGING FOR RESULTS"
+msgstr "GESTION AXEE SUR LES RESULTATS EN MATIERE DE DEVELOPPEMENT"
+
+#: templates/scorecards/country-page-1.svg:5936
+msgid "DECISONS BASED ON RESULTS"
+msgstr "DECISIONS FONDEES SUR LES RESULTATS"
+
+#: templates/scorecards/country-page-1.svg:5941
+msgid "JOINT HEALTH SECTOR REVIEWS CONDUCTED"
+msgstr "REVUES CONJOINTES MENEES DANS LE SECTEUR DE LA SANTE"
+
+#: templates/scorecards/country-page-1.svg:5946
+msgid "FUNCTIONING HEALTH MANAGEMENT INFORMATION SYSTEMS (HMIS)"
+msgstr "FONCTIONNEMENT DU SYSTEME NATIONAL D'INFORMATION SANITAIRE (SNIS)"
+
+#: templates/scorecards/country-page-1.svg:5951
+msgid "NATIONAL RESULTS FRAMEWORK AGREED"
+msgstr "CADRE NATIONAL DE RESULTATS CONVENUS"

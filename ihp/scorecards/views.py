@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import get_object_or_404
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
+from django.template import Template, Context, TemplateDoesNotExist
+from django.template.loader import get_template
+from django.utils import translation
 from submissions.models import Agency, AgencyProfile, Language, DPScorecardSummary, Country, AgencyCountries, GovQuestion
 from submissions.target import calc_agency_ratings, dp_indicators
 import json
@@ -161,3 +164,20 @@ def gov_scorecard(request, country_id, language, template_name="scorecards/gov.h
         request, template=template_name,
         extra_context=extra_context
     )
+
+
+LANGUAGE_LOOKUP = { 'French': 'fr',
+                    'English': 'en',
+                    'Spanish': 'es' }
+def localized_svg(request, language, template):
+    try:
+        template = get_template('scorecards/'+template)
+    except TemplateDoesNotExist:
+        raise Http404
+    #Language has to be reset after rendering.
+    cur_language = translation.get_language()
+    translation.activate(LANGUAGE_LOOKUP[language])
+    response = HttpResponse(template.render(Context()),
+                            mimetype='image/svg+xml; charset=utf-8')
+    translation.activate(cur_language)
+    return response
