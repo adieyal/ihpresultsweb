@@ -281,7 +281,6 @@ def calc_country_indicators(country, funcs=None):
     """
     qs = GovQuestion.objects.filter(submission__country=country).select_related()
     results = [calc_country_indicator(qs, country, indicator, funcs) for indicator in g_indicators]
-    print dict(zip(g_indicators, results))["8Gb"]
     return dict(zip(g_indicators, results))
 
 def calc_country_agency_indicator(qs, country, agency, indicator, funcs=None):
