@@ -133,6 +133,18 @@ def agency_volume_of_aid(request, indicator, template_name="submissions/agency_r
 
     return direct_to_template(request, template=template_name, extra_context=extra_context)
 
+def two_by_two_analysis_json(request, indicator):
+    try:
+        _, args = indicators.indicator_funcs[indicator]
+        arg1, arg2 = args
+    except KeyError:
+        raise Http404()
+
+    js = {
+        "indicator" : indicator
+    }
+    return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")
+
 def agency_volume_of_aid_json(request, indicator):
     """
     View to calculate the volume of aid received

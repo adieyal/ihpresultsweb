@@ -109,6 +109,13 @@ urlpatterns = patterns('',
         'json_agency_volume_of_aid'
     ),
 
+    (
+        r'^agencies/tables/two_by_two_analysis/(?P<indicator>\w+)/json/$', 
+        'submissions.views.two_by_two_analysis_json', 
+        {},
+        'two_by_two_analysis_json'
+    ),
+
     (r'^countries/tables/(?P<language>\w+)/$', 'submissions.views.country_table', {
         "template_name" : "submissions/main_base.html",
         "extra_context" : {

@@ -99,8 +99,16 @@
                                 <li><a href="{% url agency_alternative_baselines %}">Alternative Baselines</a></li>
                                 <li><a href="{% url agency_response_breakdown %}">Response Breakdown</a></li>
                                 <li><a href="{% url agency_volume_of_aid "2DPa" %}">Volume of aid (2DPa)</a></li>
-                                <li><a href="{% url agency_volume_of_aid "4DP" %}">Volume of aid (4DP)</a></li>
-                                <li><a href="#">New 2x2 table</a></li>
+                                <li>Volume of aid
+                                    (<a href="{% url agency_volume_of_aid "2DPa" %}">2DPa</a>,
+                                    <a href="{% url agency_volume_of_aid "4DP" %}">4DP</a>)
+                                </li>
+                                <li>2x2 Analysis tables 
+                                    (<a href="{% url two_by_two_analysis_json "2DPa" %}">2DPa</a>,
+                                    <a href="{% url two_by_two_analysis_json "2DPc" %}">2DPc</a>,
+                                    <a href="{% url two_by_two_analysis_json "3DP" %}">3DP</a>,
+                                    <a href="{% url two_by_two_analysis_json "4DP" %}">4DP</a>)
+                                </li>
                             </ul>
                         </p>
                     </div>
