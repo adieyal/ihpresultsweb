@@ -38,8 +38,10 @@
             .selectAll("td")
             .data(json.countries)
             .enter().append("td")
-            .text(function(v) {
-                return Math.round(v.actual_volume, 2);
+            .text(function(value) {
+                v = Math.round(value.actual_volume.value, 2);
+                n = value.actual_volume.num_dps
+                return v + " (" + n + ")"
             })
 
         table.selectAll("#actual_volume")
@@ -50,8 +52,10 @@
             .selectAll("td")
             .data(json.countries)
             .enter().append("td")
-            .text(function(v) {
-                return Math.round(v.possible_volume, 2);
+            .text(function(value) {
+                v = Math.round(value.possible_volume.value, 2);
+                n = value.possible_volume.num_dps;
+                return v + " (" + n + ")"
             })
 
         table.selectAll("#possible_volume")
@@ -63,7 +67,7 @@
             .data(json.countries)
             .enter().append("td")
             .text(function(v) {
-                return Math.round((v.actual_volume / v.possible_volume) * 100) + "%";
+                return Math.round((v.actual_volume.value / v.possible_volume.value) * 100) + "%";
             })
 
         table.selectAll("#perc")

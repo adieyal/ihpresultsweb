@@ -144,6 +144,7 @@ def agency_volume_of_aid_json(request, indicator):
     denoms = models.DPQuestion.objects.filter(question_number=arg2) 
     def on_target_volume(country):
         total = 0
+        count = 0
         for agency in country.agencies:
             ratings = target.country_agency_indicator_ratings(country, agency)
             if ratings[indicator] == models.Rating.TICK:
@@ -152,16 +153,32 @@ def agency_volume_of_aid_json(request, indicator):
                     submission__agency=agency, 
                     question_number=arg1
                 )
+                count += 1
                 total += foz(q.cur_val)
-        return total
-    
+        return total, count
+
+    on_targets = {}
+    for c in countries:
+        
+        value, count = on_target_volume(c)
+        on_targets[c] = {
+            "value" : value,
+            "num_dps" : count
+        }
+
     js = {
         "indicator" : indicator,
         "countries" : [
             {
                 "name" : c.country,
-                "possible_volume" : sum(foz(d.cur_val) for d in denoms.filter(submission__country=c)),
-                "actual_volume" : on_target_volume(c)
+                "possible_volume" : {
+                    "value" : sum(foz(d.cur_val) for d in denoms.filter(submission__country=c)),
+                    "num_dps" : len(denoms.filter(submission__country=c))
+                },
+                "actual_volume" : {
+                    "value" : on_targets[c]["value"],
+                    "num_dps" : on_targets[c]["num_dps"]
+                }
             }
             
         for c in countries]
