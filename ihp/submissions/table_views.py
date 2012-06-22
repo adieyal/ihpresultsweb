@@ -134,6 +134,27 @@ def agency_volume_of_aid(request, indicator, template_name="submissions/agency_r
     return direct_to_template(request, template=template_name, extra_context=extra_context)
 
 def agency_volume_of_aid_json(request, indicator):
+    """
+    View to calculate the volume of aid received
+    Returns a json view with the following structure
+    {
+        "indicator" : "..." # indicator name
+        "target" : "..."    # target value for a tick
+        "countries" : [
+            {
+                "name" : "..."  # country name
+                "possible_volume" : {
+                    "value" : "..."   # sum of denominator values
+                    "num_dps" : "..." # number of countries included
+                },
+                "actual_volume" : {
+                    "value" : "..."   # sum of numerator values (only including tick agencies)
+                    "num_dps" : "..." # number of countries included
+                }
+            }
+        ]
+    }
+    """
     countries = models.Country.objects.order_by("country")
     try:
         _, args = indicators.indicator_funcs[indicator]
