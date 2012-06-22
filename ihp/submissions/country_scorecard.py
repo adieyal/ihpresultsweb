@@ -7,10 +7,25 @@ from utils import none_num, fformat_none, fformat_front, fformat_two
 from indicators import NA_STR
 import traceback
 
+def safe_div(a, b):
+    try:
+        return a / b
+    except:
+        return 0
+
+def foz(v):
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return 0
+
 def calc_change(val1, val2):
     try:
         if val1 == None or val2 == None:
             return None, None
+	if val2 == 0:
+            return None, None
+            
         val1 = float(val1)
         val2 = float(val2)
         val = val1 / val2 - 1
@@ -185,18 +200,35 @@ def get_country_indicators(country, questions, agencies_data):
         traceback.print_exc()
 
     # Outpatient Visits
-    other_indicators["outpatient_visits_baseline"] = questions["19"]["baseline_value"] / baseline_denom
-    other_indicators["outpatient_visits_latest"] = questions["19"]["latest_value"] / latest_denom
+    other_indicators["outpatient_visits_baseline"] = safe_div(
+        foz(questions["19"]["baseline_value"]), baseline_denom
+    )
+    #f = open("/tmp/aabbcc.log", "w")
+    #f.write(questions["19"]["latest_value"])
+    #f.flush()
+    other_indicators["outpatient_visits_latest"] = safe_div(
+        foz(questions["19"]["latest_value"]), latest_denom
+    )
     other_indicators["outpatient_visits_change"], other_indicators["outpatient_visits_change_dir"] = calc_change(other_indicators["outpatient_visits_latest"], other_indicators["outpatient_visits_baseline"])
 
     # Skilled Personnel
-    other_indicators["skilled_personnel_baseline"] = questions["17"]["baseline_value"] / baseline_denom
-    other_indicators["skilled_personnel_latest"] = questions["17"]["latest_value"] / latest_denom
+    other_indicators["skilled_personnel_baseline"] = safe_div(
+        foz(questions["17"]["baseline_value"]), baseline_denom
+    )
+    other_indicators["skilled_personnel_latest"] = safe_div(
+        questions["17"]["latest_value"], latest_denom
+    )
     other_indicators["skilled_personnel_change"], other_indicators["skilled_personnel_change_dir"] = calc_change(other_indicators["skilled_personnel_latest"], other_indicators["skilled_personnel_baseline"])
 
     # Health Workforce
-    other_indicators["health_workforce_perc_of_budget_baseline"] = questions["20"]["baseline_value"] / questions["7"]["baseline_value"]
-    other_indicators["health_workforce_perc_of_budget_latest"] = questions["20"]["latest_value"] / questions["7"]["latest_value"]
+    other_indicators["health_workforce_perc_of_budget_baseline"] = safe_div(
+        foz(questions["20"]["baseline_value"]), 
+        foz(questions["7"]["baseline_value"])
+    )
+    other_indicators["health_workforce_perc_of_budget_latest"] = safe_div(
+        foz(questions["20"]["latest_value"]),
+        foz(questions["7"]["latest_value"])
+    )
     other_indicators["health_workforce_spent_change"], other_indicators["health_workforce_spent_change_dir"] = calc_change(questions["20"]["latest_value"], questions["20"]["baseline_value"])
 
     other_indicators["pfm_diff"] = questions["9"]["latest_value"] - questions["9"]["baseline_value"]
@@ -207,7 +239,7 @@ def get_country_indicators(country, questions, agencies_data):
             if question_number in agencies_data[agency]:
                 try:
                     sum += float(agencies_data[agency][question_number][field])
-                except ValueError:
+                except (ValueError, TypeError):
                     pass
         return sum
 
