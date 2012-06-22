@@ -1,0 +1,78 @@
+{% block head %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/table.css"> 
+    <style>
+        td:first-child {
+            text-align: left;
+        }
+
+        #volume_table td, #volume_table th {
+            padding: 4px;
+        }
+    </style>
+    <script type='text/javascript' src='{{ MEDIA_URL }}js/d3.v2.min.js'></script>
+{% endblock %}
+
+{% block content %}
+<div id="volume_table"></div>
+<script>
+
+    var build_table = function(json) {
+        
+        var container = d3.select("#volume_table");
+        container.append("h1").text("Volume of Aid: " + json.indicator);
+        var table = container.append("table").attr("class", "dpind");
+        table.append("tr").attr("id", "header")
+            .selectAll("th").data(json.countries)
+            .enter()
+            .append("th")
+            .text(function(v, i) {
+                return v.name;
+            });
+
+        table.selectAll("#header")
+            .insert("th", "th").text("Countries");
+
+        table.append("tr")
+            .attr("id", "actual_volume")
+            .selectAll("td")
+            .data(json.countries)
+            .enter().append("td")
+            .text(function(v) {
+                return Math.round(v.actual_volume, 2);
+            })
+
+        table.selectAll("#actual_volume")
+            .insert("td", "td").text("Volume on Target");
+
+        table.append("tr")
+            .attr("id", "possible_volume")
+            .selectAll("td")
+            .data(json.countries)
+            .enter().append("td")
+            .text(function(v) {
+                return Math.round(v.possible_volume, 2);
+            })
+
+        table.selectAll("#possible_volume")
+            .insert("td", "td").text("Possible Volume");
+
+        table.append("tr")
+            .attr("id", "perc")
+            .selectAll("td")
+            .data(json.countries)
+            .enter().append("td")
+            .text(function(v) {
+                return Math.round((v.actual_volume / v.possible_volume) * 100) + "%";
+            })
+
+        table.selectAll("#perc")
+            .insert("td", "td").text("%");
+    }
+
+    var json = '{% url json_agency_volume_of_aid indicator %}';
+    d3.json(json, function(e){
+        build_table(e);
+    });
+</script>
+{% endblock %}

@@ -1,9 +1,12 @@
 # OK, not my proudest moment but it did not make sense to create a
 # database table for 11 static values per country.
 
+from django.conf import settings
 import json
+import os
 
-data = json.load(open('olddata.json'))
+path_to_json = os.path.join(settings.PROJECT_HOME, "olddata.json")
+data = json.load(open(path_to_json))
 empty = {
     "commitments.hrh_plan": {
         "value": 0, 
