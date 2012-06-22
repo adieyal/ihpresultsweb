@@ -70,7 +70,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django_jenkins',
     "debug_toolbar",
-    'south',
+    #'south',
     'submissions',
     'scorecards',
     'publicweb',
