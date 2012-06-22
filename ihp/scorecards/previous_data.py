@@ -3,7 +3,8 @@
 
 import json
 
-data = json.load(open('olddata.json'))
+path_to_json = os.path.join(settings.PROJECT_HOME, "olddata.json")
+data = json.load(open(path_to_json))
 empty = {
     "commitments.hrh_plan": {
         "value": 0, 
