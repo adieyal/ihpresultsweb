@@ -2,6 +2,7 @@
 # database table for 11 static values per country.
 
 import json
+import os
 
 path_to_json = os.path.join(settings.PROJECT_HOME, "olddata.json")
 data = json.load(open(path_to_json))
