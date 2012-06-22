@@ -6,11 +6,23 @@
     <script type='text/javascript' src='{{ MEDIA_URL }}js/horizontalbargraph.js'></script>
     <script type='text/javascript' src='{{ MEDIA_URL }}js/segmentpie.js'></script>
     <script>
-        var SVG = '{{ MEDIA_URL }}svg/country';
+        var SVG = 'country';
         var json = '{% url gov_scorecard_json country_id language %}'
     </script>
     <script type='text/javascript' src='{{ MEDIA_URL }}js/svg-lib.js'></script>
     <style>
+        @font-face {
+	    font-family: Calibri;
+	    src: url({{ MEDIA_URL }}fonts/calibri.ttf);
+	}
+        @font-face {
+	    font-family: Calibri-Bold;
+	    src: url({{ MEDIA_URL }}fonts/calibri-bold.ttf);
+	}
+        @font-face {
+	    font-family: Calibri-Italic;
+	    src: url({{ MEDIA_URL }}fonts/calibri-italic.ttf);
+	}
         svg, #figure { width:1800px; height:1325px;}
         body{
             background-color:#fefefe;

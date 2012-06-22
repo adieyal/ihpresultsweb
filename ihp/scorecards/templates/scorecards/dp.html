@@ -6,6 +6,10 @@
     <script type='text/javascript' src='{{ MEDIA_URL }}js/d3.v2.min.js'></script>
     <script type='text/javascript' src='{{ MEDIA_URL }}js/horizontalbargraph.js'></script>
     <style>
+        @font-face {
+	    font-family: 'Calibri';
+	    src: url({{ MEDIA_URL }}fonts/calibri.ttf);
+	}
         /*svg, #figure { width:1495px ; height:2126px;}*/
         svg, #figure { width:1505px; height:2125px;}
 
@@ -55,7 +59,7 @@
 <body style="">
     <div id="figure"></div>
     <script type="text/javascript">
-    var pages = ['{{ MEDIA_URL }}svg/ihp-page-1.svg', '{{ MEDIA_URL }}svg/ihp-page-2.svg'];
+    var pages = ['ihp-page-1.svg', 'ihp-page-2.svg'];
     var json = '{% url dp_scorecard_json agency_id language %}'
 
     load_front = function(json){
