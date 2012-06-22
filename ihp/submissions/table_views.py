@@ -157,6 +157,8 @@ def agency_volume_of_aid_json(request, indicator):
                 total += foz(q.cur_val)
         return total, count
 
+    rating_target = models.AgencyTargets.objects.get(indicator=indicator, agency=None)
+    
     on_targets = {}
     for c in countries:
         
@@ -168,6 +170,7 @@ def agency_volume_of_aid_json(request, indicator):
 
     js = {
         "indicator" : indicator,
+        "target" : rating_target.tick_criterion_value,
         "countries" : [
             {
                 "name" : c.country,
