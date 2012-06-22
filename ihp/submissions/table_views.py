@@ -1,6 +1,8 @@
 from collections import OrderedDict
+import json
 from django.views.generic.simple import direct_to_template
 from django.shortcuts import get_object_or_404
+from django.http import HttpResponse, Http404
 
 import models
 import target
@@ -9,6 +11,12 @@ from indicators import NA_STR
 import consts
 import translations
 import agency_scorecard
+
+def foz(val):
+    try:
+        return float(val)
+    except (TypeError, ValueError):
+        return 0
 
 def tbl_float_format(x, places=0):
     if type(x) == float:
@@ -118,6 +126,49 @@ def agency_table_by_agency(request, agency_id, language="English", template_name
     extra_context["institution_name"] = translation.by_agency_title % agency.agency
     
     return direct_to_template(request, template=template_name, extra_context=extra_context)
+
+def agency_volume_of_aid(request, indicator, template_name="submissions/agency_response_breakdown.html", extra_context=None):
+    extra_context = extra_context or {}
+    extra_context["indicator"] = indicator
+
+    return direct_to_template(request, template=template_name, extra_context=extra_context)
+
+def agency_volume_of_aid_json(request, indicator):
+    countries = models.Country.objects.order_by("country")
+    try:
+        _, args = indicators.indicator_funcs[indicator]
+        arg1, arg2 = args
+    except KeyError:
+        raise Http404()
+
+    denoms = models.DPQuestion.objects.filter(question_number=arg2) 
+    def on_target_volume(country):
+        total = 0
+        for agency in country.agencies:
+            ratings = target.country_agency_indicator_ratings(country, agency)
+            if ratings[indicator] == models.Rating.TICK:
+                q = models.DPQuestion.objects.get(
+                    submission__country=country, 
+                    submission__agency=agency, 
+                    question_number=arg1
+                )
+                total += foz(q.cur_val)
+        return total
+    
+    js = {
+        "indicator" : indicator,
+        "countries" : [
+            {
+                "name" : c.country,
+                "possible_volume" : sum(foz(d.cur_val) for d in denoms.filter(submission__country=c)),
+                "actual_volume" : on_target_volume(c)
+            }
+            
+        for c in countries]
+    }
+
+    return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")
+
 
 def agency_table_by_country(request, country_id, language="English", template_name="submissions/agency_table.html", extra_context=None):
     extra_context = extra_context or {} 

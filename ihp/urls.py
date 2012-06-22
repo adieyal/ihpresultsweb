@@ -95,6 +95,20 @@ urlpatterns = patterns('',
         }
     }, 'agency_response_breakdown'),
 
+    (r'^agencies/tables/volume_of_aid/(?P<indicator>\w+)/$', 'submissions.views.agency_volume_of_aid', {
+        "template_name" : "submissions/main_base.html",
+        "extra_context" : {
+            "content_file" : "submissions/agency_volume_of_aid.html"
+        }
+    }, 'agency_volume_of_aid'),
+
+    (
+        r'^agencies/tables/volume_of_aid/(?P<indicator>\w+)/json/$', 
+        'submissions.views.agency_volume_of_aid_json', 
+        {},
+        'json_agency_volume_of_aid'
+    ),
+
     (r'^countries/tables/(?P<language>\w+)/$', 'submissions.views.country_table', {
         "template_name" : "submissions/main_base.html",
         "extra_context" : {
