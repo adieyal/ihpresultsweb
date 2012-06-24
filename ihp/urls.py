@@ -110,10 +110,20 @@ urlpatterns = patterns('',
     ),
 
     (
-        r'^agencies/tables/two_by_two_analysis/(?P<indicator>\w+)/json/$', 
+        r'^agencies/tables/two_by_two_analysis/json/$', 
         'submissions.views.two_by_two_analysis_json', 
         {},
-        'two_by_two_analysis_json'
+        'json_two_by_two_analysis'
+    ),
+
+    (
+        r'^agencies/tables/two_by_two_analysis/$', 
+        direct_to_template, 
+        {
+            "template" : "submissions/main_base.html", 
+            "extra_context" : {"content_file" : "submissions/two_by_two_analysis.html"}
+        }, 
+        "two_by_two_analysis"
     ),
 
     (r'^countries/tables/(?P<language>\w+)/$', 'submissions.views.country_table', {

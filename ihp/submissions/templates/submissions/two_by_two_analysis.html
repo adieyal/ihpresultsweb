@@ -1,0 +1,124 @@
+{% block head %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/table.css"> 
+    <style>
+        td:first-child {
+            text-align: left;
+        }
+
+        .twobytwo, .countrybox {
+            border: solid thin black;
+            float: left;
+            margin: 10px;
+        }
+
+        .countrybox {
+            padding: 5px;
+        }
+
+        .countrybox h2 {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .countrybox li {
+            text-align: left;
+            list-style: none;
+            margin-left: 0;
+            padding-left: 1em;
+            text-indent: -1em;
+        }
+
+        #twobytwo th {
+            font-weight: bold;
+        }
+
+        #twobytwo td, #twobytwo th {
+            padding: 4px;
+        }
+    </style>
+    <script type='text/javascript' src='{{ MEDIA_URL }}js/d3.v2.min.js'></script>
+{% endblock %}
+
+{% block content %}
+<div id="twobytwo"></div>
+<script>
+
+    round = function(v, d) {
+        f = Math.pow(10, d);
+        return Math.round(v * f) / f;
+    }
+
+    countrybox = function(container, countries) {
+        container.selectAll(".countrybox").remove();
+        cbox = container
+            .append("div")
+            .attr("class", "countrybox");
+        cbox.append("h2").text("Countries");
+        cbox
+            .append("ul")
+            .selectAll("li")
+            .data(countries)
+            .enter()
+            .append("li").text(function(d) { return d; });
+    }
+
+    var build_table = function(json) {
+        var container = d3.select("#twobytwo");
+        container.append("h1").text("Two-by-two analysis")
+
+        var table = container.selectAll("div").data(json.indicators)
+            .enter()
+            .append("div")
+            .attr("class", "twobytwo")
+            .append("table");
+
+        var header1 = table.append("tr");
+        var header2 = table.append("tr");
+        var strongrow = table.append("tr");
+        var weakrow = table.append("tr");
+
+        header1.append("th")
+            .attr("colspan", "3")
+            .text(function(v) {
+                return v.indicator;
+            });
+
+        header2.append("th").text("PFM")
+        header2.append("th").text("All indicators")
+        header2.append("th").text("Not all indicators")
+
+        strongrow.append("th").text("3.5+")
+        strongrow.append("td").text(function(v) {
+            return round(v.allstrong.value, 2) + " (" + v.allstrong.num_countries + ")";
+        })
+        .on("mouseover", function(v, i) {
+            countrybox(container, v.allstrong.countries);
+        });
+
+        strongrow.append("td").text(function(v) {
+            return round(v.notallstrong.value, 2) + " (" + v.notallstrong.num_countries + ")";
+        })
+        .on("mouseover", function(v, i) {
+            countrybox(container, v.notallstrong.countries);
+        });
+        weakrow.append("th").text("< 3.5");
+        weakrow.append("td").text(function(v) {
+            return round(v.allweak.value, 2) + " (" + v.allweak.num_countries + ")";
+        })
+        .on("mouseover", function(v, i) {
+            countrybox(container, v.notallweak.countries);
+        });
+        weakrow.append("td").text(function(v) {
+            return round(v.notallweak.value, 2) + " (" + v.notallweak.num_countries + ")";
+        })
+        .on("mouseover", function(v, i) {
+            countrybox(container, v.notallweak.countries);
+        });
+    }
+
+    var json = '{% url json_two_by_two_analysis %}';
+    d3.json(json, function(e){
+        build_table(e);
+    });
+</script>
+{% endblock %}
