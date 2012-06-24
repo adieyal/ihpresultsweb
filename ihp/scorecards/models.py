@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 import submissions.models as smodels
-from submissions.models import Agency, GovQuestion, MDGData, DPQuestion, AgencyTargets 
+from submissions.models import Agency, GovQuestion, MDGData, DPQuestion, AgencyTargets, CountryTargets
 from submissions import indicators
 from submissions import target
 from django.conf import settings
@@ -277,6 +277,13 @@ class GovScorecard(object):
                 return 1
             return 0
 
+        base_targets = CountryTargets.objects.filter(country=None)
+        def get_target(indicator):
+            try:
+                return CountryTargets.objects.get(indicator=indicator, country=self.country).tick_criterion_value
+            except CountryTargets.DoesNotExist:
+                return base_targets.get(indicator=indicator).tick_criterion_value
+
         return {
             "mutual_agreement":{
                 "description": "An IHP+ Compact or equivalent mutual agreement is in place.",
@@ -309,15 +316,14 @@ class GovScorecard(object):
                 ]
             },
             "fundingcommitments":{
-                "description": "15% (or an equivalent published target) of the national budget is allocated to health.",
-                "rating": "icons/arrow.svg",
+                "description": "%d%% (or an equivalent published target) of the national budget is allocated to health." % round(get_target("3G")),
                 "rating": rating_icon(r3G["target"]),
                 "progress": [
                     {"year": r3G["base_year"], "value":foz(r3G["base_val"])},
                     get2010value(self.country, 'commitments.fundingcommitments'),
                     {"year": r3G["cur_year"], "value":foz(r3G["cur_val"])},
                 ],
-                "line": { "constant": 15},
+                "line": {"constant": round(get_target("3G"))},
                 "max": 20
             },
             "health_funding":{

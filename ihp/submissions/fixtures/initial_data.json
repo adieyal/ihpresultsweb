@@ -4097,5 +4097,197 @@
             "hmis1": null, 
             "hsp2": null
         }
+    },
+    {
+        "pk": 1, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "1G", 
+            "country": null, 
+            "arrow_criterion_type": "First Question Yes", 
+            "tick_criterion_type": "First Question Yes", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "2Ga", 
+            "country": null, 
+            "arrow_criterion_type": "Both Questions Yes", 
+            "tick_criterion_type": "Both Questions Yes", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": 100.0, 
+            "indicator": "2Gb", 
+            "country": null, 
+            "arrow_criterion_type": "Absolute % Target", 
+            "tick_criterion_type": "Absolute % Target", 
+            "arrow_criterion_value": 100.0
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": 14.999, 
+            "indicator": "3G", 
+            "country": null, 
+            "arrow_criterion_type": "Increase relative to baseline (no minimum)", 
+            "tick_criterion_type": "Absolute greater than x%", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": 49.999, 
+            "indicator": "4G", 
+            "country": null, 
+            "arrow_criterion_type": "Decrease relative to baseline (no minimum)", 
+            "tick_criterion_type": "Minimum x% Decrease relative to baseline", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": 3.499, 
+            "indicator": "5Ga", 
+            "country": null, 
+            "arrow_criterion_type": "Absolute greater than x%", 
+            "tick_criterion_type": "Absolute greater than x%", 
+            "arrow_criterion_value": 3.499
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "6G", 
+            "country": null, 
+            "arrow_criterion_type": "First Question Yes", 
+            "tick_criterion_type": "First Question Yes", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "7G", 
+            "country": null, 
+            "arrow_criterion_type": "First Question Yes", 
+            "tick_criterion_type": "First Question Yes", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": 9.9999, 
+            "indicator": "8G", 
+            "country": null, 
+            "arrow_criterion_type": "Absolute greater than x%", 
+            "tick_criterion_type": "Absolute greater than x%", 
+            "arrow_criterion_value": 0.0
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "5Gb", 
+            "country": null, 
+            "arrow_criterion_type": "Increase relative to baseline (no minimum)", 
+            "tick_criterion_type": "Increase relative to baseline (no minimum)", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "Q12G", 
+            "country": null, 
+            "arrow_criterion_type": "First Question Yes", 
+            "tick_criterion_type": "First Question Yes", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "Q21G", 
+            "country": null, 
+            "arrow_criterion_type": "First Question Yes", 
+            "tick_criterion_type": "First Question Yes", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "Q2G", 
+            "country": null, 
+            "arrow_criterion_type": "First Question Yes", 
+            "tick_criterion_type": "First Question Yes", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "Q3G", 
+            "country": null, 
+            "arrow_criterion_type": "First Question Yes", 
+            "tick_criterion_type": "First Question Yes", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": 4.0, 
+            "indicator": "8Gb", 
+            "country": null, 
+            "arrow_criterion_type": "Absolute greater than x%", 
+            "tick_criterion_type": "Absolute % Target", 
+            "arrow_criterion_value": 0.0
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": 9.999, 
+            "indicator": "3G", 
+            "country": 1, 
+            "arrow_criterion_type": "Increase relative to baseline (no minimum)", 
+            "tick_criterion_type": "Absolute greater than x%", 
+            "arrow_criterion_value": null
+        }
     }
 ]
