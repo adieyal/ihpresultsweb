@@ -127,6 +127,83 @@ def agency_table_by_agency(request, agency_id, language="English", template_name
     
     return direct_to_template(request, template=template_name, extra_context=extra_context)
 
+def two_by_two_analysis_json(request):
+
+    all_ratings = {}
+    countries = models.Country.objects.all()
+
+    has_all_indicators = lambda r : (
+        r["1G"]["target"] == models.Rating.TICK
+        and r["2Ga"]["target"] == models.Rating.TICK
+        and r["6G"]["target"] == models.Rating.TICK
+        and r["6G"]["target"] == models.Rating.TICK
+    )
+
+    not_all_all_indicators = lambda r : not has_all_indicators(r)
+
+    has_strong_pfm = lambda r : foz(r["5Ga"]["cur_val"]) >= 3.5
+    has_weak_pfm = lambda r : not has_strong_pfm(r)
+    get_country = lambda r : r["1G"]["country_name"]
+
+    all_ratings = [target.calc_country_ratings(c) for c in countries]
+    all_indicators = set(map(get_country, filter(has_all_indicators, all_ratings)))
+    not_all_indicators = set(map(get_country, filter(lambda x : not has_all_indicators(x), all_ratings)))
+    strong_pfm = set(map(get_country, filter(has_strong_pfm, all_ratings)))
+    weak_pfm = set(map(get_country, filter(has_weak_pfm, all_ratings)))
+
+    allstrong = all_indicators & strong_pfm
+    allweak = all_indicators & weak_pfm
+    notallstrong = not_all_indicators & strong_pfm
+    notallweak = not_all_indicators & weak_pfm
+
+    def indicator_dict(indicator):
+        return {
+            "indicator" : indicator,
+            "allstrong" : {
+                "value" : indicators.calc_indicator(
+                    models.DPQuestion.objects.filter(submission__country__in=allstrong), None, indicator
+                )[0][2],
+                "num_countries" : len(allstrong),
+                "countries" : [c.country for c in allstrong],
+            },
+            "allweak" : {
+                "value" : indicators.calc_indicator(
+                    models.DPQuestion.objects.filter(submission__country__in=allweak), None, indicator
+                )[0][2],
+                "num_countries" : len(allweak),
+                "countries" : [c.country for c in allweak],
+            },
+            "notallstrong" : {
+                "value" : indicators.calc_indicator(
+                    models.DPQuestion.objects.filter(submission__country__in=notallstrong), None, indicator
+                )[0][2],
+                "num_countries" : len(notallstrong),
+                "countries" : [c.country for c in notallstrong],
+            },
+            "notallweak" : {
+                "value" : indicators.calc_indicator(
+                    models.DPQuestion.objects.filter(submission__country__in=notallweak), None, indicator
+                )[0][2],
+                "num_countries" : len(notallweak),
+                "countries" : [c.country for c in notallweak],
+            },
+        }
+
+    js = {
+        "indicators" : [
+            indicator_dict("2DPa"),
+            indicator_dict("2DPc"), 
+            indicator_dict("3DP"), 
+            indicator_dict("4DP"), 
+        ]
+    }
+    return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")
+
+def two_by_two_analysis(request, template_name="submissions/agency_two_by_two.html", extra_context=None):
+    extra_context = extra_context or {}
+
+    return direct_to_template(request, template=template_name, extra_context=extra_context)
+
 def agency_volume_of_aid(request, indicator, template_name="submissions/agency_response_breakdown.html", extra_context=None):
     extra_context = extra_context or {}
     extra_context["indicator"] = indicator
@@ -134,6 +211,27 @@ def agency_volume_of_aid(request, indicator, template_name="submissions/agency_r
     return direct_to_template(request, template=template_name, extra_context=extra_context)
 
 def agency_volume_of_aid_json(request, indicator):
+    """
+    View to calculate the volume of aid received
+    Returns a json view with the following structure
+    {
+        "indicator" : "..." # indicator name
+        "target" : "..."    # target value for a tick
+        "countries" : [
+            {
+                "name" : "..."  # country name
+                "possible_volume" : {
+                    "value" : "..."   # sum of denominator values
+                    "num_dps" : "..." # number of countries included
+                },
+                "actual_volume" : {
+                    "value" : "..."   # sum of numerator values (only including tick agencies)
+                    "num_dps" : "..." # number of countries included
+                }
+            }
+        ]
+    }
+    """
     countries = models.Country.objects.order_by("country")
     try:
         _, args = indicators.indicator_funcs[indicator]
