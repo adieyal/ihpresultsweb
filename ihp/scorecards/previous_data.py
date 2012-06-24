@@ -54,8 +54,15 @@ empty = {
         "year": ""
         }
     }
+
 def get2010value(country, key):
     if not data.has_key(country.country):
         return empty[key]
     return data[country.country][key]
+
+def add_previous_value(country, key, values):
+    if not data.has_key(country.country):
+        return values
+    return [values[0], data[country.country][key], values[1]]
     
+
