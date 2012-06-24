@@ -20,7 +20,7 @@
     var build_table = function(json) {
         
         var container = d3.select("#volume_table");
-        container.append("h1").text("Volume of Aid: " + json.indicator);
+        container.append("h1").text("Volume of Aid: " + json.indicator + " (target: " + json.target + "%)");
         var table = container.append("table").attr("class", "dpind");
         table.append("tr").attr("id", "header")
             .selectAll("th").data(json.countries)
