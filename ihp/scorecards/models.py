@@ -25,6 +25,7 @@ def myround(x, places=0):
     return round(foz(x), places)
 r0 = lambda x : myround(x, 0)
 r1 = lambda x : myround(x, 1)
+r2 = lambda x : myround(x, 2)
 
 def in_millions(x):
     return float(x) / 1000000
@@ -110,6 +111,12 @@ class GovScorecard(object):
         else:
             cs_logo = self.tick_if_true(foz(self.gov_ltv("13")) >= 10)
 
+        # % of seats to CS calculation.
+        if foz(self.question("5").latest_value) > 0:
+            seats = foz(self.question("6").latest_value)/foz(self.question("5").latest_value)
+        else:
+            seats = 0
+        
         return {
             "commitments": [
                 {"description": "Signed Agreement", "logo": self.gov_rating("1")},
@@ -122,7 +129,7 @@ class GovScorecard(object):
             "aid_effectiveness": [
                 {"description": "Active joint monitoring", "logo": self.gov_rating("12")},
                 {"description": "Number of development partner missions", "text": foz(self.gov_ltv("16"))},
-                {"description": "10% of seats in the health sector coordination mechanism are allocated to civil society", "logo": cs_logo},
+                {"description": "%g%% of seats in the health sector coordination mechanism are allocated to civil society" % (r2(seats*100)), "logo": cs_logo},
             ]
         }
 
@@ -146,7 +153,7 @@ class GovScorecard(object):
 
         return {
             "total": {
-                "series":[
+                "series": [
                     {
                         "name": self.question("6").baseline_year, 
                         "domestic": domestic_baseline,

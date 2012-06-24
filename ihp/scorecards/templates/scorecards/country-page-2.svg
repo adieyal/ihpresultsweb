@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
+<!-- Load the django internationalization tags. {% load i18n %} -->
 <svg
    xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
    xmlns:xmpG="http://ns.adobe.com/xap/1.0/g/"
@@ -953,38 +953,6 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    clip-rule="evenodd"
    fill-rule="evenodd"
    fill="#013333" />
-					<switch
-   id="switch19">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject21">
-						</foreignObject>
-						<g
-   id="g23">
-							<rect
-   height="10"
-   width="267.38"
-   y="35.879"
-   x="874.74"
-   id="rect25"
-   fill="none" />
-								<text
-   id="SVGID_2_"
-   font-size="10"
-   transform="translate(874.74 45.591)"
-   font-family="'Calibri-Bold'"
-   fill="#FFFFFF">AGENCIES REPORTING TO IHP+RESULTS IN <tspan
-   class="country_name"
-   id="tspan28">[COUNTRY]</tspan></text>
-
-
-
-						</g>
-					</switch>
 				</g>
 				<path
    id="_x5F_whiteblock"
@@ -1013,444 +981,10 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    clip-rule="evenodd"
    fill-rule="evenodd"
    fill="#013333" />
-					<switch
-   id="switch36">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject38">
-						</foreignObject>
-						<g
-   id="g40">
-							<rect
-   height="10"
-   width="179.6"
-   y="303.89"
-   x="874.74"
-   id="rect42"
-   fill="none" />
-								<text
-   id="SVGID_4_"
-   font-size="10"
-   transform="translate(874.74 313.6)"
-   font-family="'Calibri-Bold'"
-   fill="#FFFFFF">HOW TO INTERPRET THIS SCORECARD</text>
-
-
-
-						</g>
-					</switch>
 				</g>
 				<g
    id="_x5F_text">
-					<switch
-   id="_x5F_copy">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject47">
-						</foreignObject>
-						<g
-   id="g49">
-							<rect
-   height="489.49"
-   width="262.68"
-   y="327.45"
-   x="875.06"
-   id="rect51"
-   fill="none" />
-							<text
-   id="_x5F_copy_1_"
-   transform="translate(875.07 336.12)"><tspan
-   y="0"
-   x="0"
-   font-size="9"
-   id="tspan54"
-   font-family="'Calibri'">• </tspan><tspan
-   y="0"
-   x="6.517"
-   style="letter-spacing:4"
-   font-size="9"
-   id="tspan56"
-   font-family="'Calibri'">	</tspan>
-                     <tspan
-   y="0"
-   x="13.5"
-   font-size="9"
-   id="tspan58"
-   font-family="'Calibri'">The majority of data presented in this Scorecard is from the </tspan>
-                     <tspan
-   y="14"
-   x="13"
-   font-size="9"
-   id="tspan60"
-   font-family="'Calibri'">Ministry of Health. There are two exceptions - the ratings for </tspan>
-                     <tspan
-   y="28"
-   x="13"
-   font-size="9"
-   id="tspan62"
-   font-family="'Calibri'">Technical Assistance and the quality of civil society engagement*.</tspan>
-                     <tspan
-   y="42"
-   x="0"
-   font-size="9"
-   id="tspan64"
-   font-family="'Calibri'">• </tspan>
-                     <tspan
-   y="42"
-   x="6.517"
-   style="letter-spacing:4"
-   font-size="9"
-   id="tspan66"
-   font-family="'Calibri'">	</tspan>
-                     <tspan
-   y="42"
-   x="13.5"
-   font-size="9"
-   id="tspan68"
-   font-family="'Calibri'">The Scorecard shows results using 5 Results Areas (see below) to </tspan>
-                     <tspan
-   y="56"
-   x="13"
-   font-size="9"
-   id="tspan70"
-   font-family="'Calibri'">tell the story of IHP+ implementation in a logical flow: from the </tspan>
-                     <tspan
-   y="70"
-   x="13"
-   font-size="9"
-   id="tspan72"
-   font-family="'Calibri'">national health plan to monitoring and evaluation of that plan.</tspan>
-                     <tspan
-   y="84"
-   x="0"
-   font-size="9"
-   id="tspan74"
-   font-family="'Calibri'">• </tspan>
-                     <tspan
-   y="84"
-   x="6.517"
-   style="letter-spacing:4"
-   font-size="9"
-   id="tspan76"
-   font-family="'Calibri'">	</tspan>
-                     <tspan
-   y="84"
-   x="13.5"
-   font-size="9"
-   id="tspan78"
-   font-family="'Calibri'">Where they are used, rating symbols illustrate whether the </tspan>
-                     <tspan
-   y="98"
-   x="13"
-   font-size="9"
-   id="tspan80"
-   font-family="'Calibri'">government has achieved           </tspan>
-                     <tspan
-   x="129"
-   y="98"
-   font-size="9"
-   id="tspan82"
-   font-family="'Calibri'">, is working towards</tspan>
-                     <tspan
-   x="225"
-   y="98"
-   font-size="9"
-   id="tspan84"
-   font-family="'Calibri'">           , or hasn’t </tspan>
-                     <tspan
-   y="112"
-   x="13"
-   font-size="9"
-   id="tspan86"
-   font-family="'Calibri'">made progress</tspan>
-                     <tspan
-   y="112"
-   x="92"
-   font-size="9"
-   id="tspan88"
-   font-family="'Calibri'">            against agreed targets. Details of these ratings </tspan>
-                     <tspan
-   y="126"
-   x="13"
-   font-size="9"
-   id="tspan90"
-   font-family="'Calibri'">can be found online in the North-South Observatory for IHP+Results </tspan>
-                     <tspan
-   y="140"
-   x="13"
-   font-size="9"
-   id="tspan92"
-   font-family="'Calibri-Bold'">(www.ihpresults.net)</tspan>
-                     <tspan
-   y="154"
-   x="0"
-   font-size="9"
-   id="tspan94"
-   font-family="'Calibri'">• </tspan>
-                     <tspan
-   y="154"
-   x="6.517"
-   style="letter-spacing:4"
-   font-size="9"
-   id="tspan96"
-   font-family="'Calibri'">	</tspan>
-                     <tspan
-   y="154"
-   x="13.5"
-   font-size="9"
-   id="tspan98"
-   font-family="'Calibri'">Progress against the Millennium Development Goals is provided for </tspan>
-                     <tspan
-   y="168"
-   x="13"
-   font-size="9"
-   id="tspan100"
-   font-family="'Calibri'">contextual purposes.</tspan>
-                     <tspan
-   font-size="10"
-   y="196"
-   x="0"
-   id="tspan102"
-   font-family="'Calibri-Bold'"
-   fill="#013333">Additional Information</tspan>
-                     <tspan
-   y="210"
-   x="0"
-   font-size="9"
-   id="tspan104"
-   font-family="'Calibri'">The reverse of the Scorecard (opposite), shows natinal government </tspan>
-                     <tspan
-   y="224"
-   x="0"
-   font-size="9"
-   id="tspan106"
-   font-family="'Calibri'">performance against an agreed set of Standard Performance Measures </tspan>
-                     <tspan
-   y="238"
-   x="0"
-   font-size="9"
-   id="tspan108"
-   font-family="'Calibri'">(SPMs). The following headings are used:</tspan>
-                     <tspan
-   y="252"
-   x="0"
-   font-size="9"
-   id="tspan110"
-   font-family="'Calibri'">• </tspan>
-                     <tspan
-   y="252"
-   x="6.517"
-   style="letter-spacing:4"
-   font-size="9"
-   id="tspan112"
-   font-family="'Calibri'">	</tspan>
-                     <tspan
-   y="252"
-   x="13.5"
-   font-size="9"
-   id="tspan114"
-   font-family="'Calibri-Bold'">Expected Results</tspan>
-                     <tspan
-   y="252"
-   x="82.605"
-   font-size="9"
-   id="tspan116"
-   font-family="'Calibri'"> reflect key commitments made in the IHP+ Global </tspan>
-                     <tspan
-   y="266"
-   x="13"
-   font-size="9"
-   id="tspan118"
-   font-family="'Calibri'">Compact.</tspan>
-                     <tspan
-   y="280"
-   x="0"
-   font-size="9"
-   id="tspan120"
-   font-family="'Calibri'">• </tspan>
-                     <tspan
-   y="280"
-   x="6.517"
-   style="letter-spacing:4"
-   font-size="9"
-   id="tspan122"
-   font-family="'Calibri'">	</tspan>
-                     <tspan
-   y="280"
-   x="13.5"
-   font-size="9"
-   id="tspan124"
-   font-family="'Calibri-Bold'">Progress Symbols</tspan>
-                     <tspan
-   y="280"
-   x="89.847"
-   font-size="9"
-   id="tspan126"
-   font-family="'Calibri'"> illustrate whether the government has achieved         </tspan>
-                     <tspan
-   y="294"
-   x="0"
-   style="letter-spacing:11"
-   font-size="9"
-   id="tspan128"
-   font-family="'Calibri'">	</tspan>
-                     <tspan
-   y="294"
-   x="35.5"
-   font-size="9"
-   id="tspan130"
-   font-family="'Calibri'">           , is making progress</tspan>
-                     <tspan
-   y="294"
-   x="130.5"
-   font-size="9"
-   id="tspan132"
-   font-family="'Calibri'">, or has not made progress            </tspan>
-                     <tspan
-   y="308"
-   x="13"
-   font-size="9"
-   id="tspan134"
-   font-family="'Calibri'">against 10 SPMs.</tspan>
-                     <tspan
-   y="322"
-   x="0"
-   font-size="9"
-   id="tspan136"
-   font-family="'Calibri'">• </tspan>
-                     <tspan
-   y="322"
-   x="6.517"
-   style="letter-spacing:4"
-   font-size="9"
-   id="tspan138"
-   font-family="'Calibri'">	</tspan>
-                     <tspan
-   y="322"
-   x="13.5"
-   font-size="9"
-   id="tspan140"
-   font-family="'Calibri-Bold'">Δ Targets</tspan>
-                     <tspan
-   y="322"
-   x="52.34"
-   font-size="9"
-   id="tspan142"
-   font-family="'Calibri'"> for each SPM can be found at www.ihpresults.net</tspan>
-                     <tspan
-   y="336"
-   x="0"
-   font-size="9"
-   id="tspan144"
-   font-family="'Calibri'">• </tspan>
-                     <tspan
-   y="336"
-   x="6.517"
-   style="letter-spacing:4"
-   font-size="9"
-   id="tspan146"
-   font-family="'Calibri'">	</tspan>
-                     <tspan
-   y="336"
-   x="13.5"
-   font-size="9"
-   id="tspan148"
-   font-family="'Calibri-Bold'">Agencies Reporting Limited Progress</tspan>
-                     <tspan
-   y="336"
-   x="160.647"
-   font-size="9"
-   id="tspan150"
-   font-family="'Calibri'"> shows a summary of ratings </tspan>
-                     <tspan
-   y="350"
-   x="13"
-   font-size="9"
-   id="tspan152"
-   font-family="'Calibri'">against 12 agreed SPMs for Development Partners that are active in </tspan>
-                     <tspan
-   y="364"
-   x="13"
-   font-size="9"
-   id="tspan154"
-   font-family="'Calibri'">this country, and who have voluntarily disclosed to IHP+Results </tspan>
-                     <tspan
-   y="378"
-   x="13"
-   font-size="9"
-   id="tspan156"
-   font-family="'Calibri'">2010 monitoring survey. Where ratings of             </tspan>
-
-                     <tspan
-   y="378"
-   x="190"
-   font-size="9"
-   id="tspan158"
-   font-family="'Calibri'">or</tspan>
-                     <tspan
-   y="378"
-   x="230"
-   font-size="9"
-   id="tspan160"
-   font-family="'Calibri'">have </tspan>
-
-                     <tspan
-   y="392"
-   x="13"
-   font-size="9"
-   id="tspan162"
-   font-family="'Calibri'">been scored for the minority of SPMs.</tspan>
-                     <tspan
-   y="424"
-   x="0"
-   font-size="7"
-   id="tspan164"
-   font-family="'Calibri-Italic'">* </tspan>
-                     <tspan
-   y="424"
-   x="5.069"
-   style="letter-spacing:6"
-   font-size="7"
-   id="tspan166"
-   font-family="'Calibri-Italic'">	</tspan>
-                     <tspan
-   y="424"
-   x="13.5"
-   font-size="7"
-   id="tspan168"
-   font-family="'Calibri-Italic'">The Technical Assistance rating summarises data provided by the IHP+ Development </tspan>
-                     <tspan
-   y="434"
-   x="13"
-   font-size="7"
-   id="tspan170"
-   font-family="'Calibri-Italic'">Partner signatories that are active in this country. The quality of civil society </tspan>
-                     <tspan
-   y="444"
-   x="13"
-   font-size="7"
-   id="tspan172"
-   font-family="'Calibri-Italic'">engagement was assessed through conducting surveys with in-country civil society </tspan>
-                     <tspan
-   y="454"
-   x="13"
-   font-size="7"
-   id="tspan174"
-   font-family="'Calibri-Italic'">organistions.</tspan></text>
-
-
-
-						</g>
-					</switch>
-						<line
+				  <line
    id="_x5F_line_2_"
    y2="744.86"
    x2="1134.6"
@@ -1462,239 +996,7 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    stroke-width=".5018"
    stroke="#0D3E3E"
    fill="none" />
-					<g
-   id="_x5F_icons">
-								<g
-   id="g178"
-   fill="#8DC63F">
-									<path
-   d="m889.23 624.17c0-1.896 1.536-3.432 3.432-3.432h11.599c1.896 0 3.432 1.535 3.432 3.432v5.545c0 1.895-1.536 3.432-3.432 3.432h-11.599c-1.896 0-3.432-1.537-3.432-3.432v-5.55z"
-   id="path180" />
-									<path
-   d="m898.46 626.94"
-   id="path182" />
-								</g>
-								<g
-   stroke-miterlimit="3.8637"
-   id="g184"
-   stroke-width=".235"
-   stroke="#000"
-   fill="none">
-									<path
-   d="m889.23 624.17c0-1.896 1.536-3.432 3.432-3.432h11.599c1.896 0 3.432 1.535 3.432 3.432v5.545c0 1.895-1.536 3.432-3.432 3.432h-11.599c-1.896 0-3.432-1.537-3.432-3.432v-5.55z"
-   id="path186" />
-									<path
-   d="m898.46 626.94"
-   id="path188" />
-								</g>
-								<polygon
-   points="903.28 624.76 897.4 630.74 893.64 626.98 895.26 625.39 897.37 627.53 901.69 623.14"
-   id="polygon190"
-   fill="#fff" />
-								<polygon
-   points="903.28 624.76 897.4 630.74 893.64 626.98 895.26 625.39 897.37 627.53 901.69 623.14"
-   stroke-miterlimit="3.8637"
-   id="polygon192"
-   stroke-width=".235"
-   stroke="#000"
-   fill="none" />
-								<g
-   id="g194"
-   fill="#8DC63F">
-									<path
-   d="m1078 708.25c0-1.896 1.536-3.432 3.432-3.432h11.599c1.896 0 3.432 1.535 3.432 3.432v5.545c0 1.895-1.536 3.432-3.432 3.432h-11.599c-1.896 0-3.432-1.537-3.432-3.432v-5.55z"
-   id="path196" />
-									<path
-   d="m1087.2 711.02"
-   id="path198" />
-								</g>
-								<g
-   stroke-miterlimit="3.8637"
-   id="g200"
-   stroke-width=".235"
-   stroke="#000"
-   fill="none">
-									<path
-   d="m1078 708.25c0-1.896 1.536-3.432 3.432-3.432h11.599c1.896 0 3.432 1.535 3.432 3.432v5.545c0 1.895-1.536 3.432-3.432 3.432h-11.599c-1.896 0-3.432-1.537-3.432-3.432v-5.55z"
-   id="path202" />
-									<path
-   d="m1087.2 711.02"
-   id="path204" />
-								</g>
-								<polygon
-   points="1092 708.84 1086.2 714.82 1082.4 711.06 1084 709.47 1086.1 711.61 1090.4 707.22"
-   id="polygon206"
-   fill="#fff" />
-								<polygon
-   points="1092 708.84 1086.2 714.82 1082.4 711.06 1084 709.47 1086.1 711.61 1090.4 707.22"
-   stroke-miterlimit="3.8637"
-   id="polygon208"
-   stroke-width=".235"
-   stroke="#000"
-   fill="none" />
-								<g
-   id="g210"
-   fill="#fd0">
-									<path
-   d="m985.81 624.11c0-1.93 1.563-3.494 3.494-3.494h11.812c1.93 0 3.494 1.564 3.494 3.494v5.646c0 1.931-1.564 3.495-3.494 3.495h-11.812c-1.931 0-3.494-1.564-3.494-3.495v-5.65h0.01z"
-   id="path212" />
-									<path
-   d="m995.21 626.94"
-   id="path214" />
-								</g>
-								<g
-   stroke-miterlimit="3.8637"
-   id="g216"
-   stroke-width=".2393"
-   stroke="#000"
-   fill="none">
-									<path
-   d="m985.81 624.11c0-1.93 1.563-3.494 3.494-3.494h11.812c1.93 0 3.494 1.564 3.494 3.494v5.646c0 1.931-1.564 3.495-3.494 3.495h-11.812c-1.931 0-3.494-1.564-3.494-3.495v-5.65h0.01z"
-   id="path218" />
-									<path
-   d="m995.21 626.94"
-   id="path220" />
-								</g>
-								<polygon
-   points="995.48 622.77 999.66 626.95 995.52 631.11 994.07 629.66 995.76 627.97 990.76 627.97 990.76 625.92 995.74 625.92 994.04 624.22"
-   id="polygon222"
-   fill="#fff" />
-								<polygon
-   points="995.48 622.77 999.66 626.95 995.52 631.11 994.07 629.66 995.76 627.97 990.76 627.97 990.76 625.92 995.74 625.92 994.04 624.22"
-   stroke-miterlimit="3.8637"
-   id="polygon224"
-   stroke-width=".2393"
-   stroke="#000"
-   fill="none" />
-								<g
-   id="g226"
-   fill="#fd0">
-									<path
-   d="m1042.8 708.19c0-1.93 1.563-3.494 3.494-3.494h11.812c1.93 0 3.494 1.564 3.494 3.494v5.646c0 1.931-1.564 3.495-3.494 3.495h-11.812c-1.931 0-3.494-1.564-3.494-3.495v-5.65z"
-   id="path228" />
-									<path
-   d="m1052.2 711.02"
-   id="path230" />
-								</g>
-								<g
-   stroke-miterlimit="3.8637"
-   id="g232"
-   stroke-width=".2393"
-   stroke="#000"
-   fill="none">
-									<path
-   d="m1042.8 708.19c0-1.93 1.563-3.494 3.494-3.494h11.812c1.93 0 3.494 1.564 3.494 3.494v5.646c0 1.931-1.564 3.495-3.494 3.495h-11.812c-1.931 0-3.494-1.564-3.494-3.495v-5.65z"
-   id="path234" />
-									<path
-   d="m1052.2 711.02"
-   id="path236" />
-								</g>
-								<polygon
-   points="1052.4 706.85 1056.6 711.03 1052.5 715.19 1051 713.74 1052.7 712.05 1047.7 712.05 1047.7 710 1052.7 710 1051 708.3"
-   id="polygon238"
-   fill="#fff" />
-								<polygon
-   points="1052.4 706.85 1056.6 711.03 1052.5 715.19 1051 713.74 1052.7 712.05 1047.7 712.05 1047.7 710 1052.7 710 1051 708.3"
-   stroke-miterlimit="3.8637"
-   id="polygon240"
-   stroke-width=".2393"
-   stroke="#000"
-   fill="none" />
-						<g
-   id="g242"
-   stroke-width=".3234"
-   stroke="#000">
-							<path
-   d="m1108 624.16c0-1.899 1.542-3.44 3.442-3.44h11.629c1.9 0 3.441 1.541 3.441 3.44v5.562c0 1.9-1.541 3.441-3.441 3.441h-11.629c-1.9 0-3.442-1.541-3.442-3.441v-5.56z"
-   id="path244"
-   fill="#FAA627" />
-							<path
-   d="m1116.1 630.26h2.238v1.393h-2.238v-1.39zm0-1.25h2.238v-6.781h-2.238v6.78z"
-   id="path246"
-   fill="#fff" />
-						</g>
-								<g
-   id="g248"
-   fill="#8DC63F">
-									<path
-   d="m984.3 428.62c0-1.896 1.536-3.432 3.432-3.432h11.599c1.896 0 3.432 1.535 3.432 3.432v5.545c0 1.895-1.536 3.432-3.432 3.432h-11.599c-1.896 0-3.432-1.537-3.432-3.432v-5.54h-0.04z"
-   id="path250" />
-									<path
-   d="m993.53 431.4"
-   id="path252" />
-								</g>
-								<g
-   stroke-miterlimit="3.8637"
-   id="g254"
-   stroke-width=".235"
-   stroke="#000"
-   fill="none">
-									<path
-   d="m984.3 428.62c0-1.896 1.536-3.432 3.432-3.432h11.599c1.896 0 3.432 1.535 3.432 3.432v5.545c0 1.895-1.536 3.432-3.432 3.432h-11.599c-1.896 0-3.432-1.537-3.432-3.432v-5.54h-0.04z"
-   id="path256" />
-									<path
-   d="m993.53 431.4"
-   id="path258" />
-								</g>
-								<polygon
-   points="998.35 429.22 992.48 435.2 988.72 431.44 990.34 429.85 992.44 431.99 996.76 427.6"
-   id="polygon260"
-   fill="#fff" />
-								<polygon
-   points="998.35 429.22 992.48 435.2 988.72 431.44 990.34 429.85 992.44 431.99 996.76 427.6"
-   stroke-miterlimit="3.8637"
-   id="polygon262"
-   stroke-width=".235"
-   stroke="#000"
-   fill="none" />
-								<g
-   id="g264"
-   fill="#fd0">
-									<path
-   d="m1079.1 428.57c0-1.93 1.563-3.494 3.494-3.494h11.812c1.93 0 3.494 1.564 3.494 3.494v5.646c0 1.931-1.564 3.495-3.494 3.495h-11.812c-1.931 0-3.494-1.564-3.494-3.495v-5.65z"
-   id="path266" />
-									<path
-   d="m1088.5 431.4"
-   id="path268" />
-								</g>
-								<g
-   stroke-miterlimit="3.8637"
-   id="g270"
-   stroke-width=".2393"
-   stroke="#000"
-   fill="none">
-									<path
-   d="m1079.1 428.57c0-1.93 1.563-3.494 3.494-3.494h11.812c1.93 0 3.494 1.564 3.494 3.494v5.646c0 1.931-1.564 3.495-3.494 3.495h-11.812c-1.931 0-3.494-1.564-3.494-3.495v-5.65z"
-   id="path272" />
-									<path
-   d="m1088.5 431.4"
-   id="path274" />
-								</g>
-								<polygon
-   points="1088.8 427.23 1093 431.41 1088.9 435.57 1087.4 434.12 1089.1 432.43 1084.1 432.43 1084.1 430.38 1089.1 430.38 1087.4 428.68"
-   id="polygon276"
-   fill="#fff" />
-								<polygon
-   points="1088.8 427.23 1093 431.41 1088.9 435.57 1087.4 434.12 1089.1 432.43 1084.1 432.43 1084.1 430.38 1089.1 430.38 1087.4 428.68"
-   stroke-miterlimit="3.8637"
-   id="polygon278"
-   stroke-width=".2393"
-   stroke="#000"
-   fill="none" />
-						<g
-   id="g280"
-   stroke-width=".3234"
-   stroke="#000">
-							<path
-   d="m944.44 442.23c0-1.899 1.542-3.44 3.442-3.44h11.629c1.9 0 3.441 1.541 3.441 3.44v5.562c0 1.9-1.541 3.441-3.441 3.441h-11.63c-1.9 0-3.442-1.541-3.442-3.441v-5.56z"
-   id="path282"
-   fill="#FAA627" />
-							<path
-   d="m952.57 448.34h2.238v1.393h-2.238v-1.39zm0-1.25h2.238v-6.781h-2.238v6.78z"
-   id="path284"
-   fill="#fff" />
-						</g>
-					</g>
+
 				</g>
 			</g>
 			<g
@@ -1715,36 +1017,6 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    clip-rule="evenodd"
    fill-rule="evenodd"
    fill="#0D3E3E" />
-					<switch
-   id="switch290">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject292">
-						</foreignObject>
-						<g
-   id="g294">
-							<rect
-   height="10"
-   width="234.15"
-   y="34.964"
-   x="37.957"
-   id="rect296"
-   fill="none" />
-								<text
-   id="SVGID_6_"
-   font-size="10"
-   transform="translate(37.957 44.676)"
-   font-family="'Calibri-Bold'"
-   fill="#FFFFFF">PROGRESS ON MILLENNIUM DEVELOPMENT GOALS</text>
-
-
-
-						</g>
-					</switch>
 				</g>
 				<g
    id="_x5F_poverty">
@@ -1754,74 +1026,6 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    clip-rule="evenodd"
    fill-rule="evenodd"
    fill="#E0E7D2" />
-					<switch
-   id="switch301">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject303">
-						</foreignObject>
-						<g
-   id="poverty">
-                     <g
-   class="arrow"
-   transform="translate(93, 115)"
-   id="g306"> </g><rect
-   height="43.46"
-   width="178.94"
-   y="93.788"
-   x="93.169"
-   id="rect308"
-   fill="none" /><text
-   id="SVGID_8_"
-   font-size="9"
-   transform="translate(93.169 102.53)"
-   style="-inkscape-font-specification:Calibri;font-family:Calibri;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"><tspan
-   y="0"
-   x="0"
-   id="tspan311"
-   style="-inkscape-font-specification:Calibri;font-family:Calibri;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-   font-family="'Calibri'">Population living on less than $1 a day </tspan><tspan
-   class="value"
-   id="tspan313"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ce181e;font-family:Calibri-Bold;-inkscape-font-specification:Calibri">55.1%</tspan><tspan
-   y="12.275"
-   x="0"
-   id="tspan319"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri">in</tspan><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri"
-   id="tspan6009"
-   class="year"
-   y="12.275"
-   dx="1">2005.</tspan><tspan
-   y="24.55"
-   x="0"
-   style="letter-spacing:1;-inkscape-font-specification:Calibri;font-family:Calibri;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-   id="tspan321"
-   font-family="'Calibri'">(</tspan><tspan
-   y="26.795"
-   x="4.259"
-   id="tspan323"
-   style="-inkscape-font-specification:Calibri;font-family:Calibri;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-   font-family="'Calibri'"
-   fill="none">•  </tspan><tspan
-   y="24.55"
-   x="13.351"
-   class="change_value"
-   id="tspan325"
-   style="-inkscape-font-specification:Calibri;font-family:Calibri;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-   font-family="'Calibri'">16.6%</tspan> since <tspan
-   class="change_year"
-   id="tspan327"
-   style="-inkscape-font-specification:Calibri;font-family:Calibri;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">2000</tspan>)</text>
-
-
-
-						</g>
-					</switch>
 								<line
    class="remove"
    y2="122.46"
@@ -1879,36 +1083,6 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    clip-rule="evenodd"
    fill-rule="evenodd"
    fill="#86A49A" />
-					<switch
-   id="switch347">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject349">
-						</foreignObject>
-						<g
-   id="g351">
-							<rect
-   height="10"
-   width="152.48"
-   y="69.457"
-   x="45.846"
-   id="rect353"
-   fill="none" />
-								<text
-   id="SVGID_16_"
-   font-size="9"
-   transform="translate(45.846 78.197)"
-   font-family="'Calibri-Bold'"
-   fill="#FFFFFF">Eradicate Extreme Poverty and Hunger</text>
-
-
-
-						</g>
-					</switch>
 				</g>
 				<g
    id="_x5F_edication">
@@ -1918,73 +1092,6 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    clip-rule="evenodd"
    fill-rule="evenodd"
    fill="#E0E7D2" />
-					<switch
-   id="switch358">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject360">
-						</foreignObject>
-						<g
-   id="edictation">
-                     <g
-   class="arrow"
-   transform="translate(90, 217)"
-   id="g363"> </g>
-							<rect
-   height="41.409"
-   width="183.48"
-   y="194.71"
-   x="88.624"
-   id="rect365"
-   fill="none" />
-							<text
-   id="SVGID_18_"
-   font-size="9"
-   transform="translate(88.624 203.45)"><tspan
-   y="0"
-   x="0"
-   id="tspan368"
-   font-family="'Calibri'">Children enrolled in primary education </tspan><tspan
-   y="0"
-   x="150.15"
-   class="value"
-   id="tspan370"
-   font-family="'Calibri-Bold'"
-   fill="#8DC63F">72.3%</tspan><tspan
-   y="0"
-   x="173.699"
-   id="tspan372"
-   font-family="'Calibri'">  </tspan><tspan
-   y="11.22"
-   x="0"
-   id="tspan374"
-   font-family="'Calibri'">in 2007.  </tspan><tspan
-   y="23.495"
-   x="0"
-   style="letter-spacing:2"
-   id="tspan376"
-   font-family="'Calibri'">(</tspan><tspan
-   y="25.74"
-   x="4.979"
-   id="tspan378"
-   font-family="'Calibri'"
-   fill="none">• </tspan><tspan
-   y="23.495"
-   x="13.296"
-   class="change_value"
-   id="tspan380"
-   font-family="'Calibri'">33.8%</tspan> since <tspan
-   class="change_year"
-   id="tspan382">2000</tspan>)</text>
-
-
-
-						</g>
-					</switch>
 								<line
    class="remove"
    y2="222.55"
@@ -2007,36 +1114,6 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    clip-rule="evenodd"
    fill-rule="evenodd"
    fill="#86A49A" />
-					<switch
-   id="switch389">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject391">
-						</foreignObject>
-						<g
-   id="g393">
-							<rect
-   height="10"
-   width="152.48"
-   y="172.2"
-   x="43.785"
-   id="rect395"
-   fill="none" />
-								<text
-   id="SVGID_20_"
-   font-size="9"
-   transform="translate(43.785 180.94)"
-   font-family="'Calibri-Bold'"
-   fill="#FFFFFF">Achieve Universal Primary Education</text>
-
-
-
-						</g>
-					</switch>
 					<g
    id="_x5F_icon_13_">
 						<defs
@@ -2080,80 +1157,6 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    clip-rule="evenodd"
    fill-rule="evenodd"
    fill="#E0E7D2" />
-					<switch
-   id="switch413">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject415">
-						</foreignObject>
-						<g
-   id="gender">
-                           <g
-   class="arrow"
-   transform="translate(89, 319)"
-   id="g418"> </g>
-							<rect
-   height="44.371"
-   width="177.88"
-   y="298.47"
-   x="88.624"
-   id="rect420"
-   fill="none" />
-							<text
-   id="SVGID_24_"
-   font-size="9"
-   transform="translate(88.624 307.14)">
-                        <tspan
-   y="0"
-   x="0"
-   id="tspan423"
-   font-family="'Calibri'">Gender parity index in primary level </tspan><tspan
-   y="11.22"
-   x="0"
-   id="tspan425"
-   font-family="'Calibri'">enrolment </tspan><tspan
-   class="value"
-   id="tspan427"
-   style="fill:#8dc63f;font-family:Calibri-Bold"
-   dx="2">0.94</tspan><tspan
-   id="tspan429"
-   style="font-family:Calibri"
-   dx="2"> in </tspan><tspan
-   class="year"
-   id="tspan431">2007</tspan>.
-                        <tspan
-   y="23.495"
-   x="0"
-   style="letter-spacing:2"
-   id="tspan433"
-   font-family="'Calibri'">(</tspan>
-                        <tspan
-   y="25.74"
-   x="4.979"
-   id="tspan435"
-   font-family="'Calibri'"
-   fill="none">• </tspan>
-                        <tspan
-   y="23.495"
-   x="13.296"
-   class="change_value"
-   id="tspan437"
-   font-family="'Calibri'">0.23%</tspan>
-                        <tspan
-   id="tspan439"> since
-                        <tspan
-   class="change_year"
-   id="tspan441">2000</tspan>)</tspan>
-                     </text>
-
-
-
-						</g>
-					</switch>
 								<line
    class="remove"
    y2="326.3"
@@ -2176,36 +1179,6 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    clip-rule="evenodd"
    fill-rule="evenodd"
    fill="#86A49A" />
-					<switch
-   id="switch448">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject450">
-						</foreignObject>
-						<g
-   id="g452">
-							<rect
-   height="10"
-   width="184.48"
-   y="273.55"
-   x="43.785"
-   id="rect454"
-   fill="none" />
-								<text
-   id="SVGID_25_"
-   font-size="9"
-   transform="translate(43.785 282.29)"
-   font-family="'Calibri-Bold'"
-   fill="#FFFFFF">Promote Gender Equality and Empower Women</text>
-
-
-
-						</g>
-					</switch>
 					<g
    id="_x5F_icon_12_">
 						<defs
@@ -2249,71 +1222,7 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    clip-rule="evenodd"
    fill-rule="evenodd"
    fill="#E0E7D2" />
-					<switch
-   id="switch472">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject474">
-						</foreignObject>
-						<g
-   id="mortality">
-                        <g
-   class="arrow"
-   transform="translate(89, 422)"
-   id="g477"> </g>
-							<rect
-   height="39.104"
-   width="181.88"
-   y="400.42"
-   x="88.624"
-   id="rect479"
-   fill="none" />
-							<text
-   id="SVGID_29_"
-   font-size="9"
-   transform="translate(88.624 409.16)"><tspan
-     y="0"
-     x="0"
-     id="tspan482"
-     font-family="'Calibri'">Under 5 Mortality rate </tspan><tspan
-     class="value"
-     id="tspan484"
-     style="fill:#8dc63f;font-family:Calibri-Bold"
-     dx="2">141.9</tspan><tspan
-     id="tspan486"
-     style="font-family:Calibri"
-     dx="2">  per 1000 live </tspan><tspan
-     y="11.22"
-     x="0"
-     id="tspan488"
-     font-family="'Calibri'">births in <tspan
-   class="year"
-   id="tspan490">2006</tspan>. </tspan><tspan
-     y="23.495"
-     x="0"
-     style="letter-spacing:1"
-     id="tspan492"
-     font-family="'Calibri'">(</tspan><tspan
-     y="25.74"
-     x="4.259"
-     id="tspan494"
-     font-family="'Calibri'"
-     fill="none">•  </tspan><tspan
-     y="23.495"
-     x="13.351"
-     id="tspan496"
-     font-family="'Calibri'"><tspan
-   class="change_value"
-   id="tspan498">57</tspan> since <tspan
-   class="change_year"
-   id="tspan500">57</tspan>)</tspan></text>
-
-
-</g></switch><line
+					<line
    class="remove"
    y2="432.38"
    x2="96.249"
@@ -2335,36 +1244,6 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    clip-rule="evenodd"
    fill-rule="evenodd"
    fill="#86A49A" />
-					<switch
-   id="switch507">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject509">
-						</foreignObject>
-						<g
-   id="g511">
-							<rect
-   height="10"
-   width="182.15"
-   y="376.94"
-   x="43.785"
-   id="rect513"
-   fill="none" />
-								<text
-   id="SVGID_30_"
-   font-size="9"
-   transform="translate(43.785 385.68)"
-   font-family="'Calibri-Bold'"
-   fill="#FFFFFF">Reduce Child Mortality</text>
-
-
-
-						</g>
-					</switch>
 					<g
    id="_x5F_icon_11_">
 						<defs
@@ -2384,171 +1263,62 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    id="g523"
    clip-path="url(#SVGID_31_)"
    style="clip-path:url(#SVGID_31_)">
-								<switch
-   id="SVGID_33_"
-   transform="matrix(.072 0 0 .072 37.812 400.01)">
-								<foreignObject
-   requiredExtensions="http://ns.adobe.com/ImageReplacement/1.0/"
-   height="600"
-   width="600"
-   y="0"
-   x="0"
-   overflow="visible"
-   id="foreignObject526">
-								</foreignObject>
-									
-							</switch>
+						  <switch
+						      id="SVGID_33_"
+						      transform="matrix(.072 0 0 .072 37.812 400.01)">
+						    <foreignObject
+							requiredExtensions="http://ns.adobe.com/ImageReplacement/1.0/"
+							height="600"
+							width="600"
+							y="0"
+							x="0"
+							overflow="visible"
+							id="foreignObject526">
+						    </foreignObject>
+						    
+						  </switch>
 						</g>
 					</g>
 				</g>
 				<g
-   id="_x5F_maternal">
-					<path
-   id="_x5F_frame_9_"
-   d="m282.68 560.73c0 3.854-3.134 6.977-7 6.977h-238.96c-3.866 0-7-3.123-7-6.977v-82.423c0-3.854 3.134-6.978 7-6.978h238.97c3.866 0 7 3.124 7 6.978v82.42z"
-   clip-rule="evenodd"
-   fill-rule="evenodd"
-   fill="#E0E7D2" />
-
-						<g
-   id="maternal_mortality"><g
-   class="arrow"
-   transform="translate(163.66664,515)"
-   id="g532" /><rect
-   height="59.982"
-   width="187.08"
-   y="505.14"
-   x="88.624"
-   id="rect534"
-   fill="none" /><text
-   id="SVGID_34_"
-   font-size="9"
-   transform="translate(88.624 513.88)"><tspan
-     y="0"
-     x="0"
-     id="tspan537"
-     font-family="'Calibri'">-</tspan><tspan
-     y="0"
-     x="8.58"
-     id="tspan541"
-     font-family="'Calibri'">Maternal mortality ratio </tspan><tspan
-     class="value"
-     id="tspan543"
-     style="text-align:center;text-anchor:middle;fill:#8dc63f;font-family:Calibri-Bold">701</tspan><tspan
-     id="tspan547"
-     dx="2"
-     style="font-family:Calibri">per 100,000</tspan><tspan
-     y="12.274"
-     x="8.58"
-     id="tspan549"
-     font-family="'Calibri'">live births in <tspan
-   class="year"
-   id="tspan551"
-   dx="2">2008</tspan></tspan><tspan
-     style="letter-spacing:1;font-family:Calibri"
-     id="tspan553"
-     dx="2">(</tspan><tspan
-     id="tspan557"
-     style="font-family:Calibri"><tspan
-       class="change_value"
-       id="tspan559"
-       dx="5">271</tspan><tspan
-       dx="2"
-       id="tspan6005"
-       class="change_value"> since</tspan><tspan
-       class="change_year"
-       id="tspan561"
-       dx="2">1990</tspan><tspan
-       id="tspan6007"
-       class="change_year">)</tspan></tspan></text>
-
-
-</g><g
-   id="family_planning">
-                     <g
-   class="arrow"
-   transform="translate(98, 545)"
-   id="g564"> </g>
-                     <text
-   id="text566"
-   font-size="9"
-   transform="translate(88.624 513.88)">
-                        <tspan
-   y="30.162"
-   x="0"
-   id="tspan568"
-   font-family="'Calibri'">-</tspan>
-                        <tspan
-   y="30.162"
-   x="2.936"
-   style="letter-spacing:3"
-   id="tspan570"
-   font-family="'Calibri'">	</tspan>
-                        <tspan
-   y="30.162"
-   x="8.58"
-   id="tspan572"
-   font-family="'Calibri'">Unmet need for family planning </tspan>
-                        <tspan
-   y="30.162"
-   x="130.605"
-   class="value"
-   id="tspan574"
-   font-family="'Calibri-Bold'"
-   fill="#8DC63F">33.8%</tspan>
-                        <tspan
-   id="tspan576"
-   style="font-family:Calibri"
-   dx="2"> in <tspan
-   class="year"
-   id="tspan578">2005 </tspan></tspan>
-                        <tspan
-   y="42.437"
-   x="8.58"
-   style="letter-spacing:1"
-   id="tspan580"
-   font-family="'Calibri'">(</tspan><tspan
-   y="42.437"
-   x="21.931"
-   id="tspan584"
-   font-family="'Calibri'"><tspan
-   class="change_value"
-   id="tspan586">5.8%</tspan> since <tspan
-   class="change_year"
-   id="tspan588">2000</tspan>)</tspan></text>
-
-
-</g>
-                  <g
-   class="remove"
-   id="g590"><line
-     y1="549.31"
-     x2="106.36"
-     x1="106.36"
-     y2="559.71"
-     id="line598" /><line
-     y2="556.12"
-     x2="106.36"
-     stroke-miterlimit="3.8637"
-     y1="549.31"
-     x1="106.36"
-     id="line600"
-     stroke-width="2"
-     stroke="#8DC63F"
-     fill="none" /><polygon
-     points="103.88 555.4 106.37 559.71 108.87 555.4"
-     id="polygon602"
-     fill="#8DC63F" /></g><g
-   id="g6011"
-   transform="translate(17.333331,-3.3333095e-8)"
-   class="remove"><line
-     id="line594"
-     x1="160.14"
-     y1="518.21997"
-     stroke-miterlimit="3.8637"
-     x2="160.14"
-     y2="525.03998"
-     style="fill:none;stroke:#8dc63f;stroke-width:2;stroke-miterlimit:3.86369991" /><polygon
+				    id="_x5F_maternal">
+				  <path
+				      id="_x5F_frame_9_"
+				      d="m282.68 560.73c0 3.854-3.134 6.977-7 6.977h-238.96c-3.866 0-7-3.123-7-6.977v-82.423c0-3.854 3.134-6.978 7-6.978h238.97c3.866 0 7 3.124 7 6.978v82.42z"
+				      clip-rule="evenodd"
+				      fill-rule="evenodd"
+				      fill="#E0E7D2" />
+				  
+				  <g
+				      class="remove"
+				      id="g590"><line
+				      y1="549.31"
+				      x2="106.36"
+				      x1="106.36"
+				      y2="559.71"
+				      id="line598" /><line
+				      y2="556.12"
+				      x2="106.36"
+				      stroke-miterlimit="3.8637"
+				      y1="549.31"
+				      x1="106.36"
+				      id="line600"
+				      stroke-width="2"
+				      stroke="#8DC63F"
+				      fill="none" /><polygon
+				      points="103.88 555.4 106.37 559.71 108.87 555.4"
+				      id="polygon602"
+				      fill="#8DC63F" /></g><g
+				      id="g6011"
+				      transform="translate(17.333331,-3.3333095e-8)"
+				      class="remove"><line
+				      id="line594"
+				      x1="160.14"
+				      y1="518.21997"
+				      stroke-miterlimit="3.8637"
+				      x2="160.14"
+				      y2="525.03998"
+				      style="fill:none;stroke:#8dc63f;stroke-width:2;stroke-miterlimit:3.86369991" /><polygon
      id="polygon596"
      points="160.15,528.63 162.64,524.31 157.66,524.31 "
      style="fill:#8dc63f" /></g><path
@@ -2557,36 +1327,6 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    clip-rule="evenodd"
    fill-rule="evenodd"
    fill="#86A49A" />
-					<switch
-   id="switch605">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject607">
-						</foreignObject>
-						<g
-   id="g609">
-							<rect
-   height="10"
-   width="152.48"
-   y="482.04"
-   x="43.785"
-   id="rect611"
-   fill="none" />
-								<text
-   id="SVGID_35_"
-   font-size="9"
-   transform="translate(43.785 490.78)"
-   font-family="'Calibri-Bold'"
-   fill="#FFFFFF">Improve Maternal Health</text>
-
-
-
-						</g>
-					</switch>
 					<g
    id="_x5F_icon_10_">
 						<defs
@@ -2638,221 +1378,25 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    x="88.624"
    id="rect629"
    fill="none" />
-						<g
-   id="hiv">
-                     <g
-   class="arrow"
-   transform="translate(208.8144,609)"
-   id="g632" />
-							<text
-   id="SVGID_43_"
-   font-size="9"
-   transform="translate(88.624 620.59)">
-                        <tspan
-   y="0"
-   x="0"
-   id="tspan635"
-   font-family="'Calibri'">-</tspan>
-                        <tspan
-   y="0"
-   x="2.755"
-   style="letter-spacing:3"
-   id="tspan637"
-   font-family="'Calibri'">	</tspan>
-                     <tspan
-   y="0"
-   x="8.58"
-   id="tspan639"
-   font-family="'Calibri'">HIV prevalence </tspan><tspan
-   y="0"
-   x="65.906"
-   class="value"
-   id="tspan641"
-   font-family="'Calibri-Bold'"
-   fill="#8DC63F">2.1%</tspan><tspan
-   id="tspan643"
-   style="font-family:Calibri"
-   dx="2">  in </tspan><tspan
-   class="year"
-   id="tspan645">2008</tspan><tspan
-   style="letter-spacing:1;font-family:Calibri"
-   id="tspan647"
-   dx="2">(</tspan><tspan
-   class="change_value"
-   id="tspan653"
-   dx="5">1.4%</tspan><tspan
-   id="tspan651"
-   style="font-family:Calibri"
-   y="0"> since </tspan>
-                        <tspan
-   y="10"
-   x="8.58"
-   id="tspan655"
-   font-family="'Calibri'"><tspan
-   class="change_year"
-   id="tspan657">2003</tspan>)</tspan>
-                        <tspan
-   y="25.612"
-   x="0"
-   id="tspan659"
-   font-family="'Calibri'">-</tspan>
-
-                     </text>
-
-
-
-                  </g>
-                  <g
-   id="children_u5">
-                     <g
-   class="arrow"
-   transform="translate(179.74054,645)"
-   id="g662" />
-                     <text
-   id="text664"
-   font-size="9"
-   transform="translate(88.624 620.59)">
-                        <tspan
-   y="25.612"
-   x="2.755"
-   style="letter-spacing:3"
-   id="tspan666"
-   font-family="'Calibri'">	</tspan>
-                        <tspan
-   y="25.612"
-   x="8.58"
-   id="tspan668"
-   font-family="'Calibri'">Children U-5 sleeping under insecticide treated </tspan>
-                        <tspan
-   y="35.612"
-   x="8.58"
-   id="tspan670"
-   font-family="'Calibri'">bednet </tspan>
-                        <tspan
-   y="35.612"
-   x="36.771"
-   class="value"
-   id="tspan672"
-   font-family="'Calibri-Bold'"
-   fill="#8DC63F">33.1%</tspan>
-                        <tspan
-   y="35.612"
-   x="62.42"
-   id="tspan674"
-   font-family="'Calibri'"> in <tspan
-   class="year"
-   id="tspan676">2007 </tspan> </tspan>
-                        <tspan
-   y="35.612"
-   x="90.564"
-   style="letter-spacing:1"
-   id="tspan678"
-   font-family="'Calibri'">(</tspan>
-                        <tspan
-   y="37.857"
-   x="94.644"
-   id="tspan680"
-   font-family="'Calibri'"
-   fill="none">•  </tspan>
-                        <tspan
-   y="35.612"
-   x="103.195"
-   id="tspan682"
-   font-family="'Calibri'"><tspan
-   class="change_value"
-   id="tspan684">31.6%</tspan> since <tspan
-   class="change_year"
-   id="tspan686">2005</tspan>)</tspan>
-                        <tspan
-   y="51.225"
-   x="0"
-   id="tspan688"
-   font-family="'Calibri'">-</tspan>
-                     </text>
-
-
-
-                  </g>
-                  <g
-   id="tb">
-                     <g
-   class="arrow"
-   transform="translate(97, 670)"
-   id="g691" />
-                     <text
-   id="text693"
-   font-size="9"
-   transform="translate(88.624 620.59)">
-                        <tspan
-   y="51.225"
-   x="2.755"
-   style="letter-spacing:3"
-   id="tspan695"
-   font-family="'Calibri'">	</tspan>
-                        <tspan
-   y="51.225"
-   x="8.58"
-   id="tspan697"
-   font-family="'Calibri'">TB incidence per </tspan>
-                        <tspan
-   y="51.225"
-   x="73.193"
-   class="value"
-   id="tspan699"
-   font-family="'Calibri-Bold'"
-   fill="#8DC63F">378.2</tspan>
-                        <tspan
-   y="51.225"
-   x="91.843"
-   id="tspan701"
-   font-family="'Calibri'"> per 100,000 in <tspan
-   class="year"
-   id="tspan703">2007</tspan>  </tspan>
-                        <tspan
-   y="61.225"
-   x="8.58"
-   style="letter-spacing:1"
-   id="tspan705"
-   font-family="'Calibri'">(</tspan>
-                        <tspan
-   y="63.47"
-   x="12.659"
-   id="tspan707"
-   font-family="'Calibri'"
-   fill="none">•  </tspan>
-                        <tspan
-   y="61.225"
-   x="21.211"
-   id="tspan709"
-   font-family="'Calibri'"><tspan
-   class="change_value"
-   id="tspan711">24.9</tspan> since <tspan
-   class="change_year"
-   id="tspan713">2004</tspan>)</tspan>
-                     </text>
-
-
-
-						</g>
-                  <g
-   class="remove"
-   id="g715">
-						<line
-   y1="612.92"
-   x2="213.54"
-   x1="213.54"
-   y2="623.33"
-   id="line717" />
-								<line
-   y2="619.74"
-   x2="213.54"
-   stroke-miterlimit="3.8637"
-   y1="612.92"
-   x1="213.54"
-   id="line719"
-   stroke-width="2"
-   stroke="#8DC63F"
-   fill="none" />
+		  <g
+		      class="remove"
+		      id="g715">
+		    <line
+			y1="612.92"
+			x2="213.54"
+			x1="213.54"
+			y2="623.33"
+			id="line717" />
+		    <line
+			y2="619.74"
+			x2="213.54"
+			stroke-miterlimit="3.8637"
+			y1="612.92"
+			x1="213.54"
+			id="line719"
+			stroke-width="2"
+			stroke="#8DC63F"
+			fill="none" />
 								<polygon
    points="211.06 619.01 213.56 623.33 216.05 619.01"
    id="polygon721"
@@ -2904,36 +1448,6 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    clip-rule="evenodd"
    fill-rule="evenodd"
    fill="#86A49A" />
-					<switch
-   id="switch736">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject738">
-						</foreignObject>
-						<g
-   id="g740">
-							<rect
-   height="10"
-   width="181.19"
-   y="589.29"
-   x="43.785"
-   id="rect742"
-   fill="none" />
-								<text
-   id="SVGID_44_"
-   font-size="9"
-   transform="translate(43.785 598.04)"
-   font-family="'Calibri-Bold'"
-   fill="#FFFFFF">Compat HIV/AIDS, Malaria and other Diseases</text>
-
-
-
-						</g>
-					</switch>
 					<g
    id="_x5F_icon_9_">
 						<defs
@@ -2978,141 +1492,7 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    clip-rule="evenodd"
    fill-rule="evenodd"
    fill="#E0E7D2" />
-
-						<g
-   id="water">
-                     <g
-   class="arrow"
-   transform="translate(180, 757)"
-   id="g761" />
-							<rect
-   height="59.247"
-   width="185.21"
-   y="748.37"
-   x="88.624"
-   id="rect763"
-   fill="none" />
-							<text
-   id="SVGID_48_"
-   font-size="9"
-   transform="translate(88.624 757.05)">
-                        <tspan
-   y="0"
-   x="0"
-   id="tspan766"
-   font-family="'Calibri'">-</tspan>
-                     <tspan
-   y="0"
-   x="2.936"
-   style="letter-spacing:4"
-   id="tspan768"
-   font-family="'Calibri'">	</tspan>
-                     <tspan
-   y="0"
-   x="9.24"
-   id="tspan770"
-   font-family="'Calibri'">Population using improved drinking water </tspan>
-                     <tspan
-   y="12.274"
-   x="9.24"
-   id="tspan772"
-   font-family="'Calibri'">sources </tspan><tspan
-   id="tspan774"
-   style="fill:#8dc63f;font-family:Calibri-Bold">42%</tspan><tspan
-   id="tspan776"
-   style="font-family:Calibri"
-   dx="2">  in <tspan
-   class="year"
-   id="tspan778">2006</tspan> </tspan>
-                     <tspan
-   y="12.274"
-   x="91.854"
-   style="letter-spacing:2"
-   id="tspan780"
-   font-family="'Calibri'">(</tspan>
-                     <tspan
-   y="14.52"
-   x="96.832"
-   id="tspan782"
-   font-family="'Calibri'"
-   fill="none">• </tspan>
-                     <tspan
-   y="12.274"
-   x="105.149"
-   id="tspan784"
-   font-family="'Calibri'"><tspan
-   class="change_value"
-   id="tspan786">13%</tspan> since <tspan
-   class="change_year"
-   id="tspan788">2000</tspan>)</tspan>
-                     <tspan
-   y="29.107"
-   x="0"
-   id="tspan790"
-   font-family="'Calibri'">-</tspan>
-                  </text>
-
-
-
-               </g>
-               <g
-   id="sanitation">
-                  <g
-   class="arrow"
-   transform="translate(149.14774,788)"
-   id="g793" />
-                  <text
-   id="text795"
-   font-size="9"
-   transform="translate(88.624 757.05)">
-                     <tspan
-   y="29.107"
-   x="2.936"
-   style="letter-spacing:4"
-   id="tspan797"
-   font-family="'Calibri'">	</tspan>
-                     <tspan
-   y="29.107"
-   x="9.24"
-   id="tspan799"
-   font-family="'Calibri'">Population using improved sanitation sources</tspan>
-                     <tspan
-   y="29.107"
-   x="183.449"
-   id="tspan801"
-   font-family="'Calibri'"
-   fill="#CE181E"> </tspan><tspan
-   y="41.382"
-   x="9.24"
-   id="tspan803"
-   font-family="'Calibri-Bold'"
-   fill="#CE181E">11%</tspan><tspan
-   id="tspan805"
-   style="font-family:Calibri"
-   dx="2"> in <tspan
-   class="year"
-   id="tspan807">2006</tspan> </tspan><tspan
-   style="letter-spacing:2;font-family:Calibri"
-   id="tspan809">(</tspan><tspan
-   y="43.627"
-   x="63.207"
-   id="tspan811"
-   font-family="'Calibri'"
-   fill="none">• </tspan>
-                     <tspan
-   y="41.382"
-   x="71.524"
-   id="tspan813"
-   font-family="'Calibri'"><tspan
-   class="change_value"
-   id="tspan815">4%</tspan> since <tspan
-   class="change_year"
-   id="tspan817">2000</tspan>)</tspan></text>
-
-
-
-						</g>
-                  <g
+<g
    class="remove"
    id="g819">
 						<line
@@ -3162,36 +1542,6 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
    clip-rule="evenodd"
    fill-rule="evenodd"
    fill="#86A49A" />
-					<switch
-   id="switch834">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject836">
-						</foreignObject>
-						<g
-   id="g838">
-							<rect
-   height="10"
-   width="182.15"
-   y="723.39"
-   x="43.785"
-   id="rect840"
-   fill="none" />
-								<text
-   id="SVGID_49_"
-   font-size="9"
-   transform="translate(43.785 732.13)"
-   font-family="'Calibri-Bold'"
-   fill="#FFFFFF">Ensure Environmental Sustainability</text>
-
-
-
-						</g>
-					</switch>
 					<g
    id="_x5F_icon_8_">
 						<defs
@@ -10145,4 +8495,169 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
        y="956.03748"
        style="font-size:13.5px;text-align:start;text-anchor:start;font-family:Calibri;-inkscape-font-specification:Calibri"
        id="tspan4700">including on aid effectiveness.</tspan></tspan></text>
+
+<!-- Custom hand typed SVG starts here. Isolated all text for translation. -->
+<g transform="scale(1.5)">
+  <style>
+	div#howtointerpret img.icons {
+	  display: inline-block;
+	  height: 13px;
+	  width: 20px;
+	  line-height: 10px;
+	  vertical-align: middle;
+	}
+	div#howtointerpret h2 {
+	  font-size: 10px;
+	  color: #013333;
+	  margin-top: 20px;
+	}
+	div.goals img.arrow {
+          display: inline-block;
+	  line-height: 10px;
+	  vertical-align: middle;
+	}
+	div.goals tspan.value,
+	div.goals tspan.change_value {
+	  font-family: Calibri-Bold;
+	}
+	div.goals tspan.good {
+          color: #8DC63F;
+	  font-family: Calibri-Bold;
+	}
+	div.goals tspan.bad {
+          color: #ce181e;
+	  font-family: Calibri-Bold;
+	}
+	text.head1 {
+	  font-size: 10px;
+          font-family: Calibri;
+          fill: #fff;
+	  text-transform: uppercase;
+	}
+	text.head2 {
+	  font-size: 9px;
+          font-family: Calibri;
+          fill: #fff;
+	}
+	ul {
+	  list-style-position: outside;
+	  padding-left: 12px;
+	}
+	
+  </style>
+  <text x="874.74" y="45.591" class="head1">
+    {% blocktrans %}AGENCIES REPORTING TO IHP+RESULTS IN {% endblocktrans %}{% blocktrans %}ETHIOPIA{% endblocktrans %}
+  </text>
+  <text x="874.74" y="313.6" class="head1">
+    {% blocktrans %}HOW TO INTERPRET THIS SCORECARD{% endblocktrans %}
+  </text>
+  <foreignObject x="875.07" y="330" width="262.68" height="410">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #000; text-align: left; font-family: Calibri; font-size: 9px; line-height: 120%; padding: 0; margin: 0;" id="howtointerpret">
+      <ul style="list-style-position: outside; padding-left: 12px;">
+	<li>{% blocktrans %}The majority of data presented in this Scorecard is from the Ministry of Health. There are two exceptions - the ratings for Technical Assistance and the quality of civil society engagement*.{% endblocktrans %}</li>
+	<li>{% blocktrans %}The Scorecard shows results using 5 Results Areas (see below) to tell the story of IHP+ implementation in a logical flow: from the national health plan to monitoring and evaluation of that plan.{% endblocktrans %}</li>
+	<li>{% blocktrans with "<img class=\"icons\" src=\"/media/icons/tick.svg\"/>" as tick and "<img class=\"icons\" src=\"/media/icons/arrow.svg\"/>" as arrow and "<img class=\"icons\" src=\"/media/icons/cross.svg\"/>" as exclamation %}Where they are used, rating symbols illustrate whether the government has achieved {{ tick }}, is working towards {{ arrow }}, or hasn’t made progress {{ exclamation }} against agreed targets. Details of these ratings can be found online in the North-South Observatory for IHP+Results (www.ihpresults.net){% endblocktrans %}</li>
+	<li>{% blocktrans %}Progress against the Millennium Development Goals is provided for contextual purposes.{% endblocktrans %}</li>
+      </ul>
+      <h2>{% blocktrans %}Additional Information{% endblocktrans %}</h2>
+      <p>{% blocktrans %}The reverse of the Scorecard (opposite), shows natinal government performance against an agreed set of Standard Performance Measures (SPMs). The following headings are used:{% endblocktrans %}</p>
+      <ul style="list-style-position: outside; padding-left: 12px;">
+	<li>{% blocktrans %}Expected Results reflect key commitments made in the IHP+ Global Compact.{% endblocktrans %}</li>
+	<li>{% blocktrans with "<img class=\"icons\" src=\"/media/icons/tick.svg\"/>" as tick and "<img class=\"icons\" src=\"/media/icons/arrow.svg\"/>" as arrow and "<img class=\"icons\" src=\"/media/icons/cross.svg\"/>" as exclamation %}Progress Symbols illustrate whether the government has achieved {{ tick }}, is making progress {{ arrow }}, or has not made progress {{ exclamation }} against 10 SPMs.{% endblocktrans %}</li>
+	<li>{% blocktrans %}Δ Targets for each SPM can be found at www.ihpresults.net{% endblocktrans %}</li>
+	<li>{% blocktrans %}Agencies Reporting Limited Progress shows a summary of ratings against 12 agreed SPMs for Development Partners that are active in this country, and who have voluntarily disclosed to IHP+Results 2010 monitoring survey. Where ratings of or have been scored for the minority of SPMs.{% endblocktrans %}</li>
+      </ul>
+    </div>
+  </foreignObject>
+  <text x="875.06" y="757.45">*</text>
+  <foreignObject x="885.06" y="751.45" width="242.68" height="55" style="color: #000; font-family: Calibri-Italic; font-size: 7px;">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #000; text-align: left; font-family: Calibri-Italic; font-size: 7px; line-height: 115%; padding: 0; margin: 0;">
+      {% blocktrans %}The Technical Assistance rating summarises data provided by the IHP+ Development Partner signatories that are active in this country. The quality of civil society engagement was assessed through conducting surveys with in-country civil society organistions.{% endblocktrans %}
+    </div>
+  </foreignObject>
+  <!-- Millenium development goals. -->
+  <text x="37.957" y="44.676" class="head1">
+    {% blocktrans %}PROGRESS ON MILLENNIUM DEVELOPMENT GOALS{% endblocktrans %}
+  </text>
+  <text x="45.846" y="78.197" class="head2">
+    {% blocktrans %}Eradicate Extreme Poverty and Hunger{% endblocktrans %}
+  </text>
+  <foreignObject x="87" y="95.5" width="190" height="60">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Calibri; font-size: 9px; line-height: 120%;" class="goals" id="poverty">
+      {% blocktrans with "<img class=\"arrow\" src=\"/media/icons/arrow_up_good.svg\"/>" as arrow and "<tspan class=\"value\">xx</tspan>" as value and "<tspan class=\"year\">xxxx</tspan>" as year and "<tspan class=\"change_value\">xx</tspan>" as change_value and "<tspan class=\"change_year\">xxxx</tspan>" as change_year %}Population living on less than $1 a day {{ value }} in {{ year }}. ({{ arrow }}{{ change_value }} since {{ change_year }}){% endblocktrans %}
+    </div>
+  </foreignObject>
+  <text x="43.785" y="180.94" class="head2">
+    {% blocktrans %}Achieve Universal Primary Education{% endblocktrans %}
+  </text>
+  <foreignObject x="87" y="196.45" width="190" height="60">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Calibri; font-size: 9px; line-height: 120%;" class="goals" id="edictation">
+      {% blocktrans with "<img class=\"arrow\" src=\"/media/icons/arrow_up_good.svg\"/>" as arrow and "<tspan class=\"value\">xx</tspan>" as value and "<tspan class=\"year\">xxxx</tspan>" as year and "<tspan class=\"change_value\">xx</tspan>" as change_value and "<tspan class=\"change_year\">xxxx</tspan>" as change_year %}Children enrolled in primary education {{ value }} in {{ year }}. ({{ arrow }}{{ change_value }} since {{ change_year }}){% endblocktrans %}
+    </div>
+  </foreignObject>
+  <text x="43.785" y="282.29" class="head2">
+    {% blocktrans %}Promote Gender Equality and Empower Women{% endblocktrans %}
+  </text>
+  <foreignObject x="87" y="299" width="190" height="60">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Calibri; font-size: 9px; line-height: 120%;" class="goals" id="gender">
+      {% blocktrans with "<img class=\"arrow\" src=\"/media/icons/arrow_up_good.svg\"/>" as arrow and "<tspan class=\"value\">xx</tspan>" as value and "<tspan class=\"year\">xxxx</tspan>" as year and "<tspan class=\"change_value\">xx</tspan>" as change_value and "<tspan class=\"change_year\">xxxx</tspan>" as change_year %}Gender parity index in primary level enrolment {{ value }} in {{ year }}. ({{ arrow }}{{ change_value }} since {{ change_year }}){% endblocktrans %}
+    </div>
+  </foreignObject>
+  <text x="43.785" y="385.68" class="head2">
+    {% blocktrans %}Reduce Child Mortality{% endblocktrans %}
+  </text>
+  <foreignObject x="87" y="403" width="190" height="60">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Calibri; font-size: 9px; line-height: 120%;" class="goals" id="mortality">
+      {% blocktrans with "<img class=\"arrow\" src=\"/media/icons/arrow_up_good.svg\"/>" as arrow and "<tspan class=\"value\">xx</tspan>" as value and "<tspan class=\"year\">xxxx</tspan>" as year and "<tspan class=\"change_value\">xx</tspan>" as change_value and "<tspan class=\"change_year\">xxxx</tspan>" as change_year %}Under 5 Mortality rate {{ value }} per 1000 live births in {{ year }}. ({{ arrow }}{{ change_value }} since {{ change_year }}){% endblocktrans %}
+    </div>
+  </foreignObject>
+  <text x="43.785" y="490.78" class="head2">
+    {% blocktrans %}Improve Maternal Health{% endblocktrans %}
+  </text>
+  <foreignObject x="87" y="507" width="190" height="60">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Calibri; font-size: 9px; line-height: 120%;" class="goals">
+      <ul>
+	<li id="maternal_mortality">
+	  {% blocktrans with "<img class=\"arrow\" src=\"/media/icons/arrow_up_good.svg\"/>" as arrow and "<tspan class=\"value\">xx</tspan>" as value and "<tspan class=\"year\">xxxx</tspan>" as year and "<tspan class=\"change_value\">xx</tspan>" as change_value and "<tspan class=\"change_year\">xxxx</tspan>" as change_year %}Maternal mortality ratio {{ value }} per 100,000 live births in {{ year }}. ({{ arrow }}{{ change_value }} since {{ change_year }}){% endblocktrans %}
+	</li>
+	<li id="family_planning">
+	  {% blocktrans with "<img class=\"arrow\" src=\"/media/icons/arrow_up_good.svg\"/>" as arrow and "<tspan class=\"value\">xx</tspan>" as value and "<tspan class=\"year\">xxxx</tspan>" as year and "<tspan class=\"change_value\">xx</tspan>" as change_value and "<tspan class=\"change_year\">xxxx</tspan>" as change_year %}Unmet need for family planning {{ value }} in {{ year }}. ({{ arrow }}{{ change_value }} since {{ change_year }}){% endblocktrans %}
+	</li>
+      </ul>
+    </div>
+  </foreignObject>
+  <text x="43.785" y="598.04" class="head2">
+    {% blocktrans %}Compat HIV/AIDS, Malaria and other Diseases{% endblocktrans %}
+  </text>
+  <foreignObject x="87" y="610" width="190" height="90">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Calibri; font-size: 9px; line-height: 100%;" class="goals">
+      <ul>
+	<li id="hiv">
+	  {% blocktrans with "<img class=\"arrow\" src=\"/media/icons/arrow_up_good.svg\"/>" as arrow and "<tspan class=\"value\">xx</tspan>" as value and "<tspan class=\"year\">xxxx</tspan>" as year and "<tspan class=\"change_value\">xx</tspan>" as change_value and "<tspan class=\"change_year\">xxxx</tspan>" as change_year %}HIV prevalence {{ value }} in {{ year }}. ({{ arrow }}{{ change_value }} since {{ change_year }}){% endblocktrans %}
+	</li>
+	<li id="children_u5">
+	  {% blocktrans with "<img class=\"arrow\" src=\"/media/icons/arrow_up_good.svg\"/>" as arrow and "<tspan class=\"value\">xx</tspan>" as value and "<tspan class=\"year\">xxxx</tspan>" as year and "<tspan class=\"change_value\">xx</tspan>" as change_value and "<tspan class=\"change_year\">xxxx</tspan>" as change_year %}Children U-5 sleeping under insecticide treated bednet {{ value }} in {{ year }}. ({{ arrow }}{{ change_value }} since {{ change_year }}){% endblocktrans %}
+	</li>
+	<li id="tb">
+	  {% blocktrans with "<img class=\"arrow\" src=\"/media/icons/arrow_up_good.svg\"/>" as arrow and "<tspan class=\"value\">xx</tspan>" as value and "<tspan class=\"year\">xxxx</tspan>" as year and "<tspan class=\"change_value\">xx</tspan>" as change_value and "<tspan class=\"change_year\">xxxx</tspan>" as change_year %}TB incidence per {{ value }} per 100,000 in {{ year }}. ({{ arrow }}{{ change_value }} since {{ change_year }}){% endblocktrans %}
+	</li>
+      </ul>
+    </div>
+  </foreignObject>
+  <text x="43.785" y="732.13" class="head2">
+    {% blocktrans %}Ensure Environmental Sustainability{% endblocktrans %}
+  </text>
+  <foreignObject x="87" y="751" width="190" height="90">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Calibri; font-size: 9px; line-height: 100%;" class="goals">
+      <ul>
+	<li id="water">
+	  {% blocktrans with "<img class=\"arrow\" src=\"/media/icons/arrow_up_good.svg\"/>" as arrow and "<tspan class=\"value\">xx</tspan>" as value and "<tspan class=\"year\">xxxx</tspan>" as year and "<tspan class=\"change_value\">xx</tspan>" as change_value and "<tspan class=\"change_year\">xxxx</tspan>" as change_year %}Population using improved drinking water sources {{ value }} in {{ year }}. ({{ arrow }}{{ change_value }} since {{ change_year }}){% endblocktrans %}
+	</li>
+	<li id="sanitation">
+	  {% blocktrans with "<img class=\"arrow\" src=\"/media/icons/arrow_up_good.svg\"/>" as arrow and "<tspan class=\"value\">xx</tspan>" as value and "<tspan class=\"year\">xxxx</tspan>" as year and "<tspan class=\"change_value\">xx</tspan>" as change_value and "<tspan class=\"change_year\">xxxx</tspan>" as change_year %}Population using improved sanitation sources {{ value }} in {{ year }}. ({{ arrow }}{{ change_value }} since {{ change_year }}){% endblocktrans %}
+	</li>
+      </ul>
+    </div>
+  </foreignObject>
+</g>
 </svg>

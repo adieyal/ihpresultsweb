@@ -2,24 +2,25 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-21 00:42+0200\n"
+"POT-Creation-Date: 2012-06-22 10:40+0200\n"
 "PO-Revision-Date: 2012-06-21 00:43\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 "X-Translated-Using: django-rosetta 0.6.8\n"
 
 #: templates/scorecards/country-page-1.svg:5829
+#: templates/scorecards/country-page-2.svg:9424
 msgid "ETHIOPIA"
 msgstr ""
 
@@ -36,8 +37,8 @@ msgstr ""
 #: templates/scorecards/country-page-1.svg:5835
 msgid ""
 "This work is licensed under the Creative Commons Atribution-NonCommercial "
-"3.0 Unported License. To view a copy of this license, visit "
-"http://creativecommons.org.licenses/by-nc/3.0"
+"3.0 Unported License. To view a copy of this license, visit http://"
+"creativecommons.org.licenses/by-nc/3.0"
 msgstr ""
 
 #: templates/scorecards/country-page-1.svg:5839
@@ -156,8 +157,8 @@ msgstr ""
 #: templates/scorecards/country-page-1.svg:5927
 #, python-format
 msgid ""
-"• 10%% of seats in the health sector coordination mechanism are allocated to"
-" civil society"
+"• 10%% of seats in the health sector coordination mechanism are allocated to "
+"civil society"
 msgstr ""
 "• 10%% des sièges alloués à la société civile dans\n"
 "le mécanisme de coordina􀀉on du secteur de la\n"
@@ -182,3 +183,96 @@ msgstr "FONCTIONNEMENT DU SYSTEME NATIONAL D'INFORMATION SANITAIRE (SNIS)"
 #: templates/scorecards/country-page-1.svg:5951
 msgid "NATIONAL RESULTS FRAMEWORK AGREED"
 msgstr "CADRE NATIONAL DE RESULTATS CONVENUS"
+
+#: templates/scorecards/country-page-2.svg:9424
+msgid "AGENCIES REPORTING TO IHP+RESULTS IN "
+msgstr ""
+
+#: templates/scorecards/country-page-2.svg:9427
+msgid "HOW TO INTERPRET THIS SCORECARD"
+msgstr ""
+
+#: templates/scorecards/country-page-2.svg:9446
+msgid ""
+"The majority of data presented in this Scorecard is from the Ministry of "
+"Health. There are two exceptions - the ratings for Technical Assistance and "
+"the quality of civil society engagement*."
+msgstr ""
+
+#: templates/scorecards/country-page-2.svg:9447
+msgid ""
+"The Scorecard shows results using 5 Results Areas (see below) to tell the "
+"story of IHP+ implementation in a logical flow: from the national health "
+"plan to monitoring and evaluation of that plan."
+msgstr ""
+
+#: templates/scorecards/country-page-2.svg:9448
+#, python-format
+msgid ""
+"Where they are used, rating symbols illustrate whether the government has "
+"achieved %(tick)s, is working towards %(arrow)s, or hasn’t made progress "
+"%(exclamation)s against agreed targets. Details of these ratings can be "
+"found online in the North-South Observatory for IHP+Results (www.ihpresults."
+"net)"
+msgstr ""
+
+#: templates/scorecards/country-page-2.svg:9449
+msgid ""
+"Progress against the Millennium Development Goals is provided for contextual "
+"purposes."
+msgstr ""
+
+#: templates/scorecards/country-page-2.svg:9451
+msgid "Additional Information"
+msgstr ""
+
+#: templates/scorecards/country-page-2.svg:9452
+msgid ""
+"The reverse of the Scorecard (opposite), shows natinal government "
+"performance against an agreed set of Standard Performance Measures (SPMs). "
+"The following headings are used:"
+msgstr ""
+
+#: templates/scorecards/country-page-2.svg:9454
+msgid ""
+"Expected Results reflect key commitments made in the IHP+ Global Compact."
+msgstr ""
+
+#: templates/scorecards/country-page-2.svg:9455
+#, python-format
+msgid ""
+"Progress Symbols illustrate whether the government has achieved %(tick)s, is "
+"making progress %(arrow)s, or has not made progress %(exclamation)s against "
+"10 SPMs."
+msgstr ""
+
+#: templates/scorecards/country-page-2.svg:9456
+msgid "Δ Targets for each SPM can be found at www.ihpresults.net"
+msgstr ""
+
+#: templates/scorecards/country-page-2.svg:9457
+msgid ""
+"Agencies Reporting Limited Progress shows a summary of ratings against 12 "
+"agreed SPMs for Development Partners that are active in this country, and "
+"who have voluntarily disclosed to IHP+Results 2010 monitoring survey. Where "
+"ratings of or have been scored for the minority of SPMs."
+msgstr ""
+
+#: templates/scorecards/country-page-2.svg:9464
+msgid ""
+"The Technical Assistance rating summarises data provided by the IHP+ "
+"Development Partner signatories that are active in this country. The quality "
+"of civil society engagement was assessed through conducting surveys with in-"
+"country civil society organistions."
+msgstr ""
+
+#: templates/scorecards/country-page-2.svg:9468
+msgid "PROGRESS ON MILLENNIUM DEVELOPMENT GOALS"
+msgstr ""
+
+#: templates/scorecards/country-page-2.svg:9492
+#, python-format
+msgid ""
+"Population living on less than $1 a day %(value)s in %(year)s. (%(arrow)s"
+"%(change_value)s since %(change_year)s)"
+msgstr ""

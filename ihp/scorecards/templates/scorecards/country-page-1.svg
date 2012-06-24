@@ -5841,20 +5841,20 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
   <foreignObject x="129" y="1107" width="142.5" height="30">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;">{% blocktrans %}ACCESS TO PHC CLINICS{% endblocktrans %}</div>
   </foreignObject>
-  <foreignObject x="135" y="1140" width="132" height="60">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;"><span style="font-family: Calibri-Bold;">5404</span> {% blocktrans %}outpatient department visits per 10,000 population per year{% endblocktrans %}</div>
+  <foreignObject x="135" y="1140" width="132" height="60" id="phcclinincs-text">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;"><span style="font-family: Calibri-Bold;" class="value">5404</span> {% blocktrans %}outpatient department visits per 10,000 population per year{% endblocktrans %}</div>
   </foreignObject>
   <foreignObject x="289.5" y="1107" width="142.5" height="30">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;">{% blocktrans %}AVAILABILITY OF HEALTH WORKERS{% endblocktrans %}</div>
   </foreignObject>
-  <foreignObject x="294.75" y="1140" width="132" height="60">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;"><span style="font-family: Calibri-Bold;">8.3</span> {% blocktrans %}skilled medical personnel per 10,000 population{% endblocktrans %}</div>
+  <foreignObject x="294.75" y="1140" width="132" height="60" id="healthworkers-text">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;"><span style="font-family: Calibri-Bold;" class="value">8.3</span> {% blocktrans %}skilled medical personnel per 10,000 population{% endblocktrans %}</div>
   </foreignObject>
   <foreignObject x="448.5" y="1107" width="142.5" height="30">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;">{% blocktrans %}FUNDS FOR HEALTH SYSTEMS{% endblocktrans %}</div>
   </foreignObject>
-  <foreignObject x="453.75" y="1140" width="132" height="60">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;"><span style="font-family: Calibri-Bold;">US$48,723,933</span> {% blocktrans %}spent on health workforce increasing{% endblocktrans %}</div>
+  <foreignObject x="453.75" y="1140" width="132" height="60" id="healthsystems-text">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;"><span style="font-family: Calibri-Bold;" class="value">US$48,723,933</span> {% blocktrans %}spent on health workforce increasing{% endblocktrans %}</div>
   </foreignObject>
   <!-- Country systems widget. -->
   <text x="761.445" y="916.26" style="font-size: 15px; font-family: Calibri; fill: #fff;">
