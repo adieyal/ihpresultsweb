@@ -8546,7 +8546,7 @@ AH6n/Ixv6Yr4Zd/hTXv9+p/yMb+mK+GXf4U17/fqf8jG/pivhlT/AMG6v4xf8Ef6Yr4Zf//Z</xmpGIm
 	
   </style>
   <text x="874.74" y="45.591" class="head1">
-    {% blocktrans %}AGENCIES REPORTING TO IHP+RESULTS IN {% endblocktrans %}{% blocktrans %}ETHIOPIA{% endblocktrans %}
+    {% blocktrans %}AGENCIES REPORTING TO IHP+RESULTS IN {% endblocktrans %}<tspan id="country_name" class="country_name">{% blocktrans %}ETHIOPIA{% endblocktrans %}</tspan>
   </text>
   <text x="874.74" y="313.6" class="head1">
     {% blocktrans %}HOW TO INTERPRET THIS SCORECARD{% endblocktrans %}
