@@ -47,9 +47,9 @@ dp_conversion_questions = [
 
 yes_values = ["oui", "yes", "y", "si"]
 no_values = ["non", "no", "n"]
-empty_values = ["", "sélectionner", "précisez s'il vous plaît", "select", "Please select"]
+empty_values = ["", u"sélectionner", u"précisez s'il vous plaît", "select", "Please select"]
 
-under_development = [u"en cours de développement"]
+under_development_values = [u"en cours de développement", u"siendo desarrollado", "under development"]
 
 def cellgrabber(sheet):
     def _v(r, c):
@@ -58,8 +58,8 @@ def cellgrabber(sheet):
             value = value.strip()
             if value in empty_values:
                 return None
-            if value in under_development:
-                return "under_development"
+            if value in under_development_values:
+                return SubmissionParser.UNDER_DEVELOPMENT
             return value
         return value
     return _v
@@ -69,6 +69,7 @@ class SubmissionParser(object):
     GOV_SHEET = "Gov"
     YES_VALUE = "yes"
     NO_VALUE = "no"
+    UNDER_DEVELOPMENT = "under development"
 
     @classmethod
     def get_parser(cls, f):
@@ -117,6 +118,8 @@ class SubmissionParser(object):
                 return SubmissionParser.YES_VALUE
             elif val in no_values:
                 return SubmissionParser.NO_VALUE
+            elif val in under_development_values:
+                return SubmissionParser.UNDER_DEVELOPMENT
 
         sys.stderr.write("WARNING: Unknown yes/no value: %s in row: %d, col: %d\n" % (val, row, col))
         return None

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 import submissions.models as smodels
-from submissions.models import Agency, GovQuestion, MDGData, DPQuestion, AgencyTargets 
+from submissions.models import Agency, GovQuestion, MDGData, DPQuestion, AgencyTargets, CountryTargets
 from submissions import indicators
 from submissions import target
 from django.conf import settings
 
 #Nasty, I know.
-from previous_data import get2010value
+from previous_data import get2010value, add_previous_value
 
 def foz(x):
     try:
@@ -25,6 +25,7 @@ def myround(x, places=0):
     return round(foz(x), places)
 r0 = lambda x : myround(x, 0)
 r1 = lambda x : myround(x, 1)
+r2 = lambda x : myround(x, 2)
 
 def in_millions(x):
     return float(x) / 1000000
@@ -110,6 +111,12 @@ class GovScorecard(object):
         else:
             cs_logo = self.tick_if_true(foz(self.gov_ltv("13")) >= 10)
 
+        # % of seats to CS calculation.
+        if foz(self.question("5").latest_value) > 0:
+            seats = foz(self.question("6").latest_value)/foz(self.question("5").latest_value)
+        else:
+            seats = 0
+        
         return {
             "commitments": [
                 {"description": "Signed Agreement", "logo": self.gov_rating("1")},
@@ -122,7 +129,7 @@ class GovScorecard(object):
             "aid_effectiveness": [
                 {"description": "Active joint monitoring", "logo": self.gov_rating("12")},
                 {"description": "Number of development partner missions", "text": foz(self.gov_ltv("16"))},
-                {"description": "10% of seats in the health sector coordination mechanism are allocated to civil society", "logo": cs_logo},
+                {"description": "%g%% of seats in the health sector coordination mechanism are allocated to civil society" % (r2(seats*100)), "logo": cs_logo},
             ]
         }
 
@@ -146,7 +153,7 @@ class GovScorecard(object):
 
         return {
             "total": {
-                "series":[
+                "series": [
                     {
                         "name": self.question("6").baseline_year, 
                         "domestic": domestic_baseline,
@@ -277,109 +284,105 @@ class GovScorecard(object):
                 return 1
             return 0
 
+        base_targets = CountryTargets.objects.filter(country=None)
+        def get_target(indicator):
+            try:
+                return CountryTargets.objects.get(indicator=indicator, country=self.country).tick_criterion_value
+            except CountryTargets.DoesNotExist:
+                return base_targets.get(indicator=indicator).tick_criterion_value
+
         return {
             "mutual_agreement":{
                 "description": "An IHP+ Compact or equivalent mutual agreement is in place.",
                 "rating": rating_icon(r1G["target"]),
                 "max": 2,
-                "progress": [
+                "progress": add_previous_value(self.country, 'commitments.mutual_agreement', [
                     {"year": r1G["base_year"], "value":progress_to_int(r1G["base_val"])},
-                    get2010value(self.country, 'commitments.mutual_agreement'),
                     {"year": r1G["cur_year"], "value":progress_to_int(r1G["cur_val"])},
-                ]
+                ])
             },
             "health_plan":{
                 "description": "A National Health Sector Plan/ Strategy is in place with current targets & budgets that have been jointly assessed.",
                 "rating": rating_icon(r2Ga["target"]),
                 "max": 2,
-                "progress": [
+                "progress": add_previous_value(self.country, 'commitments.health_plan', [
                     {"year": r2Ga["base_year"], "value":progress_to_int(r2Ga["base_val"])},
-                    get2010value(self.country, 'commitments.health_plan'),
                     {"year": r2Ga["cur_year"], "value":progress_to_int(r2Ga["cur_val"])},
-                ]
+                ])
             },
             "hrh_plan":{
                 "description": "A costed, comprehensive national HRH plan (integrated with the health plan) is being implemented or developed.",
                 "rating": rating_icon(r2Gb["target"]),
                 "max": 2,
-                "progress": [
+                "progress": add_previous_value(self.country, 'commitments.hrh_plan', [
                     {"year": r2Gb["base_year"], "value":progress_to_int(r2Gb["base_val"])},
-                    get2010value(self.country, 'commitments.hrh_plan'),
                     {"year": r2Gb["cur_year"], "value":progress_to_int(r2Gb["cur_val"])},
-                ]
+                ])
             },
             "fundingcommitments":{
-                "description": "15% (or an equivalent published target) of the national budget is allocated to health.",
-                "rating": "icons/arrow.svg",
+                "description": "%d%% (or an equivalent published target) of the national budget is allocated to health." % round(get_target("3G")),
                 "rating": rating_icon(r3G["target"]),
-                "progress": [
+                "progress": add_previous_value(self.country, 'commitments.fundingcommitments', [
                     {"year": r3G["base_year"], "value":foz(r3G["base_val"])},
-                    get2010value(self.country, 'commitments.fundingcommitments'),
                     {"year": r3G["cur_year"], "value":foz(r3G["cur_val"])},
-                ],
-                "line": { "constant": 15},
+                ]),
+                "line": {"constant": round(get_target("3G"))},
                 "max": 20
             },
             "health_funding":{
                 "description": "Halve the proportion of health sector funding not disbursed against the approved annual budget.",
                 "rating": rating_icon(r4G["target"]),
-                "progress": [
+                "progress": add_previous_value(self.country, 'commitments.health_funding', [
                     {"year": r4G["base_year"], "value":foz(r4G["base_val"])},
-                    get2010value(self.country, 'commitments.health_funding'),
                     {"year": r4G["cur_year"], "value":foz(r4G["cur_val"])},
-                ],
+                ]),
                 "max": 100
             },
             "cipa_scale":{
                 "description": "Improvement of at least one measure (ie 0.5 points) on the PFM/CPIA scale of performance.",
                 "rating": rating_icon(r5Ga["target"]),
-                "progress": [
+                "progress": add_previous_value(self.country, 'commitments.cipa_scale', [
                     {"year": r5Ga["base_year"], "value":foz(r5Ga["base_val"])},
-                    get2010value(self.country, 'commitments.cipa_scale'),
                     {"year": r5Ga["cur_year"], "value":foz(r5Ga["cur_val"])},
-                ],
+                ]),
                 "max": 5
             },
             "performance_scale":{
                 "description": "Improvement of at least one measure on the four-point scale used to assess performance for this sector.",
                 "rating": rating_icon(r5Gb["target"]),
                 "type":"dot",
-                "progress": [
+                "progress": add_previous_value(self.country, 'commitments.performance_scale', [
                     {"year": r5Gb["base_year"], "value":r5Gb["base_val"]},
-                    get2010value(self.country, 'commitments.performance_scale'),
                     {"year": r5Gb["cur_year"], "value":r5Gb["cur_val"]},
-                ]
+                ])
             },
 
             "resources":{
                 "description": "A transparent and monitorable performance assessment framework is in place to assess progress in the health sector.",
                 "rating": rating_icon(r6G["target"]),
                 "max": 2,
-                "progress": [
+                "progress": add_previous_value(self.country, 'commitments.resources', [
                     {"year": r6G["base_year"], "value":progress_to_int(r6G["base_val"])},
-                    get2010value(self.country, 'commitments.resources'),
                     {"year": r6G["cur_year"], "value":progress_to_int(r6G["cur_val"])},
-                ]
+                ])
             },
             "accountability":{
                 "description": "Mutual assesments (such as joint Annual Health Sector Review) are being made of progress implementing commitments in the health sector, including on aid effectiveness.",
                 "rating": rating_icon(r7G["target"]),
                 "max": 2,
-                "progress": [
+                "progress": add_previous_value(self.country, 'commitments.accountability', [
                     {"year": r7G["base_year"], "value":progress_to_int(r7G["base_val"])},
-                    get2010value(self.country, 'commitments.accountability'),
                     {"year": r7G["cur_year"], "value":progress_to_int(r7G["cur_val"])},
-                ]
+                ])
             },
             "civilsociety":{
                 "description": "At least 10% of seats in the country’s Health Sector Coordination mechanisms are allocated to Civil Society",
                 "rating": rating_icon(r8Gb["target"]),
                 "max": 2,
-                "progress": [
+                "progress": add_previous_value(self.country, 'commitments.civilsociety', [
                     {"year": r8G["base_year"], "value":cs_progress(foz(r8Gb["base_val"]))},
-                    get2010value(self.country, 'commitments.civilsociety'),
                     {"year": r8G["cur_year"], "value":cs_progress(foz(r8Gb["cur_val"]))},
-                ]
+                ])
             }
         }
 

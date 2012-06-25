@@ -136,7 +136,7 @@ def two_by_two_analysis_json(request):
         r["1G"]["target"] == models.Rating.TICK
         and r["2Ga"]["target"] == models.Rating.TICK
         and r["6G"]["target"] == models.Rating.TICK
-        and r["6G"]["target"] == models.Rating.TICK
+        and r["7G"]["target"] == models.Rating.TICK
     )
 
     not_all_all_indicators = lambda r : not has_all_indicators(r)

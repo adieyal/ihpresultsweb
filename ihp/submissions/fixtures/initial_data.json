@@ -3660,5 +3660,634 @@
             "latest_value": 48.0, 
             "mdg_target": "MDG7b"
         }
+    },
+    {
+        "pk": 1, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": null, 
+            "r6": null, 
+            "r7": null, 
+            "r1": null, 
+            "hsp1": null, 
+            "r3": null, 
+            "r5b": null, 
+            "country": 1, 
+            "r5a": null, 
+            "r8": null, 
+            "r2b": "arrow", 
+            "r2a": null, 
+            "hsm1": null, 
+            "hsm4": null, 
+            "jar1": null, 
+            "hmis1": null, 
+            "hsp2": null
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": null, 
+            "r6": null, 
+            "r7": null, 
+            "r1": "arrow", 
+            "hsp1": null, 
+            "r3": null, 
+            "r5b": null, 
+            "country": 2, 
+            "r5a": null, 
+            "r8": null, 
+            "r2b": null, 
+            "r2a": null, 
+            "hsm1": null, 
+            "hsm4": null, 
+            "jar1": null, 
+            "hmis1": null, 
+            "hsp2": null
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": null, 
+            "r6": null, 
+            "r7": null, 
+            "r1": "arrow", 
+            "hsp1": null, 
+            "r3": null, 
+            "r5b": null, 
+            "country": 4, 
+            "r5a": null, 
+            "r8": null, 
+            "r2b": "arrow", 
+            "r2a": null, 
+            "hsm1": null, 
+            "hsm4": null, 
+            "jar1": null, 
+            "hmis1": null, 
+            "hsp2": null
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": null, 
+            "r6": null, 
+            "r7": null, 
+            "r1": null, 
+            "hsp1": null, 
+            "r3": null, 
+            "r5b": null, 
+            "country": 6, 
+            "r5a": null, 
+            "r8": null, 
+            "r2b": null, 
+            "r2a": null, 
+            "hsm1": null, 
+            "hsm4": null, 
+            "jar1": null, 
+            "hmis1": null, 
+            "hsp2": null
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": "", 
+            "r6": "", 
+            "r7": "", 
+            "r1": "", 
+            "hsp1": "", 
+            "r3": "", 
+            "r5b": "", 
+            "country": 8, 
+            "r5a": "", 
+            "r8": "", 
+            "r2b": "", 
+            "r2a": "", 
+            "hsm1": "", 
+            "hsm4": "arrow", 
+            "jar1": "", 
+            "hmis1": "", 
+            "hsp2": ""
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": "", 
+            "r6": "", 
+            "r7": "", 
+            "r1": "", 
+            "hsp1": "", 
+            "r3": "", 
+            "r5b": "", 
+            "country": 9, 
+            "r5a": "", 
+            "r8": "", 
+            "r2b": "", 
+            "r2a": "", 
+            "hsm1": "", 
+            "hsm4": "cross", 
+            "jar1": "", 
+            "hmis1": "", 
+            "hsp2": ""
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": null, 
+            "r6": null, 
+            "r7": null, 
+            "r1": null, 
+            "hsp1": null, 
+            "r3": null, 
+            "r5b": null, 
+            "country": 10, 
+            "r5a": null, 
+            "r8": null, 
+            "r2b": null, 
+            "r2a": null, 
+            "hsm1": null, 
+            "hsm4": null, 
+            "jar1": null, 
+            "hmis1": null, 
+            "hsp2": null
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": null, 
+            "r6": null, 
+            "r7": null, 
+            "r1": null, 
+            "hsp1": null, 
+            "r3": null, 
+            "r5b": null, 
+            "country": 11, 
+            "r5a": null, 
+            "r8": null, 
+            "r2b": null, 
+            "r2a": null, 
+            "hsm1": null, 
+            "hsm4": null, 
+            "jar1": null, 
+            "hmis1": null, 
+            "hsp2": null
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": "", 
+            "r6": "", 
+            "r7": "", 
+            "r1": "", 
+            "hsp1": "", 
+            "r3": "", 
+            "r5b": "", 
+            "country": 3, 
+            "r5a": "", 
+            "r8": "", 
+            "r2b": "", 
+            "r2a": "", 
+            "hsm1": "", 
+            "hsm4": "arrow", 
+            "jar1": "", 
+            "hmis1": "", 
+            "hsp2": ""
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": null, 
+            "r6": null, 
+            "r7": null, 
+            "r1": null, 
+            "hsp1": null, 
+            "r3": null, 
+            "r5b": null, 
+            "country": 5, 
+            "r5a": null, 
+            "r8": null, 
+            "r2b": null, 
+            "r2a": null, 
+            "hsm1": null, 
+            "hsm4": null, 
+            "jar1": null, 
+            "hmis1": null, 
+            "hsp2": null
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": null, 
+            "r6": null, 
+            "r7": null, 
+            "r1": null, 
+            "hsp1": null, 
+            "r3": null, 
+            "r5b": null, 
+            "country": 12, 
+            "r5a": null, 
+            "r8": null, 
+            "r2b": null, 
+            "r2a": null, 
+            "hsm1": null, 
+            "hsm4": null, 
+            "jar1": null, 
+            "hmis1": null, 
+            "hsp2": null
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": null, 
+            "r6": "arrow", 
+            "r7": null, 
+            "r1": null, 
+            "hsp1": null, 
+            "r3": null, 
+            "r5b": null, 
+            "country": 13, 
+            "r5a": null, 
+            "r8": null, 
+            "r2b": null, 
+            "r2a": null, 
+            "hsm1": null, 
+            "hsm4": null, 
+            "jar1": null, 
+            "hmis1": null, 
+            "hsp2": null
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": null, 
+            "r6": "arrow", 
+            "r7": null, 
+            "r1": "arrow", 
+            "hsp1": null, 
+            "r3": null, 
+            "r5b": null, 
+            "country": 14, 
+            "r5a": null, 
+            "r8": null, 
+            "r2b": "arrow", 
+            "r2a": null, 
+            "hsm1": null, 
+            "hsm4": null, 
+            "jar1": null, 
+            "hmis1": null, 
+            "hsp2": null
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": null, 
+            "r6": null, 
+            "r7": null, 
+            "r1": null, 
+            "hsp1": null, 
+            "r3": null, 
+            "r5b": null, 
+            "country": 15, 
+            "r5a": null, 
+            "r8": null, 
+            "r2b": null, 
+            "r2a": null, 
+            "hsm1": null, 
+            "hsm4": null, 
+            "jar1": null, 
+            "hmis1": null, 
+            "hsp2": null
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": null, 
+            "r6": null, 
+            "r7": null, 
+            "r1": null, 
+            "hsp1": null, 
+            "r3": null, 
+            "r5b": null, 
+            "country": 16, 
+            "r5a": null, 
+            "r8": null, 
+            "r2b": null, 
+            "r2a": null, 
+            "hsm1": null, 
+            "hsm4": null, 
+            "jar1": null, 
+            "hmis1": null, 
+            "hsp2": null
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": null, 
+            "r6": null, 
+            "r7": null, 
+            "r1": null, 
+            "hsp1": null, 
+            "r3": null, 
+            "r5b": null, 
+            "country": 17, 
+            "r5a": null, 
+            "r8": null, 
+            "r2b": null, 
+            "r2a": null, 
+            "hsm1": null, 
+            "hsm4": null, 
+            "jar1": null, 
+            "hmis1": null, 
+            "hsp2": null
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": null, 
+            "r6": null, 
+            "r7": null, 
+            "r1": null, 
+            "hsp1": null, 
+            "r3": null, 
+            "r5b": null, 
+            "country": 18, 
+            "r5a": null, 
+            "r8": null, 
+            "r2b": null, 
+            "r2a": null, 
+            "hsm1": null, 
+            "hsm4": null, 
+            "jar1": null, 
+            "hmis1": null, 
+            "hsp2": null
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": null, 
+            "r6": "arrow", 
+            "r7": null, 
+            "r1": "arrow", 
+            "hsp1": null, 
+            "r3": null, 
+            "r5b": null, 
+            "country": 19, 
+            "r5a": null, 
+            "r8": null, 
+            "r2b": "arrow", 
+            "r2a": null, 
+            "hsm1": null, 
+            "hsm4": null, 
+            "jar1": null, 
+            "hmis1": null, 
+            "hsp2": null
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "submissions.govscorecardratings", 
+        "fields": {
+            "r4": null, 
+            "r6": null, 
+            "r7": null, 
+            "r1": null, 
+            "hsp1": null, 
+            "r3": null, 
+            "r5b": null, 
+            "country": 20, 
+            "r5a": null, 
+            "r8": null, 
+            "r2b": null, 
+            "r2a": null, 
+            "hsm1": null, 
+            "hsm4": null, 
+            "jar1": null, 
+            "hmis1": null, 
+            "hsp2": null
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "1G", 
+            "country": null, 
+            "arrow_criterion_type": "First Question Yes", 
+            "tick_criterion_type": "First Question Yes", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "2Ga", 
+            "country": null, 
+            "arrow_criterion_type": "Both Questions Yes", 
+            "tick_criterion_type": "Both Questions Yes", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": 100.0, 
+            "indicator": "2Gb", 
+            "country": null, 
+            "arrow_criterion_type": "Absolute % Target", 
+            "tick_criterion_type": "Absolute % Target", 
+            "arrow_criterion_value": 100.0
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": 14.999, 
+            "indicator": "3G", 
+            "country": null, 
+            "arrow_criterion_type": "Increase relative to baseline (no minimum)", 
+            "tick_criterion_type": "Absolute greater than x%", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": 49.999, 
+            "indicator": "4G", 
+            "country": null, 
+            "arrow_criterion_type": "Decrease relative to baseline (no minimum)", 
+            "tick_criterion_type": "Minimum x% Decrease relative to baseline", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": 3.499, 
+            "indicator": "5Ga", 
+            "country": null, 
+            "arrow_criterion_type": "Absolute greater than x%", 
+            "tick_criterion_type": "Absolute greater than x%", 
+            "arrow_criterion_value": 3.499
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "6G", 
+            "country": null, 
+            "arrow_criterion_type": "First Question Yes", 
+            "tick_criterion_type": "First Question Yes", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "7G", 
+            "country": null, 
+            "arrow_criterion_type": "First Question Yes", 
+            "tick_criterion_type": "First Question Yes", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": 9.9999, 
+            "indicator": "8G", 
+            "country": null, 
+            "arrow_criterion_type": "Absolute greater than x%", 
+            "tick_criterion_type": "Absolute greater than x%", 
+            "arrow_criterion_value": 0.0
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "5Gb", 
+            "country": null, 
+            "arrow_criterion_type": "Increase relative to baseline (no minimum)", 
+            "tick_criterion_type": "Increase relative to baseline (no minimum)", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "Q12G", 
+            "country": null, 
+            "arrow_criterion_type": "First Question Yes", 
+            "tick_criterion_type": "First Question Yes", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "Q21G", 
+            "country": null, 
+            "arrow_criterion_type": "First Question Yes", 
+            "tick_criterion_type": "First Question Yes", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "Q2G", 
+            "country": null, 
+            "arrow_criterion_type": "First Question Yes", 
+            "tick_criterion_type": "First Question Yes", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": null, 
+            "indicator": "Q3G", 
+            "country": null, 
+            "arrow_criterion_type": "First Question Yes", 
+            "tick_criterion_type": "First Question Yes", 
+            "arrow_criterion_value": null
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": 4.0, 
+            "indicator": "8Gb", 
+            "country": null, 
+            "arrow_criterion_type": "Absolute greater than x%", 
+            "tick_criterion_type": "Absolute % Target", 
+            "arrow_criterion_value": 0.0
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "submissions.countrytargets", 
+        "fields": {
+            "tick_criterion_value": 9.999, 
+            "indicator": "3G", 
+            "country": 1, 
+            "arrow_criterion_type": "Increase relative to baseline (no minimum)", 
+            "tick_criterion_type": "Absolute greater than x%", 
+            "arrow_criterion_value": null
+        }
     }
 ]

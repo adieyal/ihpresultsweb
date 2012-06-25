@@ -108,8 +108,6 @@ def calc_indicator(qs, agency_or_country, indicator, funcs=None):
     #if len(qs2) > 0 and qs2[0].submission.country.country == "Burkina Faso" and qs2[0].submission.agency.agency == "AfDB":
     base_val = BaselineIndicatorCalculator(func, args).calc(qs2, agency_or_country)
     
-    #if agency_or_country.agency == "GAVI" and indicator == "5DPb":
-    #    import pdb; pdb.set_trace()
     cur_val = LatestIndicatorCalculator(func, args).calc(qs2, agency_or_country)
 
     

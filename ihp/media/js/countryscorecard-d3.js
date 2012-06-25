@@ -63,7 +63,8 @@ var fill_svg = function(json){
     }
 
     for (i in json.health_systems){
-        height = 75;
+        var height = 75;
+	var max_height = 90;
 
         id = '#' + i;
         n = d3.select(id);
@@ -72,14 +73,19 @@ var fill_svg = function(json){
             data = json.health_systems[i];
             
             var r = rounding[i];
-            /*
+            
             if (data.value != NaN) {
-                if (i == "healthsystems")
-                    n.select('.value').text("US$" + data.value.formatThousands(r));
-                else
-                    n.select('.value').text(data.value.formatThousands(r));
+                if (i == "healthsystems") {
+                    d3.select(id+'-text')
+		        .select('.value')
+			.text("US$" + data.value.formatThousands(r));
+                } else {
+                    d3.select(id+'-text')
+		        .select('.value')
+			.text(data.value.formatThousands(r));
+		}
             }
-            */
+            
         
 
             var g = n.select('.graph');
@@ -88,6 +94,7 @@ var fill_svg = function(json){
             pixels = data.percent / 100 * height * -1;
 
             if (pixels < 0){
+		pixels = d3.max([pixels, -max_height])
                 g.select('rect')
                     .attr('y', pixels)
                     .attr('class', 'health_green')
@@ -103,6 +110,7 @@ var fill_svg = function(json){
                     .attr('class', 'health-value')
                     .text(data.percent + '%');
             }else {
+		pixels = d3.min([pixels, max_height])
                 g.select('rect')
                     .attr('y', 0)
                     .attr('class', 'health_red')
@@ -193,11 +201,14 @@ var fill_svg = function(json){
         id = '#' + i;
         n = d3.select(id);
 
+        d3.select(id+'-text')
+	    .text(data.description);
+
         if (n.node() !== null){
-            var text= n.selectAll('.text');
-            if (text.node() !== null){
-                insert_text(n.selectAll('.text'), data.description, 'commitment-text');
-            }
+            //var text= n.selectAll('.text');
+            //if (text.node() !== null){
+            //    insert_text(n.selectAll('.text'), data.description, 'commitment-text');
+            //}
             var icon = n.selectAll('.icon');
             if (icon.node() !== null){
                 load_svg_image(data.rating, id + ' .icon');
@@ -241,6 +252,7 @@ var fill_svg = function(json){
         n = d3.select(id);
         data = json.progress[i];
         if (n.node() !== null){
+	    console.log('doing '+i);
             value_mode = data.type == "percent" ? '%' : '';
             change_mode = data.change_type == "percent" ? '%' : '';
 
@@ -258,9 +270,14 @@ var fill_svg = function(json){
                 .attr('class', data.color)
                 .text(data.change_value + change_mode);
 
-            var color = data.color;
-            load_svg_image('/media/icons/arrow_' + data.arrow + '_' + data.color + '.svg',
-                id + ' .arrow');
+            var src = '/media/icons/arrow_' + data.arrow + '_'
+		+ data.color + '.svg';
+	    n.select('img.arrow')
+		.attr('src', '/media/icons/arrow_' + data.arrow + '_' + data.color + '.svg')
+            //load_svg_image('/media/icons/arrow_' + data.arrow + '_' + data.color + '.svg',
+            //id + ' .arrow');
+            //load_svg_image('/media/icons/arrow_' + data.arrow + '_' + data.color + '.svg',
+            //    id + ' .arrow');
         }
     }
 
@@ -353,7 +370,7 @@ build_text_element = function(n, id, data, index){
 
     var rect = g.append('rect')
             .attr('width', w)
-            .attr('height', h)
+        .attr('height', '100px')
             .attr('x', 3)
             .style('opacity', 0)
             .attr('y', 3);
@@ -454,12 +471,14 @@ build_total_health = function(data){
             .attr('rx', 3)
             .attr('class', 'domestic');
 
-        n.append('text')
-            .attr('x', x + 8)
-            .attr('y', height)
-            .attr('dy', -5)
-            .style('text-anchor', 'middle')
-            .text('$' + t + 'm');
+	if (t > 0) {
+            n.append('text')
+		.attr('x', x + 8)
+		.attr('y', height)
+		.attr('dy', -5)
+		.style('text-anchor', 'middle')
+		.text('$' + t + 'm');
+	}
     }
 
 
