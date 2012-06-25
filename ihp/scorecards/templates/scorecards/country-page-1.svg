@@ -5829,7 +5829,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
     <tspan class="country_name" id="tspan365">{% blocktrans %}ETHIOPIA{% endblocktrans %}</tspan> {% blocktrans %}COUNTRY SCORECARD 2012{% endblocktrans %}
   </text>
   <text x="568.86" y="1248.66" style="font-size: 12px; font-family: Calibri;">
-    *  {% blocktrans %}Ratings are calculated using data up to and including 2009. Data from 2010 will be reported in IHP+Results’ 2011 monitoring.{% endblocktrans %}
+    *  {% blocktrans %}Ratings are calculated using data up to and including 2011.{% endblocktrans %}
   </text>
   <text x="-1195.05" y="1765.2" transform="rotate(270)" style="font-size: 11px; font-family: Calibri;">
     {% blocktrans %}This work is licensed under the Creative Commons Atribution-NonCommercial 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org.licenses/by-nc/3.0{% endblocktrans %}
@@ -5841,20 +5841,20 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
   <foreignObject x="129" y="1107" width="142.5" height="30">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;">{% blocktrans %}ACCESS TO PHC CLINICS{% endblocktrans %}</div>
   </foreignObject>
-  <foreignObject x="135" y="1140" width="132" height="60">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;"><span style="font-family: Calibri-Bold;">5404</span> {% blocktrans %}outpatient department visits per 10,000 population per year{% endblocktrans %}</div>
+  <foreignObject x="135" y="1140" width="132" height="60" id="phcclinincs-text">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;"><span style="font-family: Calibri-Bold;" class="value">5404</span> {% blocktrans %}outpatient department visits per 10,000 population per year{% endblocktrans %}</div>
   </foreignObject>
   <foreignObject x="289.5" y="1107" width="142.5" height="30">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;">{% blocktrans %}AVAILABILITY OF HEALTH WORKERS{% endblocktrans %}</div>
   </foreignObject>
-  <foreignObject x="294.75" y="1140" width="132" height="60">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;"><span style="font-family: Calibri-Bold;">8.3</span> {% blocktrans %}skilled medical personnel per 10,000 population{% endblocktrans %}</div>
+  <foreignObject x="294.75" y="1140" width="132" height="60" id="healthworkers-text">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;"><span style="font-family: Calibri-Bold;" class="value">8.3</span> {% blocktrans %}skilled medical personnel per 10,000 population{% endblocktrans %}</div>
   </foreignObject>
   <foreignObject x="448.5" y="1107" width="142.5" height="30">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;">{% blocktrans %}FUNDS FOR HEALTH SYSTEMS{% endblocktrans %}</div>
   </foreignObject>
-  <foreignObject x="453.75" y="1140" width="132" height="60">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;"><span style="font-family: Calibri-Bold;">US$48,723,933</span> {% blocktrans %}spent on health workforce increasing{% endblocktrans %}</div>
+  <foreignObject x="453.75" y="1140" width="132" height="60" id="healthsystems-text">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;"><span style="font-family: Calibri-Bold;" class="value">US$48,723,933</span> {% blocktrans %}spent on health workforce increasing{% endblocktrans %}</div>
   </foreignObject>
   <!-- Country systems widget. -->
   <text x="761.445" y="916.26" style="font-size: 15px; font-family: Calibri; fill: #fff;">
@@ -5891,7 +5891,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
   <foreignObject x="1373.775" y="768.02" width="105" height="45">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #000; text-align: left; font-family: Calibri; font-size: 11px; line-height: 110%;">{% blocktrans %}Increase needed to meet the Abuja target{% endblocktrans %}</div>
   </foreignObject>
-  <text x="1541.85" y="593.355" style="font-size: 15px; font-family: Calibri; fill: #0E3D3D;">
+  <text x="1518" y="593.355" style="font-size: 15px; font-family: Calibri; fill: #0E3D3D;">
    {% blocktrans %}POOLED FUNDING{% endblocktrans %}
   </text>
   <foreignObject x="1512.6" y="767.36" width="173" height="45">
@@ -5904,32 +5904,19 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
   <text x="764.145" y="204.105" style="font-size: 15px; font-family: Calibri; fill: #fff;">
     {% blocktrans %}COMMITMENTS DOCUMENTED{% endblocktrans %}
   </text>
-  <text x="1087.485" y="204.105" style="font-size: 15px; font-family: Calibri; fill: #fff;">
-    {% blocktrans %}HEALTH SECTOR &amp; AIDS STRATEGIES{% endblocktrans %}
-  </text>
+  <g transform="translate(1087.485, 204.105)">
+    <text style="font-size: 15px; font-family: Calibri; fill: #fff;" transform="scale(0.8,1)">
+      {% blocktrans %}HEALTH SECTOR PLAN &amp; AIDS STRATEGIES{% endblocktrans %}
+    </text>
+  </g>
   <g transform="translate(1400.1, 204.105)">
     <text style="font-size: 15px; font-family: Calibri; fill: #fff;" transform="scale(0.8,1)">
       {% blocktrans %}HEALTH SECTOR AID EFFECTIVENESS MONITORING{% endblocktrans %}
     </text>
   </g>
-  <foreignObject x="1420" y="230" width="200" height="45" class="remove">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #000; text-align: left; font-family: Calibri; font-size: 12px; line-height: 107%;">
-      {% blocktrans %}• Active joint monitoring{% endblocktrans %}
-    </div>
-  </foreignObject>
-  <foreignObject x="1420" y="290" width="200" height="45" class="remove">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #000; text-align: left; font-family: Calibri; font-size: 12px; line-height: 107%;">
-      {% blocktrans %}• Number of development partner missions{% endblocktrans %}
-    </div>
-  </foreignObject>
-  <foreignObject x="1420" y="350" width="200" height="45" class="remove">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #000; text-align: left; font-family: Calibri; font-size: 12px; line-height: 107%;">
-      {% blocktrans %}• 10% of seats in the health sector coordination mechanism are allocated to civil society{% endblocktrans %}
-    </div>
-  </foreignObject>
   <!-- Managing for Results widget. -->
   <text x="139.317" y="155.25" style="font-size: 15px; font-family: Calibri; fill: #fff;">
-    {% blocktrans %}MANAGING FOR RESULTS{% endblocktrans %}
+    {% blocktrans %}MANAGING FOR DEVELOPMENT RESULTS{% endblocktrans %}
   </text>
   <foreignObject x="68.8" y="535.16" width="120" height="65">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #0E3D3D; text-align: right; font-family: Calibri; font-size: 15px; line-height: 107%;">
