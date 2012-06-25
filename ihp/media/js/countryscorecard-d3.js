@@ -201,11 +201,14 @@ var fill_svg = function(json){
         id = '#' + i;
         n = d3.select(id);
 
+        d3.select(id+'-text')
+	    .text(data.description);
+
         if (n.node() !== null){
-            var text= n.selectAll('.text');
-            if (text.node() !== null){
-                insert_text(n.selectAll('.text'), data.description, 'commitment-text');
-            }
+            //var text= n.selectAll('.text');
+            //if (text.node() !== null){
+            //    insert_text(n.selectAll('.text'), data.description, 'commitment-text');
+            //}
             var icon = n.selectAll('.icon');
             if (icon.node() !== null){
                 load_svg_image(data.rating, id + ' .icon');
