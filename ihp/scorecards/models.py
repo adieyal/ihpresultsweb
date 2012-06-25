@@ -5,6 +5,7 @@ from submissions.models import Agency, GovQuestion, MDGData, DPQuestion, AgencyT
 from submissions import indicators
 from submissions import target
 from django.conf import settings
+from django.utils.translation import ugettext as _
 
 #Nasty, I know.
 from previous_data import get2010value, add_previous_value
@@ -119,17 +120,17 @@ class GovScorecard(object):
         
         return {
             "commitments": [
-                {"description": "Signed Agreement", "logo": self.gov_rating("1")},
+                {"description": _("Signed Agreement"), "logo": self.gov_rating("1")},
                 {"description": self.gov_comment("1"), "bullet": False}
             ],
             "health_sector":[
-                {"description": "Includes current targets and budgets", "logo": self.gov_rating("2")},
-                {"description": "Jointly Assessed", "logo": self.gov_rating("3")},
+                {"description": _("Includes current targets and budgets"), "logo": self.gov_rating("2")},
+                {"description": _("Jointly Assessed"), "logo": self.gov_rating("3")},
             ],
             "aid_effectiveness": [
-                {"description": "Active joint monitoring", "logo": self.gov_rating("12")},
-                {"description": "Number of development partner missions", "text": foz(self.gov_ltv("16"))},
-                {"description": "%g%% of seats in the health sector coordination mechanism are allocated to civil society" % (r2(seats*100)), "logo": cs_logo},
+                {"description": _("Active joint monitoring"), "logo": self.gov_rating("12")},
+                {"description": _("Number of development partner missions"), "text": foz(self.gov_ltv("16"))},
+                {"description": _("%(percentage)g%% of seats in the health sector coordination mechanism are allocated to civil society") % { 'percentage': (r2(seats*100)) }, "logo": cs_logo},
             ]
         }
 
@@ -192,21 +193,21 @@ class GovScorecard(object):
     def get_systems(self):
         return {
             "management":{
-                "header": "REFLECTS GOOD PRACTICE (OR REFORM IN PROGRESS)",
+                "header": _("REFLECTS GOOD PRACTICE (OR REFORM IN PROGRESS)"),
                 "logo": rating_icon(self.ratings["5Ga"]["target"]),
-                "description": "Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est."
+                "description": _("Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est.")
             },
 
             "procurement": {
-                "header": "REFLECTS GOOD PRACTICE (OR REFORM IN PROGRESS)",
+                "header": _("REFLECTS GOOD PRACTICE (OR REFORM IN PROGRESS)"),
                 "logo": rating_icon(self.ratings["5Gb"]["target"]),
-                "description": "Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est."
+                "description": _("Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est.")
             },
 
             "technical": {
-                "header": "DONOR CAPACITY DEVELOPMENT PROVIDED THROUGH COORDINATED PROGRAMMES",
+                "header": _("DONOR CAPACITY DEVELOPMENT PROVIDED THROUGH COORDINATED PROGRAMMES"),
                 "logo": self.donor_capacity(),
-                "description": "Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est."
+                "description": _("Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est.")
             }
         }
 
@@ -293,7 +294,7 @@ class GovScorecard(object):
 
         return {
             "mutual_agreement":{
-                "description": "An IHP+ Compact or equivalent mutual agreement is in place.",
+                "description": _("An IHP+ Compact or equivalent mutual agreement is in place."),
                 "rating": rating_icon(r1G["target"]),
                 "max": 2,
                 "progress": add_previous_value(self.country, 'commitments.mutual_agreement', [
@@ -302,7 +303,7 @@ class GovScorecard(object):
                 ])
             },
             "health_plan":{
-                "description": "A National Health Sector Plan/ Strategy is in place with current targets & budgets that have been jointly assessed.",
+                "description": _("A National Health Sector Plan/ Strategy is in place with current targets & budgets that have been jointly assessed."),
                 "rating": rating_icon(r2Ga["target"]),
                 "max": 2,
                 "progress": add_previous_value(self.country, 'commitments.health_plan', [
@@ -311,7 +312,7 @@ class GovScorecard(object):
                 ])
             },
             "hrh_plan":{
-                "description": "A costed, comprehensive national HRH plan (integrated with the health plan) is being implemented or developed.",
+                "description": _("A costed, comprehensive national HRH plan (integrated with the health plan) is being implemented or developed."),
                 "rating": rating_icon(r2Gb["target"]),
                 "max": 2,
                 "progress": add_previous_value(self.country, 'commitments.hrh_plan', [
@@ -320,7 +321,7 @@ class GovScorecard(object):
                 ])
             },
             "fundingcommitments":{
-                "description": "%d%% (or an equivalent published target) of the national budget is allocated to health." % round(get_target("3G")),
+                "description": _("%(percentage)d%% (or an equivalent published target) of the national budget is allocated to health.") % { "percentage": round(get_target("3G")) },
                 "rating": rating_icon(r3G["target"]),
                 "progress": add_previous_value(self.country, 'commitments.fundingcommitments', [
                     {"year": r3G["base_year"], "value":foz(r3G["base_val"])},
@@ -330,7 +331,7 @@ class GovScorecard(object):
                 "max": 20
             },
             "health_funding":{
-                "description": "Halve the proportion of health sector funding not disbursed against the approved annual budget.",
+                "description": _("Halve the proportion of health sector funding not disbursed against the approved annual budget."),
                 "rating": rating_icon(r4G["target"]),
                 "progress": add_previous_value(self.country, 'commitments.health_funding', [
                     {"year": r4G["base_year"], "value":foz(r4G["base_val"])},
@@ -339,7 +340,7 @@ class GovScorecard(object):
                 "max": 100
             },
             "cipa_scale":{
-                "description": "Improvement of at least one measure (ie 0.5 points) on the PFM/CPIA scale of performance.",
+                "description": _("Improvement of at least one measure (ie 0.5 points) on the PFM/CPIA scale of performance."),
                 "rating": rating_icon(r5Ga["target"]),
                 "progress": add_previous_value(self.country, 'commitments.cipa_scale', [
                     {"year": r5Ga["base_year"], "value":foz(r5Ga["base_val"])},
@@ -348,7 +349,7 @@ class GovScorecard(object):
                 "max": 5
             },
             "performance_scale":{
-                "description": "Improvement of at least one measure on the four-point scale used to assess performance for this sector.",
+                "description": _("Improvement of at least one measure on the four-point scale used to assess performance for this sector."),
                 "rating": rating_icon(r5Gb["target"]),
                 "type":"dot",
                 "progress": add_previous_value(self.country, 'commitments.performance_scale', [
@@ -358,7 +359,7 @@ class GovScorecard(object):
             },
 
             "resources":{
-                "description": "A transparent and monitorable performance assessment framework is in place to assess progress in the health sector.",
+                "description": _("A transparent and monitorable performance assessment framework is in place to assess progress in the health sector."),
                 "rating": rating_icon(r6G["target"]),
                 "max": 2,
                 "progress": add_previous_value(self.country, 'commitments.resources', [
@@ -367,7 +368,7 @@ class GovScorecard(object):
                 ])
             },
             "accountability":{
-                "description": "Mutual assesments (such as joint Annual Health Sector Review) are being made of progress implementing commitments in the health sector, including on aid effectiveness.",
+                "description": _("Mutual assesments (such as joint Annual Health Sector Review) are being made of progress implementing commitments in the health sector, including on aid effectiveness."),
                 "rating": rating_icon(r7G["target"]),
                 "max": 2,
                 "progress": add_previous_value(self.country, 'commitments.accountability', [
@@ -376,7 +377,7 @@ class GovScorecard(object):
                 ])
             },
             "civilsociety":{
-                "description": "At least 10% of seats in the country’s Health Sector Coordination mechanisms are allocated to Civil Society",
+                "description": _("At least 10% of seats in the country's Health Sector Coordination mechanisms are allocated to Civil Society"),
                 "rating": rating_icon(r8Gb["target"]),
                 "max": 2,
                 "progress": add_previous_value(self.country, 'commitments.civilsociety', [

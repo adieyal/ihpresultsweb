@@ -12,6 +12,18 @@ from django.views.generic.simple import direct_to_template
 from django.conf import settings
 from models import GovScorecard
 
+LANGUAGE_LOOKUP = { 'French': 'fr',
+                    'English': 'en',
+                    'Spanish': 'es' }
+class force_lang:
+    def __init__(self, new_lang):
+        self.new_lang = new_lang
+        self.old_lang = translation.get_language()
+    def __enter__(self):
+       translation.activate(self.new_lang)
+    def __exit__(self, type, value, tb):
+       translation.activate(self.old_lang)
+
 def dp_scorecard_json(request, agency_id, language):
     """
     json dump of scorecard data takes agency and language
@@ -128,29 +140,30 @@ def gov_scorecard_json(request, country_id, language):
     json dump of scorecard data takes country and language
     """
 
-    country = get_object_or_404(Country, id=country_id)
-    gov_scorecard = GovScorecard(country) 
-    media_url = settings.MEDIA_URL
-    agencies = AgencyCountries.objects.get_country_agencies(country)
-
-    country_flag = lambda country : "%sflags/%s.png" % (media_url, country.lower())
-    agency_logo = lambda agency : "%slogos/%s.png" % (media_url, agency.lower())
-    a = {
-        "info": {
-            "country": country.country.upper(),
-            "flag": country_flag(country.country)
-        },
-
-        "managing_results": gov_scorecard.get_managing_for_results(),
-        "countries": [agency_logo(agency.agency) for agency in agencies],
-        "health_systems": gov_scorecard.get_health_systems(),
-        "country_ownership": gov_scorecard.get_country_ownership(),
-        "health_finance": gov_scorecard.get_health_finance(),
-        "systems": gov_scorecard.get_systems(),
-        "progress": gov_scorecard.get_mdg_progress(),
-        "commitments" : gov_scorecard.get_ratings(),
-    }
-    r = json.dumps(a, indent=4)
+    with force_lang(LANGUAGE_LOOKUP[language]):
+        country = get_object_or_404(Country, id=country_id)
+        gov_scorecard = GovScorecard(country) 
+        media_url = settings.MEDIA_URL
+        agencies = AgencyCountries.objects.get_country_agencies(country)
+        
+        country_flag = lambda country : "%sflags/%s.png" % (media_url, country.lower())
+        agency_logo = lambda agency : "%slogos/%s.png" % (media_url, agency.lower())
+        a = {
+            "info": {
+                "country": country.country.upper(),
+                "flag": country_flag(country.country)
+                },
+            
+            "managing_results": gov_scorecard.get_managing_for_results(),
+            "countries": [agency_logo(agency.agency) for agency in agencies],
+            "health_systems": gov_scorecard.get_health_systems(),
+            "country_ownership": gov_scorecard.get_country_ownership(),
+            "health_finance": gov_scorecard.get_health_finance(),
+            "systems": gov_scorecard.get_systems(),
+            "progress": gov_scorecard.get_mdg_progress(),
+            "commitments" : gov_scorecard.get_ratings(),
+            }
+        r = json.dumps(a, indent=4)
     return HttpResponse(r, mimetype="application/json")
 
 def gov_scorecard(request, country_id, language, template_name="scorecards/gov.html", extra_context=None):
@@ -165,19 +178,13 @@ def gov_scorecard(request, country_id, language, template_name="scorecards/gov.h
         extra_context=extra_context
     )
 
-
-LANGUAGE_LOOKUP = { 'French': 'fr',
-                    'English': 'en',
-                    'Spanish': 'es' }
 def localized_svg(request, language, template):
     try:
         template = get_template('scorecards/'+template)
     except TemplateDoesNotExist:
         raise Http404
     #Language has to be reset after rendering.
-    cur_language = translation.get_language()
-    translation.activate(LANGUAGE_LOOKUP[language])
-    response = HttpResponse(template.render(Context()),
-                            mimetype='image/svg+xml; charset=utf-8')
-    translation.activate(cur_language)
+    with force_lang(LANGUAGE_LOOKUP[language]):
+        response = HttpResponse(template.render(Context()),
+                                mimetype='image/svg+xml; charset=utf-8')
     return response

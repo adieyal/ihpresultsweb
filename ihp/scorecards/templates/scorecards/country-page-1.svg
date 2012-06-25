@@ -5838,19 +5838,19 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
   <text x="137.817" y="723" style="font-size: 15px; font-family: Calibri; fill: #FFF;">
     {% blocktrans %}HEALTH SYSTEMS STRENGTHENING{% endblocktrans %}
   </text>
-  <foreignObject x="129" y="1107" width="142.5" height="30">
+  <foreignObject x="129" y="1100" width="142.5" height="37">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;">{% blocktrans %}ACCESS TO PHC CLINICS{% endblocktrans %}</div>
   </foreignObject>
   <foreignObject x="135" y="1140" width="132" height="60" id="phcclinincs-text">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;"><span style="font-family: Calibri-Bold;" class="value">5404</span> {% blocktrans %}outpatient department visits per 10,000 population per year{% endblocktrans %}</div>
   </foreignObject>
-  <foreignObject x="289.5" y="1107" width="142.5" height="30">
+  <foreignObject x="289.5" y="1100" width="142.5" height="37">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;">{% blocktrans %}AVAILABILITY OF HEALTH WORKERS{% endblocktrans %}</div>
   </foreignObject>
   <foreignObject x="294.75" y="1140" width="132" height="60" id="healthworkers-text">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;"><span style="font-family: Calibri-Bold;" class="value">8.3</span> {% blocktrans %}skilled medical personnel per 10,000 population{% endblocktrans %}</div>
   </foreignObject>
-  <foreignObject x="448.5" y="1107" width="142.5" height="30">
+  <foreignObject x="448.5" y="1100" width="142.5" height="37">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: center; font-family: Calibri; font-size: 12px; line-height: 115%;">{% blocktrans %}FUNDS FOR HEALTH SYSTEMS{% endblocktrans %}</div>
   </foreignObject>
   <foreignObject x="453.75" y="1140" width="132" height="60" id="healthsystems-text">
@@ -5876,12 +5876,16 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
   <text x="716.355" y="593.355" style="font-size: 15px; font-family: Calibri; fill: #0E3D3D;">
    {% blocktrans %}TOTAL HEALTH FINANCING{% endblocktrans %}
   </text>
-  <text x="1063.68" y="647.01" style="font-size: 12px; font-family: Calibri; fill: #000;">
-    {% blocktrans %}Domestic Financing{% endblocktrans %}
-  </text>
-  <text x="1063.68" y="668.91" style="font-size: 12px; font-family: Calibri; fill: #000;">
-    {% blocktrans %}External Financing{% endblocktrans %}
-  </text>
+  <g transform="translate(1063.68,647.01)">
+    <text transform="scale(0.9,1)" style="font-size: 12px; font-family: Calibri; fill: #000;">
+      {% blocktrans %}Domestic Financing{% endblocktrans %}
+    </text>
+  </g>
+  <g transform="translate(1063.68,668.91)">
+    <text transform="scale(0.9,1)" style="font-size: 12px; font-family: Calibri; fill: #000;">
+      {% blocktrans %}External Financing{% endblocktrans %}
+    </text>
+  </g>
   <foreignObject x="1234.035" y="583.355" width="199" height="31.71">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fff; text-align: left; font-family: Calibri; font-size: 15px; line-height: 110%;">{% blocktrans %}NATIONAL BUDGET ALLOCATED TO HEALTH{% endblocktrans %}</div>
   </foreignObject>
@@ -5891,9 +5895,11 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
   <foreignObject x="1373.775" y="768.02" width="105" height="45">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #000; text-align: left; font-family: Calibri; font-size: 11px; line-height: 110%;">{% blocktrans %}Increase needed to meet the Abuja target{% endblocktrans %}</div>
   </foreignObject>
-  <text x="1518" y="593.355" style="font-size: 15px; font-family: Calibri; fill: #0E3D3D;">
-   {% blocktrans %}POOLED FUNDING{% endblocktrans %}
-  </text>
+  <g transform="translate(1518,593.355)">
+    <text transform="scale(0.75,1)" style="font-size: 15px; font-family: Calibri; fill: #0E3D3D;">
+      {% blocktrans %}POOLED FUNDING{% endblocktrans %}
+    </text>
+  </g>
   <foreignObject x="1512.6" y="767.36" width="173" height="45">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #0D3E3E; text-align: center; font-family: Calibri; font-size: 13.5px; line-height: 107%;">{% blocktrans %}Number of Development Partners using Pooled Mechanisms{% endblocktrans %}</div>
   </foreignObject>
@@ -5910,7 +5916,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
     </text>
   </g>
   <g transform="translate(1400.1, 204.105)">
-    <text style="font-size: 15px; font-family: Calibri; fill: #fff;" transform="scale(0.8,1)">
+    <text style="font-size: 15px; font-family: Calibri; fill: #fff;" transform="scale(0.64,1)">
       {% blocktrans %}HEALTH SECTOR AID EFFECTIVENESS MONITORING{% endblocktrans %}
     </text>
   </g>
