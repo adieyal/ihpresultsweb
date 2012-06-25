@@ -14,6 +14,7 @@
 
         .countrybox {
             padding: 5px;
+            width: 100px;
         }
 
         .countrybox h2 {
@@ -106,7 +107,7 @@
             return round(v.allweak.value, 2) + " (" + v.allweak.num_countries + ")";
         })
         .on("mouseover", function(v, i) {
-            countrybox(container, v.notallweak.countries);
+            countrybox(container, v.allweak.countries);
         });
         weakrow.append("td").text(function(v) {
             return round(v.notallweak.value, 2) + " (" + v.notallweak.num_countries + ")";
