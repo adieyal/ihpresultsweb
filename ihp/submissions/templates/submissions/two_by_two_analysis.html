@@ -1,27 +1,44 @@
 {% block head %}
     {{ block.super }}
-    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/table.css"> 
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/bootstrap.css"> 
+    <!--<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/table.css">-->
     <style>
         td:first-child {
             text-align: left;
         }
 
-        .twobytwo, .countrybox {
+        #twobytwo {
+            margin: 20px 100px;
+        }
+
+        #twobytwo th {
+            font-weight: bold;
+        }
+
+        .twobytwo td, .twobytwo th, .twobytwo tr {
+            padding: 4px;
+            border: solid thin black;
+        }
+
+        .twobytwo, #countrybox {
             border: solid thin black;
             float: left;
             margin: 10px;
         }
 
-        .countrybox {
+        #countrybox {
             padding: 5px;
-            width: 100px;
+            width: 200px;
+            text-align: left;
+            height: 200px;
         }
 
-        .countrybox h2 {
+        #countrybox h2 {
             text-decoration: underline;
             font-weight: bold;
         }
-        .countrybox li {
+
+        #countrybox li {
             text-align: left;
             list-style: none;
             margin-left: 0;
@@ -29,19 +46,25 @@
             text-indent: -1em;
         }
 
-        #twobytwo th {
-            font-weight: bold;
-        }
-
-        #twobytwo td, #twobytwo th {
-            padding: 4px;
-        }
     </style>
+    <script type='text/javascript' src='{{ MEDIA_URL }}js/jquery-1.7.2.min.js'></script>
     <script type='text/javascript' src='{{ MEDIA_URL }}js/d3.v2.min.js'></script>
+    <script type='text/javascript' src='{{ MEDIA_URL }}js/bootstrap.js'></script>
+    <script type='text/javascript' src='{{ MEDIA_URL }}js/bootstrap-popover.js'></script>
 {% endblock %}
 
 {% block content %}
-<div id="twobytwo"></div>
+<div id="twobytwo">
+    <div class="row" id="heading"><p class="span12">Two-by-two analysis</p></div>
+    <div class="row" id="tables"></div>
+    <div class="row">
+        <div class="span12" id="countrybox" style="display:none">
+            <h2>Countries</h2>
+            <ul>
+            </ul>
+        </div>
+    </div>
+</div>
 <script>
 
     round = function(v, d) {
@@ -49,28 +72,28 @@
         return Math.round(v * f) / f;
     }
 
-    countrybox = function(container, countries) {
-        container.selectAll(".countrybox").remove();
-        cbox = container
-            .append("div")
-            .attr("class", "countrybox");
-        cbox.append("h2").text("Countries");
-        cbox
-            .append("ul")
+    show_countrybox = function(container, countries) {
+        cbox = container.selectAll("#countrybox").style("display", "block")
+        cbox.select("ul")
             .selectAll("li")
             .data(countries)
             .enter()
             .append("li").text(function(d) { return d; });
     }
 
+    hide_countrybox = function(container) {
+        cbox = container.selectAll("#countrybox");
+        cbox.selectAll("li").remove();
+    }
+
     var build_table = function(json) {
         var container = d3.select("#twobytwo");
-        container.append("h1").text("Two-by-two analysis")
 
-        var table = container.selectAll("div").data(json.indicators)
+        var tablerow = container.select("#tables")
+        var table = tablerow.selectAll("div").data(json.indicators)
             .enter()
             .append("div")
-            .attr("class", "twobytwo")
+            .attr("class", "twobytwo span3")
             .append("table");
 
         var header1 = table.append("tr");
@@ -85,36 +108,51 @@
             });
 
         header2.append("th").text("PFM")
-        header2.append("th").text("All indicators")
-        header2.append("th").text("Not all indicators")
+        header2.append("th").text("All indicators").attr("class", "hdr_allindicators")
+        header2.append("th").text("Not all indicators").attr("class", "hdr_notallindicators")
+
+        $(".hdr_allindicators").popover({
+            title : "All indicators",
+            content : "The following indicators are included:<br>1G, 2Ga, 6G and 7G"
+        });
+
+        $(".hdr_notallindicators").popover({
+            title : "Not all indicators",
+            content : "Three or fewer of the following indicators' targets have been met:<br>1G, 2Ga, 6G, 7G"
+        });
+
 
         strongrow.append("th").text("3.5+")
         strongrow.append("td").text(function(v) {
             return round(v.allstrong.value, 2) + " (" + v.allstrong.num_countries + ")";
         })
         .on("mouseover", function(v, i) {
-            countrybox(container, v.allstrong.countries);
+            show_countrybox(container, v.allstrong.countries);
         });
 
         strongrow.append("td").text(function(v) {
             return round(v.notallstrong.value, 2) + " (" + v.notallstrong.num_countries + ")";
         })
         .on("mouseover", function(v, i) {
-            countrybox(container, v.notallstrong.countries);
+            show_countrybox(container, v.notallstrong.countries);
         });
+
         weakrow.append("th").text("< 3.5");
         weakrow.append("td").text(function(v) {
             return round(v.allweak.value, 2) + " (" + v.allweak.num_countries + ")";
         })
         .on("mouseover", function(v, i) {
-            countrybox(container, v.allweak.countries);
+            show_countrybox(container, v.allweak.countries);
         });
+
         weakrow.append("td").text(function(v) {
             return round(v.notallweak.value, 2) + " (" + v.notallweak.num_countries + ")";
         })
         .on("mouseover", function(v, i) {
-            countrybox(container, v.notallweak.countries);
+            show_countrybox(container, v.notallweak.countries);
         });
+
+        table.selectAll("td").on("mouseout", function(v, i) { hide_countrybox(container); });
     }
 
     var json = '{% url json_two_by_two_analysis %}';
