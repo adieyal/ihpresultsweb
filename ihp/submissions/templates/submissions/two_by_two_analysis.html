@@ -57,13 +57,6 @@
 <div id="twobytwo">
     <div class="row" id="heading"><p class="span12">Two-by-two analysis</p></div>
     <div class="row" id="tables"></div>
-    <div class="row">
-        <div class="span12" id="countrybox" style="display:none">
-            <h2>Countries</h2>
-            <ul>
-            </ul>
-        </div>
-    </div>
 </div>
 <script>
 
@@ -72,18 +65,14 @@
         return Math.round(v * f) / f;
     }
 
-    show_countrybox = function(container, countries) {
-        cbox = container.selectAll("#countrybox").style("display", "block")
-        cbox.select("ul")
-            .selectAll("li")
-            .data(countries)
-            .enter()
-            .append("li").text(function(d) { return d; });
-    }
-
-    hide_countrybox = function(container) {
-        cbox = container.selectAll("#countrybox");
-        cbox.selectAll("li").remove();
+    fmt_countries = function(countries) {
+        s = "<ul>"
+        for (c in countries) {
+            s += "<li>" + countries[c] + "</li>";
+        }
+        
+        s += "</ul>"
+        return s
     }
 
     var build_table = function(json) {
@@ -121,38 +110,47 @@
             content : "Three or fewer of the following indicators' targets have been met:<br>1G, 2Ga, 6G, 7G"
         });
 
-
         strongrow.append("th").text("3.5+")
         strongrow.append("td").text(function(v) {
             return round(v.allstrong.value, 2) + " (" + v.allstrong.num_countries + ")";
         })
-        .on("mouseover", function(v, i) {
-            show_countrybox(container, v.allstrong.countries);
+        .each(function(v, i) {
+            $(this).popover({
+                title : "Included countries",
+                content : fmt_countries(v.allstrong.countries)
+            });
         });
-
+        
         strongrow.append("td").text(function(v) {
             return round(v.notallstrong.value, 2) + " (" + v.notallstrong.num_countries + ")";
         })
-        .on("mouseover", function(v, i) {
-            show_countrybox(container, v.notallstrong.countries);
+        .each(function(v, i) {
+            $(this).popover({
+                title : "Included countries",
+                content : fmt_countries(v.notallstrong.countries)
+            });
         });
 
         weakrow.append("th").text("< 3.5");
         weakrow.append("td").text(function(v) {
             return round(v.allweak.value, 2) + " (" + v.allweak.num_countries + ")";
         })
-        .on("mouseover", function(v, i) {
-            show_countrybox(container, v.allweak.countries);
+        .each(function(v, i) {
+            $(this).popover({
+                title : "Included countries",
+                content : fmt_countries(v.allweak.countries)
+            });
         });
 
         weakrow.append("td").text(function(v) {
             return round(v.notallweak.value, 2) + " (" + v.notallweak.num_countries + ")";
         })
-        .on("mouseover", function(v, i) {
-            show_countrybox(container, v.notallweak.countries);
+        .each(function(v, i) {
+            $(this).popover({
+                title : "Included countries",
+                content : fmt_countries(v.notallweak.countries)
+            });
         });
-
-        table.selectAll("td").on("mouseout", function(v, i) { hide_countrybox(container); });
     }
 
     var json = '{% url json_two_by_two_analysis %}';
