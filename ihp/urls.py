@@ -96,7 +96,7 @@ urlpatterns = patterns('',
     }, 'agency_response_breakdown'),
 
     (r'^agencies/tables/volume_of_aid/(?P<indicator>\w+)/$', 'submissions.views.agency_volume_of_aid', {
-        "template_name" : "submissions/main_base.html",
+        "template_name" : "submissions/main_base_bootstrap.html",
         "extra_context" : {
             "content_file" : "submissions/agency_volume_of_aid.html"
         }
@@ -120,7 +120,7 @@ urlpatterns = patterns('',
         r'^agencies/tables/two_by_two_analysis/$', 
         direct_to_template, 
         {
-            "template" : "submissions/main_base.html", 
+            "template" : "submissions/main_base_bootstrap.html", 
             "extra_context" : {"content_file" : "submissions/two_by_two_analysis.html"}
         }, 
         "two_by_two_analysis"

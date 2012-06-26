@@ -223,10 +223,12 @@ def agency_volume_of_aid_json(request, indicator):
                 "possible_volume" : {
                     "value" : "..."   # sum of denominator values
                     "num_dps" : "..." # number of countries included
+                    "countries" : "..." # countries included
                 },
                 "actual_volume" : {
                     "value" : "..."   # sum of numerator values (only including tick agencies)
                     "num_dps" : "..." # number of countries included
+                    "countries" : "..." # countries included
                 }
             }
         ]
@@ -243,6 +245,7 @@ def agency_volume_of_aid_json(request, indicator):
     def on_target_volume(country):
         total = 0
         count = 0
+        agencies = []
         for agency in country.agencies:
             ratings = target.country_agency_indicator_ratings(country, agency)
             if ratings[indicator] == models.Rating.TICK:
@@ -251,34 +254,51 @@ def agency_volume_of_aid_json(request, indicator):
                     submission__agency=agency, 
                     question_number=arg1
                 )
-                count += 1
+                agencies.append(agency)
                 total += foz(q.cur_val)
-        return total, count
+        return total, agencies
 
     rating_target = models.AgencyTargets.objects.get(indicator=indicator, agency=None)
     
     on_targets = {}
     for c in countries:
         
-        value, count = on_target_volume(c)
+        value, agencies = on_target_volume(c)
         on_targets[c] = {
             "value" : value,
-            "num_dps" : count
+            "num_dps" : len(agencies),
+            "agencies" : agencies
         }
+
+    fn_incl_agencies = lambda country : [
+        s.submission.agency.agency 
+        for s in denoms.filter(
+            submission__country=c, 
+            submission__agency__type="Agency"
+        )
+    ]
+
+
+    targets = {
+        "2DPa" : "85",
+        "4DP" : "71",
+    }
 
     js = {
         "indicator" : indicator,
-        "target" : rating_target.tick_criterion_value,
+        "target" : targets[indicator],
         "countries" : [
             {
                 "name" : c.country,
                 "possible_volume" : {
                     "value" : sum(foz(d.cur_val) for d in denoms.filter(submission__country=c)),
-                    "num_dps" : len(denoms.filter(submission__country=c))
+                    "num_dps" : len(fn_incl_agencies(c)),
+                    "agencies" : fn_incl_agencies(c),
                 },
                 "actual_volume" : {
                     "value" : on_targets[c]["value"],
-                    "num_dps" : on_targets[c]["num_dps"]
+                    "num_dps" : on_targets[c]["num_dps"],
+                    "agencies" : [a.agency for a in on_targets[c]["agencies"]]
                 }
             }
             

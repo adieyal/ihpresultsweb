@@ -17,6 +17,15 @@
 <div id="volume_table"></div>
 <script>
 
+    fmt_agencies = function(agencies) {
+        s = "<ul>"
+        for (a in agencies) {
+            s += "<li>" + agencies[a] + "</li>";
+        }
+        
+        s += "</ul>"
+        return s
+    }
     var build_table = function(json) {
         
         var container = d3.select("#volume_table");
@@ -43,6 +52,12 @@
                 n = value.actual_volume.num_dps
                 return v + " (" + n + ")"
             })
+            .each(function(v, i) {
+                $(this).popover({
+                    title : "Included agencies",
+                    content : fmt_agencies(v.actual_volume.agencies)
+                });
+            });
 
         table.selectAll("#actual_volume")
             .insert("td", "td").text("Volume on Target");
@@ -57,6 +72,12 @@
                 n = value.possible_volume.num_dps;
                 return v + " (" + n + ")"
             })
+            .each(function(v, i) {
+                $(this).popover({
+                    title : "Included agencies",
+                    content : fmt_agencies(v.possible_volume.agencies)
+                });
+            });
 
         table.selectAll("#possible_volume")
             .insert("td", "td").text("Possible Volume");
