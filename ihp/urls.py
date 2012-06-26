@@ -126,6 +126,23 @@ urlpatterns = patterns('',
         "two_by_two_analysis"
     ),
 
+    (
+        r'^agencies/tables/top5_countries/json/$', 
+        'submissions.views.top5_countries_json', 
+        {},
+        'json_top5_countries'
+    ),
+
+    (
+        r'^agencies/tables/top5_countries/$', 
+        direct_to_template, 
+        {
+            "template" : "submissions/main_base_bootstrap.html", 
+            "extra_context" : {"content_file" : "submissions/top5_countries.html"}
+        }, 
+        "top5_countries"
+    ),
+
     (r'^countries/tables/(?P<language>\w+)/$', 'submissions.views.country_table', {
         "template_name" : "submissions/main_base.html",
         "extra_context" : {
