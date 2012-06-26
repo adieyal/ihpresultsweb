@@ -642,7 +642,7 @@ def countrygraphs(request, country_name, language, template_name="submissions/co
         for indicator in ["2DPa", "2DPb", "2DPc", "3DP", "4DP", "5DPa", "5DPb", "5DPc"]:
             base_val, _, latest_val, _ = indicators[indicator][0]
             _, _, previous_val, _ = old_indicators[indicator][0]
-            agency_data[indicator] = calc_graph_values(indicator, base_val, 0, latest_val)
+            agency_data[indicator] = calc_graph_values(indicator, base_val, previous_val, latest_val)
         data[agency.agency] = agency_data
 
     country_name = country.country
