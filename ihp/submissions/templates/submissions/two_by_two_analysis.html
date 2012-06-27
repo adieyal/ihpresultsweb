@@ -100,8 +100,8 @@
                     .append("td")
                     .text(function(d2, i2) {
                         switch (d2) {
-                            case 0 : return d3.round(d.allstrong.value + d.allweak.value, 2);
-                            case 1 : return d3.round(d.notallstrong.value + d.notallweak.value, 2);
+                            case 0 : return d3.round(d.all_indicators.value, 2);
+                            case 1 : return d3.round(d.not_all_indicators.value, 2);
                         }
                     })
             });
@@ -138,7 +138,7 @@
             });
         });
         strongrow.append("td").text(function(v) {
-            return d3.round(v.allstrong.value + v.notallstrong.value, 2);
+            return d3.round(v.strong_pfm.value, 2);
         });
         
 
@@ -163,7 +163,7 @@
             });
         });
         weakrow.append("td").text(function(v) {
-            return d3.round(v.allweak.value + v.notallweak.value, 2);
+            return d3.round(v.weak_pfm.value, 2);
         });
     }
 
