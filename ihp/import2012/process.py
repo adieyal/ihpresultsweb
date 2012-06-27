@@ -243,6 +243,7 @@ class DPSubmissionParser(SubmissionParser):
         metadata = self.extract_metadata()
         country = Country.objects.get(country=metadata["country"])
         agency_name = metadata["agency"]
+        print agency_name
         agency = Agency.objects.all_types().get(agency=agency_name)
         submission, created = Submission.objects.get_or_create(
             country=country,

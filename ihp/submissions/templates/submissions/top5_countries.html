@@ -17,10 +17,19 @@
             text-align: center;
         }
 
+        .loader path {
+            stroke: white;
+            fill: steelblue;
+            padding: 3px;
+            margin: 2px;
+            color: white;
+        }
+
     </style>
 {% endblock %}
 
 {% block content %}
+<div id="DataDisplay"></div>
 <div id="top5_countries">
     <div class="row" id="top3">
         <h1>Top 3</h1>
@@ -106,9 +115,12 @@
             
     var json = '{% url json_top5_countries %}';
     d3.json(json, function(e){
+        loadStop();
         build_table(e, "top3");
         build_table(e, "next2");
         build_table(e, "the_rest");
     });
+    loadStart();
+    
 </script>
 {% endblock %}
