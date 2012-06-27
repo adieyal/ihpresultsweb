@@ -1,3 +1,4 @@
+from functools import partial
 from collections import OrderedDict
 import json
 from django.views.generic.simple import direct_to_template
@@ -139,8 +140,6 @@ def two_by_two_analysis_json(request):
         and r["7G"]["target"] == models.Rating.TICK
     )
 
-    not_all_all_indicators = lambda r : not has_all_indicators(r)
-
     has_strong_pfm = lambda r : foz(r["5Ga"]["cur_val"]) >= 3.5
     has_weak_pfm = lambda r : not has_strong_pfm(r)
     get_country = lambda r : r["1G"]["country_name"]
@@ -157,36 +156,25 @@ def two_by_two_analysis_json(request):
     notallweak = not_all_indicators & weak_pfm
 
     def indicator_dict(indicator):
+        calculator = partial(indicators.calc_indicator, indicator=indicator, agency_or_country=None)
+
+        def slice_data(countries):
+            return {
+                "value" : calculator(models.DPQuestion.objects.filter(submission__country__in=countries))[0][2],
+                "num_countries" : len(countries),
+                "countries" : [c.country for c in countries],
+            }
+        
         return {
             "indicator" : indicator,
-            "allstrong" : {
-                "value" : indicators.calc_indicator(
-                    models.DPQuestion.objects.filter(submission__country__in=allstrong), None, indicator
-                )[0][2],
-                "num_countries" : len(allstrong),
-                "countries" : [c.country for c in allstrong],
-            },
-            "allweak" : {
-                "value" : indicators.calc_indicator(
-                    models.DPQuestion.objects.filter(submission__country__in=allweak), None, indicator
-                )[0][2],
-                "num_countries" : len(allweak),
-                "countries" : [c.country for c in allweak],
-            },
-            "notallstrong" : {
-                "value" : indicators.calc_indicator(
-                    models.DPQuestion.objects.filter(submission__country__in=notallstrong), None, indicator
-                )[0][2],
-                "num_countries" : len(notallstrong),
-                "countries" : [c.country for c in notallstrong],
-            },
-            "notallweak" : {
-                "value" : indicators.calc_indicator(
-                    models.DPQuestion.objects.filter(submission__country__in=notallweak), None, indicator
-                )[0][2],
-                "num_countries" : len(notallweak),
-                "countries" : [c.country for c in notallweak],
-            },
+            "allstrong" : slice_data(allstrong),
+            "allweak" : slice_data(allweak),
+            "notallstrong" : slice_data(notallstrong),
+            "notallweak" : slice_data(notallweak),
+            "all_indicators" : slice_data(all_indicators),
+            "not_all_indicators" : slice_data(not_all_indicators),
+            "strong_pfm" : slice_data(strong_pfm),
+            "weak_pfm" : slice_data(weak_pfm),
         }
 
     js = {
@@ -209,6 +197,63 @@ def agency_volume_of_aid(request, indicator, template_name="submissions/agency_r
     extra_context["indicator"] = indicator
 
     return direct_to_template(request, template=template_name, extra_context=extra_context)
+
+def top5_countries_json(request):
+    top3 = models.Country.objects.filter(country__in=["Ethiopia", "Mali", "Mozambique"])
+    next2 = models.Country.objects.filter(country__in=["Niger", "Uganda"])
+    the_rest = models.Country.objects.exclude(country__in=top3).exclude(country__in=next2)
+
+    calculator = partial(indicators.calc_indicator, agency_or_country=None, funcs=indicators.positive_funcs)
+    calc_indicators = ["2DPa", "2DPc", "3DP", "4DP", "5DPb"]
+
+    js = {
+        "top3" : [],
+        "next2" : [],
+        "the_rest" : []
+    }
+
+    def fn_country_values(country, indicator):
+        calculation = calculator(
+            models.DPQuestion.objects.filter(submission__country=country), 
+            indicator=indicator
+        )
+        with models.old_dataset():
+            old_calculation = calculator(
+                models.DPQuestion.objects.filter(submission__country=country),
+                indicator=indicator
+            )
+
+        return {
+            "name" : c.country,
+            "2007" : calculation[0][0],
+            "2009" : old_calculation[0][2],
+            "2011" : calculation[0][2],
+        }
+
+    for indicator in calc_indicators:
+        for label, subset in [("top3", top3), ("next2", next2), ("the_rest", the_rest)]:
+            calculation = calculator(
+                models.DPQuestion.objects.filter(submission__country__in=subset), indicator=indicator
+            )
+
+            with models.old_dataset():
+                old_calculation = calculator(
+                    models.DPQuestion.objects.filter(submission__country__in=subset), indicator=indicator
+                )
+
+
+            js[label].append({
+                "indicator" : indicator,
+                "averages" : {
+                    "2007" : calculation[0][0],
+                    "2009" : old_calculation[0][2],
+                    "2011" : calculation[0][2],
+                },
+                "by_country" : [fn_country_values(c, indicator) for c in subset]
+            })
+
+    return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")
+
 
 def agency_volume_of_aid_json(request, indicator):
     """

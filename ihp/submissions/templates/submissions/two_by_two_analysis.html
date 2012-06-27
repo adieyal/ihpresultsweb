@@ -19,7 +19,6 @@
         }
 
         .twobytwo, #countrybox {
-            border: solid thin black;
             float: left;
             margin: 10px;
         }
@@ -49,15 +48,10 @@
 
 {% block content %}
 <div id="twobytwo">
-    <div class="row" id="heading"><p class="span12">Two-by-two analysis</p></div>
+    <div class="row" id="heading"><p class="span12"><h1>Two-by-two analysis</h1></p></div>
     <div class="row" id="tables"></div>
 </div>
 <script>
-
-    round = function(v, d) {
-        f = Math.pow(10, d);
-        return Math.round(v * f) / f;
-    }
 
     fmt_countries = function(countries) {
         s = "<ul>"
@@ -83,9 +77,10 @@
         var header2 = table.append("tr");
         var strongrow = table.append("tr");
         var weakrow = table.append("tr");
+        var totalrow = table.append("tr");
 
         header1.append("th")
-            .attr("colspan", "3")
+            .attr("colspan", "4")
             .text(function(v) {
                 return v.indicator;
             });
@@ -93,6 +88,24 @@
         header2.append("th").text("PFM")
         header2.append("th").text("All indicators").attr("class", "hdr_allindicators")
         header2.append("th").text("Not all indicators").attr("class", "hdr_notallindicators")
+        header2.append("th").text("Total")
+
+        totalrow.append("th").text("Total")
+        totalrow
+            .each(function(d, i) {
+                d3.select(this)
+                    .selectAll("td")
+                    .data([0, 1])
+                    .enter()
+                    .append("td")
+                    .text(function(d2, i2) {
+                        switch (d2) {
+                            case 0 : return d3.round(d.all_indicators.value, 2);
+                            case 1 : return d3.round(d.not_all_indicators.value, 2);
+                        }
+                    })
+            });
+        totalrow.append("td").text("")
 
         $(".hdr_allindicators").popover({
             title : "All indicators",
@@ -106,7 +119,7 @@
 
         strongrow.append("th").text("3.5+")
         strongrow.append("td").text(function(v) {
-            return round(v.allstrong.value, 2) + " (" + v.allstrong.num_countries + ")";
+            return d3.round(v.allstrong.value, 2) + " (" + v.allstrong.num_countries + ")";
         })
         .each(function(v, i) {
             $(this).popover({
@@ -114,9 +127,9 @@
                 content : fmt_countries(v.allstrong.countries)
             });
         });
-        
+
         strongrow.append("td").text(function(v) {
-            return round(v.notallstrong.value, 2) + " (" + v.notallstrong.num_countries + ")";
+            return d3.round(v.notallstrong.value, 2) + " (" + v.notallstrong.num_countries + ")";
         })
         .each(function(v, i) {
             $(this).popover({
@@ -124,10 +137,14 @@
                 content : fmt_countries(v.notallstrong.countries)
             });
         });
+        strongrow.append("td").text(function(v) {
+            return d3.round(v.strong_pfm.value, 2);
+        });
+        
 
         weakrow.append("th").text("< 3.5");
         weakrow.append("td").text(function(v) {
-            return round(v.allweak.value, 2) + " (" + v.allweak.num_countries + ")";
+            return d3.round(v.allweak.value, 2) + " (" + v.allweak.num_countries + ")";
         })
         .each(function(v, i) {
             $(this).popover({
@@ -137,13 +154,16 @@
         });
 
         weakrow.append("td").text(function(v) {
-            return round(v.notallweak.value, 2) + " (" + v.notallweak.num_countries + ")";
+            return d3.round(v.notallweak.value, 2) + " (" + v.notallweak.num_countries + ")";
         })
         .each(function(v, i) {
             $(this).popover({
                 title : "Included countries",
                 content : fmt_countries(v.notallweak.countries)
             });
+        });
+        weakrow.append("td").text(function(v) {
+            return d3.round(v.weak_pfm.value, 2);
         });
     }
 
