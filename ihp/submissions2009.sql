@@ -1,5 +1,6 @@
+PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
-
+DROP TABLE IF EXISTS "submissions_dpquestion_2009";
 CREATE TABLE "submissions_dpquestion_2009" (
     "id" integer NOT NULL PRIMARY KEY,
     "submission_id" integer NOT NULL REFERENCES "submissions_submission" ("id"),
@@ -17,19 +18,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(671,25,'4','2007','1456669.0','
 INSERT INTO "submissions_dpquestion_2009" VALUES(672,25,'5','','50000.0','','500000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(673,25,'6','2007','2514346.0','2009','4880537.0','This figure does not include commodities that were procured by UNFPA though they were part of the MoH procurement plan. In relation to number 7, we do think that UNFPA CO does not meet mainly criteria number 3.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(674,25,'7','','50000.0','','500000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(675,25,'8','2007','2514346.0','2009','4880537.0','                                                    UNFPA CO is not funding private sector, NGOs or CSO. UNFPA though, has been supporting Pathfinder techcnical suppport (only salaries). Note that the amount disbursed in 2007was less than was provided through the multi-year commitment due to insuficient absortion capacity and first year of HACT implementation and in 2009 due to absortion capacity problems and programme review. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(676,25,'9','','2514346.0','','4880537.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(677,25,'10','2007','2514346.0','2009','4880537.44','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(678,25,'11','','2514346.0','','4880537.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(679,25,'12','2007','693511.0','2009','1671160.0','Due to UNFPA comparative advantage in procurement for commodities including contraceptives, the procurement plan is develop together with Ministry of Health but procurement is done following UNFPA systems. Of course, PROSAUDE Funds use national procurement systems. Not possible to provide the proportion of UNFPA contribution to PROSAUDE COMMON FUND for procurement.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(680,25,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(681,25,'14','2007','2514346.0','2009','4880537.0','The contribution to common fund uses purely country mechanisms.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(682,25,'15','','50000.0','','500000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(683,25,'16','please select','0.0','2009','0.0','We do not make use of project PIUs. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(684,25,'17','2007','No','2009','Yes','The Performance Assessment Framework was agreed when the second PROSAUDE Common Fund was signed in 2008.  However, UNFPA also have to comply with Standard Progress Reports , COARs as requested by HQ and UNDAF reporting in the context of Delivering as One.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(685,25,'18','2007','Yes','2009','Yes','In an annual basis takes place the Joint Annual Review of the Sector in which UNFPA has always have been an active partners through the monitoring and evaluatin working group.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(676,25,'8','','2514346.0','','4880537.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(677,25,'10old','2007','2514346.0','2009','4880537.44','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(678,25,'11old','','2514346.0','','4880537.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(679,25,'10','2007','693511.0','2009','1671160.0','Due to UNFPA comparative advantage in procurement for commodities including contraceptives, the procurement plan is develop together with Ministry of Health but procurement is done following UNFPA systems. Of course, PROSAUDE Funds use national procurement systems. Not possible to provide the proportion of UNFPA contribution to PROSAUDE COMMON FUND for procurement.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(680,25,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(682,25,'12','','50000.0','','500000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(683,25,'13','please select','0.0','2009','0.0','We do not make use of project PIUs. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(684,25,'14','2007','No','2009','Yes','The Performance Assessment Framework was agreed when the second PROSAUDE Common Fund was signed in 2008.  However, UNFPA also have to comply with Standard Progress Reports , COARs as requested by HQ and UNDAF reporting in the context of Delivering as One.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(685,25,'15','2007','Yes','2009','Yes','In an annual basis takes place the Joint Annual Review of the Sector in which UNFPA has always have been an active partners through the monitoring and evaluatin working group.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(686,25,'19','','See last column','','See last column','At the beginning of the health swap implementation, it was done exernally. As from 2007 is done jointly, coordinated by the M&A group and an external TA to help in the process. Is an exercise that involves mainly MoH and donors with little involvement of civil society. Much more enphais is given to MoH performance than to partners performance.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(687,25,'20','please select','No','2009','No ','UNFPA support to the health sector technical and financially has been provided to the Ministry of Health at the various levels. There are well established national and international networks that do participate though with no support from UNFPA. Was not considered a priority. At present, UNFPA is starting to support in 12 district the co-management meetings between Health facilities and community leaders/traditional birth attendants. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(687,25,'16','please select','No','2009','No ','UNFPA support to the health sector technical and financially has been provided to the Ministry of Health at the various levels. There are well established national and international networks that do participate though with no support from UNFPA. Was not considered a priority. At present, UNFPA is starting to support in 12 district the co-management meetings between Health facilities and community leaders/traditional birth attendants. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(688,25,'21','2007','0.0','2009','0.0','UNFPA did not disburse funds in the health sector to any other institution besides MoH at central and provincial levels.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(689,25,'22','2007','0.0','2009','0.0','UNFPA does not provide funds to the GBS in Mozambique.However, we do participate in the Joint Review of the GBS.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(690,25,'23','2007','50000.0','2009','500000.0','');
@@ -40,19 +39,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(2509,110,'4','2005','5053908.15
 INSERT INTO "submissions_dpquestion_2009" VALUES(2510,110,'5','','5053908.15','','11830012.16','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(2511,110,'6','2005','5053908.15','2009','11830012.16','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(2512,110,'7','','5053908.15','','11830012.16','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(2513,110,'8','2005','5053908.15','2009','11830012.16','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(2514,110,'9','','5053908.15','','11830012.16','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(2515,110,'10','2005','5053908.15','2009','11830012.16','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(2516,110,'11','','5053908.15','','11830012.16','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(2517,110,'12','2005','2871657.55','2009','8173271.71','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(2518,110,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(2519,110,'14','2005','5053908.15','2009','11830012.16','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(2520,110,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(2521,110,'16','2005','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(2522,110,'17','2005','Yes','2009','Yes','The assesment framework are the 2005-2010 National Health Plan monitornig indicators. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(2523,110,'18','2005','Yes','2009','Yes','Mutual assessment is made through Joint Annual Review and Joint missions. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(2514,110,'8','','5053908.15','','11830012.16','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(2515,110,'10old','2005','5053908.15','2009','11830012.16','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(2516,110,'11old','','5053908.15','','11830012.16','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(2517,110,'10','2005','2871657.55','2009','8173271.71','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(2518,110,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(2520,110,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(2521,110,'13','2005','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(2522,110,'14','2005','Yes','2009','Yes','The assesment framework are the 2005-2010 National Health Plan monitornig indicators. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(2523,110,'15','2005','Yes','2009','Yes','Mutual assessment is made through Joint Annual Review and Joint missions. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(2524,110,'19','','','','','JAR is effective to plan support given by each partner within the sector  for the year to come and to evaluate current year');
-INSERT INTO "submissions_dpquestion_2009" VALUES(2525,110,'20','2005','','2009','','civil society is present during health sector reviews and planification processes. Representatives of NGO are present in partner concertation tables. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(2525,110,'16','2005','','2009','','civil society is present during health sector reviews and planification processes. Representatives of NGO are present in partner concertation tables. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(2526,110,'21','2005','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(2527,110,'22','2005','0.0','2009','0.0','It is not foreseen to disburse any general budget support');
 INSERT INTO "submissions_dpquestion_2009" VALUES(2528,110,'23','2007','0.0','2009','0.0','It is foreseen to join Common Found in 2011');
@@ -63,19 +60,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(3941,175,'4','2005','','2009','
 INSERT INTO "submissions_dpquestion_2009" VALUES(3942,175,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(3943,175,'6','2005','1200025.0','2009','9053663.0','L''appui au secteur de la santé s''est fait aussi bien à travers des structures du niveau central que des structures du niveau périphériques, notamment des ONGs.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(3944,175,'7','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3945,175,'8','2005','1200025.0','2009','9053663.0','La totalité de l''appui de l''UNFPA se fait à travers un cycle pluriannuel de coopération 2008 - 2012; le cycle précedent était 2002 - 2006. Les données présentés sont tirées des années 2005 et 2009.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3946,175,'9','','1200025.0','','9053663.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3947,175,'10','2005','1200025.0','2009','9053663.0','Tous les fonds déclkrés ont été décaissés au courant de l''année concernée.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3948,175,'11','','1200025.0','','9053663.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3949,175,'12','2005','3267186.0','2009','3285252.0','L''UNFPA vient de commencer  en 2010 l''intégration des approvisionnements en médicament.s dans le systèleme national d''approvisionement en médicaments (SNAM). Jusqu''en 2009, le systèmpe n''était pas encore fonctionnel.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3950,175,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3951,175,'14','2005','345556.0','2009','591032.0','Les dépenses nationnales de santé s''élèvaient à 943 112 403 USD en 2008');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3952,175,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3953,175,'16','2005','0.0','2009','0.0','Le programme de coopération est mis en œuvre au niveau de l''UNFPA dans le scadre que du Programme pays à travers le Plan d''action du programme pays, CPAP. Au niveau des partenaires, on a utilisé les Programmes Nationaux au niveau des ministère du Genre, Santé et Plan. Pas d''unité de mise en oeuivre parallèle appuyée.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3954,175,'17','please select','No','2009','No','Il n''existe pas encore de cadre unique d''évaluation des performances impliquant tous les acteurs.Toutefois den rapport avec l''appui de l''UNFPA, il existe au  niveau du Ministère de la coopération internationale un cadre de concertation pour la coordination et le suivi des interventions dans le pays, le GTI, Groupe de travail intersectoriel.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3955,175,'18','please select','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3946,175,'8','','1200025.0','','9053663.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3947,175,'10old','2005','1200025.0','2009','9053663.0','Tous les fonds déclkrés ont été décaissés au courant de l''année concernée.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3948,175,'11old','','1200025.0','','9053663.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3949,175,'10','2005','3267186.0','2009','3285252.0','L''UNFPA vient de commencer  en 2010 l''intégration des approvisionnements en médicament.s dans le systèleme national d''approvisionement en médicaments (SNAM). Jusqu''en 2009, le systèmpe n''était pas encore fonctionnel.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3950,175,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3952,175,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3953,175,'13','2005','0.0','2009','0.0','Le programme de coopération est mis en œuvre au niveau de l''UNFPA dans le scadre que du Programme pays à travers le Plan d''action du programme pays, CPAP. Au niveau des partenaires, on a utilisé les Programmes Nationaux au niveau des ministère du Genre, Santé et Plan. Pas d''unité de mise en oeuivre parallèle appuyée.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3954,175,'14','please select','No','2009','No','Il n''existe pas encore de cadre unique d''évaluation des performances impliquant tous les acteurs.Toutefois den rapport avec l''appui de l''UNFPA, il existe au  niveau du Ministère de la coopération internationale un cadre de concertation pour la coordination et le suivi des interventions dans le pays, le GTI, Groupe de travail intersectoriel.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3955,175,'15','please select','No','2009','No','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(3956,175,'19','please select','Les Revues annueles n''ont pas été conjoints bie que les partenaires aient été associés.','','Le Ministère de la santé avait convié les partenaires à la Revue du secteur de la santé, mais il ne s''agissait pas d''une Renue conjointe .','Le sytème des évaluations conjointes n''est pas  systématique dans le secteur de la santé. Toutefois l''UNFPA avec d''autres agences UN Excom ont procédé à une revue conjointe des activités en 2009');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3957,175,'20','2005','215593.0','`','406711.0','Les ONGs, particulièrement les ONGs nationales, ont été très actives dans la mise en œuvre du programme pour la santé de la réproduction et la prise en chage médicale des victimes des violences sexuelles. Le renforcement des capacités des partenaires de la société civile (ONGs) était inscrite dans l''appui accordé aux ONG. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3957,175,'16','2005','215593.0','`','406711.0','Les ONGs, particulièrement les ONGs nationales, ont été très actives dans la mise en œuvre du programme pour la santé de la réproduction et la prise en chage médicale des victimes des violences sexuelles. Le renforcement des capacités des partenaires de la société civile (ONGs) était inscrite dans l''appui accordé aux ONG. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(3958,175,'21','2005','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(3959,175,'22','2005','0.0','2009','0.0','Les dépenses totales de santé en rapport avec la SR  qui, est le domaine essentiel de l''appui de l''UNFPA au secteur de la santé, s''élèvaient à 131 957 531 USD en 2008');
 INSERT INTO "submissions_dpquestion_2009" VALUES(3960,175,'23','2005','0.0','2009','0.0','L''appui accordé au gouvernement, dont les monta,nst sont repris ci-haut ne constituepas  un appui budgétaire classiqu.;');
@@ -88,19 +83,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(3964,176,'4','2005','623440.0',
 INSERT INTO "submissions_dpquestion_2009" VALUES(3965,176,'5','','623440.0','','1547850.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(3966,176,'6','2005','1346585.0','2009','6301162.0','En ce qui concerne l''appui aux initiatives axées sur les Programme, en 2005 UNFPA a contribué pour la réalisation  et la mise en œuvre de l''enquête EDSN/MICSS et de certaines initiative conjointe auxquelles l''UNFPA participe comme le projet conjoint FAO/PAM/UNICEF/UNFPA');
 INSERT INTO "submissions_dpquestion_2009" VALUES(3967,176,'7','','250000.0','','273822.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3968,176,'8','2007','1346585.0','2009','6301162.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3969,176,'9','','1346586.0','','6301162.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3970,176,'10','2005','1346585.0','2009','6301162.0','Pas eu de retard dans le décaissement des aides dans la mesure où les décaissements se font annuellement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3971,176,'11','','1346585.0','','6301162.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3972,176,'12','2005','0.0','2009','900000.0','Nos approvisonnements se font au niveau de nos centrales d''achats à copenhagen. Des tentatives d''approvisonnements via le système national ont été faites sans succès. On a eu moins de 50% de satisfaction des commandes passées localement. Des discussions sont engagées avec l''ensemble des partenaires du MSP pour voir comment appuyer la réforme du système d''approvisionnement national qui reste et demeure un pillier essentiel pour le renforcement du système de santé');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3973,176,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3974,176,'14','2005','1299530.0','2009','6261960.0','Le processus est en cours et devrait être appliqué en 2011 à travers la participation de  UNFPA au panier commun secteur santé. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3975,176,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3976,176,'16','2008','9.0','2009','3.0','En 2005 UNFPA avait trois(3) Projets (SR Mirriah-Loga; Maternité sans risque à Agadez et SR Zinder)  En 2008  neuf (9) projets: les trois projet de 2005 + 3 projet de 2007 ( le Programme SSRAJ au Niveau National, Renforcement des SONU à Niamey et Zinder, Appui à l''extension des SONU à Maradi et Tahoua), + trois projets de 2008 trois (MGF/Fistule, PF et Sécurisation des produits SR), En 2009  on est redescendu à trois (3) projets (Accès au Services des Santé de la Reproduction; Demande de services de SR; Gestion des réponses aux crises et situation de conflits impliquant les institutions nationales et les OSC prenant en compte la SR). L''un des commentaires c''est qu''on a des difficultés pour gérer tous ces projets, d''où l''attribution à une direction technique créée à cet effet, la gestion de tous les projets');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3977,176,'17','please select','Yes','2009','Yes','Il existe un cadre d''évaluation des performances transparent: Il s''agit des revues conjointes d''évaluation semestrielles et annuelles qui réunit tous les partenaires du secteur de la santé. (Etat, PTF,société civile, communauté). Ces revues sont précédées par des missions conjointes de terrain (MSP, PTF).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3978,176,'18','please select','Yes','2009','Yes','Ces évaluations mutuelles sont annuelles,et se font à travers des visites conjointes sur le terrain, dans le but de verifier physiquement l''effectivité et l''éfficacité de l''aide.La dernière a eu lieu en juin 2010 à Niamey. Elles sont semestrielles et annuelles.  Les participations sont physiques et contributions aux débats.                                                             Dans l’élaboration des documents stratégiques (cadre stratégique VIH, politique nationale de santé, Document de stratégie de lutte contre le paludisme, etc.) les ONGs/OSC sont impliquées par le gouvernement. Il en est de même pour  l''élaboration des documents en vue de mobiliser des fonds (requête fonds mondial) ; Elles sont impliquées également dans les prestations des services, la mobilisation communautaire, la communication pour un changement de comportement. Il implique aussi les réseaux des jeunes dans l’élaboration des documents de politique et de stratégie en faveur des jeunes ( la politique nationale de la jeunesse). Au niveau de l’UNFPA, l’appui au renforcement des capacités des réseaux et organisations non gouvernementales est assurée dans la mise en oeuvre du programme.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3969,176,'8','','1346586.0','','6301162.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3970,176,'10old','2005','1346585.0','2009','6301162.0','Pas eu de retard dans le décaissement des aides dans la mesure où les décaissements se font annuellement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3971,176,'11old','','1346585.0','','6301162.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3972,176,'10','2005','0.0','2009','900000.0','Nos approvisonnements se font au niveau de nos centrales d''achats à copenhagen. Des tentatives d''approvisonnements via le système national ont été faites sans succès. On a eu moins de 50% de satisfaction des commandes passées localement. Des discussions sont engagées avec l''ensemble des partenaires du MSP pour voir comment appuyer la réforme du système d''approvisionnement national qui reste et demeure un pillier essentiel pour le renforcement du système de santé');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3973,176,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3975,176,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3976,176,'13','2008','9.0','2009','3.0','En 2005 UNFPA avait trois(3) Projets (SR Mirriah-Loga; Maternité sans risque à Agadez et SR Zinder)  En 2008  neuf (9) projets: les trois projet de 2005 + 3 projet de 2007 ( le Programme SSRAJ au Niveau National, Renforcement des SONU à Niamey et Zinder, Appui à l''extension des SONU à Maradi et Tahoua), + trois projets de 2008 trois (MGF/Fistule, PF et Sécurisation des produits SR), En 2009  on est redescendu à trois (3) projets (Accès au Services des Santé de la Reproduction; Demande de services de SR; Gestion des réponses aux crises et situation de conflits impliquant les institutions nationales et les OSC prenant en compte la SR). L''un des commentaires c''est qu''on a des difficultés pour gérer tous ces projets, d''où l''attribution à une direction technique créée à cet effet, la gestion de tous les projets');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3977,176,'14','please select','Yes','2009','Yes','Il existe un cadre d''évaluation des performances transparent: Il s''agit des revues conjointes d''évaluation semestrielles et annuelles qui réunit tous les partenaires du secteur de la santé. (Etat, PTF,société civile, communauté). Ces revues sont précédées par des missions conjointes de terrain (MSP, PTF).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3978,176,'15','please select','Yes','2009','Yes','Ces évaluations mutuelles sont annuelles,et se font à travers des visites conjointes sur le terrain, dans le but de verifier physiquement l''effectivité et l''éfficacité de l''aide.La dernière a eu lieu en juin 2010 à Niamey. Elles sont semestrielles et annuelles.  Les participations sont physiques et contributions aux débats.                                                             Dans l’élaboration des documents stratégiques (cadre stratégique VIH, politique nationale de santé, Document de stratégie de lutte contre le paludisme, etc.) les ONGs/OSC sont impliquées par le gouvernement. Il en est de même pour  l''élaboration des documents en vue de mobiliser des fonds (requête fonds mondial) ; Elles sont impliquées également dans les prestations des services, la mobilisation communautaire, la communication pour un changement de comportement. Il implique aussi les réseaux des jeunes dans l’élaboration des documents de politique et de stratégie en faveur des jeunes ( la politique nationale de la jeunesse). Au niveau de l’UNFPA, l’appui au renforcement des capacités des réseaux et organisations non gouvernementales est assurée dans la mise en oeuvre du programme.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(3979,176,'19','2005','Les revues pourraient atteindre leurs objectifs si tous les problèmes soulevés trouvaient de solutions','','Les revues pourraient atteindre leurs objectifs si tous les problèmes soulevés trouvaient de solutions','Le temps consacré (3 jours) ne permet pas de discuter de manière approfondie des questions d''importance capitale (système d''approvisonnement, ressources humaines, fonctionnalité des hopitaux de district, etc.) inscrits à l''ordre du jour des réunions. Au niveau des PTFs, souvent les évaluations sont des évaluations de complaisance pour être "politiquement correcte" à cause de la présence physique du Ministre de la Santé. Pour pallier ces insuffisances des réunions entre PTFs ont été instaurées pour donner une position commune des PTFs sur les différents dossiers');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3980,176,'20','2005','47055.0','2009','39202.0','  UNFPA étant chef de file des PTFs depuis plusieurs annees (2005 & 2009 y-inclus) au niveau de la région de Zinder, UNFPA finance tout le processus de la revue, au niveau districts et région Zinder');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3980,176,'16','2005','47055.0','2009','39202.0','  UNFPA étant chef de file des PTFs depuis plusieurs annees (2005 & 2009 y-inclus) au niveau de la région de Zinder, UNFPA finance tout le processus de la revue, au niveau districts et région Zinder');
 INSERT INTO "submissions_dpquestion_2009" VALUES(3981,176,'21','2005','0.0','2009','0.0','Non Applicable pour UNFPA. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(3982,176,'22','2005','0.0','2009','0.0','UNFPA n''apporte pas d''appui budgétaire');
 INSERT INTO "submissions_dpquestion_2009" VALUES(3983,176,'23','2005','0.0','2009','0.0','UNFPA n''apporte pas d''appui budgétaire');
@@ -111,19 +104,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(3987,177,'4','2005','1850000.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(3988,177,'5','','1850000.0','','1760000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(3989,177,'6','2005','5640000.0','2009','4575000.0','Same as above');
 INSERT INTO "submissions_dpquestion_2009" VALUES(3990,177,'7','','1360000.0','','1000000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3991,177,'8','2005','5640000.0','2009','4575000.0','While commitments of UNFPA are guided by the 3 years CPAP Results and Resource Framework, provision or disbursement happens on an annual basis.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3992,177,'9','','5640000.0','','4575000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3993,177,'10','2005','5640000.0','2009','4575000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3994,177,'11','','5640000.0','','4575000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3995,177,'12','2005','2400000.0','2009','100000.0','UNFPA has stopped investing in procurement in line with its CPAP 2008-2010. Thins decision is based on the fact that Government of Nepal has a separate budget for vital and essentail drugs which includes RH commodities. In addtion donors such as KFW and USAID bridge the gaps.UNFPA provides technical support to the logistics management division for forecasting distribution and monitoring.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3996,177,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3997,177,'14','2005','5205000.0','2009','2940000.0','UNFPA is not a pool funding partner and is using its own financial monitoring systems. In July, UNFPA signed the Joint Financial Agreement with GoN and pooled partners (although UNFPA signed as a non-pooling partner). The JFA represents a commitment to using national systems including reporting and audit. UNFPA will gradually reduce its own systems in light of this agreement. However, we have some concerns regarding UNFPA audit findings from some GoN implementing partners within the health sector and these will need to be addressed before we rely totally on GoN public financial management systems.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3998,177,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(3999,177,'16','2007','7.0','2009','0.0','From 2009, all project implementation units have been closed and a district programme approach launched.he ''+1'' refers to the vertical HR support to MOHP that UNFPA was providing in the form of additional staff to which has now been withdrawn');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4000,177,'17','2005','Yes','2009','Yes','The National Health Sector Programme Framework is currently used for assessing progress.  UNDAF and CPAP are also used as a basic to address progress.  The Department of Health Services also holds regonal and national performance review meetings each year.  ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4001,177,'18','2005','Yes','2009','Yes','Within the JFA and the National Compact, GoN and EDPs have committed to mutual assessments. This takes place within the JAR and through regular dialogue. Both GoN and EDPs recognize that this needs to be improved.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3992,177,'8','','5640000.0','','4575000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3993,177,'10old','2005','5640000.0','2009','4575000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3994,177,'11old','','5640000.0','','4575000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3995,177,'10','2005','2400000.0','2009','100000.0','UNFPA has stopped investing in procurement in line with its CPAP 2008-2010. Thins decision is based on the fact that Government of Nepal has a separate budget for vital and essentail drugs which includes RH commodities. In addtion donors such as KFW and USAID bridge the gaps.UNFPA provides technical support to the logistics management division for forecasting distribution and monitoring.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3996,177,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3998,177,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(3999,177,'13','2007','7.0','2009','0.0','From 2009, all project implementation units have been closed and a district programme approach launched.he ''+1'' refers to the vertical HR support to MOHP that UNFPA was providing in the form of additional staff to which has now been withdrawn');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4000,177,'14','2005','Yes','2009','Yes','The National Health Sector Programme Framework is currently used for assessing progress.  UNDAF and CPAP are also used as a basic to address progress.  The Department of Health Services also holds regonal and national performance review meetings each year.  ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4001,177,'15','2005','Yes','2009','Yes','Within the JFA and the National Compact, GoN and EDPs have committed to mutual assessments. This takes place within the JAR and through regular dialogue. Both GoN and EDPs recognize that this needs to be improved.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4002,177,'19','','Good','','Good','JAR is quite useful as a review tool and is regularly held in Nepal with active participation of the Government, civil society and the EDPs. The recent JFA set out a number of measures to improve it - including an agreed timeline, preparatory steps, and fixed agenda items.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4003,177,'20','2007','435000.0','2009','1635000.0','UNFPA supports national consultations on key health issues and advocates to the Government to include civil society actors in them. Umbrella NGOs are invited to the JAR meetings. Civil society organizations are also invited for annual MOHP regional review meetings to provide inputs and suggestions');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4003,177,'16','2007','435000.0','2009','1635000.0','UNFPA supports national consultations on key health issues and advocates to the Government to include civil society actors in them. Umbrella NGOs are invited to the JAR meetings. Civil society organizations are also invited for annual MOHP regional review meetings to provide inputs and suggestions');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4004,177,'21','2007','N/A','2009','N/A','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4005,177,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4006,177,'23','2007','0.0','2009','0.0','Health sector budget with funds earmaked for specific budget items');
@@ -134,19 +125,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(4010,178,'4','2006','1067796.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(4011,178,'5','','1067796.0','','1963111.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4012,178,'6','2006','1739699.0','2009','2106259.0','UNFPA ac participé au financement de l''EDS 2006 et en 2009 au programme intégré des nations Unies de lutte contre le VIH, Les activités retenues dans ce programmes au compte de l''UNFPA sont mis en œuvre dans la grande majorité à travers le Plan de travail Annuel (PTA) exécuté par le Ministère de la jeunesse et une petite parti dans le PTA exécuté par la Direction nationale de la santé . ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4013,178,'7','','1739699.0','','2106259.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4014,178,'8','2007','1739699.0','2009','2106259.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4015,178,'9','','1739699.0','','2106259.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4016,178,'10','2006','1739699.0','2009','2106259.0','Les décaisements sont effectués dans le cadre du PTA qui est un planification annuelle');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4017,178,'11','','1739699.0','','2106259.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4018,178,'12','2006','671903.06','2009','143148.0','Ces montants couvrent les achats d''ambulances, de produits concraceptifs de kits et de medicaments et materiels médicaux.  Ces achats sont effectués à la demande des structures nationales selon leurs besoins. Les partenaires expriment leurs besoins en équipements et produits contraceptifs et l’UNFPA procède à l’achat en profitant des meilleurs coûts d’acquisition offerts par ses centrales d’achat et par l''exonération de taxes. Environ 20% des achats sont directement faits localement par les partenaires nationaux');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4019,178,'13','','134381.0','','28630.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4020,178,'14','2006','1478744.0','','1790320.0','Le UNFPA privilégie l''exécution nationale, ainsi les départements des ministères en charge de la santé, de la promotion de la femme de l''économie et des finances et la jeunesse sont les structures d''exécutions, ainsi que certaines ONG nationales. Dans le cadre de la mise en œuvre du HACT, l’UNFPA et le PNUD utilisent le FACE pour le rapportage de l’exécution financière des interventions mise en œuvre par les partenaires  Gouvernementaux du programme. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4021,178,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4022,178,'16','2006','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4023,178,'17','2006','Yes','2009','Yes','oui, le Mali dispose d''un cadre d''orientation, de coordination et de suivi évaluation du PRODESS à travers les organes créés à cet effet à tous les niveaux de la pyramides sanitaires du niveau opérationnel au niveau national en passant par le niveau régional. Il existe en outre un cadre d''indicateurs communs qui sont utilisés pour lle suivi du progres accompli, Ci-joint liste  ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4024,178,'18','2008','Yes','2009','Yes','Des réunions bi annuelles des organes d''orientation, de coordination et de suivi évaluation du PRODESS et de l''appui budgétaire annuelles constituent des espaces fécondes de débats et de dialogues pour l''ensemble des PTF. A ces réunions s''ajoutent les missions conjointes, les audits et les évaluations externes (2003 , 2005,  2009). La revue de l''appui budgetaire a mis l''accent sur l''explosion démographique mis en relief par le dernier recensement de la population 2009 et depuis tous les regards sont portés sur le défi démographique,     planification/programmation, le suiv/evaluation, le financement et la rédevabilité/responsabilité mutuelles, afin de porter à échelle une meilleure couverture de santé aux populations du Mali. En outre l''évaluation mutuelle de l''efficacité de l''aide dans le cadre de la mise en oeuvre du compact est prevue pour 2010.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4015,178,'8','','1739699.0','','2106259.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4016,178,'10old','2006','1739699.0','2009','2106259.0','Les décaisements sont effectués dans le cadre du PTA qui est un planification annuelle');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4017,178,'11old','','1739699.0','','2106259.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4018,178,'10','2006','671903.06','2009','143148.0','Ces montants couvrent les achats d''ambulances, de produits concraceptifs de kits et de medicaments et materiels médicaux.  Ces achats sont effectués à la demande des structures nationales selon leurs besoins. Les partenaires expriment leurs besoins en équipements et produits contraceptifs et l’UNFPA procède à l’achat en profitant des meilleurs coûts d’acquisition offerts par ses centrales d’achat et par l''exonération de taxes. Environ 20% des achats sont directement faits localement par les partenaires nationaux');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4019,178,'11','','134381.0','','28630.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4021,178,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4022,178,'13','2006','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4023,178,'14','2006','Yes','2009','Yes','oui, le Mali dispose d''un cadre d''orientation, de coordination et de suivi évaluation du PRODESS à travers les organes créés à cet effet à tous les niveaux de la pyramides sanitaires du niveau opérationnel au niveau national en passant par le niveau régional. Il existe en outre un cadre d''indicateurs communs qui sont utilisés pour lle suivi du progres accompli, Ci-joint liste  ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4024,178,'15','2008','Yes','2009','Yes','Des réunions bi annuelles des organes d''orientation, de coordination et de suivi évaluation du PRODESS et de l''appui budgétaire annuelles constituent des espaces fécondes de débats et de dialogues pour l''ensemble des PTF. A ces réunions s''ajoutent les missions conjointes, les audits et les évaluations externes (2003 , 2005,  2009). La revue de l''appui budgetaire a mis l''accent sur l''explosion démographique mis en relief par le dernier recensement de la population 2009 et depuis tous les regards sont portés sur le défi démographique,     planification/programmation, le suiv/evaluation, le financement et la rédevabilité/responsabilité mutuelles, afin de porter à échelle une meilleure couverture de santé aux populations du Mali. En outre l''évaluation mutuelle de l''efficacité de l''aide dans le cadre de la mise en oeuvre du compact est prevue pour 2010.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4025,178,'19','2006','','','','Les revues conjointes sont organisées dans le cadre de l''UNDAF, Elles impliquent l''ensemble des acteurs nationaux concernés et des organisations onusiennes, sous la conduite du Gouvernement. Elles sont soutenues par des missions conjointes de terrain dont les résultats permettent de mesurer objectivement les efforst vers l''atteinte des résultats escomptés,');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4026,178,'20','2006','260955.0','2009','315939.0','La société civile notamment les ONG et associations sont des partenaires de mise en œuvre des PTA SR du programme de coopération Mali/UNFPA en contribution à la mise en œuvre du PRODESS. A ce titre, dans le cadre de l''établissement d''un accord cadre de contrat de services,elles ont bénéficié de l''appui financier de l''UNFPA pour  l''exécution de Plans travail annuels Certaines activités du PTA ciblent le renforcement des capacités  et l''appui institutionnel');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4026,178,'16','2006','260955.0','2009','315939.0','La société civile notamment les ONG et associations sont des partenaires de mise en œuvre des PTA SR du programme de coopération Mali/UNFPA en contribution à la mise en œuvre du PRODESS. A ce titre, dans le cadre de l''établissement d''un accord cadre de contrat de services,elles ont bénéficié de l''appui financier de l''UNFPA pour  l''exécution de Plans travail annuels Certaines activités du PTA ciblent le renforcement des capacités  et l''appui institutionnel');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4027,178,'21','2006','0.0','2009','0.0','Le bureau a mobilisé des fonds auprès de la  coopération avec le Luxemburg. Un document de projet a été élaboré à cet effet par le ministère de la santé. Ces fonds en 2009.ont été utilisés entièrement le plan annuel de travail de la directiopn nationale de la santé et des DRS. Par contre en 2006, ces fonds mobilisés auprès des Trusts fonds ont permis la réalisation d''activité en faveur de la lutte contre la fistile.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4028,178,'22','please select','N/A','2009','N/A','NA : Nous ne sont pas dans l''Appui budgétaire Général');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4029,178,'23','please select','N/A','2009','N/A','L''appui au programme sectoriel de santé (PRODESS) se fait directement aux structures du ministère de la santé. Nous ne finançons pas le panier commun.');
@@ -157,19 +146,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(4033,179,'4','2005','40000.0','
 INSERT INTO "submissions_dpquestion_2009" VALUES(4034,179,'5','','40000.0','','30000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4035,179,'6','2005','347739.52','2009','1370833.11','Depuis 2008, l''aide allouée à la santé se fait dans le cadre d''un alignement sur les priorités nationales de tous les partenaires au développement. Nous avons été impliqués dans le processus de planification ainsi que dans l''évaluation à mi-parcours du plannational de développement sanitaire dans lequel notre propre programme est intégré');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4036,179,'7','','347739.52','','1370833.11','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4037,179,'8','2007','481562.97','2009','1370833.11','L''engagement est pluriannuel et porte sur 5 années . Toutefois les décaissements se sont sur une base annuelle (sur la base du plan de travail annuel)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4038,179,'9','','481562.97','','1370833.11','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4039,179,'10','2005','347739.52','2009','1370833.11','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4040,179,'11','','347739.52','','1370833.11','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4041,179,'12','2005','16231.0','2009','836000.0','Nous continuons de manière régulière à augmenter l''exécution nationale et à utiliser autant que possible les systèmes de passation de marché du pays. Toutefois ces systèmes sont encore très faibles et nécessitent un renforcement de capacité important.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4042,179,'13','','0.0','','191000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4043,179,'14','2005','347739.52','2009','1370833.11','Ces systèmes sont encore très faibles toutefois nous essayons d''augmenter d''année en année l''utilisation de ces systèmes');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4044,179,'15','','206494.31','','483386.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4045,179,'16','2005','1.0','2009','1.0','Pour le secteur de la santé nous n''avons qu''une unité de mise en œuvre. C''est-à-dire le programme de santé de la reproduction du Ministère de la santé jusqu''en 2007. A partir de 2008, l''Unité de Gestion des Projets du Ministère de la Santé, qui gère d''autres fonds aussi (BM, BAD, AFD) assure toute la gestion financière des fonds sous exécution nationale en concertation avec les programmes concernés ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4046,179,'17','please select','No','2009','No','Nous pensons que la revue à mi-parcours de la politique nationale de développement sanitaire  (2010) permettra l''utilisation d''un tel cadre. Toutefois, le manque de données statistiques constituent une faiblesse difficlement surmontables actuellement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4047,179,'18','please select','No','2009','No','La premiere evaluation mutuelle a ete programme pour 2010 seulement: ''La revue conjointe et à mi-parcours de la politique nationale de développement sanitaire''  ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4038,179,'8','','481562.97','','1370833.11','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4039,179,'10old','2005','347739.52','2009','1370833.11','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4040,179,'11old','','347739.52','','1370833.11','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4041,179,'10','2005','16231.0','2009','836000.0','Nous continuons de manière régulière à augmenter l''exécution nationale et à utiliser autant que possible les systèmes de passation de marché du pays. Toutefois ces systèmes sont encore très faibles et nécessitent un renforcement de capacité important.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4042,179,'11','','0.0','','191000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4044,179,'12','','206494.31','','483386.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4045,179,'13','2005','1.0','2009','1.0','Pour le secteur de la santé nous n''avons qu''une unité de mise en œuvre. C''est-à-dire le programme de santé de la reproduction du Ministère de la santé jusqu''en 2007. A partir de 2008, l''Unité de Gestion des Projets du Ministère de la Santé, qui gère d''autres fonds aussi (BM, BAD, AFD) assure toute la gestion financière des fonds sous exécution nationale en concertation avec les programmes concernés ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4046,179,'14','please select','No','2009','No','Nous pensons que la revue à mi-parcours de la politique nationale de développement sanitaire  (2010) permettra l''utilisation d''un tel cadre. Toutefois, le manque de données statistiques constituent une faiblesse difficlement surmontables actuellement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4047,179,'15','please select','No','2009','No','La premiere evaluation mutuelle a ete programme pour 2010 seulement: ''La revue conjointe et à mi-parcours de la politique nationale de développement sanitaire''  ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4048,179,'19','please select','No','','No','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4049,179,'20','please select','No','2009','No','Aucun');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4049,179,'16','please select','No','2009','No','Aucun');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4050,179,'21','please select','','2009','','Pas d''''aide allouée à travers d''autres donateurs');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4051,179,'22','please select','No','2009','No','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4052,179,'23','please select','No','2009','No','');
@@ -180,19 +167,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(4056,180,'4','2006','833389.0',
 INSERT INTO "submissions_dpquestion_2009" VALUES(4057,180,'5','','833389.0','','1810579.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4058,180,'6','2005','1614128.0','2009','5947372.0','L''UNFPA a contribue au PADS, a la réalisation  de l''enquête EDS en 2003 et en 2009 et de certaines initiative conjointe auxquelles l''UNFPA participe comme le projet conjoint VIH');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4059,180,'7','','0.0','','1375730.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4060,180,'8','2006','1614128.0','2009','5947372.0','Les appuis programmes dans le cadre de la coopération UNFPA/GVT du BF se font annuellement à travers des plans de travail');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4061,180,'9','','1614128.0','','5947372.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4062,180,'10','2005','1614128.0','2009','5947372.0','Généralement les fonds destinés aux appuis directs du PADS sont decaissés dans les délais. Cependant les procédures de decaissement des autres fonds se font par trimestre. Chaque décaissement trimestriel est conditionné par une justification d''au moins 80% du montant du trimestre précédent. Cette disposition induit par fois des retards dans les décaissement du fait de la mauvaise qualité des pièces comptables qui sont fournis par les partenaires d''exécution');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4063,180,'11','','1500000.0','','5947372.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4064,180,'12','2006','648810.0','2009','1275730.0','Nos approvisonnements se font au niveau de nos centrales d''achats à copenhagen pour l''essentiel des équipements et des produits contraceptifs. La lourdeur dans la passation des marchés au niveau national ne permettent pas pour l''instant d''assurer la bonne mise en oeuvre des activités du programme dans les délais requis. La DGMP (Direction Générale des Marchés Publics) est une jeune institutions qui encore très peu opérationnelle');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4065,180,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4066,180,'14','2006','1614128.0','2009','5897372.0','Dans le cadre de la mise en œuvre du programme de coopération entre le Burkina Faso et l''UNFPA 2006-2010, les budget sont éxécutés sur la base d''un manuel de proceduire nex qui est fondé sur les synthèmes nationaux de gestion financière');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4067,180,'15','','0.0','','652539.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4068,180,'16','2005','3.0','2009','2.0','Un projet de lutte contre les fistules obstétricales a été initié depuis 2009 dans deux régions du Burkina. Ce projet qui a bénéficié du financement du Royaume de Luxembourg est exécuté par un personnel que UNFPA a recruté. Le mariage précose est le second projet avec une composante santé de la reproduction. Il faut noter cependant que le Ministère de la santé peut contradualiser des ONG ou des associations en milieu rural pour l''exécution de certaines activités dans le cadre de la mise en oeuvre des activités du programme de coopération avec UNFPA. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4069,180,'17','2006','Yes','2009','Yes',' ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4070,180,'18','please select','No','2009','No','Ce mécanisme sera mis en place avec la finalisation du processus du partenariat');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4061,180,'8','','1614128.0','','5947372.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4062,180,'10old','2005','1614128.0','2009','5947372.0','Généralement les fonds destinés aux appuis directs du PADS sont decaissés dans les délais. Cependant les procédures de decaissement des autres fonds se font par trimestre. Chaque décaissement trimestriel est conditionné par une justification d''au moins 80% du montant du trimestre précédent. Cette disposition induit par fois des retards dans les décaissement du fait de la mauvaise qualité des pièces comptables qui sont fournis par les partenaires d''exécution');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4063,180,'11old','','1500000.0','','5947372.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4064,180,'10','2006','648810.0','2009','1275730.0','Nos approvisonnements se font au niveau de nos centrales d''achats à copenhagen pour l''essentiel des équipements et des produits contraceptifs. La lourdeur dans la passation des marchés au niveau national ne permettent pas pour l''instant d''assurer la bonne mise en oeuvre des activités du programme dans les délais requis. La DGMP (Direction Générale des Marchés Publics) est une jeune institutions qui encore très peu opérationnelle');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4065,180,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4067,180,'12','','0.0','','652539.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4068,180,'13','2005','3.0','2009','2.0','Un projet de lutte contre les fistules obstétricales a été initié depuis 2009 dans deux régions du Burkina. Ce projet qui a bénéficié du financement du Royaume de Luxembourg est exécuté par un personnel que UNFPA a recruté. Le mariage précose est le second projet avec une composante santé de la reproduction. Il faut noter cependant que le Ministère de la santé peut contradualiser des ONG ou des associations en milieu rural pour l''exécution de certaines activités dans le cadre de la mise en oeuvre des activités du programme de coopération avec UNFPA. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4069,180,'14','2006','Yes','2009','Yes',' ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4070,180,'15','please select','No','2009','No','Ce mécanisme sera mis en place avec la finalisation du processus du partenariat');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4071,180,'19','please select','N/A','','N/A','Ce mécanisme sera mis en place avec la finalisation du processus du partenariat');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4072,180,'20','please select','0.0','2009','0.0','De manière spécifique UNFPA n''appuit pas les organisations de la société civile dans le domaine de santé en dehors de formations occasionnelle d''organisations sur les questions de santé de la reproduction. Ces formations se font dans le cadre de la mise en oeuvre des programmes de coopération sous la conduite des partenaires de mise en oeuvre. L''estimation des montants de ce type d''appui est donc difficile à faire au cours d''une année');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4072,180,'16','please select','0.0','2009','0.0','De manière spécifique UNFPA n''appuit pas les organisations de la société civile dans le domaine de santé en dehors de formations occasionnelle d''organisations sur les questions de santé de la reproduction. Ces formations se font dans le cadre de la mise en oeuvre des programmes de coopération sous la conduite des partenaires de mise en oeuvre. L''estimation des montants de ce type d''appui est donc difficile à faire au cours d''une année');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4073,180,'21','please select','0.0','2009','50000.0','Cet appui se fait dans le cadre de notre contribution commune aux initiatives conjointes comme c''était le cas de du programme conjoint VIH  de 2006-2010 geré par l''OMS. Ce fond n''est pas en fait directement versé à l''OMS mais est une contribution de UNFPA pour l''exécution d''activités inscrites dans le plan d''action du programme conjoint. Chaque agence gère donc sa contrepartie finacière du programme conjoint.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4074,180,'22','please select','0.0','2009','0.0','UNFPA ne fait pas d''appui budgétaire en déhors des fonds qu''il alloue au PADS');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4075,180,'23','please select','0.0','2009','0.0','UNFPA ne fait pas d''appui budgétaire en déhors des fonds qu''il alloue au PADS');
@@ -203,19 +188,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(4079,181,'4','2007','415225.0',
 INSERT INTO "submissions_dpquestion_2009" VALUES(4080,181,'5','','415225.0','','601615.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4081,181,'6','2007','750200.0','2009','1063955.0','Les actions ont porté sur le renforcement des capacités,l''intégration des services adaptés aux jeunes dans les soins de santé primaires, le renforcement des services de prévention du VIH/SIDA et de prise en chargde des IST et l''appui institutionnel.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4082,181,'7','','750200.0','','1063955.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4083,181,'8','2007','750200.0','2009','1063955.0','Le Programme de coopération entre UNFPA et le pays est sur une base pluri-annuelle mais les plans annuels signés par les autorités habilitées sont annuels');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4084,181,'9','','750200.0','','1063955.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4085,181,'10','2007','750200.0','2009','1063955.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4086,181,'11','','750200.0','','1063955.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4087,181,'12','2005','238245.0','2009','312250.0','Dans un pays post-conflit, les systèmes nationaux de passation de marchés sont en construction.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4088,181,'13','','28700.0','','40230.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4089,181,'14','2007','750200.0','2009','1063955.0','UNFPA privilégie les systèmes de gestion nationaux dans tous ces projets');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4090,181,'15','','511955.0','','723489.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4091,181,'16','2007','0.0','2009','0.0','UNFPA n''a pas etabli des unités de mise en œuvre de projets parallèles. Pour des soucis de pérennité, l’approche projet a été abandonné au profit de l’approche Programme qui s’aligne aux priorités du Gouvernement et des Ministères sectoriels.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4092,181,'17','2007','No','2009','No','Il n''y a pas encore de plan d''action');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4093,181,'18','2007','No','2009','No','Il n''y a pas encore de plan d''action');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4084,181,'8','','750200.0','','1063955.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4085,181,'10old','2007','750200.0','2009','1063955.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4086,181,'11old','','750200.0','','1063955.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4087,181,'10','2005','238245.0','2009','312250.0','Dans un pays post-conflit, les systèmes nationaux de passation de marchés sont en construction.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4088,181,'11','','28700.0','','40230.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4090,181,'12','','511955.0','','723489.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4091,181,'13','2007','0.0','2009','0.0','UNFPA n''a pas etabli des unités de mise en œuvre de projets parallèles. Pour des soucis de pérennité, l’approche projet a été abandonné au profit de l’approche Programme qui s’aligne aux priorités du Gouvernement et des Ministères sectoriels.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4092,181,'14','2007','No','2009','No','Il n''y a pas encore de plan d''action');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4093,181,'15','2007','No','2009','No','Il n''y a pas encore de plan d''action');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4094,181,'19','2007','No','','No','Il n''y a pas encore eu de revue annuelle conjointe dans la mesure où il faut d''abord élaborer le plan d''action');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4095,181,'20','2007','238245.0','2009','340466.0','le support du FNUAP aux ONGs passe par le gouvernement d''abord qui signe tous les plans de travail (y compris les budgets) et qui transfere une partie de l''assistance financiere de la part du FNUAP aux ONGs/OSCs. Les organisations de la société civile ont bénéficié d''un financement UNFPA pour le renforcement de leurs capacités techniques et institutionnelles pour la mise en œuvre du programme pays à travers des plans annuels signés par le Gouvernement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4095,181,'16','2007','238245.0','2009','340466.0','le support du FNUAP aux ONGs passe par le gouvernement d''abord qui signe tous les plans de travail (y compris les budgets) et qui transfere une partie de l''assistance financiere de la part du FNUAP aux ONGs/OSCs. Les organisations de la société civile ont bénéficié d''un financement UNFPA pour le renforcement de leurs capacités techniques et institutionnelles pour la mise en œuvre du programme pays à travers des plans annuels signés par le Gouvernement');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4096,181,'21','2007','0.0','2009','0.0','UNFPA n'' a pas alloué des à travers d''autres donateurs');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4097,181,'22','2007','0.0','2009','0.0','UNFPA au Burundi n''intervient pas dans l''appui budgétaire');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4098,181,'23','2007','0.0','2009','0.0','UNFPA au Burundi n''interveient pas dans l''appui budgétaire');
@@ -226,19 +209,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(4470,198,'4','2008','539928.43'
 INSERT INTO "submissions_dpquestion_2009" VALUES(4471,198,'5','','539928.43','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4472,198,'6','2007','23611778.0','2009','32538282.0','Total 2007 & 2009 UNICEF health expenditure taken from UNICEF report . Total 2007 & 2009 UNICEF health expenditure taken from UNICEF report ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4473,198,'7','','23611778.0','','32538282.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4474,198,'8','2007','23611778.0','2009','32538282.0','Total 2007 & 2009 UNICEF health expenditure taken from UNICEF report . Total UNICEF Commitment for Health -taken from CPAP');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4475,198,'9','','23611778.0','','25264000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4476,198,'10','2007','23611778.0','2009','32538282.0','Total 2007 & 2009 UNICEF health expenditure taken from UNICEF report. Total 2007 & 2009 UNICEF health expenditure taken from UNICEF report  ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4477,198,'11','','23611778.0','','32538282.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4478,198,'12','2007','','2009','','Q12: 2009 - $19,500,000.                           UNICEF has its own procurement system and the Government of Ethiopia uses UNICEF''s procurement services. In the mean time, PFSA has started to take over the procurement service by UNICEF and in the long term, PFSA will do most of Government procurement Q12 2009 - submitted as about 19.5 million');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4479,198,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4480,198,'14','2007','21250600.2','2009','29284453.8',' The cash transferred to implementing agencies through MoFED & BoFED is disbursed using the government''s financial management syste. But the budget in the "Technical Assistance Health Pool Fund and other direct programme support from UNICEF (a total of 10% of the total support) are managed using the UNICEF''s financial management system. 80% of the total health sector support goes through MoFED & BoFED');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4481,198,'15','','17000480.16','','23427563.04','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4482,198,'16','2007','0.0','2009','0.0','All health programmes are implemented in an integrated approach. UNICEF field offices provides support to regional Governments');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4483,198,'17','2007','Yes','2009','Yes','UNICEF uses IHP and HSDP result framework to assess performances');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4484,198,'18','2007','Yes','2009','Yes','HSDP Annual Review Meetings, Mid-term Review, Final Evaluation and Joint Review Mission are the methodologies used to review performances. UNICEF together with other Development Partners is actively involved in all the abovely mentioned performance assessmentsled by the Government');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4475,198,'8','','23611778.0','','25264000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4476,198,'10old','2007','23611778.0','2009','32538282.0','Total 2007 & 2009 UNICEF health expenditure taken from UNICEF report. Total 2007 & 2009 UNICEF health expenditure taken from UNICEF report  ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4477,198,'11old','','23611778.0','','32538282.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4478,198,'10','2007','','2009','','Q12: 2009 - $19,500,000.                           UNICEF has its own procurement system and the Government of Ethiopia uses UNICEF''s procurement services. In the mean time, PFSA has started to take over the procurement service by UNICEF and in the long term, PFSA will do most of Government procurement Q12 2009 - submitted as about 19.5 million');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4479,198,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4481,198,'12','','17000480.16','','23427563.04','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4482,198,'13','2007','0.0','2009','0.0','All health programmes are implemented in an integrated approach. UNICEF field offices provides support to regional Governments');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4483,198,'14','2007','Yes','2009','Yes','UNICEF uses IHP and HSDP result framework to assess performances');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4484,198,'15','2007','Yes','2009','Yes','HSDP Annual Review Meetings, Mid-term Review, Final Evaluation and Joint Review Mission are the methodologies used to review performances. UNICEF together with other Development Partners is actively involved in all the abovely mentioned performance assessmentsled by the Government');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4485,198,'19','','','','','All the assessments of progress in the implementation of programmes and health sector commitments & agreements are very much helpful and participatory');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4486,198,'20','2007','Yes','2009','Yes','UNICEF supports CSOs to actively participate in the health sector. For example UNICEF through JCCC supported GAVI CSO proposal development and financial management; involvement and participation of CSOs in the development of HSDP IV; and CSOs participation in the Global Fund proposal for HIV/AIDS');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4486,198,'16','2007','Yes','2009','Yes','UNICEF supports CSOs to actively participate in the health sector. For example UNICEF through JCCC supported GAVI CSO proposal development and financial management; involvement and participation of CSOs in the development of HSDP IV; and CSOs participation in the Global Fund proposal for HIV/AIDS');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4487,198,'21','2007','2361177.8','2009','3253828.2','10% of the total 2007 & 2009 UNICEF health expenditure taken from UNICEF report ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4488,198,'22','2007','No','2009','No','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4489,198,'23','2007','17000480.16','2009','23427563.04','Cash transferred through MoFED & BoFED');
@@ -249,19 +230,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(4516,200,'4','2005','1372740.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(4517,200,'5','','755007.0','','2359072.05','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4518,200,'6','2005','2823314.0','2009','4155660.0','UNICEF has not pooled funds  due to very small contribution at national level, our technical cooperation is valued more and budgetary support is minimal.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4519,200,'7','','1976319.8','','3532311.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4520,200,'8','2005','2823314.0','2009','4155660.0','All the commitments are based on the C-PAP  and the commitments last till the expiry of the C-PAP(Country Program Action Plan) which is a document signed by UNCIEF and Government of Nepal.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4521,200,'9','','2823314.0','','4155660.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4522,200,'10','2005','2823314.0','2009','4155660.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4523,200,'11','','2258651.2','','4155660.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4524,200,'12','2005','112000.0','2009','190000.0','UNICEF sources all its procurement from its Copenhagen Supply Division. The Government makes all the procuremnt for Routine EPI vaccines and ancillaries.UNICEF  uses its own system to do both local and off-shore procrement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4525,200,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4526,200,'14','2005','3375049.0','2009','4973413.0','Because we are not pooling (less than 1% of Govt.health budget).   We have just signed the JFA and hoep to move towards the standardised government sytems soon.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4527,200,'15','','1721274.99','','3978730.4','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4528,200,'16','2008','0.0','2009','0.0','. There are no parallel activities and all activites are to supprot the national health Sector Plan.This is unlikely  to change.  Government prefers this system.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4529,200,'17','2005','No','2009','No','Our audit system is different and does not allow this.  Have sought Headquarter Guidance in overcoming this roblem');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4530,200,'18','2005','No','2009','Yes','Good progres after IHP signing - assessment at JARs are done now.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4521,200,'8','','2823314.0','','4155660.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4522,200,'10old','2005','2823314.0','2009','4155660.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4523,200,'11old','','2258651.2','','4155660.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4524,200,'10','2005','112000.0','2009','190000.0','UNICEF sources all its procurement from its Copenhagen Supply Division. The Government makes all the procuremnt for Routine EPI vaccines and ancillaries.UNICEF  uses its own system to do both local and off-shore procrement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4525,200,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4527,200,'12','','1721274.99','','3978730.4','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4528,200,'13','2008','0.0','2009','0.0','. There are no parallel activities and all activites are to supprot the national health Sector Plan.This is unlikely  to change.  Government prefers this system.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4529,200,'14','2005','No','2009','No','Our audit system is different and does not allow this.  Have sought Headquarter Guidance in overcoming this roblem');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4530,200,'15','2005','No','2009','Yes','Good progres after IHP signing - assessment at JARs are done now.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4531,200,'19','','No','','Yes','The effectiveness is increasing every year. JARs are getting more productive and are based on spirit of partnershp.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4532,200,'20','2005','0.0','2009','0.0',' Through ADVOCACY and by partnering with them');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4532,200,'16','2005','0.0','2009','0.0',' Through ADVOCACY and by partnering with them');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4533,200,'21','2005','551735.0','2009','817753.0','We work through NGOs , andsupport to NGOs are reflected in the national Budget  . However, the funds provided to local government through the DACAW Program (Decentralization Action for Women and Chidlren ) are not reflected at national budget in health sector and is reflected here.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4534,200,'22','2005','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4535,200,'23','2007','5773951.0','2009','4973413.0','');
@@ -272,19 +251,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(4539,201,'4','2005','6385108.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(4540,201,'5','','6385108.0','','17487883.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4541,201,'6','2005','6385108.0','2009','17487883.0','Les ressources que l''UNICEF accorde au pays sont dutilisées pour la mise en œuvre du PNDS, et les programmes nationaux dans différents domaines de la santé (réponse aux épidémies, Vaccinations,VIH/SIDA, Tuberculose, Paludisme,  Dracunculose, Lèpre, etc.). Les initiatives axées sur les programmes sont alignées sur le PNDS et sur les programmes nationaux.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4542,201,'7','','6385108.0','','17487883.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4543,201,'8','2005','6385108.0','2009','17487883.0','(cellule G12 devrait montrer le meme chiffre que G10)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4544,201,'9','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4545,201,'10','2005','6385108.0','2009','17487883.0','(cellule G14 devrait montrer le meme chiffre que G10)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4546,201,'11','','6385108.0','','17487883.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4547,201,'12','2005','','2009','5571971.0','Q12: 2005 - $1,596,277.                   En 2009, a travers le Panier Commun du Ministere de la Sante (PADS), une partie des intrants a etet achete en utilisant les systemes d''approvisionnements locaux. La discussion est en cours pour permettre des approvisionnement au niveau local avec la Centrale d''Achat des Médicaments et Consommables (CAMEG) du pays qui a démontré ces capacités dans ce domaine');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4548,201,'13','','','','1200000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4549,201,'14','2005','6385108.0','2009','17487883.0','L''introduction du nouveau formulaire de Cash Transfert du Systeme des Nations Unies/UNDG "FACE"  a facilité l''utilisation ds systèmes de gestion des finances publiques dans la gestion des ressources de la coopération technique de l''UNICEF avec le pays.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4550,201,'15','','4788831.0','','13115912.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4551,201,'16','2007','0.0','2009','0.0','Le plan de travail de l''OMS Burkina est mis en œuvre par les structures du ministèrede la santé avec l''appui technique du staff du Bureau pays');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4552,201,'17','2005','Yes','2009','Yes','L''évaluation des performances du système de santé est réalisée chaque année en utilisant les outils et canevas conçus pour le suivi et l''évalation de plan national de développement sanitaire (PNDS). Il s''agit du Système National d''Information sanitaire et des rapports de progrès des structures qui permettent d''alimenter les rapports annuels de l''UNICEF');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4553,201,'18','2005','Yes','2009','No','Le Burkina a élaboré en 2007 un rapport national sur la mise en œuvre de la Déclaration sur l''efficacité de l''aide. Tous les secteurs, dont la santé ont été concernés. Tous les  partenaires, y compris l''UNICEF y ont contribué.Il y a également chaque année l''évaluation du cadre stratégique de lutte contre la pauvreté et les progrès vers l''atteinte des OMD');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4544,201,'8','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4545,201,'10old','2005','6385108.0','2009','17487883.0','(cellule G14 devrait montrer le meme chiffre que G10)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4546,201,'11old','','6385108.0','','17487883.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4547,201,'10','2005','','2009','5571971.0','Q12: 2005 - $1,596,277.                   En 2009, a travers le Panier Commun du Ministere de la Sante (PADS), une partie des intrants a etet achete en utilisant les systemes d''approvisionnements locaux. La discussion est en cours pour permettre des approvisionnement au niveau local avec la Centrale d''Achat des Médicaments et Consommables (CAMEG) du pays qui a démontré ces capacités dans ce domaine');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4548,201,'11','','','','1200000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4550,201,'12','','4788831.0','','13115912.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4551,201,'13','2007','0.0','2009','0.0','Le plan de travail de l''OMS Burkina est mis en œuvre par les structures du ministèrede la santé avec l''appui technique du staff du Bureau pays');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4552,201,'14','2005','Yes','2009','Yes','L''évaluation des performances du système de santé est réalisée chaque année en utilisant les outils et canevas conçus pour le suivi et l''évalation de plan national de développement sanitaire (PNDS). Il s''agit du Système National d''Information sanitaire et des rapports de progrès des structures qui permettent d''alimenter les rapports annuels de l''UNICEF');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4553,201,'15','2005','Yes','2009','No','Le Burkina a élaboré en 2007 un rapport national sur la mise en œuvre de la Déclaration sur l''efficacité de l''aide. Tous les secteurs, dont la santé ont été concernés. Tous les  partenaires, y compris l''UNICEF y ont contribué.Il y a également chaque année l''évaluation du cadre stratégique de lutte contre la pauvreté et les progrès vers l''atteinte des OMD');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4554,201,'19','2005','N/A','','','La première revue sectorielle santé réalisée en 2010 a permis une large participation des parties prenantes à l''analyse critique des résultats du PNDS 2001-2010, à des échanges sur la responsibilité mutuelle des succès et des échecs rapportés et à l''identification des défis et les problèmes prioritaires pour le PNDS 2011-2020. Cette revue a complette les sorties de suivi conjointes Partenaires-Ministere qui existent depuis le debut des annees 2000.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(4555,201,'20','2005','','2009','2000000.0','L''UNICEF a soutenu le Réseau Africain Jeunesse et Santé dans le cadre de la prévention du SIDA chez les adolescents et les jeunes, il y a des procédures de contractualisation pour certaines ONG et associations de la société civile dans le cadre de la mise en oeuvre des activités à haut mpact dans le domaine de la santé et de la nutrition ce qui leur permet de participer a la plannification et au developpement des protocoles et strategies nationales. 11 protocoles d''accord ont ete signes avec des ONGs internationales et nationales pour faciliter la mise en oeuvre des composantes ntrition et VIH pour un montant d''environ 2,000,000 USD.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(4555,201,'16','2005','','2009','2000000.0','L''UNICEF a soutenu le Réseau Africain Jeunesse et Santé dans le cadre de la prévention du SIDA chez les adolescents et les jeunes, il y a des procédures de contractualisation pour certaines ONG et associations de la société civile dans le cadre de la mise en oeuvre des activités à haut mpact dans le domaine de la santé et de la nutrition ce qui leur permet de participer a la plannification et au developpement des protocoles et strategies nationales. 11 protocoles d''accord ont ete signes avec des ONGs internationales et nationales pour faciliter la mise en oeuvre des composantes ntrition et VIH pour un montant d''environ 2,000,000 USD.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4556,201,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4557,201,'22','2007','0.0','2009','0.0','L''UNICEF étant une agence de coopération technique et non pas un bailleur de fonds, le volume limité de ses ressources et ses procédures de gestion ne lui permettent pas de s''engager dans un appui budgétaire général');
 INSERT INTO "submissions_dpquestion_2009" VALUES(4558,201,'23','2007','0.0','2009','0.0','');
@@ -295,19 +272,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(5574,256,'4','2007','1380282.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(5575,256,'5','','1380282.0','','1578538.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5576,256,'6','2007','','2009','15694294.0','Q6: 2007 - $11,854,689. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5577,256,'7','','','','15694294.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5578,256,'8','2007','11854689.0','2009','15694294.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5579,256,'9','','11854689.0','','15694294.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5580,256,'10','2007','11854689.0','2009','15694294.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5581,256,'11','','11854689.0','','15694294.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5582,256,'12','2007','4777827.0','2009','3888706.0','UNICEF procures various supplies through its own supply division. While technically this procurement falls outside the national procurement system, UNICEF procurement services are provided based on Government''s requests. NB: The figures here do not include funds that are provided to government for procurement of services and goods through national procurement system. The exact amounts are difficult to disentangle from the overall contribution to the government health sector. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5583,256,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5584,256,'14','2007','11854689.0','2009','15694294.0','Includes cash transfer, direct payments and reimbursement to Ministry of Health (central/provincial level) as well as support through the common fund PROSAUDE. Excludes technical support and supplies managed directly by UNICEF');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5585,256,'15','','5442887.0','','9947689.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5586,256,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5587,256,'17','2007','Yes','2009','Yes','Joint Annual Review with a Common Performance Assessment Framework');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5588,256,'18','2007','No','2009','Yes','Joint Annual Review with a Common Performance Assessment Framework. A framework for monitoring MOU commitments has been developed (2010) and will be used to monitor MOU (and IHP) compliance on an annual basis - as part of the Annual Joint Evaluation process. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5579,256,'8','','11854689.0','','15694294.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5580,256,'10old','2007','11854689.0','2009','15694294.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5581,256,'11old','','11854689.0','','15694294.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5582,256,'10','2007','4777827.0','2009','3888706.0','UNICEF procures various supplies through its own supply division. While technically this procurement falls outside the national procurement system, UNICEF procurement services are provided based on Government''s requests. NB: The figures here do not include funds that are provided to government for procurement of services and goods through national procurement system. The exact amounts are difficult to disentangle from the overall contribution to the government health sector. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5583,256,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5585,256,'12','','5442887.0','','9947689.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5586,256,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5587,256,'14','2007','Yes','2009','Yes','Joint Annual Review with a Common Performance Assessment Framework');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5588,256,'15','2007','No','2009','Yes','Joint Annual Review with a Common Performance Assessment Framework. A framework for monitoring MOU commitments has been developed (2010) and will be used to monitor MOU (and IHP) compliance on an annual basis - as part of the Annual Joint Evaluation process. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5589,256,'19','','','','','Joint annual review considered 36 indicators of performance, with 4 indicators looking at donor performance. The review includes a data verification exercise and the results are presented and discussed at a public meeting chaired by the Minister of Health - with active civil society participation. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5590,256,'20','please select','','2009','','UNICEF works in close collaboration with civl society organizations in various areas, particularly in HIV. NGOs are members of relevant working groups/task forces within the health partners group. NB: UNICEF finances several NGOs for service delivery. Through funding of these NGOs, UNICEF also intends to promote participation of NGOs in health sector policy processes.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5590,256,'16','please select','','2009','','UNICEF works in close collaboration with civl society organizations in various areas, particularly in HIV. NGOs are members of relevant working groups/task forces within the health partners group. NB: UNICEF finances several NGOs for service delivery. Through funding of these NGOs, UNICEF also intends to promote participation of NGOs in health sector policy processes.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5591,256,'21','please select','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5592,256,'22','please select','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5593,256,'23','please select','0.0','2009','1200000.0','');
@@ -318,21 +293,19 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(5896,285,'4','2005','1466400.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(5897,285,'5','','1466400.0','','1238400.0','It is important to note that WB support to the health sector is fully coordinated with other partners and in line with the national health strategy. Please see tab 2DPb for more information.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5898,285,'6','2005','18330000.0','2009','61920000.0','Please note that totals given for "health sector aid for the government sector ($USD)" (2DPa-2) and "health sector aid ($USD) did you disburse at country level"(2DPc-6) are the same, as the World Bank disburses all funds through partner governments at the country level. See tab 2DPa for data.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5899,285,'7','','13747500.0','','61920000.0','In CY05, the Multi Secotral HIV/AIDS project (MAP) met most of the criteria for "coordinated programmes" laid out in the IHP+ Results "Guide to Key Terms and Definitions," though not all of them. This is due, in part, to the shift at the country level which moved the HIV/AIDS program outside the Ministry of Health, complicating the WB''s ability to be fully coordinated with partners (source: interview with TTL). The response for CY05 has been estimated based on this and the proportion that this project (P069886) had of total disbursements to the health sector in CY05. For more information please see tab 2DPb5 and relevant sources noted therein.  ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5900,285,'8','2005','18330000.0','2009','61920000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5901,285,'9','','18330000.0','','61920000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5902,285,'10','2005','18330000.0','2009','61920000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5903,285,'11','','13747500.0','','61920000.0','Delays in disbursement were noted in CY05 (see ISR for P000756). The TTL for this project noted that this was due to "i) low priority accorded to the health sector in general at regional and woreda levels; and ii) fragmented contribution to the sector which undermines effective allocation of resources. It should, however, be noted that a memorandum of understanding was signed last year to harmonize donor resources and requirements." Disbursements in CY09 were as scheduled. For more information see tab 4DP11 and relevant sources noted therein. 
+INSERT INTO "submissions_dpquestion_2009" VALUES(5901,285,'8','','18330000.0','','61920000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5902,285,'10old','2005','18330000.0','2009','61920000.0','See  tab 2DPa for data.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5903,285,'11old','','13747500.0','','61920000.0','Delays in disbursement were noted in CY05 (see ISR for P000756). The TTL for this project noted that this was due to "i) low priority accorded to the health sector in general at regional and woreda levels; and ii) fragmented contribution to the sector which undermines effective allocation of resources. It should, however, be noted that a memorandum of understanding was signed last year to harmonize donor resources and requirements." Disbursements in CY09 were as scheduled. For more information see tab 4DP11 and relevant sources noted therein. 
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5904,285,'12','2005','5712582.0','2009','0.0','This data reflects contracts awarded for each year. Four contracts were awarded in CY2005; none were awarded in CY09. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components. The TTL noted that these figures largely understate the Bank''s contributions to procurement and clarified that the WB has provided very large amounts for procurement of goods and services under the two Protection of Basic Services programs (P074015, P103022). For more information see tab 5DPa12 and relevant sources noted therein.
+INSERT INTO "submissions_dpquestion_2009" VALUES(5904,285,'10','2005','5712582.0','2009','0.0','This data reflects contracts awarded for each year. Four contracts were awarded in CY2005; none were awarded in CY09. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components. The TTL noted that these figures largely understate the Bank''s contributions to procurement and clarified that the WB has provided very large amounts for procurement of goods and services under the two Protection of Basic Services programs (P074015, P103022). For more information see tab 5DPa12 and relevant sources noted therein.
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5905,285,'13','','1371019.68','','0.0','This answer has been revised to reflect information from health sector projects only. In CY05 P000756 utilized national procurement systems, while P069886 did not. Response has been estimated based on the % of P000756 of total disbursements. In CY09, answers are based only on inputs from the PBS 2, which utilized country procurement systems. For further information please see tab 5DPb13 and relevant sources therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5906,285,'14','2005','18330000.0','','61920000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5907,285,'15','','18330000.0','','61920000.0','This answer has been revised to use only inputs from health sector projects for CY05. In CY09, answers are based only on inputs from the PBS 2. In CY05, projects fully used country FM. Additionally, the health component of the PBS 2 (CY09) utilized national financial management arrangements. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 5DPb and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5908,285,'16','please select','0.0','2009','0.0','The Bank does not use PIUs, it uses existing government systems and mechanisms such as the Department of Planning and other relevant entities (source: interview with TTL).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5909,285,'17','2005','Yes','2009','Yes','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 6DPb and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5910,285,'18','2005','Yes','2009','Yes','Partners followed the lead of the government in participating in regular assessment of progress, including Joint Review and Implementaiton Support (JRIS), Joint Budget and Aid Reviews (JBAR), joint missions, etc. Under the HIV/AIDS projects, the WB also participates in joint supervision and strategy sessions, also led by the government.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5905,285,'11','','1371019.68','','0.0','This answer has been revised to reflect information from health sector projects only. In CY05 P000756 utilized national procurement systems, while P069886 did not. Response has been estimated based on the % of P000756 of total disbursements. In CY09, answers are based only on inputs from the PBS 2, which utilized country procurement systems. For further information please see tab 5DPb13 and relevant sources therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5907,285,'12','','18330000.0','','61920000.0','This answer has been revised to use only inputs from health sector projects for CY05. In CY09, answers are based only on inputs from the PBS 2. In CY05, projects fully used country FM. Additionally, the health component of the PBS 2 (CY09) utilized national financial management arrangements. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 5DPb and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5908,285,'13','please select','0.0','2009','0.0','The Bank does not use PIUs, it uses existing government systems and mechanisms such as the Department of Planning and other relevant entities (source: interview with TTL).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5909,285,'14','2005','Yes','2009','Yes','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 6DPb and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5910,285,'15','2005','Yes','2009','Yes','Partners followed the lead of the government in participating in regular assessment of progress, including Joint Review and Implementaiton Support (JRIS), Joint Budget and Aid Reviews (JBAR), joint missions, etc. Under the HIV/AIDS projects, the WB also participates in joint supervision and strategy sessions, also led by the government.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5911,285,'19','','','','','The usefulness of the Annual Review Meeting (not called a JAR in Ethiopia) as a mechanism for accountability in the health sector in Ethiopia is very high. The MOH uses the Annual Review Meetings as an occaision/opportunity to sign performance ocntracts with partners. Furthermore, this meeting serves the purpose for the MOH to convene partners and set targets for the following year and review progress on targes of the past year. The MOH uses country data systems to assess progress of all partners and publicly shares the results of these assesments. Overall, the TTL commented that the Annual Review Meeting is a " best practice" for accountability in the health sector (source: interview with TTL).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5912,285,'20','2005','','2009','','Civil society is a key partner in a number of health sector projects, including HIV/AIDS projects, under which a component of the plan is primarily for delivery of services carried out by CS. Financial support for this work is channeled through the plan and is not a direct WB-CS transaction. Additionally, the WB greatly supports the engagement of CS in the overal health sector dialogue. Currently, the WB coordinates health sector partners and has promoted engagement of CS in parter fora, such as the recently held JANS workshop, in which there was a specific session for CS.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5912,285,'16','2005','','2009','','Civil society is a key partner in a number of health sector projects, including HIV/AIDS projects, under which a component of the plan is primarily for delivery of services carried out by CS. Financial support for this work is channeled through the plan and is not a direct WB-CS transaction. Additionally, the WB greatly supports the engagement of CS in the overal health sector dialogue. Currently, the WB coordinates health sector partners and has promoted engagement of CS in parter fora, such as the recently held JANS workshop, in which there was a specific session for CS.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5913,285,'21','2005','0.0','2009','0.0','All World Bank disbursements given to the Government of Ethiopia.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5914,285,'22','2005','0.0','2009','0.0','Under the PBS project, the WB provides support in the form of block grants to regions to support basic services (source: interview with TTL).');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5915,285,'23','2005','0.0','2009','0.0','');
@@ -343,20 +316,18 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(5942,287,'4','2005','497400.0',
 INSERT INTO "submissions_dpquestion_2009" VALUES(5943,287,'5','','497400.0','','842000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 2DPb and relevant sources noted therein.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5944,287,'6','2005','16580000.0','2009','16840000.0','Please note that totals given for "health sector aid for the government sector ($USD)" (2DPa) and "health sector aid ($USD) did you disburse at country level"(2DPc) are the same, as the World Bank disburses all funds through partner governments at the country level.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5945,287,'7','','16580000.0','','16840000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions" please see tab 2DPc and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5946,287,'8','2005','16580000.0','2009','16840000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5947,287,'9','','4974000.0','','16840000.0','During CY05 Burkina Faso''s 5th PRSC represented 70% of total disbursements for the health sector. The PRSC was designed to disburse over an 18 month time period and was the second in a serires of 3 single-tranche PRSC supporting the implementation of the revised full PRSP. Please see tab 3DP and tab 078995 for more information.All projects in CY09 were multi-year.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5948,287,'10','2005','16580000.0','2009','16840000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5949,287,'11','','16580000.0','','16840000.0',' No disbursement delays were reported for relevant projects in Burkinda Faso in CY05 or CY09. Please see tab 4DP for more information');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5950,287,'12','2005','1113061.35','2009','1253855.59','This data reflects contracts awarded for each year. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components. One contract was awarded in CY05; 2 in CY09. Please see tab 5DPa for more information. 
+INSERT INTO "submissions_dpquestion_2009" VALUES(5947,287,'8','','4974000.0','','16840000.0','During CY05 Burkina Faso''s 5th PRSC represented 70% of total disbursements for the health sector. The PRSC was designed to disburse over an 18 month time period and was the second in a serires of 3 single-tranche PRSC supporting the implementation of the revised full PRSP. Please see tab 3DP and tab 078995 for more information.All projects in CY09 were multi-year.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5948,287,'10old','2005','16580000.0','2009','16840000.0','See  tab 2DPa for data.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5949,287,'11old','','16580000.0','','16840000.0',' No disbursement delays were reported for relevant projects in Burkinda Faso in CY05 or CY09. Please see tab 4DP for more information');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5950,287,'10','2005','1113061.35','2009','1253855.59','This data reflects contracts awarded for each year. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components. One contract was awarded in CY05; 2 in CY09. Please see tab 5DPa for more information. 
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5951,287,'13','','1113061.35','','1253855.59','This answer has been revised to reflect information from health sector projects only (P071433, P093987). These projects utilized national procurement systems for the length of the project, spanning both calendar years. The WB also uses national institutions and national staff for procurment. For more information see tab 5DPa and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5952,287,'14','2005','16580000.0','2009','16840000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5953,287,'15','','16580000.0','','16840000.0','This answer has been revised to reflect information from health sector projects only (P071433, P093987). These projects utilized national FM systems for the length of the project, spanning both calendar years. In CY09, this project operated with pooled funding. Though certain adaptations were made for IDA, the WB used country FM systems.The WB also uses national institutions and national staff for procurment. For more information see tab 5DPa and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5954,287,'16','2005','1.0','2009','1.0','The Government of Burkina Faso coordinates all partners working in the health sector. As a means for coordination, the WB uses the single government-created PIU.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5955,287,'17','2005','Yes','2009','Yes','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 6DPb and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5956,287,'18','2005','Yes','2009','Yes','The WB routinely participates in mutual assessments of progress, including the JAR, joint supervision missions, and joint implementation support. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5951,287,'11','','1113061.35','','1253855.59','This answer has been revised to reflect information from health sector projects only (P071433, P093987). These projects utilized national procurement systems for the length of the project, spanning both calendar years. The WB also uses national institutions and national staff for procurment. For more information see tab 5DPa and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5953,287,'12','','16580000.0','','16840000.0','This answer has been revised to reflect information from health sector projects only (P071433, P093987). These projects utilized national FM systems for the length of the project, spanning both calendar years. In CY09, this project operated with pooled funding. Though certain adaptations were made for IDA, the WB used country FM systems.The WB also uses national institutions and national staff for procurment. For more information see tab 5DPa and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5954,287,'13','2005','1.0','2009','1.0','The Government of Burkina Faso coordinates all partners working in the health sector. As a means for coordination, the WB uses the single government-created PIU.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5955,287,'14','2005','Yes','2009','Yes','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 6DPb and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5956,287,'15','2005','Yes','2009','Yes','The WB routinely participates in mutual assessments of progress, including the JAR, joint supervision missions, and joint implementation support. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5957,287,'19','','','','','The JAR, while not perfect, is a useful tool and is helping the MOH and development partners to move in the right direction. The Government is clearly taking the lead in the JAR process and is coordinating JARs with the objectives of the 10 year plan. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5958,287,'20','2007','','2009','','The WB does not provide funds directly to NGOs/CS. However, there is a formal agreement with the Government (MOH) that they will engage CS and, at times, contract them for specific work under the Health Sector Support and HIV/AIDS projects. The WB is very supportive of CS as a full partner in implementing the national health strategy and is also supportive of CS engagement in health sector activities, such as participation in JANS and development partner fora, etc. For more information, please see tab 8DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5958,287,'16','2007','','2009','','The WB does not provide funds directly to NGOs/CS. However, there is a formal agreement with the Government (MOH) that they will engage CS and, at times, contract them for specific work under the Health Sector Support and HIV/AIDS projects. The WB is very supportive of CS as a full partner in implementing the national health strategy and is also supportive of CS engagement in health sector activities, such as participation in JANS and development partner fora, etc. For more information, please see tab 8DP and relevant sources noted therein.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5959,287,'21','2007','0.0','2009','0.0','According to the definitions laid out in the HP+ Results "Guide to Key Terms and Definitions" document, the WB does not provide general budget support. Rather, the WB provides investment lending - it does not provide support directly to the national treasury.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5960,287,'22','2007','Approx. 70%','2009','0.0','During CY05, approximately 70% of disbursements to the health sector were under the PRSC - by which the WB provides funds directly to the Government Treasury. However, outside of the PRSC, WB funding was not provided via general budget support, but rather, it provided investment lending.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5961,287,'23','2007','0.0','2009','0.0','');
@@ -367,20 +338,18 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(5988,289,'4','2005','712000.0',
 INSERT INTO "submissions_dpquestion_2009" VALUES(5989,289,'5','','712000.0','','188000.0','It is important to note that WB support to the health sector is fully coordinated with other partners and in line with the national health strategy. Please see tab 2DPb4 for more information.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5990,289,'6','2005','3560000.0','2009','1880000.0','Please note that totals given for "health sector aid for the government sector ($USD)" (2DPa2) and "health sector aid ($USD) did you disburse at country level"(2DPc6) are the same, as the World Bank disburses all funds through partner governments at the country level. See tab 2DPa2 for data.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(5991,289,'7','','3560000.0','','1880000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions" please see tab 2DPc and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5992,289,'8','2005','3560000.0','2009','1880000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5993,289,'9','','3560000.0','','1880000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5994,289,'10','2005','3560000.0','2009','1880000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5995,289,'11','','3560000.0','','1504000.0',' No disbursement delays were reported for relevant projects in CY05. Delays were reported in the first 4 months of CY09 for P071062, but not thereafter. As such, it is estimated that approximately 80% of disbursements were on schedule. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 4DP11 and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5996,289,'12','2005','','2009','','1374117 in 2005. 59915in 2009. This data reflects contracts awarded for each year. Two contracts were awarded in CY2005; one in CY09. CY09 was a transitional year between a large health sector project and additional financing for this project - as such, contracts awarded in this year are below average, though do not represent a decline in support to Djibouti health sector. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components.   
+INSERT INTO "submissions_dpquestion_2009" VALUES(5993,289,'8','','3560000.0','','1880000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5994,289,'10old','2005','3560000.0','2009','1880000.0','See  tab 2DPa for data.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5995,289,'11old','','3560000.0','','1504000.0',' No disbursement delays were reported for relevant projects in CY05. Delays were reported in the first 4 months of CY09 for P071062, but not thereafter. As such, it is estimated that approximately 80% of disbursements were on schedule. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 4DP11 and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5996,289,'10','2005','','2009','','1374117 in 2005. 59915in 2009. This data reflects contracts awarded for each year. Two contracts were awarded in CY2005; one in CY09. CY09 was a transitional year between a large health sector project and additional financing for this project - as such, contracts awarded in this year are below average, though do not represent a decline in support to Djibouti health sector. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components.   
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5997,289,'13','','','','','The WB experience projects in the country indicate overall weak procurement capacity. However, in the case of P073603, national systems for NCB were utilized. Furthermore, the WB uses national institutions and national staff for procurment. For more information see tab 5DPa13.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5998,289,'14','2005','3560000.0','','1880000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(5999,289,'15','','0.0','','0.0','FM systems were assessed and viewed to be too weak for use during the respective fiscal years. However, the project Credit Administrative Unit (CAU) was responsible for the management of the FM account. For more information see tab 5DPb15 and relevant sources quoted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6000,289,'16','please select','2','2009','1','In CY05, the two PIUs reflected one each for the HIV/AIDS project and the Health Sector Development Project. With the closing of the HIV/AIDS project the PIU in CY09 is only 1.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6001,289,'17','2005','Yes','2009','Yes','The WB uses national HIS data for monitoring and evaluation purposes. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 6DPb17 and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6002,289,'18','2005','','2009','','The WB participates in mutual assessments of progress in Djibouti, namely through participating in joint missions and assessments (esp. with the Global Fund on the HIV/AIDS projects). Additionally, the WB participates in mid-term reviews and combined supervision missions, and also collaborates with partners on ICRs.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5997,289,'11','','','','','The WB experience projects in the country indicate overall weak procurement capacity. However, in the case of P073603, national systems for NCB were utilized. Furthermore, the WB uses national institutions and national staff for procurment. For more information see tab 5DPa13.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(5999,289,'12','','0.0','','0.0','FM systems were assessed and viewed to be too weak for use during the respective fiscal years. However, the project Credit Administrative Unit (CAU) was responsible for the management of the FM account. For more information see tab 5DPb15 and relevant sources quoted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6000,289,'13','please select','2','2009','1','In CY05, the two PIUs reflected one each for the HIV/AIDS project and the Health Sector Development Project. With the closing of the HIV/AIDS project the PIU in CY09 is only 1.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6001,289,'14','2005','Yes','2009','Yes','The WB uses national HIS data for monitoring and evaluation purposes. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 6DPb17 and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6002,289,'15','2005','','2009','','The WB participates in mutual assessments of progress in Djibouti, namely through participating in joint missions and assessments (esp. with the Global Fund on the HIV/AIDS projects). Additionally, the WB participates in mid-term reviews and combined supervision missions, and also collaborates with partners on ICRs.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6003,289,'19','','','','','The TTL noted that the JAR process as an accountability mechanism is currently weak, though partners are working to change this. While this is a moderately useful exercise for the government, the last attempt to apply this to development partners (Jan 2010) did not seem to work as well as initially hoped.At present, the JAR lacks signiciant levels of in-depth analysis. However, partners are working together to develop a core agenda and core indicators to be included as a part of each JAR - this is a work in progress.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6004,289,'20','2005','','2009','','The WB does not provide funds directly to NGOs/CS. However, there is a formal agreement with the Government (MOH) that they will engage CS and contract them for specific work under the HIV/AIDS Project. Additionally, the WB is very supportive of CS engagement in health sector activities, such as participation in JANS and development partner fora, etc. For more information, please see tab 8DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6004,289,'16','2005','','2009','','The WB does not provide funds directly to NGOs/CS. However, there is a formal agreement with the Government (MOH) that they will engage CS and contract them for specific work under the HIV/AIDS Project. Additionally, the WB is very supportive of CS engagement in health sector activities, such as participation in JANS and development partner fora, etc. For more information, please see tab 8DP and relevant sources noted therein.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6005,289,'21','2005','0.0','2009','0.0','All World Bank disbursements given to the Government of Djibouti.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6006,289,'22','2005','0.0','2009','0.0','According to the definitions laid out in the HP+ Results "Guide to Key Terms and Definitions" document, the WB does not provide general budget support. Rather, the WB provides investment lending - it does not provide support directly to the national treasury.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6007,289,'23','2005','0.0','2009','0.0','According to the definitions laid out in the HP+ Results "Guide to Key Terms and Definitions" document, the WB does not provide sector budget support as defined by the World Bank.  However, in practice, WB investment lending under the Djibouti health project is very much like sector budget support as it flows directly to the national treasury and finances a slice of the ministry''s budget.');
@@ -391,20 +360,18 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6011,290,'4','2005','','2009','
 INSERT INTO "submissions_dpquestion_2009" VALUES(6012,290,'5','','','','','Stated that 100% tech coop was disbursed through coordinated programmes. This answer has been revised to reflect information from health sector projects only (P082516, P088751), both of which were coordinated and consistent with national strategies. Please see tab 2DPb5 and relevant information noted therein for more information. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6013,290,'6','2005','24400000.0','2009','57300000.0','Please note that totals given for "health sector aid for the government sector ($USD)" (2DPa-2) and "health sector aid ($USD) did you disburse at country level"(2DPc-6) are the same, as the World Bank disburses all funds through partner governments at the country level. See tab 2DPa for data.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6014,290,'7','','24400000.0','','57300000.0','This answer has been revised to reflect information from health sector projects only (P082516, P088751), both of which adopted program-based approaches. It is important to note, however, that the government opted to contract out a number of components including M&E, FM, etc. Please see tab 2DPc7 and relevant information noted therein for more information. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6015,290,'8','2005','24400000.0','2009','57300000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6016,290,'9','','24400000.0','','57300000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6017,290,'10','2005','24400000.0','2009','57300000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6018,290,'11','','24400000.0','','50997000.0',' No disbursement delays were reported for relevant projects in CY05. In CY09, some delays were noted over 8 months. In proportion to the total project months in CY09 (72), it is estimated that 89% of projects disbursed in a  timely manner in CY09. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions" please see tab 4DP and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6019,290,'12','2005','2886241.43','2009','33429350.46','This data reflects contracts awarded for each year. 6 contracts were awarded in CY2005; 17 contracts were awarded in CY09. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components. For more information see tab 5DPa12.
+INSERT INTO "submissions_dpquestion_2009" VALUES(6016,290,'8','','24400000.0','','57300000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6017,290,'10old','2005','24400000.0','2009','57300000.0','See  tab 2DPa for data.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6018,290,'11old','','24400000.0','','50997000.0',' No disbursement delays were reported for relevant projects in CY05. In CY09, some delays were noted over 8 months. In proportion to the total project months in CY09 (72), it is estimated that 89% of projects disbursed in a  timely manner in CY09. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions" please see tab 4DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6019,290,'10','2005','2886241.43','2009','33429350.46','This data reflects contracts awarded for each year. 6 contracts were awarded in CY2005; 17 contracts were awarded in CY09. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components. For more information see tab 5DPa12.
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6020,290,'13','','0','','0','Due to the years of political turmoil, national systems remain quite weak. As a result, country systems are not yet used and procurement occurs in line with the WB guidelines on procurement. For more information please see tab 5DPa13 and supporting documents referenced there in.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6021,290,'14','2005','24400000.0','','57300000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6022,290,'15','','0.0','','0.0','Due to the years of political turmoil, national systems remain quite weak. As a result, country systems are not yet used and FM  occurs in line with the WB guidelines on FM. For more information please see tab 5DPa15 and supporting documents referenced there in.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6023,290,'16','please select','2','2009','3','The WB used PIUs for major projects in each CY.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6024,290,'17','2005','No','2009','No','As a result of weak national systems and ongoing development of donor coordination, work needs to be done to move towards a common performance assessment framework. Currently, donors use their own respective frameworks for performance assessment, though some indicators are the same as national indicators. The WB, however, is consistent in that the indicators used to assess performance are consistent with the overal IDA country indicators.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6025,290,'18','2005','Yes','2009','Yes','The government and donors come together to discuss aid effectiveness and often carry out joint missions. JARs are also carried out, though not annually, and also contribute to this process (see below). Furthermore, partners are working under the leadership of the government to develop an MTEF, which is another mechanism of mutual accountability/assessment. Partners are also moving towards the preparation of a joint sector review. While the government lacks sufficient resources to fully lead these processes at present, they are fully participatory in ongoing mutual assessment activities. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6020,290,'11','','0','','0','Due to the years of political turmoil, national systems remain quite weak. As a result, country systems are not yet used and procurement occurs in line with the WB guidelines on procurement. For more information please see tab 5DPa13 and supporting documents referenced there in.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6022,290,'12','','0.0','','0.0','Due to the years of political turmoil, national systems remain quite weak. As a result, country systems are not yet used and FM  occurs in line with the WB guidelines on FM. For more information please see tab 5DPa15 and supporting documents referenced there in.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6023,290,'13','please select','2','2009','3','The WB used PIUs for major projects in each CY.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6024,290,'14','2005','No','2009','No','As a result of weak national systems and ongoing development of donor coordination, work needs to be done to move towards a common performance assessment framework. Currently, donors use their own respective frameworks for performance assessment, though some indicators are the same as national indicators. The WB, however, is consistent in that the indicators used to assess performance are consistent with the overal IDA country indicators.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6025,290,'15','2005','Yes','2009','Yes','The government and donors come together to discuss aid effectiveness and often carry out joint missions. JARs are also carried out, though not annually, and also contribute to this process (see below). Furthermore, partners are working under the leadership of the government to develop an MTEF, which is another mechanism of mutual accountability/assessment. Partners are also moving towards the preparation of a joint sector review. While the government lacks sufficient resources to fully lead these processes at present, they are fully participatory in ongoing mutual assessment activities. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6026,290,'19','','','','','The TTL noted that the JAR process as an accountability mechanism is currently weak, though partners are working to change this. While this is a useful exercise for planning and budgeting purposes, there is work to be done to make the JAR process a true mechanism for accountability amongst partners.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6027,290,'20','2005','','2009','','Under the relevant projects in CY05 and CY09, Civil Society plays a large role in delivering key services. The WB supports CS engagement in this work. Under the lines of authority laid out in project documents, the Government of DRC has been responsible for the contracting of civil society/NGOs for project work. However due to the current weak state of many national systems, the WB has, for most projects, provided direct transfer of funds to winning civil society organizations/NGOs at the request/approval of the Government of DRC in line with the agreed project workplan. These funds are part of the overall aid disbursement of the WB to the government of DRC. Additionally, the WB is very supportive of CS engagement in health sector activities, such as participation in JANS and other development partner fora, etc. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6027,290,'16','2005','','2009','','Under the relevant projects in CY05 and CY09, Civil Society plays a large role in delivering key services. The WB supports CS engagement in this work. Under the lines of authority laid out in project documents, the Government of DRC has been responsible for the contracting of civil society/NGOs for project work. However due to the current weak state of many national systems, the WB has, for most projects, provided direct transfer of funds to winning civil society organizations/NGOs at the request/approval of the Government of DRC in line with the agreed project workplan. These funds are part of the overall aid disbursement of the WB to the government of DRC. Additionally, the WB is very supportive of CS engagement in health sector activities, such as participation in JANS and other development partner fora, etc. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6028,290,'21','2005','0.0','2009','0.0','All World Bank disbursements given to the Government of DRC.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6029,290,'22','2005','0.0','2009','0.0','According to the definitions laid out in the HP+ Results "Guide to Key Terms and Definitions" document, the WB does not provide general budget support. Rather, the WB provides investment lending - it does not provide support directly to the national treasury.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6030,290,'23','2005','0.0','2009','0.0','');
@@ -415,20 +382,18 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6034,291,'4','2005','','2009','
 INSERT INTO "submissions_dpquestion_2009" VALUES(6035,291,'5','','','','','It is important to note that WB support to the health sector is fully coordinated with other partners and in line with the national health strategy. Please see tab 2DPb4 for more information.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6036,291,'6','2005','9200000.0','2009','200000.0','Please note that totals given for "health sector aid for the government sector ($USD)" (2DPa2) and "health sector aid ($USD) did you disburse at country level"(2DPc6) are the same, as the World Bank disburses all funds through partner governments at the country level. See tab 2DPa2 for data.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6037,291,'7','','8740000.0','','140000.0','Estimates for aggregate response were reached by considering the compliance with each of the criteria laid out in the HP+ Results "Guide to Key Terms and Definitions"  and weighting each project by its contribution to total disbursement in the health sector in the respective baseline year (see tabs for each individual project). For more information please see tab 2DPc and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6038,291,'8','2005','920000.0','2009','200000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6039,291,'9','','920000.0','','200000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6040,291,'10','2005','920000.0','2009','200000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6041,291,'11','','864800.0','','200000.0',' Delays were reported in two months of CY05 for P040652. These delays were quickly resolved. Estimation reached based on consideration of 2 months of delay for a total 36 months of projects analyzed. No disbursement delays were reported for relevant projects in CY09. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 4DP11 and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6042,291,'12','2005','3287040.02','2009','0.0','This data reflects contracts awarded for each year. Six contracts were awarded in CY2005; none in CY09. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components.   
+INSERT INTO "submissions_dpquestion_2009" VALUES(6039,291,'8','','920000.0','','200000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6040,291,'10old','2005','920000.0','2009','200000.0','See  tab 2DPa for data.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6041,291,'11old','','864800.0','','200000.0',' Delays were reported in two months of CY05 for P040652. These delays were quickly resolved. Estimation reached based on consideration of 2 months of delay for a total 36 months of projects analyzed. No disbursement delays were reported for relevant projects in CY09. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 4DP11 and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6042,291,'10','2005','3287040.02','2009','0.0','This data reflects contracts awarded for each year. Six contracts were awarded in CY2005; none in CY09. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components.   
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6043,291,'13','','3287040.0','','0','This answer has been revised to reflect information from health sector projects only (P0040652). This project utilized national procurement systems for the length of the project, spanning both calendar years. The WB also uses national institutions and national staff for procurment. For more information see tab 5DPa13 and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6044,291,'14','2005','920000.0','','200000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6045,291,'15','','920000.0','','200000.0','This answer has been revised to reflect information from health sector projects only (P0040652). This project utilized national FM systems for the length of the project, spanning both calendar years. For more information see tab 5DPb15 and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6046,291,'16','please select','0','2009','0','The WB did not use PIUs in CY05 of CY09. Instead, the WB worked directly through established government systems/channels (source: interview with TTL).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6047,291,'17','2005','Yes','2009','Yes','The WB is fully aligned with the government (source: interview with TTL). Please see tab 6DP17 and relevant documents noted therein for further information.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6048,291,'18','2005','Yes','2009','Yes','The government regularl convenes common reviews of the health sector. This has been taking place twice annually since CY05. Furthermore, partners have increased the amount of joint/common missions from approximately 25% in CY05 to about 50% in CY09 (source: interview with TTL).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6043,291,'11','','3287040.0','','0','This answer has been revised to reflect information from health sector projects only (P0040652). This project utilized national procurement systems for the length of the project, spanning both calendar years. The WB also uses national institutions and national staff for procurment. For more information see tab 5DPa13 and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6045,291,'12','','920000.0','','200000.0','This answer has been revised to reflect information from health sector projects only (P0040652). This project utilized national FM systems for the length of the project, spanning both calendar years. For more information see tab 5DPb15 and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6046,291,'13','please select','0','2009','0','The WB did not use PIUs in CY05 of CY09. Instead, the WB worked directly through established government systems/channels (source: interview with TTL).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6047,291,'14','2005','Yes','2009','Yes','The WB is fully aligned with the government (source: interview with TTL). Please see tab 6DP17 and relevant documents noted therein for further information.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6048,291,'15','2005','Yes','2009','Yes','The government regularl convenes common reviews of the health sector. This has been taking place twice annually since CY05. Furthermore, partners have increased the amount of joint/common missions from approximately 25% in CY05 to about 50% in CY09 (source: interview with TTL).');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6049,291,'19','','','','','The JAR process in Mali (though not referred to as a JAR, but called the Joint Sector Review) is thought to be an example of " best practice" and a very useful tool for accountability as well as coordination amongst all in-country partners/donors (source: interview with TTL).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6050,291,'20','2005','','2009','','The WB does not provide funds directly to NGOs/CS. However, the WB is very supportive of CS engagement in health sector activities, such as participation in JANS and development partner fora, etc., and encourages joint work and/or contracting of NGOs/CS as a component of government strategies. For more information, please see tab 8DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6050,291,'16','2005','','2009','','The WB does not provide funds directly to NGOs/CS. However, the WB is very supportive of CS engagement in health sector activities, such as participation in JANS and development partner fora, etc., and encourages joint work and/or contracting of NGOs/CS as a component of government strategies. For more information, please see tab 8DP and relevant sources noted therein.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6051,291,'21','2005','0.0','2009','0.0','All WB disbursements given to the Government of Mali.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6052,291,'22','2005','0.0','2009','0.0','According to the definitions laid out in the IHP+ Results "Guide to Key Terms and Definitions" docuent, the WB does not provide general budget support. Rather, the WB provides investment lending - it does not provide support directly to the national treasury.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6053,291,'23','2005','0.0','2009','0.0','');
@@ -439,20 +404,18 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6057,292,'4','2005','24422.0','
 INSERT INTO "submissions_dpquestion_2009" VALUES(6058,292,'5','','24422.0','','5612.0','It is important to note that WB support to the health sector is fully coordinated with other partners and in line with the national health strategy. Please see tab 2DPb for more information.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6059,292,'6','2005','6660000.0','2009','5900000.0','Please note that totals given for "health sector aid for the government sector ($USD)" (2DPa-2) and "health sector aid ($USD) did you disburse at country level"(2DPc-6) are the same, as the World Bank disburses all funds through partner governments at the country level. See tab 2DPa for data.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6060,292,'7','','6660000.0','','5900000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions" please see tab 2DPc and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6061,292,'8','2005','6660000.0','2009','5900000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6062,292,'9','','3330000.0','','5900000.0','In CY05 the Mozambique PRSC made up nearly 50% of total disbursements to the health sector. The 2005 PRSC was the first of two tranches. The two tranche approach was proposed as an exceptional measure in order to aligh future PRScs with the country budget cycle. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6063,292,'10','2005','6660000.0','2009','5900000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6064,292,'11','','6660000.0','','5900000.0',' No disbursement delays were reported for relevant projects in CY05 or CY09. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 4DP and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6065,292,'12','2005','','2009','','7916748 for 2005. 14170469 for 2007. This data reflects contracts awarded for each year. Five contracts were awarded in CY2005; 2 contracts were awarded in CY09. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components.   
+INSERT INTO "submissions_dpquestion_2009" VALUES(6062,292,'8','','3330000.0','','5900000.0','In CY05 the Mozambique PRSC made up nearly 50% of total disbursements to the health sector. The 2005 PRSC was the first of two tranches. The two tranche approach was proposed as an exceptional measure in order to aligh future PRScs with the country budget cycle. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6063,292,'10old','2005','6660000.0','2009','5900000.0','See  tab 2DPa for data.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6064,292,'11old','','6660000.0','','5900000.0',' No disbursement delays were reported for relevant projects in CY05 or CY09. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 4DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6065,292,'10','2005','','2009','','7916748 for 2005. 14170469 for 2007. This data reflects contracts awarded for each year. Five contracts were awarded in CY2005; 2 contracts were awarded in CY09. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components.   
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6066,292,'13','','','','','The WB uses national institutions and national staff for procurement. However, use of national procurement systems varies by project. For more information on individual projects and the extent of use of national procurement systems please see tab 5DPa and relevant sources noted therein for further information.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6067,292,'14','2005','','','','6660000 for 2005. 5900000 for 2009. See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6068,292,'15','','','','','The CY05 PRSC uses 100% of national FM systems, however use for other projects is varied. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 5DPb and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6069,292,'16','please select','0.0','2009','0.0','In 2005 changes in the Mozambique MOH resulted in radical reforms to implementation of projects in the health sector. All PIUs were subsequently dismantled. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6070,292,'17','2005','Yes','2009','Yes','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 6DPb and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6071,292,'18','2005','Yes','2009','Yes','The Government of Mozambique leads a joint annual evaluation with participation from development partners. In addition, development partners participate jointly in a M&E working group and provide inputs into the overall annual and mid-term reviews. Finally, partners also participate in joint  missions.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6066,292,'11','','','','','The WB uses national institutions and national staff for procurement. However, use of national procurement systems varies by project. For more information on individual projects and the extent of use of national procurement systems please see tab 5DPa and relevant sources noted therein for further information.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6068,292,'12','','','','','The CY05 PRSC uses 100% of national FM systems, however use for other projects is varied. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 5DPb and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6069,292,'13','please select','0.0','2009','0.0','In 2005 changes in the Mozambique MOH resulted in radical reforms to implementation of projects in the health sector. All PIUs were subsequently dismantled. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6070,292,'14','2005','Yes','2009','Yes','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 6DPb and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6071,292,'15','2005','Yes','2009','Yes','The Government of Mozambique leads a joint annual evaluation with participation from development partners. In addition, development partners participate jointly in a M&E working group and provide inputs into the overall annual and mid-term reviews. Finally, partners also participate in joint  missions.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6072,292,'19','','','','','The JAR process has been an effective mechanism for sharing information and knowledge. However, it has not been very effective as a tool for mutual accountability. The JAR process is useful, but more needs to be done for the outcomes of the process to fully be realized as a tool for accountability.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6073,292,'20','2005','','2009','','The WB does not provide funds directly to NGOs/CS. However, there is a formal agreement with the Government of Mozambique (MOH) that they will engage CS and contract them for specific work under the HIV/AIDS Response Project. Additionally, the WB is very supportive of CS engagement in health sector activities, such as participation in JANS and development partner fora, etc. For more information, please see tab 8DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6073,292,'16','2005','','2009','','The WB does not provide funds directly to NGOs/CS. However, there is a formal agreement with the Government of Mozambique (MOH) that they will engage CS and contract them for specific work under the HIV/AIDS Response Project. Additionally, the WB is very supportive of CS engagement in health sector activities, such as participation in JANS and development partner fora, etc. For more information, please see tab 8DP and relevant sources noted therein.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6074,292,'21','2005','0.0','2009','0.0','All World Bank disbursements given to the Government of Mozambique.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6075,292,'22','2005','','2009','0.0','During CY05, approximately 50% of disbursements to the health sector were under the Mozambique PRSC - by which the WB provides funds directly to the Government Treasury. However, outside of the PRSC, WB funding was not provided via general budget support, but rather, it provided investment lending.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6076,292,'23','2005','0.0','2009','0.0','WB funding was not provided via general budget support, but rather, it provided investment lending.');
@@ -463,20 +426,18 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6080,293,'4','2005','0.0','2009
 INSERT INTO "submissions_dpquestion_2009" VALUES(6081,293,'5','','0.0','','0.0','While DfID provides support for technical cooperation it is important to note that WB support to the health sector is fully coordinated with other partners and in line with the national health strategy. Please see tab 2DPb for more information.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6082,293,'6','2005','4900000.0','2009','16400000.0','Please note that totals given for "health sector aid for the government sector ($USD)" (2DPa-2) and "health sector aid ($USD) did you disburse at country level"(2DPc-6) are the same, as the World Bank disburses all funds through partner governments at the country level. See tab 2DPa for data.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6083,293,'7','','4900000.0','','16400000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions" please see tab 2DPc and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6084,293,'8','2005','4900000.0','2009','16400000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6085,293,'9','','4900000.0','','16400000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6086,293,'10','2005','4900000.0','2009','16400000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6087,293,'11','','4900000.0','','16400000.0',' No disbursement delays were reported for relevant projects in CY05 or CY09. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 4DP and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6088,293,'12','2005','','2009','','0 for 2005. 3946789 for 2009. This data reflects contracts awarded for each year. No contracts were awarded in CY2005; 4 contracts were awarded in CY09. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components.   
+INSERT INTO "submissions_dpquestion_2009" VALUES(6085,293,'8','','4900000.0','','16400000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6086,293,'10old','2005','4900000.0','2009','16400000.0','See  tab 2DPa for data.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6087,293,'11old','','4900000.0','','16400000.0',' No disbursement delays were reported for relevant projects in CY05 or CY09. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 4DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6088,293,'10','2005','','2009','','0 for 2005. 3946789 for 2009. This data reflects contracts awarded for each year. No contracts were awarded in CY2005; 4 contracts were awarded in CY09. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components.   
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6089,293,'13','','','','','The WB uses national institutions and national staff for procurment under the National Health Sector Program project. NCB is carried out in line with national guidelines, with some modifications. ICB is carried out in line with WB guidelines. Please see tab 5DPa and relevant sources noted therein for further information.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6090,293,'14','2005','4900000.0','','16400000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6091,293,'15','','4900000.0','','16400000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 5DPb and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6092,293,'16','please select','0.0','2009','0.0','Tthe WB did not use any PIUs for either of the 2 projects in CY05 or CY09. For more information, please see tab 5DPc and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6093,293,'17','2005','Yes','2009','Yes','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 6DPb and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6094,293,'18','2005','Yes','2009','Yes','A Joint Annual Review (JAR) process in place that assesses the progress made in the health sector. There is also a joint planning process for the workplans and budgets for each fiscal year.  The participation in these processes is broad and includes MOH, all development partners, civil society organizations, the Ministry of Finance, the National Planning Commission and - as appropriate to the agenda - representatives from other sectors.  The Joint Financing Arrangement also directs the alignment of DP''s financial assistance. Nepal is in an advanced stage to agree on a Joint Technical Assistance Arrangement that will align the technical assistance and technical cooperation with the health sector program and provide a tool for reviewing this aspect of the support provided.  Lastly, a Code of Conduct is under development that will elaborate more specifically on the mechanisms and tools for mutual accountability as applicable to all stakeholders in the sector who sign this document.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6089,293,'11','','','','','The WB uses national institutions and national staff for procurment under the National Health Sector Program project. NCB is carried out in line with national guidelines, with some modifications. ICB is carried out in line with WB guidelines. Please see tab 5DPa and relevant sources noted therein for further information.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6091,293,'12','','4900000.0','','16400000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 5DPb and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6092,293,'13','please select','0.0','2009','0.0','Tthe WB did not use any PIUs for either of the 2 projects in CY05 or CY09. For more information, please see tab 5DPc and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6093,293,'14','2005','Yes','2009','Yes','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 6DPb and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6094,293,'15','2005','Yes','2009','Yes','A Joint Annual Review (JAR) process in place that assesses the progress made in the health sector. There is also a joint planning process for the workplans and budgets for each fiscal year.  The participation in these processes is broad and includes MOH, all development partners, civil society organizations, the Ministry of Finance, the National Planning Commission and - as appropriate to the agenda - representatives from other sectors.  The Joint Financing Arrangement also directs the alignment of DP''s financial assistance. Nepal is in an advanced stage to agree on a Joint Technical Assistance Arrangement that will align the technical assistance and technical cooperation with the health sector program and provide a tool for reviewing this aspect of the support provided.  Lastly, a Code of Conduct is under development that will elaborate more specifically on the mechanisms and tools for mutual accountability as applicable to all stakeholders in the sector who sign this document.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6095,293,'19','','','','','The TTL noted that the JAR process as an accountability mechanism is currently weak, though partners are working to change this. While this is a moderately useful exercise for the government, the last attempt to apply this to development partners (Jan 2010) did not seem to work as well as initially hoped.At present, the JAR lacks signiciant levels of in-depth analysis. However, partners are working together to develop a core agenda and core indicators to be included as a part of each JAR - this is a work in progress.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6096,293,'20','2005','0.0','2009','0.0','The WB does not provide funds directly to NGOs/CS. However, there is a formal agreement with the Government of Nepal (MOH) that they will engage CS and contract them for specific work under the Nepal Health Sector Program Project. Additionally, the WB is very supportive of CS engagement in health sector activities, such as participation in JANS and development partner fora, etc. For more information, please see tab 8DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6096,293,'16','2005','0.0','2009','0.0','The WB does not provide funds directly to NGOs/CS. However, there is a formal agreement with the Government of Nepal (MOH) that they will engage CS and contract them for specific work under the Nepal Health Sector Program Project. Additionally, the WB is very supportive of CS engagement in health sector activities, such as participation in JANS and development partner fora, etc. For more information, please see tab 8DP and relevant sources noted therein.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6097,293,'21','2005','0.0','2009','0.0','All World Bank disbursements given to the Government of Nepal.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6098,293,'22','2005','0.0','2009','0.0','According to the definitions laid out in the HP+ Results "Guide to Key Terms and Definitions" document, the WB does not provide general budget support. Rather, the WB provides investment lending - it does not provide support directly to Nepal''s national treasury.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6099,293,'23','2005','0.0','2009','0.0','According to the definitions laid out in the HP+ Results "Guide to Key Terms and Definitions" document, the WB does not provide sector budget support as defined by the World Bank.  However, in practice, WB investment lending under the Nepal health project is very much like sector budget support as it flows directly to Nepal''s national treasury and finances a slice of the ministry''s budget.');
@@ -487,20 +448,18 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6103,294,'4','2005','3262000.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(6104,294,'5','','3262000.0','','6934400.0','It is important to note that WB support to the health sector is fully coordinated with other partners and in line with the national health strategy. Please see tab 2DPb for more information.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6105,294,'6','2005','','2009','','65240000 for 2005. 86680000 for 2009. Please note that totals given for "health sector aid for the government sector ($USD)" (2DPa-2) and "health sector aid ($USD) did you disburse at country level"(2DPc-6) are the same, as the World Bank disburses all funds through partner governments at the country level. See tab 2DPa for data.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6106,294,'7','','','','','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions" please see tab 2DPc and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6107,294,'8','2005','65240000.0','2009','86680000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6108,294,'9','','65240000.0','','86680000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6109,294,'10','2005','65240000.0','2009','86680000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6110,294,'11','','65240000.0','','76278400.0',' No disbursement delays were reported for relevant projects in CY05. Delays were reported in the first 7 months of CY09 for P070290, but not thereafter. As such, it is estimated that approximately 88% of disbursements were on schedule. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 4DP11 and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6111,294,'12','2005','58579325.0','2009','94333359.0','This data reflects contracts awarded for each year. 15 contracts were awarded in CY2005; two in CY09.  Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components.   
+INSERT INTO "submissions_dpquestion_2009" VALUES(6108,294,'8','','65240000.0','','86680000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6109,294,'10old','2005','65240000.0','2009','86680000.0','See  tab 2DPa for data.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6110,294,'11old','','65240000.0','','76278400.0',' No disbursement delays were reported for relevant projects in CY05. Delays were reported in the first 7 months of CY09 for P070290, but not thereafter. As such, it is estimated that approximately 88% of disbursements were on schedule. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 4DP11 and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6111,294,'10','2005','58579325.0','2009','94333359.0','This data reflects contracts awarded for each year. 15 contracts were awarded in CY2005; two in CY09.  Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components.   
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6112,294,'13','','0','','0','In each of the projects in Nigeria during CY05 and CY09, the WB actively supported capacity building for procurement. However, analysis of country systems showed high risk for use for procurement. However, projects specified implementaiton plans for capacity building and it is possible that in later project implementation years the WB may be using country systesms. Additionally, for P080295 - Polio Erradication - is executed under an agreement between the government of Nigeria and UNICEF. Therefore, the WB works directly with UNICEF, as the WB ONLY finances vaccine procurement and no other project components. Therefore, the us of national procurement systems is irrelevant for this project. For more information, please see tab 5DPa13 and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6113,294,'14','2005','65240000.0','','86680000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6114,294,'15','','0.0','','15602400.0','In each of the projects in Nigeria during CY05 and CY09, the WB actively supported capacity building for FM. Analysis of country systems showed high risk for use for FM, except for P097921 - Malaria Booster, which used country systems. Projects specified implementaiton plans for capacity building and it is possible that in later project implementation years the WB may be using country systesms. Additionally, for P080295 - Polio Erradication - is executed under an agreement between the government of Nigeria and UNICEF. Therefore, the WB works directly with UNICEF, as the WB ONLY finances vaccine procurement and no other project components. Therefore, the us of national FM systems is irrelevant for this project. For more information, please see tab 5DPb15 and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6115,294,'16','please select','1.0','2009','2.0','PIUs are utilized in a number of projects in Nigeria, partially as a means for coordination of projects at the state level. While the Polio Eradication program (P080295) operates fully through existing government structures and the HIV/AIDS project (070291) also relies on state government structures, both the Malaria Booster project (P097921) and the Health System Development project (P070290) utilize a federal PIU, as well as PIUs at the state level for those states in which the project is being implemented. (source: interview with TTL).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6116,294,'17','2005','Yes','2009','Yes','WB projects are aligned with the policies and strategies of the Government of Nigeria. As such, national preformance assessment frameworks are the foundation of any project results frameworks. However, on a projet by project basis, the WB does compliment national frameworks with additional information for project-specific results frameworks (source: interview with TTL).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6117,294,'18','2005','Yes','2009','Yes','The WB participates in mutual assessments of projects such as twice annual implementation support supervision missions, led by the government and, often, carried out jointly with other donor partners. Additionally, the WB participates in governent-led portfolio reviews and the Ministry of Finance-led overviews of project progress (source: interview with TTL).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6112,294,'11','','0','','0','In each of the projects in Nigeria during CY05 and CY09, the WB actively supported capacity building for procurement. However, analysis of country systems showed high risk for use for procurement. However, projects specified implementaiton plans for capacity building and it is possible that in later project implementation years the WB may be using country systesms. Additionally, for P080295 - Polio Erradication - is executed under an agreement between the government of Nigeria and UNICEF. Therefore, the WB works directly with UNICEF, as the WB ONLY finances vaccine procurement and no other project components. Therefore, the us of national procurement systems is irrelevant for this project. For more information, please see tab 5DPa13 and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6114,294,'12','','0.0','','15602400.0','In each of the projects in Nigeria during CY05 and CY09, the WB actively supported capacity building for FM. Analysis of country systems showed high risk for use for FM, except for P097921 - Malaria Booster, which used country systems. Projects specified implementaiton plans for capacity building and it is possible that in later project implementation years the WB may be using country systesms. Additionally, for P080295 - Polio Erradication - is executed under an agreement between the government of Nigeria and UNICEF. Therefore, the WB works directly with UNICEF, as the WB ONLY finances vaccine procurement and no other project components. Therefore, the us of national FM systems is irrelevant for this project. For more information, please see tab 5DPb15 and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6115,294,'13','please select','1.0','2009','2.0','PIUs are utilized in a number of projects in Nigeria, partially as a means for coordination of projects at the state level. While the Polio Eradication program (P080295) operates fully through existing government structures and the HIV/AIDS project (070291) also relies on state government structures, both the Malaria Booster project (P097921) and the Health System Development project (P070290) utilize a federal PIU, as well as PIUs at the state level for those states in which the project is being implemented. (source: interview with TTL).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6116,294,'14','2005','Yes','2009','Yes','WB projects are aligned with the policies and strategies of the Government of Nigeria. As such, national preformance assessment frameworks are the foundation of any project results frameworks. However, on a projet by project basis, the WB does compliment national frameworks with additional information for project-specific results frameworks (source: interview with TTL).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6117,294,'15','2005','Yes','2009','Yes','The WB participates in mutual assessments of projects such as twice annual implementation support supervision missions, led by the government and, often, carried out jointly with other donor partners. Additionally, the WB participates in governent-led portfolio reviews and the Ministry of Finance-led overviews of project progress (source: interview with TTL).');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6118,294,'19','','','','','The JAR has just been initiated. It could be a valuable  mechanism for accountability and as a means for coordination and accountability amongst partners and is useful for the purposes of setting targets and priorities for future work in the health sector. However, this process is young and, as such, it will take time to see the benefits of this process (source: interview with TTL).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6119,294,'20','2005','','2009','','The WB is fully supportive of civil society engagement in the health sector. While the WB does not provide direct funding to civil society organizations, civil society is a critical partner in a number of WB projects during baseline years CY05 and CY09, serving as service providers for HIV, malaria, polio, and other projects. Furthermore, civil society is regularly engaged in the review of projects and programs and contributes to mutual accountability in the health sector of Nigeria at both federal and state levels (source: interview with TTL).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6119,294,'16','2005','','2009','','The WB is fully supportive of civil society engagement in the health sector. While the WB does not provide direct funding to civil society organizations, civil society is a critical partner in a number of WB projects during baseline years CY05 and CY09, serving as service providers for HIV, malaria, polio, and other projects. Furthermore, civil society is regularly engaged in the review of projects and programs and contributes to mutual accountability in the health sector of Nigeria at both federal and state levels (source: interview with TTL).');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6120,294,'21','2005','0.0','2009','0.0','All World Bank disbursements given to the Government of Nigeria.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6121,294,'22','2005','0.0','2009','0.0','According to the definitions laid out in the HP+ Results "Guide to Key Terms and Definitions" document, the WB does not provide general budget support. Rather, the WB provides investment lending - it does not provide support directly to Nepal''s national treasury.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6122,294,'23','2005','0.0','2009','0.0','');
@@ -511,19 +470,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6126,295,'4','2005','n/a','2009
 INSERT INTO "submissions_dpquestion_2009" VALUES(6127,295,'5','','n/a','','n/a','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6128,295,'6','2005','11176360.62','2009','7845127.03','As GAVI supports countries'' immunisation and health programmes, GAVI support is programme based by design. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6129,295,'7','','11176360.62','','7845127.03','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6130,295,'8','2005','11176360.62','2009','7845127.03','GAVI supports countries for the duration of the health and immunisation plan, and is therefore multi-year by design. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6131,295,'9','','11176360.62','','7845127.03','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6132,295,'10','2005','11176360.62','2009','7845127.03','Of the USD 11,176,360 disbursed to Burkina Faso in 2005, USD 9,211,234 was for introduction costs and 5-in-1 pentavalent vaccine supply, to be introduced in 2006. USD 142,986 related to 2004 (injection safety support). The remainder (USD 1,822,340) is reward-based ISS payments.  Of the USD 7,845,127 disbursed in 2009, USD 7,766,736 were for vaccines to be used in 2009 and 2010.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6133,295,'11','','11133574.0','','7766736.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6134,295,'12','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6135,295,'13','','n/a','','n/a','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6136,295,'14','2005','','2009','','11176360.62 in 2005. 7845127.03 in 2007. GAVI cash support flows through country systems by design. However, GAVI does not track whether aid to the health sector uses countries'' PFM systems.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6137,295,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6138,295,'16','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6139,295,'17','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6140,295,'18','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6131,295,'8','','11176360.62','','7845127.03','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6132,295,'10old','2005','11176360.62','2009','7845127.03','Of the USD 11,176,360 disbursed to Burkina Faso in 2005, USD 9,211,234 was for introduction costs and 5-in-1 pentavalent vaccine supply, to be introduced in 2006. USD 142,986 related to 2004 (injection safety support). The remainder (USD 1,822,340) is reward-based ISS payments.  Of the USD 7,845,127 disbursed in 2009, USD 7,766,736 were for vaccines to be used in 2009 and 2010.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6133,295,'11old','','11133574.0','','7766736.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6134,295,'10','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6135,295,'11','','n/a','','n/a','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6137,295,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6138,295,'13','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6139,295,'14','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6140,295,'15','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6141,295,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6142,295,'20','2005','0.0','2009','0.0','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries. Burkina Faso has not applied for this support.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6142,295,'16','2005','0.0','2009','0.0','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries. Burkina Faso has not applied for this support.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6143,295,'21','2007','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6144,295,'22','2007','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6145,295,'23','2007','','2009','','');
@@ -534,19 +491,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6172,297,'4','2005','n/a','2009
 INSERT INTO "submissions_dpquestion_2009" VALUES(6173,297,'5','','n/a','','n/a','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6174,297,'6','2005','67200.0','2009','222444.23','As GAVI supports countries'' immunisation and health programmes, GAVI support is programme based by design. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6175,297,'7','','67200.0','','222444.23','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6176,297,'8','2005','67200.0','2009','222444.23','GAVI supports countries for the duration of the health and immunisation plan, and is therefore multi-year by design. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6177,297,'9','','67200.0','','222444.23','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6178,297,'10','2005','67200.0','2009','222444.23','In 2005, GAVI provided support for injection safety (USD 10,800, scheduled for 2004) and rewards-based Immunisation Services Support (USD 56,400). In 2009, USD 222,444 were provided for 5-in-1 pentavalent vaccine, scheduled for 2009.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6179,297,'11','','56400.0','','222444.23','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6180,297,'12','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6181,297,'13','','n/a','','n/a','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6182,297,'14','2005','','2009','','67200 in 2005.222444.23 in 2007. GAVI cash support flows through country systems by design. However, GAVI does not track whether aid to the health sector uses countries'' PFM systems.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6183,297,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6184,297,'16','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6185,297,'17','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6186,297,'18','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6177,297,'8','','67200.0','','222444.23','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6178,297,'10old','2005','67200.0','2009','222444.23','In 2005, GAVI provided support for injection safety (USD 10,800, scheduled for 2004) and rewards-based Immunisation Services Support (USD 56,400). In 2009, USD 222,444 were provided for 5-in-1 pentavalent vaccine, scheduled for 2009.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6179,297,'11old','','56400.0','','222444.23','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6180,297,'10','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6181,297,'11','','n/a','','n/a','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6183,297,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6184,297,'13','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6185,297,'14','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6186,297,'15','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6187,297,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6188,297,'20','2005','0.0','2009','0.0','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries. Djibouti has not applied for this support.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6188,297,'16','2005','0.0','2009','0.0','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries. Djibouti has not applied for this support.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6189,297,'21','2007','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6190,297,'22','2007','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6191,297,'23','please select','','2009','','');
@@ -557,19 +512,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6195,298,'4','2005','n/a','2009
 INSERT INTO "submissions_dpquestion_2009" VALUES(6196,298,'5','','n/a','','n/a','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6197,298,'6','2005','5687527.0','2009','26454383.0','As GAVI supports countries'' immunisation and health programmes, GAVI support is programme based by design. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6198,298,'7','','5687527.0','','26454383.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6199,298,'8','2005','5687527.0','2009','26454383.0','GAVI supports countries for the duration of the health and immunisation plan, and is therefore multi-year by design. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6200,298,'9','','5687527.0','','26454383.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6201,298,'10','2005','5687527.0','2009','26454383.0','The funds disbursed to DR Congo in 2005 were reward for additional children immunised (for 2004, USD 4,060,200) and yellow fever vaccine (USD 912,917 for 2005 and USD 714,410 for 2006). The 2009 disbursement is for 5-in-1 pentavalent vaccine for 2009 (USD 23,948,946, this vaccine was not yet introduced in 2005), and yellow fever vaccine for 2010.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6202,298,'11','','5687527.0','','26454383.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6203,298,'12','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6204,298,'13','','n/a','','n/a','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6205,298,'14','2005','5687527.0','2009','26454383.0','5687527 in 2005. 26454383 in 2007. GAVI cash support flows through country systems by design. However, GAVI does not track whether aid to the health sector uses countries'' PFM systems.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6206,298,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6207,298,'16','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6208,298,'17','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6209,298,'18','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6200,298,'8','','5687527.0','','26454383.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6201,298,'10old','2005','5687527.0','2009','26454383.0','The funds disbursed to DR Congo in 2005 were reward for additional children immunised (for 2004, USD 4,060,200) and yellow fever vaccine (USD 912,917 for 2005 and USD 714,410 for 2006). The 2009 disbursement is for 5-in-1 pentavalent vaccine for 2009 (USD 23,948,946, this vaccine was not yet introduced in 2005), and yellow fever vaccine for 2010.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6202,298,'11old','','5687527.0','','26454383.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6203,298,'10','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6204,298,'11','','n/a','','n/a','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6206,298,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6207,298,'13','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6208,298,'14','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6209,298,'15','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6210,298,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6211,298,'20','2005','0.0','2009','0.0','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries, and support for CSO programmatic activities in 10 pilot countries. DR Congo is one of the pilot countries, and has been approved for this support. Funds were disbursed in 2008 but not in 2009 as an agreement on overall fund flow was pending. GAVI is also in the process of strengthening CSO engagement overall and as part of this invited DR Congo CSOs to the November 2009 partners'' meeting in Hanoi.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6211,298,'16','2005','0.0','2009','0.0','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries, and support for CSO programmatic activities in 10 pilot countries. DR Congo is one of the pilot countries, and has been approved for this support. Funds were disbursed in 2008 but not in 2009 as an agreement on overall fund flow was pending. GAVI is also in the process of strengthening CSO engagement overall and as part of this invited DR Congo CSOs to the November 2009 partners'' meeting in Hanoi.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6212,298,'21','2007','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6213,298,'22','2007','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6214,298,'23','2007','','2009','','');
@@ -580,19 +533,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6310,303,'4','2005','n/a','2009
 INSERT INTO "submissions_dpquestion_2009" VALUES(6311,303,'5','','n/a','','n/a','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6312,303,'6','2005','5599562.0','2009','5812335.0','As GAVI supports countries'' immunisation and health programmes, GAVI support is programme based by design. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6313,303,'7','','5599562.0','','5812335.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6314,303,'8','2005','5599562.0','2009','5812335.0','GAVI supports countries for the duration of the health and immunisation plan, and is therefore multi-year by design. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6315,303,'9','','5599562.0','','5812335.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6316,303,'10','2005','5599562.0','2009','5812335.0','In 2005, GAVI disbursed USD 5,599,562 to Nigeria, all of it rewards-based immunisation services support for results achieved in 2000 and 2001. In 2009, GAVI disbursed USD 1,487,694 for injection safety (for 2009), and USD 4,324,641 for Yellow Fever vaccine (for 2009 and 2010). ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6317,303,'11','','0.0','','5812335.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6318,303,'12','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6319,303,'13','','n/a','','n/a','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6320,303,'14','2005','','2009','','GAVI cash support flows through country systems by design. However, GAVI does not track whether aid to the health sector uses countries'' PFM systems. 2005=5,599,562, 2009=5,812,335');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6321,303,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6322,303,'16','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6323,303,'17','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6324,303,'18','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6315,303,'8','','5599562.0','','5812335.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6316,303,'10old','2005','5599562.0','2009','5812335.0','In 2005, GAVI disbursed USD 5,599,562 to Nigeria, all of it rewards-based immunisation services support for results achieved in 2000 and 2001. In 2009, GAVI disbursed USD 1,487,694 for injection safety (for 2009), and USD 4,324,641 for Yellow Fever vaccine (for 2009 and 2010). ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6317,303,'11old','','0.0','','5812335.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6318,303,'10','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6319,303,'11','','n/a','','n/a','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6321,303,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6322,303,'13','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6323,303,'14','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6324,303,'15','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6325,303,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6326,303,'20','2005','0.0','2009','0.0','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries. Nigeria has not applied for this support. GAVI is seeking to strengthen the role of civil society, and Nigerian CSOs were invited to the 2009 Partners Forum in Hanoi, Vietnam.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6326,303,'16','2005','0.0','2009','0.0','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries. Nigeria has not applied for this support. GAVI is seeking to strengthen the role of civil society, and Nigerian CSOs were invited to the 2009 Partners Forum in Hanoi, Vietnam.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6327,303,'21','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6328,303,'22','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6329,303,'23','please select','','2009','','');
@@ -603,19 +554,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6471,310,'4','2006','3857857.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(6472,310,'5','','3857857.0','','1230804.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6473,310,'6','2006','3857857.0','2009','1230804.0','Appui technique et financier de la part de l''OMS Burundi.             Le décaissement à porter sur le niveau national y compris les initiatives accès sur les programmes. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6474,310,'7','','2491346.0','','1230804.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6475,310,'8','2006','3857857.0','2009','1230804.0','Pas d''engagement pluriannue. Il s''agit d''un budget pour deux ans.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6476,310,'9','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6477,310,'10','2006','3857857.0','2009','1230804.0','Le chiffre exprimé pour le point 11 est approximatif.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6478,310,'11','','2000000.0','','1230804.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6479,310,'12','2006','299770.0','2009','268447.0','Les chiffres indiqués concernent uniquement les achats locaux, il faudrait se référer au Bureau Régional AFRO pour les approvisionnements internationaux à ajouter');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6480,310,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6481,310,'14','2006','3857857.0','2009','1230804.0','C''est le système de gestion des finances propre à l''OMS qui est utilisé.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6482,310,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6483,310,'16','2005','0.0','2009','0.0','Il n''existe pas d''unité parallère mais plutôt une gestion conjointe de mise mise en œuvre du programme des activités et le secteur gouvernemental.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6484,310,'17','','No','2009','Yes','Depuis 2009, il existe une revue annuelle conjointe entre les partenaires et le gouvernement dans le Cadre de concertation des Partenaires pour la Santé et le Développement (CPSD)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6485,310,'18','please select','No','2009','No','L''OMS contribue aux enquêtes ou études d''évaluation mutuelles dans le cadre du comité national de coordination des aides (Deuxième Vice-Présidence de la République du Burundi).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6476,310,'8','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6477,310,'10old','2006','3857857.0','2009','1230804.0','Le chiffre exprimé pour le point 11 est approximatif.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6478,310,'11old','','2000000.0','','1230804.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6479,310,'10','2006','299770.0','2009','268447.0','Les chiffres indiqués concernent uniquement les achats locaux, il faudrait se référer au Bureau Régional AFRO pour les approvisionnements internationaux à ajouter');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6480,310,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6482,310,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6483,310,'13','2005','0.0','2009','0.0','Il n''existe pas d''unité parallère mais plutôt une gestion conjointe de mise mise en œuvre du programme des activités et le secteur gouvernemental.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6484,310,'14','','No','2009','Yes','Depuis 2009, il existe une revue annuelle conjointe entre les partenaires et le gouvernement dans le Cadre de concertation des Partenaires pour la Santé et le Développement (CPSD)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6485,310,'15','please select','No','2009','No','L''OMS contribue aux enquêtes ou études d''évaluation mutuelles dans le cadre du comité national de coordination des aides (Deuxième Vice-Présidence de la République du Burundi).');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6486,310,'19','2007','','','','L''évaluation conjointe dans le secteur de la  santé concerne essentiellement la mise en œuvre des activités et très faiblement la surveillance des engagements de l''efficacité de l''aide. On devrait évaluer le niveau d''engagement des deux parties (Gouvernement et chaque PTF)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6487,310,'20','2007','','2009','','Chaque année, il y a eu appui technique OMS dans la préparation des propositions des OSC au Global Fund.     Il y a eu un plaidoyer en faveur de la société civile pour qu''elle soit associée dans le processus de planification de coordination et de revue sectorielle.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6487,310,'16','2007','','2009','','Chaque année, il y a eu appui technique OMS dans la préparation des propositions des OSC au Global Fund.     Il y a eu un plaidoyer en faveur de la société civile pour qu''elle soit associée dans le processus de planification de coordination et de revue sectorielle.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6488,310,'21','please select','0.0','2009','0.0','Budget propre de l''OMS ne permet pas d''appuyer d''autres acteurs à part le ministère de la santé publique ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6489,310,'22','please select','0.0','2009','0.0','L''OMS ne contribue pas à l''appui budgétaire général. C''est le financement direct au ministère de la santé publique.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6490,310,'23','please select','0.0','2009','0.0','L''OMS ne contribue pas à l''appui budgétaire sectoriel. C''est le financement direct au ministère de la santé publique, à partir d''un programme biennal. ');
@@ -626,23 +575,20 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6494,311,'4','2007','','2009','
 INSERT INTO "submissions_dpquestion_2009" VALUES(6495,311,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6496,311,'6','2007','2555345.0','2009','904821.0','Pour 2007 et 2009 la  somme correspond aux biennies 2006-2007 et 2008-2009 respectivement');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6497,311,'7','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6498,311,'8','2007','2555345.0','2009','904821.0','En fait la planification opérationnelle des programmes biennaux émane de la planification stratégique reflétée dans la stratégie de coopération avec le pays pour la période 2006-2011. Toutefois ce document de stratégie pluriannuel ne comporte pas d''engagements budgétaires.
-');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6499,311,'9','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6500,311,'10','2007','2555345.0','2009','904821.0','Pour 2007 et 2009 la  somme correspond aux biennies 2006-2007 et 2008-2009 respectivement.
+INSERT INTO "submissions_dpquestion_2009" VALUES(6499,311,'8','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6500,311,'10old','2007','2555345.0','2009','904821.0','Pour 2007 et 2009 la  somme correspond aux biennies 2006-2007 et 2008-2009 respectivement.
 
 En raisonnant par biennie, le décaissement a été effectué à temps dans la limite temporelle des deux années calendaires de la biennie correspondante.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6501,311,'11','','2555345.0','','904821.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6502,311,'12','2007','','2009','','Q12: 2007 - no data; 2009 - $0.           Le montant total n''a pas encore été identifié vue la complexité du recueil de cette information. 
+INSERT INTO "submissions_dpquestion_2009" VALUES(6501,311,'11old','','2555345.0','','904821.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6502,311,'10','2007','','2009','','Q12: 2007 - no data; 2009 - $0.           Le montant total n''a pas encore été identifié vue la complexité du recueil de cette information. 
 Toutefois la majorité des approvisionnements se fait à travers l''OMS en raison d''une meilleure efficience et une qualité garantie avec notamment la disponibilité de mécanismes tels que le GDF, le GLC et le système de catalogue de l''OMS.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6503,311,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6504,311,'14','2007','2555345.0','2009','904821.0','Pour 2007 et 2009 la  somme correspond aux biennies 2006-2007 et 2008-2009 respectivement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6505,311,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6506,311,'16','2005','0.0','2009','0.0','l''aide alloué au secteur de la sante pour le secteur gouvernemental a toujours été délivrée du bureau de l''OMS du pays au Ministère de la Santé sans aucun autre mécanisme parallèle ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6507,311,'17','2005','No','2009','Yes','Une évaluation de tous les programmes de santé a eu lieu dans le cadre de l''évaluation du Plan National de Développement Sanitaire 2008-2011 avec la participation des tous les partenaires pour le développement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6508,311,'18','2007','No','2009','No','Dans son aspect de responsabilité mutuelle de rendre compte un tel mécanisme n''a pas été mis en place.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6503,311,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6505,311,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6506,311,'13','2005','0.0','2009','0.0','l''aide alloué au secteur de la sante pour le secteur gouvernemental a toujours été délivrée du bureau de l''OMS du pays au Ministère de la Santé sans aucun autre mécanisme parallèle ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6507,311,'14','2005','No','2009','Yes','Une évaluation de tous les programmes de santé a eu lieu dans le cadre de l''évaluation du Plan National de Développement Sanitaire 2008-2011 avec la participation des tous les partenaires pour le développement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6508,311,'15','2007','No','2009','No','Dans son aspect de responsabilité mutuelle de rendre compte un tel mécanisme n''a pas été mis en place.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6509,311,'19','2007','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6510,311,'20','2007','No','2009','','En 2009 le bureau de l''OMS de Djibouti a coordonné au niveau national un appel à candidatures international pour l''appui à un organisme de la société civile pour faire le suivi de la mise en œuvre de la politique de santé du pays.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6510,311,'16','2007','No','2009','','En 2009 le bureau de l''OMS de Djibouti a coordonné au niveau national un appel à candidatures international pour l''appui à un organisme de la société civile pour faire le suivi de la mise en œuvre de la politique de santé du pays.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6511,311,'21','2005','0.0','2009','0.0','Toute l''aide a été fournie directement et non par l''intermédiaire d''autres donateurs');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6512,311,'22','2007','','2009','','Tout le budget de l''OMS est consacré au secteur de la santé');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6513,311,'23','2007','2555345.0','2009','904821.0','Pour 2007 et 2009 la  somme correspond aux biennies 2006-2007 et 2008-2009 respectivement');
@@ -653,19 +599,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6517,312,'4','2005','6447566.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(6518,312,'5','','4296500.0','','5000000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6519,312,'6','2005','9547566.0','2009','25079500.0','en 2009, l''OMS a appuyé plus la riposte à la résurgence du polio virus sauvage dans le pays par des activités de vaccination supplémentaires au détriment du PEV de routine prévu dans la stratégie sectorielle santé');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6520,312,'7','','1200000.0','','1500000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6521,312,'8','2005','9547566.0','2009','25079500.0','l''OMS a un budget biannuel qui ne lui permet pas de prendre des engagements financiers au-delà de cette période de deux ans');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6522,312,'9','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6523,312,'10','2005','9547566.0','2009','25079500.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6524,312,'11','','4000000.0','','21000000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6525,312,'12','2005','500000.0','2009','3500000.0','utilisation du système interne de passation de marché de l''OMS');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6526,312,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6527,312,'14','2005','6447566.0','2009','21679500.0','l''OMS a un système de gestion interne et ne met pas directement de l''argent à ladisposition du gouvernement.En cas de requêt, l''OMS paie le fournisseur et livre les biens/services au service requérant');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6528,312,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6529,312,'16','2005','0.0','2009','0.0','sauf pour l''éradication de la polio, les sous bureaux OMS appuient la surveillance des PFAsur terrain (ceci est une exception)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6530,312,'17','2005','No','2009','No','ce cadre n''exixte pas; il est fortement envisagé de mettre en place un cadre unique de suivi évaluation du plan national de développement sanitaire 2011-2015');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6531,312,'18','2005','No','2009','No','cela est envisagé à partir de 2011. toutefois, les revues sectorielles santé réaliseés chaque année depuis 2006 cavec l''ensemble de partenaires du secteur constituent une ébauche des évaluations mutuelles des performances du système de santédu pays');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6522,312,'8','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6523,312,'10old','2005','9547566.0','2009','25079500.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6524,312,'11old','','4000000.0','','21000000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6525,312,'10','2005','500000.0','2009','3500000.0','utilisation du système interne de passation de marché de l''OMS');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6526,312,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6528,312,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6529,312,'13','2005','0.0','2009','0.0','sauf pour l''éradication de la polio, les sous bureaux OMS appuient la surveillance des PFAsur terrain (ceci est une exception)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6530,312,'14','2005','No','2009','No','ce cadre n''exixte pas; il est fortement envisagé de mettre en place un cadre unique de suivi évaluation du plan national de développement sanitaire 2011-2015');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6531,312,'15','2005','No','2009','No','cela est envisagé à partir de 2011. toutefois, les revues sectorielles santé réaliseés chaque année depuis 2006 cavec l''ensemble de partenaires du secteur constituent une ébauche des évaluations mutuelles des performances du système de santédu pays');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6532,312,'19','2006','efficacité moyenne','','efficacité améliorée par rapport aux années antérieures','pour améliorer les efforts d''évaluation conjointe; il est insdispensable d''avoir un plan de développement consensuel ainsi qu''un cadre de suivi évaluation conjoint. C''est ce qui sera effectif à partir de l''année 2011 avec le PNDS adopté par l''ensemble des partenaires et par le conseil des ministres du gouvernement central');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6533,312,'20','2006','adoption de la stratégie sectorielle santé avec tous les partenaires y compris ceux de la société civile','2009','participation effective de la société civile à l''élaboration et adoption du PNDS 2011-2015','appui technique au conseil national des ONG santé(CNOS)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6533,312,'16','2006','adoption de la stratégie sectorielle santé avec tous les partenaires y compris ceux de la société civile','2009','participation effective de la société civile à l''élaboration et adoption du PNDS 2011-2015','appui technique au conseil national des ONG santé(CNOS)');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6534,312,'21','2005','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6535,312,'22','2007','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6536,312,'23','2007','','2009','','');
@@ -676,19 +620,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6540,313,'4','2007','26300000.0
 INSERT INTO "submissions_dpquestion_2009" VALUES(6541,313,'5','','26300000.0','','31500000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6542,313,'6','2007','26300000.0','2009','31500000.0','Since there is joint planning and agreeement on the plan, joint coordination mechanisms and strong government ownership and leadership all the resource is assumed to use a program based approach.  ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6543,313,'7','','26300000.0','','31500000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6544,313,'8','2007','26300000.0','2009','31500000.0','The WHO uses a biennial planning cycle. Therefore a three year''s commitment is difficult to the country office');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6545,313,'9','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6546,313,'10','2007','26300000.0','2009','31500000.0','scheduling and disbursement takes place on a biennial basis rather than on annual basis. In both bienniums the office disbursed all that was scheduled');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6547,313,'11','','26300000.0','','31500000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6548,313,'12','2007','2400000.0','2009','5000000.0','All the mentioned procurments are related to vaccines and related supplies based on the government request. And the joint financial arrangemet (which is signed ben the MOH and DPs stated that the government may use the UN procurement system based on its comparative advantage. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6549,313,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6550,313,'14','2007','26300000.0','2009','31500000.0','The money stated refers to what was transferresd as a direct financial cooperation.  USD 664,338 had been contributed in the calendar year 2009 for MDG pooled fund to be managed according to the government procedures. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6551,313,'15','','11076920.0','','15356645.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6552,313,'16','2007','No','2009','No','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6553,313,'17','2007','Yes','2009','Yes','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6554,313,'18','2007','No','2009','Yes','As per the indicators in the IHP compact, each partner indicated its progress and that was presented in an annual review meeting. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6545,313,'8','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6546,313,'10old','2007','26300000.0','2009','31500000.0','scheduling and disbursement takes place on a biennial basis rather than on annual basis. In both bienniums the office disbursed all that was scheduled');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6547,313,'11old','','26300000.0','','31500000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6548,313,'10','2007','2400000.0','2009','5000000.0','All the mentioned procurments are related to vaccines and related supplies based on the government request. And the joint financial arrangemet (which is signed ben the MOH and DPs stated that the government may use the UN procurement system based on its comparative advantage. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6549,313,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6551,313,'12','','11076920.0','','15356645.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6552,313,'13','2007','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6553,313,'14','2007','Yes','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6554,313,'15','2007','No','2009','Yes','As per the indicators in the IHP compact, each partner indicated its progress and that was presented in an annual review meeting. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6555,313,'19','','No','','Yes','A joint review mission was conducted as per the agreement with the government. It focused on assessing the heath sector''s performance with particular emphasis on TB and maternal health. Major limitation is the failure to do the same evaluation on on 2010 after it was done on 2009');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6556,313,'20','2007','22000.0','2009','31000.0','money was provided to professional associations to celebreta important events and realize their goals');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6556,313,'16','2007','22000.0','2009','31000.0','money was provided to professional associations to celebreta important events and realize their goals');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6557,313,'21','2007','No','2009','No','the Office does not disburse money to other donors');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6558,313,'22','2007','No','2009','No','No budgetary support provided by WHO.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6559,313,'23','2006','No','2009','No','No budgetary support provided by WHO.');
@@ -699,19 +641,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6563,314,'4','2005','9723600.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(6564,314,'5','','9723600.0','','10979423.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6565,314,'6','2005','9723600.0','2009','10979423.0','Pour la question 11 les montants élévés du prgramme de vaccination sont dus à l''obtention de fonds extrabudgetaires dans le cadre de l''erradiction de la polio');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6566,314,'7','','4000000.0','','6500000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6567,314,'8','2007','9723600.0','2009','10979423.0','Nous avons des plans bienaux  qui opérationalisent la stratégiesde coopération d''une durée de 5 ans at qui comporte 4 volets prioritaires ( lutte contre la maladie,santé mère et enfants; santé/environement; politique et système de santé)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6568,314,'9','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6569,314,'10','2005','9723600.0','2009','10979423.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6570,314,'11','','9723600.0','','10979423.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6571,314,'12','2005','1166832.0','2009','1646914.0','Les biens qui ont fait l''objet d''approvisionnement sont acquis par les procedure du gouvernement ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6572,314,'13','','1166832.0','','1646914.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6573,314,'14','2005','9723600.0','2009','10979423.0','La quasitotalité des fonds destinés aux programmes sont mis à la disposition du Gouvernement suit les regles de gestion du gouvernement dès que le fond tombe dans les caisses de l''Etat');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6574,314,'15','','9723600.0','','10979423.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6575,314,'16','2005','0.0','2009','0.0','Les projets venant de l''OMS sont des projets du Gouvernement et ont fait l''objet d''un consensus avant leur financement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6576,314,'17','2005','Yes','2009','Yes','Depuis 2002 Existent des organes d''orientation, de coordination et d''évaluation du programme de développement sanitaire et social qui permettent de faire le suivi et l''évaluation des progrès realisés à tous les niveaux de la pyramide sanitaire. Dans ces organes participent les responsables des programmes et structures des Ministère de la santé du developpement social et de la promotion feminine ainsi que les partenaires technique et Financiers. NB: les procedures d''evaluation du programme biennale aussi se font de façons concensuelle');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6577,314,'18','2008','Yes','2009','Yes','Il existe des rapports des revues (comité technique du PRODESS, et des rapport des missions conjointes des 3 Ministères de la santé du developpement social et de la promotion feminines avec les PTF. Ces rapports sont gerés par le secretariat du PRODESS assuré par la CPS santé. En plus de ces revues conjointes des missions conjointes (Etat/PTFs) sont organisées chaque année à la veille des comités technique et de suivi du PRODESS. la reflexion est en cours pour elaborer des indicateurs  sur l''éfficacité de l''aide');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6568,314,'8','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6569,314,'10old','2005','9723600.0','2009','10979423.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6570,314,'11old','','9723600.0','','10979423.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6571,314,'10','2005','1166832.0','2009','1646914.0','Les biens qui ont fait l''objet d''approvisionnement sont acquis par les procedure du gouvernement ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6572,314,'11','','1166832.0','','1646914.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6574,314,'12','','9723600.0','','10979423.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6575,314,'13','2005','0.0','2009','0.0','Les projets venant de l''OMS sont des projets du Gouvernement et ont fait l''objet d''un consensus avant leur financement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6576,314,'14','2005','Yes','2009','Yes','Depuis 2002 Existent des organes d''orientation, de coordination et d''évaluation du programme de développement sanitaire et social qui permettent de faire le suivi et l''évaluation des progrès realisés à tous les niveaux de la pyramide sanitaire. Dans ces organes participent les responsables des programmes et structures des Ministère de la santé du developpement social et de la promotion feminine ainsi que les partenaires technique et Financiers. NB: les procedures d''evaluation du programme biennale aussi se font de façons concensuelle');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6577,314,'15','2008','Yes','2009','Yes','Il existe des rapports des revues (comité technique du PRODESS, et des rapport des missions conjointes des 3 Ministères de la santé du developpement social et de la promotion feminines avec les PTF. Ces rapports sont gerés par le secretariat du PRODESS assuré par la CPS santé. En plus de ces revues conjointes des missions conjointes (Etat/PTFs) sont organisées chaque année à la veille des comités technique et de suivi du PRODESS. la reflexion est en cours pour elaborer des indicateurs  sur l''éfficacité de l''aide');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6578,314,'19','2007','','','','Les forces de la revue conjointe:  - transparence; responsabilité mutuelle, decision consensuelle;usage des même outils de rapportage, renforcement du leadership du Gouvernement et favorise l''allignement sur les procedures de l''état, l''harmonisation et la coordination des interventions      - Les faiblesses: Persistence de certaines revues parallèles');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6579,314,'20','2008','Appui technique et financier à la federation des associations de santé communautaire pour le renforcement des capacités de ses membre','2009','Formation à la planification sanitaire des associations de santé communautaire',' Le appuis passe pra la Federation nationale pour atteidre les associations de santé communautaire. L''OMS a puyer les la coordination des ONGs en santé pour developper un accord tripartite: Gouvernement; ONG/société civile et OMS. Un plan d''action a été elaboré pour operationnaliser cet accord');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6579,314,'16','2008','Appui technique et financier à la federation des associations de santé communautaire pour le renforcement des capacités de ses membre','2009','Formation à la planification sanitaire des associations de santé communautaire',' Le appuis passe pra la Federation nationale pour atteidre les associations de santé communautaire. L''OMS a puyer les la coordination des ONGs en santé pour developper un accord tripartite: Gouvernement; ONG/société civile et OMS. Un plan d''action a été elaboré pour operationnaliser cet accord');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6580,314,'21','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6581,314,'22','2007','N/A ','2009','N/A','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6582,314,'23','please select','N/A ','2009','N/A','L''OMS ne fait pas l''appui budgetaire sectorielle mais l''appui directe');
@@ -722,19 +662,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6586,315,'4','2005','3698000.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(6587,315,'5','','3698000.0','','5706000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6588,315,'6','2005','3698000.0','2009','6479000.0','All WHO funds are for health sector following the Programme Budget and specific requests made from the MoH at Central and Provincial level.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6589,315,'7','','2279000.0','','4079000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6590,315,'8','2005','3698000.0','2009','6479000.0','WHO operates in 2 years cycle with approved budget and disbursements based on requests.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6591,315,'9','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6592,315,'10','2005','3698000.0','2009','6479000.0','As 2005 and 2009 are final years of the  bienium cycle the disbursements tends to be higher.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6593,315,'11','','2679000.0','','5300000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6594,315,'12','2008','','2009','','Q12: 2008 - $200,000; 2009 - $600,000.                Small proportion of acquisitions uses national procurement mechanism. Usually we use the  Regional Procurement Unit at AFRO. In the context  of One UN we are advancing  towards one UN Procurement. So far the uptake from counterparts under HACT is still very low, but expected to improve as people get more skilled om the tool. Procurement for MoH is more on goods and services-printing Guidelines, material, stationary and lab equipment.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6595,315,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6596,315,'14','2005','3698000.0','2009','6478000.0','Local costs subsidies  is now calld HACT -Harmonized cash transfer  mechanism. Most of funds for local subsidies are for immunization  activities. In 2005 there was a National Measles Campaign.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6597,315,'15','','3163000.0','','952000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6598,315,'16','2005','0.0','2009','0.0','WHO does not channel  funds trough Implementation units');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6599,315,'17','2005','Yes','2009','Yes','Joint Annual Evaluation and Performance Assessment Framework (PAF)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6600,315,'18','2005','Yes','2009','Yes','Very litle on Aid effectiveness but the issue continues on discussion in various  joint  Consultation  foras.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6591,315,'8','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6592,315,'10old','2005','3698000.0','2009','6479000.0','As 2005 and 2009 are final years of the  bienium cycle the disbursements tends to be higher.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6593,315,'11old','','2679000.0','','5300000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6594,315,'10','2008','','2009','','Q12: 2008 - $200,000; 2009 - $600,000.                Small proportion of acquisitions uses national procurement mechanism. Usually we use the  Regional Procurement Unit at AFRO. In the context  of One UN we are advancing  towards one UN Procurement. So far the uptake from counterparts under HACT is still very low, but expected to improve as people get more skilled om the tool. Procurement for MoH is more on goods and services-printing Guidelines, material, stationary and lab equipment.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6595,315,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6597,315,'12','','3163000.0','','952000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6598,315,'13','2005','0.0','2009','0.0','WHO does not channel  funds trough Implementation units');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6599,315,'14','2005','Yes','2009','Yes','Joint Annual Evaluation and Performance Assessment Framework (PAF)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6600,315,'15','2005','Yes','2009','Yes','Very litle on Aid effectiveness but the issue continues on discussion in various  joint  Consultation  foras.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6601,315,'19','','','','','Joint Annual Evaluation (ACA) still far to be considered  a mutual accountability Framework. However expectation to become  Muttually Accountable is lacking as there is individual understanding from Common  Fund signatories.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6602,315,'20','2007','Support capacity development for  NGOs  trough funding of advocacy meetings. ','2009','Support for  monitoring implementation of Code of Conduct between NGOs and MoH. Set up of Data base of NGOs at MoH.','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6602,315,'16','2007','Support capacity development for  NGOs  trough funding of advocacy meetings. ','2009','Support for  monitoring implementation of Code of Conduct between NGOs and MoH. Set up of Data base of NGOs at MoH.','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6603,315,'21','2005','','2009','','Not aplicable');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6604,315,'22','2005','','2009','','Not applicable');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6605,315,'23','2007','','2009','','Not applicable');
@@ -745,20 +683,18 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6609,316,'4','2005','6295151.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(6610,316,'5','','2248650.0','','2038462.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6611,316,'6','2005','7986501.0','2009','10121405.0','The budget reflected for 2005 and 2009 for health sector under Q,No 6 is inclusive of budget disbursed through National Health Sector Budgets and the WHO Country Office Budget.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6612,316,'7','','2248650.0','','2038462.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6613,316,'8','2005','','2009','','Q8: 2005 - $7,986,501; 2009 - $10,121,405.           WHO budget is two yearly budget. Commitment ofr than two years is can be given for regular budget (accessed contribution)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6614,316,'9','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6615,316,'10','2005','7986501.0','2009','10121405.0','WHO has a biennieal budget system and is reflected in three fiscal years of National Health Sector Budget. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6616,316,'11','','7986501.0','','10121405.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6617,316,'12','2005','492828.0','2009','1335592.0','WHO is using its own procurement system');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6618,316,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6619,316,'14','2005','6295151.0','2009','9668280.0','WHO Country Office through its various programme areas of work during this period supported the eight priority outputs of the National Health Sector Plan - Implementation Plan (2004 - 2009). ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6620,316,'15','','480522.0','','1228182.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6621,316,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6622,316,'17','2005','Yes','2009','Yes','During the implementation of National Health Sector Programme - Implementation Plan (2004 - 2009), there were eight National Outputs used for National Performance Assessment Framework which was monitored during every Pre-JAR and JAR. The National Health Sector Plan (NHSP II - 2010 - 2015), there is a provision for one single national performance assessment framework which was jointly prepared with involvement of all stakeholders in health.This will be monitored through the consulative meetings followed by JAR from 2010 onwards.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6623,316,'18','2005','Yes','2009','Yes','In 2008, paris survey was undertaken to review aid effectiveness. 
+INSERT INTO "submissions_dpquestion_2009" VALUES(6614,316,'8','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6615,316,'10old','2005','7986501.0','2009','10121405.0','WHO has a biennieal budget system and is reflected in three fiscal years of National Health Sector Budget. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6616,316,'11old','','7986501.0','','10121405.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6617,316,'10','2005','492828.0','2009','1335592.0','WHO is using its own procurement system');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6618,316,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6620,316,'12','','480522.0','','1228182.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6621,316,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6622,316,'14','2005','Yes','2009','Yes','During the implementation of National Health Sector Programme - Implementation Plan (2004 - 2009), there were eight National Outputs used for National Performance Assessment Framework which was monitored during every Pre-JAR and JAR. The National Health Sector Plan (NHSP II - 2010 - 2015), there is a provision for one single national performance assessment framework which was jointly prepared with involvement of all stakeholders in health.This will be monitored through the consulative meetings followed by JAR from 2010 onwards.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6623,316,'15','2005','Yes','2009','Yes','In 2008, paris survey was undertaken to review aid effectiveness. 
 Joint Annual Review has been used to review implementation of National Health Sector Programme - Implementation Plan (2004 - 2009) and is expected to continue through the National Health Sector Plan (NHSP II - 2010 - 2015). ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6624,316,'19','','Initiation of JARs','','Increasingly effective JAR mechanism','SWAp in Nepal began in 2004. JAR mechanism has been used to review implementation of health sector SWAp. Over the years, JAR has been increasingly been used as a mechanism to review aid effectiveness and mutual accountability.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6625,316,'20','please select','No','2009','Yes','WHO did not work directly with the civil society organizations in the past. However, increasing participation has been noticed in the involvement of NGOs, INGOs and Civil Society Organizations in the health sector planning, coordination and review mechanisms.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6625,316,'16','please select','No','2009','Yes','WHO did not work directly with the civil society organizations in the past. However, increasing participation has been noticed in the involvement of NGOs, INGOs and Civil Society Organizations in the health sector planning, coordination and review mechanisms.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6626,316,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6627,316,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6628,316,'23','2007','','2009','','');
@@ -769,19 +705,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6632,317,'4','2005','5365857.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(6633,317,'5','','5365857.0','','6572879.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6634,317,'6','2005','5365857.0','2009','6572879.0','La totalité du financement de l''OMS est orienté dans le secteur da santé');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6635,317,'7','','5365857.0','','6572879.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6636,317,'8','2005','5365857.0','2009','6572879.0','Non, aucun objectif n''a été fixé.Du fait que la planification financière de l''OMS est biennale (2 ans), il est difficile de prévoir des engagements à plus long terme. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6637,317,'9','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6638,317,'10','2005','5365857.0','2009','6572879.0','Tout l''appui de l''OMS est orienté vers le secteur de la santé. En considérant les fonds prévus dans le biennium, il n''ya pas de retard de décaissement à la fin.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6639,317,'11','','5365857.0','','6572879.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6640,317,'12','2005','682148.0','2009','341074.0','Les aides généralement apportées par l''OMS en matière d''approvisionnement s''inscrivent dans le cadre des réponses aux urgences sanitaires et les approvisionnements ne passent pas par le système national');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6641,317,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6642,317,'14','2005','5365857.0','2009','6572879.0','Les appuis de l''OMS sont généralement des appuis aux programmes qui ne passent pas par le circuit national de gestion financière du pays');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6643,317,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6644,317,'16','2005','0.0','2009','0.0','L''appui de l''OMS s''inscrit dans le programme unique de coopération avec le pays, donc ne se traduit pas en terme d''unités de gestion de projets parallèles');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6645,317,'17','2005','Yes','2009','Yes','Le système d''évaluations conjointes des activités a été institué par le MSP et l''OMS participe à ce processus. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6646,317,'18','2005','No','2009','No','Cet exercice n''est pas encore mené au Niger. Mais nous pensons que dans le cadre du COMPACT national qui soutiendra la mise en œuvre du nouveau PDS 2011-2015, cela est envisageable.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6637,317,'8','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6638,317,'10old','2005','5365857.0','2009','6572879.0','Tout l''appui de l''OMS est orienté vers le secteur de la santé. En considérant les fonds prévus dans le biennium, il n''ya pas de retard de décaissement à la fin.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6639,317,'11old','','5365857.0','','6572879.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6640,317,'10','2005','682148.0','2009','341074.0','Les aides généralement apportées par l''OMS en matière d''approvisionnement s''inscrivent dans le cadre des réponses aux urgences sanitaires et les approvisionnements ne passent pas par le système national');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6641,317,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6643,317,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6644,317,'13','2005','0.0','2009','0.0','L''appui de l''OMS s''inscrit dans le programme unique de coopération avec le pays, donc ne se traduit pas en terme d''unités de gestion de projets parallèles');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6645,317,'14','2005','Yes','2009','Yes','Le système d''évaluations conjointes des activités a été institué par le MSP et l''OMS participe à ce processus. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6646,317,'15','2005','No','2009','No','Cet exercice n''est pas encore mené au Niger. Mais nous pensons que dans le cadre du COMPACT national qui soutiendra la mise en œuvre du nouveau PDS 2011-2015, cela est envisageable.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6647,317,'19','2005','','','','Forces: régularité, implications des différents acteurs, responsabilité mutuelle. Faiblesses: Lourdes, coûteuses, analyse non approffondie des indicateurs. Pour renforcer les évaluations conjointes, il faut renforcer les capacités nationales et améliorer les outils d''évaluation.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6648,317,'20','2005','','2009','','Appui à la création du regroupement des ONG et associations du secteur de la santé dénommé "ROASSN" en 2000; Appui à la mise en place d''un réseau des associations des professionnels de la santé en 2010; appui renforcement capacité des associations des tradipraticiens');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6648,317,'16','2005','','2009','','Appui à la création du regroupement des ONG et associations du secteur de la santé dénommé "ROASSN" en 2000; Appui à la mise en place d''un réseau des associations des professionnels de la santé en 2010; appui renforcement capacité des associations des tradipraticiens');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6649,317,'21','2007','','2009','','les fonds mobilisés dans le cadre de certaines urgences ne sont pas toujours pris en compte en Q2');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6650,317,'22','please select','0.0','2009','0.0','L''OMS ne fait pas d''appui budgétaire');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6651,317,'23','please select','0.0','2009','0.0','Même commentaire qu''à la question 22');
@@ -792,19 +726,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6655,318,'4','2006','30843187.0
 INSERT INTO "submissions_dpquestion_2009" VALUES(6656,318,'5','','30843187.0','','84766341.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6657,318,'6','2006','32398680.0','2009','89321531.0','All WHO''s supported activities are based on programme based approaches led by government. Progressively donor coordination within the health sector is allowing for greater harmonization.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6658,318,'7','','32398680.0','','89321531.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6659,318,'8','2006','32398680.0','2009','89321531.0','WHO provides support in two-yearly cycles to the country. None of its funding is currently provided through longer multi-year commitments.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6660,318,'9','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6661,318,'10','2006','32398680.0','2009','89321531.0','WHO disbursed 95% of funds scheduled for the 2008 - 2009 biennium in the scheduled years.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6662,318,'11','','32398680.0','','89321531.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6663,318,'12','2007','2722587.0','2009','4555190.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6664,318,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6665,318,'14','2006','32398680.0','2009','89321531.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6666,318,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6667,318,'16','2007','0.0','2009','0.0','WHO does not have parallel implementation units');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6668,318,'17','2007','No','2009','No','The national performance assessment framework for the country was adopted in March 2010 and as such the first time it will be used would be Nov 2010 by government and partners. The UN system is also undertaking joint assessments by its agencies, which will contribute to the national assessments.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6669,318,'18','2007','No','2009','No','WHO with other development partners are supporting the government as it plans for the first Joint annual Health sector review at end of 2010 to monitor progress and compliance with the country compact.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6660,318,'8','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6661,318,'10old','2006','32398680.0','2009','89321531.0','WHO disbursed 95% of funds scheduled for the 2008 - 2009 biennium in the scheduled years.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6662,318,'11old','','32398680.0','','89321531.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6663,318,'10','2007','2722587.0','2009','4555190.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6664,318,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6666,318,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6667,318,'13','2007','0.0','2009','0.0','WHO does not have parallel implementation units');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6668,318,'14','2007','No','2009','No','The national performance assessment framework for the country was adopted in March 2010 and as such the first time it will be used would be Nov 2010 by government and partners. The UN system is also undertaking joint assessments by its agencies, which will contribute to the national assessments.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6669,318,'15','2007','No','2009','No','WHO with other development partners are supporting the government as it plans for the first Joint annual Health sector review at end of 2010 to monitor progress and compliance with the country compact.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6670,318,'19','','','','','Nigerian Government and partners have reached advanced stages for the conduct of the first Joint Annual Review for the health sector. It is envisaged that it would be an effective mechanism to improve accountability, while assessing progress towards set targets. The Joint monitoring forthe health sector by the UN agencies will also contribute to the overall health sector review.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6671,318,'20','2007','','2009','','WHO has supported and engaged in consultations led by government authorities with identified representatives of CSOs during the health sector planning activities for the National Health Plan, as well as on their involvement in coordination mechansims at federal and state levels. Also, WHO alongisde other partners participated in discussions with representatives of CSOs within the processes of developing the country compact, while on-going discussions are informing the involvement of CSOs in the Joint Annual Review process.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6671,318,'16','2007','','2009','','WHO has supported and engaged in consultations led by government authorities with identified representatives of CSOs during the health sector planning activities for the National Health Plan, as well as on their involvement in coordination mechansims at federal and state levels. Also, WHO alongisde other partners participated in discussions with representatives of CSOs within the processes of developing the country compact, while on-going discussions are informing the involvement of CSOs in the Joint Annual Review process.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6672,318,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6673,318,'22','2007','0.0','2009','0.0','WHO does not provide general budget support');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6674,318,'23','2007','0.0','2009','0.0','WHO does not provide sector budget support');
@@ -815,19 +747,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6816,325,'4','2007','','2009','
 INSERT INTO "submissions_dpquestion_2009" VALUES(6817,325,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6818,325,'6','2007','','2009','','2007=4,065,252, 2009=3,094,134');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6819,325,'7','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6820,325,'8','2007','4065252.4458','2009','3094134.384','cells protected: impossible to write');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6821,325,'9','','4065252.4458','','3059319.384','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6822,325,'10','2007','','2009','','2007=4,065,252, 2009=3,094,134');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6823,325,'11','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6824,325,'12','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6825,325,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6826,325,'14','2007','','2009','','2007=3,449,814, 2009=2,451,369');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6827,325,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6828,325,'16','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6829,325,'17','2007','No','2009','No','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6830,325,'18','2007','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6821,325,'8','','4065252.4458','','3059319.384','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6822,325,'10old','2007','','2009','','2007=4,065,252, 2009=3,094,134');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6823,325,'11old','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6824,325,'10','2007','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6825,325,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6827,325,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6828,325,'13','2007','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6829,325,'14','2007','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6830,325,'15','2007','No','2009','No','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6831,325,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6832,325,'20','2007','615438.2754','2009','642765.6708','modified by SMJ following email from Ignace on 16 Nov 2010');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6832,325,'16','2007','615438.2754','2009','642765.6708','modified by SMJ following email from Ignace on 16 Nov 2010');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6833,325,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6834,325,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6835,325,'23','2007','0.0','2009','0.0','');
@@ -838,19 +768,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6839,326,'4','2007','24960322.7
 INSERT INTO "submissions_dpquestion_2009" VALUES(6840,326,'5','','24960322.7406','','28486045.2096','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6841,326,'6','2005','24960322.7406','2009','28486045.2096','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6842,326,'7','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6843,326,'8','2007','24960322.7406','2009','28486045.2096','cells protected: impossible to write but same amounts as above. All the DGCD supported programs (also NGOs) are on a minimal 3 year programme base. Only the support by the regional and community government are not necessarily multi-year commitments');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6844,326,'9','','24960322.7406','','27782424.3114','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6845,326,'10','2005','','2009','','2007=24,960,323, 2009=28,486,045');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6846,326,'11','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6847,326,'12','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6848,326,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6849,326,'14','2007','24960323.0','2009','28486045.2096','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6850,326,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6851,326,'16','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6852,326,'17','2007','No','2009','No','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6853,326,'18','2007','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6844,326,'8','','24960322.7406','','27782424.3114','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6845,326,'10old','2005','','2009','','2007=24,960,323, 2009=28,486,045');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6846,326,'11old','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6847,326,'10','2007','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6848,326,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6850,326,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6851,326,'13','2007','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6852,326,'14','2007','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6853,326,'15','2007','No','2009','No','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6854,326,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6855,326,'20','2007','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6855,326,'16','2007','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6856,326,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6857,326,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6858,326,'23','2007','0.0','2009','0.0','');
@@ -861,19 +789,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(6885,328,'4','2007','','2009','
 INSERT INTO "submissions_dpquestion_2009" VALUES(6886,328,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6887,328,'6','2007','','2009','','2007=10,197,443, 2009=7,059,995');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6888,328,'7','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6889,328,'8','2007','10197442.593','2009','7059994.59','cells protected: impossible to write');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6890,328,'9','','10161849.8241','','7059994.59','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6891,328,'10','2007','','2009','','2007=10,197,443, 2009=7,059,995');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6892,328,'11','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6893,328,'12','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6894,328,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6895,328,'14','2007','','2009','','2007=7,082,292, 2009=2,382,634');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6896,328,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6897,328,'16','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6898,328,'17','2007','No','2009','No','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6899,328,'18','2007','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6890,328,'8','','10161849.8241','','7059994.59','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6891,328,'10old','2007','','2009','','2007=10,197,443, 2009=7,059,995');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6892,328,'11old','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6893,328,'10','2007','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6894,328,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6896,328,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6897,328,'13','2007','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6898,328,'14','2007','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6899,328,'15','2007','No','2009','No','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6900,328,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(6901,328,'20','2007','10161849.8241','2009','7059994.59','modified by SMJ following email from Ignace on 16 Nov 2010');
+INSERT INTO "submissions_dpquestion_2009" VALUES(6901,328,'16','2007','10161849.8241','2009','7059994.59','modified by SMJ following email from Ignace on 16 Nov 2010');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6902,328,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6903,328,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(6904,328,'23','2007','0.0','2009','0.0','');
@@ -888,21 +814,18 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(7163,340,'6','2007','1326997.04
 2007 = 794 651 USD
 2009 = 2 533 432 USD; IST : 2009 = 180 770');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7164,340,'7','','794651.0','','2714202.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7165,340,'8','2007','1326997.0404','2009','3280302.2766','cells protected: impossible to write');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7166,340,'9','','794651.0','','2714202.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7167,340,'10','2007','1326997.0404','2009','3280302.2766','As an average, real expenses present 80% of waht is scheduled in the beginning of the year, but at the end of the project/programme an average of more than 95% is obtained ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7168,340,'11','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7169,340,'12','2007','337754.0','2009','2515861.0','PADSS (appui au PRODESS région de Mopti)
+INSERT INTO "submissions_dpquestion_2009" VALUES(7166,340,'8','','794651.0','','2714202.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7167,340,'10old','2007','1326997.0404','2009','3280302.2766','As an average, real expenses present 80% of waht is scheduled in the beginning of the year, but at the end of the project/programme an average of more than 95% is obtained ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7168,340,'11old','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7169,340,'10','2007','337754.0','2009','2515861.0','PADSS (appui au PRODESS région de Mopti)
 100% of aid used the malian procurement system; IST : mixed use : 50% use of national procurement system and 50% use of belgian procurement system ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7170,340,'13','','337754.0','','2335091.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7171,340,'14','2007','1326997.0404','2009','3280302.2766','PADSS (appui au PRODESS région de Mopti)
-100% of aid used the malian procurement system');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7172,340,'15','','794651.0','','2614856.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7173,340,'16','2007','0.0','2009','1.0','PADSS = none ; IST = 1 (but the technical assistant was based in the national cell running the project)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7174,340,'17','2007','No','2009','Yes','A national performance assessment does exist, but data are provided once a year.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7175,340,'18','2007','No','2009','Yes','In 2009, the belgian cooperation supported the ''CPS'' (Cellule de Planification et Statistique du MOH) with a technical assistent and some key studies (for exemple the finalisation of the compact/IHP)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7170,340,'11','','337754.0','','2335091.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7172,340,'12','','794651.0','','2614856.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7173,340,'13','2007','0.0','2009','1.0','PADSS = none ; IST = 1 (but the technical assistant was based in the national cell running the project)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7174,340,'14','2007','No','2009','Yes','A national performance assessment does exist, but data are provided once a year.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7175,340,'15','2007','No','2009','Yes','In 2009, the belgian cooperation supported the ''CPS'' (Cellule de Planification et Statistique du MOH) with a technical assistent and some key studies (for exemple the finalisation of the compact/IHP)');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7176,340,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7177,340,'20','2007','91109.0','2009','179960.0','2007 = Sante sud NGO support (91109) ;
+INSERT INTO "submissions_dpquestion_2009" VALUES(7177,340,'16','2007','91109.0','2009','179960.0','2007 = Sante sud NGO support (91109) ;
 2009 = Sante sud + UTM support (148 627); 2009 = IST (Groupe pivot santé : 31 333 USD)');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7178,340,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7179,340,'22','2007','0.0','2009','0.0','');
@@ -918,33 +841,23 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(7577,375,'6','2007','9320000.0'
 
 Please note that baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7578,375,'7','','0.0','','25409429.86','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7579,375,'8','2007','9320000.0','2008','25409430.0','Global Fund grants are multi-year commitments with funding commitments of 2+3 years (Phase 1 of two years; Phase 2 of three additional years) or (3+3 years in the case of Rolling Continuation Channel grants). For this indicator we have provided data on disbursements for the reporting year relating only to grants that were in phase II in the reporting year.
-The Global Fund Board has recently (2010) approved a new grant architecture (http://www.theglobalfund.org/en/grantarchitecture/?lang=en). A core feature of this new grant architecture is the “single stream of funding per Principal Recipient, per disease.” This means the Global Fund will maintain one funding agreement for each Principal Recipient in each disease area, which will then be amended when a new proposal for funding the same disease is approved. This is in contrast to the current model, in which each newly approved proposal results in a separate grant agreement per Principal Recipient, with its own budget, performance framework, and so on.
-
-A key difference between an existing grant and a single stream of funding concerns how funding is committed over time. Whereas our existing grants have funding commitments of 2+3 years, single streams of funding will have fixed regular commitment cycles of up to three years. 
-
-');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7580,375,'9','','7472576.0','','5620249.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7581,375,'10','2007','9320000.0','2008','25409429.86','In 2008, the Global Fund scheduled 15''557''144 USD for disbursement. 25''409''430 USD were actually disbursed.
+INSERT INTO "submissions_dpquestion_2009" VALUES(7580,375,'8','','7472576.0','','5620249.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7581,375,'10old','2007','9320000.0','2008','25409429.86','In 2008, the Global Fund scheduled 15''557''144 USD for disbursement. 25''409''430 USD were actually disbursed.
 
 In 2007, the Global Fund scheduled 8''378''977 USD for disbursement. 9''320''000 USD were actually disbursed.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7582,375,'11','','8378977.0','','15557144.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7583,375,'12','2007','9320000.0','2008','25409429.86','Please note the following: 
+INSERT INTO "submissions_dpquestion_2009" VALUES(7582,375,'11old','','8378977.0','','15557144.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7583,375,'10','2007','9320000.0','2008','25409429.86','Please note the following: 
 
 a. data reported for this indicator was calculated using the methodology for the 2007 PD monitoring round, which looks at total disbursements to a country (instead of disbursements made for procurement purposes) See http://www.oecd.org/document/19/0,3343,en_21571361_39494699_39763923_1_1_1_1,00.html
 
 b. baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. 
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7584,375,'13','','9320000.0','','25409429.86','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7585,375,'14','2007','9320000.0','2008','25409429.86','Public financial reporting management is not used. However, it is at the discretion of the country to include system-strengthening activities in their funding proposals. (note to Patrick: If you want more detail on this, I''d recommend letting the FPM comment on the survey. Also, I am not clear how IHP defines public financial management, the guidance note only talks about financial reporting but the comment on the left talks about the full set of PFM systems. Can we please contact IHP and ask about it)
-
-
-Please note that in line with the PD monitoring, baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7586,375,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7587,375,'16','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7588,375,'17','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .
+INSERT INTO "submissions_dpquestion_2009" VALUES(7584,375,'11','','9320000.0','','25409429.86','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7586,375,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7587,375,'13','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7588,375,'14','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .
 The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy and thus the framework is often based on national targets. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7589,375,'18','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-country. However, depending on its programmatic and funding interest, it participates in country annual reviews with other partners.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7589,375,'15','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-country. However, depending on its programmatic and funding interest, it participates in country annual reviews with other partners.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7590,375,'19','','','','','Strengths
  Conducted at National level
  Wide stakeholders'' participation
@@ -968,7 +881,7 @@ Weaknesses
  Review reports not always available
  Available reports not always used
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7591,375,'20','2007','','2008','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7591,375,'16','2007','','2008','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7592,375,'21','2007','','2008','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7593,375,'22','2007','0.0','2008','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7594,375,'23','2007','0.0','2008','0.0','');
@@ -983,32 +896,22 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(7623,377,'6','2007','','2008','
 
 Please note that baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7624,377,'7','','','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7625,377,'8','2007','5520363.0','2008','5506396.0','Global Fund grants are multi-year commitments with funding commitments of 2+3 years (Phase 1 of two years; Phase 2 of three additional years) or (3+3 years in the case of Rolling Continuation Channel grants). For this indicator we have provided data on disbursements for the reporting year relating only to grants that were in phase II in the reporting year.
-The Global Fund Board has recently (2010) approved a new grant architecture (http://www.theglobalfund.org/en/grantarchitecture/?lang=en). A core feature of this new grant architecture is the “single stream of funding per Principal Recipient, per disease.” This means the Global Fund will maintain one funding agreement for each Principal Recipient in each disease area, which will then be amended when a new proposal for funding the same disease is approved. This is in contrast to the current model, in which each newly approved proposal results in a separate grant agreement per Principal Recipient, with its own budget, performance framework, and so on.
-
-A key difference between an existing grant and a single stream of funding concerns how funding is committed over time. Whereas our existing grants have funding commitments of 2+3 years, single streams of funding will have fixed regular commitment cycles of up to three years. 
-
-');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7626,377,'9','','3691799.0','','1638415.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7627,377,'10','2007','','2008','5506396.0','Q10: 2007 - $5,520,363.     Please note only baseline data from 2008 is available. 
+INSERT INTO "submissions_dpquestion_2009" VALUES(7626,377,'8','','3691799.0','','1638415.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7627,377,'10old','2007','','2008','5506396.0','Q10: 2007 - $5,520,363.     Please note only baseline data from 2008 is available. 
 
 In 2008, the Global Fund scheduled 4''076''232 USD for disbursement. 5''506''396 USD were actually disbursed.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7628,377,'11','','','','4076232.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7629,377,'12','2007','','2008','5506396.0','Q12: 2007 - $5,520,363.     Please note the following: 
+INSERT INTO "submissions_dpquestion_2009" VALUES(7628,377,'11old','','','','4076232.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7629,377,'10','2007','','2008','5506396.0','Q12: 2007 - $5,520,363.     Please note the following: 
 
 a. data reported for this indicator was calculated using the methodology for the 2007 PD monitoring round, which looks at total disbursements to a country (instead of disbursements made for procurement purposes) See http://www.oecd.org/document/19/0,3343,en_21571361_39494699_39763923_1_1_1_1,00.html
 
 b. baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. 
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7630,377,'13','','','','5506396.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7631,377,'14','2007','','2008','5506396.0','Q14: 2007 - $5,520,363.     Public financial management is partly used. Furthermore, it is at the discretion of the country to include system-strengthening activities in their funding proposals. 
-
-
-Please note that in line with the PD monitoring, baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7632,377,'15','','','','3670930.98667','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7633,377,'16','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7634,377,'17','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .Global Fund financing is implemented by in-country organizations such as the Government or NGOs. The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7635,377,'18','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-countriy. However, depending on its programmatic and funding interest, and the decision during the grant review,  participation in the country annual reviews with other partners may be recommended.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7630,377,'11','','','','5506396.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7632,377,'12','','','','3670930.98667','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7633,377,'13','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7634,377,'14','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .Global Fund financing is implemented by in-country organizations such as the Government or NGOs. The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7635,377,'15','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-countriy. However, depending on its programmatic and funding interest, and the decision during the grant review,  participation in the country annual reviews with other partners may be recommended.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7636,377,'19','','','','','Strengths
  Conducted at National level
  Wide stakeholders'' participation
@@ -1033,7 +936,7 @@ Weaknesses
  Review reports not always available
  Available reports not always used
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7637,377,'20','2007','0.0','2008','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7637,377,'16','2007','0.0','2008','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7638,377,'21','2007','0.0','2008','0.0','The Global Fund does not fund other donors but provides funding through PRs nominated by the CCM.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7639,377,'22','2007','0.0','2008','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7640,377,'23','2007','0.0','2008','0.0','');
@@ -1046,29 +949,19 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(7646,378,'6','2007','','2008','
 
 Note that Q 7 excludes financing channeled through UNDP, in line with the 2007 PD monitoring guidelines.The results for both years for Q7 are therefore na.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7647,378,'7','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7648,378,'8','2007','','2008','','Global Fund grants are multi-year commitments with funding commitments of 2+3 years (Phase 1 of two years; Phase 2 of three additional years) or (3+3 years in the case of Rolling Continuation Channel grants).  For this indicator we have provided data on disbursements for the reporting year relating only to grants that were in phase II in the reporting year.
-The Global Fund Board has recently (2010) approved a new grant architecture (http://www.theglobalfund.org/en/grantarchitecture/?lang=en). A core feature of this new grant architecture is the “single stream of funding per Principal Recipient, per disease.” This means the Global Fund will maintain one funding agreement for each Principal Recipient in each disease area, which will then be amended when a new proposal for funding the same disease is approved. This is in contrast to the current model, in which each newly approved proposal results in a separate grant agreement per Principal Recipient, with its own budget, performance framework, and so on.
-
-A key difference between an existing grant and a single stream of funding concerns how funding is committed over time. Whereas our existing grants have funding commitments of 2+3 years, single streams of funding will have fixed regular commitment cycles of up to three years. 
-
-');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7649,378,'9','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7650,378,'10','2007','','2008','','Q11: 2007 - no data; 2009 - 70,201,778.                 Please note only baseline data from 2008 is available. 
+INSERT INTO "submissions_dpquestion_2009" VALUES(7649,378,'8','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7650,378,'10old','2007','','2008','','Q11: 2007 - no data; 2009 - 70,201,778.                 Please note only baseline data from 2008 is available. 
 
 In 2008, the Global Fund scheduled 70''201''778 USD for disbursement. 67''706''486 USD were actually disbursed.
 
 Please note that the implementing agency in DRC is UNDP.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7651,378,'11','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7652,378,'12','2007','','2008','','Please note that this indicator is na to the Global Fund because the implementing agency is UNDP.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7653,378,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7654,378,'14','2007','','2008','','
-
-
-Please note that this indicator is na to the Global Fund because the implementing agency is UNDP.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7655,378,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7656,378,'16','2007','','2008','','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7657,378,'17','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .Global Fund financing is implemented by in-country organizations such as the Government or NGOs. The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7658,378,'18','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-countriy. However, depending on its programmatic and funding interest, and the decision during the grant review,  participation in the country annual reviews with other partners may be recommended.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7651,378,'11old','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7652,378,'10','2007','','2008','','Please note that this indicator is na to the Global Fund because the implementing agency is UNDP.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7653,378,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7655,378,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7656,378,'13','2007','','2008','','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7657,378,'14','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .Global Fund financing is implemented by in-country organizations such as the Government or NGOs. The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7658,378,'15','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-countriy. However, depending on its programmatic and funding interest, and the decision during the grant review,  participation in the country annual reviews with other partners may be recommended.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7659,378,'19','','','','','Strengths
  Conducted at National level
  Wide stakeholders'' participation
@@ -1093,7 +986,7 @@ Weaknesses
  Review reports not always available
  Available reports not always used
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7660,378,'20','2007','0.0','2008','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7660,378,'16','2007','0.0','2008','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7661,378,'21','2007','27789126.0','2008','67706486.0','The Global Fund does not fund other donors but provides funding through PRs nominated by the CCM.  In 2007 and 2008, $27,789,126 and $67,706,486 respectively were channeled through UNDP as a PR. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7662,378,'22','2007','0.0','2008','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7663,378,'23','2007','0.0','2008','0.0','');
@@ -1108,32 +1001,22 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(7784,384,'6','2007','','2008','
 
 Please note that baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7785,384,'7','','','','68055445.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7786,384,'8','2007','39560000.0','2008','68055445.0','Global Fund grants are multi-year commitments with funding commitments of 2+3 years (Phase 1 of two years; Phase 2 of three additional years) or (3+3 years in the case of Rolling Continuation Channel grants). For this indicator we have provided data on disbursements for the reporting year relating only to grants that were in phase II in the reporting year.
-The Global Fund Board has recently (2010) approved a new grant architecture (http://www.theglobalfund.org/en/grantarchitecture/?lang=en). A core feature of this new grant architecture is the “single stream of funding per Principal Recipient, per disease.” This means the Global Fund will maintain one funding agreement for each Principal Recipient in each disease area, which will then be amended when a new proposal for funding the same disease is approved. This is in contrast to the current model, in which each newly approved proposal results in a separate grant agreement per Principal Recipient, with its own budget, performance framework, and so on.
-
-A key difference between an existing grant and a single stream of funding concerns how funding is committed over time. Whereas our existing grants have funding commitments of 2+3 years, single streams of funding will have fixed regular commitment cycles of up to three years. 
-
-');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7787,384,'9','','11361983.0','','16273780.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7788,384,'10','2007','','2008','68055445.0','Q10: 2007 - $39,560,000.              Please note only baseline data from 2008 is available. 
+INSERT INTO "submissions_dpquestion_2009" VALUES(7787,384,'8','','11361983.0','','16273780.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7788,384,'10old','2007','','2008','68055445.0','Q10: 2007 - $39,560,000.              Please note only baseline data from 2008 is available. 
 
 In 2008, the Global Fund scheduled 53,395,091 USD for disbursement. 68,055,445 USD were actually disbursed.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7789,384,'11','','','','53395091.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7790,384,'12','2007','3230000.0','2008','35968707.0','Please note the following: 
+INSERT INTO "submissions_dpquestion_2009" VALUES(7789,384,'11old','','','','53395091.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7790,384,'10','2007','3230000.0','2008','35968707.0','Please note the following: 
 
 a. data reported for this indicator was calculated using the methodology for the 2007 PD monitoring round, which looks at total disbursements to a country (instead of disbursements made for procurement purposes) See http://www.oecd.org/document/19/0,3343,en_21571361_39494699_39763923_1_1_1_1,00.html
 
 b. baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. 
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7791,384,'13','','0.0','','35968707.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7792,384,'14','2007','3230000.0','2008','35968707.0','Public financial management is not used. However, it is at the discretion of the country to include system-strengthening activities in their funding proposals. 
-
-
-Please note that in line with the PD monitoring, baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7793,384,'15','','1075315.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7794,384,'16','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7795,384,'17','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .Global Fund financing is implemented by in-country organizations such as the Government or NGOs. The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7796,384,'18','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-countriy. However, depending on its programmatic and funding interest, and the decision during the grant review,  participation in the country annual reviews with other partners may be recommended.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7791,384,'11','','0.0','','35968707.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7793,384,'12','','1075315.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7794,384,'13','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7795,384,'14','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .Global Fund financing is implemented by in-country organizations such as the Government or NGOs. The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7796,384,'15','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-countriy. However, depending on its programmatic and funding interest, and the decision during the grant review,  participation in the country annual reviews with other partners may be recommended.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7797,384,'19','','','','','Strengths
  Conducted at National level
  Wide stakeholders'' participation
@@ -1158,7 +1041,7 @@ Weaknesses
  Review reports not always available
  Available reports not always used
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7798,384,'20','2007','36330000.0','2008','32086738.0','In 2008, $32,086,738 was channeled through Civil societies. In 2007 $36,330,000 was channeled through civil societies.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7798,384,'16','2007','36330000.0','2008','32086738.0','In 2008, $32,086,738 was channeled through Civil societies. In 2007 $36,330,000 was channeled through civil societies.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7799,384,'21','2007','0.0','2008','0.0','The Global Fund does not fund other donors but provides funding through PRs nominated by the CCM.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7800,384,'22','2007','0.0','2008','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7801,384,'23','2007','0.0','2008','0.0','');
@@ -1169,19 +1052,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(7805,386,'4','2005','26082.0','
 INSERT INTO "submissions_dpquestion_2009" VALUES(7806,386,'5','','26082.0','','209576.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7807,386,'6','2005','4382598.48','2009','6119242.08','Health sector Aid budget is aggred upon with the Government in the Country Programme Action Plan and inplement annually acording to the annual work plan');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7808,386,'7','','4382598.48','','6119242.08','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7809,386,'8','2005','4382598.48','2009','6119242.08','UNICEF was implementing annual plans between 2005 and 2009 because of the context of emergency. Since 2010 a 5 year Country Programme (CPAP 2010-2014) was signed between UNICEF and the government. The CPAP is in line with the National Health Sector Plan (PNDS 2006-2010)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7810,386,'9','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7811,386,'10','2005','4382598.48','2009','6119242.08','Unicef contribution to healt sector adresses health and nutrition prorammes/activities. The activities planned and funded are adreed with the Government and partners and state in the Annual work plan');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7812,386,'11','','1008198.0','','6119242.08','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7813,386,'12','2005','1148104.0','2009','2884469.0','In order to ensure the quality of supplies most of the health sector aid for procurement are provide to the Government and partners througth UNICEF procurement service based in Copenhaghen. However several speific item are  procured localy. However UNICEF is working to reinforce government acapacity in supply chain management in order to take over the process in a medium term');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7814,386,'13','','49862.57','','173614.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7815,386,'14','2005','4993379.17','2009','5909666.08','Unicef funds are allocated to various government structures at all levels according to the activity defined in Annual action plan and reviewed during the midyear review. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7816,386,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7817,386,'16','2005','0.0','2009','','In 2005 UNICEF did not implement parallel project within the healt sector. All the activities were implemented by the Government structures. In 2009  several NGOs withcomparative advantage have bee contacted to implemet activties in areas such as community management of acute malnutrition, scaling up PMTCT activities');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7818,386,'17','2005','Yes','2009','Yes','Despite of the weak Health Information and management system (HIMS) UNICEF is using the available national data to assess the progress in the sector.  UNICEF is also using survey data provide by relevant partners acting in the country. Along with other partners, UNICEF is consistently supporting the government in buiding a reliable HIMS. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7819,386,'18','2005','No','2009','Yes','The health sector steering committee (Cadre de Coordination des Partenaires pour la Santé et le Développement: CPSD) gathering all health DP is undertaking an annual joint review activity''s since 2007. This include an assessment of the health sector strategy performances.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7810,386,'8','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7811,386,'10old','2005','4382598.48','2009','6119242.08','Unicef contribution to healt sector adresses health and nutrition prorammes/activities. The activities planned and funded are adreed with the Government and partners and state in the Annual work plan');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7812,386,'11old','','1008198.0','','6119242.08','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7813,386,'10','2005','1148104.0','2009','2884469.0','In order to ensure the quality of supplies most of the health sector aid for procurement are provide to the Government and partners througth UNICEF procurement service based in Copenhaghen. However several speific item are  procured localy. However UNICEF is working to reinforce government acapacity in supply chain management in order to take over the process in a medium term');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7814,386,'11','','49862.57','','173614.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7816,386,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7817,386,'13','2005','0.0','2009','','In 2005 UNICEF did not implement parallel project within the healt sector. All the activities were implemented by the Government structures. In 2009  several NGOs withcomparative advantage have bee contacted to implemet activties in areas such as community management of acute malnutrition, scaling up PMTCT activities');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7818,386,'14','2005','Yes','2009','Yes','Despite of the weak Health Information and management system (HIMS) UNICEF is using the available national data to assess the progress in the sector.  UNICEF is also using survey data provide by relevant partners acting in the country. Along with other partners, UNICEF is consistently supporting the government in buiding a reliable HIMS. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7819,386,'15','2005','No','2009','Yes','The health sector steering committee (Cadre de Coordination des Partenaires pour la Santé et le Développement: CPSD) gathering all health DP is undertaking an annual joint review activity''s since 2007. This include an assessment of the health sector strategy performances.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7820,386,'19','','','','','The First Joint Health sector review called Health Sector Joint Review  took place in 2007 and is regularly regularly organied once a year  since then by the Ministry of Health and Partners. The 2009 JAR was heald in December and coordinated by the Health sector Steering committe (CPSD). However the technical capacity of the CPSD secretariat need to be reinforce in order to monitor the implementation of the JAR recommendations ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7821,386,'20','2005','','2009','','UNICEF is supporting development of Technical a and logistic capacity of civil society organisations to implementi annual action plans. UNICEF is also having programme cooperation agrement with  several local and international NGO to implement project at country level as mean of strengthening capacity of government structures');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7821,386,'16','2005','','2009','','UNICEF is supporting development of Technical a and logistic capacity of civil society organisations to implementi annual action plans. UNICEF is also having programme cooperation agrement with  several local and international NGO to implement project at country level as mean of strengthening capacity of government structures');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7822,386,'21','2005','0.0','2009','0.0','UNICEF did not disburse through other donors at country level in 2007 and 2009');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7823,386,'22','2007','0.0','2009','0.0','UNICEF Burundi did not provide any budget support  in 2007 and 2009');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7824,386,'23','2005','0.0','2009','0.0','UNICEF Burundi did not provide any budget support  in 2007 and 2009');
@@ -1192,19 +1073,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(7828,387,'4','2007','1034387.97
 INSERT INTO "submissions_dpquestion_2009" VALUES(7829,387,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7830,387,'6','2007','','2009','','2007=1,034,388, 2009=4,431,465');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7831,387,'7','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7832,387,'8','2007','1034388.0','2009','4431465.0','cells protected: impossible to write');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7833,387,'9','','1034387.97123','','4431465.23728','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7834,387,'10','2007','','2009','','2007=755,634, 2009=3,182,152');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7835,387,'11','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7836,387,'12','2005','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7837,387,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7838,387,'14','2007','','2009','','2007=304,346, 2009=2,835,024');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7839,387,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7840,387,'16','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7841,387,'17','2007','No','2009','No','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7842,387,'18','2007','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7833,387,'8','','1034387.97123','','4431465.23728','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7834,387,'10old','2007','','2009','','2007=755,634, 2009=3,182,152');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7835,387,'11old','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7836,387,'10','2005','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7837,387,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7839,387,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7840,387,'13','2007','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7841,387,'14','2007','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7842,387,'15','2007','No','2009','No','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7843,387,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7844,387,'20','2007','730041.803127','2009','1596440.79448','modified by SMJ following email from Ignace on 16 Nov 2010');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7844,387,'16','2007','730041.803127','2009','1596440.79448','modified by SMJ following email from Ignace on 16 Nov 2010');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7845,387,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7846,387,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7847,387,'23','2007','0.0','2009','0.0','');
@@ -1215,19 +1094,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(7851,388,'4','2005','','2009','
 INSERT INTO "submissions_dpquestion_2009" VALUES(7852,388,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7853,388,'6','2005','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7854,388,'7','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7855,388,'8','2005','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7856,388,'9','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7857,388,'10','2005','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7858,388,'11','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7859,388,'12','2005','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7860,388,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7861,388,'14','2005','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7862,388,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7863,388,'16','please select','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7864,388,'17','2005','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7865,388,'18','2005','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7856,388,'8','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7857,388,'10old','2005','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7858,388,'11old','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7859,388,'10','2005','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7860,388,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7862,388,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7863,388,'13','please select','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7864,388,'14','2005','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7865,388,'15','2005','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7866,388,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(7867,388,'20','please select','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(7867,388,'16','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7868,388,'21','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7869,388,'22','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(7870,388,'23','please select','','2009','','');
@@ -1238,19 +1115,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(8012,395,'4','2005','','2009','
 INSERT INTO "submissions_dpquestion_2009" VALUES(8013,395,'5','','','','6000000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8014,395,'6','2005','','2009','25500000.0','All sector aid follows the classic way of request MoH- NAO-EC but this does not mean that this TC was part of the national program. Actually a PNDS has been approves and it should be the basis for a more rational request for TC');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8015,395,'7','','','','25500000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8016,395,'8','2005','','2009','25500000.0','Q8: 2005 - $0.                       all programms are multi-year');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8017,395,'9','','','','25500000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8018,395,'10','2005','','2009','25500000.0','Q10: 2005 - $0.                     we have no tool to calculate the amount disbursed as sheduled');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8019,395,'11','','','','25500000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8020,395,'12','2005','','2009','25500000.0','All procurement follows EDF or budget procedures');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8021,395,'13','','','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8022,395,'14','2005','','2009','25500000.0','Q14: 2005 - $0.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8023,395,'15','','','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8024,395,'16','2005','1.0','2009','1.0','The 10EDF project will be intégrated in a central MoH PIU');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8025,395,'17','2005','No','2009','No','idem, the CAG should introduce single national performance frameworks but is still not operational');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8026,395,'18','2005','No','2009','Yes','an annual joint review is organiszed since 2006, in 2009 a joint field visit was organiszed but it is still not proprerly scheduled');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8017,395,'8','','','','25500000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8018,395,'10old','2005','','2009','25500000.0','Q10: 2005 - $0.                     we have no tool to calculate the amount disbursed as sheduled');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8019,395,'11old','','','','25500000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8020,395,'10','2005','','2009','25500000.0','All procurement follows EDF or budget procedures');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8021,395,'11','','','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8023,395,'12','','','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8024,395,'13','2005','1.0','2009','1.0','The 10EDF project will be intégrated in a central MoH PIU');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8025,395,'14','2005','No','2009','No','idem, the CAG should introduce single national performance frameworks but is still not operational');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8026,395,'15','2005','No','2009','Yes','an annual joint review is organiszed since 2006, in 2009 a joint field visit was organiszed but it is still not proprerly scheduled');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8027,395,'19','','','','','Weak. The quality of the presentations is improving but it still cannot be considered asan en accountability mechanism');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8028,395,'20','please select','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8028,395,'16','please select','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8029,395,'21','please select','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8030,395,'22','please select','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8031,395,'23','please select','0.0','2009','0.0','');
@@ -1261,19 +1136,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(8035,396,'4','2005','','2009','
 INSERT INTO "submissions_dpquestion_2009" VALUES(8036,396,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8037,396,'6','please select','','2009','','The Technical cooperation for health included the engagement of TA for PRIME (EUR 4m) and TA for SRIK(EUR 2.8m). This is beside the use of Several framework consultants for monitoring and evaluations. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8038,396,'7','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8039,396,'8','0','0.0','2009','0.0','No. All support to the health sector under the EDF is usually done with the active involvement and participation of the National Authorising Officer of the EDF (usually the Honourable Minister of the National Planning Commission) and accompanied by appropriate and adequate PRESS RELEASES. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8040,396,'9','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8041,396,'10','0','0.0','2009','0.0','The PRIME project ended June 2009 and the SRIK project is expected to end in May 2011. Both projects experienced an initial slow start but picked up momemtum in fund disbursement from 2008 for PRIME and from 2009 for SRIK. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8042,396,'11','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8043,396,'12','2005','','2009','','Both PRIME and SRIK  project suppor the procurement of Cold Chain equipment such as solar refrigerators, vaccine carriers, motorcycles and venhicles for transportation and vaccine logistics; generators, etc. However, due to weak country procurement systems at that time, EDF procedures were solely complied with.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8044,396,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8045,396,'14','2005','0.0','2009','0.0','PRIME and SRIK projects operate(d) using a PMU (project management unit) based system. However, every effort was made to sync with sister projects and activities that enhance the governance aspects of EU-Nigeria development cooperation especially as pertains to public finance management.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8046,396,'15','','No','','No','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8047,396,'16','2005','1.0','2009','1.0','However the use of parallel implementation units of PMU''s will not be applied in the new project under the 10th EDF which specifically targets the use of and strenghtening of exisiting country systems.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8048,396,'17','2005','Yes','2009','Yes','Yes, as  much as possible, National Demographic and Health Survey Data were used to asses progress at various levels and stages of the projects (PRIME and SRIK).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8049,396,'18','2005','Yes','2009','Yes','Every effort is made  to ensure joint monitoring of support to polio eradication. However for the routine immunisation component of the action this was less practiced. Plans  are in place to apply mutual assessments under the 10th EDF. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8040,396,'8','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8041,396,'10old','0','0.0','2009','0.0','The PRIME project ended June 2009 and the SRIK project is expected to end in May 2011. Both projects experienced an initial slow start but picked up momemtum in fund disbursement from 2008 for PRIME and from 2009 for SRIK. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8042,396,'11old','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8043,396,'10','2005','','2009','','Both PRIME and SRIK  project suppor the procurement of Cold Chain equipment such as solar refrigerators, vaccine carriers, motorcycles and venhicles for transportation and vaccine logistics; generators, etc. However, due to weak country procurement systems at that time, EDF procedures were solely complied with.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8044,396,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8046,396,'12','','No','','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8047,396,'13','2005','1.0','2009','1.0','However the use of parallel implementation units of PMU''s will not be applied in the new project under the 10th EDF which specifically targets the use of and strenghtening of exisiting country systems.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8048,396,'14','2005','Yes','2009','Yes','Yes, as  much as possible, National Demographic and Health Survey Data were used to asses progress at various levels and stages of the projects (PRIME and SRIK).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8049,396,'15','2005','Yes','2009','Yes','Every effort is made  to ensure joint monitoring of support to polio eradication. However for the routine immunisation component of the action this was less practiced. Plans  are in place to apply mutual assessments under the 10th EDF. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8050,396,'19','','','','l','With the finalisation of the Country Compact and hopefully its signature by partners before the end of 2010, it is hoped that the joint Annual Health Sector Review will be established. Only then can its effectiveness be assessed.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8051,396,'20','2005','','2009','','Between 2005 to date, support to CSOs have progressivel increased. This support has  come in form of traditional grants (call for proposals - BUDGET)  or training and mentoring (programme estimates under EDF projects)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8051,396,'16','2005','','2009','','Between 2005 to date, support to CSOs have progressivel increased. This support has  come in form of traditional grants (call for proposals - BUDGET)  or training and mentoring (programme estimates under EDF projects)');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8052,396,'21','2007','','2009','','The Amount of EUR 20m was chanelled through WHO (contribution agreement) for Polio Eradication Actions from 2006 to 2008. Further such support is foreseen under the 10th EDF. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8053,396,'22','2005','0.0','2009','0.0','Nigeria is not yet receiving general budget support from the EU. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8054,396,'23','please select','0.0','2009','0.0','Nigeria is not yet receiving sector budget support from the EU. ');
@@ -1284,19 +1157,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(8058,397,'4','2007','273780.0',
 INSERT INTO "submissions_dpquestion_2009" VALUES(8059,397,'5','','273780.0','','278520.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8060,397,'6','2007','13434682.0','2009','14732427.0','Apart from the WB/PBS, WHO/TB programme, and Health Pooled Fund, the Netherlands supports the local NGO FGAE, and the international NGOs FHI and DKT which are Programme Based Approaches in the area of reproductive health Target is met. In 2007, 74% of health sector aid were Programme Based Approaches, in 2009 92%');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8061,397,'7','','10006199.0','','13520020.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8062,397,'8','2007','13434682.0','2009','14732427.0','Target met. 100% of health sector funding is committed for at least 3 years.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8063,397,'9','','13434682.0','','14732427.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8064,397,'10','2007','13434682.0','2009','14732427.0','Target met. 100% of health sector funding is disbursed in both calendar years indicated.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8065,397,'11','','13434682.0','','14732427.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8066,397,'12','2007','0.0','2009','0.0','Procurement is not specifically mentioned in the budgets and financial statements. The embassy is not involved in any procurement.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8067,397,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8068,397,'14','2007','7601571.0','2009','4278520.0','100% of health sector support is using national PFM systems. However, in 2007, 57% of total health sector support was disbursed to government (through WB/PBS and UNICEF managed HPF). In 2009, this was 29%.  The PFM system of the GOE is relatively good, including checks and balances. A more extensive use of GOE PFM system is hindered by issues of good governance, e.g. inadequate systems of transparancy and accountability. Consequently  the choice has been made to channel aid through (I)NGO''s.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8069,397,'15','','7601571.0','','4278520.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8070,397,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8071,397,'17','','Yes','2009','Yes','The PAF of the  (jointly approved) annual plan of the FMOH is used together with the Annual Report of the FMOH.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8072,397,'18','2007','Yes','2009','Yes','2007: participated in joint field visit with joint assessment report as an output; participated in the annual review meeting.  2009: participated in annual review meeting but annual report (incl. aid effectiveness) not really discussed.   Through questions efforts were made to improve the financial data in the annual report.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8063,397,'8','','13434682.0','','14732427.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8064,397,'10old','2007','13434682.0','2009','14732427.0','Target met. 100% of health sector funding is disbursed in both calendar years indicated.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8065,397,'11old','','13434682.0','','14732427.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8066,397,'10','2007','0.0','2009','0.0','Procurement is not specifically mentioned in the budgets and financial statements. The embassy is not involved in any procurement.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8067,397,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8069,397,'12','','7601571.0','','4278520.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8070,397,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8071,397,'14','','Yes','2009','Yes','The PAF of the  (jointly approved) annual plan of the FMOH is used together with the Annual Report of the FMOH.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8072,397,'15','2007','Yes','2009','Yes','2007: participated in joint field visit with joint assessment report as an output; participated in the annual review meeting.  2009: participated in annual review meeting but annual report (incl. aid effectiveness) not really discussed.   Through questions efforts were made to improve the financial data in the annual report.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8073,397,'19','','','','','Annual review meeting has too many participants. Regional annual review meetings need to be strengthened followed by a structural analyses of regional performances (and regional differences)in a national meeting with relevant organisations/ people.  Stronger participation of Civil Society and private sector is required as well as health related sectors s.a. water, sanitation, environment, food security.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8074,397,'20','2007','0.0','2009','0.0',' Funding for the health sector has been increasingly channelled through several (Int) NGO''s');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8074,397,'16','2007','0.0','2009','0.0',' Funding for the health sector has been increasingly channelled through several (Int) NGO''s');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8075,397,'21','2007','0.0','2009','0.0','The co-financing with the WB/PBS is a borderline case.(see amount in Q2). To be compared with other donors in Ethiopia using WB/PBS');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8076,397,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8077,397,'23','2007','0.0','2009','0.0','');
@@ -1307,19 +1178,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(8081,398,'4','2007','','2009','
 INSERT INTO "submissions_dpquestion_2009" VALUES(8082,398,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8083,398,'6','2007','','2009','','Through SCOs; 2007=1,248,158, 2009=3,475,448');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8084,398,'7','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8085,398,'8','2007','','2009','','2007=1,248,158, 2009=3,475,448');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8086,398,'9','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8087,398,'10','2007','1248158.4','2009','3475448.0','2007=1,248,158, 2009=3,475,448');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8088,398,'11','','1231088.4','','1164801.6','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8089,398,'12','2007','','2009','','no procurment contracts; 2007=85,350');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8090,398,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8091,398,'14','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8092,398,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8093,398,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8094,398,'17','2007','Yes','2009','No','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8095,398,'18','2007','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8086,398,'8','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8087,398,'10old','2007','1248158.4','2009','3475448.0','2007=1,248,158, 2009=3,475,448');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8088,398,'11old','','1231088.4','','1164801.6','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8089,398,'10','2007','','2009','','no procurment contracts; 2007=85,350');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8090,398,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8092,398,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8093,398,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8094,398,'14','2007','Yes','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8095,398,'15','2007','No','2009','No','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8096,398,'19','','N/A','','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8097,398,'20','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8097,398,'16','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8098,398,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8099,398,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8100,398,'23','2007','0.0','2009','0.0','');
@@ -1330,19 +1199,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(8104,399,'4','2007','4923500.1'
 INSERT INTO "submissions_dpquestion_2009" VALUES(8105,399,'5','','853500.0','','-1784637.9','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8106,399,'6','2007','4923500.1','2009','3942037.8','Joint program UNICEF/UNFPA');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8107,399,'7','','853500.0','','1784637.9','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8108,399,'8','2007','4923500.1','2009','3942037.8','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8109,399,'9','','853500.0','','1784637.9','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8110,399,'10','2007','4923500.1','2009','3942037.8','No data available but Norad''s Civil Society Department (SIVS) estimates 100%');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8111,399,'11','','4923500.1','','3942037.8','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8112,399,'12','2007','','2009','','No procurment contracts');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8113,399,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8114,399,'14','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8115,399,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8116,399,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8117,399,'17','2007','No','2009','No','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8118,399,'18','2007','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8109,399,'8','','853500.0','','1784637.9','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8110,399,'10old','2007','4923500.1','2009','3942037.8','No data available but Norad''s Civil Society Department (SIVS) estimates 100%');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8111,399,'11old','','4923500.1','','3942037.8','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8112,399,'10','2007','','2009','','No procurment contracts');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8113,399,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8115,399,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8116,399,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8117,399,'14','2007','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8118,399,'15','2007','No','2009','No','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8119,399,'19','','N/A','','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8120,399,'20','2007','','2009','','Most support to civil society also have an advocacy and engagment strategy towards government.  The Norwegian Embassy has entered into a strategic partnership with Save the Children - Norway (SCN-E) for the abandonment of Female Genital Mutilation (FGM) in Ethiopia. (2006-2010 total NOK 45 000 000).  The agreement includes support to 12 local and international NGOs.  The NGOs work closely with the government at different levels and support community based interventions related to basic problems in the communities, with a particular emphasis on girls and women’s needs. Religious leaders, media, opinion leaders, politicians, government officials  etc. are involved in this mobilization.   Disbursed in 2007 : NOK 9074000 ($1.548m),  and in 2009: NOK 9970000 ($1.588m).  (NB this program is not coded as support for Health Sector in ODA – (but Human rights))');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8120,399,'16','2007','','2009','','Most support to civil society also have an advocacy and engagment strategy towards government.  The Norwegian Embassy has entered into a strategic partnership with Save the Children - Norway (SCN-E) for the abandonment of Female Genital Mutilation (FGM) in Ethiopia. (2006-2010 total NOK 45 000 000).  The agreement includes support to 12 local and international NGOs.  The NGOs work closely with the government at different levels and support community based interventions related to basic problems in the communities, with a particular emphasis on girls and women’s needs. Religious leaders, media, opinion leaders, politicians, government officials  etc. are involved in this mobilization.   Disbursed in 2007 : NOK 9074000 ($1.548m),  and in 2009: NOK 9970000 ($1.588m).  (NB this program is not coded as support for Health Sector in ODA – (but Human rights))');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8121,399,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8122,399,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8123,399,'23','2007','0.0','2009','0.0','');
@@ -1353,19 +1220,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(8127,400,'4','2007','627322.5',
 INSERT INTO "submissions_dpquestion_2009" VALUES(8128,400,'5','','504930.6','','502910.1','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8129,400,'6','2007','1129521.9','2009','1267231.5','Support for TB program can be concidered a program based approach');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8130,400,'7','','504930.6','','502910.1','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8131,400,'8','2007','1129521.9','2009','1267231.5','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8132,400,'9','','910343.1','','1195865.1','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8133,400,'10','2007','1129521.9','2009','1267231.5','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8134,400,'11','','1129521.9','','1267231.5','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8135,400,'12','2007','N/A','2009','N/A','No procurment contracts exists');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8136,400,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8137,400,'14','2007','682458.6','2009','777384.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8138,400,'15','','504930.6','','502910.1','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8139,400,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8140,400,'17','2007','No','2009','No','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8141,400,'18','2007','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8132,400,'8','','910343.1','','1195865.1','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8133,400,'10old','2007','1129521.9','2009','1267231.5','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8134,400,'11old','','1129521.9','','1267231.5','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8135,400,'10','2007','N/A','2009','N/A','No procurment contracts exists');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8136,400,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8138,400,'12','','504930.6','','502910.1','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8139,400,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8140,400,'14','2007','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8141,400,'15','2007','No','2009','No','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8142,400,'19','','N/A','','N/A','The embassy is not participatingin JARs for the health sector bc the embassy is not involved in the health sector dialogue');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8143,400,'20','2007','508686.0','2009','503228.0','All support for civil society has advocacy objectives. Organizaitons are encouraged to engage in sector policy discussions.  LHL - The Norwegian Heart and Lung Patient Organization works with patient organizations and the national TB program.  LHL carries out socio-political and lobbying work while waging the fight against tuberculosis in Nepal and other countries.  Total disbursements are 2007:NOK 2980000 ($508,686) and  2009: 3159000 ($503,228). No information about how much is used for advocacy and how much for implementation of the national TB program.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8143,400,'16','2007','508686.0','2009','503228.0','All support for civil society has advocacy objectives. Organizaitons are encouraged to engage in sector policy discussions.  LHL - The Norwegian Heart and Lung Patient Organization works with patient organizations and the national TB program.  LHL carries out socio-political and lobbying work while waging the fight against tuberculosis in Nepal and other countries.  Total disbursements are 2007:NOK 2980000 ($508,686) and  2009: 3159000 ($503,228). No information about how much is used for advocacy and how much for implementation of the national TB program.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8144,400,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8145,400,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8146,400,'23','2007','0.0','2009','0.0','');
@@ -1376,19 +1241,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(8173,402,'4','2007','180220.5',
 INSERT INTO "submissions_dpquestion_2009" VALUES(8174,402,'5','','0.0','','303586.8','en 2009: les sommes  du projet SSR , car il s''intégre dans les procedures PRODESS (les montant de l''ABS ne sont pas inclus). Cette sommes, 218,000 €,  figure  dans le budget 2009 de l''AECID mais à été débursé en 2010 au Mali');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8175,402,'6','2007','1386126.82','2009','4684348.5',' ABS, projet d''appuie a la SSR avec procedures nationales, fond regional CEDEAO pour la malaria non inclu dans le PNde lutte contre le Palu, subvention a differentes ONG espagnole et cooperation du gouvernement dels comunautés autonomiques de l`Espagne (Andaluzia)  ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8176,402,'7','','0.0','','2319584.19','2009 :en principe 2,665,650 devrait être indiqué dans cette colonne, mais 1M€ de decaissé au Mali en 2009 appartient au budget 2008 de l''AECID, ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8177,402,'8','2007','1386126.82','2009','4684348.5',' ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8178,402,'9','','310725.0','','2892630.73','ABS, projet SSR et programme au ONG avec un durée de 4 ans (convenios)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8179,402,'10','2007','1386126.82','2009','4684348.5','Les aides financeés aux ONGs à travers les appels d''offre regulières sont décaissées a l''heure     ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8180,402,'11','','961350.835','','3444877.41','ABS 2009: 1 m€ 2008 a été decaissé en 2009 et 1 M€ 2009 a été decaissé en 2009. donc pour le Mali des 2 M€ ABS 1M€ ne sera pas décaissés pendant l''année convenue   ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8181,402,'12','2007','298296.0','2009','577929.0','equipement et construction essencielment (pour l''ABS les données ne sont pas disponibles)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8182,402,'13','','0.0','','320298.0','la somme de 230 000 correspond  au projet SSR, qui pour l''AECID rentre dans le budget 2009 mais que le gouvernement malien a reçu début 2010 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8183,402,'14','2007','961350.835','2009','2319584.19','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8184,402,'15','','0.0','','1392600.0','cette somme, 1665650, correspond a 1M€ ABS et 655 650 SSR ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8185,402,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8186,402,'17','2007','No','2009','Yes','ABS (a trvers la coopertion délegué avec Pays Bas) et projet SSR, qui s''inscrit dans la politique national de la SSR et donc dans le PRODESS. Spain is following joint missions of evaluation  but as we are silent and do not have enough human resources we have not participated yet in any evaluation. However, we are involved in the organisation and participate in the meetings to share the monitoring process and results. The joint monitoring sessions are being implemented under the PRODESS framework and authority but sometimes we do it on our own. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8187,402,'18','2007','No','2009','No','le mécanisme est mis en place,mais puisque l''AECID est un partenaire silencieux les missions, c''est les Pays Bas qui participent aux dites missions ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8178,402,'8','','310725.0','','2892630.73','ABS, projet SSR et programme au ONG avec un durée de 4 ans (convenios)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8179,402,'10old','2007','1386126.82','2009','4684348.5','Les aides financeés aux ONGs à travers les appels d''offre regulières sont décaissées a l''heure     ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8180,402,'11old','','961350.835','','3444877.41','ABS 2009: 1 m€ 2008 a été decaissé en 2009 et 1 M€ 2009 a été decaissé en 2009. donc pour le Mali des 2 M€ ABS 1M€ ne sera pas décaissés pendant l''année convenue   ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8181,402,'10','2007','298296.0','2009','577929.0','equipement et construction essencielment (pour l''ABS les données ne sont pas disponibles)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8182,402,'11','','0.0','','320298.0','la somme de 230 000 correspond  au projet SSR, qui pour l''AECID rentre dans le budget 2009 mais que le gouvernement malien a reçu début 2010 ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8184,402,'12','','0.0','','1392600.0','cette somme, 1665650, correspond a 1M€ ABS et 655 650 SSR ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8185,402,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8186,402,'14','2007','No','2009','Yes','ABS (a trvers la coopertion délegué avec Pays Bas) et projet SSR, qui s''inscrit dans la politique national de la SSR et donc dans le PRODESS. Spain is following joint missions of evaluation  but as we are silent and do not have enough human resources we have not participated yet in any evaluation. However, we are involved in the organisation and participate in the meetings to share the monitoring process and results. The joint monitoring sessions are being implemented under the PRODESS framework and authority but sometimes we do it on our own. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8187,402,'15','2007','No','2009','No','le mécanisme est mis en place,mais puisque l''AECID est un partenaire silencieux les missions, c''est les Pays Bas qui participent aux dites missions ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8188,402,'19','2007','','','','Coopération déleguée');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8189,402,'20','2007','0.0','2009','','Depuis 2009, les OSC financées par l''AECID sont invités au réunion de coordination bien au niveau du bureau, bien avec les plateformes ou federation d''OSC de la santé. We have financed the civil society in the area of health, not specifically to strengthen policy dialogue but rather to improve health provision and care. The OTC (Technical Office of Cooperation) suggested to support the Common Fund of Donors originated to strengthen policy dialogue. It is a common fund not specific for health but rather for the civil society in any sector. It was even included in the Annual Operational Plan of the Spanish Cooperation but Spain took the decision too late and is waiting for the next opportunity to assign funds.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8189,402,'16','2007','0.0','2009','','Depuis 2009, les OSC financées par l''AECID sont invités au réunion de coordination bien au niveau du bureau, bien avec les plateformes ou federation d''OSC de la santé. We have financed the civil society in the area of health, not specifically to strengthen policy dialogue but rather to improve health provision and care. The OTC (Technical Office of Cooperation) suggested to support the Common Fund of Donors originated to strengthen policy dialogue. It is a common fund not specific for health but rather for the civil society in any sector. It was even included in the Annual Operational Plan of the Spanish Cooperation but Spain took the decision too late and is waiting for the next opportunity to assign funds.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8190,402,'21','2007','1672690.39','2009','6852020.92','2007: unicef                                  2009:                                      1,638,156 unicef                           3 282 152 Fond ODM                   En cooperation délegué avec les Pays Bas il y a eu 1,000,000 euros décaissés, mais cette somme est déboursée directement au Ministère des Finance du Mali, car cette délégation est seulement technique. Cette somme n''est donc pas inclue dans cette ligne. In 2007 the OTC was just starting the operations in the country as Mali was considered a priority country just in 2006. At that time the main instrument was the bilateral cooperation. From almost 5 millions of euros, 3.282.152 went to a fund from UN and just 1.000.000 was asigned for delegated cooperation. The decision at that time was taken at the headquarters or NYork. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8191,402,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8192,402,'23','2007','0.0','2009','1392600.0','');
@@ -1399,19 +1262,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(8196,403,'4','2007','621234.0',
 INSERT INTO "submissions_dpquestion_2009" VALUES(8197,403,'5','','0.0','','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8198,403,'6','2005','516550.0','2009','18702633.6','We have supported the health sector through NGO projects, WHO and UNICEf projects, MDG Fund and other bileteral projects with the Government.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8199,403,'7','','0.0','','7349937.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8200,403,'8','2005','516550.0','2009','18702633.6','We stablished a 3 year commitment with the MDG Fund for 2008,2009 and 2010.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8201,403,'9','','0.0','','7000000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8202,403,'10','2005','516550.0','2009','18702633.6','Percentage has been decreased because some contributions to multilateral organisations take more time as they are approved and negociated at HQ level, with the risk of disbursing one year late.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8203,403,'11','','516550.0','','13090843.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8204,403,'12','2005','','2009','854897.2','Between 2008 and 2010 we have provided health sector aid for procurement through the MDG Fund, but it is very difficult to specify how much was Spanish as it is a pool fund of several donors. It has been calculated by extracting 40% of the total amount on procurement, as Spanish contribution. A share of MDG Fund contributions 2009 was used for procurement of vaccines (2.137.243 USD), and of drugs (6.845.097 USD). ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8205,403,'13','','','','854897.2','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8206,403,'14','2007','612494.0','2009','7210000.0','2007=612,494');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8207,403,'15','','0.0','','7210000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8208,403,'16','2005','3.0','2009','0.0','In 2009, we did not use PIUs for the provision of health sector aid for the goverment, but there are still PIUs for the provision of health aid in general in the country through NGOs (1) and United Nations Agencies (3: WHO, UNICEF and UNDP). In 2005 we only worked in health through 3 NGOs (so there were 3 PIUs), but in 2009, for the provision of health to the GOVERNMENT we didn’t use PIUs. But I added some extra information on the last column to clarify that there are still PIUs in health because we still work with NGOs and UN organizations.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8209,403,'17','2005','No','2009','Yes','In the MDG Fund we are using the HDSP as a framework for assessment, prioritation,indicators monitoring and so on in order to harmonise donors'' interventions. There is not a single donor''s assessment yet, as in other countries(*).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8210,403,'18','2005','No','2009','Yes','The country office was establised in 2007. In the frame of the MDG Fund we do carry out joint reviews and missions.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8201,403,'8','','0.0','','7000000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8202,403,'10old','2005','516550.0','2009','18702633.6','Percentage has been decreased because some contributions to multilateral organisations take more time as they are approved and negociated at HQ level, with the risk of disbursing one year late.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8203,403,'11old','','516550.0','','13090843.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8204,403,'10','2005','','2009','854897.2','Between 2008 and 2010 we have provided health sector aid for procurement through the MDG Fund, but it is very difficult to specify how much was Spanish as it is a pool fund of several donors. It has been calculated by extracting 40% of the total amount on procurement, as Spanish contribution. A share of MDG Fund contributions 2009 was used for procurement of vaccines (2.137.243 USD), and of drugs (6.845.097 USD). ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8205,403,'11','','','','854897.2','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8207,403,'12','','0.0','','7210000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8208,403,'13','2005','3.0','2009','0.0','In 2009, we did not use PIUs for the provision of health sector aid for the goverment, but there are still PIUs for the provision of health aid in general in the country through NGOs (1) and United Nations Agencies (3: WHO, UNICEF and UNDP). In 2005 we only worked in health through 3 NGOs (so there were 3 PIUs), but in 2009, for the provision of health to the GOVERNMENT we didn’t use PIUs. But I added some extra information on the last column to clarify that there are still PIUs in health because we still work with NGOs and UN organizations.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8209,403,'14','2005','No','2009','Yes','In the MDG Fund we are using the HDSP as a framework for assessment, prioritation,indicators monitoring and so on in order to harmonise donors'' interventions. There is not a single donor''s assessment yet, as in other countries(*).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8210,403,'15','2005','No','2009','Yes','The country office was establised in 2007. In the frame of the MDG Fund we do carry out joint reviews and missions.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8211,403,'19','','','','','A review of the governance structure of the Boards, Groups and Committes is taking place in order to make them more effective. It is also necessary to improve the coordination and coherence with the DAG.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8212,403,'20','2008','660473.0','2009','0.0','We supported an NGO project consisting in raising awareness about HIV among young people in Addis Ababa. Nevertheless, in the health sector, we consider civil socity as beneficiaries of the public system, so the stronger and more effective the system, the better for the users. What is important is to have free good diagnosis and treatments for them and to know their opinion about the service received.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8212,403,'16','2008','660473.0','2009','0.0','We supported an NGO project consisting in raising awareness about HIV among young people in Addis Ababa. Nevertheless, in the health sector, we consider civil socity as beneficiaries of the public system, so the stronger and more effective the system, the better for the users. What is important is to have free good diagnosis and treatments for them and to know their opinion about the service received.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8213,403,'21','please select','0.0','2009','0.0','We are involved in the Fast Track Initiative on Division of Labour in Ethiopia but experiences on delegated cooperation have not been taken place yet (*). From our point of view, a greater harmonization of donors is necessary for operations of delegated cooperation. Common procedures, common funding mechanisms (pool funds or GBS/SBS), common agreements (MoUs, Joint Financial Arrangements and Code of Conducts that do not exist here, apart from IHP Compact), a clear division of labour, an effective dialogue groups in place, a strong trust among donors, and so on. In Ethiopia those issues are not fully in place yet. An example of good practices in Delegated Cooperation would be Nordic + Group of donors and its Delegated Cooperation Guidelines where all procedures are clearly stated and jointly agreed. Donors here have not reached that stage and there are only very few Nordic + ones in MDG Fund (DFiD and Irish Aid).');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8214,403,'22','please select','0.0','2009','0.0','We contribute to the Protection of Basic Services (PBS) fund with 13.6 million $ per year since 2008. PBS replaced the GBS in 2005. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8215,403,'23','please select','0.0','2009','0.0','We participate in the MDG pool fund. There is SBS in health in the country.');
@@ -1437,20 +1298,17 @@ All this has somewhat stalled the process, with each donor extending in the shor
  
 iii) Efforts are still underway to try and bring these together in a common programme and budget framework, even if funding continues to be chanelled bilaterally in the short term. Finalisation of the sector startegy in the coming 8-months and development of an operational plan to go with it will be key. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8343,409,'7','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8344,409,'8','2007','2819765.0','2009','2834048.0','The % of aid disbursed through a 3-year commitment or more has reduced in 2009 because i) DFID was in the process of developing a new programme; but ii) DFID''s aid framework in Burundi has a limited timeframe and for we were not allowed to programme anything beyond March 2011 (this deadline was later extended to March 2012 but too late to inform programming).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8345,409,'9','','2819765.0','','1349830.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8346,409,'10','2007','','2009','','Q10: 2007 - $2,819,765; 2009 - $2,834,048.            Could not get the details. We should have disbursed £2,210,000 of financial aid in 2009 which got pushed back to 2010.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8347,409,'11','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8348,409,'12','2007','2074915.0','2009','1547313.0','DFID approved in 2009 a new financial aid programme shifting to use of Government procurement systems. First tranche was disbursed in Jan 2010, and in 2010 over 70% of DFID''s aid for the Government sector will have been disbursed using national procurement systems.    The systems were assessed as too weak (low capacity and prone to corruption) up until 2008. DFID provided TA. A new public procurement code was also adopted in Oct 2008.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8349,409,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8350,409,'14','2007','2074915.0','2009','1547313.0','Financial reporting procedures and national auditing systems are considered too weak to use.     According to the PFM/CPIA scale which is the one the survey refers to, Burundi does not score high enough to be considered a country where PFM is of sufficient quality to use national systems (Guide to Key Definitions, p.24). Financial reporting procedures in MoH are virtually non-existent. This is less true of the Central Medical Store, which is the one DFID gives financial aid to (from 2010 onwards, we are not imposing separate reporting procedures on the Medical Store, although we do continue to require independent audits because the national auditing systems is judged unreliable (PEFA/Fiduciary Risk Assessment). DFID also provides TA to the Medical Store to strengthen its financial management systems.
-The Joint EC/DFID/Belgium programme mentioned above should have included a significant capacity building component to strengthen PFM procedures in MoH - this now will (in the short term) be covered by the EC. The explicit objective is that within two years MoH would have sufficiently strengthened its PFM systems that it can ''pass'' the EC''s 5-pillar audit - so that the EC (and others aligning behind the EC''s 5 pillars audit) can shift to use of national PFM systems. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8351,409,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8352,409,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8353,409,'17','2007','No','2009','Yes','A unified results framework for the health sector was developed in 2009 and used for first time at Sector Review in Nov 2009 to assess progress. This was a massive step forward but very early days.  The purpose indicators of our bilateral programme are drawn from the unified M&E framework. We have our own indicators to measure progress against our bilateral programme''s outputs because they are too specific to be included in the unified M&E framework (the unified M&E framework only include 31 or so key indicators covering the entire sector). ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8354,409,'18','2007','No','2009','Yes','Though partial. Some indicators of aid effectiveness included in unified resulsst framework but all MoU commitments not routinely assessed.   There is a plan to revise the MoU (upgrade it into a ''proper'' compact in support of the new sector strategy) in the first semester of 2011. This will include a revision of aid effectiveness commitements  and a discussion of mutual assessments and accountability');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8345,409,'8','','2819765.0','','1349830.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8346,409,'10old','2007','','2009','','Q10: 2007 - $2,819,765; 2009 - $2,834,048.            Could not get the details. We should have disbursed £2,210,000 of financial aid in 2009 which got pushed back to 2010.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8347,409,'11old','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8348,409,'10','2007','2074915.0','2009','1547313.0','DFID approved in 2009 a new financial aid programme shifting to use of Government procurement systems. First tranche was disbursed in Jan 2010, and in 2010 over 70% of DFID''s aid for the Government sector will have been disbursed using national procurement systems.    The systems were assessed as too weak (low capacity and prone to corruption) up until 2008. DFID provided TA. A new public procurement code was also adopted in Oct 2008.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8349,409,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8351,409,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8352,409,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8353,409,'14','2007','No','2009','Yes','A unified results framework for the health sector was developed in 2009 and used for first time at Sector Review in Nov 2009 to assess progress. This was a massive step forward but very early days.  The purpose indicators of our bilateral programme are drawn from the unified M&E framework. We have our own indicators to measure progress against our bilateral programme''s outputs because they are too specific to be included in the unified M&E framework (the unified M&E framework only include 31 or so key indicators covering the entire sector). ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8354,409,'15','2007','No','2009','Yes','Though partial. Some indicators of aid effectiveness included in unified resulsst framework but all MoU commitments not routinely assessed.   There is a plan to revise the MoU (upgrade it into a ''proper'' compact in support of the new sector strategy) in the first semester of 2011. This will include a revision of aid effectiveness commitements  and a discussion of mutual assessments and accountability');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8355,409,'19','','First JAR held in Oct 2007','','','First structured attempt to monitor Aid Effectiveness commitment at JAR 2008 revealed some indicators of the MoU were difficult to measure. At the JAR 2009, discussion focussed on ongoing reform and there was little discussion of Aid Effectiveness');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8356,409,'20','2007','','2009','As lead donor, we facilitated participation of CSOs in sector group meeting and  at Joint Sector review','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8356,409,'16','2007','','2009','As lead donor, we facilitated participation of CSOs in sector group meeting and  at Joint Sector review','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8357,409,'21','2007','1227083.0','2009','96844.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8358,409,'22','2007','0.0','2009','0.0','DFID does not provide budget support in Burundi. Fiduicary risks are considered too high.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8359,409,'23','2007','0.0','2009','0.0','');
@@ -1461,19 +1319,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(8363,410,'4','2007','6300042.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(8364,410,'5','','6300042.0','','43983310.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8365,410,'6','2007','53724757.0','2009','88301934.0','DFID Nigeria resources do not flow through government systems in Nigeria owing to a high fudicial risk environment.  Other stratagies are used to ensure alignment.  ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8366,410,'7','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8367,410,'8','2007','53724757.0','2009','88301934.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8368,410,'9','','53724757.0','','88301934.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8369,410,'10','2007','','2009','','Q10: 2007 - $53,724,757; 2009 - $88,301,934.        Disbursement has been largely on track.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8370,410,'11','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8371,410,'12','2007','53724757.0','2009','88301934.0','DFID Nigeria does not used the courntries procurement systems.  We are however working with the Nigerian Government to strengthen their procurement processes and systems.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8372,410,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8373,410,'14','2007','53724757.0','2009','88301934.0','DFID has worked at the Federal and State level to improve their budget and planning processes.  This has included the development of medium term sector strategies (MTSS).  ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8374,410,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8375,410,'16','2007','22.0','2009','18.0','Where possible, DFID places it project management teams as close to government as possible.  For some programmes, our staff are imbedded within government institutions and in others Government has provided accomoation within the ministries.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8376,410,'17','2007','','2009','','In 2010, Nigeria has developed a performance assessment framework and the first joint review is planned for November 2010. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8377,410,'18','2007','No','2009','No','First assessment to happen in November 2010.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8368,410,'8','','53724757.0','','88301934.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8369,410,'10old','2007','','2009','','Q10: 2007 - $53,724,757; 2009 - $88,301,934.        Disbursement has been largely on track.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8370,410,'11old','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8371,410,'10','2007','53724757.0','2009','88301934.0','DFID Nigeria does not used the courntries procurement systems.  We are however working with the Nigerian Government to strengthen their procurement processes and systems.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8372,410,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8374,410,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8375,410,'13','2007','22.0','2009','18.0','Where possible, DFID places it project management teams as close to government as possible.  For some programmes, our staff are imbedded within government institutions and in others Government has provided accomoation within the ministries.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8376,410,'14','2007','','2009','','In 2010, Nigeria has developed a performance assessment framework and the first joint review is planned for November 2010. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8377,410,'15','2007','No','2009','No','First assessment to happen in November 2010.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8378,410,'19','','','','','First assessment to happen in 2010.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8379,410,'20','2007','','2009','','DFID Nigeria supports civil society organisations at the federal and state level.  One of these includes HERFON - the Health Reform Foundation of Nigeria - which is a federation of health change agents - and is actively engaged in policy debate throughout the country.  This organisation has been one of the key agents behind the Health Bill.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8379,410,'16','2007','','2009','','DFID Nigeria supports civil society organisations at the federal and state level.  One of these includes HERFON - the Health Reform Foundation of Nigeria - which is a federation of health change agents - and is actively engaged in policy debate throughout the country.  This organisation has been one of the key agents behind the Health Bill.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8380,410,'21','2007','2011372.0','2009','316305.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8381,410,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8382,410,'23','2007','0.0','2009','0.0','');
@@ -1484,22 +1340,20 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(8386,411,'4','2007','4808832.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(8387,411,'5','','4808832.0','','3221082.986','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8388,411,'6','2007','10865051.0','2009','19593526.502','There is no difference between our answer here and our answer to Q 2DPa. All our financial aid (note, excluding TC) is in support of the government sector and is programme, not project based.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8389,411,'7','','6056220.0','','19593526.502','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8390,411,'8','2007','10865051.0','2009','19593526.502','There is no difference between our answer here and our answer to Q 2DPa. I don''t know if DFID globally has published a target for % of aid provided through multi-year commitments.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8391,411,'9','','10865051.0','','19593526.502','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8392,411,'10','2007','10865051.0','2009','19593526.502','There is no difference between our answer here and our answer to Q 2DPa. All aid has been disbursed in the same government financial year as it was scheduled.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8393,411,'11','','10865051.0','','19593526.502','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8394,411,'12','2007','100.0','2009','100.0','We are unable to report the absolute amount of our programme funding that uses national procurement systems, since GoN does not report the overall value of procurements (and since the term ''procurement'' is loosely defined - for example, does it include utilities bills?) But we can say that 100% of procurement carried out with NHSP1 pooled financial aid used national systems, and 0% of procurement carried out with SSMP programme funds used national systems.  NOTE: FOLLOWING EMAIL FROM SUE CHANDLER ON 5/1/11 HAVE ADDED FIGURES TO SHOW 7% IN 2007 AND 6% IN 2009 AS REPORTED BY DFID NEPAL.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8395,411,'13','','7.0','','6.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8396,411,'14','2007','10865051.0','2009','19593526.502','There is no difference between our answer here and our answer to Q 2DPa. All aid on budget uses government financial systems.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8397,411,'15','','6056220.0','','13048746.502','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8398,411,'16','2007','1.0','2009','1.0','Our use of PIUs in the current calendar year is now down to zero.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8399,411,'17','2007','Yes','2009','Yes','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8400,411,'18','2007','Yes','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8391,411,'8','','10865051.0','','19593526.502','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8392,411,'10old','2007','10865051.0','2009','19593526.502','There is no difference between our answer here and our answer to Q 2DPa. All aid has been disbursed in the same government financial year as it was scheduled.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8393,411,'11old','','10865051.0','','19593526.502','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8394,411,'10','2007','100.0','2009','100.0','We are unable to report the absolute amount of our programme funding that uses national procurement systems, since GoN does not report the overall value of procurements (and since the term ''procurement'' is loosely defined - for example, does it include utilities bills?) But we can say that 100% of procurement carried out with NHSP1 pooled financial aid used national systems, and 0% of procurement carried out with SSMP programme funds used national systems.  NOTE: FOLLOWING EMAIL FROM SUE CHANDLER ON 5/1/11 HAVE ADDED FIGURES TO SHOW 7% IN 2007 AND 6% IN 2009 AS REPORTED BY DFID NEPAL.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8395,411,'11','','7.0','','6.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8397,411,'12','','6056220.0','','13048746.502','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8398,411,'13','2007','1.0','2009','1.0','Our use of PIUs in the current calendar year is now down to zero.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8399,411,'14','2007','Yes','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8400,411,'15','2007','Yes','2009','Yes','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8401,411,'19','','','','','Low effectiveness. In order for the JAR''s effectiveness as an accountability mechanism to improve, it needs to:
  - be more aligned with the government''s national health sector review (a donor responsibility);
  - be more carefully planned (a joint government / donor responsibility); and
  - have more evaluation inputs and routine reporting of physical as well as financial performance made available in advance for discussion (a government responsibility).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(8402,411,'20','2007','None','2009','None','None within funding specifically earmarked as health funding. However, DFID Nepal is about to start funding a broader PFM programme that will develop civil society''s capacity to use social accountability tools to assess budget allocations and responsibility; future health funding will include funding for civil society to operate access equality surveys; and existing support to HIV CSOs to provide services also helps their capacity to provide inputs and evidence to sector planning processes.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(8402,411,'16','2007','None','2009','None','None within funding specifically earmarked as health funding. However, DFID Nepal is about to start funding a broader PFM programme that will develop civil society''s capacity to use social accountability tools to assess budget allocations and responsibility; future health funding will include funding for civil society to operate access equality surveys; and existing support to HIV CSOs to provide services also helps their capacity to provide inputs and evidence to sector planning processes.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8403,411,'21','2007','4808831.0','2009','6544780.0','We have provided funding for several years through UNDP for provision of HIV services to high-risk groups. The amounts are shown to the left. This funding is now ceased, and provision of HIV services will be contracted through MoHP / DHS using pooled funds from GoN and donors.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8404,411,'22','2007','0.0','2009','0.0','DFID Nepal does not provide GBS.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(8405,411,'23','2007','15786152.767','2009','8182885.326','This includes education (EFA) and health. Note, no education disbursements were made in 2009.');
@@ -1510,19 +1364,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(9427,459,'4','2008','619500.0',
 INSERT INTO "submissions_dpquestion_2009" VALUES(9428,459,'5','','N/A','','N/A','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9429,459,'6','2008','2760000.0','2009','4920000.0','The first raw includes  disburements made to projects eventhough aligned with the health sector plan while the second raw exludes these disburements and procurements undertaken by UNFPA.   ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9430,459,'7','','1310000.0','','2000000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9431,459,'8','2008','2760000.0','2009','4920000.0','The 1 million funding that goes to the MDG pool fund is based on an annual commitement since it is mobilied from the MHTF. The rest is based on a 5 year commitment according to the CPAP (2007-2011)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9432,459,'9','','2310000.0','','3740000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9433,459,'10','2008','2760000.0','2009','4920000.0','Disbursment takes 2-6 months ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9434,459,'11','','2760000.0','','4920000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9435,459,'12','2008','0.0','2009','3500000.0','Rough estimate since a portion of the 1 million is used for procurement partly using the governement procurement system. (except for the procurement of contraceptive where UNFPA was asked by the government to do it) ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9436,459,'13','','','','300000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9437,459,'14','2008','2310000.0','2009','4470000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9438,459,'15','','0.0','','1000000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9439,459,'16','please select','1.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9440,459,'17','2008','Yes','2009','Yes','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9441,459,'18','2008','Yes','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9432,459,'8','','2310000.0','','3740000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9433,459,'10old','2008','2760000.0','2009','4920000.0','Disbursment takes 2-6 months ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9434,459,'11old','','2760000.0','','4920000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9435,459,'10','2008','0.0','2009','3500000.0','Rough estimate since a portion of the 1 million is used for procurement partly using the governement procurement system. (except for the procurement of contraceptive where UNFPA was asked by the government to do it) ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9436,459,'11','','','','300000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9438,459,'12','','0.0','','1000000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9439,459,'13','please select','1.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9440,459,'14','2008','Yes','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9441,459,'15','2008','Yes','2009','Yes','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9442,459,'19','','As we call it JBAR in Ethiopia is a key accountablity mechanism. However, it has to be supplemented by joint review missions,and national/sub-national JT programme reviews  ','','Since 2009, the JRM is reinstituted after 4 years ','Participation of DPs in the preparation of Joint Budget Annual Review (JBAR) needs to be strengthened rather than providing feed back at the review meeting. More detailed progress tracking mechnisms will benefit the usefulness of JBAR.  ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9443,459,'20','2008','Support NGOs/CSOs in piloting evidence based interventions and bring it to national plan for scale-up, support capacity building of NGOs/CSOs particularily professional societies.                 $450,000','2009','Continue previous support plus support meaningful engagementof NGOs/CSOs in health sector dilogue and stratic planning e.g supported NGOs to participate in developing  the HSDP IV             $450,000','UNFPA brokered between NGOs/CSOs and the governement, and provided some technical support. We support two NGO-networks to facilitate coordination and joint input/feedback  on the HSDP IV');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9443,459,'16','2008','Support NGOs/CSOs in piloting evidence based interventions and bring it to national plan for scale-up, support capacity building of NGOs/CSOs particularily professional societies.                 $450,000','2009','Continue previous support plus support meaningful engagementof NGOs/CSOs in health sector dilogue and stratic planning e.g supported NGOs to participate in developing  the HSDP IV             $450,000','UNFPA brokered between NGOs/CSOs and the governement, and provided some technical support. We support two NGO-networks to facilitate coordination and joint input/feedback  on the HSDP IV');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9444,459,'21','please select','N/A','2009','N/A','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9445,459,'22','please select','N/A','2009','N/A','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9446,459,'23','2008','0.0','2009','1000000.0','Disbursed 1,000,000 USD  in September 2009 from the MHTF to  the MDG pool fund as part of the IHP+ commitment ');
@@ -1533,19 +1385,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(9450,461,'4','2007','4623506.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(9451,461,'5','','N/A','','800000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9452,461,'6','2007','9733696.5','2009','13054160.67','Q7. All UNFPA''s supported activities are based on programme based approaches led by government. Progresssively donor coordination within the health sector is allowing for greater harmonization.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9453,461,'7','','9733696.5','','13054160.67','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9454,461,'8','2007','9733696.5','2009','13054160.67','UNFPA provides development assistance on a multi-year basis known as programme cycles. See UNFPA website (www.unfpa.org). Areas supported are Reproductive health and rights supported by related population and development as well as gender equality programmatic support.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9455,461,'9','','9733696.5','','13054160.67','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9456,461,'10','2007','9733696.5','2009','13054160.67','Q11: The amount represents about 80% of the health sector aid, which was disbursed in the year in which it was scheduled as against budgeted figures.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9457,461,'11','','9733697.0','','13054161.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9458,461,'12','2007','4866848.25','2009','6527080.335','Q12: About 50% of the health sector aid was disbursed for procurement. Q13: Out of this, about 20% of procurement was carried out using national procurement systems for commodities in the local market, considering that the bulk of the commodities were contraceptives done through international procurement systems.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9459,461,'13','','973369.65','','1305416.067','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9460,461,'14','2007','9247012.0','2009','12401453.0','Q15: The decrease in UNFPA direct disbursements through public sector financial management systems is linked to the UN Financial risk assessments which rated Nigeria''s financial management systems as very high risk.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9461,461,'15','','5250772.11','','3548412.99','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9462,461,'16','2007','0.0','2009','0.0','UNFPA does not have parrallel project implementation units');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9463,461,'17','2007','No','2009','No','The national performance assessment framework for the country was adopted in March 2010 and as such the first time it will be used would be Nov 2010 by government and partners. The UN system is also undertaking joint assessments by its agencies, which will contribute to the national assessments.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9464,461,'18','2007','Yes','2009','Yes','UNFPA has on an annual basis reviewed with its implementing partners being Govt and CSOs, progress made in implementation of the Annual work plans for its supported programme areas, while planning for the next fiscal year.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9455,461,'8','','9733696.5','','13054160.67','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9456,461,'10old','2007','9733696.5','2009','13054160.67','Q11: The amount represents about 80% of the health sector aid, which was disbursed in the year in which it was scheduled as against budgeted figures.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9457,461,'11old','','9733697.0','','13054161.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9458,461,'10','2007','4866848.25','2009','6527080.335','Q12: About 50% of the health sector aid was disbursed for procurement. Q13: Out of this, about 20% of procurement was carried out using national procurement systems for commodities in the local market, considering that the bulk of the commodities were contraceptives done through international procurement systems.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9459,461,'11','','973369.65','','1305416.067','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9461,461,'12','','5250772.11','','3548412.99','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9462,461,'13','2007','0.0','2009','0.0','UNFPA does not have parrallel project implementation units');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9463,461,'14','2007','No','2009','No','The national performance assessment framework for the country was adopted in March 2010 and as such the first time it will be used would be Nov 2010 by government and partners. The UN system is also undertaking joint assessments by its agencies, which will contribute to the national assessments.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9464,461,'15','2007','Yes','2009','Yes','UNFPA has on an annual basis reviewed with its implementing partners being Govt and CSOs, progress made in implementation of the Annual work plans for its supported programme areas, while planning for the next fiscal year.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9465,461,'19','','','','','Nigerian Government and partners have reached advanced stages for the conduct of the first Joint Annual Review for the health sector. It is envisaged that it would be an effective mechanism to improve accountability, while assessing progress towards set targets. The Joint monitoring for the health sector by the UN agencies will also contribute to the overall health sector review.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9466,461,'20','2007','486685.0','2009','652708.0','UNFPA has supported and engaged in consultations led by government authorities with identified representatives of CSOs during the health sector planning activities for the National Health Plan, as well as on their involvement in coordination mechansims at federal and state levels. Also, UNFPA alongisde other partners participated in discussions with representatives of CSOs within the processes of developing the country compact, while on-going discussions are informing the involvement of CSOs in the Joint Annual Review process.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9466,461,'16','2007','486685.0','2009','652708.0','UNFPA has supported and engaged in consultations led by government authorities with identified representatives of CSOs during the health sector planning activities for the National Health Plan, as well as on their involvement in coordination mechansims at federal and state levels. Also, UNFPA alongisde other partners participated in discussions with representatives of CSOs within the processes of developing the country compact, while on-going discussions are informing the involvement of CSOs in the Joint Annual Review process.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9467,461,'21','2007','0.0','2009','0.0','Not applicable');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9468,461,'22','2007','0.0','2009','0.0','UNFPA Nigeria is not engaged in direct or general budget support');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9469,461,'23','2007','0.0','2009','0.0','UNFPA Nigeria is not engaged in direct or general budget support');
@@ -1556,19 +1406,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(9473,462,'4','2007','5722541.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(9474,462,'5','','5722541.0','','11588000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9475,462,'6','2007','5722541.0','2009','11588000.0','Les ressources que l''OMS accorde au pays sont dutilisées pour la mise en œuvre du PNDS, et les programmes nationaux dans différents domaines de la santé (réponse aux épidémies, Vaccinations,VIH/SIDA, Tuberculose, Paludisme,  Dracunculose, Lèpre, etc.). Les initiatives axées sur les programmes sont alignées sur le PNDS et sur les programmes nationaux.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9476,462,'7','','5722541.0','','11588000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9477,462,'8','2007','5722541.0','2009','11588000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9478,462,'9','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9479,462,'10','2007','5722541.0','2009','11588000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9480,462,'11','','5722541.0','','11588000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9481,462,'12','2007','391078.0','2009','2317000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9482,462,'13','','250798.0','','650000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9483,462,'14','2007','5722541.0','2009','11588000.0','L''introduction du "Direct Financial Cooperation" (DFC) a facilité l''utilisation ds systèmes de gestion des finances publiques (PFM) dans la gestion des ressources de la coopération technique de l''OMS avec le pays.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9484,462,'15','','5582251.0','','9921000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9485,462,'16','2007','0.0','2009','0.0','Le plan de travail de l''OMS Burkina est mis en œuvre par les structures du ministèrede la santé avec l''appui technique du staff du Bureau pays');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9486,462,'17','2007','Yes','2009','Yes','L''évaluation des performances du système de santé est réalisée chaque année en utilisant les outils et canevas conçus pour le suivi et l''évalation de plan national de développement sanitaire (PNDS)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9487,462,'18','2007','Yes','2009','No','Le Burkina a élaboré en 2007 un rapport national sur la mise en œuvre de la Déclaration sur l''efficacité de l''aide. Tous les secteurs, dont la santé ont été concernés. Tous les  partenaires, y compris l''OMS y ont contribué.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9478,462,'8','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9479,462,'10old','2007','5722541.0','2009','11588000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9480,462,'11old','','5722541.0','','11588000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9481,462,'10','2007','391078.0','2009','2317000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9482,462,'11','','250798.0','','650000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9484,462,'12','','5582251.0','','9921000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9485,462,'13','2007','0.0','2009','0.0','Le plan de travail de l''OMS Burkina est mis en œuvre par les structures du ministèrede la santé avec l''appui technique du staff du Bureau pays');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9486,462,'14','2007','Yes','2009','Yes','L''évaluation des performances du système de santé est réalisée chaque année en utilisant les outils et canevas conçus pour le suivi et l''évalation de plan national de développement sanitaire (PNDS)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9487,462,'15','2007','Yes','2009','No','Le Burkina a élaboré en 2007 un rapport national sur la mise en œuvre de la Déclaration sur l''efficacité de l''aide. Tous les secteurs, dont la santé ont été concernés. Tous les  partenaires, y compris l''OMS y ont contribué.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9488,462,'19','2007','','','','La première revue sectorielle santé réalisée en 2010 a permis une large participation des parties prenantes à l''analyse critique des résultats du PNDS 2001-2010, à des échanges sur la responsibilité mutuelle des succès et des échecs rapportés et à l''identification des défis et les problèmes prioritaires pour le PNDS 2011-2020. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9489,462,'20','2008','11401.0','2009','0.0','L''OMS a soutenu le Réseau d''appui aux mutuelles de santé (RAM) pour la promotion et l''accomagnement des mutuelles de santé en partenariat avec les formations sanitaires périphériques');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9489,462,'16','2008','11401.0','2009','0.0','L''OMS a soutenu le Réseau d''appui aux mutuelles de santé (RAM) pour la promotion et l''accomagnement des mutuelles de santé en partenariat avec les formations sanitaires périphériques');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9490,462,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9491,462,'22','2007','0.0','2009','0.0','L''OMS étant une agence de coopération technique et non pas un bailleur de fonds, le volume limité de ses ressources et ses procédures de gestion ne lui permettent pas de s''engager dans un appui budgétaire général');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9492,462,'23','2007','0.0','2009','0.0','');
@@ -1581,21 +1429,19 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(9496,463,'4','2005','','2009','
 INSERT INTO "submissions_dpquestion_2009" VALUES(9497,463,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9498,463,'6','2005','1305045.0','2009','','Par rapport à la question nº7, le Fond Commun de Sante (FCS) appui le Plan de Développement Sanitaire du MSP.Ce Plan contient 8 axes estratégiques.2009=8,599,148');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9499,463,'7','','0.0','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9500,463,'8','2007','3782281.6512','2009','8599147.6362','En principe et dans l´actualité, il n´y a pas eu d´engagement plurianuel. Bonne question, notre intention c’est de commencer peu à peu car ce n´est pas un appui budgétaire sinon extra budgétaire et en plus nous nous trouvons dans un pays avec une instabilité politique qui conseille d¨´être prudent vis-à-vis de la planification à long terme. L´idée c’est que dans un futur proche, ou même pour le prochain décaissement nous présentons à l´AECID la possibilité d´un décaissement plurianuel.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9501,463,'9','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9502,463,'10','2005','1305045.0','2009','8599147.6362','Le problèmes sont plutot avec les fonds multilaterals. Les documents  que nous pouvons montrer ce sont les documents projets des différents acteurs qui interviennent.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9503,463,'11','','1305045.0','','5801414.2362','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9504,463,'12','2005','','2009','','Le FCS finance les appels d´offres que le MSP planifie et execute.Pour ces appels d´offre, on suit les procédures établies par la Banque Mondiale.
+INSERT INTO "submissions_dpquestion_2009" VALUES(9501,463,'8','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9502,463,'10old','2005','1305045.0','2009','8599147.6362','Le problèmes sont plutot avec les fonds multilaterals. Les documents  que nous pouvons montrer ce sont les documents projets des différents acteurs qui interviennent.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9503,463,'11old','','1305045.0','','5801414.2362','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9504,463,'10','2005','','2009','','Le FCS finance les appels d´offres que le MSP planifie et execute.Pour ces appels d´offre, on suit les procédures établies par la Banque Mondiale.
 
 Nous n´avons pas de chiffres desagregées');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9505,463,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9506,463,'14','2005','','2009','','Pour 2005 nous n´avons pas trouvé de données, même pas dans le PACI 2005 (Plan Annuel de la Coopération Internationale Espagnole). Nous sommes au Bureau Technique de Coopération en plein processus de recompilation de toutes les données des différents financements. 2005=0, 2009=1,392,600');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9507,463,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9508,463,'16','2005','','2009','1.0','L´idée d´appuyer le MSP par le biais du FCS est précisement d´unifier toutes les actions de notre coopération en une seule précisement pour eviter les projets en parallèle.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9509,463,'17','2007','No','2009','No','Le FCS a un mécanisme établi de revisions semestrielle de l´execution du Plan d´Actions Anuel.Il y a le Rappport de Suivi Financier, la Revue semestrielle et à la fin de l´année, il y a un audit externe du FCS. J´ai sollicité l´audit externe en format électronique mais par contre je ne peux pas affirmer que nous soyons en train d´utiliser les National Assesment Framework. En fait, par rapport à ça, ce sont les indicateurs nationaux nigériens ou espagnols ?');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9510,463,'18','2005','No','2009','No','Par rapport au Pacte National IHP+ nous n´avons aucun renseignement d´évaluation conjointes.Nous suposons que c est parce que l´Espagne vient de signer son adhésion, de même que le Niger.Dans touts les cas, avec l´adhésion de l´Espagne et du Niger au Compact, ainsi que le FCS, permetrons de mettre en fonctionnement des évaluations conjointes.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9505,463,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9507,463,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9508,463,'13','2005','','2009','1.0','L´idée d´appuyer le MSP par le biais du FCS est précisement d´unifier toutes les actions de notre coopération en une seule précisement pour eviter les projets en parallèle.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9509,463,'14','2007','No','2009','No','Le FCS a un mécanisme établi de revisions semestrielle de l´execution du Plan d´Actions Anuel.Il y a le Rappport de Suivi Financier, la Revue semestrielle et à la fin de l´année, il y a un audit externe du FCS. J´ai sollicité l´audit externe en format électronique mais par contre je ne peux pas affirmer que nous soyons en train d´utiliser les National Assesment Framework. En fait, par rapport à ça, ce sont les indicateurs nationaux nigériens ou espagnols ?');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9510,463,'15','2005','No','2009','No','Par rapport au Pacte National IHP+ nous n´avons aucun renseignement d´évaluation conjointes.Nous suposons que c est parce que l´Espagne vient de signer son adhésion, de même que le Niger.Dans touts les cas, avec l´adhésion de l´Espagne et du Niger au Compact, ainsi que le FCS, permetrons de mettre en fonctionnement des évaluations conjointes.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9511,463,'19','2005','','','','A partir de l´adhésion de l´Espagne au FCS,il y a prévu des revue semestrielle du Plan d´action annuelle ainsi qu´il y a un Rapport de suivi financier semestrielle dont l´aprobation ou pas conditionne le décaissement suivant.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9512,463,'20','2005','','2009','','2005=aucun, 2009=MANQUE D´INFORMATION');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9512,463,'16','2005','','2009','','2005=aucun, 2009=MANQUE D´INFORMATION');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9513,463,'21','2005','994320.0','2009','5201500.26','En principe I l y a plusieurs raisons: d´abord de 2005 jusqu´à 2009 il n´y avait pas de Bureau Technique de coopération (OTC), même pas d´ambassade (ouverte en 2008), donc le financement était indirect fondamentalement, que ça soie par le biais de multilatéral comme par les ONGDs espagnoles. 
 D´autre part, maintenant avec l´OTC nous sommes en train de consolider notre position dans le pays, et le secteur de la santé est un des secteurs prioritaires. De même, la participation au FCS implique des décaissements importants. Par rapport aux autres bailleurs de fonds du FCS, c´est-à-dire, la Banque Mondiale et la AFD, notre montant est le plus petit. Finalement, notre objectif est d´augmenter encore plus notre contribution financière.
 ');
@@ -1608,19 +1454,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(9588,467,'4','2007','0.0','2009
 INSERT INTO "submissions_dpquestion_2009" VALUES(9589,467,'5','','0.0','','6426958.5','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9590,467,'6','2007','0.0','2009','6426958.5','DFID Nigeria resources do not flow through government systems in Nigeria owing to a high fudicial risk environment.  Other stratagies are used to ensure alignment.           ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9591,467,'7','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9592,467,'8','2007','0.0','2009','6426958.5','The MNCH program is a five year program.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9593,467,'9','','0.0','','6426958.5','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9594,467,'10','2007','0.0','2009','6426958.5','Disbursement has been largely on track.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9595,467,'11','','0.0','','6426958.5','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9596,467,'12','2007','0.0','2009','0.0','DFID Nigeria does not used the courntries procurement systems.  We are however working with the Nigerian Government to strengthen their procurement processes and systems.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9597,467,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9598,467,'14','2007','0.0','2009','6426958.5','DFID has worked at the Federal and State level to improve their budget and planning processes.  This has included the development of medium term sector strategies (MTSS).  ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9599,467,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9600,467,'16','2007','0.0','2009','1.0','Where possible, DFID places it project management teams as close to government as possible.  For some programmes, our staff are imbedded within government institutions and in others Government has provided accomoation within the ministries.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9601,467,'17','2007','No','2009','No','In 2010, Nigeria has developed a performance assessment framework and the first joint review is planned for November 2010. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9602,467,'18','2007','No','2009','Yes','The program is reviewed jointlyby Norway/UK.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9593,467,'8','','0.0','','6426958.5','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9594,467,'10old','2007','0.0','2009','6426958.5','Disbursement has been largely on track.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9595,467,'11old','','0.0','','6426958.5','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9596,467,'10','2007','0.0','2009','0.0','DFID Nigeria does not used the courntries procurement systems.  We are however working with the Nigerian Government to strengthen their procurement processes and systems.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9597,467,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9599,467,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9600,467,'13','2007','0.0','2009','1.0','Where possible, DFID places it project management teams as close to government as possible.  For some programmes, our staff are imbedded within government institutions and in others Government has provided accomoation within the ministries.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9601,467,'14','2007','No','2009','No','In 2010, Nigeria has developed a performance assessment framework and the first joint review is planned for November 2010. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9602,467,'15','2007','No','2009','Yes','The program is reviewed jointlyby Norway/UK.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9603,467,'19','','n/a','','n/a','First JAR assessment to happen in 2010.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9604,467,'20','2007','','2009','','The MNCH program supports civil society organisations at the federal and state level.  One of these includes HERFON - the Health Reform Foundation of Nigeria - which is a federation of health change agents - and is actively engaged in policy debate throughout the country.  This organisation has been one of the key agents behind the Health Bill.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9604,467,'16','2007','','2009','','The MNCH program supports civil society organisations at the federal and state level.  One of these includes HERFON - the Health Reform Foundation of Nigeria - which is a federation of health change agents - and is actively engaged in policy debate throughout the country.  This organisation has been one of the key agents behind the Health Bill.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9605,467,'21','2007','0.0','2009','6426958.5','Norway is a silent donor in a Joint Norway/UK MNCH program.  This spending is also reported above.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9606,467,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9607,467,'23','2007','0.0','2009','0.0','');
@@ -1640,20 +1484,17 @@ All this has somewhat stalled the process, with each donor extending in the shor
  
 iii) Efforts are still underway to try and bring these together in a common programme and budget framework, even if funding continues to be chanelled bilaterally in the short term. Finalisation of the sector startegy in the coming 8-months and development of an operational plan to go with it will be key. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9867,479,'7','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9868,479,'8','2007','2819765.0','2009','2834048.0','The % of aid disbursed through a 3-year commitment or more has reduced in 2009 because i) DFID was in the process of developing a new programme; but ii) DFID''s aid framework in Burundi has a limited timeframe and for we were not allowed to programme anything beyond March 2011 (this deadline was later extended to March 2012 but too late to inform programming).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9869,479,'9','','2819765.0','','1349830.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9870,479,'10','2007','','2009','','Q10: 2007 - $2,819,765; 2009 - $2,834,048.            Could not get the details. We should have disbursed £2,210,000 of financial aid in 2009 which got pushed back to 2010.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9871,479,'11','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9872,479,'12','2007','2074915.0','2009','1547313.0','DFID approved in 2009 a new financial aid programme shifting to use of Government procurement systems. First tranche was disbursed in Jan 2010, and in 2010 over 70% of DFID''s aid for the Government sector will have been disbursed using national procurement systems.    The systems were assessed as too weak (low capacity and prone to corruption) up until 2008. DFID provided TA. A new public procurement code was also adopted in Oct 2008.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9873,479,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9874,479,'14','2007','2074915.0','2009','1547313.0','Financial reporting procedures and national auditing systems are considered too weak to use.     According to the PFM/CPIA scale which is the one the survey refers to, Burundi does not score high enough to be considered a country where PFM is of sufficient quality to use national systems (Guide to Key Definitions, p.24). Financial reporting procedures in MoH are virtually non-existent. This is less true of the Central Medical Store, which is the one DFID gives financial aid to (from 2010 onwards, we are not imposing separate reporting procedures on the Medical Store, although we do continue to require independent audits because the national auditing systems is judged unreliable (PEFA/Fiduciary Risk Assessment). DFID also provides TA to the Medical Store to strengthen its financial management systems.
-The Joint EC/DFID/Belgium programme mentioned above should have included a significant capacity building component to strengthen PFM procedures in MoH - this now will (in the short term) be covered by the EC. The explicit objective is that within two years MoH would have sufficiently strengthened its PFM systems that it can ''pass'' the EC''s 5-pillar audit - so that the EC (and others aligning behind the EC''s 5 pillars audit) can shift to use of national PFM systems. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9875,479,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9876,479,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9877,479,'17','2007','No','2009','Yes','A unified results framework for the health sector was developed in 2009 and used for first time at Sector Review in Nov 2009 to assess progress. This was a massive step forward but very early days.  The purpose indicators of our bilateral programme are drawn from the unified M&E framework. We have our own indicators to measure progress against our bilateral programme''s outputs because they are too specific to be included in the unified M&E framework (the unified M&E framework only include 31 or so key indicators covering the entire sector). ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9878,479,'18','2007','No','2009','Yes','Though partial. Some indicators of aid effectiveness included in unified resulsst framework but all MoU commitments not routinely assessed.   There is a plan to revise the MoU (upgrade it into a ''proper'' compact in support of the new sector strategy) in the first semester of 2011. This will include a revision of aid effectiveness commitements  and a discussion of mutual assessments and accountability');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9869,479,'8','','2819765.0','','1349830.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9870,479,'10old','2007','','2009','','Q10: 2007 - $2,819,765; 2009 - $2,834,048.            Could not get the details. We should have disbursed £2,210,000 of financial aid in 2009 which got pushed back to 2010.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9871,479,'11old','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9872,479,'10','2007','2074915.0','2009','1547313.0','DFID approved in 2009 a new financial aid programme shifting to use of Government procurement systems. First tranche was disbursed in Jan 2010, and in 2010 over 70% of DFID''s aid for the Government sector will have been disbursed using national procurement systems.    The systems were assessed as too weak (low capacity and prone to corruption) up until 2008. DFID provided TA. A new public procurement code was also adopted in Oct 2008.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9873,479,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9875,479,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9876,479,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9877,479,'14','2007','No','2009','Yes','A unified results framework for the health sector was developed in 2009 and used for first time at Sector Review in Nov 2009 to assess progress. This was a massive step forward but very early days.  The purpose indicators of our bilateral programme are drawn from the unified M&E framework. We have our own indicators to measure progress against our bilateral programme''s outputs because they are too specific to be included in the unified M&E framework (the unified M&E framework only include 31 or so key indicators covering the entire sector). ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9878,479,'15','2007','No','2009','Yes','Though partial. Some indicators of aid effectiveness included in unified resulsst framework but all MoU commitments not routinely assessed.   There is a plan to revise the MoU (upgrade it into a ''proper'' compact in support of the new sector strategy) in the first semester of 2011. This will include a revision of aid effectiveness commitements  and a discussion of mutual assessments and accountability');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9879,479,'19','','First JAR held in Oct 2007','','','First structured attempt to monitor Aid Effectiveness commitment at JAR 2008 revealed some indicators of the MoU were difficult to measure. At the JAR 2009, discussion focussed on ongoing reform and there was little discussion of Aid Effectiveness');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9880,479,'20','2007','','2009','As lead donor, we facilitated participation of CSOs in sector group meeting and  at Joint Sector review','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9880,479,'16','2007','','2009','As lead donor, we facilitated participation of CSOs in sector group meeting and  at Joint Sector review','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9881,479,'21','2007','1227083.0','2009','96844.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9882,479,'22','2007','0.0','2009','0.0','DFID does not provide budget support in Burundi. Fiduicary risks are considered too high.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9883,479,'23','2007','0.0','2009','0.0','');
@@ -1664,22 +1505,20 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(9887,480,'4','2007','4808832.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(9888,480,'5','','4808832.0','','3221082.986','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9889,480,'6','2007','10865051.0','2009','19593526.502','There is no difference between our answer here and our answer to Q 2DPa. All our financial aid (note, excluding TC) is in support of the government sector and is programme, not project based.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9890,480,'7','','6056220.0','','19593526.502','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9891,480,'8','2007','10865051.0','2009','19593526.502','There is no difference between our answer here and our answer to Q 2DPa. I don''t know if DFID globally has published a target for % of aid provided through multi-year commitments.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9892,480,'9','','10865051.0','','19593526.502','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9893,480,'10','2007','10865051.0','2009','19593526.502','There is no difference between our answer here and our answer to Q 2DPa. All aid has been disbursed in the same government financial year as it was scheduled.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9894,480,'11','','10865051.0','','19593526.502','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9895,480,'12','2007','100.0','2009','100.0','We are unable to report the absolute amount of our programme funding that uses national procurement systems, since GoN does not report the overall value of procurements (and since the term ''procurement'' is loosely defined - for example, does it include utilities bills?) But we can say that 100% of procurement carried out with NHSP1 pooled financial aid used national systems, and 0% of procurement carried out with SSMP programme funds used national systems.  NOTE: FOLLOWING EMAIL FROM SUE CHANDLER ON 5/1/11 HAVE ADDED FIGURES TO SHOW 7% IN 2007 AND 6% IN 2009 AS REPORTED BY DFID NEPAL.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9896,480,'13','','7.0','','6.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9897,480,'14','2007','10865051.0','2009','19593526.502','There is no difference between our answer here and our answer to Q 2DPa. All aid on budget uses government financial systems.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9898,480,'15','','6056220.0','','13048746.502','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9899,480,'16','2007','1.0','2009','1.0','Our use of PIUs in the current calendar year is now down to zero.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9900,480,'17','2007','Yes','2009','Yes','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9901,480,'18','2007','Yes','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9892,480,'8','','10865051.0','','19593526.502','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9893,480,'10old','2007','10865051.0','2009','19593526.502','There is no difference between our answer here and our answer to Q 2DPa. All aid has been disbursed in the same government financial year as it was scheduled.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9894,480,'11old','','10865051.0','','19593526.502','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9895,480,'10','2007','100.0','2009','100.0','We are unable to report the absolute amount of our programme funding that uses national procurement systems, since GoN does not report the overall value of procurements (and since the term ''procurement'' is loosely defined - for example, does it include utilities bills?) But we can say that 100% of procurement carried out with NHSP1 pooled financial aid used national systems, and 0% of procurement carried out with SSMP programme funds used national systems.  NOTE: FOLLOWING EMAIL FROM SUE CHANDLER ON 5/1/11 HAVE ADDED FIGURES TO SHOW 7% IN 2007 AND 6% IN 2009 AS REPORTED BY DFID NEPAL.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9896,480,'11','','7.0','','6.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9898,480,'12','','6056220.0','','13048746.502','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9899,480,'13','2007','1.0','2009','1.0','Our use of PIUs in the current calendar year is now down to zero.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9900,480,'14','2007','Yes','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9901,480,'15','2007','Yes','2009','Yes','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9902,480,'19','','','','','Low effectiveness. In order for the JAR''s effectiveness as an accountability mechanism to improve, it needs to:
  - be more aligned with the government''s national health sector review (a donor responsibility);
  - be more carefully planned (a joint government / donor responsibility); and
  - have more evaluation inputs and routine reporting of physical as well as financial performance made available in advance for discussion (a government responsibility).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9903,480,'20','2007','None','2009','None','None within funding specifically earmarked as health funding. However, DFID Nepal is about to start funding a broader PFM programme that will develop civil society''s capacity to use social accountability tools to assess budget allocations and responsibility; future health funding will include funding for civil society to operate access equality surveys; and existing support to HIV CSOs to provide services also helps their capacity to provide inputs and evidence to sector planning processes.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9903,480,'16','2007','None','2009','None','None within funding specifically earmarked as health funding. However, DFID Nepal is about to start funding a broader PFM programme that will develop civil society''s capacity to use social accountability tools to assess budget allocations and responsibility; future health funding will include funding for civil society to operate access equality surveys; and existing support to HIV CSOs to provide services also helps their capacity to provide inputs and evidence to sector planning processes.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9904,480,'21','2007','4808831.0','2009','6544780.0','We have provided funding for several years through UNDP for provision of HIV services to high-risk groups. The amounts are shown to the left. This funding is now ceased, and provision of HIV services will be contracted through MoHP / DHS using pooled funds from GoN and donors.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9905,480,'22','2007','0.0','2009','0.0','DFID Nepal does not provide GBS.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9906,480,'23','2007','15786152.767','2009','8182885.326','This includes education (EFA) and health. Note, no education disbursements were made in 2009.');
@@ -1690,19 +1529,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(9910,481,'4','2007','6300042.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(9911,481,'5','','6300042.0','','43983310.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9912,481,'6','2007','53724757.0','2009','88301934.0','DFID Nigeria resources do not flow through government systems in Nigeria owing to a high fudicial risk environment.  Other stratagies are used to ensure alignment.  ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9913,481,'7','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9914,481,'8','2007','53724757.0','2009','88301934.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9915,481,'9','','53724757.0','','88301934.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9916,481,'10','2007','','2009','','Q10: 2007 - $53,724,757; 2009 - $88,301,934.        Disbursement has been largely on track.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9917,481,'11','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9918,481,'12','2007','53724757.0','2009','88301934.0','DFID Nigeria does not used the courntries procurement systems.  We are however working with the Nigerian Government to strengthen their procurement processes and systems.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9919,481,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9920,481,'14','2007','53724757.0','2009','88301934.0','DFID has worked at the Federal and State level to improve their budget and planning processes.  This has included the development of medium term sector strategies (MTSS).  ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9921,481,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9922,481,'16','2007','22.0','2009','18.0','Where possible, DFID places it project management teams as close to government as possible.  For some programmes, our staff are imbedded within government institutions and in others Government has provided accomoation within the ministries.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9923,481,'17','2007','','2009','','In 2010, Nigeria has developed a performance assessment framework and the first joint review is planned for November 2010. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9924,481,'18','2007','No','2009','No','First assessment to happen in November 2010.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9915,481,'8','','53724757.0','','88301934.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9916,481,'10old','2007','','2009','','Q10: 2007 - $53,724,757; 2009 - $88,301,934.        Disbursement has been largely on track.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9917,481,'11old','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9918,481,'10','2007','53724757.0','2009','88301934.0','DFID Nigeria does not used the courntries procurement systems.  We are however working with the Nigerian Government to strengthen their procurement processes and systems.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9919,481,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9921,481,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9922,481,'13','2007','22.0','2009','18.0','Where possible, DFID places it project management teams as close to government as possible.  For some programmes, our staff are imbedded within government institutions and in others Government has provided accomoation within the ministries.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9923,481,'14','2007','','2009','','In 2010, Nigeria has developed a performance assessment framework and the first joint review is planned for November 2010. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9924,481,'15','2007','No','2009','No','First assessment to happen in November 2010.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9925,481,'19','','','','','First assessment to happen in 2010.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9926,481,'20','2007','','2009','','DFID Nigeria supports civil society organisations at the federal and state level.  One of these includes HERFON - the Health Reform Foundation of Nigeria - which is a federation of health change agents - and is actively engaged in policy debate throughout the country.  This organisation has been one of the key agents behind the Health Bill.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9926,481,'16','2007','','2009','','DFID Nigeria supports civil society organisations at the federal and state level.  One of these includes HERFON - the Health Reform Foundation of Nigeria - which is a federation of health change agents - and is actively engaged in policy debate throughout the country.  This organisation has been one of the key agents behind the Health Bill.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9927,481,'21','2007','2011372.0','2009','316305.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9928,481,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9929,481,'23','2007','0.0','2009','0.0','');
@@ -1713,19 +1550,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(9933,482,'4','2007','296477.0',
 INSERT INTO "submissions_dpquestion_2009" VALUES(9934,482,'5','','296477.0','','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9935,482,'6','2007','13180331.0','2009','17547815.0','All health sector aid is based on programme-based approaches with preference for basked funding mechanism. Gradually all project like activities wiil be closed and integrated in one health basket mechanism. This process will be completed in 2011.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9936,482,'7','','13180331.0','','17547815.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9937,482,'8','2007','10402553.0','2009','13628697.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9938,482,'9','','10402553.0','','13628697.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9939,482,'10','2007','10402553.0','2009','13628697.0','In fact disbursements in the health sector are well above 100% as planned since 2005 due to high aborption rate as well as timely reporting by MOH of progress and audits.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9940,482,'11','','10402553.0','','13628697.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9941,482,'12','2007','','2009','','All health sector aid used national procurement systems.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9942,482,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9943,482,'14','2007','12143653.0','2009','16171664.0','The Health and HIV basketfunding mechanism follows national procurement sysstems. The PADS fund however has developed its own PFM system seperate from government budget PFM.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9944,482,'15','','12143653.0','','16171664.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9945,482,'16','2007','1.0','2009','1.0','The management unit of the Health Fund PADS is so effective that many donors join this mechanism but earmarked by theme (GFATM, GAVI) or geographical (WB nutrition), undermining the efficiency.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9946,482,'17','2007','Yes','2009','Yes','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9947,482,'18','2007','No','2009','No','The first health sector review was held in March 2010and the Netherlands supported this with TA. Annual reviews are now institutionalised and linked to PRSP annual reviews. The 2011 review will be part of the new compact.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9938,482,'8','','10402553.0','','13628697.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9939,482,'10old','2007','10402553.0','2009','13628697.0','In fact disbursements in the health sector are well above 100% as planned since 2005 due to high aborption rate as well as timely reporting by MOH of progress and audits.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9940,482,'11old','','10402553.0','','13628697.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9941,482,'10','2007','','2009','','All health sector aid used national procurement systems.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9942,482,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9944,482,'12','','12143653.0','','16171664.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9945,482,'13','2007','1.0','2009','1.0','The management unit of the Health Fund PADS is so effective that many donors join this mechanism but earmarked by theme (GFATM, GAVI) or geographical (WB nutrition), undermining the efficiency.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9946,482,'14','2007','Yes','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9947,482,'15','2007','No','2009','No','The first health sector review was held in March 2010and the Netherlands supported this with TA. Annual reviews are now institutionalised and linked to PRSP annual reviews. The 2011 review will be part of the new compact.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9948,482,'19','','','','','Ineffective. Poor participation by other donors. Will be part of discussion on the new monitoring system for the PNDS 2011-2020 and the compact.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9949,482,'20','2007','','2009','','Since 2008 the MOH started a process to include civil society organisations in planning and implementing health MDG related activities. Today 15 capacity building NGO''s and 143 Community Based Org are under contract to implement action plans related to MDG 1, 4, 5 and 6. Selcted NGO''s take part in policy develeopment discussions such as on Result Based Financing');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9949,482,'16','2007','','2009','','Since 2008 the MOH started a process to include civil society organisations in planning and implementing health MDG related activities. Today 15 capacity building NGO''s and 143 Community Based Org are under contract to implement action plans related to MDG 1, 4, 5 and 6. Selcted NGO''s take part in policy develeopment discussions such as on Result Based Financing');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9950,482,'21','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9951,482,'22','2007','18518518.0','2009','30147059.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9952,482,'23','2007','0.0','2009','0.0',' ');
@@ -1736,19 +1571,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(9956,483,'4','2007','273780.0',
 INSERT INTO "submissions_dpquestion_2009" VALUES(9957,483,'5','','273780.0','','278520.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9958,483,'6','2007','13434682.0','2009','14732427.0','Apart from the WB/PBS, WHO/TB programme, and Health Pooled Fund, the Netherlands supports the local NGO FGAE, and the international NGOs FHI and DKT which are Programme Based Approaches in the area of reproductive health Target is met. In 2007, 74% of health sector aid were Programme Based Approaches, in 2009 92%');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9959,483,'7','','10006199.0','','13520020.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9960,483,'8','2007','13434682.0','2009','14732427.0','Target met. 100% of health sector funding is committed for at least 3 years.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9961,483,'9','','13434682.0','','14732427.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9962,483,'10','2007','13434682.0','2009','14732427.0','Target met. 100% of health sector funding is disbursed in both calendar years indicated.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9963,483,'11','','13434682.0','','14732427.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9964,483,'12','2007','0.0','2009','0.0','Procurement is not specifically mentioned in the budgets and financial statements. The embassy is not involved in any procurement.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9965,483,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9966,483,'14','2007','7601571.0','2009','4278520.0','100% of health sector support is using national PFM systems. However, in 2007, 57% of total health sector support was disbursed to government (through WB/PBS and UNICEF managed HPF). In 2009, this was 29%.  The PFM system of the GOE is relatively good, including checks and balances. A more extensive use of GOE PFM system is hindered by issues of good governance, e.g. inadequate systems of transparancy and accountability. Consequently  the choice has been made to channel aid through (I)NGO''s.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9967,483,'15','','7601571.0','','4278520.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9968,483,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9969,483,'17','','Yes','2009','Yes','The PAF of the  (jointly approved) annual plan of the FMOH is used together with the Annual Report of the FMOH.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9970,483,'18','2007','Yes','2009','Yes','2007: participated in joint field visit with joint assessment report as an output; participated in the annual review meeting.  2009: participated in annual review meeting but annual report (incl. aid effectiveness) not really discussed.   Through questions efforts were made to improve the financial data in the annual report.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9961,483,'8','','13434682.0','','14732427.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9962,483,'10old','2007','13434682.0','2009','14732427.0','Target met. 100% of health sector funding is disbursed in both calendar years indicated.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9963,483,'11old','','13434682.0','','14732427.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9964,483,'10','2007','0.0','2009','0.0','Procurement is not specifically mentioned in the budgets and financial statements. The embassy is not involved in any procurement.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9965,483,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9967,483,'12','','7601571.0','','4278520.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9968,483,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9969,483,'14','','Yes','2009','Yes','The PAF of the  (jointly approved) annual plan of the FMOH is used together with the Annual Report of the FMOH.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9970,483,'15','2007','Yes','2009','Yes','2007: participated in joint field visit with joint assessment report as an output; participated in the annual review meeting.  2009: participated in annual review meeting but annual report (incl. aid effectiveness) not really discussed.   Through questions efforts were made to improve the financial data in the annual report.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9971,483,'19','','','','','Annual review meeting has too many participants. Regional annual review meetings need to be strengthened followed by a structural analyses of regional performances (and regional differences)in a national meeting with relevant organisations/ people.  Stronger participation of Civil Society and private sector is required as well as health related sectors s.a. water, sanitation, environment, food security.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9972,483,'20','2007','0.0','2009','0.0',' Funding for the health sector has been increasingly channelled through several (Int) NGO''s');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9972,483,'16','2007','0.0','2009','0.0',' Funding for the health sector has been increasingly channelled through several (Int) NGO''s');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9973,483,'21','2007','0.0','2009','0.0','The co-financing with the WB/PBS is a borderline case.(see amount in Q2). To be compared with other donors in Ethiopia using WB/PBS');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9974,483,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9975,483,'23','2007','0.0','2009','0.0','');
@@ -1759,19 +1592,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(9979,484,'4','2007','2459092.54
 INSERT INTO "submissions_dpquestion_2009" VALUES(9980,484,'5','','2459092.54863','','2894173.7352','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9981,484,'6','2007','12186033.63','2009','10024285.7352','Pooled funding to the MoH, Commodity support, Social marketing & HIV/AIDS Workplace programmes');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9982,484,'7','','12186033.63','','10024285.7352','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9983,484,'8','2007','10461219.63','2009','7768273.7352','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9984,484,'9','','10461219.63','','7768273.7352','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9985,484,'10','2007','10461219.63','2009','7768273.7352','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9986,484,'11','','10461219.63','','7768273.7352','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9987,484,'12','2007','0.0','2009','0.0','Funding through PROSAUDE is not earmarked, and therefore it is not possible to say how much is used on procurement, other than attribution of a proportion of the funding corresponding to the proportion MISAU spends on procurement. Procurement through PROSAUDE uses government systems. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9988,484,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9989,484,'14','2007','9726941.0814','2009','7130112.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9990,484,'15','','9726941.0814','','7130112.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9991,484,'16','2007','0.0','2009','0.0','None');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9992,484,'17','2007','Yes','2009','Yes','Joint Annual Review with a Common Performance Assessment Framework');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9993,484,'18','2007','No','2009','Yes','Joint Annual Review with a Common Performance Assessment Framework. A framework for monitoring MOU commitments has been developed (2010) and will be used to monitor MOU (and IHP) compliance on an annual basis - as part of the Annual Joint Evaluation process. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9984,484,'8','','10461219.63','','7768273.7352','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9985,484,'10old','2007','10461219.63','2009','7768273.7352','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9986,484,'11old','','10461219.63','','7768273.7352','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9987,484,'10','2007','0.0','2009','0.0','Funding through PROSAUDE is not earmarked, and therefore it is not possible to say how much is used on procurement, other than attribution of a proportion of the funding corresponding to the proportion MISAU spends on procurement. Procurement through PROSAUDE uses government systems. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9988,484,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9990,484,'12','','9726941.0814','','7130112.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9991,484,'13','2007','0.0','2009','0.0','None');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9992,484,'14','2007','Yes','2009','Yes','Joint Annual Review with a Common Performance Assessment Framework');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9993,484,'15','2007','No','2009','Yes','Joint Annual Review with a Common Performance Assessment Framework. A framework for monitoring MOU commitments has been developed (2010) and will be used to monitor MOU (and IHP) compliance on an annual basis - as part of the Annual Joint Evaluation process. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9994,484,'19','','','','','Joint annual review considered 36 indicators of performance, with 4 indicators looking at donor performance. The review includes a data verification exercise and the results are presented and discussed at a public meeting chaired by the Minister of Health - with active civil society participation. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(9995,484,'20','2007','','2009','','Civil society has 2 seats (Naima a network of international NGOs and MONASO a network of national NGOs, are members fo the health partner group. Naima joints the monthly donor meeting with the MOH. Many civil society organisations are invited to the twice yearly government and donor policy dialogue.  ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(9995,484,'16','2007','','2009','','Civil society has 2 seats (Naima a network of international NGOs and MONASO a network of national NGOs, are members fo the health partner group. Naima joints the monthly donor meeting with the MOH. Many civil society organisations are invited to the twice yearly government and donor policy dialogue.  ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9996,484,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9997,484,'22','2007','24640200.0','2009','25066800.0','The Netherlands also provides General Budget Support, this was 18 Million Euro in 2007 (of which 13% of govt budget went to health and 18 Million Euro in 2009, of which 10% of govt budget went to health)');
 INSERT INTO "submissions_dpquestion_2009" VALUES(9998,484,'23','2007','8002127.0814','2009','4874100.0','');
@@ -1782,19 +1613,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10002,485,'4','2007','0.0','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(10003,485,'5','','0.0','','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10004,485,'6','2007','6908509.0','2009','13190836.0',' In 2007, 92% and in 2009, 81% of health sector aid were Programme Based Approaches,Though target of 66% is met, the relative share diminshed because additional resources were made available for CSOs. Efforts have been made to come to one budget, one plan and one reporting mechanism but was not possible due to separate requirements of other donors.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10005,485,'7','','6433830.0','','10930489.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10006,485,'8','2007','5950279.0','2009','12076756.0','Target met. 100% of health sector funding is committed for at least 3 years.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10007,485,'9','','5950279.0','','11974289.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10008,485,'10','2007','5950279.0','2009','12076756.0','100% of commitments in time and volume were met in 2009');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10009,485,'11','','5950279.0','','12076756.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10010,485,'12','2007','0.0','2009','0.0','The Netherlands doesn''t earmark funds for procurement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10011,485,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10012,485,'14','2007','6433830.0','2009','10930489.0','100% of health sector support is using national PFM systems. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10013,485,'15','','6433830.0','','10930489.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10014,485,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10015,485,'17','','Yes','','Yes','In 2009 a common set of indicators was agreed and used in the annual reviews. SBS had since 2006 a set of indicators that was integrated in this common framework');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10016,485,'18','2007','Yes','2009','Yes','2007 en 2009: NL participated in joint field visit and annual review meeting.  2009: NL lead donor. Annual review used for the 1st time a commonly agreed M&E framework. Financial data of all donors compared to commitments were included. IHP commitments were (not yet ) part of the review.   ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10007,485,'8','','5950279.0','','11974289.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10008,485,'10old','2007','5950279.0','2009','12076756.0','100% of commitments in time and volume were met in 2009');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10009,485,'11old','','5950279.0','','12076756.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10010,485,'10','2007','0.0','2009','0.0','The Netherlands doesn''t earmark funds for procurement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10011,485,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10013,485,'12','','6433830.0','','10930489.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10014,485,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10015,485,'14','','Yes','','Yes','In 2009 a common set of indicators was agreed and used in the annual reviews. SBS had since 2006 a set of indicators that was integrated in this common framework');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10016,485,'15','2007','Yes','2009','Yes','2007 en 2009: NL participated in joint field visit and annual review meeting.  2009: NL lead donor. Annual review used for the 1st time a commonly agreed M&E framework. Financial data of all donors compared to commitments were included. IHP commitments were (not yet ) part of the review.   ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10017,485,'19','','','','','Annual reviews provide little opportunity for discussion but the preparations to the JAR are increasingly useful, also at regional level. JARs involve parliament but role is weak and unclear.  CSOs have a seat, represented by FENASCOM. Private for profit sector invited but role and influence still weak.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10018,485,'20','2007','360826.0','2009','264293.0','Fenascom receives also funding (though modest) from the Ministry of Health');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10018,485,'16','2007','360826.0','2009','264293.0','Fenascom receives also funding (though modest) from the Ministry of Health');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10019,485,'21','2007','0.0','2009','0.0','Spain and Sweden have delegated silent partnerships on SBS-health with the Netherlands, while using separate disbursement channels. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10020,485,'22','2007','13689000.0','2009','13926000.0','2009: 8,47% of national budget was for health expenditures (investment + recurrent expenditures). A selection of health sector triggers that apply to SBS are also used for GBS.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10021,485,'23','2007','5475600.0','2009','5570400.0','The Netherlands, Canada, Sweden (since 2006) and Spain (since 2009) provide SBS ');
@@ -1805,19 +1634,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10025,486,'4','2005','480000.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(10026,486,'5','','0.0','','220000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10027,486,'6','2005','3729500.0','2009','4878600.0','Les actions financées sont celles souhaités par le gouvernement car inscrit dans le cadre du plan national de développement sanitair. Cependant le cadre post conflit du pays fait qu''il n''y avait pas en 2009 de manuel de procédure ou de directives d''application permettant d''avoir une approche programme à proprement dit. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10028,486,'7','','1562500.0','','1113600.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10029,486,'8','2005','2167000.0','2009','3765000.0','Différentes sources de financement sont comptabilisées dans le cadre de ce montant. Les sources sont le FED (Fonds européen de Développement) et le Budget (lignes budgétaires). Les lignes budgétaires sont non programmables par nature et la durée des actions qu''elles financent peut aller de 1 à 5 ans et en général 2 ou 3 ans. En ce qui nous concerne deux actions avaient une durée de 2 ans et deux de 3 ans. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10030,486,'9','','760000.0','','2380000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10031,486,'10','2005','','2009','3765000.0','Q10: 2005 - $2,167,000.                 Les différences sont du à des adaptation au contexte ou au retard pris dans le cadre des procédures. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10032,486,'11','','','','3020000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10033,486,'12','2005','','2009','640000.0','Q13: 2005 - $0.                    Les procédures utilisées sont toujours celles du FED.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10034,486,'13','','','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10035,486,'14','2005','3729500.0','2009','4878600.0','Les procédures utilisées sont toujours celles du FED.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10036,486,'15','','1562500.0','','1113600.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10037,486,'16','please select','8.0','2009','5.0','Moins de projets mais dont l''enveloppe est plus volumineuse. Le projet le plus important à son PIU abasé dans le ministère de la santé. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10038,486,'17','2005','No','2009','No','Démarrage de son utilisation en 2010 après révision suite à l''échec de la tentative d''utilisation en 2009. Le SIS est très défaillant et les efforts fait sur le sujet ont permis une nette amélioration des données entre début 2009 et maintenant');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10039,486,'17','2005','No','2009','Yes','Debut en 2007 et depuis une fois chaque année mais la qualité décroit.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10030,486,'8','','760000.0','','2380000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10031,486,'10old','2005','','2009','3765000.0','Q10: 2005 - $2,167,000.                 Les différences sont du à des adaptation au contexte ou au retard pris dans le cadre des procédures. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10032,486,'11old','','','','3020000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10033,486,'10','2005','','2009','640000.0','Q13: 2005 - $0.                    Les procédures utilisées sont toujours celles du FED.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10034,486,'11','','','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10036,486,'12','','1562500.0','','1113600.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10037,486,'13','please select','8.0','2009','5.0','Moins de projets mais dont l''enveloppe est plus volumineuse. Le projet le plus important à son PIU abasé dans le ministère de la santé. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10038,486,'14','2005','No','2009','No','Démarrage de son utilisation en 2010 après révision suite à l''échec de la tentative d''utilisation en 2009. Le SIS est très défaillant et les efforts fait sur le sujet ont permis une nette amélioration des données entre début 2009 et maintenant');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10039,486,'14','2005','No','2009','Yes','Debut en 2007 et depuis une fois chaque année mais la qualité décroit.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10040,486,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10041,486,'20','2007','0.0','2009','','Depuis 2008, nous poussons la société civile a être plus active dans le dialogue sectoriel et au ministère à les inviter plus régulièrement aux différentes sessions de planification, coordination et mécanismes de révision. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10041,486,'16','2007','0.0','2009','','Depuis 2008, nous poussons la société civile a être plus active dans le dialogue sectoriel et au ministère à les inviter plus régulièrement aux différentes sessions de planification, coordination et mécanismes de révision. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10042,486,'21','2007','300000.0','2009','730000.0','Unicef - Coordination sur les problèmes de prise en charge de la nutrition et achat de plumpy nuts');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10043,486,'22','2007','31250000.0','2009','55680000.0','5,3% du budget alloué à la santé en 2007 et 7,6% en 2009.Triggers cf.DTA P.8 document joint');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10044,486,'23','please select','0.0','2009','0.0','');
@@ -1828,19 +1655,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10048,487,'4','2005','','2009',
 INSERT INTO "submissions_dpquestion_2009" VALUES(10049,487,'5','','','','6000000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10050,487,'6','2005','','2009','25500000.0','All sector aid follows the classic way of request MoH- NAO-EC but this does not mean that this TC was part of the national program. Actually a PNDS has been approves and it should be the basis for a more rational request for TC');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10051,487,'7','','','','25500000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10052,487,'8','2005','','2009','25500000.0','Q8: 2005 - $0.                       all programms are multi-year');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10053,487,'9','','','','25500000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10054,487,'10','2005','','2009','25500000.0','Q10: 2005 - $0.                     we have no tool to calculate the amount disbursed as sheduled');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10055,487,'11','','','','25500000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10056,487,'12','2005','','2009','25500000.0','All procurement follows EDF or budget procedures');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10057,487,'13','','','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10058,487,'14','2005','','2009','25500000.0','Q14: 2005 - $0.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10059,487,'15','','','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10060,487,'16','2005','1.0','2009','1.0','The 10EDF project will be intégrated in a central MoH PIU');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10061,487,'17','2005','No','2009','No','idem, the CAG should introduce single national performance frameworks but is still not operational');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10062,487,'18','2005','No','2009','Yes','an annual joint review is organiszed since 2006, in 2009 a joint field visit was organiszed but it is still not proprerly scheduled');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10053,487,'8','','','','25500000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10054,487,'10old','2005','','2009','25500000.0','Q10: 2005 - $0.                     we have no tool to calculate the amount disbursed as sheduled');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10055,487,'11old','','','','25500000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10056,487,'10','2005','','2009','25500000.0','All procurement follows EDF or budget procedures');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10057,487,'11','','','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10059,487,'12','','','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10060,487,'13','2005','1.0','2009','1.0','The 10EDF project will be intégrated in a central MoH PIU');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10061,487,'14','2005','No','2009','No','idem, the CAG should introduce single national performance frameworks but is still not operational');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10062,487,'15','2005','No','2009','Yes','an annual joint review is organiszed since 2006, in 2009 a joint field visit was organiszed but it is still not proprerly scheduled');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10063,487,'19','','','','','Weak. The quality of the presentations is improving but it still cannot be considered asan en accountability mechanism');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10064,487,'20','please select','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10064,487,'16','please select','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10065,487,'21','please select','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10066,487,'22','please select','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10067,487,'23','please select','0.0','2009','0.0','');
@@ -1851,19 +1676,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10071,488,'4','2005','','2009',
 INSERT INTO "submissions_dpquestion_2009" VALUES(10072,488,'5','','','','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10073,488,'6','2005','16544062.4','2009','18639293.0','PROGRAMME BASED BUDGETING IS NOT USED YET IN MOZAMBIQUE');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10074,488,'7','','4132463.0','','7498493.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10075,488,'8','2005','12411599.4','2009','11140800.0','MET TARGET OF 90%');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10076,488,'9','','12411599.4','','11140800.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10077,488,'10','2005','12411599.4','2009','11140800.0','BASKET OR BUDGET SUPPORT SUPPORTS THE MOH''S STRATEGIC PLAN AS A WHOLE');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10078,488,'11','','12411599.0','','11140800.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10079,488,'12','2005','4660875.0','2009','1.0','THE COMMON FUND FOR MEDICAMENTOS WAS ABOLISHED IN 2008 HENCE WEARE ONLY DISBURSING TOWARDS THE SECTOR BUDGET  WRITTEN CONFIRMATION FROM JASON LANE (22/12 EMAIL TO TIM SHORTEN) THAT 100% OF PROCUREMENT FUNDS USED NATIONAL SYSTEMS, BUT DUE TO POOLED FUNDING IT IS NOT POSSIBLE TO SPECIFY THE AMOUNTS IN QUESTION HENCE FIGURES USED IN 2009.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10080,488,'13','','4660875.0','','1.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10081,488,'14','2005','16544062.4','2009','18639293.0','DATA FOR 2005 DIFFICULT TO RETRIEVE');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10082,488,'15','','4132463.0','','18639293.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10083,488,'16','please select','1.0','2009','0.0','DATA FOR 2005 DIFFICULT TO RETRIEVE');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10084,488,'17','2005','','2009','Yes','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10085,488,'18','2005','No','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10076,488,'8','','12411599.4','','11140800.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10077,488,'10old','2005','12411599.4','2009','11140800.0','BASKET OR BUDGET SUPPORT SUPPORTS THE MOH''S STRATEGIC PLAN AS A WHOLE');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10078,488,'11old','','12411599.0','','11140800.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10079,488,'10','2005','4660875.0','2009','1.0','THE COMMON FUND FOR MEDICAMENTOS WAS ABOLISHED IN 2008 HENCE WEARE ONLY DISBURSING TOWARDS THE SECTOR BUDGET  WRITTEN CONFIRMATION FROM JASON LANE (22/12 EMAIL TO TIM SHORTEN) THAT 100% OF PROCUREMENT FUNDS USED NATIONAL SYSTEMS, BUT DUE TO POOLED FUNDING IT IS NOT POSSIBLE TO SPECIFY THE AMOUNTS IN QUESTION HENCE FIGURES USED IN 2009.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10080,488,'11','','4660875.0','','1.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10082,488,'12','','4132463.0','','18639293.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10083,488,'13','please select','1.0','2009','0.0','DATA FOR 2005 DIFFICULT TO RETRIEVE');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10084,488,'14','2005','','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10085,488,'15','2005','No','2009','Yes','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10086,488,'19','','','','','is considered a burden by local authority');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10087,488,'20','please select','','2009','','19: CSO are integrated in the health SWAP through working groups and the health Partner''s Group meetings and mailing lists. 20: No clear view on this from the field, Global Fund and maybe some UN agencies could have received but no earmarking only for Mozambique I am afraid. Maybe BXL has a better idea?');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10087,488,'16','please select','','2009','','19: CSO are integrated in the health SWAP through working groups and the health Partner''s Group meetings and mailing lists. 20: No clear view on this from the field, Global Fund and maybe some UN agencies could have received but no earmarking only for Mozambique I am afraid. Maybe BXL has a better idea?');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10088,488,'21','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10089,488,'22','2007','59035181.4','2009','82316586.0','general eligibilty criteria are: sound macro-economic reform, progres on PFM and positive assessment of poverty reduction program (fixed tranches); performance on PFM indicators framework (variable tranch). 2005 variable tranche 30% health: women H: ante-natal consultations %, institutional deliveries %, post-natal consultations %; children''s health 1st consultation (0-4 years)%, TBC vaccine <1 year %, polio& DPT vaccine 0-23m % and measles vaccine 9-23m%
 2009 % : not GBS as such but YES in MDG tranches: institutional deliveries %, DPTHepB 3 coverage (%), health staff per adult capita, HIV TARV individual treatment total number
@@ -1876,19 +1699,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10094,489,'4','2005','','2009',
 INSERT INTO "submissions_dpquestion_2009" VALUES(10095,489,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10096,489,'6','please select','','2009','','The Technical cooperation for health included the engagement of TA for PRIME (EUR 4m) and TA for SRIK(EUR 2.8m). This is beside the use of Several framework consultants for monitoring and evaluations. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10097,489,'7','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10098,489,'8','0','0.0','2009','0.0','No. All support to the health sector under the EDF is usually done with the active involvement and participation of the National Authorising Officer of the EDF (usually the Honourable Minister of the National Planning Commission) and accompanied by appropriate and adequate PRESS RELEASES. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10099,489,'9','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10100,489,'10','0','0.0','2009','0.0','The PRIME project ended June 2009 and the SRIK project is expected to end in May 2011. Both projects experienced an initial slow start but picked up momemtum in fund disbursement from 2008 for PRIME and from 2009 for SRIK. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10101,489,'11','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10102,489,'12','2005','','2009','','Both PRIME and SRIK  project suppor the procurement of Cold Chain equipment such as solar refrigerators, vaccine carriers, motorcycles and venhicles for transportation and vaccine logistics; generators, etc. However, due to weak country procurement systems at that time, EDF procedures were solely complied with.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10103,489,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10104,489,'14','2005','0.0','2009','0.0','PRIME and SRIK projects operate(d) using a PMU (project management unit) based system. However, every effort was made to sync with sister projects and activities that enhance the governance aspects of EU-Nigeria development cooperation especially as pertains to public finance management.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10105,489,'15','','No','','No','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10106,489,'16','2005','1.0','2009','1.0','However the use of parallel implementation units of PMU''s will not be applied in the new project under the 10th EDF which specifically targets the use of and strenghtening of exisiting country systems.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10107,489,'17','2005','Yes','2009','Yes','Yes, as  much as possible, National Demographic and Health Survey Data were used to asses progress at various levels and stages of the projects (PRIME and SRIK).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10108,489,'18','2005','Yes','2009','Yes','Every effort is made  to ensure joint monitoring of support to polio eradication. However for the routine immunisation component of the action this was less practiced. Plans  are in place to apply mutual assessments under the 10th EDF. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10099,489,'8','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10100,489,'10old','0','0.0','2009','0.0','The PRIME project ended June 2009 and the SRIK project is expected to end in May 2011. Both projects experienced an initial slow start but picked up momemtum in fund disbursement from 2008 for PRIME and from 2009 for SRIK. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10101,489,'11old','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10102,489,'10','2005','','2009','','Both PRIME and SRIK  project suppor the procurement of Cold Chain equipment such as solar refrigerators, vaccine carriers, motorcycles and venhicles for transportation and vaccine logistics; generators, etc. However, due to weak country procurement systems at that time, EDF procedures were solely complied with.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10103,489,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10105,489,'12','','No','','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10106,489,'13','2005','1.0','2009','1.0','However the use of parallel implementation units of PMU''s will not be applied in the new project under the 10th EDF which specifically targets the use of and strenghtening of exisiting country systems.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10107,489,'14','2005','Yes','2009','Yes','Yes, as  much as possible, National Demographic and Health Survey Data were used to asses progress at various levels and stages of the projects (PRIME and SRIK).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10108,489,'15','2005','Yes','2009','Yes','Every effort is made  to ensure joint monitoring of support to polio eradication. However for the routine immunisation component of the action this was less practiced. Plans  are in place to apply mutual assessments under the 10th EDF. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10109,489,'19','','','','l','With the finalisation of the Country Compact and hopefully its signature by partners before the end of 2010, it is hoped that the joint Annual Health Sector Review will be established. Only then can its effectiveness be assessed.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10110,489,'20','2005','','2009','','Between 2005 to date, support to CSOs have progressivel increased. This support has  come in form of traditional grants (call for proposals - BUDGET)  or training and mentoring (programme estimates under EDF projects)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10110,489,'16','2005','','2009','','Between 2005 to date, support to CSOs have progressivel increased. This support has  come in form of traditional grants (call for proposals - BUDGET)  or training and mentoring (programme estimates under EDF projects)');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10111,489,'21','2007','','2009','','The Amount of EUR 20m was chanelled through WHO (contribution agreement) for Polio Eradication Actions from 2006 to 2008. Further such support is foreseen under the 10th EDF. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10112,489,'22','2005','0.0','2009','0.0','Nigeria is not yet receiving general budget support from the EU. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10113,489,'23','please select','0.0','2009','0.0','Nigeria is not yet receiving sector budget support from the EU. ');
@@ -1899,19 +1720,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10140,491,'4','2007','','2009',
 INSERT INTO "submissions_dpquestion_2009" VALUES(10141,491,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10142,491,'6','2007','','2009','','Please note that MCNH support provided through DFID is program based appraoche; 2007=120,856, 2009=226,365');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10143,491,'7','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10144,491,'8','2007','','2009','','Please note that the Joint DFID/Norway program provides multyyear commitments (5years)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10145,491,'9','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10146,491,'10','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10147,491,'11','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10148,491,'12','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10149,491,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10150,491,'14','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10151,491,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10152,491,'16','2007','','2009','1.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10153,491,'17','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10154,491,'18','2007','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10145,491,'8','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10146,491,'10old','2007','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10147,491,'11old','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10148,491,'10','2007','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10149,491,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10151,491,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10152,491,'13','2007','','2009','1.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10153,491,'14','2007','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10154,491,'15','2007','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10155,491,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10156,491,'20','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10156,491,'16','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10157,491,'21','2007','0.0','2009','6426958.5','DFID/Norway Joint MNCH program');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10158,491,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10159,491,'23','2007','0.0','2009','0.0','');
@@ -1922,19 +1741,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10163,492,'4','2005','0.0','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(10164,492,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10165,492,'6','2005','4207470.0','2009','4152700.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10166,492,'7','','3786000.0','','4152700.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10167,492,'8','2005','3097470.0','2009','2620000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10168,492,'9','','3097470.0','','2620000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10169,492,'10','2005','3097470.0','2009','2620000.0','disbursements made according to plans');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10170,492,'11','','3097470.0','','2620000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10171,492,'12','2005','0.0','2009','0.0','No specific contributions for procurement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10172,492,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10173,492,'14','2005','3786000.0','2009','4152700.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10174,492,'15','','3786000.0','','4152700.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10175,492,'16','please select','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10176,492,'17','2005','Yes','2009','Yes','Sweden acting in  Burkina Faso through Netherlands who used a single PAF. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10177,492,'18','2005','Yes','2009','Yes','See comment on question 6 above');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10168,492,'8','','3097470.0','','2620000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10169,492,'10old','2005','3097470.0','2009','2620000.0','disbursements made according to plans');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10170,492,'11old','','3097470.0','','2620000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10171,492,'10','2005','0.0','2009','0.0','No specific contributions for procurement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10172,492,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10174,492,'12','','3786000.0','','4152700.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10175,492,'13','please select','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10176,492,'14','2005','Yes','2009','Yes','Sweden acting in  Burkina Faso through Netherlands who used a single PAF. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10177,492,'15','2005','Yes','2009','Yes','See comment on question 6 above');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10178,492,'19','','','','','See comment on question 6 above');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10179,492,'20','2005','421470.0','2009','',' support to CSO in Burkina mainly service delivery but also strengthening NGOs to better participate in policy processes. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10179,492,'16','2005','421470.0','2009','',' support to CSO in Burkina mainly service delivery but also strengthening NGOs to better participate in policy processes. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10180,492,'21','2007','10656.0','2009','22270.0','Support channeled through programme funding of Swedish NGOs. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10181,492,'22','2007','7400000.0','2009','11790000.0','GBS to BF: triggers = for the fixed tranche that the five fundamental prerequisites for GBS are fulfilled; i) human rights and democracy, ii) strategy for poverty reduction, iii) economic policies, iv)  public financial management system, v)anti-corruption. For the variable tranche the condition is that the performance in the area of good governance and public financial management are fulfilled and the government performance   is acceptable measured against a set  of indicators taken from the performance matrix of the PAP-CSLP.  ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10182,492,'23','2007','','2009','','');
@@ -1945,19 +1762,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10186,493,'4','2005','0.0','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(10187,493,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10188,493,'6','2005','2319941.2074','2009','730782.714','2005 Ethiopia: HSDP Ess Obstetric Care (3 500 000), CSO Direct Funding (533 357), HIVAIDS thru UNICEF 1 (13 192 620), HSDP III Formulation (112 896).2009 : Ethiopia: CSO Direct Funding (325 785), HIV/AIDS thru UNICEF II (5 000 000) , Evaluation HIV/AIDS thru UNICEF (252 709). ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10189,493,'7','','468300.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10190,493,'8','2005','2319941.2074','2009','730782.714','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10191,493,'9','','2304835.7226','','655000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10192,493,'10','2005','2319941.2074','2009','730782.714','disbursements made according to plans');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10193,493,'11','','2319874.3074','','730782.714','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10194,493,'12','2005','0.0','2009','0.0','No specific contributions for procurement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10195,493,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10196,493,'14','2005','468300.0','2009','0.0','2005: Ethiopia: HSDP Ess Obstetric Care (3 500 000) ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10197,493,'15','','468300.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10198,493,'16','please select','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10199,493,'17','2005','No','2009','No',' In 2005 Sweden was also active in Ethiopia but did not at that time use PAF. Not present in the health sector 2009');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10200,493,'18','2005','No','2009','Yes','See comment on question 6 above');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10191,493,'8','','2304835.7226','','655000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10192,493,'10old','2005','2319941.2074','2009','730782.714','disbursements made according to plans');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10193,493,'11old','','2319874.3074','','730782.714','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10194,493,'10','2005','0.0','2009','0.0','No specific contributions for procurement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10195,493,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10197,493,'12','','468300.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10198,493,'13','please select','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10199,493,'14','2005','No','2009','No',' In 2005 Sweden was also active in Ethiopia but did not at that time use PAF. Not present in the health sector 2009');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10200,493,'15','2005','No','2009','Yes','See comment on question 6 above');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10201,493,'19','','','','','See comment on question 6 above');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10202,493,'20','please select','0.0','2009','0.0','2005: no direct support to CSO policy involvement but support to CSO in Burkina and Mocqambique, mainly service delivery but also strengthening NGOs to better participate in policy processes. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10202,493,'16','please select','0.0','2009','0.0','2005: no direct support to CSO policy involvement but support to CSO in Burkina and Mocqambique, mainly service delivery but also strengthening NGOs to better participate in policy processes. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10203,493,'21','2007','106285.608','2009','39418.817','Support channeled through programme funding of Swedish NGOs. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10204,493,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10205,493,'23','2007','0.0','2009','0.0','');
@@ -1968,19 +1783,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10209,494,'4','2005','0.0','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(10210,494,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10211,494,'6','2005','4683000.0','2009','4585000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10212,494,'7','','4683000.0','','4585000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10213,494,'8','2005','4683000.0','2009','4585000.0','The reason for the poor result 2005 was that the sector budget support to Mali was a shortterm agreement while working on a multiyear agreement.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10214,494,'9','','0.0','','4585000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10215,494,'10','2005','4683000.0','2009','4585000.0','disbursements made according to plans');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10216,494,'11','','4683000.0','','4585000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10217,494,'12','2005','0.0','2009','0.0','No specific contributions for procurement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10218,494,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10219,494,'14','2005','4683000.0','2009','4585000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10220,494,'15','','4683000.0','','4585000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10221,494,'16','please select','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10222,494,'17','2005','Yes','2009','Yes','Sweden acting in Mali and Burkina Faso through Netherlands who used a single PAF.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10223,494,'18','2005','No','2009','Yes','See comment on question 6 above');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10214,494,'8','','0.0','','4585000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10215,494,'10old','2005','4683000.0','2009','4585000.0','disbursements made according to plans');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10216,494,'11old','','4683000.0','','4585000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10217,494,'10','2005','0.0','2009','0.0','No specific contributions for procurement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10218,494,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10220,494,'12','','4683000.0','','4585000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10221,494,'13','please select','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10222,494,'14','2005','Yes','2009','Yes','Sweden acting in Mali and Burkina Faso through Netherlands who used a single PAF.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10223,494,'15','2005','No','2009','Yes','See comment on question 6 above');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10224,494,'19','','','','','See comment on question 6 above');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10225,494,'20','please select','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10225,494,'16','please select','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10226,494,'21','2007','34780.0','2009','14410.0','Support channeled through programme funding of Swedish NGOs. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10227,494,'22','2007','10360000.0','2009','17030000.0',' triggers = for the fixed tranche that the five fundamental prerequisites for GBS are fulfilled; i) human rights and democracy, ii) strategy for poverty reduction, iii) economic policies, iv)  public financial management system, v)anti-corruption. The variable tranche  is conditioned to govn performance under certain indicators in the PAF linked to the area of education, public financial management and anti corruption.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10228,494,'23','2007','5180000.0','2009','4585000.0','');
@@ -1991,19 +1804,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10232,495,'4','2005','0.0','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(10233,495,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10234,495,'6','2005','1970731.2084','2009','4676700.0','2005:  Mocambique: HIVAIDS Niassa (NGO) (354 000),  Cont. HIV Niassa (3 226 583), Program Dev Fund 2005-6 (445 435), MSF HIV/Aids antidiscr (250 000). 2009:, national aids council (6 000 000)  ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10235,495,'7','','1398600.0','','4676700.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10236,495,'8','2005','572131.2084','2009','786000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10237,495,'9','','431716.8054','','786000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10238,495,'10','2005','572131.2084','2009','786000.0','disbursements made according to plans');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10239,495,'11','','572131.2084','','786000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10240,495,'12','2005','0.0','2009','0.0','No specific contributions for procurement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10241,495,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10242,495,'14','2005','1398699.0','2009','4676700.0',' Mocambique: national aids council (6 000 000)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10243,495,'15','','1398699.0','','4676700.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10244,495,'16','please select','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10245,495,'17','2005','Yes','2009','Yes','Only support to NAC');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10246,495,'18','2005','Yes','2009','Yes','See comment on question 6 above');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10237,495,'8','','431716.8054','','786000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10238,495,'10old','2005','572131.2084','2009','786000.0','disbursements made according to plans');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10239,495,'11old','','572131.2084','','786000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10240,495,'10','2005','0.0','2009','0.0','No specific contributions for procurement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10241,495,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10243,495,'12','','1398699.0','','4676700.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10244,495,'13','please select','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10245,495,'14','2005','Yes','2009','Yes','Only support to NAC');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10246,495,'15','2005','Yes','2009','Yes','See comment on question 6 above');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10247,495,'19','','','','','See comment on question 6 above');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10248,495,'20','2005','431716.8054','2009','','Hiv aids support to NGOs in Niassa, maily service delivery and advocacy but sthrengthened CSO.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10248,495,'16','2005','431716.8054','2009','','Hiv aids support to NGOs in Niassa, maily service delivery and advocacy but sthrengthened CSO.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10249,495,'21','2007','361428.136','2009','217724.358','Support channeled through programme funding of Swedish NGOs. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10250,495,'22','2007','19980000.0','2009','43230000.0','For Mocambique 75% of GBS was disbursed based on assessment of general conditions like macroeconomic stability, poverty reduction, democracy human rights and corruption. 25% on performance based assessment of 18 indicators from the PAF.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10251,495,'23','2007','0.0','2009','0.0','');
@@ -2014,19 +1825,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10255,496,'4','2007','621234.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(10256,496,'5','','0.0','','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10257,496,'6','2005','516550.0','2009','18702633.6','We have supported the health sector through NGO projects, WHO and UNICEf projects, MDG Fund and other bileteral projects with the Government.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10258,496,'7','','0.0','','7349937.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10259,496,'8','2005','516550.0','2009','18702633.6','We stablished a 3 year commitment with the MDG Fund for 2008,2009 and 2010.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10260,496,'9','','0.0','','7000000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10261,496,'10','2005','516550.0','2009','18702633.6','Percentage has been decreased because some contributions to multilateral organisations take more time as they are approved and negociated at HQ level, with the risk of disbursing one year late.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10262,496,'11','','516550.0','','13090843.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10263,496,'12','2005','','2009','854897.2','Between 2008 and 2010 we have provided health sector aid for procurement through the MDG Fund, but it is very difficult to specify how much was Spanish as it is a pool fund of several donors. It has been calculated by extracting 40% of the total amount on procurement, as Spanish contribution. A share of MDG Fund contributions 2009 was used for procurement of vaccines (2.137.243 USD), and of drugs (6.845.097 USD). ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10264,496,'13','','','','854897.2','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10265,496,'14','2007','612494.0','2009','7210000.0','2007=612,494');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10266,496,'15','','0.0','','7210000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10267,496,'16','2005','3.0','2009','0.0','In 2009, we did not use PIUs for the provision of health sector aid for the goverment, but there are still PIUs for the provision of health aid in general in the country through NGOs (1) and United Nations Agencies (3: WHO, UNICEF and UNDP). In 2005 we only worked in health through 3 NGOs (so there were 3 PIUs), but in 2009, for the provision of health to the GOVERNMENT we didn’t use PIUs. But I added some extra information on the last column to clarify that there are still PIUs in health because we still work with NGOs and UN organizations.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10268,496,'17','2005','No','2009','Yes','In the MDG Fund we are using the HDSP as a framework for assessment, prioritation,indicators monitoring and so on in order to harmonise donors'' interventions. There is not a single donor''s assessment yet, as in other countries(*).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10269,496,'18','2005','No','2009','Yes','The country office was establised in 2007. In the frame of the MDG Fund we do carry out joint reviews and missions.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10260,496,'8','','0.0','','7000000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10261,496,'10old','2005','516550.0','2009','18702633.6','Percentage has been decreased because some contributions to multilateral organisations take more time as they are approved and negociated at HQ level, with the risk of disbursing one year late.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10262,496,'11old','','516550.0','','13090843.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10263,496,'10','2005','','2009','854897.2','Between 2008 and 2010 we have provided health sector aid for procurement through the MDG Fund, but it is very difficult to specify how much was Spanish as it is a pool fund of several donors. It has been calculated by extracting 40% of the total amount on procurement, as Spanish contribution. A share of MDG Fund contributions 2009 was used for procurement of vaccines (2.137.243 USD), and of drugs (6.845.097 USD). ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10264,496,'11','','','','854897.2','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10266,496,'12','','0.0','','7210000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10267,496,'13','2005','3.0','2009','0.0','In 2009, we did not use PIUs for the provision of health sector aid for the goverment, but there are still PIUs for the provision of health aid in general in the country through NGOs (1) and United Nations Agencies (3: WHO, UNICEF and UNDP). In 2005 we only worked in health through 3 NGOs (so there were 3 PIUs), but in 2009, for the provision of health to the GOVERNMENT we didn’t use PIUs. But I added some extra information on the last column to clarify that there are still PIUs in health because we still work with NGOs and UN organizations.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10268,496,'14','2005','No','2009','Yes','In the MDG Fund we are using the HDSP as a framework for assessment, prioritation,indicators monitoring and so on in order to harmonise donors'' interventions. There is not a single donor''s assessment yet, as in other countries(*).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10269,496,'15','2005','No','2009','Yes','The country office was establised in 2007. In the frame of the MDG Fund we do carry out joint reviews and missions.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10270,496,'19','','','','','A review of the governance structure of the Boards, Groups and Committes is taking place in order to make them more effective. It is also necessary to improve the coordination and coherence with the DAG.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10271,496,'20','2008','660473.0','2009','0.0','We supported an NGO project consisting in raising awareness about HIV among young people in Addis Ababa. Nevertheless, in the health sector, we consider civil socity as beneficiaries of the public system, so the stronger and more effective the system, the better for the users. What is important is to have free good diagnosis and treatments for them and to know their opinion about the service received.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10271,496,'16','2008','660473.0','2009','0.0','We supported an NGO project consisting in raising awareness about HIV among young people in Addis Ababa. Nevertheless, in the health sector, we consider civil socity as beneficiaries of the public system, so the stronger and more effective the system, the better for the users. What is important is to have free good diagnosis and treatments for them and to know their opinion about the service received.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10272,496,'21','please select','0.0','2009','0.0','We are involved in the Fast Track Initiative on Division of Labour in Ethiopia but experiences on delegated cooperation have not been taken place yet (*). From our point of view, a greater harmonization of donors is necessary for operations of delegated cooperation. Common procedures, common funding mechanisms (pool funds or GBS/SBS), common agreements (MoUs, Joint Financial Arrangements and Code of Conducts that do not exist here, apart from IHP Compact), a clear division of labour, an effective dialogue groups in place, a strong trust among donors, and so on. In Ethiopia those issues are not fully in place yet. An example of good practices in Delegated Cooperation would be Nordic + Group of donors and its Delegated Cooperation Guidelines where all procedures are clearly stated and jointly agreed. Donors here have not reached that stage and there are only very few Nordic + ones in MDG Fund (DFiD and Irish Aid).');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10273,496,'22','please select','0.0','2009','0.0','We contribute to the Protection of Basic Services (PBS) fund with 13.6 million $ per year since 2008. PBS replaced the GBS in 2005. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10274,496,'23','please select','0.0','2009','0.0','We participate in the MDG pool fund. There is SBS in health in the country.');
@@ -2043,19 +1852,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10284,497,'4','2007','180220.5'
 INSERT INTO "submissions_dpquestion_2009" VALUES(10285,497,'5','','0.0','','303586.8','en 2009: les sommes  du projet SSR , car il s''intégre dans les procedures PRODESS (les montant de l''ABS ne sont pas inclus). Cette sommes, 218,000 €,  figure  dans le budget 2009 de l''AECID mais à été débursé en 2010 au Mali');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10286,497,'6','2007','1386126.82','2009','4684348.5',' ABS, projet d''appuie a la SSR avec procedures nationales, fond regional CEDEAO pour la malaria non inclu dans le PNde lutte contre le Palu, subvention a differentes ONG espagnole et cooperation du gouvernement dels comunautés autonomiques de l`Espagne (Andaluzia)  ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10287,497,'7','','0.0','','2319584.19','2009 :en principe 2,665,650 devrait être indiqué dans cette colonne, mais 1M€ de decaissé au Mali en 2009 appartient au budget 2008 de l''AECID, ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10288,497,'8','2007','1386126.82','2009','4684348.5',' ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10289,497,'9','','310725.0','','2892630.73','ABS, projet SSR et programme au ONG avec un durée de 4 ans (convenios)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10290,497,'10','2007','1386126.82','2009','4684348.5','Les aides financeés aux ONGs à travers les appels d''offre regulières sont décaissées a l''heure     ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10291,497,'11','','961350.835','','3444877.41','ABS 2009: 1 m€ 2008 a été decaissé en 2009 et 1 M€ 2009 a été decaissé en 2009. donc pour le Mali des 2 M€ ABS 1M€ ne sera pas décaissés pendant l''année convenue   ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10292,497,'12','2007','298296.0','2009','577929.0','equipement et construction essencielment (pour l''ABS les données ne sont pas disponibles)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10293,497,'13','','0.0','','320298.0','la somme de 230 000 correspond  au projet SSR, qui pour l''AECID rentre dans le budget 2009 mais que le gouvernement malien a reçu début 2010 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10294,497,'14','2007','961350.835','2009','2319584.19','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10295,497,'15','','0.0','','1392600.0','cette somme, 1665650, correspond a 1M€ ABS et 655 650 SSR ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10296,497,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10297,497,'17','2007','No','2009','Yes','ABS (a trvers la coopertion délegué avec Pays Bas) et projet SSR, qui s''inscrit dans la politique national de la SSR et donc dans le PRODESS. Spain is following joint missions of evaluation  but as we are silent and do not have enough human resources we have not participated yet in any evaluation. However, we are involved in the organisation and participate in the meetings to share the monitoring process and results. The joint monitoring sessions are being implemented under the PRODESS framework and authority but sometimes we do it on our own. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10298,497,'18','2007','No','2009','No','le mécanisme est mis en place,mais puisque l''AECID est un partenaire silencieux les missions, c''est les Pays Bas qui participent aux dites missions ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10289,497,'8','','310725.0','','2892630.73','ABS, projet SSR et programme au ONG avec un durée de 4 ans (convenios)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10290,497,'10old','2007','1386126.82','2009','4684348.5','Les aides financeés aux ONGs à travers les appels d''offre regulières sont décaissées a l''heure     ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10291,497,'11old','','961350.835','','3444877.41','ABS 2009: 1 m€ 2008 a été decaissé en 2009 et 1 M€ 2009 a été decaissé en 2009. donc pour le Mali des 2 M€ ABS 1M€ ne sera pas décaissés pendant l''année convenue   ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10292,497,'10','2007','298296.0','2009','577929.0','equipement et construction essencielment (pour l''ABS les données ne sont pas disponibles)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10293,497,'11','','0.0','','320298.0','la somme de 230 000 correspond  au projet SSR, qui pour l''AECID rentre dans le budget 2009 mais que le gouvernement malien a reçu début 2010 ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10295,497,'12','','0.0','','1392600.0','cette somme, 1665650, correspond a 1M€ ABS et 655 650 SSR ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10296,497,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10297,497,'14','2007','No','2009','Yes','ABS (a trvers la coopertion délegué avec Pays Bas) et projet SSR, qui s''inscrit dans la politique national de la SSR et donc dans le PRODESS. Spain is following joint missions of evaluation  but as we are silent and do not have enough human resources we have not participated yet in any evaluation. However, we are involved in the organisation and participate in the meetings to share the monitoring process and results. The joint monitoring sessions are being implemented under the PRODESS framework and authority but sometimes we do it on our own. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10298,497,'15','2007','No','2009','No','le mécanisme est mis en place,mais puisque l''AECID est un partenaire silencieux les missions, c''est les Pays Bas qui participent aux dites missions ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10299,497,'19','2007','','','','Coopération déleguée');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10300,497,'20','2007','0.0','2009','','Depuis 2009, les OSC financées par l''AECID sont invités au réunion de coordination bien au niveau du bureau, bien avec les plateformes ou federation d''OSC de la santé. We have financed the civil society in the area of health, not specifically to strengthen policy dialogue but rather to improve health provision and care. The OTC (Technical Office of Cooperation) suggested to support the Common Fund of Donors originated to strengthen policy dialogue. It is a common fund not specific for health but rather for the civil society in any sector. It was even included in the Annual Operational Plan of the Spanish Cooperation but Spain took the decision too late and is waiting for the next opportunity to assign funds.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10300,497,'16','2007','0.0','2009','','Depuis 2009, les OSC financées par l''AECID sont invités au réunion de coordination bien au niveau du bureau, bien avec les plateformes ou federation d''OSC de la santé. We have financed the civil society in the area of health, not specifically to strengthen policy dialogue but rather to improve health provision and care. The OTC (Technical Office of Cooperation) suggested to support the Common Fund of Donors originated to strengthen policy dialogue. It is a common fund not specific for health but rather for the civil society in any sector. It was even included in the Annual Operational Plan of the Spanish Cooperation but Spain took the decision too late and is waiting for the next opportunity to assign funds.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10301,497,'21','2007','1672690.39','2009','6852020.92','2007: unicef                                  2009:                                      1,638,156 unicef                           3 282 152 Fond ODM                   En cooperation délegué avec les Pays Bas il y a eu 1,000,000 euros décaissés, mais cette somme est déboursée directement au Ministère des Finance du Mali, car cette délégation est seulement technique. Cette somme n''est donc pas inclue dans cette ligne. In 2007 the OTC was just starting the operations in the country as Mali was considered a priority country just in 2006. At that time the main instrument was the bilateral cooperation. From almost 5 millions of euros, 3.282.152 went to a fund from UN and just 1.000.000 was asigned for delegated cooperation. The decision at that time was taken at the headquarters or NYork. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10302,497,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10303,497,'23','2007','0.0','2009','1392600.0','');
@@ -2066,20 +1873,18 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10307,498,'4','2007','2454000.0
 INSERT INTO "submissions_dpquestion_2009" VALUES(10308,498,'5','','2454000.0','','3838800.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10309,498,'6','2007','8910501.0','2009','13900810.0','We are supporting SWAP in Mozambique since 2000 and the main support we provide in this area is through participation in technical working groups and also providing technical assistance to MISAU in different areas.With the other international partners, one of the main objetives to this support is to ensure that the National Health Strategic Plan (PESS), strategic plans and the overall, Naitonal HIV/AIDS Strategy and the annual plans (PES) contain clear objectives and targets in line withe the MDG. Apart from the SWAP programme, there is another programme based approach (M-SWAP) focused on SIDA but, so far, Spain hasn´t disbursed any money for it.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10310,498,'7','','2820000.0','','4356000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10311,498,'8','2007','8490501.0','2009','13144810.0','We have continued to increase disbursements to the health sector in the country and our commitment is to continue with this increase provided,mainly,  trough multi-year commiments.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10312,498,'9','','7016902.0','','9718292.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10313,498,'10','2007','8490501.0','2009','13144810.0','In the two years analyzed, all our financial commitments have been made and disbursed as planned and scheduled.         (See attached "HPG Disbursement_Plan_2010")');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10314,498,'11','','8490501.0','','13144810.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10315,498,'12','2005','','2009','','In this area / context we don´t have assigned amounts or specific actions but we can say that the government uses more than one third their own procurement systems. Presently all agencies and donors are usually supporting the procurement processes, using national procedures, with few exceptions mainly due to stock-out cases at the provincial level or any other situation such as the HIV/SIDA testing campaing. These exceptions have required the use of procedures other than those of the government to provide timely response.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10316,498,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10317,498,'14','2007','8910501.0','2009','13900810.0','We are using all national PFM systems (budget execution, financial reporting procedures, national auditing procedures) aand the only action to support this area is the involvement of a OTC´s economist in the working group of financial procedures');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10318,498,'15','','3361200.0','','4416000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10319,498,'16','
+INSERT INTO "submissions_dpquestion_2009" VALUES(10312,498,'8','','7016902.0','','9718292.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10313,498,'10old','2007','8490501.0','2009','13144810.0','In the two years analyzed, all our financial commitments have been made and disbursed as planned and scheduled.         (See attached "HPG Disbursement_Plan_2010")');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10314,498,'11old','','8490501.0','','13144810.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10315,498,'10','2005','','2009','','In this area / context we don´t have assigned amounts or specific actions but we can say that the government uses more than one third their own procurement systems. Presently all agencies and donors are usually supporting the procurement processes, using national procedures, with few exceptions mainly due to stock-out cases at the provincial level or any other situation such as the HIV/SIDA testing campaing. These exceptions have required the use of procedures other than those of the government to provide timely response.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10316,498,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10318,498,'12','','3361200.0','','4416000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10319,498,'13','
 2007','0.0','2009','0.0','We haven´t had PIUs in the analyzed years.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10320,498,'17','2007','Yes','2009','Yes','Yes, we routinely use the national performance assessment framework. This tool is fully installed in the daily work of all donors at country level. It is reviewed annually and, if necessary, modified the targets are met or indicators that are deemed inappropriate');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10321,498,'18','2005','Yes','2009','Yes','Yes. Every year since we signed the SWAP, we participate actively in the implementation of the annual assessment which measures indicators in the QUAD (performance assessment framework)  and the recommendations of the matrix developed in the previous CCS (sectoral coordination meeting which takes place twice a year). These documents measures the performance of government and the donor countries.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10320,498,'14','2007','Yes','2009','Yes','Yes, we routinely use the national performance assessment framework. This tool is fully installed in the daily work of all donors at country level. It is reviewed annually and, if necessary, modified the targets are met or indicators that are deemed inappropriate');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10321,498,'15','2005','Yes','2009','Yes','Yes. Every year since we signed the SWAP, we participate actively in the implementation of the annual assessment which measures indicators in the QUAD (performance assessment framework)  and the recommendations of the matrix developed in the previous CCS (sectoral coordination meeting which takes place twice a year). These documents measures the performance of government and the donor countries.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10322,498,'19','','','','','So far,aid effectiveness was not addressed in previous JARs. Actually,  the ToR of the new ACA metodology  (Avaliação conjunta anual)-JAR) that are being developed  will include aid effectiveness. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10323,498,'20','2007','','2009','','We continue with our work supporting civil society organisations at all levels and advocate for their increased involvement in planning mechanis aligned with MoH processes. We contribute to the dissemination of information of national processes to ensure alignment, relevance and harmonization of all activities undertaken by various health NGOs that we support.                            (see attached"Financiamento salud OTC Maputo Noviembre 2010")');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10323,498,'16','2007','','2009','','We continue with our work supporting civil society organisations at all levels and advocate for their increased involvement in planning mechanis aligned with MoH processes. We contribute to the dissemination of information of national processes to ensure alignment, relevance and harmonization of all activities undertaken by various health NGOs that we support.                            (see attached"Financiamento salud OTC Maputo Noviembre 2010")');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10324,498,'21','2007','0.0','2009','2234160.0','Since 2009 we are supporting the Joint Program on Children, Food Security and Nutrition being implemented by four UN agencies (WHO, UNICEF, FAO, WFP). This program will be implemented during 3 years (until 2011) and the total amount disbursed is 5.500.000 $U.S.D (see attached"Financiamento salud OTC Maputo Noviembre 2010")');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10325,498,'22','2007','6000000.0','2009','8400000.0','These amount correspond to the money contributed to the General Budget Support in 2007 and 2009');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10326,498,'23','2007','2400000.0','2009','3600000.0','These amounts relate to disburse in 2007 and 2009 for the Education and Health Sector which are the sector that are receiving our sector budget support ( Figures disagregated 2007: 2.400.000 for health sector and 2009: 3.600.000)');
@@ -2092,21 +1897,19 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10330,499,'4','2005','','2009',
 INSERT INTO "submissions_dpquestion_2009" VALUES(10331,499,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10332,499,'6','2005','1305045.0','2009','','Par rapport à la question nº7, le Fond Commun de Sante (FCS) appui le Plan de Développement Sanitaire du MSP.Ce Plan contient 8 axes estratégiques.2009=8,599,148');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10333,499,'7','','0.0','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10334,499,'8','2007','3782281.6512','2009','8599147.6362','En principe et dans l´actualité, il n´y a pas eu d´engagement plurianuel. Bonne question, notre intention c’est de commencer peu à peu car ce n´est pas un appui budgétaire sinon extra budgétaire et en plus nous nous trouvons dans un pays avec une instabilité politique qui conseille d¨´être prudent vis-à-vis de la planification à long terme. L´idée c’est que dans un futur proche, ou même pour le prochain décaissement nous présentons à l´AECID la possibilité d´un décaissement plurianuel.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10335,499,'9','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10336,499,'10','2005','1305045.0','2009','8599147.6362','Le problèmes sont plutot avec les fonds multilaterals. Les documents  que nous pouvons montrer ce sont les documents projets des différents acteurs qui interviennent.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10337,499,'11','','1305045.0','','5801414.2362','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10338,499,'12','2005','','2009','','Le FCS finance les appels d´offres que le MSP planifie et execute.Pour ces appels d´offre, on suit les procédures établies par la Banque Mondiale.
+INSERT INTO "submissions_dpquestion_2009" VALUES(10335,499,'8','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10336,499,'10old','2005','1305045.0','2009','8599147.6362','Le problèmes sont plutot avec les fonds multilaterals. Les documents  que nous pouvons montrer ce sont les documents projets des différents acteurs qui interviennent.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10337,499,'11old','','1305045.0','','5801414.2362','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10338,499,'10','2005','','2009','','Le FCS finance les appels d´offres que le MSP planifie et execute.Pour ces appels d´offre, on suit les procédures établies par la Banque Mondiale.
 
 Nous n´avons pas de chiffres desagregées');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10339,499,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10340,499,'14','2005','','2009','','Pour 2005 nous n´avons pas trouvé de données, même pas dans le PACI 2005 (Plan Annuel de la Coopération Internationale Espagnole). Nous sommes au Bureau Technique de Coopération en plein processus de recompilation de toutes les données des différents financements. 2005=0, 2009=1,392,600');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10341,499,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10342,499,'16','2005','','2009','1.0','L´idée d´appuyer le MSP par le biais du FCS est précisement d´unifier toutes les actions de notre coopération en une seule précisement pour eviter les projets en parallèle.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10343,499,'17','2007','No','2009','Yes','Le FCS a un mécanisme établi de revisions semestrielle de l´execution du Plan d´Actions Anuel.Il y a le Rappport de Suivi Financier, la Revue semestrielle et à la fin de l´année, il y a un audit externe du FCS. J´ai sollicité l´audit externe en format électronique mais par contre je ne peux pas affirmer que nous soyons en train d´utiliser les National Assesment Framework. En fait, par rapport à ça, ce sont les indicateurs nationaux nigériens ou espagnols ?');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10344,499,'18','2005','No','2009','No','Par rapport au Pacte National IHP+ nous n´avons aucun renseignement d´évaluation conjointes.Nous suposons que c est parce que l´Espagne vient de signer son adhésion, de même que le Niger.Dans touts les cas, avec l´adhésion de l´Espagne et du Niger au Compact, ainsi que le FCS, permetrons de mettre en fonctionnement des évaluations conjointes.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10339,499,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10341,499,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10342,499,'13','2005','','2009','1.0','L´idée d´appuyer le MSP par le biais du FCS est précisement d´unifier toutes les actions de notre coopération en une seule précisement pour eviter les projets en parallèle.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10343,499,'14','2007','No','2009','Yes','Le FCS a un mécanisme établi de revisions semestrielle de l´execution du Plan d´Actions Anuel.Il y a le Rappport de Suivi Financier, la Revue semestrielle et à la fin de l´année, il y a un audit externe du FCS. J´ai sollicité l´audit externe en format électronique mais par contre je ne peux pas affirmer que nous soyons en train d´utiliser les National Assesment Framework. En fait, par rapport à ça, ce sont les indicateurs nationaux nigériens ou espagnols ?');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10344,499,'15','2005','No','2009','No','Par rapport au Pacte National IHP+ nous n´avons aucun renseignement d´évaluation conjointes.Nous suposons que c est parce que l´Espagne vient de signer son adhésion, de même que le Niger.Dans touts les cas, avec l´adhésion de l´Espagne et du Niger au Compact, ainsi que le FCS, permetrons de mettre en fonctionnement des évaluations conjointes.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10345,499,'19','2005','','','','A partir de l´adhésion de l´Espagne au FCS,il y a prévu des revue semestrielle du Plan d´action annuelle ainsi qu´il y a un Rapport de suivi financier semestrielle dont l´aprobation ou pas conditionne le décaissement suivant.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10346,499,'20','2005','','2009','','2005=aucun, 2009=MANQUE D´INFORMATION');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10346,499,'16','2005','','2009','','2005=aucun, 2009=MANQUE D´INFORMATION');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10347,499,'21','2005','994320.0','2009','5201500.26','En principe I l y a plusieurs raisons: d´abord de 2005 jusqu´à 2009 il n´y avait pas de Bureau Technique de coopération (OTC), même pas d´ambassade (ouverte en 2008), donc le financement était indirect fondamentalement, que ça soie par le biais de multilatéral comme par les ONGDs espagnoles. 
 D´autre part, maintenant avec l´OTC nous sommes en train de consolider notre position dans le pays, et le secteur de la santé est un des secteurs prioritaires. De même, la participation au FCS implique des décaissements importants. Par rapport aux autres bailleurs de fonds du FCS, c´est-à-dire, la Banque Mondiale et la AFD, notre montant est le plus petit. Finalement, notre objectif est d´augmenter encore plus notre contribution financière.
 ');
@@ -2119,19 +1922,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10353,500,'4','2007','0.0','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(10354,500,'5','','0.0','','2577300.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10355,500,'6','2007','18269895.0','2009','34848220.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10356,500,'7','','15761193.0','','32505220.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10357,500,'8','2007','2508702.0','2009','22102300.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10358,500,'9','','1817900.0','','22102300.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10359,500,'10','2007','2508702.0','2009','22102300.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10360,500,'11','','2508702.0','','22102300.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10361,500,'12','2007','1817900.0','2009','19525000.0','In 2007, funding channelled through World Bank for procurement (GBP 5million) which wasn''t through GoE procurement systems');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10362,500,'13','','0.0','','17182000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10363,500,'14','2007','17579093.0','2009','32270920.0','As above');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10364,500,'15','','15761193.0','','29927920.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10365,500,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10366,500,'17','2007','Yes','2009','Yes','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10367,500,'18','2007','No','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10358,500,'8','','1817900.0','','22102300.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10359,500,'10old','2007','2508702.0','2009','22102300.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10360,500,'11old','','2508702.0','','22102300.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10361,500,'10','2007','1817900.0','2009','19525000.0','In 2007, funding channelled through World Bank for procurement (GBP 5million) which wasn''t through GoE procurement systems');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10362,500,'11','','0.0','','17182000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10364,500,'12','','15761193.0','','29927920.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10365,500,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10366,500,'14','2007','Yes','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10367,500,'15','2007','No','2009','Yes','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10368,500,'19','','One of a number of mechanisms for accountability','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10369,500,'20','2007','Non financial support','2009','No financial support','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10369,500,'16','2007','Non financial support','2009','No financial support','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10370,500,'21','2007','9089500.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10371,500,'22','2007','154521500.0','2009','124960000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10372,500,'23','please select','0.0','2009','0.0','');
@@ -2142,19 +1943,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10376,501,'4','2007','4563740.0
 INSERT INTO "submissions_dpquestion_2009" VALUES(10377,501,'5','','4563740.0','','4093788.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10378,501,'6','2007','15871078.0','2009','20932101.0','This includes Prosaude common fund, the Common fund TA budget line, and Malaria consortium project. We also provided funding for HIV/AIDS - but this is not health sector specific. The funding through Prosaude is considered programme based funding. By 2009 over 66% of funding is through programme based approaches. In 2010 our funding for malaria will end, increasing percentage share through PBAs. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10379,501,'7','','11307338.0','','16838360.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10380,501,'8','2007','11289970.0','2009','15027741.0','Malaria consortium project was a 5 year funding commitment ending in 2010. Prosaude commitment and TA budget are 5 year commitments. All funding is therefore multi-year. Prosaude commitments are included in MTEF and provided 3 year funding information. Funding is always disbursed as indicated. Malaria consortium funding is based on an annual budget, with minor variations in disbursement against plan, relating to rates of project execution. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10381,501,'9','','11289970.0','','15027741.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10382,501,'10','2007','11289970.0','2009','15027741.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10383,501,'11','','11268586.0','','14647146.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10384,501,'12','2007','100.0','2009','100.0','Funding through PROSAUDE is not earmarked, and therefore it is not possible to say how much is used on procurement, other than attribution of a proportion of the funding corresponding to the proportion MISAU spends on procurement. Procurement through PROSAUDE uses government systems. (NOTE: HAVE AMENDED FIGURES TO REFLECT THE % OF FUNDING THAT USES NATIONAL PROCUREMENT SYSTEMS, BASED ON EMAIL EXCHANGES WITH DFID IN DEC/JAN, WITH FINAL CONFIRMATION FROM SUE CHANDLER IN EMAIL ON XXX).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10385,501,'13','','60.0','','73.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10386,501,'14','2007','11326328.0','2009','17183301.0','The Prosaude funds use government PFM systems, but TA and malaria programme do not. GBS funding has not been included here. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10387,501,'15','','11307338.0','','16838360.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10388,501,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10389,501,'17','2007','Yes','2009','Yes','There is a single national performance assessment framework which is our sole tool for montoring sector performance (both years)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10390,501,'18','2007','No','2009','Yes','A framework for monitoring MOU commitments has been developed (2010) and will be used to monitor MOU (and IHP) compliance on an annual basis - as part of the Annual Joint Evaluation process. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10381,501,'8','','11289970.0','','15027741.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10382,501,'10old','2007','11289970.0','2009','15027741.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10383,501,'11old','','11268586.0','','14647146.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10384,501,'10','2007','100.0','2009','100.0','Funding through PROSAUDE is not earmarked, and therefore it is not possible to say how much is used on procurement, other than attribution of a proportion of the funding corresponding to the proportion MISAU spends on procurement. Procurement through PROSAUDE uses government systems. (NOTE: HAVE AMENDED FIGURES TO REFLECT THE % OF FUNDING THAT USES NATIONAL PROCUREMENT SYSTEMS, BASED ON EMAIL EXCHANGES WITH DFID IN DEC/JAN, WITH FINAL CONFIRMATION FROM SUE CHANDLER IN EMAIL ON XXX).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10385,501,'11','','60.0','','73.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10387,501,'12','','11307338.0','','16838360.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10388,501,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10389,501,'14','2007','Yes','2009','Yes','There is a single national performance assessment framework which is our sole tool for montoring sector performance (both years)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10390,501,'15','2007','No','2009','Yes','A framework for monitoring MOU commitments has been developed (2010) and will be used to monitor MOU (and IHP) compliance on an annual basis - as part of the Annual Joint Evaluation process. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10391,501,'19','','','','','Joint annual review considered 36 indicators of performance, with 4 indicators looking at donor performance. The review includes a data verification exercise and the results are presented and discussed at a public meeting chaired by the Minister of Health - with active civil society participation. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10392,501,'20','2007','','2009','','Civil society has 2 seats (Naima a network of international NGOs and MONASO a network of national NGOs, are members fo the health partner group. Naima joints the monthly donor meeting with the MOH. Many civil society organisations are invited to the twice yearly government and donor policy dialogue.   CSO support is the funding of the Malaria consortium (an INGO, rather than CSO). The Malaria consortium was initially contracted to establish social marketing of bed nets - it was therefore a legitimate complementary strategy to governent funding. However the Minister introduced a policy of free bed nets for mothers and children, and therefore the project morphed in to a combination of social marketing promotion and a larger component of supporting a public/private partnership for bed net distribution to health facilities in support of the Ministry of Health campaign of free nets. So, whilst the funding was to an INGO - the programme was for delivery of a government priority of net distribution.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10392,501,'16','2007','','2009','','Civil society has 2 seats (Naima a network of international NGOs and MONASO a network of national NGOs, are members fo the health partner group. Naima joints the monthly donor meeting with the MOH. Many civil society organisations are invited to the twice yearly government and donor policy dialogue.   CSO support is the funding of the Malaria consortium (an INGO, rather than CSO). The Malaria consortium was initially contracted to establish social marketing of bed nets - it was therefore a legitimate complementary strategy to governent funding. However the Minister introduced a policy of free bed nets for mothers and children, and therefore the project morphed in to a combination of social marketing promotion and a larger component of supporting a public/private partnership for bed net distribution to health facilities in support of the Ministry of Health campaign of free nets. So, whilst the funding was to an INGO - the programme was for delivery of a government priority of net distribution.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10393,501,'21','2007','901309.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10394,501,'22','2007','65444400.0','2009','65604000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10395,501,'23','please select','6544440.0','2009','10934000.0','');
@@ -2165,20 +1964,18 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10491,506,'4','2005','72609.0',
 INSERT INTO "submissions_dpquestion_2009" VALUES(10492,506,'5','','72609.0','','0.0','It is important to note that WB support to the health sector is fully coordinated with other partners and in line with the national health strategy. Note, however, that in Niger much of the disbursements for health came from non-health sector projects.  Please see tab 2DPb for more information.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10493,506,'6','2005','6250000.0','2009','5730000.0','Please note that totals given for "health sector aid for the government sector ($USD)" (2DPa2) and "health sector aid ($USD) did you disburse at country level"(2DPc6) are the same, as the World Bank disburses all funds through partner governments at the country level. See tab 2DPa2 for data.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10494,506,'7','','6250000.0','','5730000.0','This response has been revised to reflect inputs from health sector projects only. Use of programme based approaches in the HIV/AIDS project (P071612) is very strong. Similarly, use of programme based approaches in the Health Sector program (P083350) is estimated at 100%. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions" please see tab 2DPc and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10495,506,'8','2005','6250000.0','2009','5730000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10496,506,'9','','2500000.0','','5730000.0','In CY05 the Niger Public Expenditure Reform Credit made up approximately 60% of total disbursements to the health sector. However, funds for this work were delivered in a single tranche in CY05, while all other projects were multi-year. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10497,506,'10','2005','6250000.0','2009','5730000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10498,506,'11','','6250000.0','','5730000.0',' No disbursement delays were reported for relevant projects in CY05 or CY09. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 4DP and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10499,506,'12','2005','2863096.0','2009','4629396.0','This data reflects contracts awarded for each year. Seven contracts were awarded in CY2005; 12 contracts were awarded in CY09. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components.   
+INSERT INTO "submissions_dpquestion_2009" VALUES(10496,506,'8','','2500000.0','','5730000.0','In CY05 the Niger Public Expenditure Reform Credit made up approximately 60% of total disbursements to the health sector. However, funds for this work were delivered in a single tranche in CY05, while all other projects were multi-year. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10497,506,'10old','2005','6250000.0','2009','5730000.0','See  tab 2DPa for data.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10498,506,'11old','','6250000.0','','5730000.0',' No disbursement delays were reported for relevant projects in CY05 or CY09. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 4DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10499,506,'10','2005','2863096.0','2009','4629396.0','This data reflects contracts awarded for each year. Seven contracts were awarded in CY2005; 12 contracts were awarded in CY09. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components.   
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10500,506,'13','','2147322.0','','3472047.0','This response has been revised to reflect inputs from health sector projects only. Use of country procurement systems in Niger has been strong. However, as capacity is being built, the WB requires some additional oversight for procurement. For further information see tab 5DPa and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10501,506,'14','2005','6250000.0','2009','5730000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10502,506,'15','','6250000.0','','5730000.0','This response has been revised to reflect inputs from health sector projects only. Use of country FM systems in Niger has been strong. For further information see tab 5DPa and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10503,506,'16','2005','','2009','0.0','Due to lack of ability to speak with the TTL (who was ill), we have not been able to confirm the figure for CY05. However, in CY09, no PIUs were used. Please see tab 083350 for further information.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10504,506,'17','2005','Yes','2009','Yes','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 6DPb and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10505,506,'18','2005','N/A','2009','Yes','Due to lack of ability to speak with the TTL (who was ill), we have not been able to confirm the figure for CY05. However, in CY09, the government facilitated joint reviews twice a year open to a variety of stakeholders to assess sector performance and reach agreement on AAPs for the coming year. For more information, please see tab 083350.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10500,506,'11','','2147322.0','','3472047.0','This response has been revised to reflect inputs from health sector projects only. Use of country procurement systems in Niger has been strong. However, as capacity is being built, the WB requires some additional oversight for procurement. For further information see tab 5DPa and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10502,506,'12','','6250000.0','','5730000.0','This response has been revised to reflect inputs from health sector projects only. Use of country FM systems in Niger has been strong. For further information see tab 5DPa and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10503,506,'13','2005','','2009','0.0','Due to lack of ability to speak with the TTL (who was ill), we have not been able to confirm the figure for CY05. However, in CY09, no PIUs were used. Please see tab 083350 for further information.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10504,506,'14','2005','Yes','2009','Yes','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 6DPb and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10505,506,'15','2005','N/A','2009','Yes','Due to lack of ability to speak with the TTL (who was ill), we have not been able to confirm the figure for CY05. However, in CY09, the government facilitated joint reviews twice a year open to a variety of stakeholders to assess sector performance and reach agreement on AAPs for the coming year. For more information, please see tab 083350.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10506,506,'19','','','','','Due to lack of ability to speak with the TTL (who was ill), we have not been able to confirm the figure for CY05. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10507,506,'20','please select','0.0','2009','0.0','The WB does not provide funds directly to NGOs/CS. However, in some cases, such as P071612, there is a formal agreement with the Government that they will engage CS and contract them for specific work under the project. Additionally, the WB is very supportive of CS engagement in health sector activities, such as participation in JANS and development partner fora, etc. For more information, please see tab 8DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10507,506,'16','please select','0.0','2009','0.0','The WB does not provide funds directly to NGOs/CS. However, in some cases, such as P071612, there is a formal agreement with the Government that they will engage CS and contract them for specific work under the project. Additionally, the WB is very supportive of CS engagement in health sector activities, such as participation in JANS and development partner fora, etc. For more information, please see tab 8DP and relevant sources noted therein.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10508,506,'21','please select','0.0','2009','0.0','All World Bank disbursements given to the Government of Niger.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10509,506,'22','please select','0.0','2009','0.0','According to the definitions laid out in the HP+ Results "Guide to Key Terms and Definitions" document, the WB does not provide general budget support. Rather, the WB provides investment lending.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10510,506,'23','please select','0.0','2009','0.0','');
@@ -2190,20 +1987,18 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10515,507,'5','','0.0','','2120
 INSERT INTO "submissions_dpquestion_2009" VALUES(10516,507,'6','2005','11700000.0','2009','3300000.0','Please note that totals given for "health sector aid for the government sector ($USD)" (2DPa) and "health sector aid ($USD) did you disburse at country level"(2DPc-6) are the same, as the World Bank disburses all funds through partner governments at the country level. See  tab 2DPa for data.
 ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10517,507,'7','','11700000.0','','3300000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tabs 2DPc705 and 2DP709 and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10518,507,'8','2005','11700000.0','2009','3300000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10519,507,'9','','11700000.0','','3300000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10520,507,'10','2005','11700000.0','2009','3300000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10521,507,'11','','11700000.0','','3300000.0',' No disbursement delays were reported for relevant projects in Nepal in CY05 or CY09. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 4DP and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10522,507,'12','2005','5406107.0','','423317.0','This data reflects contracts awarded for each year. 10 contracts were awarded in CY2005; 2 contracts were awarded in CY2009. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components.   
+INSERT INTO "submissions_dpquestion_2009" VALUES(10519,507,'8','','11700000.0','','3300000.0','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 3DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10520,507,'10old','2005','11700000.0','2009','3300000.0','See  tab 2DPa for data.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10521,507,'11old','','11700000.0','','3300000.0',' No disbursement delays were reported for relevant projects in Nepal in CY05 or CY09. For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 4DP and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10522,507,'10','2005','5406107.0','','423317.0','This data reflects contracts awarded for each year. 10 contracts were awarded in CY2005; 2 contracts were awarded in CY2009. Please note that this does not necessarily reflect total amounts disbursed. Furthermore, procurement data here reflects only data for procurement in health-sector projects and does not include, for example, education projects with health components.   
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10523,507,'13','','0.0','','0.0','Due to years of political conflict, WB identified an number of weaknesses in country systems, including institutional framework and capacity. The WB is working in each of the relevant projects on building capacity in this area. For further information please see tab FDPa13 and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10524,507,'14','2005','11700000.0','2009','3300000.0','See  tab 2DPa for data.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10525,507,'15','','11700000.0','','3300000.0','This answer has been revised to reflect information from health sector projects only. These projects utilized national FM systems for the length of the project in respective calendar years. The WB also uses national institutions and national staff for procurment. For more information see tab 5DPb and relevant sources noted therein.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10526,507,'16','please select','0.0','2009','0.0','The WB has not set up any parallel PIUs, but relies on the government offices which officiate the project. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10527,507,'17','2005','Yes','2009','Yes','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 6DPb and relevant sources noted therein. Interview with TTL primary source.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10528,507,'18','2005','Yes','2009','Yes','The WB works with the government and other partners in working groups. The WB also particiaptes in reviwing commitments jointly developing work plans (RBF, etc.). Finally, all partners participate in the JAR.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10523,507,'11','','0.0','','0.0','Due to years of political conflict, WB identified an number of weaknesses in country systems, including institutional framework and capacity. The WB is working in each of the relevant projects on building capacity in this area. For further information please see tab FDPa13 and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10525,507,'12','','11700000.0','','3300000.0','This answer has been revised to reflect information from health sector projects only. These projects utilized national FM systems for the length of the project in respective calendar years. The WB also uses national institutions and national staff for procurment. For more information see tab 5DPb and relevant sources noted therein.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10526,507,'13','please select','0.0','2009','0.0','The WB has not set up any parallel PIUs, but relies on the government offices which officiate the project. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10527,507,'14','2005','Yes','2009','Yes','For more detailed information and justification for this rating based on the IHP+ Results "Guide to Key Terms and Definitions"please see tab 6DPb and relevant sources noted therein. Interview with TTL primary source.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10528,507,'15','2005','Yes','2009','Yes','The WB works with the government and other partners in working groups. The WB also particiaptes in reviwing commitments jointly developing work plans (RBF, etc.). Finally, all partners participate in the JAR.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10529,507,'19','','','','','The JAR is viewed as a good way to raise awareness and as a good knowledge and learning tool. However, it was noted that the JAR, as a mututal accountability mechanism is currently weak, but that it is getting stronger. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10530,507,'20','2005','','2009','','The WB does not provide funds directly to NGOs/CS. However, there is a formal agreement with the Government (MOH) that they will engage CS and contract them for specific work under various components of the workplans. Additionally, the WB is very supportive of CS engagement in health sector activities, such as participation in JANS and development partner fora, etc. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10530,507,'16','2005','','2009','','The WB does not provide funds directly to NGOs/CS. However, there is a formal agreement with the Government (MOH) that they will engage CS and contract them for specific work under various components of the workplans. Additionally, the WB is very supportive of CS engagement in health sector activities, such as participation in JANS and development partner fora, etc. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10531,507,'21','2005','0.0','2009','0.0','All World Bank disbursements given to the Government of Burundi.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10532,507,'22','2005','0.0','2009','0.0','According to the definitions laid out in the HP+ Results "Guide to Key Terms and Definitions" document, the WB does not provide general budget support. Rather, the WB provides investment lending - it does not provide support directly to the national treasury.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10533,507,'23','2005','0.0','2009','0.0','According to the definitions laid out in the HP+ Results "Guide to Key Terms and Definitions" document, the WB does not provide sector budget support as defined by the World Bank.  However, in practice, WB investment lending under the Nepal health project is very much like sector budget support as it flows directly to Nepal''s national treasury and finances a slice of the ministry''s budget.');
@@ -2214,19 +2009,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10537,509,'4','2007','2883123.0
 INSERT INTO "submissions_dpquestion_2009" VALUES(10538,509,'5','','1536300.0','','1433700.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10539,509,'6','2007','18395997.6','2009','4637223.0','Here we have included all DAC coded health ODA (not only government sector).  As program based approaches we have included the support for SWAP and UNFPA in 2007.   In 2009 - Only UNFPA  is  included as program based approach.   Norway ended its support for the health sector in 2008. The Norwegian embassy wished to increase its GBS contribution and focus the development dialogue around the GBS support.  Funding now predominantly flows through GBS. (ref figures in q22 and q23) while some Multi-bi and NGO support is maintained.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10540,509,'7','','16865160.0','','3727620.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10541,509,'8','2007','16723137.6','2009','2343303.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10542,509,'9','','15192300.0','','1433700.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10543,509,'10','2007','16723137.6','2009','2343303.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10544,509,'11','','16723137.6','','2343303.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10545,509,'12','2007','','2009','','no procurment contracts');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10546,509,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10547,509,'14','2007','17049686.7','2009','3966570.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10548,509,'15','','15328860.0','','2293920.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10549,509,'16','2007','0.0','2009','0.0','Not sure whether Gerazao Biz (2007 and 2009) Foundation for Community Development (2009) should be counted as PIUs');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10550,509,'17','2007','Yes','2009','No','Norway is no longer participating in the Health Swap.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10551,509,'18','2007','Yes','2009','n/a','Norway is no longer participating in the Health Swap.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10542,509,'8','','15192300.0','','1433700.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10543,509,'10old','2007','16723137.6','2009','2343303.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10544,509,'11old','','16723137.6','','2343303.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10545,509,'10','2007','','2009','','no procurment contracts');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10546,509,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10548,509,'12','','15328860.0','','2293920.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10549,509,'13','2007','0.0','2009','0.0','Not sure whether Gerazao Biz (2007 and 2009) Foundation for Community Development (2009) should be counted as PIUs');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10550,509,'14','2007','Yes','2009','No','Norway is no longer participating in the Health Swap.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10551,509,'15','2007','Yes','2009','n/a','Norway is no longer participating in the Health Swap.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10552,509,'19','','Satisfied with ACA process as a joing accountability process.','','Not participating','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10553,509,'20','2007','483934.5','2009','451615.5','MSF Integrated Aids Network');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10553,509,'16','2007','483934.5','2009','451615.5','MSF Integrated Aids Network');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10554,509,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10555,509,'22','2007','23898000.0','2009','25488000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10556,509,'23','2007','13656000.0','2009','0.0','');
@@ -2237,19 +2030,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10583,511,'4','2005','n/a','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(10584,511,'5','','n/a','','n/a','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10585,511,'6','2005','5181198.0','2009','2235233.0','As GAVI supports countries'' immunisation and health programmes, GAVI support is programme based by design. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10586,511,'7','','5181198.0','','2235233.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10587,511,'8','2005','5181198.0','2009','2235233.0','GAVI supports countries for the duration of the health and immunisation plan, and is therefore multi-year by design. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10588,511,'9','','5181198.0','','2235233.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10589,511,'10','2005','5181198.0','2009','2235233.0','In 2005, GAVI disbursed funds for injection safety (USD 57, 716, for 2004), rewards-based immunisation services support (USD 1,149,100), and for 4-in-1 tetravalent vaccine (USD 4,148,793). In 2009, the country did not qualify for rewards, but received USD 2,149,628 for 5-in-1 pentavalent vaccine.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10590,511,'11','','5123482.0','','2235233.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10591,511,'12','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10592,511,'13','','n/a','','n/a','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10593,511,'14','2005','','2009','','GAVI cash support flows through country systems by design. However, GAVI does not track whether aid to the health sector uses countries'' PFM systems. 2005=5,181,198, 2009=2,235,233');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10594,511,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10595,511,'16','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10596,511,'17','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10597,511,'18','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10588,511,'8','','5181198.0','','2235233.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10589,511,'10old','2005','5181198.0','2009','2235233.0','In 2005, GAVI disbursed funds for injection safety (USD 57, 716, for 2004), rewards-based immunisation services support (USD 1,149,100), and for 4-in-1 tetravalent vaccine (USD 4,148,793). In 2009, the country did not qualify for rewards, but received USD 2,149,628 for 5-in-1 pentavalent vaccine.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10590,511,'11old','','5123482.0','','2235233.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10591,511,'10','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10592,511,'11','','n/a','','n/a','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10594,511,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10595,511,'13','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10596,511,'14','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10597,511,'15','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10598,511,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10599,511,'20','2005','0.0','2009','0.0','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries. Nepal has not applied for this support.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10599,511,'16','2005','0.0','2009','0.0','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries. Nepal has not applied for this support.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10600,511,'21','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10601,511,'22','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10602,511,'23','please select','','2009','','');
@@ -2260,19 +2051,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10606,512,'4','2005','n/a','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(10607,512,'5','','n/a','','n/a','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10608,512,'6','2005','2909623.0','2009','5834086.0','As GAVI supports countries'' immunisation and health programmes, GAVI support is programme based by design. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10609,512,'7','','2909623.0','','5834086.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10610,512,'8','2005','2909623.0','2009','5834086.0','GAVI supports countries for the duration of the health and immunisation plan, and is therefore multi-year by design. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10611,512,'9','','2909623.0','','5834086.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10612,512,'10','2005','2909623.0','2009','5834086.0','The 2005 funds are for injection safety (USD 28,155) f0r 2005, and for 4-in-1 tetravalent vaccine (USD 2,207,509 for 2005 and USD 673,959 for 2006). The 2009 support is for 5-in-1 pentavalent vaccine for 2009 (USD 4,286,563) and 2010 (USD 1,547,523).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10613,512,'11','','2909623.0','','5834086.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10614,512,'12','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10615,512,'13','','n/a','','n/a','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10616,512,'14','2005','','2009','','GAVI cash support flows through country systems by design. However, GAVI does not track whether aid to the health sector uses countries'' PFM systems. 2005=2,909,623, 2009=5,834,086');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10617,512,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10618,512,'16','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10619,512,'17','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10620,512,'18','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10611,512,'8','','2909623.0','','5834086.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10612,512,'10old','2005','2909623.0','2009','5834086.0','The 2005 funds are for injection safety (USD 28,155) f0r 2005, and for 4-in-1 tetravalent vaccine (USD 2,207,509 for 2005 and USD 673,959 for 2006). The 2009 support is for 5-in-1 pentavalent vaccine for 2009 (USD 4,286,563) and 2010 (USD 1,547,523).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10613,512,'11old','','2909623.0','','5834086.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10614,512,'10','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10615,512,'11','','n/a','','n/a','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10617,512,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10618,512,'13','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10619,512,'14','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10620,512,'15','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10621,512,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10622,512,'20','2005','0.0','2009','0.0','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries, and support for CSO programmatic activities in 10 pilot countries. Mozambique is one of the pilot countries, and has applied but the Independent Review Committee asked that the proposal be revised and resubmitted. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10622,512,'16','2005','0.0','2009','0.0','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries, and support for CSO programmatic activities in 10 pilot countries. Mozambique is one of the pilot countries, and has applied but the Independent Review Committee asked that the proposal be revised and resubmitted. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10623,512,'21','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10624,512,'22','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10625,512,'23','please select','','2009','','');
@@ -2283,19 +2072,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10629,513,'4','2005','n/a','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(10630,513,'5','','n/a','','n/a','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10631,513,'6','2005','100000.0','2009','37767287.42','As GAVI supports countries'' immunisation and health programmes, GAVI support is programme based by design. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10632,513,'7','','100000.0','','37767287.42','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10633,513,'8','2005','100000.0','2009','37767287.42','GAVI supports countries for the duration of the health and immunisation plan, and is therefore multi-year by design. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10634,513,'9','','100000.0','','37767287.42','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10635,513,'10','2005','100000.0','2009','37767287.42','The USD 100,000 disbursed in 2005 were for preparation for new vaccine introduction and scheduled for 2005. Of the funds disbursed in 2009, USD 1,983,500 were for CSO support, USD 7,653, 132 for health system strengthening, USD 25,971,433 for 5-in1 pentavalent vaccine, and 1,994,500 were rewards-based Immunisation Services Support funds. USD 164,722 were for vaccines for 2008.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10636,513,'11','','100000.0','','37602565.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10637,513,'12','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10638,513,'13','','n/a','','n/a','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10639,513,'14','2005','100000.0','2009','37767287.42','100000 in 2005. 37767287.42 in 2007. GAVI cash support flows through country systems by design. However, GAVI does not track whether aid to the health sector uses countries'' PFM systems.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10640,513,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10641,513,'16','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10642,513,'17','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10643,513,'18','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. In Ethiopia, the GAVI Secretariat has participated in the annual health sector review. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10634,513,'8','','100000.0','','37767287.42','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10635,513,'10old','2005','100000.0','2009','37767287.42','The USD 100,000 disbursed in 2005 were for preparation for new vaccine introduction and scheduled for 2005. Of the funds disbursed in 2009, USD 1,983,500 were for CSO support, USD 7,653, 132 for health system strengthening, USD 25,971,433 for 5-in1 pentavalent vaccine, and 1,994,500 were rewards-based Immunisation Services Support funds. USD 164,722 were for vaccines for 2008.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10636,513,'11old','','100000.0','','37602565.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10637,513,'10','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10638,513,'11','','n/a','','n/a','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10640,513,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10641,513,'13','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10642,513,'14','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10643,513,'15','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. In Ethiopia, the GAVI Secretariat has participated in the annual health sector review. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10644,513,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10645,513,'20','2005','0.0','2009','1983500.0','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries, and support for CSO programmatic activities in 10 pilot countries. Ethiopia is one of the pilot countries, and has been approved for this support. USD 1,983,500 was scheduled for and disbursed in 2009. GAVI is also in the process of strengthening CSO engagement overall and as part of this invited Ethiopian CSOs to the November 2009 partners'' meeting in Hanoi.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10645,513,'16','2005','0.0','2009','1983500.0','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries, and support for CSO programmatic activities in 10 pilot countries. Ethiopia is one of the pilot countries, and has been approved for this support. USD 1,983,500 was scheduled for and disbursed in 2009. GAVI is also in the process of strengthening CSO engagement overall and as part of this invited Ethiopian CSOs to the November 2009 partners'' meeting in Hanoi.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10646,513,'21','2007','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10647,513,'22','2007','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10648,513,'23','2007','','2009','','');
@@ -2306,19 +2093,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10652,514,'4','2005','n/a','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(10653,514,'5','','n/a','','n/a','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10654,514,'6','2005','3866278.0','2009','3772070.54','As GAVI supports countries'' immunisation and health programmes, GAVI support is programme based by design. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10655,514,'7','','3866278.0','','3772070.54','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10656,514,'8','2005','3866278.0','2009','3772070.54','GAVI supports countries for the duration of the health and immunisation plan, and is therefore multi-year by design. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10657,514,'9','','3866278.0','','3772070.54','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10658,514,'10','2005','3866278.0','2009','3772070.54','In 2005, GAVI disbursed funds for monovalent Hepatitis B vaccine, 5-in-1 pentavalent vaccine, and Yellow Fever vaccine (total USD 2,976,074, of which USD 1,157,690 was originally approved for 2002, 2003 and 2004), for injection safety materials (USD 210,684, for 2005), and rewards-based Immunisation Services Support (USD 679,520, on time). In 2009, USD 3,772,071 were disbursed for 5-in-1 pentavalent vaccine and for Yellow Fever vaccine. Of this, USD 8,153 was for 2004,  USD 3,364,360 was for 2005, and USD 399,258 was for 2006.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10659,514,'11','','2708588.0','','3763918.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10660,514,'12','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10661,514,'13','','n/a','','n/a','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10662,514,'14','2005','','2009','','GAVI cash support flows through country systems by design. However, GAVI does not track whether aid to the health sector uses countries'' PFM systems. 2005=3,866,278, 2009=3,772,071');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10663,514,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10664,514,'16','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10665,514,'17','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10666,514,'18','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10657,514,'8','','3866278.0','','3772070.54','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10658,514,'10old','2005','3866278.0','2009','3772070.54','In 2005, GAVI disbursed funds for monovalent Hepatitis B vaccine, 5-in-1 pentavalent vaccine, and Yellow Fever vaccine (total USD 2,976,074, of which USD 1,157,690 was originally approved for 2002, 2003 and 2004), for injection safety materials (USD 210,684, for 2005), and rewards-based Immunisation Services Support (USD 679,520, on time). In 2009, USD 3,772,071 were disbursed for 5-in-1 pentavalent vaccine and for Yellow Fever vaccine. Of this, USD 8,153 was for 2004,  USD 3,364,360 was for 2005, and USD 399,258 was for 2006.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10659,514,'11old','','2708588.0','','3763918.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10660,514,'10','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10661,514,'11','','n/a','','n/a','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10663,514,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10664,514,'13','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10665,514,'14','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10666,514,'15','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10667,514,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10668,514,'20','2005','0.0','2009','0.0','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries. Mali has not applied for this support.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10668,514,'16','2005','0.0','2009','0.0','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries. Mali has not applied for this support.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10669,514,'21','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10670,514,'22','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10671,514,'23','please select','','2009','','');
@@ -2329,19 +2114,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10698,517,'4','2005','na','2009
 INSERT INTO "submissions_dpquestion_2009" VALUES(10699,517,'5','','na','','na','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10700,517,'6','2005','3228038.64','2009','5383954.0','As GAVI supports countries'' immunisation and health programmes, GAVI support is programme based by design. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10701,517,'7','','3228038.64','','5383954.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10702,517,'8','2005','3228038.64','2009','5383954.0','GAVI supports countries for the duration of the health and immunisation plan, and is therefore multi-year by design. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10703,517,'9','','3228038.64','','5383954.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10704,517,'10','2005','3228038.64','2009','5383954.0','The funds disbursed to Burundi in 2009 are for vaccines to be used in the country''s routine immunisation programme in 2009 and 2010. USD 2,274,000  approved for health system strengthening for 2008 was only disbursed in 2009 following negotiation on fund flow arrangements. USD 1,634,279 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10705,517,'11','','3228038.64','','3109954.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10706,517,'12','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10707,517,'13','','n/a','','n/a','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10708,517,'14','2005','','2009','','3228038.64 in 2005. 5383954 in 2007. GAVI cash support flows through country systems by design. However, GAVI does not track whether aid to the health sector uses countries'' PFM systems.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10709,517,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10710,517,'16','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10711,517,'17','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report (APR) to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10712,517,'18','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10703,517,'8','','3228038.64','','5383954.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10704,517,'10old','2005','3228038.64','2009','5383954.0','The funds disbursed to Burundi in 2009 are for vaccines to be used in the country''s routine immunisation programme in 2009 and 2010. USD 2,274,000  approved for health system strengthening for 2008 was only disbursed in 2009 following negotiation on fund flow arrangements. USD 1,634,279 ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10705,517,'11old','','3228038.64','','3109954.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10706,517,'10','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10707,517,'11','','n/a','','n/a','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10709,517,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10710,517,'13','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10711,517,'14','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report (APR) to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10712,517,'15','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10713,517,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10714,517,'20','2005','0.0','2009','','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries, and support for CSO programmatic activities in 10 pilot countries. Burundi is one of the pilot countries, and has been approved for this support. Funds were not disbursed in 2009 as an agreement on fund flow was pending. GAVI is also in the process of strengthening CSO engagement overall and as part of this invited Burundi CSOs to the November 2009 partners'' meeting in Hanoi.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10714,517,'16','2005','0.0','2009','','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries, and support for CSO programmatic activities in 10 pilot countries. Burundi is one of the pilot countries, and has been approved for this support. Funds were not disbursed in 2009 as an agreement on fund flow was pending. GAVI is also in the process of strengthening CSO engagement overall and as part of this invited Burundi CSOs to the November 2009 partners'' meeting in Hanoi.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10715,517,'21','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10716,517,'22','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10717,517,'23','please select','','2009','','');
@@ -2352,19 +2135,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10721,518,'4','2005','n/a','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(10722,518,'5','','n/a','','n/a','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10723,518,'6','2005','929006.0','2009','1626307.52','As GAVI supports countries'' immunisation and health programmes, GAVI support is programme based by design. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10724,518,'7','','929006.0','','1626307.52','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10725,518,'8','2005','929006.0','2009','1626307.52','GAVI supports countries for the duration of the health and immunisation plan, and is therefore multi-year by design. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10726,518,'9','','929006.0','','1626307.52','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10727,518,'10','2005','929006.0','2009','1626307.52','In 2005, GAVI disbursed USD 326,435 for injection safety for 2004 and USD 167,570 for 2006, and USD 4325,000 in rewards-based immunisation services support. In 2009, GAVI disbursed USD 151,085 for vaccine support for 2008 and USD 1,475,223 for vaccine support for 2009. Niger receives vaccine support for Yellow Fever vaccine and for 5-in-1 pentavalent vaccine.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10728,518,'11','','602571.0','','1475223.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10729,518,'12','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10730,518,'13','','n/a','','n/a','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10731,518,'14','2005','','2009','','GAVI cash support flows through country systems by design. However, GAVI does not track whether aid to the health sector uses countries'' PFM systems. 2005=929,006, 2009=1,626,308');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10732,518,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10733,518,'16','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10734,518,'17','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10735,518,'18','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10726,518,'8','','929006.0','','1626307.52','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10727,518,'10old','2005','929006.0','2009','1626307.52','In 2005, GAVI disbursed USD 326,435 for injection safety for 2004 and USD 167,570 for 2006, and USD 4325,000 in rewards-based immunisation services support. In 2009, GAVI disbursed USD 151,085 for vaccine support for 2008 and USD 1,475,223 for vaccine support for 2009. Niger receives vaccine support for Yellow Fever vaccine and for 5-in-1 pentavalent vaccine.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10728,518,'11old','','602571.0','','1475223.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10729,518,'10','2005','n/a','2009','n/a','For GAVI''s vaccine support, countries are free to self-procure, and some do. However, the bulk of GAVI countries procure GAVI-supported vaccines and related supplies through bulk procurement mechanisms (UNICEF Supply Division, PAHO''s Revolving Fund), pooling demand and therefore facilitating reduction in vaccine price and increased stability of vaccine supply.  For GAVI''s cash support, there are no constraints related to procurement, and funds can be used as the country has stipulated in its proposal to GAVI and in line with its immunisation and health plan. When developing the survey tool, it was agreed that GAVI will therefore not report on this indicator.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10730,518,'11','','n/a','','n/a','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10732,518,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10733,518,'13','please select','n/a','2009','n/a','By design, GAVI support flows through country mechanisms and does not make use of PIUs. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10734,518,'14','2005','No','2009','No','GAVI measures performance through information and data submitted through countries'' annual progress report to GAVI. These are proposed by the country in its proposal to GAVI, and should be drawn from the country''s own performance assessment framework, and is therefore aligned with the country''s own performance assessment frameworks and collected data. However, GAVI so far assesses performance through the APR.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10735,518,'15','2005','No','2009','No','GAVI is represented by partners at country level, and has not undertaken mutual assessments of progress as such as we do not seek to duplicate efforts undertaken in country. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10736,518,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10737,518,'20','2005','','2009','','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries. Niger has not applied for this support.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10737,518,'16','2005','','2009','','From 2007, GAVI has made available support for strengthening CSO participation in health sector policy processes to all GAVI-eligible countries. Niger has not applied for this support.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10738,518,'21','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10739,518,'22','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10740,518,'23','please select','','2009','','');
@@ -2375,19 +2156,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10744,519,'4','2008','','2009',
 INSERT INTO "submissions_dpquestion_2009" VALUES(10745,519,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10746,519,'6','2008','1320000.0','2009','5940000.0','0.66m in 2008 and 4.53m in 2009 is thorugh pooled funding arrangement. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10747,519,'7','','660000.0','','4530000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10748,519,'8','2008','1320000.0','2009','5940000.0','AusAID joined pooled funding arrangement in 2008/09, and had committed for the contribution of 7 million over 2 years - the remaining 2 years period of the Nepal Health Sector Program-Implementation Plan I (2004-2010). The AusAID contribution to the second phase of the program over five years was annouced at UNGA by Minister Smith on Sep 2009. AusAID contribution to the second phase program will continue through the pool funding mechanism and the technical assistance through UNICEF is also under discussion to align with the national strategic TA framework that is recently being developed. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10749,519,'9','','660000.0','','4530000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10750,519,'10','2008','1320000.0','2009','5940000.0','All disbursement made as per the schedule. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10751,519,'11','','660000.0','','4530000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10752,519,'12','2008','1320000.0','2009','5940000.0','As a donor to the pool funding arrangement, all procurement is made  through national procurement systems. As a joint effort to mitigating procurement related risks and strengthening national procurement capacity, a Technical Assistance  has been provided to the Logistic Management Division  funded by DfID on behalf of the pool donors. AusAID with support from Working in Partner System (WIPS, CBR) ( Matthew Fehre) is actively engaged in the process with other pooling partners. We plan to closely monitor the process and input as neccessary. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10753,519,'13','','1320000.0','','5940000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10754,519,'14','2008','1320000.0','2009','5940000.0','AusAID  has used the PFM system of the country since joining of the pooled fund . AusAID with support from WIPS (CBR) and other partners to the pool is actively involved in discussion and efforts around strengthening PFM system of the country. A joint Governance and Accoutnability Action plan intends to monitor the PFM performance of the sector.  ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10755,519,'15','','1320000.0','','5940000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10756,519,'16','2008','0.0','2009','0.0','No parallel project units has been established in Nepal for Health related program. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10757,519,'17','2005','Yes','2009','Yes','The Joint Annual Review processes and periodical reportings of MoHP( Financial Management Report, Implementation Progress report) are used to assess progress in the country. As a pooling partner to the Health Sector Program, we refrain from having any independent performance assessment. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10758,519,'18','2005','No','2009','Yes','MoF in Nepal has recently conducted an aid effectiveness survey, the outcome is yet to be disseminated. In Health Sector, Nepal used the JANs tool for the first time to assess the second phase of the health sector program in 2009. It did gave us a framework for analysis and good actions points were being formulated, however process documentation was lacking. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10749,519,'8','','660000.0','','4530000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10750,519,'10old','2008','1320000.0','2009','5940000.0','All disbursement made as per the schedule. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10751,519,'11old','','660000.0','','4530000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10752,519,'10','2008','1320000.0','2009','5940000.0','As a donor to the pool funding arrangement, all procurement is made  through national procurement systems. As a joint effort to mitigating procurement related risks and strengthening national procurement capacity, a Technical Assistance  has been provided to the Logistic Management Division  funded by DfID on behalf of the pool donors. AusAID with support from Working in Partner System (WIPS, CBR) ( Matthew Fehre) is actively engaged in the process with other pooling partners. We plan to closely monitor the process and input as neccessary. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10753,519,'11','','1320000.0','','5940000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10755,519,'12','','1320000.0','','5940000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10756,519,'13','2008','0.0','2009','0.0','No parallel project units has been established in Nepal for Health related program. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10757,519,'14','2005','Yes','2009','Yes','The Joint Annual Review processes and periodical reportings of MoHP( Financial Management Report, Implementation Progress report) are used to assess progress in the country. As a pooling partner to the Health Sector Program, we refrain from having any independent performance assessment. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10758,519,'15','2005','No','2009','Yes','MoF in Nepal has recently conducted an aid effectiveness survey, the outcome is yet to be disseminated. In Health Sector, Nepal used the JANs tool for the first time to assess the second phase of the health sector program in 2009. It did gave us a framework for analysis and good actions points were being formulated, however process documentation was lacking. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10759,519,'19','','','','','Joint Annual Review while has become a platform for both the Govt and donors  to discuss implementation progress, challenges and plans, however, has not been able to optimally serve as an accountability mechanism. Therefore, the current Joint Financing Arrangement between donors and the government has been strengthened to address the mutual accountability. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10760,519,'20','please select','0.0','2009','0.0','We donot have a separate funding to any civil society organizations to enable their participation in the health sector planning and review processes. However, as a donor to the pool fund and a signatory to the IHP compact, we are jointly working with other EDPs and advocating with Govt. to ensure participation of civil society in the planning and review processes. We have been able to bring in representative of International NGOs Association to the review and planning process, and they have actively participated and contributed in the last review and planning meetings. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10760,519,'16','please select','0.0','2009','0.0','We donot have a separate funding to any civil society organizations to enable their participation in the health sector planning and review processes. However, as a donor to the pool fund and a signatory to the IHP compact, we are jointly working with other EDPs and advocating with Govt. to ensure participation of civil society in the planning and review processes. We have been able to bring in representative of International NGOs Association to the review and planning process, and they have actively participated and contributed in the last review and planning meetings. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10761,519,'21','2008','660000.0','2009','1410000.0','As indicated above , the assistance through UNICEF for child survival, nutrition and maternal health  is based on national health program. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10762,519,'22','2008','','2009','','We do not have GBS');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10763,519,'23','2008','660000.0','2009','4530000.0','');
@@ -2398,19 +2177,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10767,520,'4','2007','','2009',
 INSERT INTO "submissions_dpquestion_2009" VALUES(10768,520,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10769,520,'6','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10770,520,'7','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10771,520,'8','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10772,520,'9','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10773,520,'10','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10774,520,'11','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10775,520,'12','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10776,520,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10777,520,'14','2007','','2009','','2007=3,890,403, 2009=3,064,837');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10778,520,'15','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10779,520,'16','2007','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10780,520,'17','2007','No','2009','No','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10781,520,'18','2007','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10772,520,'8','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10773,520,'10old','2007','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10774,520,'11old','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10775,520,'10','2007','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10776,520,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10778,520,'12','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10779,520,'13','2007','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10780,520,'14','2007','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10781,520,'15','2007','No','2009','No','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10782,520,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10783,520,'20','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10783,520,'16','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10784,520,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10785,520,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10786,520,'23','2007','0.0','2009','0.0','');
@@ -2421,19 +2198,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10790,521,'4','2005','480000.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(10791,521,'5','','0.0','','220000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10792,521,'6','2005','2792000.0','2009','6549000.0','Les actions financées sont celles souhaités par le gouvernement car inscrit dans le cadre du plan national de développement sanitair. Cependant le cadre post conflit du pays fait qu''il n''y avait pas en 2009 de manuel de procédure ou de directives d''application permettant d''avoir une approche programme à proprement dit. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10793,521,'7','','625000.0','','2784000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10794,521,'8','2005','2167000.0','2009','3765000.0','Différentes sources de financement sont comptabilisées dans le cadre de ce montant. Les sources sont le FED (Fonds européen de Développement) et le Budget (lignes budgétaires). Les lignes budgétaires sont non programmables par nature et la durée des actions qu''elles financent peut aller de 1 à 5 ans et en général 2 ou 3 ans. En ce qui nous concerne deux actions avaient une durée de 2 ans et deux de 3 ans. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10795,521,'9','','760000.0','','2380000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10796,521,'10','2005','','2009','3765000.0','Q10: 2005 - $2,167,000.                 Les différences sont du à des adaptation au contexte ou au retard pris dans le cadre des procédures. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10797,521,'11','','','','3020000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10798,521,'12','2005','','2009','640000.0','Q13: 2005 - $0.                    Les procédures utilisées sont toujours celles du FED.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10799,521,'13','','','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10800,521,'14','2005','2792000.0','2009','6549000.0','Les procédures utilisées sont toujours celles du FED.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10801,521,'15','','625000.0','','2784000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10802,521,'16','please select','8.0','2009','5.0','Moins de projets mais dont l''enveloppe est plus volumineuse. Le projet le plus important à son PIU abasé dans le ministère de la santé. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10803,521,'17','2005','No','2009','No','Démarrage de son utilisation en 2010 après révision suite à l''échec de la tentative d''utilisation en 2009. Le SIS est très défaillant et les efforts fait sur le sujet ont permis une nette amélioration des données entre début 2009 et maintenant');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10804,521,'18','2005','No','2009','Yes','Debut en 2007 et depuis une fois chaque année mais la qualité décroit.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10795,521,'8','','760000.0','','2380000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10796,521,'10old','2005','','2009','3765000.0','Q10: 2005 - $2,167,000.                 Les différences sont du à des adaptation au contexte ou au retard pris dans le cadre des procédures. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10797,521,'11old','','','','3020000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10798,521,'10','2005','','2009','640000.0','Q13: 2005 - $0.                    Les procédures utilisées sont toujours celles du FED.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10799,521,'11','','','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10801,521,'12','','625000.0','','2784000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10802,521,'13','please select','8.0','2009','5.0','Moins de projets mais dont l''enveloppe est plus volumineuse. Le projet le plus important à son PIU abasé dans le ministère de la santé. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10803,521,'14','2005','No','2009','No','Démarrage de son utilisation en 2010 après révision suite à l''échec de la tentative d''utilisation en 2009. Le SIS est très défaillant et les efforts fait sur le sujet ont permis une nette amélioration des données entre début 2009 et maintenant');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10804,521,'15','2005','No','2009','Yes','Debut en 2007 et depuis une fois chaque année mais la qualité décroit.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10805,521,'19','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(10806,521,'20','2007','0.0','2009','','Depuis 2008, nous poussons la société civile a être plus active dans le dialogue sectoriel et au ministère à les inviter plus régulièrement aux différentes sessions de planification, coordination et mécanismes de révision. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(10806,521,'16','2007','0.0','2009','','Depuis 2008, nous poussons la société civile a être plus active dans le dialogue sectoriel et au ministère à les inviter plus régulièrement aux différentes sessions de planification, coordination et mécanismes de révision. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10807,521,'21','2007','300000.0','2009','730000.0','Unicef - Coordination sur les problèmes de prise en charge de la nutrition et achat de plumpy nuts');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10808,521,'22','2007','31250000.0','2009','55680000.0','5,3% du budget alloué à la santé en 2007 et 7,6% en 2009.Triggers cf.DTA P.8 document joint');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10809,521,'23','please select','0.0','2009','0.0','');
@@ -2444,19 +2219,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(10997,530,'4','2007','0.0','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(10998,530,'5','','0.0','','2577300.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(10999,530,'6','2007','18269895.0','2009','34848220.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11000,530,'7','','15761193.0','','32505220.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11001,530,'8','2007','2508702.0','2009','22102300.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11002,530,'9','','1817900.0','','22102300.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11003,530,'10','2007','2508702.0','2009','22102300.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11004,530,'11','','2508702.0','','22102300.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11005,530,'12','2007','1817900.0','2009','19525000.0','In 2007, funding channelled through World Bank for procurement (GBP 5million) which wasn''t through GoE procurement systems');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11006,530,'13','','0.0','','17182000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11007,530,'14','2007','17579093.0','2009','32270920.0','As above');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11008,530,'15','','15761193.0','','29927920.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11009,530,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11010,530,'17','2007','Yes','2009','Yes','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11011,530,'18','2007','No','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11002,530,'8','','1817900.0','','22102300.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11003,530,'10old','2007','2508702.0','2009','22102300.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11004,530,'11old','','2508702.0','','22102300.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11005,530,'10','2007','1817900.0','2009','19525000.0','In 2007, funding channelled through World Bank for procurement (GBP 5million) which wasn''t through GoE procurement systems');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11006,530,'11','','0.0','','17182000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11008,530,'12','','15761193.0','','29927920.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11009,530,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11010,530,'14','2007','Yes','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11011,530,'15','2007','No','2009','Yes','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11012,530,'19','','One of a number of mechanisms for accountability','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11013,530,'20','2007','Non financial support','2009','No financial support','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11013,530,'16','2007','Non financial support','2009','No financial support','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11014,530,'21','2007','9089500.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11015,530,'22','2007','154521500.0','2009','124960000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11016,530,'23','please select','0.0','2009','0.0','');
@@ -2467,19 +2240,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11020,531,'4','2007','4563740.0
 INSERT INTO "submissions_dpquestion_2009" VALUES(11021,531,'5','','4563740.0','','4093788.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11022,531,'6','2007','17179966.0','2009','19620021.0','This includes Prosaude common fund, the Common fund TA budget line, and Malaria consortium project. We also provided funding for HIV/AIDS - but this is not health sector specific. The funding through Prosaude is considered programme based funding. By 2009 over 66% of funding is through programme based approaches. In 2010 our funding for malaria will end, increasing percentage share through PBAs. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11023,531,'7','','12616226.0','','15526280.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11024,531,'8','2007','11289970.0','2009','15027741.0','Malaria consortium project was a 5 year funding commitment ending in 2010. Prosaude commitment and TA budget are 5 year commitments. All funding is therefore multi-year. Prosaude commitments are included in MTEF and provided 3 year funding information. Funding is always disbursed as indicated. Malaria consortium funding is based on an annual budget, with minor variations in disbursement against plan, relating to rates of project execution. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11025,531,'9','','11289970.0','','15027741.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11026,531,'10','2007','11289970.0','2009','15027741.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11027,531,'11','','11268586.0','','14647146.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11028,531,'12','2007','100.0','2009','100.0','Funding through PROSAUDE is not earmarked, and therefore it is not possible to say how much is used on procurement, other than attribution of a proportion of the funding corresponding to the proportion MISAU spends on procurement. Procurement through PROSAUDE uses government systems. (NOTE: HAVE AMENDED FIGURES TO REFLECT THE % OF FUNDING THAT USES NATIONAL PROCUREMENT SYSTEMS, BASED ON EMAIL EXCHANGES WITH DFID IN DEC/JAN, WITH FINAL CONFIRMATION FROM SUE CHANDLER IN EMAIL ON XXX).');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11029,531,'13','','60.0','','73.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11030,531,'14','2007','12635216.0','2009','15871221.0','The Prosaude funds use government PFM systems, but TA and malaria programme do not. GBS funding has not been included here. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11031,531,'15','','12616226.0','','15526280.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11032,531,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11033,531,'17','2007','Yes','2009','Yes','There is a single national performance assessment framework which is our sole tool for montoring sector performance (both years)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11034,531,'18','2007','No','2009','Yes','A framework for monitoring MOU commitments has been developed (2010) and will be used to monitor MOU (and IHP) compliance on an annual basis - as part of the Annual Joint Evaluation process. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11025,531,'8','','11289970.0','','15027741.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11026,531,'10old','2007','11289970.0','2009','15027741.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11027,531,'11old','','11268586.0','','14647146.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11028,531,'10','2007','100.0','2009','100.0','Funding through PROSAUDE is not earmarked, and therefore it is not possible to say how much is used on procurement, other than attribution of a proportion of the funding corresponding to the proportion MISAU spends on procurement. Procurement through PROSAUDE uses government systems. (NOTE: HAVE AMENDED FIGURES TO REFLECT THE % OF FUNDING THAT USES NATIONAL PROCUREMENT SYSTEMS, BASED ON EMAIL EXCHANGES WITH DFID IN DEC/JAN, WITH FINAL CONFIRMATION FROM SUE CHANDLER IN EMAIL ON XXX).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11029,531,'11','','60.0','','73.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11031,531,'12','','12616226.0','','15526280.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11032,531,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11033,531,'14','2007','Yes','2009','Yes','There is a single national performance assessment framework which is our sole tool for montoring sector performance (both years)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11034,531,'15','2007','No','2009','Yes','A framework for monitoring MOU commitments has been developed (2010) and will be used to monitor MOU (and IHP) compliance on an annual basis - as part of the Annual Joint Evaluation process. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11035,531,'19','','','','','Joint annual review considered 36 indicators of performance, with 4 indicators looking at donor performance. The review includes a data verification exercise and the results are presented and discussed at a public meeting chaired by the Minister of Health - with active civil society participation. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11036,531,'20','2007','','2009','','Civil society has 2 seats (Naima a network of international NGOs and MONASO a network of national NGOs, are members fo the health partner group. Naima joints the monthly donor meeting with the MOH. Many civil society organisations are invited to the twice yearly government and donor policy dialogue.   CSO support is the funding of the Malaria consortium (an INGO, rather than CSO). The Malaria consortium was initially contracted to establish social marketing of bed nets - it was therefore a legitimate complementary strategy to governent funding. However the Minister introduced a policy of free bed nets for mothers and children, and therefore the project morphed in to a combination of social marketing promotion and a larger component of supporting a public/private partnership for bed net distribution to health facilities in support of the Ministry of Health campaign of free nets. So, whilst the funding was to an INGO - the programme was for delivery of a government priority of net distribution.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11036,531,'16','2007','','2009','','Civil society has 2 seats (Naima a network of international NGOs and MONASO a network of national NGOs, are members fo the health partner group. Naima joints the monthly donor meeting with the MOH. Many civil society organisations are invited to the twice yearly government and donor policy dialogue.   CSO support is the funding of the Malaria consortium (an INGO, rather than CSO). The Malaria consortium was initially contracted to establish social marketing of bed nets - it was therefore a legitimate complementary strategy to governent funding. However the Minister introduced a policy of free bed nets for mothers and children, and therefore the project morphed in to a combination of social marketing promotion and a larger component of supporting a public/private partnership for bed net distribution to health facilities in support of the Ministry of Health campaign of free nets. So, whilst the funding was to an INGO - the programme was for delivery of a government priority of net distribution.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11037,531,'21','2007','901309.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11038,531,'22','2007','65444400.0','2009','65604000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11039,531,'23','please select','6544440.0','2009','10934000.0','');
@@ -2493,32 +2264,22 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11044,532,'5','','N/A','','N/A'
 INSERT INTO "submissions_dpquestion_2009" VALUES(11045,532,'6','2007','17479109.0','2008','20823653.0','For an overview of the Mali grant portfolio, see http://portfolio.theglobalfund.org/Country/Index/MAL?lang=en#.
 Please note that baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11046,532,'7','','14795008.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11047,532,'8','2007','17479109.0','2008','20823653.0','Global Fund grants are multi-year commitments with funding commitments of 2+3 years (Phase 1 of two years; Phase 2 of three additional years) or (3+3 years in the case of Rolling Continuation Channel grants).  For this indicator we have provided data on disbursements for the reporting year relating only to grants that were in phase II in the reporting year.
-The Global Fund Board has recently (2010) approved a new grant architecture (http://www.theglobalfund.org/en/grantarchitecture/?lang=en). A core feature of this new grant architecture is the “single stream of funding per Principal Recipient, per disease.” This means the Global Fund will maintain one funding agreement for each Principal Recipient in each disease area, which will then be amended when a new proposal for funding the same disease is approved. This is in contrast to the current model, in which each newly approved proposal results in a separate grant agreement per Principal Recipient, with its own budget, performance framework, and so on.
-
-A key difference between an existing grant and a single stream of funding concerns how funding is committed over time. Whereas our existing grants have funding commitments of 2+3 years, single streams of funding will have fixed regular commitment cycles of up to three years. 
-
-');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11048,532,'9','','1360419.0','','14195752.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11049,532,'10','2007','17479109.0','2008','20823653.0','Please note only baseline data from 2008 is available. 
+INSERT INTO "submissions_dpquestion_2009" VALUES(11048,532,'8','','1360419.0','','14195752.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11049,532,'10old','2007','17479109.0','2008','20823653.0','Please note only baseline data from 2008 is available. 
 
 In 2008, the Global Fund scheduled 12,311,344 USD for disbursement. 20,823,653 USD were actually disbursed.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11050,532,'11','','','','12311344.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11051,532,'12','2007','14795008.0','2008','17752915.0','Please note the following: 
+INSERT INTO "submissions_dpquestion_2009" VALUES(11050,532,'11old','','','','12311344.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11051,532,'10','2007','14795008.0','2008','17752915.0','Please note the following: 
 
 a. data reported for this indicator was calculated using the methodology for the 2007 PD monitoring round, which looks at total disbursements to a country (instead of disbursements made for procurement purposes) See http://www.oecd.org/document/19/0,3343,en_21571361_39494699_39763923_1_1_1_1,00.html
 
 b. baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. 
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11052,532,'13','','14795008.0','','17752915.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11053,532,'14','2007','14795008.0','2008','17752915.0','Public financial management systems are partly used. Furthermore, it is at the discretion of the country to include system-strengthening activities in their funding proposals. 
-
-
-Please note that in line with the PD monitoring, baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11054,532,'15','','4.93166933333','','14269973.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11055,532,'16','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11056,532,'17','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .Global Fund financing is implemented by in-country organizations such as the Government or NGOs. The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11057,532,'18','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-countriy. However, depending on its programmatic and funding interest, and the decision during the grant review,  participation in the country annual reviews with other partners may be recommended.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11052,532,'11','','14795008.0','','17752915.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11054,532,'12','','4.93166933333','','14269973.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11055,532,'13','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11056,532,'14','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .Global Fund financing is implemented by in-country organizations such as the Government or NGOs. The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11057,532,'15','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-countriy. However, depending on its programmatic and funding interest, and the decision during the grant review,  participation in the country annual reviews with other partners may be recommended.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11058,532,'19','','','','','Strengths
  Conducted at National level
  Wide stakeholders'' participation
@@ -2543,7 +2304,7 @@ Weaknesses
  Review reports not always available
  Available reports not always used
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11059,532,'20','2007','2684101.0','2008','3070738.0','In 2007, $2,684,101 was channeled through ''Groupe Pivot Santé Population'', a civil society organization. The same organization was funded with $3,070,738 in 2008.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11059,532,'16','2007','2684101.0','2008','3070738.0','In 2007, $2,684,101 was channeled through ''Groupe Pivot Santé Population'', a civil society organization. The same organization was funded with $3,070,738 in 2008.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11060,532,'21','2007','0.0','2008','0.0','The Global Fund does not fund other donors but provides funding through PRs nominated by the CCM.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11061,532,'22','2007','0.0','2008','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11062,532,'23','2007','0.0','2008','0.0','');
@@ -2557,33 +2318,23 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11067,533,'5','','N/A','','N/A'
 INSERT INTO "submissions_dpquestion_2009" VALUES(11068,533,'6','2007','42340000.0','2008','53716093.0','For an overview of the Mozambique grant portfolio, see http://portfolio.theglobalfund.org/Country/Index/MOZ?lang=en#. 
 Please note that baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11069,533,'7','','42340000.0','','53716093.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11070,533,'8','2007','42340000.0','2008','53716093.0','Global Fund grants are multi-year commitments with funding commitments of 2+3 years (Phase 1 of two years; Phase 2 of three additional years) or (3+3 years in the case of Rolling Continuation Channel grants). For this indicator we have provided data on disbursements for the reporting year relating only to grants that were in phase II in the reporting year.
-The Global Fund Board has recently (2010) approved a new grant architecture (http://www.theglobalfund.org/en/grantarchitecture/?lang=en). A core feature of this new grant architecture is the “single stream of funding per Principal Recipient, per disease.” This means the Global Fund will maintain one funding agreement for each Principal Recipient in each disease area, which will then be amended when a new proposal for funding the same disease is approved. This is in contrast to the current model, in which each newly approved proposal results in a separate grant agreement per Principal Recipient, with its own budget, performance framework, and so on.
-
-A key difference between an existing grant and a single stream of funding concerns how funding is committed over time. Whereas our existing grants have funding commitments of 2+3 years, single streams of funding will have fixed regular commitment cycles of up to three years. 
-
-');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11071,533,'9','','33498211.0','','27060788.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11072,533,'10','2007','42340000.0','2008','53716093.0','In 2008, the Global Fund scheduled 45''107''885 USD for disbursement. 53''716''093 USD were actually disbursed.
+INSERT INTO "submissions_dpquestion_2009" VALUES(11071,533,'8','','33498211.0','','27060788.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11072,533,'10old','2007','42340000.0','2008','53716093.0','In 2008, the Global Fund scheduled 45''107''885 USD for disbursement. 53''716''093 USD were actually disbursed.
 
 In 2007, the Global Fund scheduled 47''158''935 USD for disbursement. 42''340''000 USD were actually disbursed.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11073,533,'11','','47158935.0','','45107885.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11074,533,'12','2007','42340000.0','2008','53716093.0','Please note the following: 
+INSERT INTO "submissions_dpquestion_2009" VALUES(11073,533,'11old','','47158935.0','','45107885.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11074,533,'10','2007','42340000.0','2008','53716093.0','Please note the following: 
 
 a. data reported for this indicator was calculated using the methodology for the 2007 PD monitoring round, which looks at total disbursements to a country (instead of disbursements made for procurement purposes) See http://www.oecd.org/document/19/0,3343,en_21571361_39494699_39763923_1_1_1_1,00.html
 
 b. baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. 
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11075,533,'13','','42340000.0','','51581259.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11076,533,'14','2007','42340000.0','2008','53716093.0','Public financial management is partly used. Futhermore, it is at the discretion of the country to include system-strengthening activities in their funding proposals. 
-
-
-Please note that in line with the PD monitoring, baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11077,533,'15','','28224516.0','','34387506.2933','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11078,533,'16','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11079,533,'17','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .
+INSERT INTO "submissions_dpquestion_2009" VALUES(11075,533,'11','','42340000.0','','51581259.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11077,533,'12','','28224516.0','','34387506.2933','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11078,533,'13','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11079,533,'14','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .
 The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy and thus the framework is often based on national targets. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11080,533,'18','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-country. However, depending on its programmatic and funding interest, it participates in country annual reviews with other partners.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11080,533,'15','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-country. However, depending on its programmatic and funding interest, it participates in country annual reviews with other partners.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11081,533,'19','','','','','Strengths
  Conducted at National level
  Wide stakeholders'' participation
@@ -2608,7 +2359,7 @@ Weaknesses
  Review reports not always available
  Available reports not always used
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11082,533,'20','2007','0.0','2008','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11082,533,'16','2007','0.0','2008','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11083,533,'21','2007','0.0','2008','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11084,533,'22','2007','0.0','2008','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11085,533,'23','2007','0.0','2008','0.0','');
@@ -2623,32 +2374,22 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11091,534,'6','2007','161682158
 
 Please note that baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11092,534,'7','','161682158.0','','139096281.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11093,534,'8','2007','161682158.0','2008','144332328.0','Global Fund grants are multi-year commitments with funding commitments of 2+3 years (Phase 1 of two years; Phase 2 of three additional years) or (3+3 years in the case of Rolling Continuation Channel grants). For this indicator we have provided data on disbursements for the reporting year relating only to grants that were in phase II in the reporting year.
-The Global Fund Board has recently (2010) approved a new grant architecture (http://www.theglobalfund.org/en/grantarchitecture/?lang=en). A core feature of this new grant architecture is the “single stream of funding per Principal Recipient, per disease.” This means the Global Fund will maintain one funding agreement for each Principal Recipient in each disease area, which will then be amended when a new proposal for funding the same disease is approved. This is in contrast to the current model, in which each newly approved proposal results in a separate grant agreement per Principal Recipient, with its own budget, performance framework, and so on.
-
-A key difference between an existing grant and a single stream of funding concerns how funding is committed over time. Whereas our existing grants have funding commitments of 2+3 years, single streams of funding will have fixed regular commitment cycles of up to three years. 
-
-');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11094,534,'9','','144201906.0','','109994293.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11095,534,'10','2007','161682158.0','2008','144332428.0','In 2008, the Global Fund scheduled USD 183''568''251 for disbursement. USD 144''332''428 were actually disbursed.
+INSERT INTO "submissions_dpquestion_2009" VALUES(11094,534,'8','','144201906.0','','109994293.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11095,534,'10old','2007','161682158.0','2008','144332428.0','In 2008, the Global Fund scheduled USD 183''568''251 for disbursement. USD 144''332''428 were actually disbursed.
 
 In 2007, the Global Fund scheduled USD 121''655''446 for disbursement. USD 161''682''158 were actually disbursed.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11096,534,'11','','121655446.0','','183568251.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11097,534,'12','2007','161682158.0','2008','139096281.0','Please note the following: 
+INSERT INTO "submissions_dpquestion_2009" VALUES(11096,534,'11old','','121655446.0','','183568251.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11097,534,'10','2007','161682158.0','2008','139096281.0','Please note the following: 
 
 a. data reported for this indicator was calculated using the methodology for the 2007 PD monitoring round, which looks at total disbursements to a country (instead of disbursements made for procurement purposes) See http://www.oecd.org/document/19/0,3343,en_21571361_39494699_39763923_1_1_1_1,00.html
 
 b. baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. 
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11098,534,'13','','161682158.0','','135957698.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11099,534,'14','2007','161682158.0','2008','139096281.0','Public financial management is partly used. Furthermore, it is at the discretion of the country to include system-strengthening activities in their funding proposals. 
-
-
-Please note that in line with the PD monitoring, baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11100,534,'15','','0.0','','50751598.94','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11101,534,'16','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11102,534,'17','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .Global Fund financing is implemented by in-country organizations such as the Government or NGOs. The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11103,534,'18','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-countriy. However, depending on its programmatic and funding interest, and the decision during the grant review,  participation in the country annual reviews with other partners may be recommended.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11098,534,'11','','161682158.0','','135957698.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11100,534,'12','','0.0','','50751598.94','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11101,534,'13','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11102,534,'14','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .Global Fund financing is implemented by in-country organizations such as the Government or NGOs. The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11103,534,'15','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-countriy. However, depending on its programmatic and funding interest, and the decision during the grant review,  participation in the country annual reviews with other partners may be recommended.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11104,534,'19','','','','','Strengths
  Conducted at National level
  Wide stakeholders'' participation
@@ -2673,7 +2414,7 @@ Weaknesses
  Review reports not always available
  Available reports not always used
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11105,534,'20','2007','','2008','5236147.0','In 2008, $5,236,147 was channeled through  '' Ethiopian Inter-Faith Forum for Development, Dialogue and Action (EIFDDA)'' , a  civil society organizations.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11105,534,'16','2007','','2008','5236147.0','In 2008, $5,236,147 was channeled through  '' Ethiopian Inter-Faith Forum for Development, Dialogue and Action (EIFDDA)'' , a  civil society organizations.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11106,534,'21','2007','0.0','2008','0.0','The Global Fund does not fund other donors but provides funding through PRs nominated by the CCM.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11107,534,'22','2007','0.0','2008','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11108,534,'23','2007','0.0','2008','0.0','');
@@ -2684,19 +2425,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11112,535,'4','2007','2459092.5
 INSERT INTO "submissions_dpquestion_2009" VALUES(11113,535,'5','','2459092.54863','','2894173.7352','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11114,535,'6','2007','10461219.63','2009','7768273.7352','Pooled funding to the MoH, Commodity support, Social marketing & HIV/AIDS Workplace programmes');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11115,535,'7','','10461219.63','','7768273.7352','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11116,535,'8','2007','10461219.63','2009','7768273.7352','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11117,535,'9','','10461219.63','','7768273.7352','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11118,535,'10','2007','10461219.63','2009','7768273.7352','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11119,535,'11','','10461219.63','','7768273.7352','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11120,535,'12','2007','100.0','2009','100.0','Funding through PROSAUDE is not earmarked, and therefore it is not possible to say how much is used on procurement, other than attribution of a proportion of the funding corresponding to the proportion MISAU spends on procurement. Procurement through PROSAUDE uses government systems. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11121,535,'13','','100.0','','100.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11122,535,'14','2007','8002127.0814','2009','4874100.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11123,535,'15','','8002127.0814','','4874100.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11124,535,'16','2007','0.0','2009','0.0','None');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11125,535,'17','2007','Yes','2009','Yes','Joint Annual Review with a Common Performance Assessment Framework');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11126,535,'18','2007','No','2009','Yes','Joint Annual Review with a Common Performance Assessment Framework. A framework for monitoring MOU commitments has been developed (2010) and will be used to monitor MOU (and IHP) compliance on an annual basis - as part of the Annual Joint Evaluation process. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11117,535,'8','','10461219.63','','7768273.7352','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11118,535,'10old','2007','10461219.63','2009','7768273.7352','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11119,535,'11old','','10461219.63','','7768273.7352','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11120,535,'10','2007','100.0','2009','100.0','Funding through PROSAUDE is not earmarked, and therefore it is not possible to say how much is used on procurement, other than attribution of a proportion of the funding corresponding to the proportion MISAU spends on procurement. Procurement through PROSAUDE uses government systems. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11121,535,'11','','100.0','','100.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11123,535,'12','','8002127.0814','','4874100.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11124,535,'13','2007','0.0','2009','0.0','None');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11125,535,'14','2007','Yes','2009','Yes','Joint Annual Review with a Common Performance Assessment Framework');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11126,535,'15','2007','No','2009','Yes','Joint Annual Review with a Common Performance Assessment Framework. A framework for monitoring MOU commitments has been developed (2010) and will be used to monitor MOU (and IHP) compliance on an annual basis - as part of the Annual Joint Evaluation process. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11127,535,'19','','','','','Joint annual review considered 36 indicators of performance, with 4 indicators looking at donor performance. The review includes a data verification exercise and the results are presented and discussed at a public meeting chaired by the Minister of Health - with active civil society participation. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11128,535,'20','2007','','2009','','Civil society has 2 seats (Naima a network of international NGOs and MONASO a network of national NGOs, are members fo the health partner group. Naima joints the monthly donor meeting with the MOH. Many civil society organisations are invited to the twice yearly government and donor policy dialogue.  the Netherlands, as focal partner, has coordinated the reduction of aid effectiveness working groups from 10 to 6, and purposely assurde that a separate AWG for the CS is maintained. This can be "evidenced" with the anexed Tors. CS has standard 2 seats in the Health Partner Group as chaired by the Focal Partner (NL). As members of the HPG CS organisations are invited to participate in all 6 AWGs and als the 5 national meetings with MoH (CCS & CCC-A)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11128,535,'16','2007','','2009','','Civil society has 2 seats (Naima a network of international NGOs and MONASO a network of national NGOs, are members fo the health partner group. Naima joints the monthly donor meeting with the MOH. Many civil society organisations are invited to the twice yearly government and donor policy dialogue.  the Netherlands, as focal partner, has coordinated the reduction of aid effectiveness working groups from 10 to 6, and purposely assurde that a separate AWG for the CS is maintained. This can be "evidenced" with the anexed Tors. CS has standard 2 seats in the Health Partner Group as chaired by the Focal Partner (NL). As members of the HPG CS organisations are invited to participate in all 6 AWGs and als the 5 national meetings with MoH (CCS & CCC-A)');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11129,535,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11130,535,'22','2007','24640200.0','2009','25066800.0','The Netherlands also provides General Budget Support, this was 18 Million Euro in 2007 (of which 13% of govt budget went to health and 18 Million Euro in 2009, of which 10% of govt budget went to health)');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11131,535,'23','2007','8002127.0814','2009','4874100.0','');
@@ -2707,19 +2446,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11135,536,'4','2007','296477.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(11136,536,'5','','296477.0','','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11137,536,'6','2007','10402553.0','2009','13628697.0','All health sector aid is based on programme-based approaches with preference for basked funding mechanism. Gradually all project like activities wiil be closed and integrated in one health basket mechanism. This process will be completed in 2011.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11138,536,'7','','10402553.0','','13628697.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11139,536,'8','2007','10402553.0','2009','13628697.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11140,536,'9','','10402553.0','','13628697.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11141,536,'10','2007','10402553.0','2009','13628697.0','In fact disbursements in the health sector are well above 100% as planned since 2005 due to high aborption rate as well as timely reporting by MOH of progress and audits.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11142,536,'11','','10402553.0','','13628697.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11143,536,'12','2007','100.0','2009','100.0','All health sector aid used national procurement systems.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11144,536,'13','','100.0','','100.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11145,536,'14','2007','9365875.0','2009','12252546.0','The Health and HIV basketfunding mechanism follows national procurement sysstems. The PADS fund however has developed its own PFM system seperate from government budget PFM.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11146,536,'15','','9365875.0','','12252546.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11147,536,'16','2007','0.0','2009','0.0','The management unit of the Health Fund PADS is so effective that many donors join this mechanism but earmarked by theme (GFATM, GAVI) or geographical (WB nutrition), undermining the efficiency.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11148,536,'17','2007','Yes','2009','Yes','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11149,536,'18','2007','No','2009','No','The first health sector review was held in March 2010and the Netherlands supported this with TA. Annual reviews are now institutionalised and linked to PRSP annual reviews. The 2011 review will be part of the new compact.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11140,536,'8','','10402553.0','','13628697.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11141,536,'10old','2007','10402553.0','2009','13628697.0','In fact disbursements in the health sector are well above 100% as planned since 2005 due to high aborption rate as well as timely reporting by MOH of progress and audits.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11142,536,'11old','','10402553.0','','13628697.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11143,536,'10','2007','100.0','2009','100.0','All health sector aid used national procurement systems.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11144,536,'11','','100.0','','100.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11146,536,'12','','9365875.0','','12252546.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11147,536,'13','2007','0.0','2009','0.0','The management unit of the Health Fund PADS is so effective that many donors join this mechanism but earmarked by theme (GFATM, GAVI) or geographical (WB nutrition), undermining the efficiency.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11148,536,'14','2007','Yes','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11149,536,'15','2007','No','2009','No','The first health sector review was held in March 2010and the Netherlands supported this with TA. Annual reviews are now institutionalised and linked to PRSP annual reviews. The 2011 review will be part of the new compact.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11150,536,'19','','','','','Ineffective. Poor participation by other donors. Will be part of discussion on the new monitoring system for the PNDS 2011-2020 and the compact.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11151,536,'20','2007','','2009','','Since 2008 the MOH started a process to include civil society organisations in planning and implementing health MDG related activities. Today 15 capacity building NGO''s and 143 Community Based Org are under contract to implement action plans related to MDG 1, 4, 5 and 6. Selcted NGO''s take part in policy develeopment discussions such as on Result Based Financing. As lead donor in the PADS basket funding the Netherlands played a key role in supporting this innovative approach from the initiation phase in 2008, making supplementary funding available in the preparatory phase in 2009 and assuring that at least 25% of the un-erarmarked funding in the basket is allocated for financing of CSO action plans.
+INSERT INTO "submissions_dpquestion_2009" VALUES(11151,536,'16','2007','','2009','','Since 2008 the MOH started a process to include civil society organisations in planning and implementing health MDG related activities. Today 15 capacity building NGO''s and 143 Community Based Org are under contract to implement action plans related to MDG 1, 4, 5 and 6. Selcted NGO''s take part in policy develeopment discussions such as on Result Based Financing. As lead donor in the PADS basket funding the Netherlands played a key role in supporting this innovative approach from the initiation phase in 2008, making supplementary funding available in the preparatory phase in 2009 and assuring that at least 25% of the un-erarmarked funding in the basket is allocated for financing of CSO action plans.
 The Netherlands is an active member of the national committ e e for this contractual approach with CSO, which is chaired by the SG Health.
 The evidence is in the reporting of monitoring missions: The system is operational since March 2010 and the start is promising. It is too early to measure the outcome or impact. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11152,536,'21','please select','','2009','','');
@@ -2732,19 +2469,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11158,537,'4','2007','0.0','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(11159,537,'5','','0.0','','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11160,537,'6','2007','5950279.0','2009','12076756.0',' In 2007, 92% and in 2009, 81% of health sector aid were Programme Based Approaches,Though target of 66% is met, the relative share diminshed because additional resources were made available for CSOs. Efforts have been made to come to one budget, one plan and one reporting mechanism but was not possible due to separate requirements of other donors.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11161,537,'7','','5475600.0','','9816409.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11162,537,'8','2007','5950279.0','2009','12076756.0','Target met. 100% of health sector funding is committed for at least 3 years.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11163,537,'9','','5950279.0','','11974289.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11164,537,'10','2007','5950279.0','2009','12076756.0','100% of commitments in time and volume were met in 2009');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11165,537,'11','','5950279.0','','12076756.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11166,537,'12','2007','100.0','2009','100.0','The Netherlands doesn''t earmark funds for procurement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11167,537,'13','','100.0','','100.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11168,537,'14','2007','5475600.0','2009','9816409.0','100% of health sector support is using national PFM systems. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11169,537,'15','','5475600.0','','9816409.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11170,537,'16','2007','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11171,537,'17','','Yes','','Yes','In 2009 a common set of indicators was agreed and used in the annual reviews. SBS had since 2006 a set of indicators that was integrated in this common framework');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11172,537,'18','2007','Yes','2009','Yes','2007 en 2009: NL participated in joint field visit and annual review meeting.  2009: NL lead donor. Annual review used for the 1st time a commonly agreed M&E framework. Financial data of all donors compared to commitments were included. IHP commitments were (not yet ) part of the review.   ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11163,537,'8','','5950279.0','','11974289.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11164,537,'10old','2007','5950279.0','2009','12076756.0','100% of commitments in time and volume were met in 2009');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11165,537,'11old','','5950279.0','','12076756.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11166,537,'10','2007','100.0','2009','100.0','The Netherlands doesn''t earmark funds for procurement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11167,537,'11','','100.0','','100.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11169,537,'12','','5475600.0','','9816409.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11170,537,'13','2007','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11171,537,'14','','Yes','','Yes','In 2009 a common set of indicators was agreed and used in the annual reviews. SBS had since 2006 a set of indicators that was integrated in this common framework');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11172,537,'15','2007','Yes','2009','Yes','2007 en 2009: NL participated in joint field visit and annual review meeting.  2009: NL lead donor. Annual review used for the 1st time a commonly agreed M&E framework. Financial data of all donors compared to commitments were included. IHP commitments were (not yet ) part of the review.   ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11173,537,'19','','','','','Annual reviews provide little opportunity for discussion but the preparations to the JAR are increasingly useful, also at regional level. JARs involve parliament but role is weak and unclear.  CSOs have a seat, represented by FENASCOM. Private for profit sector invited but role and influence still weak.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11174,537,'20','2007','360826.0','2009','264293.0','Fenascom receives also funding (though modest) from the Ministry of Health');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11174,537,'16','2007','360826.0','2009','264293.0','Fenascom receives also funding (though modest) from the Ministry of Health');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11175,537,'21','2007','0.0','2009','0.0','Spain and Sweden have delegated silent partnerships on SBS-health with the Netherlands, while using separate disbursement channels. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11176,537,'22','2007','13689000.0','2009','13926000.0','2009: 8,47% of national budget was for health expenditures (investment + recurrent expenditures). A selection of health sector triggers that apply to SBS are also used for GBS.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11177,537,'23','2007','5475600.0','2009','5570400.0','The Netherlands, Canada, Sweden (since 2006) and Spain (since 2009) provide SBS ');
@@ -2755,20 +2490,18 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11181,538,'4','2007','2454000.0
 INSERT INTO "submissions_dpquestion_2009" VALUES(11182,538,'5','','2454000.0','','3838800.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11183,538,'6','2007','9030501.0','2009','13732810.0','We are supporting SWAP in Mozambique since 2000 and the main support we provide in this area is through participation in technical working groups and also providing technical assistance to MISAU in different areas.With the other international partners, one of the main objetives to this support is to ensure that the National Health Strategic Plan (PESS), strategic plans and the overall, Naitonal HIV/AIDS Strategy and the annual plans (PES) contain clear objectives and targets in line withe the MDG. Apart from the SWAP programme, there is another programme based approach (M-SWAP) focused on SIDA but, so far, Spain hasn´t disbursed any money for it.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11184,538,'7','','2940000.0','','4188000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11185,538,'8','2007','8490501.0','2009','13144810.0','We have continued to increase disbursements to the health sector in the country and our commitment is to continue with this increase provided,mainly,  trough multi-year commiments.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11186,538,'9','','7016902.0','','9718292.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11187,538,'10','2007','8490501.0','2009','13144810.0','In the two years analyzed, all our financial commitments have been made and disbursed as planned and scheduled.         (See attached "HPG Disbursement_Plan_2010")');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11188,538,'11','','8490501.0','','13144810.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11189,538,'12','2005','','2009','','In this area / context we don´t have assigned amounts or specific actions but we can say that the government uses more than one third their own procurement systems. Presently all agencies and donors are usually supporting the procurement processes, using national procedures, with few exceptions mainly due to stock-out cases at the provincial level or any other situation such as the HIV/SIDA testing campaing. These exceptions have required the use of procedures other than those of the government to provide timely response.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11190,538,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11191,538,'14','2007','9030501.0','2009','13732810.0','We are using all national PFM systems (budget execution, financial reporting procedures, national auditing procedures) aand the only action to support this area is the involvement of a OTC´s economist in the working group of financial procedures');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11192,538,'15','','3481200.0','','4248000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11193,538,'16','
+INSERT INTO "submissions_dpquestion_2009" VALUES(11186,538,'8','','7016902.0','','9718292.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11187,538,'10old','2007','8490501.0','2009','13144810.0','In the two years analyzed, all our financial commitments have been made and disbursed as planned and scheduled.         (See attached "HPG Disbursement_Plan_2010")');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11188,538,'11old','','8490501.0','','13144810.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11189,538,'10','2005','','2009','','In this area / context we don´t have assigned amounts or specific actions but we can say that the government uses more than one third their own procurement systems. Presently all agencies and donors are usually supporting the procurement processes, using national procedures, with few exceptions mainly due to stock-out cases at the provincial level or any other situation such as the HIV/SIDA testing campaing. These exceptions have required the use of procedures other than those of the government to provide timely response.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11190,538,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11192,538,'12','','3481200.0','','4248000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11193,538,'13','
 2007','0.0','2009','0.0','We haven´t had PIUs in the analyzed years.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11194,538,'17','2007','Yes','2009','Yes','Yes, we routinely use the national performance assessment framework. This tool is fully installed in the daily work of all donors at country level. It is reviewed annually and, if necessary, modified the targets are met or indicators that are deemed inappropriate');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11195,538,'18','2005','Yes','2009','Yes','Yes. Every year since we signed the SWAP, we participate actively in the implementation of the annual assessment which measures indicators in the QUAD (performance assessment framework)  and the recommendations of the matrix developed in the previous CCS (sectoral coordination meeting which takes place twice a year). These documents measures the performance of government and the donor countries.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11194,538,'14','2007','Yes','2009','Yes','Yes, we routinely use the national performance assessment framework. This tool is fully installed in the daily work of all donors at country level. It is reviewed annually and, if necessary, modified the targets are met or indicators that are deemed inappropriate');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11195,538,'15','2005','Yes','2009','Yes','Yes. Every year since we signed the SWAP, we participate actively in the implementation of the annual assessment which measures indicators in the QUAD (performance assessment framework)  and the recommendations of the matrix developed in the previous CCS (sectoral coordination meeting which takes place twice a year). These documents measures the performance of government and the donor countries.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11196,538,'19','','','','','So far,aid effectiveness was not addressed in previous JARs. Actually,  the ToR of the new ACA metodology  (Avaliação conjunta anual)-JAR) that are being developed  will include aid effectiveness. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11197,538,'20','2007','','2009','','We continue with our work supporting civil society organisations at all levels and advocate for their increased involvement in planning mechanis aligned with MoH processes. We contribute to the dissemination of information of national processes to ensure alignment, relevance and harmonization of all activities undertaken by various health NGOs that we support.                            (see attached"Financiamento salud OTC Maputo Noviembre 2010")');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11197,538,'16','2007','','2009','','We continue with our work supporting civil society organisations at all levels and advocate for their increased involvement in planning mechanis aligned with MoH processes. We contribute to the dissemination of information of national processes to ensure alignment, relevance and harmonization of all activities undertaken by various health NGOs that we support.                            (see attached"Financiamento salud OTC Maputo Noviembre 2010")');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11198,538,'21','2007','0.0','2009','2234160.0','Since 2009 we are supporting the Joint Program on Children, Food Security and Nutrition being implemented by four UN agencies (WHO, UNICEF, FAO, WFP). This program will be implemented during 3 years (until 2011) and the total amount disbursed is 5.500.000 $U.S.D (see attached"Financiamento salud OTC Maputo Noviembre 2010")');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11199,538,'22','2007','6000000.0','2009','8400000.0','These amount correspond to the money contributed to the General Budget Support in 2007 and 2009');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11200,538,'23','2007','2400000.0','2009','3600000.0','These amounts relate to disburse in 2007 and 2009 for the Education and Health Sector which are the sector that are receiving our sector budget support ( Figures disagregated 2007: 2.400.000 for health sector and 2009: 3.600.000)');
@@ -2779,19 +2512,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11296,544,'4','2005','','2009',
 INSERT INTO "submissions_dpquestion_2009" VALUES(11297,544,'5','','','','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11298,544,'6','2005','17724765.4','2009','16902961.0','PROGRAMME BASED BUDGETING IS NOT USED YET IN MOZAMBIQUE');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11299,544,'7','','5313166.0','','13260654.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11300,544,'8','2005','12411599.4','2009','11140800.0','MET TARGET OF 90%');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11301,544,'9','','12411599.4','','11140800.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11302,544,'10','2005','12411599.4','2009','11140800.0','BASKET OR BUDGET SUPPORT SUPPORTS THE MOH''S STRATEGIC PLAN AS A WHOLE');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11303,544,'11','','12411599.0','','11140800.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11304,544,'12','2005','4660875.0','2009','4444774.0','THE COMMON FUND FOR MEDICAMENTOS WAS ABOLISHED IN 2008 HENCE WEARE ONLY DISBURSING TOWARDS THE SECTOR BUDGET  WRITTEN CONFIRMATION FROM JASON LANE (22/12 EMAIL TO TIM SHORTEN) THAT 100% OF PROCUREMENT FUNDS USED NATIONAL SYSTEMS, BUT DUE TO POOLED FUNDING IT IS NOT POSSIBLE TO SPECIFY THE AMOUNTS IN QUESTION HENCE FIGURES USED IN 2009.  SUBSEQUENT CONVERSATION WITH JASON LANE (25/FEB) PROPOSED THAT AN IMPUTED VALUE FOR 2009 WAS CALCULATED USING 2005 FIGURES FOR PROCUREMENT AS % OF TOTAL HEALTH AID (4,660,875 / 17,724,765 = 0.26) WITH THE ASSUMPTION THAT THE SAME LEVELS WERE MAINTAINED INTO 2009. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11305,544,'13','','4660875.0','','4444774.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11306,544,'14','2005','17724765.4','2009','16902961.0','DATA FOR 2005 DIFFICULT TO RETRIEVE');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11307,544,'15','','5313166.0','','16902961.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11308,544,'16','please select','1.0','2009','0.0','DATA FOR 2005 DIFFICULT TO RETRIEVE');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11309,544,'17','2005','','2009','Yes','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11310,544,'18','2005','No','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11301,544,'8','','12411599.4','','11140800.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11302,544,'10old','2005','12411599.4','2009','11140800.0','BASKET OR BUDGET SUPPORT SUPPORTS THE MOH''S STRATEGIC PLAN AS A WHOLE');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11303,544,'11old','','12411599.0','','11140800.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11304,544,'10','2005','4660875.0','2009','4444774.0','THE COMMON FUND FOR MEDICAMENTOS WAS ABOLISHED IN 2008 HENCE WEARE ONLY DISBURSING TOWARDS THE SECTOR BUDGET  WRITTEN CONFIRMATION FROM JASON LANE (22/12 EMAIL TO TIM SHORTEN) THAT 100% OF PROCUREMENT FUNDS USED NATIONAL SYSTEMS, BUT DUE TO POOLED FUNDING IT IS NOT POSSIBLE TO SPECIFY THE AMOUNTS IN QUESTION HENCE FIGURES USED IN 2009.  SUBSEQUENT CONVERSATION WITH JASON LANE (25/FEB) PROPOSED THAT AN IMPUTED VALUE FOR 2009 WAS CALCULATED USING 2005 FIGURES FOR PROCUREMENT AS % OF TOTAL HEALTH AID (4,660,875 / 17,724,765 = 0.26) WITH THE ASSUMPTION THAT THE SAME LEVELS WERE MAINTAINED INTO 2009. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11305,544,'11','','4660875.0','','4444774.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11307,544,'12','','5313166.0','','16902961.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11308,544,'13','please select','1.0','2009','0.0','DATA FOR 2005 DIFFICULT TO RETRIEVE');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11309,544,'14','2005','','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11310,544,'15','2005','No','2009','Yes','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11311,544,'19','','','','','is considered a burden by local authority');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11312,544,'20','please select','','2009','','19: CSO are integrated in the health SWAP through working groups and the health Partner''s Group meetings and mailing lists. 20: No clear view on this from the field, Global Fund and maybe some UN agencies could have received but no earmarking only for Mozambique I am afraid. Maybe BXL has a better idea?');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11312,544,'16','please select','','2009','','19: CSO are integrated in the health SWAP through working groups and the health Partner''s Group meetings and mailing lists. 20: No clear view on this from the field, Global Fund and maybe some UN agencies could have received but no earmarking only for Mozambique I am afraid. Maybe BXL has a better idea?');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11313,544,'21','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11314,544,'22','2007','59035181.4','2009','82316586.0','general eligibilty criteria are: sound macro-economic reform, progres on PFM and positive assessment of poverty reduction program (fixed tranches); performance on PFM indicators framework (variable tranch). 2005 variable tranche 30% health: women H: ante-natal consultations %, institutional deliveries %, post-natal consultations %; children''s health 1st consultation (0-4 years)%, TBC vaccine <1 year %, polio& DPT vaccine 0-23m % and measles vaccine 9-23m%
 2009 % : not GBS as such but YES in MDG tranches: institutional deliveries %, DPTHepB 3 coverage (%), health staff per adult capita, HIV TARV individual treatment total number
@@ -2808,32 +2539,22 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11321,545,'6','2007','8283573.0
 
 Please note that baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11322,545,'7','','0.0','','22648559.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11323,545,'8','2007','8283573.0','2008','22648559.0','Global Fund grants are multi-year commitments with funding commitments of 2+3 years (Phase 1 of two years; Phase 2 of three additional years) or (3+3 years in the case of Rolling Continuation Channel grants). For this indicator we have provided data on disbursements for the reporting year relating only to grants that were in phase II in the reporting year.
-The Global Fund Board has recently (2010) approved a new grant architecture (http://www.theglobalfund.org/en/grantarchitecture/?lang=en). A core feature of this new grant architecture is the “single stream of funding per Principal Recipient, per disease.” This means the Global Fund will maintain one funding agreement for each Principal Recipient in each disease area, which will then be amended when a new proposal for funding the same disease is approved. This is in contrast to the current model, in which each newly approved proposal results in a separate grant agreement per Principal Recipient, with its own budget, performance framework, and so on.
-
-A key difference between an existing grant and a single stream of funding concerns how funding is committed over time. Whereas our existing grants have funding commitments of 2+3 years, single streams of funding will have fixed regular commitment cycles of up to three years. 
-
-');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11324,545,'9','','3310291.0','','17163150.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11325,545,'10','2007','8283573.0','2008','22648559.0','In 2008, the Global Fund scheduled 10''225''097 USD for disbursement. 22''648''559 USD were actually disbursed.
+INSERT INTO "submissions_dpquestion_2009" VALUES(11324,545,'8','','3310291.0','','17163150.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11325,545,'10old','2007','8283573.0','2008','22648559.0','In 2008, the Global Fund scheduled 10''225''097 USD for disbursement. 22''648''559 USD were actually disbursed.
 
 In 2007, the Global Fund scheduled 6''439''969 USD for disbursement. USD 8''283''573 were actually disbursed.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11326,545,'11','','6439969.0','','10225097.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11327,545,'12','2007','8283573.0','2008','22648559.0','Please note the following: 
+INSERT INTO "submissions_dpquestion_2009" VALUES(11326,545,'11old','','6439969.0','','10225097.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11327,545,'10','2007','8283573.0','2008','22648559.0','Please note the following: 
 
 a. data reported for this indicator was calculated using the methodology for the 2007 PD monitoring round, which looks at total disbursements to a country (instead of disbursements made for procurement purposes) See http://www.oecd.org/document/19/0,3343,en_21571361_39494699_39763923_1_1_1_1,00.html
 
 b. baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. 
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11328,545,'13','','3087822.0','','22648559.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11329,545,'14','2007','8283573.0','2008','22648559.0','Public financial management is not used. However, it is at the discretion of the country to include system-strengthening activities in their funding proposals. 
-
-
-Please note that in line with the PD monitoring, baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11330,545,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11331,545,'16','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11332,545,'17','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .Global Fund financing is implemented by in-country organizations such as the Government or NGOs. The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11333,545,'18','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-countriy. However, depending on its programmatic and funding interest, and the decision during the grant review,  participation in the country annual reviews with other partners may be recommended.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11328,545,'11','','3087822.0','','22648559.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11330,545,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11331,545,'13','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11332,545,'14','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .Global Fund financing is implemented by in-country organizations such as the Government or NGOs. The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11333,545,'15','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-countriy. However, depending on its programmatic and funding interest, and the decision during the grant review,  participation in the country annual reviews with other partners may be recommended.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11334,545,'19','','','','','Strengths
  Conducted at National level
  Wide stakeholders'' participation
@@ -2858,7 +2579,7 @@ Weaknesses
  Review reports not always available
  Available reports not always used
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11335,545,'20','2007','0.0','2008','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11335,545,'16','2007','0.0','2008','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11336,545,'21','2007','0.0','2008','0.0','The Global Fund does not fund other donors but provides funding through PRs nominated by the CCM.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11337,545,'22','2007','0.0','2008','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11338,545,'23','2007','0.0','2008','0.0','');
@@ -2872,18 +2593,12 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11343,546,'5','','N/A','','N/A'
 INSERT INTO "submissions_dpquestion_2009" VALUES(11344,546,'6','2007','6720000.0','2008','8242092.0','For an overview of the Nepal grant portfolio, see http://portfolio.theglobalfund.org/Country/Index/NEP?lang=en#.
 Please note that baseline data is provided for CY 2007 and follow-up data is provided for CY 2008 and that financing provided through UNDP (see Q20) is excluded from amounts provided in line with the Paris Declaration monitoring guidelines.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11345,546,'7','','6720000.0','','3114058.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11346,546,'8','2007','6720000.0','2008','8242092.0','Global Fund grants are multi-year commitments with funding commitments of 2+3 years (Phase 1 of two years; Phase 2 of three additional years) or (3+3 years in the case of Rolling Continuation Channel grants).  For this indicator we have provided data on disbursements for the reporting year relating only to grants that were in phase II in the reporting year.
-The Global Fund Board has recently (2010) approved a new grant architecture (http://www.theglobalfund.org/en/grantarchitecture/?lang=en). A core feature of this new grant architecture is the “single stream of funding per Principal Recipient, per disease.” This means the Global Fund will maintain one funding agreement for each Principal Recipient in each disease area, which will then be amended when a new proposal for funding the same disease is approved. This is in contrast to the current model, in which each newly approved proposal results in a separate grant agreement per Principal Recipient, with its own budget, performance framework, and so on.
-
-A key difference between an existing grant and a single stream of funding concerns how funding is committed over time. Whereas our existing grants have funding commitments of 2+3 years, single streams of funding will have fixed regular commitment cycles of up to three years. 
-
-');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11347,546,'9','','5261963.0','','1907561.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11348,546,'10','2007','','2008','12163511.0','Q10 9156932 in 2007. Please note only baseline data from 2008 is available. 
+INSERT INTO "submissions_dpquestion_2009" VALUES(11347,546,'8','','5261963.0','','1907561.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11348,546,'10old','2007','','2008','12163511.0','Q10 9156932 in 2007. Please note only baseline data from 2008 is available. 
 
 In 2008, the Global Fund scheduled 8''358''410 USD for disbursement. 12''163''511 USD were actually disbursed (including aid provided to UNDP)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11349,546,'11','','','','8358410.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11350,546,'12','2007','3490000.0','2008','3114058.0','Please note the following: 
+INSERT INTO "submissions_dpquestion_2009" VALUES(11349,546,'11old','','','','8358410.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11350,546,'10','2007','3490000.0','2008','3114058.0','Please note the following: 
 
 a. data reported for this indicator was calculated using the methodology for the 2007 PD monitoring round, which looks at total disbursements to a country (instead of disbursements made for procurement purposes) See http://www.oecd.org/document/19/0,3343,en_21571361_39494699_39763923_1_1_1_1,00.html
 
@@ -2891,15 +2606,11 @@ b. baseline data is provided for CY 2007 and follow-up data is provided for CY 2
 
 c. For 2008, data provided for Q11 does not equal Q2, as Q2 represents the fiscal year amount and not the calendar year disbursements.
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11351,546,'13','','0.0','','1985895.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11352,546,'14','2007','3490000.0','2008','3114058.0','Public financial management is fully used. Furthermore, it is at the discretion of the country to include system-strengthening activities in their funding proposals.
-
-
-Please note that in line with the PD monitoring, baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11353,546,'15','','3490000.0','','3114058.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11354,546,'16','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11355,546,'17','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .Global Fund financing is implemented by in-country organizations such as the Government or NGOs. The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11356,546,'18','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-countriy. However, depending on its programmatic and funding interest, and the decision during the grant review,  participation in the country annual reviews with other partners may be recommended.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11351,546,'11','','0.0','','1985895.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11353,546,'12','','3490000.0','','3114058.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11354,546,'13','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11355,546,'14','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .Global Fund financing is implemented by in-country organizations such as the Government or NGOs. The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11356,546,'15','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-countriy. However, depending on its programmatic and funding interest, and the decision during the grant review,  participation in the country annual reviews with other partners may be recommended.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11357,546,'19','','','','','Strengths
  Conducted at National level
  Wide stakeholders'' participation
@@ -2924,7 +2635,7 @@ Weaknesses
  Review reports not always available
  Available reports not always used
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11358,546,'20','2007','3228553.0','2008','5128034.0','In 2007 and 2008, $ 3,228,553 and $5,128,034 respectively were channeled through Civil society .');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11358,546,'16','2007','3228553.0','2008','5128034.0','In 2007 and 2008, $ 3,228,553 and $5,128,034 respectively were channeled through Civil society .');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11359,546,'21','2007','2438379.0','2008','3921419.0','The Global Fund does not fund other donors but provides funding through PRs nominated by the CCM. In 2007 and 2008, $ 2,438,379  and $3,921,419 respectively was channeled through UNDP as a PR . ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11360,546,'22','2007','0.0','2008','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11361,546,'23','2007','0.0','2008','0.0','');
@@ -2941,32 +2652,22 @@ Please note that baseline data is provided for CY 2007 and follow-up data is pro
 
 Note that amounts provided for this indicator exclud financing channeled through UNDP, in line with the 2007 PD monitoring guidelines.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11368,547,'7','','2753204.09','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11369,547,'8','2007','2753204.0','2008','16266600.0','Global Fund grants are multi-year commitments with funding commitments of 2+3 years (Phase 1 of two years; Phase 2 of three additional years) or (3+3 years in the case of Rolling Continuation Channel grants).  For this indicator we have provided data on disbursements for the reporting year relating only to grants that were in phase II in the reporting year.
-The Global Fund Board has recently (2010) approved a new grant architecture (http://www.theglobalfund.org/en/grantarchitecture/?lang=en). A core feature of this new grant architecture is the “single stream of funding per Principal Recipient, per disease.” This means the Global Fund will maintain one funding agreement for each Principal Recipient in each disease area, which will then be amended when a new proposal for funding the same disease is approved. This is in contrast to the current model, in which each newly approved proposal results in a separate grant agreement per Principal Recipient, with its own budget, performance framework, and so on.
-
-A key difference between an existing grant and a single stream of funding concerns how funding is committed over time. Whereas our existing grants have funding commitments of 2+3 years, single streams of funding will have fixed regular commitment cycles of up to three years. 
-
-');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11370,547,'9','','2753204.0','','950000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11371,547,'10','2007','','2008','20327879.0','Q10: 2007 - $6,830,223.  Please note only baseline data from 2008 is available. 
+INSERT INTO "submissions_dpquestion_2009" VALUES(11370,547,'8','','2753204.0','','950000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11371,547,'10old','2007','','2008','20327879.0','Q10: 2007 - $6,830,223.  Please note only baseline data from 2008 is available. 
 
 In 2008, the Global Fund scheduled 7''047''077 USD for disbursement. 20''327''879 USD were actually disbursed.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11372,547,'11','','','','7047077.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11373,547,'12','2007','2753204.09','2008','5258593.0','Please note the following: 
+INSERT INTO "submissions_dpquestion_2009" VALUES(11372,547,'11old','','','','7047077.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11373,547,'10','2007','2753204.09','2008','5258593.0','Please note the following: 
 
 a. data reported for this indicator was calculated using the methodology for the 2007 PD monitoring round, which looks at total disbursements to a country (instead of disbursements made for procurement purposes) See http://www.oecd.org/document/19/0,3343,en_21571361_39494699_39763923_1_1_1_1,00.html
 
 b. baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. 
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11374,547,'13','','2753204.09','','950000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11375,547,'14','2007','2753204.09','2008','5258593.0','Public financial management is partly used. However, it is at the discretion of the country to include system-strengthening activities in their funding proposals.
-
-
-Please note that in line with the PD monitoring, baseline data is provided for CY 2007 and follow-up data is provided for CY 2008. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11376,547,'15','','0.0','','1436197.59667','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11377,547,'16','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11378,547,'17','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .Global Fund financing is implemented by in-country organizations such as the Government or NGOs. The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11379,547,'18','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-countriy. However, depending on its programmatic and funding interest, and the decision during the grant review,  participation in the country annual reviews with other partners may be recommended.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11374,547,'11','','2753204.09','','950000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11376,547,'12','','0.0','','1436197.59667','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11377,547,'13','2007','0.0','2008','0.0','The Global Fund results on this indicator is 0 because the PIU staff and their Terms of Reference are decided on and appointed by the country.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11378,547,'14','2007','Yes','2008','Yes','The proposals to the Global Fund are developed by the Country Coordinating Mechanisms (CCM) http://www.theglobalfund.org/en/ccm .Global Fund financing is implemented by in-country organizations such as the Government or NGOs. The Global Fund requires that the performance framework in the proposal be consistent with the national disease control strategy. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11379,547,'15','2007','N/A','2008','N/A','The Global Fund does not conduct its own parallel assessments in-countriy. However, depending on its programmatic and funding interest, and the decision during the grant review,  participation in the country annual reviews with other partners may be recommended.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11380,547,'19','','','','','Strengths
  Conducted at National level
  Wide stakeholders'' participation
@@ -2991,7 +2692,7 @@ Weaknesses
  Review reports not always available
  Available reports not always used
 ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11381,547,'20','2007','-50601.0','2008','11008007.0','In 2008, $11,008,007 was channeled through Civil society organization (Catholic Relief Services (CRS).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11381,547,'16','2007','-50601.0','2008','11008007.0','In 2008, $11,008,007 was channeled through Civil society organization (Catholic Relief Services (CRS).');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11382,547,'21','2007','4127619.0','2008','4061279.0','The Global Fund does not fund other donors but provides funding through PRs nominated by the CCM. In 2007, $4,050,253 was channeled through UNDP, $77,366 through ICRC. In 2008, $4,129,528 was channeled through UNDP.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11383,547,'22','2007','0.0','2008','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11384,547,'23','2007','0.0','2008','0.0','');
@@ -3002,19 +2703,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11457,551,'4','2007','2883123.0
 INSERT INTO "submissions_dpquestion_2009" VALUES(11458,551,'5','','1536300.0','','1433700.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11459,551,'6','2007','18395997.6','2009','4796522.0','Here we have included all DAC coded health ODA (not only government sector).  As program based approaches we have included the support for SWAP and UNFPA in 2007.   In 2009 - Only UNFPA  is  included as program based approach.   Norway ended its support for the health sector in 2008. The Norwegian embassy wished to increase its GBS contribution and focus the development dialogue around the GBS support.  Funding now predominantly flows through GBS. (ref figures in q22 and q23) while some Multi-bi and NGO support is maintained.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11460,551,'7','','16865160.0','','4796522.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11461,551,'8','2007','16723137.6','2009','2502602.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11462,551,'9','','15192300.0','','2502602.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11463,551,'10','2007','16723137.6','2009','2502602.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11464,551,'11','','16723137.6','','2502602.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11465,551,'12','2007','100.0','2009','100.0','no procurment contracts - SBS and GBS use procurement systems, no other channels (eg UNFPA/CSO funding) use national systems.  Figures entered here represent the proportion of total health funding that uses SBS/GBS.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11466,551,'13','','83.0','','49.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11467,551,'14','2007','17049686.7','2009','3966570.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11468,551,'15','','15328860.0','','2293920.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11469,551,'16','2007','0.0','2009','0.0','Not sure whether Gerazao Biz (2007 and 2009) Foundation for Community Development (2009) should be counted as PIUs');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11470,551,'17','2007','Yes','2009','Yes','Norway is no longer participating in the Health Swap.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11471,551,'18','2007','Yes','2009','n/a','Norway is no longer participating in the Health Swap.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11462,551,'8','','15192300.0','','2502602.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11463,551,'10old','2007','16723137.6','2009','2502602.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11464,551,'11old','','16723137.6','','2502602.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11465,551,'10','2007','100.0','2009','100.0','no procurment contracts - SBS and GBS use procurement systems, no other channels (eg UNFPA/CSO funding) use national systems.  Figures entered here represent the proportion of total health funding that uses SBS/GBS.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11466,551,'11','','83.0','','49.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11468,551,'12','','15328860.0','','2293920.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11469,551,'13','2007','0.0','2009','0.0','Not sure whether Gerazao Biz (2007 and 2009) Foundation for Community Development (2009) should be counted as PIUs');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11470,551,'14','2007','Yes','2009','Yes','Norway is no longer participating in the Health Swap.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11471,551,'15','2007','Yes','2009','n/a','Norway is no longer participating in the Health Swap.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11472,551,'19','','Satisfied with ACA process as a joing accountability process.','','Not participating','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11473,551,'20','2007','483934.5','2009','451615.5','MSF Integrated Aids Network');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11473,551,'16','2007','483934.5','2009','451615.5','MSF Integrated Aids Network');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11474,551,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11475,551,'22','2007','23898000.0','2009','25488000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11476,551,'23','2007','13656000.0','2009','0.0','');
@@ -3025,19 +2724,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11480,552,'4','2005','0.0','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(11481,552,'5','','0.0','','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11482,552,'6','2005','2319941.2074','2009','730782.714','2005 Ethiopia: HSDP Ess Obstetric Care (3 500 000), CSO Direct Funding (533 357), HIVAIDS thru UNICEF 1 (13 192 620), HSDP III Formulation (112 896).2009 : Ethiopia: CSO Direct Funding (325 785), HIV/AIDS thru UNICEF II (5 000 000) , Evaluation HIV/AIDS thru UNICEF (252 709). ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11483,552,'7','','468300.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11484,552,'8','2005','2319941.2074','2009','730782.714','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11485,552,'9','','2304835.7226','','655000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11486,552,'10','2005','2319941.2074','2009','730782.714','disbursements made according to plans');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11487,552,'11','','2319874.3074','','730782.714','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11488,552,'12','2005','0.0','2009','0.0','No specific contributions for procurement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11489,552,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11490,552,'14','2005','468300.0','2009','0.0','2005: Ethiopia: HSDP Ess Obstetric Care (3 500 000) ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11491,552,'15','','468300.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11492,552,'16','please select','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11493,552,'17','2005','No','2009','No',' In 2005 Sweden was also active in Ethiopia but did not at that time use PAF. Not present in the health sector 2009');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11494,552,'18','2005','No','2009','Yes','See comment on question 6 above');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11485,552,'8','','2304835.7226','','655000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11486,552,'10old','2005','2319941.2074','2009','730782.714','disbursements made according to plans');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11487,552,'11old','','2319874.3074','','730782.714','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11488,552,'10','2005','0.0','2009','0.0','No specific contributions for procurement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11489,552,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11491,552,'12','','468300.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11492,552,'13','please select','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11493,552,'14','2005','No','2009','No',' In 2005 Sweden was also active in Ethiopia but did not at that time use PAF. Not present in the health sector 2009');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11494,552,'15','2005','No','2009','Yes','See comment on question 6 above');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11495,552,'19','','','','','See comment on question 6 above');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11496,552,'20','please select','0.0','2009','0.0','2005: no direct support to CSO policy involvement but support to CSO in Burkina and Mocqambique, mainly service delivery but also strengthening NGOs to better participate in policy processes. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11496,552,'16','please select','0.0','2009','0.0','2005: no direct support to CSO policy involvement but support to CSO in Burkina and Mocqambique, mainly service delivery but also strengthening NGOs to better participate in policy processes. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11497,552,'21','2007','106285.608','2009','39418.817','Support channeled through programme funding of Swedish NGOs. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11498,552,'22','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11499,552,'23','2007','0.0','2009','0.0','');
@@ -3048,19 +2745,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11503,553,'4','2005','0.0','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(11504,553,'5','','0.0','','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11505,553,'6','2005','4683000.0','2009','4585000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11506,553,'7','','4683000.0','','4585000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11507,553,'8','2005','4683000.0','2009','4585000.0','The reason for the poor result 2005 was that the sector budget support to Mali was a shortterm agreement while working on a multiyear agreement.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11508,553,'9','','0.0','','4585000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11509,553,'10','2005','4683000.0','2009','4585000.0','disbursements made according to plans');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11510,553,'11','','4683000.0','','4585000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11511,553,'12','2005','0.0','2009','100.0','No specific contributions for procurement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11512,553,'13','','','','100.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11513,553,'14','2005','4683000.0','2009','4585000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11514,553,'15','','4683000.0','','4585000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11515,553,'16','please select','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11516,553,'17','2005','Yes','2009','Yes','Sweden acting in Mali and Burkina Faso through Netherlands who used a single PAF.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11517,553,'18','2005','No','2009','Yes','See comment on question 6 above');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11508,553,'8','','0.0','','4585000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11509,553,'10old','2005','4683000.0','2009','4585000.0','disbursements made according to plans');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11510,553,'11old','','4683000.0','','4585000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11511,553,'10','2005','0.0','2009','100.0','No specific contributions for procurement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11512,553,'11','','','','100.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11514,553,'12','','4683000.0','','4585000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11515,553,'13','please select','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11516,553,'14','2005','Yes','2009','Yes','Sweden acting in Mali and Burkina Faso through Netherlands who used a single PAF.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11517,553,'15','2005','No','2009','Yes','See comment on question 6 above');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11518,553,'19','','','','','See comment on question 6 above');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11519,553,'20','please select','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11519,553,'16','please select','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11520,553,'21','2007','34780.0','2009','14410.0','Support channeled through programme funding of Swedish NGOs. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11521,553,'22','2007','10360000.0','2009','17030000.0',' triggers = for the fixed tranche that the five fundamental prerequisites for GBS are fulfilled; i) human rights and democracy, ii) strategy for poverty reduction, iii) economic policies, iv)  public financial management system, v)anti-corruption. The variable tranche  is conditioned to govn performance under certain indicators in the PAF linked to the area of education, public financial management and anti corruption.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11522,553,'23','2007','5180000.0','2009','4585000.0','');
@@ -3071,19 +2766,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11526,554,'4','2005','0.0','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(11527,554,'5','','0.0','','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11528,554,'6','2005','4059470.0','2009','4388500.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11529,554,'7','','3638000.0','','4388500.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11530,554,'8','2005','3097470.0','2009','2620000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11531,554,'9','','3097470.0','','2620000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11532,554,'10','2005','3097470.0','2009','2620000.0','disbursements made according to plans');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11533,554,'11','','3097470.0','','2620000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11534,554,'12','2005','0.0','2009','100.0','No specific contributions for procurement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11535,554,'13','','','','100.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11536,554,'14','2005','3638000.0','2009','4388500.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11537,554,'15','','3638000.0','','4388500.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11538,554,'16','please select','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11539,554,'17','2005','Yes','2009','Yes','Sweden acting in  Burkina Faso through Netherlands who used a single PAF. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11540,554,'18','2005','Yes','2009','Yes','See comment on question 6 above');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11531,554,'8','','3097470.0','','2620000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11532,554,'10old','2005','3097470.0','2009','2620000.0','disbursements made according to plans');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11533,554,'11old','','3097470.0','','2620000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11534,554,'10','2005','0.0','2009','100.0','No specific contributions for procurement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11535,554,'11','','','','100.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11537,554,'12','','3638000.0','','4388500.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11538,554,'13','please select','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11539,554,'14','2005','Yes','2009','Yes','Sweden acting in  Burkina Faso through Netherlands who used a single PAF. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11540,554,'15','2005','Yes','2009','Yes','See comment on question 6 above');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11541,554,'19','','','','','See comment on question 6 above');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11542,554,'20','2005','421470.0','2009','',' support to CSO in Burkina mainly service delivery but also strengthening NGOs to better participate in policy processes. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11542,554,'16','2005','421470.0','2009','',' support to CSO in Burkina mainly service delivery but also strengthening NGOs to better participate in policy processes. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11543,554,'21','2007','10656.0','2009','22270.0','Support channeled through programme funding of Swedish NGOs. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11544,554,'22','2007','7400000.0','2009','11790000.0','GBS to BF: triggers = for the fixed tranche that the five fundamental prerequisites for GBS are fulfilled; i) human rights and democracy, ii) strategy for poverty reduction, iii) economic policies, iv)  public financial management system, v)anti-corruption. For the variable tranche the condition is that the performance in the area of good governance and public financial management are fulfilled and the government performance   is acceptable measured against a set  of indicators taken from the performance matrix of the PAP-CSLP.  ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11545,554,'23','2007','','2009','','');
@@ -3094,19 +2787,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11549,555,'4','2005','0.0','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(11550,555,'5','','0.0','','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11551,555,'6','2005','2370331.2084','2009','3812100.0','2005:  Mocambique: HIVAIDS Niassa (NGO) (354 000),  Cont. HIV Niassa (3 226 583), Program Dev Fund 2005-6 (445 435), MSF HIV/Aids antidiscr (250 000). 2009:, national aids council (6 000 000)  ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11552,555,'7','','1798200.0','','3812100.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11553,555,'8','2005','572131.2084','2009','786000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11554,555,'9','','431716.8054','','786000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11555,555,'10','2005','572131.2084','2009','786000.0','disbursements made according to plans');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11556,555,'11','','572131.2084','','786000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11557,555,'12','2005','0.0','2009','100.0','No specific contributions for procurement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11558,555,'13','','','','100.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11559,555,'14','2005','1798200.0','2009','3812100.0',' Mocambique: national aids council (6 000 000)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11560,555,'15','','1798200.0','','3812100.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11561,555,'16','please select','0.0','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11562,555,'17','2005','Yes','2009','Yes','Only support to NAC');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11563,555,'18','2005','Yes','2009','Yes','See comment on question 6 above');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11554,555,'8','','431716.8054','','786000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11555,555,'10old','2005','572131.2084','2009','786000.0','disbursements made according to plans');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11556,555,'11old','','572131.2084','','786000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11557,555,'10','2005','0.0','2009','100.0','No specific contributions for procurement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11558,555,'11','','','','100.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11560,555,'12','','1798200.0','','3812100.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11561,555,'13','please select','0.0','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11562,555,'14','2005','Yes','2009','Yes','Only support to NAC');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11563,555,'15','2005','Yes','2009','Yes','See comment on question 6 above');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11564,555,'19','','','','','See comment on question 6 above');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11565,555,'20','2005','431716.8054','2009','','Hiv aids support to NGOs in Niassa, maily service delivery and advocacy but sthrengthened CSO.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11565,555,'16','2005','431716.8054','2009','','Hiv aids support to NGOs in Niassa, maily service delivery and advocacy but sthrengthened CSO.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11566,555,'21','2007','361428.136','2009','217724.358','Support channeled through programme funding of Swedish NGOs. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11567,555,'22','2007','19980000.0','2009','43230000.0','For Mocambique 75% of GBS was disbursed based on assessment of general conditions like macroeconomic stability, poverty reduction, democracy human rights and corruption. 25% on performance based assessment of 18 indicators from the PAF.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11568,555,'23','2007','0.0','2009','0.0','');
@@ -3117,19 +2808,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11664,560,'4','2007','145000.0'
 INSERT INTO "submissions_dpquestion_2009" VALUES(11665,560,'5','','N/A','','N/A','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11666,560,'6','2005','145000.0','2009','246000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11667,560,'7','','N/A','','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11668,560,'8','2007','145000.0','2009','246000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11669,560,'9','','N/A','','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11670,560,'10','2007','145000.0','2009','246000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11671,560,'11','','N/A','','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11672,560,'12','2005','N/A','2009','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11673,560,'13','','N/A','','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11674,560,'14','2007','145000.0','2009','246000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11675,560,'15','','N/A','','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11676,560,'16','please select','N/A','2009','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11677,560,'17','2005','','2009','Yes','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11678,560,'18','2005','','2009','Yes','The H4+ group including Unicef, WHO, UNFPA, the World Bank, and UNAIDS currently supporting maternal health programming by joint assessment of health specific indicators of MDG. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11669,560,'8','','N/A','','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11670,560,'10old','2007','145000.0','2009','246000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11671,560,'11old','','N/A','','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11672,560,'10','2005','N/A','2009','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11673,560,'11','','N/A','','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11675,560,'12','','N/A','','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11676,560,'13','please select','N/A','2009','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11677,560,'14','2005','','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11678,560,'15','2005','','2009','Yes','The H4+ group including Unicef, WHO, UNFPA, the World Bank, and UNAIDS currently supporting maternal health programming by joint assessment of health specific indicators of MDG. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11679,560,'19','','','','','We have participated in JAR held in previous years. In the past the Director of the National Center for AIDS and STD Control (NCASC) could not attend, and UNAIDS was requested to draft the section on HIV/AIDS. The effectiveness and conduct of JAR had improved through the years. One of the major challenge it face however, is the constant change in the country''s leadership, including that of the health sector and the NCASC (almost every year there is a new Director). This significantly affects the "push" to have HIV/AIDS high in the priorities of the health sector plan.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11680,560,'20','2007','58697.0','2009','52000.0','The National Association of people living with HIV in Nepal (NAPN+) and NFWHA and CS have been regularly advocated and supported for their capacity enhancement. However, further advocacy and capacity buidling to them are still required. Recently, CS participation was encouraging during the UNGASS reporting (one of the writing team member was from CS),  UA review and NSP development. Currently federation of sex worker had been registered in the name of Jagriti Mahila Mahasangh. 
+INSERT INTO "submissions_dpquestion_2009" VALUES(11680,560,'16','2007','58697.0','2009','52000.0','The National Association of people living with HIV in Nepal (NAPN+) and NFWHA and CS have been regularly advocated and supported for their capacity enhancement. However, further advocacy and capacity buidling to them are still required. Recently, CS participation was encouraging during the UNGASS reporting (one of the writing team member was from CS),  UA review and NSP development. Currently federation of sex worker had been registered in the name of Jagriti Mahila Mahasangh. 
 ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11681,560,'21','please select','N/A','2009','N/A','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11682,560,'22','please select','N/A','2009','N/A','');
@@ -3141,19 +2830,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11710,562,'4','2008','','2009',
 INSERT INTO "submissions_dpquestion_2009" VALUES(11711,562,'5','','','','32000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11712,562,'6','2005','0.0','2009','20000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11713,562,'7','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11714,562,'8','2005','na','2009','na','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11715,562,'9','','na','','na','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11716,562,'10','2005','0.0','2009','20000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11717,562,'11','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11718,562,'12','2005','','2009','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11719,562,'13','','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11720,562,'14','2007','0.0','2009','20000.0','UNAIDS provided  support  based on strenghening capacity of National Programme on AIDS in health sector specificaly in ME with linkage to the financial management system of the programme,');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11721,562,'15','','0.0','','5000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11722,562,'16','please select','NA','2009','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11723,562,'17','2005','No','2009','No','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11724,562,'18','2005','','2009','Yes','UNAIDS  office has participated in JAR held in 2009. We were actively involved in the NAC team draft the section on HIV /AIDS.  This exercise permits to keep operational link between the National Health Development Plan and the National AIDS Strategic Plan . ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11715,562,'8','','na','','na','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11716,562,'10old','2005','0.0','2009','20000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11717,562,'11old','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11718,562,'10','2005','','2009','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11719,562,'11','','','','','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11721,562,'12','','0.0','','5000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11722,562,'13','please select','NA','2009','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11723,562,'14','2005','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11724,562,'15','2005','','2009','Yes','UNAIDS  office has participated in JAR held in 2009. We were actively involved in the NAC team draft the section on HIV /AIDS.  This exercise permits to keep operational link between the National Health Development Plan and the National AIDS Strategic Plan . ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11725,562,'19','','','','','The Joint Annual Health Sector review has been recently established during the mid term review of the current National developpment plan (2008-2012) and will start by the end of 2011,');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11726,562,'20','please select','','2009','7000.0','The UNAIDS gave its support to the strengthening of the capacities of civil society by putting in place Networks of  associations engaged in the fight against HIV and AIDS  as well as people living with HIV and AIDS Network.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11726,562,'16','please select','','2009','7000.0','The UNAIDS gave its support to the strengthening of the capacities of civil society by putting in place Networks of  associations engaged in the fight against HIV and AIDS  as well as people living with HIV and AIDS Network.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11727,562,'21','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11728,562,'22','please select','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11729,562,'23','please select','0.0','2009','0.0','');
@@ -3164,19 +2851,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11733,563,'4','2005','','2009',
 INSERT INTO "submissions_dpquestion_2009" VALUES(11734,563,'5','','','','89647.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11735,563,'6','2007','','2009','124307.0','100% de la somme indiquée a été décaissée');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11736,563,'7','','','','124307.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11737,563,'8','2007','na','2009','na','Les engagements se font sur une base biennale');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11738,563,'9','','na','','na','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11739,563,'10','2007','0.0','2009','124307.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11740,563,'11','','','','124307.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11741,563,'12','2007','','2009','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11742,563,'13','','','','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11743,563,'14','2007','0.0','2009','211130.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11744,563,'15','','','','0.0','Pas d''Information spécifique concernant les systémes ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11745,563,'16','2005','na','2009','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11746,563,'17','please select','','2009','Yes','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11747,563,'18','please select','','2009','','En cours de réalisation, le mécanisme est en place et l''ONUSIDA est partie prenante de cette évaluation mutuelle: un groupe santé de la reproduction et un groupe renforcement du système');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11738,563,'8','','na','','na','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11739,563,'10old','2007','0.0','2009','124307.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11740,563,'11old','','','','124307.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11741,563,'10','2007','','2009','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11742,563,'11','','','','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11744,563,'12','','','','0.0','Pas d''Information spécifique concernant les systémes ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11745,563,'13','2005','na','2009','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11746,563,'14','please select','','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11747,563,'15','please select','','2009','','En cours de réalisation, le mécanisme est en place et l''ONUSIDA est partie prenante de cette évaluation mutuelle: un groupe santé de la reproduction et un groupe renforcement du système');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11748,563,'19','please select','','','','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11749,563,'20','please select','','2009','27500.0','Appui financier à la stratégie de Communication de deux          Associations de Personnes Vivant avec le VIH  (AMAS/AFAS)                          Et aux associations de femmes (AFESIM / SWAA Mali)pour la réalisation d''une étude sur la vulnérabilité des femmes au Mali');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11749,563,'16','please select','','2009','27500.0','Appui financier à la stratégie de Communication de deux          Associations de Personnes Vivant avec le VIH  (AMAS/AFAS)                          Et aux associations de femmes (AFESIM / SWAA Mali)pour la réalisation d''une étude sur la vulnérabilité des femmes au Mali');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11750,563,'21','please select','','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11751,563,'22','please select','','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11752,563,'23','please select','','2009','0.0','Pas de mécanisme d''appui budgétaire, l''appui financier est direct aux programmes concernés');
@@ -3187,19 +2872,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11756,564,'4','2005','0.0','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(11757,564,'5','','0.0','','73667.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11758,564,'6','2005','0.0','2009','231917.0','UNAIDS provided technical support amount to around 221,000$ based on the National Action Plan on HIV/AIDS 2008-2011. Specifically this includes the areas on Strategic Information, policy development and advocacy, and support to national capacity development.  ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11759,564,'7','','','','47940.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11760,564,'8','2005','N/A','2009','N/A','Les appuis de l''ONUSIDA se font sur une base annuelle et sur des aspects catalytiques des différents programmes');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11761,564,'9','','N/A','','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11762,564,'10','2005','0.0','2009','231917.0','(cellule G14 devrait montrer le meme chiffre que G10)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11763,564,'11','','0.0','','47940.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11764,564,'12','2007','0.0','2009','0.0','L''ONUSIDA n''intervient pas sur les questions d''approvisionnement');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11765,564,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11766,564,'14','2007','0.0','2009','0.0','L''ONUSIDA appuie directement les programmes et ne passe pas par l''État');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11767,564,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11768,564,'16','2007','N/A','2009','N/A','L''ONUSIDA appuie directement les programmes et ne passe pas par le Budget de l''État');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11769,564,'17','2007','Yes','2009','Yes','L''évaluation des performances du système de santé concernant le VIH est annuellement et périodiquement faite par le Ministère de la santé via le CMLS/santé et par le Secrétariat permanent du CNLS-IST');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11770,564,'18','2007','Yes','2009','No','We have participated in JAR held in previous years. In the past the Director of the National Center for AIDS and STD Control (NCASC) ould not attend, and UNAIDS was requested to draft the section on HIV/AIDS. The effectiveness and conduct of JAR had improved through the years. One of the major challenge it face however, is the constant change in the country''s leadership, including that of the health sector and the NCASC (almost every year there is a new Director). This significantly affects the "push" to have HIV/AIDS high in the priorities of the health sector plan.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11761,564,'8','','N/A','','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11762,564,'10old','2005','0.0','2009','231917.0','(cellule G14 devrait montrer le meme chiffre que G10)');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11763,564,'11old','','0.0','','47940.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11764,564,'10','2007','0.0','2009','0.0','L''ONUSIDA n''intervient pas sur les questions d''approvisionnement');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11765,564,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11767,564,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11768,564,'13','2007','N/A','2009','N/A','L''ONUSIDA appuie directement les programmes et ne passe pas par le Budget de l''État');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11769,564,'14','2007','Yes','2009','Yes','L''évaluation des performances du système de santé concernant le VIH est annuellement et périodiquement faite par le Ministère de la santé via le CMLS/santé et par le Secrétariat permanent du CNLS-IST');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11770,564,'15','2007','Yes','2009','No','We have participated in JAR held in previous years. In the past the Director of the National Center for AIDS and STD Control (NCASC) ould not attend, and UNAIDS was requested to draft the section on HIV/AIDS. The effectiveness and conduct of JAR had improved through the years. One of the major challenge it face however, is the constant change in the country''s leadership, including that of the health sector and the NCASC (almost every year there is a new Director). This significantly affects the "push" to have HIV/AIDS high in the priorities of the health sector plan.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11771,564,'19','2007','','','','La première revue sectorielle santé réalisée en 2010 a permis une large participation des parties prenantes à l''analyse critique des résultats du PNDS 2001-2010, à des échanges sur la responsibilité mutuelle des succès et des échecs rapportés et à l''identification des défis et les problèmes prioritaires pour le PNDS 2011-2020. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11772,564,'20','2005','0.0','2009','158250.0','Civil society from the HIV/AIDS community was not invited. The National Association of people living with HIV in Nepal (NAPN+) had advocated time and again, yet it didn''t progress much. We will continue however, advocating for a forum where the voice of NAPN+ could be heard. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11772,564,'16','2005','0.0','2009','158250.0','Civil society from the HIV/AIDS community was not invited. The National Association of people living with HIV in Nepal (NAPN+) had advocated time and again, yet it didn''t progress much. We will continue however, advocating for a forum where the voice of NAPN+ could be heard. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11773,564,'21','2007','0.0','2009','0.0','Les décaissements de l''ONUSIDA se font directement et vers des programmes');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11774,564,'22','2007','0.0','2009','0.0','L''ONUSIDA est un Secrétariat. Ses stratégies  et ses ressources ne lui permettent pas de faire des appuis budgétaires');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11775,564,'23','2007','0.0','2009','0.0','L''ONUSIDA est un Secrétariat. Ses stratégies  et ses ressources ne lui permettent pas de faire des appuis budgétaires');
@@ -3210,19 +2893,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11802,566,'4','2008','','2009',
 INSERT INTO "submissions_dpquestion_2009" VALUES(11803,566,'5','','','','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11804,566,'6','2008','770130.0','2009','524271.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11805,566,'7','','770130.0','','524271.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11806,566,'8','2008','N/A','2009','N/A','L''ONUSIDA fonctionne avec des budgets biannuels');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11807,566,'9','','N/A','','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11808,566,'10','2008','770130.0','2009','524271.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11809,566,'11','','770130.0','','524271.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11810,566,'12','2008','N/A','2009','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11811,566,'13','','N/A','','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11812,566,'14','2008','770130.0','2009','524271.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11813,566,'15','','','','129000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11814,566,'16','2008','N/A','2009','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11815,566,'17','2008','Yes','2009','Yes','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11816,566,'18','2008','No','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11807,566,'8','','N/A','','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11808,566,'10old','2008','770130.0','2009','524271.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11809,566,'11old','','770130.0','','524271.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11810,566,'10','2008','N/A','2009','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11811,566,'11','','N/A','','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11813,566,'12','','','','129000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11814,566,'13','2008','N/A','2009','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11815,566,'14','2008','Yes','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11816,566,'15','2008','No','2009','Yes','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11817,566,'19','please select','','','','La revue annuelle a permit de definir les priorites du pays et surtout de permettre a chaque acteur d''ajuster ses interventions et d''etablir des synergies avec les autres.L''inexistence de mecanisme coercisif emmene certains acteurs a continuer leurs interventions sans tenir des priorites nationales.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11818,566,'20','2008','','2009','','Appui au reseautage des PVVIH, des organisations des femmes, des religieux; renforcement des capacites en planification');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11818,566,'16','2008','','2009','','Appui au reseautage des PVVIH, des organisations des femmes, des religieux; renforcement des capacites en planification');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11819,566,'21','2008','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11820,566,'22','2008','N/A','2009','N/A','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11821,566,'23','please select','770130.0','2009','524271.0','');
@@ -3233,19 +2914,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11825,567,'4','2005','','2009',
 INSERT INTO "submissions_dpquestion_2009" VALUES(11826,567,'5','','','','200000.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11827,567,'6','2005','','2009','320000.0','Some UNAIDS TA and funds were focused on non -health areas (multisectoral response)');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11828,567,'7','','','','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11829,567,'8','2005','N/A','2009','N/A','Some UNAIDS TA and funds were focused on non -health areas (multisectoral response)');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11830,567,'9','','N/A','','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11831,567,'10','2005','','2009','320000.0','As above');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11832,567,'11','','','','260000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11833,567,'12','2005','N/A','2009','N/A','Not relevant for UNAIDS');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11834,567,'13','','N/A','','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11835,567,'14','2005','','2009','250000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11836,567,'15','','','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11837,567,'16','please select','N/A','2009','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11838,567,'17','2005','Yes','2009','Yes','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11839,567,'18','2005','Yes','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11830,567,'8','','N/A','','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11831,567,'10old','2005','','2009','320000.0','As above');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11832,567,'11old','','','','260000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11833,567,'10','2005','N/A','2009','N/A','Not relevant for UNAIDS');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11834,567,'11','','N/A','','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11836,567,'12','','','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11837,567,'13','please select','N/A','2009','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11838,567,'14','2005','Yes','2009','Yes','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11839,567,'15','2005','Yes','2009','Yes','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11840,567,'19','','','','The Joint Annual Health Sector Review (JAR) is a useful tool since it brings together all partners and it allows a coomon look at achievements, bottlenecks as well as funds received and spent by GOV  ','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11841,567,'20','please select','','2009','TA was provided to the two principal recipients of the GF that are NGOs (NEP+ and EIFADD) both in the development of the proposals, grant negotiation and implementation','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11841,567,'16','please select','','2009','TA was provided to the two principal recipients of the GF that are NGOs (NEP+ and EIFADD) both in the development of the proposals, grant negotiation and implementation','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11842,567,'21','please select','','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11843,567,'22','please select','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11844,567,'23','please select','0.0','2009','0.0','');
@@ -3256,19 +2935,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11848,568,'4','2005','0.0','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(11849,568,'5','','0.0','','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11850,568,'6','2005','0.0','2009','0.0','This is sectoral pooled funding into ProSaude Basket. UNAIDS is not participating as donor in this SWAP mechanism and it does not provide any financial contribution on health sector directly and through other mechanism. Our direct counterpart is NAC from the government and national and international NGOs from Civil Society.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11851,568,'7','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11852,568,'8','2005','N/A','2009','N/A','Q8: 2005 - $0; 2009 - $0.                                         This is sectoral pooled funding into ProSaude Basket. UNAIDS is not participating as donor in this SWAP mechanism and it does not provide any financial contribution on health sector directly and through other mechanism. Our direct counterpart is NAC from the government and national and international NGOs from Civil Society.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11853,568,'9','','N/A','','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11854,568,'10','2005','0.0','2009','0.0','This is sectoral pooled funding into ProSaude Basket. UNAIDS is not participating as donor in this SWAP mechanism and it does not provide any financial contribution on health sector directly and through other mechanism. Our direct counterpart is NAC from the government and national and international NGOs from Civil Society.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11855,568,'11','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11856,568,'12','2005','0.0','2009','0.0','Given that UNAIDS is not a donor we do not use procurement through health systems. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11857,568,'13','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11858,568,'14','2008','0.0','2009','0.0','This is sectoral pooled funding into ProSaude Basket. UNAIDS is not participating as donor in this SWAP mechanism and it does not provide any financial contribution on health sector directly and through other mechanism. Our direct counterpart is NAC from the government and national and international NGOs from Civil Society.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11859,568,'15','','0.0','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11860,568,'16','2007','N/A','2009','N/A','Idem');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11861,568,'17','2007','Yes','2009','Yes','Joint Annual Review with a Common Performance Assessment Framework');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11862,568,'18','2007','Yes','2009','Yes','Joint Annual Review with a Common Performance Assessment Framework');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11853,568,'8','','N/A','','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11854,568,'10old','2005','0.0','2009','0.0','This is sectoral pooled funding into ProSaude Basket. UNAIDS is not participating as donor in this SWAP mechanism and it does not provide any financial contribution on health sector directly and through other mechanism. Our direct counterpart is NAC from the government and national and international NGOs from Civil Society.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11855,568,'11old','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11856,568,'10','2005','0.0','2009','0.0','Given that UNAIDS is not a donor we do not use procurement through health systems. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11857,568,'11','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11859,568,'12','','0.0','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11860,568,'13','2007','N/A','2009','N/A','Idem');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11861,568,'14','2007','Yes','2009','Yes','Joint Annual Review with a Common Performance Assessment Framework');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11862,568,'15','2007','Yes','2009','Yes','Joint Annual Review with a Common Performance Assessment Framework');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11863,568,'19','','Yes','','Yes','Joint annual review considered 36 indicators of performance, with 4 indicators looking at donor performance. There are also indicators related to HIV&TB, ARV Therapy, PMTCT, condom distribution and CT. The review includes a data verification exercise and the results are presented and discussed at a public meeting chaired by the Minister of Health - with active civil society and partners participation. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11864,568,'20','2007','0.0','2009','0.0','Eventhough UNAIDS do not provide health specific support to civil society organizations, we provide technical and financial support for HIV&AIDS advocacy, thus in an indirect way we provide support. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11864,568,'16','2007','0.0','2009','0.0','Eventhough UNAIDS do not provide health specific support to civil society organizations, we provide technical and financial support for HIV&AIDS advocacy, thus in an indirect way we provide support. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11865,568,'21','2007','0.0','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11866,568,'22','2007','0.0','2009','0.0','None');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11867,568,'23','2007','0.0','2009','0.0','None');
@@ -3279,19 +2956,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11871,569,'4','2005','N/A','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(11872,569,'5','','N/A','','23321.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11873,569,'6','2005','N/A','2009','57338.0','Cfr réponse 2DPa           ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11874,569,'7','','N/A','','57338.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11875,569,'8','2007','N/A','2009','N/A','Q9: L''ONUSIDA fonctionne avec des budgets biannuels');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11876,569,'9','','N/A','','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11877,569,'10','2005','N/A','2009','57338.0','cfr réponse 2DPa           ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11878,569,'11','','N/A','','57338.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11879,569,'12','2005','N/A','2009','0.0','La part de l''Office Nigérien des Produits Pharmaceutiques et Chimiques (ONPPC) dans l''approvision-nement des formations sanitaires publiques en produits pharmaceutiques en 2009 est de l''ordre de 25% avec des besoins annuels de la santé publique estimées à 50,000,000 USD. L''objectif est d''atteindre 60% des approvisionnments passant par l''ONPPC en 2012');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11880,569,'13','','N/A','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11881,569,'14','2005','N/A','2009','57338.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11882,569,'15','','N/A','','50000.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11883,569,'16','2005','N/A','2009','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11884,569,'17','2005','','2009','Yes','Appui technique dans l''élaboration du plan national de suivi évaluation,l''élaboration des rapports UNGASS et des rapports de progrès  sur l''Accès Universel. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11885,569,'18','2005','','2009','Yes','Participation aux évaluations annuelles et à mi-parcours.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11876,569,'8','','N/A','','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11877,569,'10old','2005','N/A','2009','57338.0','cfr réponse 2DPa           ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11878,569,'11old','','N/A','','57338.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11879,569,'10','2005','N/A','2009','0.0','La part de l''Office Nigérien des Produits Pharmaceutiques et Chimiques (ONPPC) dans l''approvision-nement des formations sanitaires publiques en produits pharmaceutiques en 2009 est de l''ordre de 25% avec des besoins annuels de la santé publique estimées à 50,000,000 USD. L''objectif est d''atteindre 60% des approvisionnments passant par l''ONPPC en 2012');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11880,569,'11','','N/A','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11882,569,'12','','N/A','','50000.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11883,569,'13','2005','N/A','2009','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11884,569,'14','2005','','2009','Yes','Appui technique dans l''élaboration du plan national de suivi évaluation,l''élaboration des rapports UNGASS et des rapports de progrès  sur l''Accès Universel. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11885,569,'15','2005','','2009','Yes','Participation aux évaluations annuelles et à mi-parcours.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11886,569,'19','2005','N/A','','','Forces: Permet une évaluation conjointe des progrès , des insuffisances et la formulation des recommandations pour plus d''efficacité dans l''affectation des ressources aux priorités et la culture de rendre compte. Faiblesses:  Irrégularités et problèmes de décaissements.                                      Rendre régulière ces évaluations sur une base semestrielle');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11887,569,'20','2005','N/A','2009','','Plaidoyer pour l''intégration de la société civile dans les forums de planification, coordination (CNLS, forum des partenaires), de suivi de la mise œuvre et des évaluations ainsi que la mobilisation des ressources (Rounds Fond Mondial, MAP/BM...)             Appui aux formations de renforcement des capacités en menstreaming, life skills  Appui à la participation   aux forums internationaux comme ICASA');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11887,569,'16','2005','N/A','2009','','Plaidoyer pour l''intégration de la société civile dans les forums de planification, coordination (CNLS, forum des partenaires), de suivi de la mise œuvre et des évaluations ainsi que la mobilisation des ressources (Rounds Fond Mondial, MAP/BM...)             Appui aux formations de renforcement des capacités en menstreaming, life skills  Appui à la participation   aux forums internationaux comme ICASA');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11888,569,'21','2005','','2009','','En 2008-2009 il n''ya pas eu de décaissement . Par l''intermédiaire d''autres donateurs.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11889,569,'22','2007','N/A','2009','N/A','On n''utilise pas l''appui budgétaire général');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11890,569,'23','2007','N/A','2009','N/A','On n''utilise pas l''appui budgétaire sectoriel');
@@ -3302,19 +2977,17 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11917,571,'4','2005','N/A','200
 INSERT INTO "submissions_dpquestion_2009" VALUES(11918,571,'5','','N/A','','146429.0','Q5. Appui plutôt deployer a des Programmes coordonées, comme la PTME.  ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11919,571,'6','2005','N/A','2009','723205.0','Cfr réponse 2DPa           ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11920,571,'7','','N/A','','723205.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11921,571,'8','2007','N/A','2009','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11922,571,'9','','N/A','','N/A','Q9: L''ONUSIDA fonctionne avec des budgets biannuels');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11923,571,'10','2005','N/A','2009','723205.0','cfr réponse 2DPa           ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11924,571,'11','','N/A','','723205.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11925,571,'12','2005','N/A','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11926,571,'13','','N/A','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11927,571,'14','2005','N/A','2009','723205.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11928,571,'15','','N/A','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11929,571,'16','2005','N/A','2009','N/A','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11930,571,'17','2005','','2009','Yes','Le cadre existe depuis 2009 , mais on n''a pas encore fait l''evaluation des progrès de chaque signataire du MOU. Néanmoins, l''appui technique pour l''élaboration des rapports UNGASS et des rapports de progrès  sur l''Accès Universel a été fourni et ces documents  partagés avec les partennaires. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11931,571,'18','2005','','2009','Yes','Non pour le MOU et les Principes de Paris mais la plupart des PTFs le font au niveau national à travers le Comité National de Coordination des Aides(CNCA).');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11922,571,'8','','N/A','','N/A','Q9: L''ONUSIDA fonctionne avec des budgets biannuels');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11923,571,'10old','2005','N/A','2009','723205.0','cfr réponse 2DPa           ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11924,571,'11old','','N/A','','723205.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11925,571,'10','2005','N/A','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11926,571,'11','','N/A','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11928,571,'12','','N/A','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11929,571,'13','2005','N/A','2009','N/A','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11930,571,'14','2005','','2009','Yes','Le cadre existe depuis 2009 , mais on n''a pas encore fait l''evaluation des progrès de chaque signataire du MOU. Néanmoins, l''appui technique pour l''élaboration des rapports UNGASS et des rapports de progrès  sur l''Accès Universel a été fourni et ces documents  partagés avec les partennaires. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11931,571,'15','2005','','2009','Yes','Non pour le MOU et les Principes de Paris mais la plupart des PTFs le font au niveau national à travers le Comité National de Coordination des Aides(CNCA).');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11932,571,'19','2005','N/A','','','Jusq''a maintenant il n'' y a pas encore eu de revue annuelle conjointe des mécanismes de rendre compte. ');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11933,571,'20','2005','N/A','2009','265805.0','Renforcement des capacités des leaders locaux pour une plus grande implication dans la lutte contre le SIDA. Promotion de l''Accès aux services des prise en charge medicale et prévention des populations vulnérales telles que: les MSM, les professionels du sexe  et les usagers des drogues. L''appui aux organisations des femmes surtout pour l''intégration de la thématique de la violence basée sur le genre.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11933,571,'16','2005','N/A','2009','265805.0','Renforcement des capacités des leaders locaux pour une plus grande implication dans la lutte contre le SIDA. Promotion de l''Accès aux services des prise en charge medicale et prévention des populations vulnérales telles que: les MSM, les professionels du sexe  et les usagers des drogues. L''appui aux organisations des femmes surtout pour l''intégration de la thématique de la violence basée sur le genre.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11934,571,'21','2005','','2009','','En 2009 il n''ya pas eu de décaissement par l''intermédiaire d''autres donateurs.');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11935,571,'22','2007','N/A','2009','N/A','On n''utilise pas l''appui budgétaire général');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11936,571,'23','2007','N/A','2009','N/A','On n''utilise pas l''appui budgétaire sectoriel');
@@ -3325,22 +2998,23 @@ INSERT INTO "submissions_dpquestion_2009" VALUES(11940,572,'4','2005','na','2009
 INSERT INTO "submissions_dpquestion_2009" VALUES(11941,572,'5','','na','','139220.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11942,572,'6','2005','na','2009','1235538.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11943,572,'7','','na','','1159611.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11944,572,'8','2005','na','2009','na','Q8: 2005 - $0.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11945,572,'9','','na','','na','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11946,572,'10','2005','na','2009','1235538.0','Q8: 2005 - $0.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11947,572,'11','','na','','1235537.7','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11948,572,'12','2005','na','2009','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11949,572,'13','','na','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11950,572,'14','2005','na','2009','1235537.7','Q14: 2005 - $0.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11951,572,'15','','na','','0.0','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11952,572,'16','','na','2009','na','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11953,572,'17','','No','2009','No','');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11954,572,'18','2005','NA','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11945,572,'8','','na','','na','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11946,572,'10old','2005','na','2009','1235538.0','Q8: 2005 - $0.');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11947,572,'11old','','na','','1235537.7','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11948,572,'10','2005','na','2009','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11949,572,'11','','na','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11951,572,'12','','na','','0.0','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11952,572,'13','','na','2009','na','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11953,572,'14','','No','2009','No','');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11954,572,'15','2005','NA','2009','No','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11955,572,'19','','na','','The assessment was a joint review as a process to develop the new National Strategic Health Development Plan. As a prelude to the development of the NSHDP, a generic Framework was developed to serve as a guide for the selection of evidenced-based, cost-effective and high impact priority interventions that would contribute to achieving the desired health outcomes for Nigerians. ','The joint review was carried through an elaborate collaborative process with a clear adopted time framework. Some lessons were the need for FMOH to intensify political and strategic commitment to health system strengthening and evolving a bottom-up approach to the planning process, as well as the adoption of a uniform guideline for state and LGA level planning processes with provisions for flexibility to adapt to sub-national context.');
-INSERT INTO "submissions_dpquestion_2009" VALUES(11956,572,'20','please select','na','2009','286287.0','One of UNAIDS main activites in the country is to build the capacity of Civil Society through CSOs to participate effectively in the national and state HIV responses. The apex civil society network on HIV in Nigeria CISHAN was supported to articulate its views on the national response and to ensure that these views were incorporated into the National Strategic plan on HIV 2010-2015. CSOs have also been supported to develop Strategic Plans and have also had training on Program management and resource mobilisation to place them in a better position to respond to the HIV epidemic particularly at the community level. ');
+INSERT INTO "submissions_dpquestion_2009" VALUES(11956,572,'16','please select','na','2009','286287.0','One of UNAIDS main activites in the country is to build the capacity of Civil Society through CSOs to participate effectively in the national and state HIV responses. The apex civil society network on HIV in Nigeria CISHAN was supported to articulate its views on the national response and to ensure that these views were incorporated into the National Strategic plan on HIV 2010-2015. CSOs have also been supported to develop Strategic Plans and have also had training on Program management and resource mobilisation to place them in a better position to respond to the HIV epidemic particularly at the community level. ');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11957,572,'21','please select','','2009','','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11958,572,'22','please select','na','2009','0.0','');
 INSERT INTO "submissions_dpquestion_2009" VALUES(11959,572,'23','please select','na','2009','0.0','');
+CREATE INDEX "submissions_dpquestion_2009_b3d6235a" ON "submissions_dpquestion_2009" ("submission_id");
+
+DROP TABLE IF EXISTS "submissions_govquestion_2009";
 CREATE TABLE "submissions_govquestion_2009" (
     "id" integer NOT NULL PRIMARY KEY,
     "submission_id" integer NOT NULL REFERENCES "submissions_submission" ("id"),
@@ -3814,8 +3488,5 @@ INSERT INTO "submissions_govquestion_2009" VALUES(1403,539,'23','','56.0','','67
 INSERT INTO "submissions_govquestion_2009" VALUES(1404,539,'24','2007',NULL,'2009','18th February 2010','Les revues annuelles du secteur de la santé sont des rencontres nationales auxquelles participent tous les acteurs du secteurs de la santé.  Les revues ont des forces et faiblesses. Forces: la participation de tous les acteurs, la regularité dans leur organisation, elle commence toujours par le niveau périphérique, puis le niveau provincial et les données des provinces sont analysées lors des revues nationales. Faiblesses: les revues se faisaient sans que l''on ait au préalable défini un cadre conjoint d''évaluation des performances.');
 INSERT INTO "submissions_govquestion_2009" VALUES(1405,539,'25','2007','Veuillez répondre dans la colonne "réponses & complément d''informations"','2009','Veuillez répondre dans la colonne "réponses & complément d''informations"','');
 INSERT INTO "submissions_govquestion_2009" VALUES(1406,539,'26','2007','Veuillez répondre dans la colonne "réponses & complément d''informations"','2009','Veuillez répondre dans la colonne "réponses & complément d''informations"','');
-
-CREATE INDEX "submissions_dpquestion_2009_b3d6235a" ON "submissions_dpquestion_2009" ("submission_id");
 CREATE INDEX "submissions_govquestion_2009_submission_id" ON "submissions_govquestion_2009" ("submission_id");
-
 COMMIT;
