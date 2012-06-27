@@ -201,7 +201,9 @@ def agency_volume_of_aid(request, indicator, template_name="submissions/agency_r
 def top5_countries_json(request):
     top3 = models.Country.objects.filter(country__in=["Ethiopia", "Mali", "Mozambique"])
     next2 = models.Country.objects.filter(country__in=["Niger", "Uganda"])
-    the_rest = models.Country.objects.exclude(country__in=top3).exclude(country__in=next2)
+
+    fn_names = lambda countries : [c.country for c in countries]
+    the_rest = models.Country.objects.exclude(country__in=fn_names(top3)).exclude(country__in=fn_names(next2))
 
     calculator = partial(indicators.calc_indicator, agency_or_country=None, funcs=indicators.positive_funcs)
     calc_indicators = ["2DPa", "2DPc", "3DP", "4DP", "5DPb"]
