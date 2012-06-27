@@ -1,3 +1,4 @@
+from functools import partial
 from collections import OrderedDict
 import json
 from django.views.generic.simple import direct_to_template
@@ -215,6 +216,7 @@ def top5_countries_json(request):
     next2 = models.Country.objects.filter(country__in=["Niger", "Uganda"])
     the_rest = models.Country.objects.exclude(country__in=top3).exclude(country__in=next2)
 
+    calculator = partial(indicators.calc_indicator, agency_or_country=None, funcs=indicators.positive_funcs)
     calc_indicators = ["2DPa", "2DPc", "3DP", "4DP", "5DPb"]
 
     js = {
@@ -224,12 +226,14 @@ def top5_countries_json(request):
     }
 
     def fn_country_values(country, indicator):
-        calculation = indicators.calc_indicator(
-            models.DPQuestion.objects.filter(submission__country=country), None, indicator
+        calculation = calculator(
+            models.DPQuestion.objects.filter(submission__country=country), 
+            indicator=indicator
         )
         with models.old_dataset():
-            old_calculation = indicators.calc_indicator(
-                models.DPQuestion.objects.filter(submission__country=country), None, indicator
+            old_calculation = calculator(
+                models.DPQuestion.objects.filter(submission__country=country),
+                indicator=indicator
             )
 
         return {
@@ -241,13 +245,13 @@ def top5_countries_json(request):
 
     for indicator in calc_indicators:
         for label, subset in [("top3", top3), ("next2", next2), ("the_rest", the_rest)]:
-            calculation = indicators.calc_indicator(
-                models.DPQuestion.objects.filter(submission__country__in=subset), None, indicator
+            calculation = calculator(
+                models.DPQuestion.objects.filter(submission__country__in=subset), indicator=indicator
             )
 
             with models.old_dataset():
-                old_calculation = indicators.calc_indicator(
-                    models.DPQuestion.objects.filter(submission__country__in=subset), None, indicator
+                old_calculation = calculator(
+                    models.DPQuestion.objects.filter(submission__country__in=subset), indicator=indicator
                 )
 
 
