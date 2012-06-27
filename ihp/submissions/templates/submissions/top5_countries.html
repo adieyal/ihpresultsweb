@@ -109,68 +109,7 @@
                 }
             });
             
-        /*
-        var header = table.append("tr")
-        header.append("th")
-        header.append("th").text("2007")
-        header.append("th").text("2009")
-        header.append("th").text("2011")
-
-        table.selectAll("tr.indicator")
-            .data(js[group])
-            .enter()
-            .append("tr")
-            .attr("class", "indicator")
-            .each(function(v, i) {
-                d3.select(this).append("th")
-                    .text(v.indicator)    
-                d3.select(this).selectAll("td")
-                    .data(["2007", "2009", "2011"])
-                    .enter()
-                    .append("td").text(function(v2) { 
-                        console.log(v + ": " + v2);
-                        return d3.round(v.averages[v2], 2); 
-                    });
-                
-            });
-
-        var table2 = d3.select("#detail ." + group)
-            .append("table")
-        var header2 = table2.append("tr");
-        header2.append("th");
-        header2
-            .selectAll("th.data")
-            .data(js[group][0]["by_country"])
-            .enter()
-            .append("th")
-            .attr("colspan", 3)
-            .text(function(v, i) { return v.name });
-        var header3 = table2.append("tr")
-        header3.append("th").text("")
-        for (c in js[group][0]["by_country"]) {
-            header3.append("th").text("2007")
-            header3.append("th").text("2009")
-            header3.append("th").text("2011")
-        }
-        table2.selectAll("tr.indicator")
-            .data(js[group])
-            .enter()
-            .append("tr")
-            .attr("class", "indicator")
-            .each(function(v, i) {
-                d3.select(this).append("th").text(function(v, i) { return v.indicator })
-                for (val in v.by_country) {
-                    d3.select(this).append("td").attr("class", "data").text(d3.round(v.by_country[val]["2007"], 2));
-                    d3.select(this).append("td").attr("class", "data").text(d3.round(v.by_country[val]["2009"], 2));
-                    d3.select(this).append("td").attr("class", "data").text(d3.round(v.by_country[val]["2011"], 2));
-                }
-            }) 
-        */
-    }
-
-
     var json = '{% url json_top5_countries %}';
-    //var json = '/media/test.json';
     d3.json(json, function(e){
         build_table(e, "top3");
         build_table(e, "next2");
