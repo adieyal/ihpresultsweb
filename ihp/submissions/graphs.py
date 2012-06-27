@@ -417,7 +417,7 @@ def highlevel_graph_by_indicator(indicator, name, translation, baseline_value, p
     if target:
         graph = HighlevelBarChart(
             name, 
-            float(baseline_value), foz(previous_value), float(latest_value),
+            foz(baseline_value), foz(previous_value), foz(latest_value),
             title=translation.highlevel_graphs[indicator]["title"],
             subtitle=translation.highlevel_graphs[indicator]["subtitle"],
             target=target_values[indicator],
@@ -426,7 +426,7 @@ def highlevel_graph_by_indicator(indicator, name, translation, baseline_value, p
     else:
         graph = HighlevelBarChart(
             name, 
-            float(baseline_value), foz(previous_value), float(latest_value),
+            foz(baseline_value), foz(previous_value), foz(latest_value),
             title=translation.highlevel_graphs[indicator]["title"],
             subtitle=translation.highlevel_graphs[indicator]["subtitle"],
             yAxis=translation.highlevel_graphs[indicator]["yAxis"],
