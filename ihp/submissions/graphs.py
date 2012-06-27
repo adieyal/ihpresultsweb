@@ -1,32 +1,12 @@
 from django.views.generic.simple import direct_to_template
 from functools import partial
-from submissions.models import Agency, Country
+from submissions.models import Agency, Country, old_dataset, new_dataset
 from indicators import calc_agency_country_indicators, NA_STR, calc_overall_agency_indicators, positive_funcs, calc_country_indicators
 from highcharts import Chart, ChartObject
 import country_scorecard
 import agency_scorecard
 import translations
 import models
-
-# Nasty monkey patching ahead -- BEWARE!    
-class old_dataset:
-    def __init__(self):
-        self.dp_table = models.DPQuestion._meta.db_table
-        self.gov_table = models.GovQuestion._meta.db_table
-    def __enter__(self):
-        models.DPQuestion._meta.db_table = 'submissions_dpquestion_2009'
-        models.GovQuestion._meta.db_table = 'submissions_dpquestion_2009'
-    def __exit__(self, type, value, tb):
-        models.DPQuestion._meta.db_table = self.dp_table
-        models.GovQuestion._meta.db_table = self.gov_table
-
-class new_dataset:
-    def __init__(self):
-        pass
-    def __enter__(self):
-        pass
-    def __exit__(self, type, value, tb):
-        pass
 
 def safe_diff(a, b):
     if a in [None, NA_STR] or b in [None, NA_STR]:

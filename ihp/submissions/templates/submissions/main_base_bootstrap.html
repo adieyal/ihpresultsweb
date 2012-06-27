@@ -1,0 +1,12 @@
+{% extends "submissions/main_base.html" %}
+
+{% block head %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/bootstrap.css"> 
+
+    <script type='text/javascript' src='{{ MEDIA_URL }}js/jquery-1.7.2.min.js'></script>
+    <script type='text/javascript' src='{{ MEDIA_URL }}js/d3.v2.min.js'></script>
+    <script type='text/javascript' src='{{ MEDIA_URL }}js/bootstrap.js'></script>
+    <script type='text/javascript' src='{{ MEDIA_URL }}js/bootstrap-popover.js'></script>
+{% endblock %}
+
