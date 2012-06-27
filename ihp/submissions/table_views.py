@@ -140,8 +140,6 @@ def two_by_two_analysis_json(request):
         and r["7G"]["target"] == models.Rating.TICK
     )
 
-    not_all_all_indicators = lambda r : not has_all_indicators(r)
-
     has_strong_pfm = lambda r : foz(r["5Ga"]["cur_val"]) >= 3.5
     has_weak_pfm = lambda r : not has_strong_pfm(r)
     get_country = lambda r : r["1G"]["country_name"]
@@ -158,36 +156,25 @@ def two_by_two_analysis_json(request):
     notallweak = not_all_indicators & weak_pfm
 
     def indicator_dict(indicator):
+        calculator = partial(indicators.calc_indicator, indicator=indicator, agency_or_country=None)
+
+        def slice_data(countries):
+            return {
+                "value" : calculator(models.DPQuestion.objects.filter(submission__country__in=countries))[0][2],
+                "num_countries" : len(countries),
+                "countries" : [c.country for c in countries],
+            }
+        
         return {
             "indicator" : indicator,
-            "allstrong" : {
-                "value" : indicators.calc_indicator(
-                    models.DPQuestion.objects.filter(submission__country__in=allstrong), None, indicator
-                )[0][2],
-                "num_countries" : len(allstrong),
-                "countries" : [c.country for c in allstrong],
-            },
-            "allweak" : {
-                "value" : indicators.calc_indicator(
-                    models.DPQuestion.objects.filter(submission__country__in=allweak), None, indicator
-                )[0][2],
-                "num_countries" : len(allweak),
-                "countries" : [c.country for c in allweak],
-            },
-            "notallstrong" : {
-                "value" : indicators.calc_indicator(
-                    models.DPQuestion.objects.filter(submission__country__in=notallstrong), None, indicator
-                )[0][2],
-                "num_countries" : len(notallstrong),
-                "countries" : [c.country for c in notallstrong],
-            },
-            "notallweak" : {
-                "value" : indicators.calc_indicator(
-                    models.DPQuestion.objects.filter(submission__country__in=notallweak), None, indicator
-                )[0][2],
-                "num_countries" : len(notallweak),
-                "countries" : [c.country for c in notallweak],
-            },
+            "allstrong" : slice_data(allstrong),
+            "allweak" : slice_data(allweak),
+            "notallstrong" : slice_data(notallstrong),
+            "notallweak" : slice_data(notallweak),
+            "all_indicators" : slice_data(all_indicators),
+            "not_all_indicators" : slice_data(not_all_indicators),
+            "strong_pfm" : slice_data(strong_pfm),
+            "weak_pfm" : slice_data(weak_pfm),
         }
 
     js = {
