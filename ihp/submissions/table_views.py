@@ -223,31 +223,42 @@ def top5_countries_json(request):
         "the_rest" : []
     }
 
+    def fn_country_values(country, indicator):
+        calculation = indicators.calc_indicator(
+            models.DPQuestion.objects.filter(submission__country=country), None, indicator
+        )
+        with models.old_dataset():
+            old_calculation = indicators.calc_indicator(
+                models.DPQuestion.objects.filter(submission__country=country), None, indicator
+            )
+
+        return {
+            "name" : c.country,
+            "2007" : calculation[0][0],
+            "2009" : old_calculation[0][2],
+            "2011" : calculation[0][2],
+        }
+
     for indicator in calc_indicators:
         for label, subset in [("top3", top3), ("next2", next2), ("the_rest", the_rest)]:
             calculation = indicators.calc_indicator(
                 models.DPQuestion.objects.filter(submission__country__in=subset), None, indicator
             )
 
+            with models.old_dataset():
+                old_calculation = indicators.calc_indicator(
+                    models.DPQuestion.objects.filter(submission__country__in=subset), None, indicator
+                )
+
 
             js[label].append({
                 "indicator" : indicator,
                 "averages" : {
                     "2007" : calculation[0][0],
+                    "2009" : old_calculation[0][2],
                     "2011" : calculation[0][2],
                 },
-                "by_country" : [
-                    {
-                        "name" : c.country,
-                        "baseline" : indicators.calc_indicator(
-                            models.DPQuestion.objects.filter(submission__country=c), None, indicator
-                        )[0][0],
-                        "latest" : indicators.calc_indicator(
-                            models.DPQuestion.objects.filter(submission__country=c), None, indicator
-                        )[0][2],
-                    }
-                    for c in subset
-                ]
+                "by_country" : [fn_country_values(c, indicator) for c in subset]
             })
 
     return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")

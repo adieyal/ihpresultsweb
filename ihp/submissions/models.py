@@ -4,6 +4,26 @@ import math
 from django.utils.functional import curry
 from utils import memoize
 
+# Nasty monkey patching ahead -- BEWARE!    
+class old_dataset:
+    def __init__(self):
+        self.dp_table = DPQuestion._meta.db_table
+        self.gov_table = GovQuestion._meta.db_table
+    def __enter__(self):
+        DPQuestion._meta.db_table = 'submissions_dpquestion_2009'
+        GovQuestion._meta.db_table = 'submissions_dpquestion_2009'
+    def __exit__(self, type, value, tb):
+        DPQuestion._meta.db_table = self.dp_table
+        GovQuestion._meta.db_table = self.gov_table
+
+class new_dataset:
+    def __init__(self):
+        pass
+    def __enter__(self):
+        pass
+    def __exit__(self, type, value, tb):
+        pass
+
 class Rating(object):
     QUESTION = "question"
     TICK = "tick"
