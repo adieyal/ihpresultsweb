@@ -54,11 +54,6 @@
 </div>
 <script>
 
-    round = function(v, d) {
-        f = Math.pow(10, d);
-        return Math.round(v * f) / f;
-    }
-
     fmt_countries = function(countries) {
         s = "<ul>"
         for (c in countries) {
@@ -106,7 +101,7 @@
 
         strongrow.append("th").text("3.5+")
         strongrow.append("td").text(function(v) {
-            return round(v.allstrong.value, 2) + " (" + v.allstrong.num_countries + ")";
+            return d3.round(v.allstrong.value, 2) + " (" + v.allstrong.num_countries + ")";
         })
         .each(function(v, i) {
             $(this).popover({
@@ -116,7 +111,7 @@
         });
         
         strongrow.append("td").text(function(v) {
-            return round(v.notallstrong.value, 2) + " (" + v.notallstrong.num_countries + ")";
+            return d3.round(v.notallstrong.value, 2) + " (" + v.notallstrong.num_countries + ")";
         })
         .each(function(v, i) {
             $(this).popover({
@@ -127,7 +122,7 @@
 
         weakrow.append("th").text("< 3.5");
         weakrow.append("td").text(function(v) {
-            return round(v.allweak.value, 2) + " (" + v.allweak.num_countries + ")";
+            return d3.round(v.allweak.value, 2) + " (" + v.allweak.num_countries + ")";
         })
         .each(function(v, i) {
             $(this).popover({
@@ -137,7 +132,7 @@
         });
 
         weakrow.append("td").text(function(v) {
-            return round(v.notallweak.value, 2) + " (" + v.notallweak.num_countries + ")";
+            return d3.round(v.notallweak.value, 2) + " (" + v.notallweak.num_countries + ")";
         })
         .each(function(v, i) {
             $(this).popover({
