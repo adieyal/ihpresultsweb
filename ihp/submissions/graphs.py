@@ -552,8 +552,8 @@ def agencygraphs(request, agency_name, language=None, template_name="submissions
         [data[country.country]["2DPa_2"][0] for country in agency.countries],
         [data[country.country]["2DPa_2"][1] for country in agency.countries],
         [data[country.country]["2DPa_2"][2] for country in agency.countries],
-        title=translation.agency_graphs["2DPa"]["title"] % locals(),
-        yAxis=translation.agency_graphs["2DPa"]["yAxis"],
+        title=translation.agency_graphs["2DPa_2"]["title"] % locals(),
+        yAxis=translation.agency_graphs["2DPa_2"]["yAxis"],
     )
 
     extra_context["graph_2DPb"] = AgencyCountryBarGraph(
@@ -651,8 +651,8 @@ def countrygraphs(request, country_name, language, template_name="submissions/co
         [data[agency.agency]["2DPa_2"][0] for agency in country.agencies],
         [data[agency.agency]["2DPa_2"][1] for agency in country.agencies],
         [data[agency.agency]["2DPa_2"][2] for agency in country.agencies],
-        title=translation.country_graphs["2DPa"]["title"] % locals(),
-        yAxis=translation.country_graphs["2DPa"]["yAxis"] % locals(),
+        title=translation.country_graphs["2DPa_2"]["title"] % locals(),
+        yAxis=translation.country_graphs["2DPa_2"]["yAxis"] % locals(),
     )
 
     extra_context["graph_2DPb"] = CountryAgencyBarGraph(
