@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-25 12:08+0200\n"
-"PO-Revision-Date: 2012-06-25 01:46\n"
+"POT-Creation-Date: 2012-06-28 22:59+0200\n"
+"PO-Revision-Date: 2012-06-28 22:57\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -21,41 +21,42 @@ msgstr ""
 
 #: models.py:123
 msgid "Signed Agreement"
-msgstr ""
+msgstr "Accord signé"
 
 #: models.py:127
 msgid "Includes current targets and budgets"
-msgstr ""
+msgstr "Inclut les cibles et les budgets actuels"
 
 #: models.py:128
 msgid "Jointly Assessed"
-msgstr ""
+msgstr "Évalué conjointement"
 
 #: models.py:131
-#, fuzzy
 msgid "Active joint monitoring"
-msgstr "• Suivi conjoint actif"
+msgstr "Suivi conjoint actif"
 
 #: models.py:132
-#, fuzzy
 msgid "Number of development partner missions"
 msgstr ""
-"• Nombre de missions effectuées par les\n"
+"Nombre de missions effectuées par les\n"
 "partenaires de développement"
 
 #: models.py:133
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "%(percentage)g%% of seats in the health sector coordination mechanism are "
 "allocated to civil society"
 msgstr ""
-"• 10%% des sièges alloués à la société civile dans\n"
+"%(percentage)g%% des sièges alloués à la société civile dans\n"
 "le mécanisme de coordina􀀉on du secteur de la\n"
 "santé"
 
 #: models.py:196 models.py:202
 msgid "REFLECTS GOOD PRACTICE (OR REFORM IN PROGRESS)"
 msgstr ""
+"REFLETE UNE PRATIQUE\n"
+"EXEMPLAIRE (OU UNE\n"
+"REFORME EN COURS)"
 
 #: models.py:198 models.py:204 models.py:210
 msgid ""
@@ -63,26 +64,39 @@ msgid ""
 "neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, "
 "nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est."
 msgstr ""
+"Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, "
+"neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, "
+"nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est."
 
 #: models.py:208
 msgid "DONOR CAPACITY DEVELOPMENT PROVIDED THROUGH COORDINATED PROGRAMMES"
 msgstr ""
+"DEVELOPPEMENT DES CAPACITES PAR\n"
+"LES PROGRAMMES COORDONNES PAR\n"
+"LES BAILLEURS DE FONDS"
 
 #: models.py:297
 msgid "An IHP+ Compact or equivalent mutual agreement is in place."
 msgstr ""
+"Un pacte IHP+ ou accord mutuel équivalent est\n"
+"en place"
 
 #: models.py:306
 msgid ""
 "A National Health Sector Plan/ Strategy is in place with current targets & "
 "budgets that have been jointly assessed."
 msgstr ""
+"Un plan / une stratégie du secteur national de la santé est en place dont "
+"les objectifs et lesbudgets sont actuels et ont évalués conjointement."
 
 #: models.py:315
 msgid ""
 "A costed, comprehensive national HRH plan (integrated with the health plan) "
 "is being implemented or developed."
 msgstr ""
+"Un plan national de ressources humaines de la santé chiffré et exhaustif "
+"(intégré dans le plan de\n"
+"santé national) est mis en oeuvre ou en cours de développement"
 
 #: models.py:324
 #, python-format
@@ -90,30 +104,40 @@ msgid ""
 "%(percentage)d%% (or an equivalent published target) of the national budget "
 "is allocated to health."
 msgstr ""
+"%(percentage)d%% du budget national (ou un objectif equivalent publié) est "
+"alloué à la santé"
 
 #: models.py:334
 msgid ""
 "Halve the proportion of health sector funding not disbursed against the "
 "approved annual budget."
 msgstr ""
+"Réduire de moitié la proportion du financement du secteur de la santé qui "
+"n’est pas déboursé selon le budget annuel approuvé."
 
 #: models.py:343
 msgid ""
 "Improvement of at least one measure (ie 0.5 points) on the PFM/CPIA scale of "
 "performance."
 msgstr ""
+"Progrès d’au moins un degré (0.5 point) sur l’échelle de performance des "
+"systèmes de gestion des finances publiques de l’EPIN."
 
 #: models.py:352
 msgid ""
 "Improvement of at least one measure on the four-point scale used to assess "
 "performance for this sector."
 msgstr ""
+"Progrès d’au moins un degré sur l’échelle de quatre points utilisée pour "
+"évaluer les performances pour ce secteur"
 
 #: models.py:362
 msgid ""
 "A transparent and monitorable performance assessment framework is in place "
 "to assess progress in the health sector."
 msgstr ""
+"Un cadre d’évaluation transparent et controllable est en place afin "
+"d’évaluer les progrès dans le secteur de la santé"
 
 #: models.py:371
 msgid ""
@@ -121,14 +145,18 @@ msgid ""
 "of progress implementing commitments in the health sector, including on aid "
 "effectiveness."
 msgstr ""
+"Des évaluations mutuelles des progrès accomplish , telles que les revues "
+"annuelles conjointes du secteur de la santé, ont été conduites, concernant\n"
+"la mise en oeuvre des engagements dans le secteur de la santé, y compris en "
+"ce qui concerne l’efficacité de l’aide."
 
 #: models.py:380
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "At least 10% of seats in the country's Health Sector Coordination mechanisms "
 "are allocated to Civil Society"
 msgstr ""
-"• 10%% des sièges alloués à la société civile dans\n"
+"> 10% des sièges alloués à la société civile dans\n"
 "le mécanisme de coordina􀀉on du secteur de la\n"
 "santé"
 
@@ -141,14 +169,14 @@ msgid "COUNTRY SCORECARD 2012"
 msgstr "SCORECARD DE PAYS 2012"
 
 #: templates/scorecards/country-page-1.svg:5832
-#: templates/scorecards/country-page-2.svg:7795
+#: templates/scorecards/country-page-2.svg:7793
 msgid "Ratings are calculated using data up to and including 2011."
 msgstr ""
 "Les évaluations sont calculées à l'aide des données allant jusqu'en 2011 "
 "inclusivement."
 
 #: templates/scorecards/country-page-1.svg:5835
-#: templates/scorecards/country-page-2.svg:7798
+#: templates/scorecards/country-page-2.svg:7796
 msgid ""
 "This work is licensed under the Creative Commons Atribution-NonCommercial "
 "3.0 Unported License. To view a copy of this license, visit http://"
@@ -208,69 +236,69 @@ msgstr "FINANCEMENT DE LA SANTE"
 msgid "TOTAL HEALTH FINANCING"
 msgstr "FINANCEMENT DE LA SANTE TOTALE"
 
-#: templates/scorecards/country-page-1.svg:5880
+#: templates/scorecards/country-page-1.svg:5881
 msgid "Domestic Financing"
 msgstr "Financement na􀀉onal"
 
-#: templates/scorecards/country-page-1.svg:5883
+#: templates/scorecards/country-page-1.svg:5886
 msgid "External Financing"
 msgstr "Financement exterieur"
 
-#: templates/scorecards/country-page-1.svg:5886
+#: templates/scorecards/country-page-1.svg:5890
 msgid "NATIONAL BUDGET ALLOCATED TO HEALTH"
 msgstr "Budget national alloué à la santé"
 
-#: templates/scorecards/country-page-1.svg:5889
+#: templates/scorecards/country-page-1.svg:5893
 msgid "Allocated to Health"
 msgstr "alloué à la santé"
 
-#: templates/scorecards/country-page-1.svg:5892
+#: templates/scorecards/country-page-1.svg:5896
 msgid "Increase needed to meet the Abuja target"
 msgstr "Augmentation nécessaire pour atteindre la cible d'Abuja"
 
-#: templates/scorecards/country-page-1.svg:5895
+#: templates/scorecards/country-page-1.svg:5900
 msgid "POOLED FUNDING"
 msgstr "FINANCEMENT COMMUN"
 
-#: templates/scorecards/country-page-1.svg:5898
+#: templates/scorecards/country-page-1.svg:5904
 msgid "Number of Development Partners using Pooled Mechanisms"
 msgstr ""
 "Nombre de partenaires de développement en utilisant les mécanismes de "
 "financement commun"
 
-#: templates/scorecards/country-page-1.svg:5902
+#: templates/scorecards/country-page-1.svg:5908
 msgid "COUNTRY OWNERSHIP &amp; ACCOUNTABILITY"
 msgstr "APPROPRIATION ET RESPONSABILITE"
 
-#: templates/scorecards/country-page-1.svg:5905
+#: templates/scorecards/country-page-1.svg:5911
 msgid "COMMITMENTS DOCUMENTED"
 msgstr "ENGAGEMENTS DOCUMENTES"
 
-#: templates/scorecards/country-page-1.svg:5909
+#: templates/scorecards/country-page-1.svg:5915
 msgid "HEALTH SECTOR PLAN &amp; AIDS STRATEGIES"
 msgstr "PLAN DU SECTEUR DE LA SANTE"
 
-#: templates/scorecards/country-page-1.svg:5914
+#: templates/scorecards/country-page-1.svg:5920
 msgid "HEALTH SECTOR AID EFFECTIVENESS MONITORING"
 msgstr "SECTEUR DE LA SANTE SUIVI DE L'EFFICACITE DE L'AIDE"
 
-#: templates/scorecards/country-page-1.svg:5919
+#: templates/scorecards/country-page-1.svg:5925
 msgid "MANAGING FOR DEVELOPMENT RESULTS"
 msgstr "GESTION AXEE SUR LES RESULTATS EN MATIERE DE DEVELOPPEMENT"
 
-#: templates/scorecards/country-page-1.svg:5923
+#: templates/scorecards/country-page-1.svg:5929
 msgid "DECISONS BASED ON RESULTS"
 msgstr "DECISIONS FONDEES SUR LES RESULTATS"
 
-#: templates/scorecards/country-page-1.svg:5928
+#: templates/scorecards/country-page-1.svg:5934
 msgid "JOINT HEALTH SECTOR REVIEWS CONDUCTED"
 msgstr "REVUES CONJOINTES MENEES DANS LE SECTEUR DE LA SANTE"
 
-#: templates/scorecards/country-page-1.svg:5933
+#: templates/scorecards/country-page-1.svg:5939
 msgid "FUNCTIONING HEALTH MANAGEMENT INFORMATION SYSTEMS (HMIS)"
 msgstr "FONCTIONNEMENT DU SYSTEME NATIONAL D'INFORMATION SANITAIRE (SNIS)"
 
-#: templates/scorecards/country-page-1.svg:5938
+#: templates/scorecards/country-page-1.svg:5944
 msgid "NATIONAL RESULTS FRAMEWORK AGREED"
 msgstr "CADRE NATIONAL DE RESULTATS CONVENUS"
 
@@ -334,16 +362,12 @@ msgstr ""
 msgid ""
 "Where they are used, rating symbols illustrate whether the government has "
 "achieved %(tick)s, is working towards %(arrow)s, or hasn’t made progress "
-"%(exclamation)s against agreed targets. Details of these ratings can be "
-"found online in the North-South Observatory for IHP+Results (www.ihpresults."
-"net)"
+"%(exclamation)s against agreed targets."
 msgstr ""
 "Progrès - Le symbole %(tick)s indique que l'Agence a fait des progrès, le "
-"symbole %(arrow)s indique qu'elle fait actuellement des progrès et le "
-"symbole %(exclamation)s indique qu'elle n'a pas fait de progrès en ce qui "
-"concerne les 10 mesures de la performance standard, depuis l'année de base "
-"(2005-7).  Les détails realtifs à ces évaluations sont présentés sur le site "
-"Web pour IHP+Results (www.ihpresults.net)."
+"symbole %(arrow)s indique qu'elle fait actuellement des progrès et\n"
+"le symbole %(exclamation)s indique qu'elle n'a pas fait de progrès en ce qui "
+"concerne les 10 mesures de la performance standard."
 
 #: templates/scorecards/country-page-2.svg:7653
 msgid ""
@@ -378,44 +402,38 @@ msgstr ""
 #: templates/scorecards/country-page-2.svg:7659
 #, python-format
 msgid ""
-"Progress Symbols illustrate whether the government has achieved %(tick)s, is "
-"making progress %(arrow)s, or has not made progress %(exclamation)s against "
-"10 SPMs."
+"Progress Symbols illustrate whether in 2011 the government had achieved "
+"%(tick)s, made progress %(arrow)s, or had not made progress %(exclamation)s "
+"against 10 SPMs, since the baseline year (2005-7). Details of these ratings "
+"and related targets can be found online on the IHP+Results website (www."
+"ihpresults.net)"
 msgstr ""
 "Progrès - Le symbole %(tick)s indique que l'Agence a fait des progrès, le "
-"symbole %(arrow)s indique qu'elle fait actuellement des progrès et\n"
-"le symbole %(exclamation)s indique qu'elle n'a pas fait de progrès en ce qui "
-"concerne les 10 mesures de la performance standard."
+"symbole %(arrow)s indique qu'elle fait actuellement des progrès et le "
+"symbole %(exclamation)s indique qu'elle n'a pas fait de progrès en ce qui "
+"concerne les 10 mesures de la performance standard, depuis l'année de base "
+"(2005-7).  Les détails realtifs à ces évaluations sont présentés sur le site "
+"Web pour IHP+Results (www.ihpresults.net)."
 
-#: templates/scorecards/country-page-2.svg:7660
-msgid "Δ Targets for each SPM can be found at www.ihpresults.net"
-msgstr ""
-
-#: templates/scorecards/country-page-2.svg:7661
+#: templates/scorecards/country-page-2.svg:7666
 msgid ""
-"Agencies Reporting Limited Progress shows a summary of ratings against 12 "
-"agreed SPMs for Development Partners that are active in this country, and "
-"who have voluntarily disclosed to IHP+Results 2010 monitoring survey. Where "
-"ratings of or have been scored for the minority of SPMs."
+"The Technical Assistance rating on the front of the country scorecard "
+"reflects the aggregate of data reported by Development Partners (for "
+"indicator 2DPb) that are active in the country in question."
 msgstr ""
+"Les évaluations sur l'assistance technique résument les données fournies par "
+"les partenaires de développement signataires de l'IHP+ qui jouent un rôle "
+"actif dans ce pays."
 
-#: templates/scorecards/country-page-2.svg:7668
-msgid ""
-"The Technical Assistance rating summarises data provided by the IHP+ "
-"Development Partner signatories that are active in this country. The quality "
-"of civil society engagement was assessed through conducting surveys with in-"
-"country civil society organistions."
-msgstr ""
-
-#: templates/scorecards/country-page-2.svg:7674
+#: templates/scorecards/country-page-2.svg:7672
 msgid "PROGRESS ON MILLENNIUM DEVELOPMENT GOALS"
 msgstr "PROGRES SUR LES OBJECTIFS DU MILLENAIRE POUR LE DEVELOPPEMENT"
 
-#: templates/scorecards/country-page-2.svg:7678
+#: templates/scorecards/country-page-2.svg:7676
 msgid "Eradicate Extreme Poverty and Hunger"
 msgstr "Réduire l’extrême pauvreté et la faim"
 
-#: templates/scorecards/country-page-2.svg:7682
+#: templates/scorecards/country-page-2.svg:7680
 #, python-format
 msgid ""
 "Population living on less than $1 a day %(value)s in %(year)s. (%(arrow)s"
@@ -425,11 +443,11 @@ msgstr ""
 "1$ par jour %(value)s en %(year)s. (%(arrow)s%(change_value)s depuis "
 "%(change_year)s)"
 
-#: templates/scorecards/country-page-2.svg:7686
+#: templates/scorecards/country-page-2.svg:7684
 msgid "Achieve Universal Primary Education"
 msgstr "Assurer l’éducation primaire pour tous"
 
-#: templates/scorecards/country-page-2.svg:7690
+#: templates/scorecards/country-page-2.svg:7688
 #, python-format
 msgid ""
 "Children enrolled in primary education %(value)s in %(year)s. (%(arrow)s"
@@ -438,11 +456,11 @@ msgstr ""
 "Scolarisation des enfants dans le primaire %(value)s en %(year)s. (%(arrow)s"
 "%(change_value)s depuis %(change_year)s)"
 
-#: templates/scorecards/country-page-2.svg:7694
+#: templates/scorecards/country-page-2.svg:7692
 msgid "Promote Gender Equality and Empower Women"
 msgstr "Promouvoir l’égalité des sexes et l’autonomisation des femmes"
 
-#: templates/scorecards/country-page-2.svg:7698
+#: templates/scorecards/country-page-2.svg:7696
 #, python-format
 msgid ""
 "Gender parity index in primary level enrolment %(value)s in %(year)s. "
@@ -452,11 +470,11 @@ msgstr ""
 "enfants dans le primaire %(value)s en %(year)s. (%(arrow)s%(change_value)s "
 "depuis %(change_year)s)"
 
-#: templates/scorecards/country-page-2.svg:7702
+#: templates/scorecards/country-page-2.svg:7700
 msgid "Reduce Child Mortality"
 msgstr "Réduire la mortalité infantile"
 
-#: templates/scorecards/country-page-2.svg:7706
+#: templates/scorecards/country-page-2.svg:7704
 #, python-format
 msgid ""
 "Under 5 Mortality rate %(value)s per 1000 live births in %(year)s. (%(arrow)s"
@@ -465,11 +483,11 @@ msgstr ""
 "Taux de mortalité de moins de 5 %(value)s sur 1,000 naissances vivantes en "
 "%(year)s. (%(arrow)s%(change_value)s depuis %(change_year)s)"
 
-#: templates/scorecards/country-page-2.svg:7710
+#: templates/scorecards/country-page-2.svg:7708
 msgid "Improve Maternal Health"
 msgstr "Améliorer la santé maternelle"
 
-#: templates/scorecards/country-page-2.svg:7716
+#: templates/scorecards/country-page-2.svg:7714
 #, python-format
 msgid ""
 "Maternal mortality ratio %(value)s per 100,000 live births in %(year)s. "
@@ -478,7 +496,7 @@ msgstr ""
 "Taux de mortalité maternelle %(value)s par 100,000 naissances vivantes en "
 "%(year)s. (%(arrow)s%(change_value)s depuis %(change_year)s)"
 
-#: templates/scorecards/country-page-2.svg:7719
+#: templates/scorecards/country-page-2.svg:7717
 #, python-format
 msgid ""
 "Unmet need for family planning %(value)s in %(year)s. (%(arrow)s"
@@ -487,11 +505,11 @@ msgstr ""
 "Besoins non satisfaits en matière de planification familiale %(value)s en "
 "%(year)s. (%(arrow)s%(change_value)s depuis %(change_year)s)"
 
-#: templates/scorecards/country-page-2.svg:7725
+#: templates/scorecards/country-page-2.svg:7723
 msgid "Combat HIV/AIDS, Malaria and other Diseases"
 msgstr "Combattre le VIH/sida, le paludisme et d'autres maladies"
 
-#: templates/scorecards/country-page-2.svg:7731
+#: templates/scorecards/country-page-2.svg:7729
 #, python-format
 msgid ""
 "HIV prevalence %(value)s in %(year)s. (%(arrow)s%(change_value)s since "
@@ -500,7 +518,7 @@ msgstr ""
 "Taux de prévalence du VIH %(value)s en  %(year)s. (%(arrow)s%(change_value)s "
 "depuis %(change_year)s)"
 
-#: templates/scorecards/country-page-2.svg:7734
+#: templates/scorecards/country-page-2.svg:7732
 #, python-format
 msgid ""
 "Children U-5 sleeping under insecticide treated bednet %(value)s in "
@@ -510,18 +528,18 @@ msgstr ""
 "imprégnées d'insecticide %(value)s en %(year)s. (%(arrow)s%(change_value)s "
 "depuis %(change_year)s)"
 
-#: templates/scorecards/country-page-2.svg:7737
+#: templates/scorecards/country-page-2.svg:7735
 #, python-format
 msgid ""
 "TB incidence per %(value)s per 100,000 in %(year)s. (%(arrow)s"
 "%(change_value)s since %(change_year)s)"
 msgstr ""
 
-#: templates/scorecards/country-page-2.svg:7743
+#: templates/scorecards/country-page-2.svg:7741
 msgid "Ensure Environmental Sustainability"
 msgstr "Préserver l’environnement"
 
-#: templates/scorecards/country-page-2.svg:7749
+#: templates/scorecards/country-page-2.svg:7747
 #, python-format
 msgid ""
 "Population using improved drinking water sources %(value)s in %(year)s. "
@@ -530,7 +548,7 @@ msgstr ""
 "Proportion de la population utilisant une source d'eau potable améliorée "
 "%(value)s en %(year)s. (%(arrow)s%(change_value)s depuis %(change_year)s)"
 
-#: templates/scorecards/country-page-2.svg:7752
+#: templates/scorecards/country-page-2.svg:7750
 #, python-format
 msgid ""
 "Population using improved sanitation sources %(value)s in %(year)s. "
@@ -540,7 +558,7 @@ msgstr ""
 "améliorées %(value)s en %(year)s. (%(arrow)s%(change_value)s depuis "
 "%(change_year)s)"
 
-#: templates/scorecards/country-page-2.svg:7759
+#: templates/scorecards/country-page-2.svg:7757
 #, python-format
 msgid ""
 "GOVERNMENT OF %(country)s: PROGRESS IN IMPLEMENTING ITS IHP+ COMMITMENTS"
@@ -548,67 +566,67 @@ msgstr ""
 "GOUVERNEMENT DE %(country)s PROGRES DANS L'APPLICATION DE SES ENGAGEMENTS IHP"
 "+"
 
-#: templates/scorecards/country-page-2.svg:7762
+#: templates/scorecards/country-page-2.svg:7760
 msgid "EXPECTED RESULTS"
 msgstr "RESULTATS ATTENDUS"
 
-#: templates/scorecards/country-page-2.svg:7766
+#: templates/scorecards/country-page-2.svg:7764
 msgid "RATING"
 msgstr "EVALUATION"
 
-#: templates/scorecards/country-page-2.svg:7770
+#: templates/scorecards/country-page-2.svg:7768
 msgid "TARGET"
 msgstr "OBJECTIF-CIBLE"
 
-#: templates/scorecards/country-page-2.svg:7773
+#: templates/scorecards/country-page-2.svg:7771
 msgid "OVERALL PROGRESS"
 msgstr "PROGRES GENERAUX"
 
-#: templates/scorecards/country-page-2.svg:7776
+#: templates/scorecards/country-page-2.svg:7774
 msgid "target achieved"
 msgstr "objectif atteint"
 
-#: templates/scorecards/country-page-2.svg:7779
+#: templates/scorecards/country-page-2.svg:7777
 msgid "progress made towards achieving target"
 msgstr "progrès accomplis vers la réalisation de l’objectif"
 
-#: templates/scorecards/country-page-2.svg:7782
+#: templates/scorecards/country-page-2.svg:7780
 msgid "no progress or regression"
 msgstr "aucun progrès ou la régression"
 
-#: templates/scorecards/country-page-2.svg:7785
+#: templates/scorecards/country-page-2.svg:7783
 msgid "data not provided"
 msgstr "données non fournies"
 
-#: templates/scorecards/country-page-2.svg:7788
+#: templates/scorecards/country-page-2.svg:7786
 msgid "measure not applicable"
 msgstr "mesure ne s’applique pas"
 
-#: templates/scorecards/country-page-2.svg:7791
+#: templates/scorecards/country-page-2.svg:7789
 msgid "indicates agreed target"
 msgstr "Objectif convenu"
 
-#: templates/scorecards/country-page-2.svg:7804
-#: templates/scorecards/country-page-2.svg:7811
-#: templates/scorecards/country-page-2.svg:7818
-#: templates/scorecards/country-page-2.svg:7825
-#: templates/scorecards/country-page-2.svg:7832
-#: templates/scorecards/country-page-2.svg:7839
-#: templates/scorecards/country-page-2.svg:7846
-#: templates/scorecards/country-page-2.svg:7853
-#: templates/scorecards/country-page-2.svg:7860
-#: templates/scorecards/country-page-2.svg:7867
+#: templates/scorecards/country-page-2.svg:7802
+#: templates/scorecards/country-page-2.svg:7809
+#: templates/scorecards/country-page-2.svg:7816
+#: templates/scorecards/country-page-2.svg:7823
+#: templates/scorecards/country-page-2.svg:7830
+#: templates/scorecards/country-page-2.svg:7837
+#: templates/scorecards/country-page-2.svg:7844
+#: templates/scorecards/country-page-2.svg:7851
+#: templates/scorecards/country-page-2.svg:7858
+#: templates/scorecards/country-page-2.svg:7865
 msgid "No text."
 msgstr ""
 
-#: templates/scorecards/country-page-2.svg:7874
+#: templates/scorecards/country-page-2.svg:7872
 msgid "Commitments are documented and mutually agreed."
 msgstr ""
 "Les engagements sont\n"
 "documentés et convenus\n"
 "mutuellement"
 
-#: templates/scorecards/country-page-2.svg:7881
+#: templates/scorecards/country-page-2.svg:7879
 msgid ""
 "Support is based in country plans and strategies, including to strengthen "
 "Health Systems."
@@ -619,20 +637,20 @@ msgstr ""
 "renforcement des systèmes\n"
 "de santé"
 
-#: templates/scorecards/country-page-2.svg:7888
+#: templates/scorecards/country-page-2.svg:7886
 msgid "Funding commitments are long-term."
 msgstr ""
 "Les engagements financiers\n"
 "sont à long terme"
 
-#: templates/scorecards/country-page-2.svg:7895
+#: templates/scorecards/country-page-2.svg:7893
 msgid "Funds are disbursed predictably, as committed."
 msgstr ""
 "Les fonds sont décaissés de\n"
 "façon prévisible, selon\n"
 "l'engagement"
 
-#: templates/scorecards/country-page-2.svg:7902
+#: templates/scorecards/country-page-2.svg:7900
 msgid ""
 "Country systems for procurement and public financial management are used and "
 "strengthened."
@@ -643,20 +661,20 @@ msgstr ""
 "publiques des pays sont\n"
 "utilisés et renforcés"
 
-#: templates/scorecards/country-page-2.svg:7909
+#: templates/scorecards/country-page-2.svg:7907
 msgid "Resources are being managed for Development Results."
 msgstr ""
 "Les ressources sont gérées\n"
 "pour l'obtention de résultats\n"
 "en matière de développment"
 
-#: templates/scorecards/country-page-2.svg:7916
+#: templates/scorecards/country-page-2.svg:7914
 msgid "Mutual accountability is being demonstrated."
 msgstr ""
 "Une responsabilité mutuelle\n"
 "est perceptible"
 
-#: templates/scorecards/country-page-2.svg:7923
+#: templates/scorecards/country-page-2.svg:7921
 msgid "Civil Society meaningfully engaged."
 msgstr ""
 "Participation significative de la\n"
