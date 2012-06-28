@@ -9,12 +9,15 @@ class old_dataset:
     def __init__(self):
         self.dp_table = DPQuestion._meta.db_table
         self.gov_table = GovQuestion._meta.db_table
+        self.submissions_table = Submission._meta.db_table
     def __enter__(self):
         DPQuestion._meta.db_table = 'submissions_dpquestion_2009'
-        GovQuestion._meta.db_table = 'submissions_dpquestion_2009'
+        GovQuestion._meta.db_table = 'submissions_govquestion_2009'
+        Submission.submissions_table = 'submissions_submissions_2009'
     def __exit__(self, type, value, tb):
         DPQuestion._meta.db_table = self.dp_table
         GovQuestion._meta.db_table = self.gov_table
+        Submission._meta.db_table = self.submissions_table
 
 class new_dataset:
     def __init__(self):
