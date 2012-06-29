@@ -45,7 +45,7 @@ target_values = {
     "2DPb" : 50,
     "2DPc" : 66,
     "3DP"  : 90,
-    "4DP"  : 90,
+    "4DP"  : 71,
     "5DPa" : 80, 
     "5DPb" : 80, 
     "5DPc" : 0, 
@@ -338,7 +338,6 @@ def agency_graphs_by_indicator(request, indicator, language, template_name="subm
 
     (baseline_value, baseline_year, latest_value, latest_year) = indicators[indicator][0]
     (_, _, previous_value, previous_year) = old_indicators[indicator][0]
-    print 'CHECK', previous_value, latest_value
     target = target_values[indicator]
     graph = highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, target=target)
     graphs.append({

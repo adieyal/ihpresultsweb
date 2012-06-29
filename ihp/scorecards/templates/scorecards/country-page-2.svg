@@ -7649,23 +7649,21 @@
       <ul style="list-style-position: outside; padding-left: 12px;">
 	<li>{% blocktrans %}The majority of data presented in this Scorecard is from the Ministry of Health. There are two exceptions - the ratings for Technical Assistance and the quality of civil society engagement*.{% endblocktrans %}</li>
 	<li>{% blocktrans %}The Scorecard shows results using 5 Results Areas (see below) to tell the story of IHP+ implementation in a logical flow: from the national health plan to monitoring and evaluation of that plan.{% endblocktrans %}</li>
-	<li>{% blocktrans with "<img class=\"icons\" src=\"/media/icons/tick.svg\"/>" as tick and "<img class=\"icons\" src=\"/media/icons/arrow.svg\"/>" as arrow and "<img class=\"icons\" src=\"/media/icons/cross.svg\"/>" as exclamation %}Where they are used, rating symbols illustrate whether the government has achieved {{ tick }}, is working towards {{ arrow }}, or hasn’t made progress {{ exclamation }} against agreed targets. Details of these ratings can be found online in the North-South Observatory for IHP+Results (www.ihpresults.net){% endblocktrans %}</li>
+	<li>{% blocktrans with "<img class=\"icons\" src=\"/media/icons/tick.svg\"/>" as tick and "<img class=\"icons\" src=\"/media/icons/arrow.svg\"/>" as arrow and "<img class=\"icons\" src=\"/media/icons/cross.svg\"/>" as exclamation %}Where they are used, rating symbols illustrate whether the government has achieved {{ tick }}, is working towards {{ arrow }}, or hasn’t made progress {{ exclamation }} against agreed targets.{% endblocktrans %}</li>
 	<li>{% blocktrans %}Progress against the Millennium Development Goals is provided for contextual purposes.{% endblocktrans %}</li>
       </ul>
       <h2>{% blocktrans %}Additional Information{% endblocktrans %}</h2>
       <p>{% blocktrans %}The reverse of the Scorecard (opposite), shows natinal government performance against an agreed set of Standard Performance Measures (SPMs). The following headings are used:{% endblocktrans %}</p>
       <ul style="list-style-position: outside; padding-left: 12px;">
 	<li>{% blocktrans %}Expected Results reflect key commitments made in the IHP+ Global Compact.{% endblocktrans %}</li>
-	<li>{% blocktrans with "<img class=\"icons\" src=\"/media/icons/tick.svg\"/>" as tick and "<img class=\"icons\" src=\"/media/icons/arrow.svg\"/>" as arrow and "<img class=\"icons\" src=\"/media/icons/cross.svg\"/>" as exclamation %}Progress Symbols illustrate whether the government has achieved {{ tick }}, is making progress {{ arrow }}, or has not made progress {{ exclamation }} against 10 SPMs.{% endblocktrans %}</li>
-	<li>{% blocktrans %}Δ Targets for each SPM can be found at www.ihpresults.net{% endblocktrans %}</li>
-	<li>{% blocktrans %}Agencies Reporting Limited Progress shows a summary of ratings against 12 agreed SPMs for Development Partners that are active in this country, and who have voluntarily disclosed to IHP+Results 2010 monitoring survey. Where ratings of or have been scored for the minority of SPMs.{% endblocktrans %}</li>
+	<li>{% blocktrans with "<img class=\"icons\" src=\"/media/icons/tick.svg\"/>" as tick and "<img class=\"icons\" src=\"/media/icons/arrow.svg\"/>" as arrow and "<img class=\"icons\" src=\"/media/icons/cross.svg\"/>" as exclamation %}Progress Symbols illustrate whether in 2011 the government had achieved {{ tick }}, made progress {{ arrow }}, or had not made progress {{ exclamation }} against 10 SPMs, since the baseline year (2005-7). Details of these ratings and related targets can be found online on the IHP+Results website (www.ihpresults.net){% endblocktrans %}</li>
       </ul>
     </div>
   </foreignObject>
   <text x="875.06" y="757.45">*</text>
   <foreignObject x="885.06" y="751.45" width="242.68" height="55" style="color: #000; font-family: Calibri-Italic; font-size: 7px;">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #000; text-align: left; font-family: Calibri-Italic; font-size: 7px; line-height: 115%; padding: 0; margin: 0;">
-      {% blocktrans %}The Technical Assistance rating summarises data provided by the IHP+ Development Partner signatories that are active in this country. The quality of civil society engagement was assessed through conducting surveys with in-country civil society organistions.{% endblocktrans %}
+      {% blocktrans %}The Technical Assistance rating on the front of the country scorecard reflects the aggregate of data reported by Development Partners (for indicator 2DPb) that are active in the country in question.{% endblocktrans %}
     </div>
   </foreignObject>
   <!-- Millenium development goals. -->
