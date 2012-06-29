@@ -21,6 +21,12 @@ def safe_div(x, y):
         return float(x) / float(y)
     except:
         return None
+
+def safe_mul(x, y):
+    try:
+        return float(x) * float(y)
+    except:
+        return None
     
 def safe_diff(x, y):
     try:
@@ -85,44 +91,56 @@ class GovScorecard(object):
     def get_health_systems(self):
         def latest_div_baseline(qnum):
             q = self.question(qnum)
-            latest = foz(q.cur_val_as_dollars)
-            baseline = foz(q.base_val_as_dollars)
-            if baseline == 0:
-                return 0
-            return r1((latest / baseline) * 100)
+            latest = q.cur_val_as_dollars
+            baseline = q.base_val_as_dollars
+            try:
+                if baseline == 0:
+                    return 0
+                return (latest / baseline) * 100
+            except:
+                return None
 
         def proportions(cur, base):
             v = safe_div(cur, base)
-            if v == None: return 0
+            if v == None: return None
 
-            return r1((v - 1) * 100)
+            return (v - 1) * 100
+
+        def for_10000_population(val, baseline=False):
+            population_cur = self.question("19").cur_val
+            population_base = self.question("19").base_val
+            if baseline:
+                return safe_mul(safe_div(val, population_base), 10000)
+            else:
+                return safe_mul(safe_div(val, population_cur), 10000)
 
         try:
             healthsystems = self.question("21").cur_val_as_dollars
         except Exception:
-            # TODO Perhaps this isn't the best value
-            healthsystems = 0
+            healthsystems = None
 
-        population_cur = foz(self.question("19").cur_val)
-        population_base = foz(self.question("19").base_val)
 
-        phcclinics_cur = foz(self.question("20").latest_value) / population_cur *  10000.0
-        phcclinics_base = foz(self.question("20").baseline_value) / population_base *  10000.0
-        healthworkers_cur = foz(self.question("18").latest_value) / population_cur *  10000.0
-        healthworkers_base = foz(self.question("18").baseline_value) / population_base *  10000.0
+        phcclinics_cur = for_10000_population(self.question("20").cur_val)
+        phcclinics_base = for_10000_population(self.question("20").base_val, True)
+        healthworkers_cur = for_10000_population(self.question("18").cur_val)
+        healthworkers_base = for_10000_population(self.question("18").base_val, True)
         
+        no_data_available = _("No data available")
         return {
             "phcclinincs": {
-                "value": round(phcclinics_cur),
-                "percent": proportions(phcclinics_cur, phcclinics_base)
+                "value": phcclinics_cur,
+                "percent": proportions(phcclinics_cur, phcclinics_base),
+                "missing_data_text" : no_data_available
             },
             "healthworkers": {
-                "value": round(healthworkers_cur),
-                "percent": proportions(healthworkers_cur, healthworkers_base)
+                "value": healthworkers_cur,
+                "percent": proportions(healthworkers_cur, healthworkers_base),
+                "missing_data_text" : no_data_available
             },
             "healthsystems": {
                 "value": healthsystems,
-                "percent": r1(latest_div_baseline("21") - 100)
+                "percent": safe_diff(latest_div_baseline("21"), 100),
+                "missing_data_text" : no_data_available
             }
         }
 

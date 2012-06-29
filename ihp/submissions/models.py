@@ -210,6 +210,7 @@ class GovQuestion(models.Model):
         return self._as_dollars(self.cur_val, self.latest_year)
 
     def _as_dollars(self, val, year):
+        if val == None: return None
         sval = str(val).strip()
         try:
             # If no currency is provided then assume dollars
@@ -221,8 +222,9 @@ class GovQuestion(models.Model):
         if len(sval) < 3:
             raise Exception("%s is an invalid currency string" % sval)
 
-        cur = val[0:3].strip()
-        val = val[3:].strip()
+        print val
+        cur = sval[0:3].strip()
+        val = sval[3:].strip()
 
         try:
             cc = CurrencyConversion.objects.get(currency=cur, year=year)
