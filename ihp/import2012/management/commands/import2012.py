@@ -472,6 +472,31 @@ class Command(BaseCommand):
             latest_year="",
             latest_value=""
         )
+        mapping = [
+            ("26", "27"),
+            ("25", "26"),
+            ("24", "25"),
+            ("23", "24"),
+            ("22", "23"),
+            ("21", "22"),
+            ("20", "21"),
+            ("19", "20"),
+            ("18", "19"),
+            ("17", "18"),
+            ("16", "17"),
+            ("15", "16"),
+        ]
+
+        for submission in Submission.objects.filter(type="Gov"):
+            questions = submission.govquestion_set.all()
+            for (fq, tq) in mapping:
+                try:
+                    questions.filter(question_number=tq).delete()
+                    from_question = questions.get(question_number=fq)
+                    from_question.question_number=tq
+                    from_question.save()
+                except GovQuestion.DoesNotExist:
+                    print "Question %s does not question for %s" % (fq, submission)
 
     @transaction.commit_on_success
     def process_gov_responses(self, db):
