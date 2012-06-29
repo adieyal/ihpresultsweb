@@ -16,6 +16,12 @@ def foz(x):
     except:
         return 0
 
+def safe_div(x, y):
+    try:
+        return float(x) / float(y)
+    except:
+        return None
+    
 def safe_diff(x, y):
     try:
         return x - y
@@ -85,26 +91,38 @@ class GovScorecard(object):
                 return 0
             return r1((latest / baseline) * 100)
 
+        def proportions(cur, base):
+            v = safe_div(cur, base)
+            if v == None: return 0
+
+            return r1((v - 1) * 100)
+
         try:
             healthsystems = self.question("21").cur_val_as_dollars
         except Exception:
             # TODO Perhaps this isn't the best value
             healthsystems = 0
 
-        population = foz(self.question("19").cur_val)
-            
+        population_cur = foz(self.question("19").cur_val)
+        population_base = foz(self.question("19").base_val)
+
+        phcclinics_cur = foz(self.question("20").latest_value) / population_cur *  10000.0
+        phcclinics_base = foz(self.question("20").baseline_value) / population_base *  10000.0
+        healthworkers_cur = foz(self.question("18").latest_value) / population_cur *  10000.0
+        healthworkers_base = foz(self.question("18").baseline_value) / population_base *  10000.0
+        
         return {
             "phcclinincs": {
-                "value": round(foz(self.question("20").latest_value) / population *  10000.0),
-                "percent": latest_div_baseline("20")
+                "value": round(phcclinics_cur),
+                "percent": proportions(phcclinics_cur, phcclinics_base)
             },
             "healthworkers": {
-                "value": round(foz(self.question("18").latest_value) / population *  10000.0, 1),
-                "percent": latest_div_baseline("18")
+                "value": round(healthworkers_cur),
+                "percent": proportions(healthworkers_cur, healthworkers_base)
             },
             "healthsystems": {
                 "value": healthsystems,
-                "percent": latest_div_baseline("21")
+                "percent": r1(latest_div_baseline("21") - 100)
             }
         }
 
