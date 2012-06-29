@@ -146,7 +146,7 @@ class GovScorecard(object):
         external_latest = all_latest - domestic_latest if all_latest > domestic_latest else 0
         
         try:
-            allocated_to_health = external_latest / r0(in_millions(foz(self.question("5").latest_value))) * 100
+            allocated_to_health = domestic_latest / r0(in_millions(foz(self.question("5").latest_value))) * 100
         except ZeroDivisionError:
             allocated_to_health = None
 
