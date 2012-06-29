@@ -16,6 +16,18 @@ def foz(x):
     except:
         return 0
 
+def safe_div(x, y):
+    try:
+        return float(x) / float(y)
+    except:
+        return None
+
+def safe_mul(x, y):
+    try:
+        return float(x) * float(y)
+    except:
+        return None
+    
 def safe_diff(x, y):
     try:
         return x - y
@@ -79,30 +91,56 @@ class GovScorecard(object):
     def get_health_systems(self):
         def latest_div_baseline(qnum):
             q = self.question(qnum)
-            latest = foz(q.latest_value)
-            baseline = foz(q.baseline_value)
-            if baseline == 0:
-                return 0
-            return r1((latest / baseline) * 100)
+            latest = q.cur_val_as_dollars
+            baseline = q.base_val_as_dollars
+            try:
+                if baseline == 0:
+                    return 0
+                return (latest / baseline) * 100
+            except:
+                return None
+
+        def proportions(cur, base):
+            v = safe_div(cur, base)
+            if v == None: return None
+
+            return (v - 1) * 100
+
+        def for_10000_population(val, baseline=False):
+            population_cur = self.question("19").cur_val
+            population_base = self.question("19").base_val
+            if baseline:
+                return safe_mul(safe_div(val, population_base), 10000)
+            else:
+                return safe_mul(safe_div(val, population_cur), 10000)
 
         try:
             healthsystems = self.question("21").cur_val_as_dollars
         except Exception:
-            # TODO Perhaps this isn't the best value
-            healthsystems = 0
-            
+            healthsystems = None
+
+
+        phcclinics_cur = for_10000_population(self.question("20").cur_val)
+        phcclinics_base = for_10000_population(self.question("20").base_val, True)
+        healthworkers_cur = for_10000_population(self.question("18").cur_val)
+        healthworkers_base = for_10000_population(self.question("18").base_val, True)
+        
+        no_data_available = _("No data available")
         return {
             "phcclinincs": {
-                "value": round(foz(self.question("20").latest_value) / 10000.0),
-                "percent": latest_div_baseline("20")
+                "value": phcclinics_cur,
+                "percent": proportions(phcclinics_cur, phcclinics_base),
+                "missing_data_text" : no_data_available
             },
             "healthworkers": {
-                "value": round(foz(self.question("18").latest_value) / 10000.0, 1),
-                "percent": latest_div_baseline("18")
+                "value": healthworkers_cur,
+                "percent": proportions(healthworkers_cur, healthworkers_base),
+                "missing_data_text" : no_data_available
             },
             "healthsystems": {
                 "value": healthsystems,
-                "percent": latest_div_baseline("21")
+                "percent": safe_diff(latest_div_baseline("21"), 100),
+                "missing_data_text" : no_data_available
             }
         }
 
@@ -146,7 +184,7 @@ class GovScorecard(object):
         external_latest = all_latest - domestic_latest if all_latest > domestic_latest else 0
         
         try:
-            allocated_to_health = external_latest / r0(in_millions(foz(self.question("5").latest_value))) * 100
+            allocated_to_health = domestic_latest / r0(in_millions(foz(self.question("5").latest_value))) * 100
         except ZeroDivisionError:
             allocated_to_health = None
 

@@ -64,7 +64,7 @@ var fill_svg = function(json){
 
     for (i in json.health_systems){
         var height = 75;
-	var max_height = 90;
+        var max_height = 90;
 
         id = '#' + i;
         n = d3.select(id);
@@ -74,62 +74,70 @@ var fill_svg = function(json){
             
             var r = rounding[i];
             
-            if (data.value != NaN) {
+            if (data.value != null) {
                 if (i == "healthsystems") {
                     d3.select(id+'-text')
-		        .select('.value')
-			.text("US$" + data.value.formatThousands(r));
+                        .select('.value')
+                        .text("US$" + data.value.formatThousands(r));
                 } else {
                     d3.select(id+'-text')
-		        .select('.value')
-			.text(data.value.formatThousands(r));
-		}
+                        .select('.value')
+                        .text(data.value.formatThousands(r));
+                }
+            } else {
+               d3.select(id + '-text div').text(data.missing_data_text); 
             }
             
-        
 
             var g = n.select('.graph');
             g.select('.point');
+            if (data.percent == null) {
+                g.remove();
+            } else {
+                pixels = data.percent / 100 * height * -1;
 
-            pixels = data.percent / 100 * height * -1;
+                if (pixels < 0){
+                    pixels = d3.max([pixels, -max_height])
+                    g.select('rect')
+                        .attr('y', pixels)
+                        .attr('class', 'health_green')
+                        .attr('height', pixels * -1);
 
-            if (pixels < 0){
-		pixels = d3.max([pixels, -max_height])
-                g.select('rect')
-                    .attr('y', pixels)
-                    .attr('class', 'health_green')
-                    .attr('height', pixels * -1);
+                    g.select('.point')
+                        .attr('class', 'health_green')
+                        .attr('transform', 'translate(0, ' + (pixels - 7)  +')');
 
-                g.select('.point')
-                    .attr('class', 'health_green')
-                    .attr('transform', 'translate(0, ' + (pixels - 7)  +')');
+                    if (data.percent != 0) {
+                        g.select('text')
+                            .attr("y", pixels)
+                            .attr('dy', -10)
+                            .attr('class', 'health-value')
+                            .text(d3.round(data.percent, 1) + '%');
+                    }
+                }else {
+                    pixels = d3.min([pixels, max_height])
+                    g.select('rect')
+                        .attr('y', 0)
+                        .attr('class', 'health_red')
+                        .attr('height', pixels);
 
-                g.select('text')
-                    .attr("y", pixels)
-                    .attr('dy', -10)
-                    .attr('class', 'health-value')
-                    .text(data.percent + '%');
-            }else {
-		pixels = d3.min([pixels, max_height])
-                g.select('rect')
-                    .attr('y', 0)
-                    .attr('class', 'health_red')
-                    .attr('height', pixels);
+                    g.select('.point')
+                        .attr('transform', 'rotate(180)translate(-84)translate(0, ' + ( -1 *pixels - 7)  +')');
+                    g.select('polygon')
+                        .attr('class', 'health_red');
 
-                g.select('.point')
-                    .attr('transform', 'rotate(180)translate(-84)translate(0, ' + ( -1 *pixels - 7)  +')');
-                g.select('polygon')
-                    .attr('class', 'health_red');
+                    if (data.percent != 0) {
+                        g.select('text')
+                            .attr("y", pixels)
+                            .attr('dy', 20)
+                            .attr('class', 'health-value')
+                            .text(d3.round(data.percent, 1) + '%');
+                    }
 
-                g.select('text')
-                    .attr("y", pixels)
-                    .attr('dy', 20)
-                    .attr('class', 'health-value')
-                    .text(data.percent + '%');
-
+                }
+                if (Math.abs(data.percent) < 0.1)
+                    g.select('polygon').remove()
             }
-            if (Math.abs(data.percent) < 0.1)
-                g.select('polygon').remove()
         }
     }
 

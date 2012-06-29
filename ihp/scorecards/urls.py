@@ -2,7 +2,7 @@ from django.conf.urls.defaults import patterns, url
 
 urlpatterns = patterns('ihp.scorecards.views',
     url(
-        r'^dp/(?P<agency_id>\d+)/(?P<language>\w+)/json$', # DP Scorecard json
+        r'^dp/(?P<agency_id>\d+)/(?P<language>\w+)/json/$', # DP Scorecard json
         'dp_scorecard_json',
         name='dp_scorecard_json'
     ),
@@ -11,13 +11,13 @@ urlpatterns = patterns('ihp.scorecards.views',
         'dp_scorecard',
         name='dp_scorecard'
     ),
-    #url(
-    #    r'^dp/(?P<country_id>\d+)/(?P<language>\w+)/(?<template>\w+)$', # svg
-    #    'dp_svg',
-    #    name='localized_svg'
-    #),
     url(
-        r'^gov/(?P<country_id>\d+)/(?P<language>\w+)/json$', # Gov Scorecard json
+        r'^dp/[\d]+/(?P<language>\w+)/(?P<template>[a-z0-9\-]+\.svg)$', # svg
+        'localized_svg',
+        name='dp_svg'
+    ),
+    url(
+        r'^gov/(?P<country_id>\d+)/(?P<language>\w+)/json/$', # Gov Scorecard json
         'gov_scorecard_json',
         name='gov_scorecard_json'
     ),

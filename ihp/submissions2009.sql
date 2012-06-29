@@ -1,5 +1,159 @@
 PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
+
+DROP TABLE IF EXISTS "submissions_submission_2009";
+CREATE TABLE "submissions_submission_2009" (
+    "id" integer NOT NULL PRIMARY KEY,
+    "country_id" integer NOT NULL REFERENCES "submissions_country" ("id"),
+    "agency_id" integer REFERENCES "submissions_agency" ("id"),
+    "docversion" varchar(10) NOT NULL,
+    "type" varchar(10) NOT NULL,
+    "date_submitted" datetime NOT NULL,
+    "completed_by" varchar(50),
+    "job_title" varchar(50)
+);
+INSERT INTO "submissions_submission_2009" VALUES(25,9,26,'0.22','DP','2010-11-10 12:52:03.268233','Pilar de la Corte Molina','Technical Advisor SSR/SWAp');
+INSERT INTO "submissions_submission_2009" VALUES(110,10,27,'0.22','DP','2010-11-15 18:30:05.377607','','');
+INSERT INTO "submissions_submission_2009" VALUES(175,2,26,'0.22','DP','2010-11-18 19:50:14.547189','Dr. Alphonse  Matondo','Charge de Programme VIH/SIDA');
+INSERT INTO "submissions_submission_2009" VALUES(176,10,26,'0.22','DP','2010-11-18 19:50:15.313690','Pascal Mariama & Issa A. Razaou','NPO/SR ; NPO S&E');
+INSERT INTO "submissions_submission_2009" VALUES(177,1,26,'0.21','DP','2010-11-18 19:50:16.032076','Ian McFarlane','UNFPA Representative');
+INSERT INTO "submissions_submission_2009" VALUES(178,8,26,'0.22','DP','2010-11-18 19:50:16.837680','Dr Mariam CISSOKO','NPO SR');
+INSERT INTO "submissions_submission_2009" VALUES(179,5,26,'0.22','DP','2010-11-18 19:50:17.562088','Aicha Ibrahim Djama','Assistant Representative');
+INSERT INTO "submissions_submission_2009" VALUES(180,4,26,'0.22','DP','2010-11-18 19:50:18.178203','André Koné','NPO/M&E');
+INSERT INTO "submissions_submission_2009" VALUES(181,3,26,'0.22','DP','2010-11-18 19:50:18.985990','Pierre SOTA','Chargé de Programme suivi-évaluation');
+INSERT INTO "submissions_submission_2009" VALUES(198,6,27,'0.22','DP','2010-11-19 11:15:12.584287','Dr Luwei Pearson','Health Section Chief Ethiopia');
+INSERT INTO "submissions_submission_2009" VALUES(200,1,27,'0.22','DP','2010-11-19 11:15:17.776000','PANKAJ MEHTA','Chief Health and Nutrition');
+INSERT INTO "submissions_submission_2009" VALUES(201,4,27,'0.22','DP','2010-11-19 11:15:19.052719','Maurice HOURS et Daniel NACOULMA','Chef Section Sante-Nutrition et Specialiste Santé');
+INSERT INTO "submissions_submission_2009" VALUES(256,9,27,'0.22','DP','2010-12-02 16:00:12.791217','Emanuele Capobianco','Chief Health & Nutrition');
+INSERT INTO "submissions_submission_2009" VALUES(285,6,29,'','DP','2011-01-07 11:45:11.998834','','');
+INSERT INTO "submissions_submission_2009" VALUES(287,4,29,'','DP','2011-01-07 11:45:12.906932','','');
+INSERT INTO "submissions_submission_2009" VALUES(289,5,29,'','DP','2011-01-07 11:45:13.931132','','');
+INSERT INTO "submissions_submission_2009" VALUES(290,2,29,'','DP','2011-01-07 11:45:14.447480','','');
+INSERT INTO "submissions_submission_2009" VALUES(291,8,29,'','DP','2011-01-07 11:45:15.063637','','');
+INSERT INTO "submissions_submission_2009" VALUES(292,9,29,'','DP','2011-01-07 11:45:15.722682','','');
+INSERT INTO "submissions_submission_2009" VALUES(293,1,29,'','DP','2011-01-07 11:45:16.266728','','');
+INSERT INTO "submissions_submission_2009" VALUES(294,11,29,'','DP','2011-01-07 11:45:16.732966','','');
+INSERT INTO "submissions_submission_2009" VALUES(295,4,6,'0.22','DP','2011-01-07 11:45:17.215849','Bjorg Sandkjaer','Senior Programme Officer, APP');
+INSERT INTO "submissions_submission_2009" VALUES(297,5,6,'0.22','DP','2011-01-07 11:45:18.299876','Bjorg Sandkjaer','Senior Programme Officer, APP');
+INSERT INTO "submissions_submission_2009" VALUES(298,2,6,'0.22','DP','2011-01-07 11:45:18.832315','Bjorg Sandkjaer','Senior Programme Officer, APP');
+INSERT INTO "submissions_submission_2009" VALUES(303,11,6,'0.22','DP','2011-01-07 11:45:22.129684','Bjorg Sandkjaer','Senior Programme Officer, APP');
+INSERT INTO "submissions_submission_2009" VALUES(310,3,28,'0.22','DP','2011-01-07 11:45:26.114098','Dr CIZA Alphonse','Chargé de Programme Système de santé');
+INSERT INTO "submissions_submission_2009" VALUES(311,5,28,'0.22','DP','2011-01-07 11:45:26.593264','Dr Ridha Jebeniani','STB Medical Officer WHO Djibouti');
+INSERT INTO "submissions_submission_2009" VALUES(312,2,28,'0.22','DP','2011-01-07 11:45:27.467638','Dr Lokonga Jean Pierre','MPN');
+INSERT INTO "submissions_submission_2009" VALUES(313,6,28,'0.22','DP','2011-01-07 11:45:27.942301','Sofonias Getachew/Tesfaye Damte','NPO/MPN,  NPO/Fin');
+INSERT INTO "submissions_submission_2009" VALUES(314,8,28,'0.22','DP','2011-01-07 11:45:30.432164',' Dr Cissé Sarmoye','NPO/ Politique et système de santé');
+INSERT INTO "submissions_submission_2009" VALUES(315,9,28,'0.22','DP','2011-01-07 11:45:30.973757','Eva Pascoal','Health Economist, WHO');
+INSERT INTO "submissions_submission_2009" VALUES(316,1,28,'0.22','DP','2011-01-07 11:45:31.348685','Dr Gunawan Setiadi','Public Health Administrator');
+INSERT INTO "submissions_submission_2009" VALUES(317,10,28,'0.22','DP','2011-01-07 11:45:31.806257','BIZO Moussa','HEC');
+INSERT INTO "submissions_submission_2009" VALUES(318,11,28,'0.22','DP','2011-01-07 11:45:32.281881','Dr Peter Eriki','WHO Representative');
+INSERT INTO "submissions_submission_2009" VALUES(325,4,3,'0.2','DP','2011-01-07 11:50:10.712700','DGDC','');
+INSERT INTO "submissions_submission_2009" VALUES(326,2,3,'0.2','DP','2011-01-07 11:50:11.143410','DGDC + Embassy (DRC)','');
+INSERT INTO "submissions_submission_2009" VALUES(328,9,3,'0.2','DP','2011-01-07 11:50:12.374523','DGDC','');
+INSERT INTO "submissions_submission_2009" VALUES(340,8,3,'0.2','DP','2011-01-07 11:50:19.727892','DGDC + BTC (Mali)','');
+INSERT INTO "submissions_submission_2009" VALUES(363,9,36,'0.2','Gov','2011-01-14 23:05:09.969917','Laura Anselmi','Economista - Direcção de Planificação e Cooperação');
+INSERT INTO "submissions_submission_2009" VALUES(366,11,39,'0.2','Gov','2011-01-14 23:05:12.819061','Dr Muhammed Lecky','Minister of Health');
+INSERT INTO "submissions_submission_2009" VALUES(368,6,34,'0.21','Gov','2011-01-14 23:10:08.570524','','');
+INSERT INTO "submissions_submission_2009" VALUES(372,4,30,'0.21','Gov','2011-01-15 00:05:05.120447','','');
+INSERT INTO "submissions_submission_2009" VALUES(375,4,7,'0.2','DP','2011-01-19 18:45:06.449287','Patrick Osoro & Nina Ingenkamp','Strategy Policy and Evaluation Cluster');
+INSERT INTO "submissions_submission_2009" VALUES(377,5,7,'0.2','DP','2011-01-19 18:45:08.448158','Patrick Osoro & Nina Ingenkamp','Strategy Policy and Evaluation Cluster');
+INSERT INTO "submissions_submission_2009" VALUES(378,2,7,'0.2','DP','2011-01-19 18:45:09.689048','Patrick Osoro & Nina Ingenkamp','Strategy Policy and Evaluation Cluster');
+INSERT INTO "submissions_submission_2009" VALUES(384,11,7,'0.2','DP','2011-01-19 18:45:18.858265','Patrick Osoro & Nina Ingenkamp','Strategy Policy and Evaluation Cluster');
+INSERT INTO "submissions_submission_2009" VALUES(386,3,27,'0.22','DP','2011-01-25 11:15:05.972751','CELESTIN TRAORE','Chief Health and Nutrition');
+INSERT INTO "submissions_submission_2009" VALUES(387,3,3,'0.2','DP','2011-01-25 11:30:06.705452','DGDC','');
+INSERT INTO "submissions_submission_2009" VALUES(388,5,27,'0.22','DP','2011-01-25 19:25:05.379958','IHPResults team','');
+INSERT INTO "submissions_submission_2009" VALUES(395,2,4,'0.21','DP','2011-01-26 17:15:07.481747','Callewaert bart','task manager health');
+INSERT INTO "submissions_submission_2009" VALUES(396,11,4,'0.21','DP','2011-01-26 17:20:07.429505','','');
+INSERT INTO "submissions_submission_2009" VALUES(397,6,20,'0.2','DP','2011-01-26 17:20:07.840365','M.W. de Jong','1st secretary health & HIV/AIDS');
+INSERT INTO "submissions_submission_2009" VALUES(398,2,21,'0.22','DP','2011-01-26 17:20:08.458460','Lene Lothe','Senior Adviser Norad');
+INSERT INTO "submissions_submission_2009" VALUES(399,6,21,'0.22','DP','2011-01-26 17:20:09.074294','Lene Lothe','Senior Adviser Norad');
+INSERT INTO "submissions_submission_2009" VALUES(400,1,21,'0.22','DP','2011-01-26 17:20:09.987756','Lene Lothe','Senior Adviser Norad');
+INSERT INTO "submissions_submission_2009" VALUES(402,8,22,'0.22','DP','2011-01-26 17:20:10.942871','OTC Mali- Olga de Azaola ','Responsable Projets Santé AECID. 
+Bureau Technique de Coopération International au Mali.');
+INSERT INTO "submissions_submission_2009" VALUES(403,6,22,'0.22','DP','2011-01-26 17:20:11.581968','Cruz Ciria and Marta Romero','Head of Mission in Ethiopia and Health Sector Officer');
+INSERT INTO "submissions_submission_2009" VALUES(409,3,24,'0.22','DP','2011-01-26 17:25:13.333153','','');
+INSERT INTO "submissions_submission_2009" VALUES(410,11,24,'0.22','DP','2011-01-26 17:25:14.249119','Jane Miller','DFID Team Leader - Human Development');
+INSERT INTO "submissions_submission_2009" VALUES(411,1,24,'0.22','DP','2011-01-26 17:25:15.082852','Kavindra Subba','Programme Officer');
+INSERT INTO "submissions_submission_2009" VALUES(436,5,32,'0.21','Gov','2011-01-27 11:45:07.780918','Abdourahman Mohamed','Directeur des Etudes de la Planification et de la Coopération Internationale');
+INSERT INTO "submissions_submission_2009" VALUES(437,8,35,'0.21','Gov','2011-01-28 00:25:04.993019','Issa Bara Issa BERTHE','Point Focal ''''COMPACT''''');
+INSERT INTO "submissions_submission_2009" VALUES(459,6,26,'0.22','DP','2011-02-04 14:30:12.619780','MUNA ABDULLAH','NPO');
+INSERT INTO "submissions_submission_2009" VALUES(460,10,38,'0.2','Gov','2011-02-04 18:50:06.034130','Dr IDRISSA MAIGA Mahamadou','Directeur Des Etudes et de la planification');
+INSERT INTO "submissions_submission_2009" VALUES(461,11,26,'0.22','DP','2011-02-07 14:35:05.328962','Agathe Lawson','Resident Representative');
+INSERT INTO "submissions_submission_2009" VALUES(462,4,28,'0.22','DP','2011-02-07 18:45:07.023680','David Kielem','MPN/BFA');
+INSERT INTO "submissions_submission_2009" VALUES(463,10,22,'0.22','DP','2011-02-07 19:00:06.172810','OTC-NIGER','Responsable Projets Santé AECID. 
+Bureau Technique de Coopération International au Niger.');
+INSERT INTO "submissions_submission_2009" VALUES(467,11,21,'0.22','DP','2011-02-10 15:00:06.588429','Lene Lothe','Senior Health Adviser');
+INSERT INTO "submissions_submission_2009" VALUES(479,3,45,'0.22','DP','2011-02-10 17:20:54.937578','','');
+INSERT INTO "submissions_submission_2009" VALUES(480,1,45,'0.22','DP','2011-02-10 17:20:55.745174','Kavindra Subba','Programme Officer');
+INSERT INTO "submissions_submission_2009" VALUES(481,11,45,'0.22','DP','2011-02-10 17:20:56.486657','Jane Miller','DFID Team Leader - Human Development');
+INSERT INTO "submissions_submission_2009" VALUES(482,4,41,'0.22','DP','2011-02-10 17:20:57.169414','Jan van der Horst','Health Advisor');
+INSERT INTO "submissions_submission_2009" VALUES(483,6,41,'0.2','DP','2011-02-10 17:20:58.002115','M.W. de Jong','1st secretary health & HIV/AIDS');
+INSERT INTO "submissions_submission_2009" VALUES(484,9,41,'0.22','DP','2011-02-10 17:20:58.743545','Marco Gerritsen','Health Expert/Focal Partner');
+INSERT INTO "submissions_submission_2009" VALUES(485,8,41,'0.2','DP','2011-02-10 17:20:59.501289','G. Steenbergen','1st secretary health ');
+INSERT INTO "submissions_submission_2009" VALUES(486,3,40,'0.21','DP','2011-02-10 17:21:00.198513','','');
+INSERT INTO "submissions_submission_2009" VALUES(487,2,40,'0.21','DP','2011-02-10 17:21:00.975360','Callewaert bart','task manager health');
+INSERT INTO "submissions_submission_2009" VALUES(488,9,40,'0.21','DP','2011-02-10 17:21:02.174461','HAGHEBAERT GEERT','HEALTH & HIV ADVISOR');
+INSERT INTO "submissions_submission_2009" VALUES(489,11,40,'0.21','DP','2011-02-10 17:21:03.065494','','');
+INSERT INTO "submissions_submission_2009" VALUES(491,11,42,'0.22','DP','2011-02-10 17:21:05.480982','Lene Lothe','Health Adviser');
+INSERT INTO "submissions_submission_2009" VALUES(492,4,44,'0.22','DP','2011-02-10 17:21:06.344842','Anders Molin','Lead expert health ');
+INSERT INTO "submissions_submission_2009" VALUES(493,6,44,'0.22','DP','2011-02-10 17:21:09.669882','Anders Molin','Health policy advisor');
+INSERT INTO "submissions_submission_2009" VALUES(494,8,44,'0.22','DP','2011-02-10 17:21:11.411248','Anders Molin','Health policy advisor ');
+INSERT INTO "submissions_submission_2009" VALUES(495,9,44,'0.22','DP','2011-02-10 17:21:12.900936','Anders Molin','Health policy advisor');
+INSERT INTO "submissions_submission_2009" VALUES(496,6,43,'0.22','DP','2011-02-10 17:21:13.725696','Cruz Ciria and Marta Romero','Head of Mission in Ethiopia and Health Sector Officer');
+INSERT INTO "submissions_submission_2009" VALUES(497,8,43,'0.22','DP','2011-02-10 17:21:15.873930','OTC Mali- Olga de Azaola ','Responsable Projets Santé AECID. 
+Bureau Technique de Coopération International au Mali.');
+INSERT INTO "submissions_submission_2009" VALUES(498,9,43,'0.2','DP','2011-02-10 17:21:16.948616','Begoña Hermida Val','Health Advisor OTC (Techcnical Office of Cooperation)-Mozambique');
+INSERT INTO "submissions_submission_2009" VALUES(499,10,43,'0.22','DP','2011-02-10 17:21:19.088917','OTC-NIGER','Responsable Projets Santé AECID. 
+Bureau Technique de Coopération International au Niger.');
+INSERT INTO "submissions_submission_2009" VALUES(500,6,45,'0.22','DP','2011-02-10 17:21:20.162860','Ali Forder','Health Adviser');
+INSERT INTO "submissions_submission_2009" VALUES(501,9,45,'0.22','DP','2011-02-10 17:21:20.987468','','');
+INSERT INTO "submissions_submission_2009" VALUES(506,10,29,'','DP','2011-02-14 17:40:06.797531','','');
+INSERT INTO "submissions_submission_2009" VALUES(507,3,29,'','DP','2011-02-14 17:50:08.154474','','');
+INSERT INTO "submissions_submission_2009" VALUES(508,3,31,'0.21','Gov','2011-02-15 03:50:07.552633','Dr BIZIMANA PAUL','CONSULTANT IHP+');
+INSERT INTO "submissions_submission_2009" VALUES(509,9,42,'0.22','DP','2011-02-15 19:00:05.631010','Lene Lothe','Senior Adviser Norad');
+INSERT INTO "submissions_submission_2009" VALUES(511,1,6,'0.22','DP','2011-02-17 17:30:07.482391','Bjorg Sandkjaer','Senior Programme Officer, APP');
+INSERT INTO "submissions_submission_2009" VALUES(512,9,6,'0.22','DP','2011-02-17 17:30:08.575601','Bjorg Sandkjaer','Senior Programme Officer, APP');
+INSERT INTO "submissions_submission_2009" VALUES(513,6,6,'0.22','DP','2011-02-17 17:30:09.533164','Bjorg Sandkjaer','Senior Programme Officer, APP');
+INSERT INTO "submissions_submission_2009" VALUES(514,8,6,'0.22','DP','2011-02-17 17:30:10.598934','Bjorg Sandkjaer','Senior Programme Officer, APP');
+INSERT INTO "submissions_submission_2009" VALUES(515,1,37,'0.2','Gov','2011-02-17 17:35:04.717918','Dr L R Pathak','Chief, Policy Planning and International Coopeartion Division, MOHP');
+INSERT INTO "submissions_submission_2009" VALUES(517,3,6,'0.22','DP','2011-02-21 19:50:05.755506','Bjorg Sandkjaer','Senior Programme Officer, APP');
+INSERT INTO "submissions_submission_2009" VALUES(518,10,6,'0.22','DP','2011-02-21 19:50:07.337582','Bjorg Sandkjaer','Senior Programme Officer, APP');
+INSERT INTO "submissions_submission_2009" VALUES(519,1,1,'0.22','DP','2011-02-22 14:15:05.148959','Latika Maskey Pradhan','Health Program Manager');
+INSERT INTO "submissions_submission_2009" VALUES(520,10,3,'0.2','DP','2011-02-23 13:55:05.660632','DGDC','');
+INSERT INTO "submissions_submission_2009" VALUES(521,3,4,'0.21','DP','2011-02-23 19:20:05.851934','','');
+INSERT INTO "submissions_submission_2009" VALUES(530,6,24,'0.22','DP','2011-02-23 21:40:16.032927','Ali Forder','Health Adviser');
+INSERT INTO "submissions_submission_2009" VALUES(531,9,24,'0.22','DP','2011-02-23 21:40:17.099313','','');
+INSERT INTO "submissions_submission_2009" VALUES(532,8,7,'0.2','DP','2011-02-24 13:50:04.800916','Patrick Osoro & Nina Ingenkamp','Strategy Policy and Evaluation Cluster');
+INSERT INTO "submissions_submission_2009" VALUES(533,9,7,'0.2','DP','2011-02-24 13:55:06.798151','Patrick Osoro & Nina Ingenkamp','Strategy Policy and Evaluation Cluster');
+INSERT INTO "submissions_submission_2009" VALUES(534,6,7,'0.2','DP','2011-02-24 13:55:07.531355','Patrick Osoro & Nina Ingenkamp','Strategy Policy and Evaluation Cluster');
+INSERT INTO "submissions_submission_2009" VALUES(535,9,20,'0.22','DP','2011-02-25 18:30:06.037656','Marco Gerritsen','Health Expert/Focal Partner');
+INSERT INTO "submissions_submission_2009" VALUES(536,4,20,'0.22','DP','2011-02-25 18:35:05.693449','Jan van der Horst','Health Advisor');
+INSERT INTO "submissions_submission_2009" VALUES(537,8,20,'0.2','DP','2011-02-25 18:45:04.588745','G. Steenbergen','1st secretary health ');
+INSERT INTO "submissions_submission_2009" VALUES(538,9,22,'0.2','DP','2011-02-28 13:30:06.095828','Begoña Hermida Val','Health Advisor OTC (Techcnical Office of Cooperation)-Mozambique');
+INSERT INTO "submissions_submission_2009" VALUES(539,2,33,'0.2','Gov','2011-03-01 00:25:05.901891','DR HYPPOLITE KALAMBAY','Directeur de la Direction des Etudes et de la Planification ');
+INSERT INTO "submissions_submission_2009" VALUES(544,9,4,'0.21','DP','2011-03-02 21:35:05.731440','HAGHEBAERT GEERT','HEALTH & HIV ADVISOR');
+INSERT INTO "submissions_submission_2009" VALUES(545,3,7,'0.2','DP','2011-03-03 11:15:13.889516','Patrick Osoro & Nina Ingenkamp','Strategy Policy and Evaluation Cluster');
+INSERT INTO "submissions_submission_2009" VALUES(546,1,7,'0.2','DP','2011-03-03 11:15:14.697169','Patrick Osoro & Nina Ingenkamp','Strategy Policy and Evaluation Cluster');
+INSERT INTO "submissions_submission_2009" VALUES(547,10,7,'0.2','DP','2011-03-03 11:15:15.548846','Patrick Osoro & Nina Ingenkamp','Strategy Policy and Evaluation Cluster');
+INSERT INTO "submissions_submission_2009" VALUES(551,9,21,'0.22','DP','2011-03-03 14:25:05.362703','Lene Lothe','Senior Adviser Norad');
+INSERT INTO "submissions_submission_2009" VALUES(552,6,23,'0.22','DP','2011-03-03 18:30:06.696317','Anders Molin','Health policy advisor');
+INSERT INTO "submissions_submission_2009" VALUES(553,8,23,'0.22','DP','2011-03-03 18:30:07.820735','Anders Molin','Health policy advisor ');
+INSERT INTO "submissions_submission_2009" VALUES(554,4,23,'0.22','DP','2011-03-03 18:30:08.967447','Anders Molin','Lead expert health ');
+INSERT INTO "submissions_submission_2009" VALUES(555,9,23,'0.22','DP','2011-03-03 18:30:10.394081','Anders Molin','Health policy advisor');
+INSERT INTO "submissions_submission_2009" VALUES(560,1,25,'0.22','DP','2011-03-07 12:15:05.797651','Dr. Maria Elena G. Filio-Borromeo','UNAIDS Country Coordinator');
+INSERT INTO "submissions_submission_2009" VALUES(562,5,25,'0.22','DP','2011-03-07 17:50:07.293755','Dr. Tharcisse BARIHUTA ','UNAIDS Country Coordinator');
+INSERT INTO "submissions_submission_2009" VALUES(563,8,25,'0.22','DP','2011-03-07 17:50:08.910649','Dr Ousmane Diouf
+
+','UCC');
+INSERT INTO "submissions_submission_2009" VALUES(564,4,25,'0.22','DP','2011-03-07 19:05:19.006985','Pr Mame Awa FAYE','UCC');
+INSERT INTO "submissions_submission_2009" VALUES(566,2,25,'0.22','DP','2011-03-07 19:05:20.831657','Dr Kourouma Kékoura','UCC');
+INSERT INTO "submissions_submission_2009" VALUES(567,6,25,'0.22','DP','2011-03-07 19:05:21.957426','UCO Ethiopia','');
+INSERT INTO "submissions_submission_2009" VALUES(568,9,25,'0.22','DP','2011-03-07 19:05:23.672678','UCO Mozambique technical staff','UCO team work. ');
+INSERT INTO "submissions_submission_2009" VALUES(569,10,25,'0.22','DP','2011-03-07 19:05:26.064589','UCO','');
+INSERT INTO "submissions_submission_2009" VALUES(571,3,25,'0.22','DP','2011-03-09 17:00:11.750121',' Rosemeire Munhoz','UCC');
+INSERT INTO "submissions_submission_2009" VALUES(572,11,25,'0.22','DP','2011-03-09 17:55:09.417787','','');
+CREATE INDEX "submissions_submission_2009_534dd89" ON "submissions_submission_2009" ("country_id");
+CREATE INDEX "submissions_submission_2009_b162e9d" ON "submissions_submission_2009" ("agency_id");
+
 DROP TABLE IF EXISTS "submissions_dpquestion_2009";
 CREATE TABLE "submissions_dpquestion_2009" (
     "id" integer NOT NULL PRIMARY KEY,
