@@ -95,7 +95,7 @@ class GovScorecard(object):
             baseline = q.base_val_as_dollars
             try:
                 if baseline == 0:
-                    return 0
+                    return None
                 return (latest / baseline) * 100
             except:
                 return None
