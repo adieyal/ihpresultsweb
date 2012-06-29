@@ -42,6 +42,7 @@ urlpatterns = patterns('',
     (r"^agencies/graphs/projection/(?P<language>\w+)/$", "submissions.graphs.projectiongraphs", {}, "projectiongraphs"),
     (r"^agencies/graphs/(?P<indicator>\w+)/(?P<language>\w+)/$", "submissions.graphs.agency_graphs_by_indicator", {}, "agency_graphs_by_indicator"),
 
+
     (r"^agencies/(?P<agency_name>[a-zA-Z\s]+)/graphs/(?P<language>\w+)/$", "submissions.graphs.agencygraphs", {}, "agencygraphs"),
     (r"^agencies/graphs/by_country/(?P<country_name>[a-zA-Z\s]+)/graphs/(?P<language>\w+)/$", "submissions.graphs.countrygraphs", {}, "countrygraphs"),
 
@@ -107,40 +108,6 @@ urlpatterns = patterns('',
         'submissions.views.agency_volume_of_aid_json', 
         {},
         'json_agency_volume_of_aid'
-    ),
-
-    (
-        r'^agencies/tables/two_by_two_analysis/json/$', 
-        'submissions.views.two_by_two_analysis_json', 
-        {},
-        'json_two_by_two_analysis'
-    ),
-
-    (
-        r'^agencies/tables/two_by_two_analysis/$', 
-        direct_to_template, 
-        {
-            "template" : "submissions/main_base_bootstrap.html", 
-            "extra_context" : {"content_file" : "submissions/two_by_two_analysis.html"}
-        }, 
-        "two_by_two_analysis"
-    ),
-
-    (
-        r'^agencies/tables/top5_countries/json/$', 
-        'submissions.views.top5_countries_json', 
-        {},
-        'json_top5_countries'
-    ),
-
-    (
-        r'^agencies/tables/top5_countries/$', 
-        direct_to_template, 
-        {
-            "template" : "submissions/main_base_bootstrap.html", 
-            "extra_context" : {"content_file" : "submissions/top5_countries.html"}
-        }, 
-        "top5_countries"
     ),
 
     (r'^countries/tables/(?P<language>\w+)/$', 'submissions.views.country_table', {
@@ -210,6 +177,12 @@ urlpatterns = patterns('',
 
     # Scorecards views
     (r'^scorecards/', include('ihp.scorecards.urls')),
+    
+    # JSON views
+    (r'^json/', include('ihp.submissions.json_urls')),
+
+    # Agency Tables
+    (r'^agencies/tables', include('ihp.submissions.agencytable_urls')),
 
     # dashboard is URL to access underlying data indirectly
     (r'^dashboard/$', direct_to_template, {
@@ -221,10 +194,7 @@ urlpatterns = patterns('',
         }, 
         "home"
     )
-
-
 )
-
 
 _media_url = settings.MEDIA_URL
 if _media_url.startswith('/'):
