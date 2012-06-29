@@ -90,14 +90,16 @@ class GovScorecard(object):
         except Exception:
             # TODO Perhaps this isn't the best value
             healthsystems = 0
+
+        population = foz(self.question("19").cur_val)
             
         return {
             "phcclinincs": {
-                "value": round(foz(self.question("20").latest_value) / 10000.0),
+                "value": round(foz(self.question("20").latest_value) / population *  10000.0),
                 "percent": latest_div_baseline("20")
             },
             "healthworkers": {
-                "value": round(foz(self.question("18").latest_value) / 10000.0, 1),
+                "value": round(foz(self.question("18").latest_value) / population *  10000.0, 1),
                 "percent": latest_div_baseline("18")
             },
             "healthsystems": {
