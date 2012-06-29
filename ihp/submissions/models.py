@@ -210,12 +210,14 @@ class GovQuestion(models.Model):
         return self._as_dollars(self.cur_val, self.latest_year)
 
     def _as_dollars(self, val, year):
+        sval = str(val).strip()
         try:
             # If no currency is provided then assume dollars
-            return float(val)
+            return float(sval)
         except ValueError:
             pass
-        sval = str(val).strip()
+
+        if sval == "": return None
         if len(sval) < 3:
             raise Exception("%s is an invalid currency string" % sval)
 

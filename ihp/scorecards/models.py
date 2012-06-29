@@ -79,8 +79,8 @@ class GovScorecard(object):
     def get_health_systems(self):
         def latest_div_baseline(qnum):
             q = self.question(qnum)
-            latest = foz(q.latest_value)
-            baseline = foz(q.baseline_value)
+            latest = foz(q.cur_val_as_dollars)
+            baseline = foz(q.base_val_as_dollars)
             if baseline == 0:
                 return 0
             return r1((latest / baseline) * 100)
