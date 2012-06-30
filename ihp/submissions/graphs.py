@@ -338,7 +338,6 @@ def agency_graphs_by_indicator(request, indicator, language, template_name="subm
 
     (baseline_value, baseline_year, latest_value, latest_year) = indicators[indicator][0]
     (_, _, previous_value, previous_year) = old_indicators[indicator][0]
-    print 'CHECK', previous_value, latest_value
     target = target_values[indicator]
     graph = highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, target=target)
     graphs.append({
@@ -492,7 +491,6 @@ def highlevelgraphs(request, language, template_name="submissions/highlevelgraph
     for indicator in indicators:
         (baseline_value, _, latest_value, _) = indicators[indicator][0]
         (_, _, previous_value, previous_year) = old_indicators[indicator][0]
-        print 'CHECK', previous_value, latest_value
         name = "graph_%s" % indicator.lower()
         if indicator not in ["5DPc"]:
             graph = highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, target_values[indicator])
