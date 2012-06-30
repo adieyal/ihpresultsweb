@@ -45,7 +45,7 @@ target_values = {
     "2DPb" : 50,
     "2DPc" : 66,
     "3DP"  : 90,
-    "4DP"  : 90,
+    "4DP"  : 71,
     "5DPa" : 80, 
     "5DPb" : 80, 
     "5DPc" : 0, 
