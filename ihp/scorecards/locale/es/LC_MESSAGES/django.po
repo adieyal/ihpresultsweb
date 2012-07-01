@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-29 17:53+0200\n"
-"PO-Revision-Date: 2012-06-29 17:55\n"
+"POT-Creation-Date: 2012-07-01 22:05+0200\n"
+"PO-Revision-Date: 2012-07-01 22:09\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -63,6 +63,9 @@ msgid ""
 "neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, "
 "nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est."
 msgstr ""
+"Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, "
+"neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, "
+"nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est."
 
 #: models.py:246
 msgid "DONOR CAPACITY DEVELOPMENT PROVIDED THROUGH COORDINATED PROGRAMMES"
@@ -327,6 +330,7 @@ msgstr ""
 "ORGANIZACIONES QUE PRESENTAN INFORMES AL PACTO IHP+RESULTADOS EN %(country)s"
 
 #: templates/scorecards/country-page-2.svg:7645
+#: templates/scorecards/ihp-page-2.svg:1143
 msgid "HOW TO INTERPRET THIS SCORECARD"
 msgstr "CÓMO INTERPRETAR LA PRESENTE HERRAMIENTA SCORECARD"
 
@@ -556,42 +560,52 @@ msgstr ""
 "AVANCES EN LA IMPLEMENTACIÓN DE LOS COMPROMISOS ASUMIDOS EN EL  PACTO IHP+ "
 
 #: templates/scorecards/country-page-2.svg:7760
+#: templates/scorecards/ihp-page-1.svg:6926
 msgid "EXPECTED RESULTS"
 msgstr "RESULTADOS ESPERADOS"
 
 #: templates/scorecards/country-page-2.svg:7764
+#: templates/scorecards/ihp-page-1.svg:6931
 msgid "RATING"
 msgstr "CALIFICACIÓN"
 
 #: templates/scorecards/country-page-2.svg:7768
+#: templates/scorecards/ihp-page-1.svg:6936
 msgid "TARGET"
 msgstr "META"
 
 #: templates/scorecards/country-page-2.svg:7771
+#: templates/scorecards/ihp-page-1.svg:6941
 msgid "OVERALL PROGRESS"
 msgstr "AVANCES GENERALES"
 
 #: templates/scorecards/country-page-2.svg:7774
+#: templates/scorecards/ihp-page-1.svg:7003
 msgid "target achieved"
 msgstr "Meta alcanzada"
 
 #: templates/scorecards/country-page-2.svg:7777
+#: templates/scorecards/ihp-page-1.svg:7013
 msgid "progress made towards achieving target"
 msgstr "Avances realizados hacia el logro la meta"
 
 #: templates/scorecards/country-page-2.svg:7780
+#: templates/scorecards/ihp-page-1.svg:7008
 msgid "no progress or regression"
 msgstr "Ausencia de avances o regresión"
 
 #: templates/scorecards/country-page-2.svg:7783
+#: templates/scorecards/ihp-page-1.svg:7018
 msgid "data not provided"
 msgstr "Datos no provistos"
 
 #: templates/scorecards/country-page-2.svg:7786
+#: templates/scorecards/ihp-page-1.svg:7023
 msgid "measure not applicable"
 msgstr "Medición no aplicable"
 
 #: templates/scorecards/country-page-2.svg:7789
+#: templates/scorecards/ihp-page-1.svg:7028
 msgid "indicates agreed target"
 msgstr "Indica la meta acordada"
 
@@ -609,10 +623,12 @@ msgid "No text."
 msgstr ""
 
 #: templates/scorecards/country-page-2.svg:7872
+#: templates/scorecards/ihp-page-1.svg:6947
 msgid "Commitments are documented and mutually agreed."
 msgstr "Los compromisos son documentados y establecidos de mutuo acuerdo."
 
 #: templates/scorecards/country-page-2.svg:7879
+#: templates/scorecards/ihp-page-1.svg:6954
 msgid ""
 "Support is based in country plans and strategies, including to strengthen "
 "Health Systems."
@@ -621,16 +637,19 @@ msgstr ""
 "fortalecimiento de los sistemas de salud."
 
 #: templates/scorecards/country-page-2.svg:7886
+#: templates/scorecards/ihp-page-1.svg:6961
 msgid "Funding commitments are long-term."
 msgstr "Los compromisos de financiamiento son a largo plazo."
 
 #: templates/scorecards/country-page-2.svg:7893
+#: templates/scorecards/ihp-page-1.svg:6968
 msgid "Funds are disbursed predictably, as committed."
 msgstr ""
 "Los fondos se desembolsan en plazos predecibles, de conformidad con los "
 "compromisos asumidos."
 
 #: templates/scorecards/country-page-2.svg:7900
+#: templates/scorecards/ihp-page-1.svg:6975
 msgid ""
 "Country systems for procurement and public financial management are used and"
 " strengthened."
@@ -639,15 +658,116 @@ msgstr ""
 "utilizados y fortalecidos."
 
 #: templates/scorecards/country-page-2.svg:7907
+#: templates/scorecards/ihp-page-1.svg:6982
 msgid "Resources are being managed for Development Results."
 msgstr ""
 "Los recursos están siendo administrados con base en Resultados de "
 "Desarrollo."
 
 #: templates/scorecards/country-page-2.svg:7914
+#: templates/scorecards/ihp-page-1.svg:6989
 msgid "Mutual accountability is being demonstrated."
 msgstr "Se está demostrando una rendición de cuentas mutua."
 
 #: templates/scorecards/country-page-2.svg:7921
+#: templates/scorecards/ihp-page-1.svg:6996
 msgid "Civil Society meaningfully engaged."
 msgstr "La sociedad civil participa de manera significativa."
+
+#: templates/scorecards/ihp-page-1.svg:6904
+msgid "WORKING DRAFT"
+msgstr ""
+
+#: templates/scorecards/ihp-page-1.svg:6909
+msgid "2012 PARTNER SCORECARD FOR"
+msgstr "SCORECARD PARA ORGANIZACIONES DE DESARROLLO SOCIAS 2012 PARA"
+
+#: templates/scorecards/ihp-page-1.svg:6915
+msgid "ORGANISATION PROFILE"
+msgstr "PERFIL DE LA ORGANIZACIÓN"
+
+#: templates/scorecards/ihp-page-1.svg:6921
+msgid "COUNTRIES WHERE THE ORGANISATION IS ACTIVE"
+msgstr "PAÍSES DONDE SE ENCUENTRA TRABAJANDO LA ORGANIZACIÓN"
+
+#: templates/scorecards/ihp-page-2.svg:1131
+msgid "SPECIFIC ACTIONS TO ACHIEVE RESULTS"
+msgstr "ACTIVIDADES CONCRETAS PARA LOGRAR RESULTADOS"
+
+#: templates/scorecards/ihp-page-2.svg:1137
+msgid ""
+"This additional information is reported by the Organisation to explain what "
+"specific actions it is taking to implement its IHP+ commitments to the 8 "
+"Expected Results, or to qualify its measures of progress."
+msgstr ""
+"Esta información adicional es proporcionada por la organización con el fin "
+"de explicar qué medidas concretas está adoptando para poner en práctica sus "
+"compromisos en el marco del Pacto IHP+ en relación con los ocho resultados "
+"esperados, o para explicar su medición de los avances."
+
+#: templates/scorecards/ihp-page-2.svg:1149
+msgid ""
+"Expected Results reflect key commitments that were made by IHP+ signatories "
+"in the IHP+ Global Compact. Each expected result has corresponding standard "
+"performance measures to track progress over time. The progress of all "
+"agencies is rated against these mutually agreed expectations."
+msgstr ""
+"Los resultados esperados representan los principales compromisos que fueron "
+"asumidos por las entidades que suscribieron el Pacto IHP+ en el contexto del"
+" Pacto Global IHP+. Cada resultado esperado tiene estándares de desempeño "
+"asociados, para hacer un seguimiento de los avances a través del tiempo. Los"
+" avances de todas las organizaciones son calificados en función de estas "
+"expectativas establecidas de mutuo acuerdo."
+
+#: templates/scorecards/ihp-page-2.svg:1150
+#, fuzzy, python-format
+msgid ""
+"Rating symbols illustrate whether the Agency has achieved %(tick)s, is "
+"working towards %(arrow)s, or has not achieved %(exclamation)s its targets "
+"over the most recent annual reporting cycle. Details of these independent "
+"assessments undertaken by the IHP+Results Consortium can be found online in "
+"the North-South Observatory for IHP+Results (www.ihpresults.net)."
+msgstr ""
+"Los Símbolos de Avances revelan si en el 2011 el gobierno había logrado %(tick)s, había realizado avances %(arrow)s o no había realizado avances \n"
+"%(exclamation)s en relación con 10 Estándares de Desempeño desde el año de la línea de base (2005-2007). Ver detalles en línea de estas calificaciones y las metas asociadas en el portal web del Pacto IHP+Resultados (www.ihpresults.net)."
+
+#: templates/scorecards/ihp-page-2.svg:1151
+msgid ""
+"Target describes the aggregate data on which the Rating is based, with a "
+"comparison of 2011 and baseline performance."
+msgstr ""
+"La meta describe la información consolidada en la cual se basa la "
+"calificación, frente al desempeño en el 2011 y en el año de la línea de "
+"base."
+
+#: templates/scorecards/ihp-page-2.svg:1152
+msgid ""
+"Overall Progress shows a two-bar graph with the aggregate data for the "
+"agency in question across all the countries for which health sector support "
+"has been reported.  In most cases, the agreed target for each standard "
+"performance measure (SPM) is shown as a red line."
+msgstr ""
+"Avances generales muestra un gráfico de dos barras que contiene la "
+"información consolidada referente a la organización en cuestión en todos los"
+" países en los cuales se ha reportado asistencia para el sector salud. En la"
+" mayoría de los casos, la meta acordada para cada estándar de desempeño "
+"aparece en forma de una línea roja."
+
+#: templates/scorecards/ihp-page-2.svg:1153
+msgid ""
+"Scorecard ratings are aggregates of performance across a number of countries. Aggregates might hide variations in the agency's\n"
+"performance. Disaggregated data can be found at www.ihpresults.net"
+msgstr ""
+"Las calificaciones que aparecen en la herramienta Scorecard constituyen consolidados del desempeño en una serie de países. Las cifras consolidadas podrían ocultar variaciones en el desempeño de la organización.\n"
+"Ver la información desagregada en: www.ihpresults.net"
+
+#: templates/scorecards/ihp-page-2.svg:1155
+msgid ""
+"NB: The ratings presented here are based on self-reported data.  IHP+Results"
+" has taken steps to triangulate this data using other sources.  More details"
+" are vailable at www.ihpresults.net"
+msgstr ""
+"Nota Bene: Las calificaciones que se presentan aquí se basan en la "
+"información reportada por la propia organización.  El Pacto IHP+Resultados "
+"ha tomado medidas para triangular dicha información, cotejándola con otras "
+"fuentes. Mayores detalles disponibles en: www.ihpresults.net"

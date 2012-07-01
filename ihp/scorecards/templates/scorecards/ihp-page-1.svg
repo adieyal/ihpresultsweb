@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-
+<!-- Load the django internationalization tags. {% load i18n %} -->
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -430,164 +430,18 @@
            clip-rule="evenodd"
            d="m 24.773,177.58 c 0,-3.131 2.122,-5.669 4.739,-5.669 h 138.3 c 2.618,0 4.741,2.539 4.741,5.669 v 6.504 c 0,3.131 -2.123,5.669 -4.741,5.669 h -138.3 c -2.617,0 -4.739,-2.538 -4.739,-5.669 v -6.504 z"
            id="path619" />
-        <switch
-           id="switch621">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject623" />
-          <g
-             id="g625">
-            <rect
-               style="fill:none"
-               height="10"
-               x="31.431999"
-               y="175.25999"
-               width="141.46001"
-               id="rect627" />
-            <text
-               style="font-size:9px;fill:#ffffff;font-family:Arial-BoldMT"
-               transform="translate(31.432,184.35)"
-               font-size="9px"
-               id="SVGID_30_">EXPECTED RESULTS</text>
-          </g>
-        </switch>
         <path
            style="fill:#013333;fill-rule:evenodd"
            inkscape:connector-curvature="0"
            clip-rule="evenodd"
            d="m 177.09,177.58 c 0,-3.131 1.998,-5.669 4.463,-5.669 h 41.795 c 2.465,0 4.463,2.539 4.463,5.669 v 6.504 c 0,3.131 -1.998,5.669 -4.463,5.669 h -41.795 c -2.465,0 -4.463,-2.538 -4.463,-5.669 v -6.504 z"
            id="path630" />
-        <switch
-           id="switch632">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject634" />
-          <g
-             id="g636">
-            <rect
-               style="fill:none"
-               height="10"
-               x="183.86"
-               y="175.25999"
-               width="35.598"
-               id="rect638" />
-            <text
-               style="font-size:9px;fill:#ffffff;font-family:Arial-BoldMT"
-               transform="translate(183.86,184.35)"
-               font-size="9px"
-               id="SVGID_31_">RATING</text>
-          </g>
-        </switch>
-        <switch
-           id="switch641">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject643" />
-          <g
-             id="g645">
-            <rect
-               style="fill:none"
-               height="10"
-               x="241.38"
-               y="175.25999"
-               width="57.82"
-               id="rect647" />
-            <text
-               style="font-size:9px;fill:#ffffff;font-family:Arial-BoldMT"
-               transform="translate(241.38,184.35)"
-               font-size="9px"
-               id="SVGID_32_">TARGET</text>
-          </g>
-        </switch>
-        <switch
-           id="switch650">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject652" />
-          <g
-             id="g654">
-            <rect
-               style="fill:none"
-               height="10"
-               x="389.19"
-               y="175.25999"
-               width="99.414001"
-               id="rect656" />
-            <text
-               style="font-size:9px;fill:#ffffff;font-family:Arial-BoldMT"
-               transform="translate(389.19,184.35)"
-               font-size="9px"
-               id="SVGID_33_">OVERALL PROGRESS</text>
-          </g>
-        </switch>
         <path
            style="fill:#dfe7e5;fill-rule:evenodd"
            inkscape:connector-curvature="0"
            clip-rule="evenodd"
            d="m 31.771,201.88 c 0,-3.131 2.105,-5.669 4.703,-5.669 h 131.38 c 2.598,0 4.703,2.539 4.703,5.669 v 45.138 c 0,3.131 -2.105,5.669 -4.703,5.669 H 36.474 c -2.598,0 -4.703,-2.538 -4.703,-5.669 V 201.88 z"
            id="path659" />
-        <switch
-           id="switch661">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject663" />
-          <g
-             id="g665">
-            <rect
-               style="fill:none"
-               height="29.096001"
-               x="74.282997"
-               y="209.44"
-               width="98.609001"
-               id="rect667" />
-            <text
-               transform="translate(74.283,217.49)"
-               style="font-size:8px;font-family:ArialMT;-inkscape-font-specification:ArialMT"
-               font-size="8px"
-               id="SVGID_34_">
-              <tspan
-                 style="font-family:ArialMT;-inkscape-font-specification:ArialMT"
-                 x="0"
-                 y="0"
-                 id="tspan670">Commitments</tspan>
-              <tspan
-                 style="font-family:ArialMT;-inkscape-font-specification:ArialMT"
-                 x="0"
-                 y="9"
-                 id="tspan672">are documented</tspan>
-              <tspan
-                 style="font-family:ArialMT;-inkscape-font-specification:ArialMT"
-                 x="0"
-                 y="18"
-                 id="tspan674">and mutually agreed.</tspan>
-            </text>
-          </g>
-        </switch>
         <g
            id="additional_info">
           <g
@@ -951,32 +805,6 @@
                  id="line878" />
             </g>
           </g>
-          <switch
-             id="switch880">
-            <foreignObject
-               overflow="visible"
-               x="0"
-               y="0"
-               width="1"
-               height="1"
-               requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-               id="foreignObject882" />
-            <g
-               id="g884">
-              <rect
-                 style="fill:none"
-                 height="7.7529998"
-                 x="499.29001"
-                 y="813.15997"
-                 width="67.077003"
-                 id="rect886" />
-              <text
-                 style="font-size:6px;font-family:ArialMT"
-                 transform="translate(499.29,819.2)"
-                 font-size="6px"
-                 id="SVGID_47_">indicates agreed target</text>
-            </g>
-          </switch>
         </g>
         <path
            style="fill:none;stroke:#d1d3d4;stroke-width:1.00010002;stroke-miterlimit:3.86369991"
@@ -991,53 +819,6 @@
            clip-rule="evenodd"
            d="m 31.771,269.7 c 0,-3.131 2.105,-5.669 4.703,-5.669 h 131.38 c 2.598,0 4.703,2.538 4.703,5.669 v 95.194 c 0,3.131 -2.105,5.669 -4.703,5.669 H 36.474 c -2.598,0 -4.703,-2.538 -4.703,-5.669 V 269.7 z"
            id="path891" />
-        <switch
-           id="switch893">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject895" />
-          <g
-             id="g897">
-            <rect
-               style="fill:none"
-               height="47.049"
-               x="75.282997"
-               y="294.17999"
-               width="95.805"
-               id="rect899" />
-            <text
-               style="font-size:8px;font-family:ArialMT"
-               transform="translate(75.283,302.23)"
-               font-size="8px"
-               id="SVGID_48_">
-              <tspan
-                 x="0"
-                 y="0"
-                 id="tspan902">Support is based</tspan>
-              <tspan
-                 x="0"
-                 y="9"
-                 id="tspan904">in country plans and</tspan>
-              <tspan
-                 x="0"
-                 y="18"
-                 id="tspan906">strategies, including</tspan>
-              <tspan
-                 x="0"
-                 y="27"
-                 id="tspan908">to strengthen Health</tspan>
-              <tspan
-                 x="0"
-                 y="36"
-                 id="tspan910">Systems.</tspan>
-            </text>
-          </g>
-        </switch>
         <path
            style="fill:none;stroke:#d1d3d4;stroke-width:1.00010002;stroke-miterlimit:3.86369991"
            inkscape:connector-curvature="0"
@@ -1045,41 +826,6 @@
            clip-rule="evenodd"
            d="m 571.11,265.05 v 105.93 c 0,3.131 -2.538,5.669 -5.67,5.669 H 30.98 c -3.132,0 -5.669,-2.539 -5.669,-5.669 V 264.55"
            id="path912" />
-        <switch
-           id="switch914">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject916" />
-          <g
-             id="g918">
-            <rect
-               style="fill:none"
-               height="18.601999"
-               x="75.282997"
-               y="392.42001"
-               width="95.811996"
-               id="rect920" />
-            <text
-               style="font-size:8px;font-family:ArialMT"
-               transform="translate(75.283,400.47)"
-               font-size="8px"
-               id="SVGID_49_">
-              <tspan
-                 x="0"
-                 y="0"
-                 id="tspan923">Funding commitments</tspan>
-              <tspan
-                 x="0"
-                 y="9"
-                 id="tspan925">are long-term.</tspan>
-            </text>
-          </g>
-        </switch>
         <path
            style="fill:none;stroke:#d1d3d4;stroke-width:1.00010002;stroke-miterlimit:3.86369991"
            inkscape:connector-curvature="0"
@@ -1087,45 +833,6 @@
            clip-rule="evenodd"
            d="m 571.11,383.63 v 38.644 c 0,3.131 -2.538,5.669 -5.67,5.669 H 30.98 c -3.132,0 -5.669,-2.538 -5.669,-5.669 v -39.14"
            id="path927" />
-        <switch
-           id="switch929">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject931" />
-          <g
-             id="g933">
-            <rect
-               style="fill:none"
-               height="27.978001"
-               x="75.282997"
-               y="447.67999"
-               width="95.805"
-               id="rect935" />
-            <text
-               style="font-size:8px;font-family:ArialMT"
-               transform="translate(75.283,455.73)"
-               font-size="8px"
-               id="SVGID_50_">
-              <tspan
-                 x="0"
-                 y="0"
-                 id="tspan938">Funds are disbursed</tspan>
-              <tspan
-                 x="0"
-                 y="9"
-                 id="tspan940">predictably, as</tspan>
-              <tspan
-                 x="0"
-                 y="18"
-                 id="tspan942">committed.</tspan>
-            </text>
-          </g>
-        </switch>
         <path
            style="fill:none;stroke:#d1d3d4;stroke-width:1.00010002;stroke-miterlimit:3.86369991"
            inkscape:connector-curvature="0"
@@ -1133,57 +840,6 @@
            clip-rule="evenodd"
            d="m 571.11,434.62 v 54.625 c 0,3.131 -2.538,5.669 -5.67,5.669 H 30.98 c -3.132,0 -5.669,-2.538 -5.669,-5.669 V 434.12"
            id="path944" />
-        <switch
-           id="switch946">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject948" />
-          <g
-             id="g950">
-            <rect
-               style="fill:none"
-               height="57.737"
-               x="75.282997"
-               y="540.17999"
-               width="86.667999"
-               id="rect952" />
-            <text
-               style="font-size:8px;font-family:ArialMT"
-               transform="translate(75.283,548.22)"
-               font-size="8px"
-               id="SVGID_51_">
-              <tspan
-                 x="0"
-                 y="0"
-                 id="tspan955">Country systems</tspan>
-              <tspan
-                 x="0"
-                 y="9"
-                 id="tspan957">for procurement</tspan>
-              <tspan
-                 x="0"
-                 y="18"
-                 id="tspan959">and public financial</tspan>
-              <tspan
-                 x="0"
-                 y="27"
-                 id="tspan961">management are</tspan>
-              <tspan
-                 x="0"
-                 y="36"
-                 id="tspan963">used and</tspan>
-              <tspan
-                 x="0"
-                 y="45"
-                 id="tspan965">strengthened.</tspan>
-            </text>
-          </g>
-        </switch>
         <path
            style="fill:none;stroke:#d1d3d4;stroke-width:1.00010002;stroke-miterlimit:3.86369991"
            inkscape:connector-curvature="0"
@@ -1197,45 +853,6 @@
            clip-rule="evenodd"
            d="m 31.771,648.05 c 0,-3.131 2.105,-5.669 4.703,-5.669 h 131.38 c 2.598,0 4.703,2.538 4.703,5.669 v 27.886 c 0,3.132 -2.105,5.67 -4.703,5.67 H 36.474 c -2.598,0 -4.703,-2.538 -4.703,-5.67 V 648.05 z"
            id="path969" />
-        <switch
-           id="switch971">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject973" />
-          <g
-             id="g975">
-            <rect
-               style="fill:none"
-               height="32"
-               x="75.282997"
-               y="647.98999"
-               width="115"
-               id="rect977" />
-            <text
-               style="font-size:8px;font-family:ArialMT"
-               transform="translate(75.283,656.04)"
-               font-size="8px"
-               id="SVGID_52_">
-              <tspan
-                 x="0"
-                 y="0"
-                 id="tspan980">Resources are</tspan>
-              <tspan
-                 x="0"
-                 y="9"
-                 id="tspan982">being managed for</tspan>
-              <tspan
-                 x="0"
-                 y="18"
-                 id="tspan984">Development Results.</tspan>
-            </text>
-          </g>
-        </switch>
         <path
            style="fill:none;stroke:#d1d3d4;stroke-width:1.00010002;stroke-miterlimit:3.86369991"
            inkscape:connector-curvature="0"
@@ -1249,41 +866,6 @@
            clip-rule="evenodd"
            d="m 31.771,697.55 c 0,-3.131 2.105,-5.669 4.703,-5.669 h 131.38 c 2.598,0 4.703,2.538 4.703,5.669 v 42.892 c 0,3.132 -2.105,3.67 -4.703,3.67 H 36.474 c -2.598,0 -4.703,-0.538 -4.703,-3.67 V 697.55 z"
            id="path988" />
-        <switch
-           id="switch990">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject992" />
-          <g
-             id="g994">
-            <rect
-               style="fill:none"
-               height="21"
-               x="75.282997"
-               y="711.5"
-               width="115"
-               id="rect996" />
-            <text
-               style="font-size:8px;font-family:ArialMT"
-               transform="translate(75.283,719.54)"
-               font-size="8px"
-               id="SVGID_53_">
-              <tspan
-                 x="0"
-                 y="0"
-                 id="tspan999">Mutual accountability</tspan>
-              <tspan
-                 x="0"
-                 y="9"
-                 id="tspan1001">is being demonstrated.</tspan>
-            </text>
-          </g>
-        </switch>
         <path
            style="fill:none;stroke:#d1d3d4;stroke-width:1.00010002;stroke-miterlimit:3.86369991"
            inkscape:connector-curvature="0"
@@ -1297,41 +879,6 @@
            clip-rule="evenodd"
            d="m 31.771,760.12 c 0,-3.131 2.105,-5.669 4.703,-5.669 h 131.38 c 2.598,0 4.703,2.538 4.703,5.669 v 25.886 c 0,3.131 -2.105,5.67 -4.703,5.67 H 36.474 c -2.598,0 -4.703,-2.539 -4.703,-5.67 V 760.12 z"
            id="path1005" />
-        <switch
-           id="switch1007">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject1009" />
-          <g
-             id="g1011">
-            <rect
-               style="fill:none"
-               height="18.999001"
-               x="75.282997"
-               y="763.53998"
-               width="115"
-               id="rect1013" />
-            <text
-               style="font-size:8px;font-family:ArialMT"
-               transform="translate(75.283,771.59)"
-               font-size="8px"
-               id="SVGID_54_">
-              <tspan
-                 x="0"
-                 y="0"
-                 id="tspan1016">Civil Society meaningfully</tspan>
-              <tspan
-                 x="0"
-                 y="9"
-                 id="tspan1018">engaged.</tspan>
-            </text>
-          </g>
-        </switch>
         <path
            style="fill:none;stroke:#d1d3d4;stroke-width:1.00010002;stroke-miterlimit:3.86369991"
            inkscape:connector-curvature="0"
@@ -3588,32 +3135,6 @@
            id="line1534" />
         <g
            id="g1536">
-          <switch
-             id="switch1538">
-            <foreignObject
-               overflow="visible"
-               x="0"
-               y="0"
-               width="1"
-               height="1"
-               requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-               id="foreignObject1540" />
-            <g
-               id="g1542">
-              <rect
-                 style="fill:none"
-                 height="10.458"
-                 x="247.63"
-                 y="813.06"
-                 width="68.410004"
-                 id="rect1544" />
-              <text
-                 style="font-size:6px;font-family:ArialMT"
-                 transform="translate(247.63,819.09)"
-                 font-size="6px"
-                 id="SVGID_128_">no progress or regression</text>
-            </g>
-          </switch>
           <g
              style="stroke:#000000;stroke-width:0.28349999"
              id="g1547">
@@ -3715,32 +3236,6 @@
         </g>
         <g
            id="g1591">
-          <switch
-             id="switch1593">
-            <foreignObject
-               overflow="visible"
-               x="0"
-               y="0"
-               width="1"
-               height="1"
-               requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-               id="foreignObject1595" />
-            <g
-               id="g1597">
-              <rect
-                 style="fill:none"
-                 height="10.458"
-                 x="115.42"
-                 y="813.06"
-                 width="108.08"
-                 id="rect1599" />
-              <text
-                 style="font-size:6px;font-family:ArialMT"
-                 transform="translate(115.42,819.09)"
-                 font-size="6px"
-                 id="SVGID_62_">progress made towards achieving target</text>
-            </g>
-          </switch>
           <g
              id="g1602">
             <g
@@ -3923,32 +3418,6 @@
                id="path1679" />
           </g>
         </g>
-        <switch
-           id="switch1681">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject1683" />
-          <g
-             id="g1685">
-            <rect
-               style="fill:none"
-               height="10.458"
-               x="413.82001"
-               y="813.19"
-               width="63.921001"
-               id="rect1687" />
-            <text
-               style="font-size:6px;font-family:ArialMT"
-               transform="translate(413.82,819.23)"
-               font-size="6px"
-               id="SVGID_63_">measure not applicable</text>
-          </g>
-        </switch>
         <g
            id="g1690">
           <g
@@ -4205,32 +3674,6 @@
         </g>
         <g
            id="g1805">
-          <switch
-             id="switch1807">
-            <foreignObject
-               overflow="visible"
-               x="0"
-               y="0"
-               width="1"
-               height="1"
-               requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-               id="foreignObject1809" />
-            <g
-               id="g1811">
-              <rect
-                 style="fill:none"
-                 height="10.458"
-                 x="50.923"
-                 y="813.06"
-                 width="44.41"
-                 id="rect1813" />
-              <text
-                 style="font-size:6px;font-family:ArialMT"
-                 transform="translate(50.923,819.09)"
-                 font-size="6px"
-                 id="SVGID_64_">target achieved</text>
-            </g>
-          </switch>
           <g
              id="g1816">
             <g
@@ -4359,32 +3802,6 @@
                id="rect1870" />
           </g>
         </g>
-        <switch
-           id="switch1872">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject1874" />
-          <g
-             id="g1876">
-            <rect
-               style="fill:none"
-               height="10.458"
-               x="341.23999"
-               y="813.19"
-               width="49.699001"
-               id="rect1878" />
-            <text
-               style="font-size:6px;font-family:ArialMT"
-               transform="translate(341.24,819.23)"
-               font-size="6px"
-               id="SVGID_65_">data not provided</text>
-          </g>
-        </switch>
         <g
            id="g1881">
           <g
@@ -6106,64 +5523,12 @@
            clip-rule="evenodd"
            d="m 23.773,81.156 c 0,-3.131 2.537,-5.669 5.668,-5.669 h 196.4 c 3.132,0 5.67,2.538 5.67,5.669 v 6.504 c 0,3.131 -2.538,5.67 -5.67,5.67 h -196.4 c -3.131,0 -5.668,-2.539 -5.668,-5.67 v -6.504 z"
            id="path2277" />
-        <switch
-           id="switch2279">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject2281" />
-          <g
-             id="g2283">
-            <rect
-               style="fill:none"
-               height="10"
-               x="30.431999"
-               y="78.833"
-               width="203.99001"
-               id="rect2285" />
-            <text
-               style="font-size:9px;fill:#ffffff;font-family:Arial-BoldMT"
-               transform="translate(30.432,87.925)"
-               font-size="9px"
-               id="SVGID_76_">ORGANISATION PROFILE</text>
-          </g>
-        </switch>
         <path
            style="fill:#013333;fill-rule:evenodd"
            inkscape:connector-curvature="0"
            clip-rule="evenodd"
            d="m 235.8,81.156 c 0,-3.131 2.538,-5.669 5.669,-5.669 h 323.8 c 3.131,0 5.669,2.538 5.669,5.669 v 6.504 c 0,3.131 -2.538,5.67 -5.669,5.67 h -323.8 c -3.131,0 -5.669,-2.539 -5.669,-5.67 v -6.504 z"
            id="path2288" />
-        <switch
-           id="switch2290">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject2292" />
-          <g
-             id="g2294">
-            <rect
-               style="fill:none"
-               height="10"
-               x="245.38"
-               y="78.833"
-               width="325.42001"
-               id="rect2296" />
-            <text
-               style="font-size:9px;fill:#ffffff;font-family:Arial-BoldMT"
-               transform="translate(245.38,87.925)"
-               font-size="9px"
-               id="SVGID_77_">COUNTRIES WHERE THE ORGANISATION IS ACTIVE</text>
-          </g>
-        </switch>
         <path
            style="fill:none;stroke:#d1d3d4;stroke-width:1.00010002;stroke-miterlimit:3.86369991"
            inkscape:connector-curvature="0"
@@ -6171,69 +5536,6 @@
            clip-rule="evenodd"
            d="m 229.96,98.819 v 62.5 c 0,3.131 -2.538,5.67 -5.67,5.67 H 29.98 c -3.132,0 -5.669,-2.539 -5.669,-5.67 v -63"
            id="path2299" />
-        <switch
-           id="switch2301">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject2303" />
-          <g
-             id="g2305">
-            <rect
-               style="fill:none"
-               height="11"
-               x="22.836"
-               y="6.48"
-               width="547.60999"
-               id="rect2307" />
-            <text
-               style="font-size:10px;fill:#95afa8;font-family:Arial-BoldMT"
-               transform="translate(253.59,16.583)"
-               font-size="10px"
-               id="SVGID_78_">WORKING DRAFT</text>
-          </g>
-        </switch>
-        <switch
-           id="switch2310">
-          <foreignObject
-             overflow="visible"
-             x="0"
-             y="0"
-             width="1"
-             height="1"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             id="foreignObject2312" />
-          <g
-             id="g2314">
-            <rect
-               style="fill:none"
-               height="25.427"
-               x="202.78999"
-               y="31.761999"
-               width="187.42999"
-               id="rect2316" />
-            <text
-               style="font-size:10px;font-family:Arial-BoldMT"
-               transform="translate(214.26,41.864)"
-               font-size="10px"
-               id="SVGID_79_">
-              <tspan
-                 style="fill:#ffffff"
-                 x="0"
-                 y="0"
-                 id="tspan2319">2012 PARTNER SCORECARD FOR</tspan>
-              <tspan
-                 style="fill:#013333"
-                 x="33.070999"
-                 y="10.667"
-                 id="agency-name" />
-            </text>
-          </g>
-        </switch>
         <switch
            id="switch2322">
           <foreignObject
@@ -7464,5 +6766,163 @@
     </g>
     <g
        id="agency-logo" />
+  </g>
+  <!-- Hand typed SVG starts here... -->
+  <g transform="matrix(2.5966971,0,0,2.5966971,-27.869605,-16.826597)">
+    <style>
+	text.head1 {
+	  font-size: 10px;
+          font-family: Calibri;
+          fill: #fff;
+	  text-transform: uppercase;
+	}
+	text.head2 {
+	  font-size: 9px;
+          font-family: Calibri-Bold;
+          fill: #fff;
+	}
+	text.normal {
+	  font-size: 6px;
+          font-family: Calibri;
+	}
+	div.result-box {
+	  display: table;
+        }
+	div.result-text {
+	  font-size: 8px;
+	  line-height: 100%;
+	  display: table-cell;
+	  vertical-align: middle;
+        }
+    </style>
+    <g transform="translate(253.59, 16.583)">
+      <text transform="scale(1, 1)" style="fill:#95afa8;font-size:10px;" class="head2">
+	{% blocktrans %}WORKING DRAFT{% endblocktrans %}
+      </text>
+    </g>
+    <g transform="translate(214.26, 41.864)">
+      <text transform="scale(1, 1)" class="head2">
+	{% blocktrans %}2012 PARTNER SCORECARD FOR{% endblocktrans %}
+	<tspan x="33.070999" y="10.667" style="fill:#013333;" id="agency-name"></tspan>
+      </text>
+    </g>
+    <g transform="translate(30.432, 87.925)">
+      <text transform="scale(1, 1)" class="head2">
+	{% blocktrans %}ORGANISATION PROFILE{% endblocktrans %}
+      </text>
+    </g>
+    
+    <g transform="translate(245.38, 87.925)">
+      <text transform="scale(1, 1)" class="head2">
+	{% blocktrans %}COUNTRIES WHERE THE ORGANISATION IS ACTIVE{% endblocktrans %}
+      </text>
+    </g>
+    <g transform="translate(31.432, 184.35)">
+      <text transform="scale(1, 1)" class="head2">
+	{% blocktrans %}EXPECTED RESULTS{% endblocktrans %}
+      </text>
+    </g>
+    <g transform="translate(183.86, 184.35)">
+      <text transform="scale(0.65, 1)" class="head2">
+	{% blocktrans %}RATING{% endblocktrans %}
+      </text>
+    </g>
+    <g transform="translate(241.38, 184.35)">
+      <text transform="scale(1, 1)" class="head2">
+	{% blocktrans %}TARGET{% endblocktrans %}
+      </text>
+    </g>
+    <g transform="translate(389.19, 184.35)">
+      <text transform="scale(1, 1)" class="head2">
+	{% blocktrans %}OVERALL PROGRESS{% endblocktrans %}
+      </text>
+    </g>
+    <foreignObject x="74" y="196" width="95" height="56">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="result-box" style="width: 95px; height: 56px;">
+	<div class="result-text">
+	  {% blocktrans %}Commitments are documented and mutually agreed.{% endblocktrans %}
+	</div>
+      </div>
+    </foreignObject>
+    <foreignObject x="74" y="264" width="95" height="106">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="result-box" style="width: 95px; height: 106px;">
+	<div class="result-text">
+	  {% blocktrans %}Support is based in country plans and strategies, including to strengthen Health Systems.{% endblocktrans %}
+	</div>
+      </div>
+    </foreignObject>
+    <foreignObject x="74" y="383" width="95" height="38">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="result-box" style="width: 95px; height: 38px;">
+	<div class="result-text">
+	  {% blocktrans %}Funding commitments are long-term.{% endblocktrans %}
+	</div>
+      </div>
+    </foreignObject>
+    <foreignObject x="74" y="434" width="95" height="56">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="result-box" style="width: 95px; height: 56px;">
+	<div class="result-text">
+	  {% blocktrans %}Funds are disbursed predictably, as committed.{% endblocktrans %}
+	</div>
+      </div>
+    </foreignObject>
+    <foreignObject x="74" y="500" width="95" height="131">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="result-box" style="width: 95px; height: 131px;">
+	<div class="result-text">
+	  {% blocktrans %}Country systems for procurement and public financial management are used and strengthened.{% endblocktrans %}
+	</div>
+      </div>
+    </foreignObject>
+    <foreignObject x="74" y="642" width="95" height="39">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="result-box" style="width: 95px; height: 39px;">
+	<div class="result-text">
+	  {% blocktrans %}Resources are being managed for Development Results.{% endblocktrans %}
+	</div>
+      </div>
+    </foreignObject>
+    <foreignObject x="74" y="692" width="95" height="52">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="result-box" style="width: 95px; height: 52px;">
+	<div class="result-text">
+	  {% blocktrans %}Mutual accountability is being demonstrated.{% endblocktrans %}
+	</div>
+      </div>
+    </foreignObject>
+    <foreignObject x="74" y="755" width="95" height="37">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="result-box" style="width: 95px; height: 37px;">
+	<div class="result-text">
+	  {% blocktrans %}Civil Society meaningfully engaged.{% endblocktrans %}
+	</div>
+      </div>
+    </foreignObject>
+    
+    <g transform="translate(50.923, 819.09)">
+      <text transform="scale(0.8, 1)" class="normal">
+	{% blocktrans %}target achieved{% endblocktrans %}
+      </text>
+    </g>
+    <g transform="translate(247.63, 819.09)">
+      <text transform="scale(0.8, 1)" class="normal">
+	{% blocktrans %}no progress or regression{% endblocktrans %}
+      </text>
+    </g>
+    <g transform="translate(115.42, 819.09)">
+      <text transform="scale(0.8, 1)" class="normal">
+	{% blocktrans %}progress made towards achieving target{% endblocktrans %}
+      </text>
+    </g>
+    <g transform="translate(341.24, 819.09)">
+      <text transform="scale(0.8, 1)" class="normal">
+	{% blocktrans %}data not provided{% endblocktrans %}
+      </text>
+    </g>
+    <g transform="translate(413.82, 819.09)">
+      <text transform="scale(0.8, 1)" class="normal">
+	{% blocktrans %}measure not applicable{% endblocktrans %}
+      </text>
+    </g>
+    <g transform="translate(499.29, 819.09)">
+      <text transform="scale(0.8, 1)" class="normal">
+	{% blocktrans %}indicates agreed target{% endblocktrans %}
+      </text>
+    </g>
   </g>
 </svg>
