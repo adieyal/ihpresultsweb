@@ -13,6 +13,15 @@
 
 {% block body %}
 <h1>{{ agency }}</h1>
+{% if excluded %}
+<p>The following agencies have been excluded from these results:
+  <ul>
+    {% for agency in excluded %}
+    <li>{{ agency }}</li>
+    {% endfor %}
+  </ul>
+</p>
+{% endif %}
 
 {% for graph in graphs %}
     <div class="graphblock"><div id="{{ graph.name }}" class="graph"></div></div>

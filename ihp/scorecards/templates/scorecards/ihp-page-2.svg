@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Load the django internationalization tags. {% load i18n %} -->
 
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -99,69 +100,6 @@
            clip-rule="evenodd"
            inkscape:connector-curvature="0"
            style="fill:#f68b1f;fill-rule:evenodd" />
-        <switch
-           id="switch37"
-           transform="translate(-686.42,2.6209)">
-          <foreignObject
-             id="foreignObject39"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             height="1"
-             width="1"
-             y="0"
-             x="0"
-             overflow="visible" />
-          <g
-             id="g41">
-            <rect
-               id="rect43"
-               width="513.71997"
-               y="35.910999"
-               x="732.44"
-               height="12"
-               style="fill:none" />
-            <text
-               id="SVGID_2_"
-               font-size="9px"
-               transform="translate(732.44,45.003)"
-               style="font-size:9px;fill:#ffffff;font-family:Arial-BoldMT">SPECIFIC ACTIONS TO ACHIEVE RESULTS</text>
-          </g>
-        </switch>
-        <switch
-           id="switch46"
-           transform="translate(-686.42,2.6209)">
-          <foreignObject
-             id="foreignObject48"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             height="1"
-             width="1"
-             y="0"
-             x="0"
-             overflow="visible" />
-          <g
-             id="g50">
-            <rect
-               id="rect52"
-               width="502.20001"
-               y="55.923"
-               x="732.45001"
-               height="20.5"
-               style="fill:none" />
-            <text
-               id="SVGID_4_"
-               font-size="8px"
-               transform="translate(732.45,63.903)"
-               style="font-size:8px;font-family:Arial">
-              <tspan
-                 id="tspan55"
-                 y="0"
-                 x="0">This additional information is reported by the Agency to explain what specific actions it is taking to implement its IHP+ commitments to</tspan>
-              <tspan
-                 id="tspan57"
-                 y="10"
-                 x="0.53200001">the 8 Expected Results, or to qualify its measures of progress.</tspan>
-            </text>
-          </g>
-        </switch>
         <path
            id="path59"
            d="m 31.368,608.34 c 0,-3.638 2.722,-6.585 6.08,-6.585 h 522.63 c 3.358,0 6.08,2.947 6.08,6.585 v 205.98 c 0,3.638 -2.722,6.587 -6.08,6.587 H 37.448 c -3.358,0 -6.08,-2.949 -6.08,-6.587 V 608.34 z"
@@ -174,237 +112,6 @@
            clip-rule="evenodd"
            inkscape:connector-curvature="0"
            style="fill:#f68b1f;fill-rule:evenodd" />
-        <switch
-           id="switch63"
-           transform="translate(-686.42,2.6209)">
-          <foreignObject
-             id="foreignObject65"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             height="1"
-             width="1"
-             y="0"
-             x="0"
-             overflow="visible" />
-          <g
-             id="g67">
-            <rect
-               id="rect69"
-               width="333.98001"
-               y="608.84998"
-               x="732.44"
-               height="10"
-               style="fill:none" />
-            <text
-               id="SVGID_6_"
-               font-size="9px"
-               transform="translate(732.44,617.95)"
-               style="font-size:9px;fill:#ffffff;font-family:Arial-BoldMT">HOW TO INTERPRET THIS SCORECARD</text>
-          </g>
-        </switch>
-        <switch
-           id="switch72"
-           transform="translate(-686.42,2.6209)">
-          <foreignObject
-             id="foreignObject74"
-             requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-             height="1"
-             width="1"
-             y="0"
-             x="0"
-             overflow="visible" />
-          <g
-             id="g76">
-            <rect
-               id="rect78"
-               width="506.35001"
-               y="627.51001"
-               x="732.45001"
-               height="185.75999"
-               style="fill:none" />
-            <text
-               id="SVGID_8_"
-               font-size="8px"
-               transform="translate(732.45,635.59)"
-               style="font-size:8px">
-              <tspan
-                 id="tspan81"
-                 y="0"
-                 x="0"
-                 style="font-family:ArialMT">•</tspan>
-              <tspan
-                 id="tspan83"
-                 style="letter-spacing:9;font-family:ArialMT"
-                 letter-spacing="9"
-                 y="0"
-                 x="2.961" />
-              <tspan
-                 id="tspan85"
-                 y="0"
-                 x="14.5"
-                 style="font-family:Arial-BoldMT">Countries where the Agency is demonstrating progress indicates the IHP+ Countries where the Signatory is operating with</tspan>
-              <tspan
-                 id="tspan89"
-                 y="10"
-                 x="14"
-                 style="font-family:ArialMT">demonstrated results and those countries where it has not reported evidence of progress.</tspan>
-              <tspan
-                 id="tspan91"
-                 y="24"
-                 x="0"
-                 style="font-family:ArialMT">•</tspan>
-              <tspan
-                 id="tspan93"
-                 style="letter-spacing:9;font-family:ArialMT"
-                 letter-spacing="9"
-                 y="24"
-                 x="2.961" />
-              <tspan
-                 id="tspan95"
-                 y="24"
-                 x="14.5"
-                 style="font-family:Arial-BoldMT">Expected Results</tspan>
-              <tspan
-                 id="tspan97"
-                 y="24"
-                 x="83.750999"
-                 style="font-family:ArialMT">reflect key commitments that were made by IHP+ signatories in the IHP+ Global Compact. Each expected result</tspan>
-              <tspan
-                 id="tspan99"
-                 y="34"
-                 x="14"
-                 style="font-family:ArialMT">has corresponding standard performance measures to track progress over time. The progress of all agencies is rated against these</tspan>
-              <tspan
-                 id="tspan101"
-                 y="44"
-                 x="14"
-                 style="font-family:ArialMT">mutually agreed expectations.</tspan>
-              <tspan
-                 id="tspan103"
-                 y="58"
-                 x="0"
-                 style="font-family:ArialMT">•</tspan>
-              <tspan
-                 id="tspan105"
-                 style="letter-spacing:9;font-family:ArialMT"
-                 letter-spacing="9"
-                 y="58"
-                 x="2.961" />
-              <tspan
-                 id="tspan107"
-                 y="58"
-                 x="14.5"
-                 style="font-family:Arial-BoldMT">Rating</tspan>
-              <tspan
-                 id="tspan109"
-                 y="58"
-                 x="42.729"
-                 style="font-family:ArialMT">symbols illustrate whether the Agency has achieved</tspan>
-              <tspan
-                 id="tspan5455"
-                 y="58"
-                 x="258.729"
-                 style="font-family:ArialMT">, is working towards</tspan>
-              <tspan
-                 id="tspan5457"
-                 y="58"
-                 x="355.729"
-                 style="font-family:ArialMT">, or has not achieved</tspan>
-              <tspan
-                 id="tspan111"
-                 y="68"
-                 x="14"
-                 style="font-family:ArialMT">its targets over the most recent annual reporting cycle. Details of these independent assessments undertaken by the IHP+Results</tspan>
-              <tspan
-                 id="tspan113"
-                 y="78"
-                 x="14"
-                 style="font-family:ArialMT">Consortium can be found online in the North-South Observatory for IHP+Results (www.ihpresults.net).</tspan>
-              <tspan
-                 id="tspan115"
-                 y="92"
-                 x="0"
-                 style="font-family:ArialMT">•</tspan>
-              <tspan
-                 id="tspan117"
-                 style="letter-spacing:9;font-family:ArialMT"
-                 letter-spacing="9"
-                 y="92"
-                 x="2.961" />
-              <tspan
-                 id="tspan119"
-                 y="92"
-                 x="14.5"
-                 style="font-family:Arial-BoldMT">Overall Progress</tspan>
-              <tspan
-                 id="tspan121"
-                 y="92"
-                 x="81.095001"
-                 style="font-family:ArialMT">records progress against each standard performance measure, based on set targets, using evidence reported by</tspan>
-              <tspan
-                 id="tspan123"
-                 y="102"
-                 x="14"
-                 style="font-family:ArialMT">the Agency and validated by IHP+Results.</tspan>
-              <tspan
-                 id="tspan125"
-                 y="116"
-                 x="0"
-                 style="font-family:ArialMT">•</tspan>
-              <tspan
-                 id="tspan127"
-                 style="letter-spacing:9;font-family:ArialMT"
-                 letter-spacing="9"
-                 y="116"
-                 x="2.961" />
-              <tspan
-                 id="tspan129"
-                 y="116"
-                 x="14.5"
-                 style="font-family:Arial-BoldMT">Based on Self-reported Data</tspan>
-              <tspan
-                 id="tspan131"
-                 y="116"
-                 x="128.78101"
-                 style="font-family:ArialMT">reflect key commitments that were made by IHP+ signatories in the IHP+ Global Compact. Each</tspan>
-              <tspan
-                 id="tspan133"
-                 y="126"
-                 x="14"
-                 style="font-family:ArialMT">expected result has corresponding standard performance measures to track progress over time. The progress of all agencies is rated</tspan>
-              <tspan
-                 id="tspan135"
-                 y="136"
-                 x="14"
-                 style="font-family:ArialMT">against these mutually agreed expectations.</tspan>
-              <tspan
-                 id="tspan137"
-                 y="150"
-                 x="0"
-                 style="font-family:ArialMT">•</tspan>
-              <tspan
-                 id="tspan139"
-                 style="letter-spacing:9;font-family:ArialMT"
-                 letter-spacing="9"
-                 y="150"
-                 x="2.961" />
-              <tspan
-                 id="tspan141"
-                 y="150"
-                 x="14.5"
-                 style="font-family:ArialMT">Compatability reflect key commitments that were made by IHP+ signatories in the IHP+ Global Compact. Each expected result has</tspan>
-              <tspan
-                 id="tspan145"
-                 y="160"
-                 x="14"
-                 style="font-family:ArialMT">corresponding standard performance measures to track progress over time. The progress of all agencies is rated against these</tspan>
-              <tspan
-                 id="tspan147"
-                 y="170"
-                 x="14"
-                 style="font-family:ArialMT">mutually agreed expectations.</tspan>
-            </text>
-          </g>
-        </switch>
         <g
            id="g149"
            transform="translate(-686.42,2.6209)">
@@ -454,138 +161,6 @@
              font-size="7px"
              transform="matrix(0,-1,1,0,1270,253.29)"
              style="font-size:7px;font-family:HelveticaNeue">Design licensed with Creative Commons with some restrictions, 2010</text>
-        </g>
-        <g
-           id="g190"
-           transform="translate(-686.42,2.6209)">
-          <g
-             id="g192">
-            <g
-               id="g194"
-               style="fill:#8dc63f">
-              <path
-                 id="path196"
-                 d="m 968.98,686.25 c 0,-1.896 1.535,-3.432 3.43,-3.432 h 11.6 c 1.895,0 3.432,1.536 3.432,3.432 v 5.546 c 0,1.895 -1.537,3.431 -3.432,3.431 h -11.6 c -1.895,0 -3.43,-1.536 -3.43,-3.431 v -5.546 z"
-                 inkscape:connector-curvature="0" />
-              <path
-                 id="path198"
-                 d="M 978.2,689.03"
-                 inkscape:connector-curvature="0" />
-            </g>
-            <g
-               id="g200"
-               stroke-miterlimit="3.8637"
-               style="fill:none;stroke:#000000;stroke-width:0.235;stroke-miterlimit:3.86369991">
-              <path
-                 id="path202"
-                 d="m 968.98,686.25 c 0,-1.896 1.535,-3.432 3.43,-3.432 h 11.6 c 1.895,0 3.432,1.536 3.432,3.432 v 5.546 c 0,1.895 -1.537,3.431 -3.432,3.431 h -11.6 c -1.895,0 -3.43,-1.536 -3.43,-3.431 v -5.546 z"
-                 inkscape:connector-curvature="0" />
-              <path
-                 id="path204"
-                 d="M 978.2,689.03"
-                 inkscape:connector-curvature="0" />
-            </g>
-          </g>
-          <g
-             id="g206">
-            <polygon
-               id="polygon208"
-               points="975.01,687.48 977.12,689.62 981.43,685.23 983.02,686.85 977.15,692.82 973.39,689.07 "
-               style="fill:#ffffff" />
-            <polygon
-               id="polygon210"
-               points="975.01,687.48 977.12,689.62 981.43,685.23 983.02,686.85 977.15,692.82 973.39,689.07 "
-               stroke-miterlimit="3.8637"
-               style="fill:none;stroke:#000000;stroke-width:0.235;stroke-miterlimit:3.86369991" />
-          </g>
-        </g>
-        <g
-           id="g212"
-           transform="translate(-686.42,2.6209)">
-          <g
-             id="g214">
-            <g
-               id="g216"
-               style="fill:#ce181e">
-              <path
-                 id="path218"
-                 d="m 1166.3,686.01 c 0,-1.896 1.536,-3.434 3.432,-3.434 h 11.603 c 1.896,0 3.433,1.537 3.433,3.434 v 5.546 c 0,1.896 -1.537,3.433 -3.433,3.433 h -11.603 c -1.896,0 -3.432,-1.537 -3.432,-3.433 v -5.546 z"
-                 inkscape:connector-curvature="0" />
-              <path
-                 id="path220"
-                 d="M 1175.5,688.78"
-                 inkscape:connector-curvature="0" />
-            </g>
-            <g
-               id="g222"
-               stroke-miterlimit="3.8637"
-               style="fill:none;stroke:#000000;stroke-width:0.2429;stroke-miterlimit:3.86369991">
-              <path
-                 id="path224"
-                 d="m 1166.3,686.01 c 0,-1.896 1.536,-3.434 3.432,-3.434 h 11.603 c 1.896,0 3.433,1.537 3.433,3.434 v 5.546 c 0,1.896 -1.537,3.433 -3.433,3.433 h -11.603 c -1.896,0 -3.432,-1.537 -3.432,-3.433 v -5.546 z"
-                 inkscape:connector-curvature="0" />
-              <path
-                 id="path226"
-                 d="M 1175.5,688.78"
-                 inkscape:connector-curvature="0" />
-            </g>
-          </g>
-          <g
-             id="g228">
-            <polygon
-               id="polygon230"
-               points="1179.3,686.56 1177.1,688.78 1179.3,691 1177.7,692.62 1175.5,690.4 1173.3,692.62 1171.7,691 1173.9,688.78 1171.7,686.56 1173.3,684.94 1175.5,687.16 1177.7,684.94 "
-               style="fill:#ffffff" />
-            <polygon
-               id="polygon232"
-               points="1179.3,686.56 1177.1,688.78 1179.3,691 1177.7,692.62 1175.5,690.4 1173.3,692.62 1171.7,691 1173.9,688.78 1171.7,686.56 1173.3,684.94 1175.5,687.16 1177.7,684.94 "
-               stroke-miterlimit="3.8637"
-               style="fill:none;stroke:#000000;stroke-width:0.2429;stroke-miterlimit:3.86369991" />
-          </g>
-        </g>
-        <g
-           id="g234"
-           transform="translate(-686.42,2.6209)">
-          <g
-             id="g236">
-            <g
-               id="g238"
-               style="fill:#ffdd00">
-              <path
-                 id="path240"
-                 d="m 1064.1,686.32 c 0,-1.93 1.564,-3.494 3.494,-3.494 h 11.812 c 1.93,0 3.494,1.564 3.494,3.494 v 5.647 c 0,1.93 -1.564,3.494 -3.494,3.494 h -11.812 c -1.93,0 -3.494,-1.564 -3.494,-3.494 v -5.647 z"
-                 inkscape:connector-curvature="0" />
-              <path
-                 id="path242"
-                 d="M 1073.5,689.14"
-                 inkscape:connector-curvature="0" />
-            </g>
-            <g
-               id="g244"
-               stroke-miterlimit="3.8637"
-               style="fill:none;stroke:#000000;stroke-width:0.2393;stroke-miterlimit:3.86369991">
-              <path
-                 id="path246"
-                 d="m 1064.1,686.32 c 0,-1.93 1.564,-3.494 3.494,-3.494 h 11.812 c 1.93,0 3.494,1.564 3.494,3.494 v 5.647 c 0,1.93 -1.564,3.494 -3.494,3.494 h -11.812 c -1.93,0 -3.494,-1.564 -3.494,-3.494 v -5.647 z"
-                 inkscape:connector-curvature="0" />
-              <path
-                 id="path248"
-                 d="M 1073.5,689.14"
-                 inkscape:connector-curvature="0" />
-            </g>
-          </g>
-          <g
-             id="g250">
-            <polygon
-               id="polygon252"
-               points="1072.4,691.87 1074.1,690.17 1069.1,690.17 1069.1,688.13 1074.1,688.13 1072.4,686.42 1073.8,684.98 1078,689.16 1073.9,693.31 "
-               style="fill:#ffffff" />
-            <polygon
-               id="polygon254"
-               points="1072.4,691.87 1074.1,690.17 1069.1,690.17 1069.1,688.13 1074.1,688.13 1072.4,686.42 1073.8,684.98 1078,689.16 1073.9,693.31 "
-               stroke-miterlimit="3.8637"
-               style="fill:none;stroke:#000000;stroke-width:0.2393;stroke-miterlimit:3.86369991" />
-          </g>
         </g>
         <path
            id="path256"
@@ -1516,4 +1091,70 @@
       </g>
     </g>
   </switch>
+  <!-- Hand typed SVG starts here... -->
+  <g transform="matrix(1.2606989,0,0,1.2606989,-2.8491795,-6.7470084) scale(2,2)">
+    <style>
+	text.head1 {
+	  font-size: 10px;
+          font-family: Calibri;
+          fill: #fff;
+	  text-transform: uppercase;
+	}
+	text.head2 {
+	  font-size: 9px;
+          font-family: Calibri-Bold;
+          fill: #fff;
+	}
+	text.normal {
+	  font-size: 6px;
+          font-family: Calibri;
+	}
+	div.result-box {
+	  display: table;
+        }
+	div.result-text {
+	  font-size: 8px;
+	  line-height: 100%;
+	  display: table-cell;
+	  vertical-align: middle;
+        }
+	div#howtointerpret img.icons {
+	  display: inline-block;
+	  height: 13px;
+	  width: 20px;
+	  line-height: 10px;
+	  vertical-align: middle;
+	}
+    </style>
+    <g transform="translate(46.02, 47.6239)">
+      <text transform="scale(1, 1)" style="" class="head2">
+	{% blocktrans %}SPECIFIC ACTIONS TO ACHIEVE RESULTS{% endblocktrans %}
+      </text>
+    </g>
+    <foreignObject x="46" y="54" width="507" height="28">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="result-box" style="width: 507px; height: 28px;">
+	<div class="result-text">
+	  {% blocktrans %}This additional information is reported by the Organisation to explain what specific actions it is taking to implement its IHP+ commitments to the 8 Expected Results, or to qualify its measures of progress.{% endblocktrans %}
+	</div>
+      </div>
+    </foreignObject>
+    <g transform="translate(46.02, 620.5709)">
+      <text transform="scale(1, 1)" style="" class="head2">
+	{% blocktrans %}HOW TO INTERPRET THIS SCORECARD{% endblocktrans %}
+      </text>
+    </g>
+  <foreignObject x="46.02" y="631" width="507" height="410">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #000; text-align: left; font-family: Calibri; font-size: 9px; line-height: 120%; padding: 0; margin: 0;" id="howtointerpret">
+      <ul style="list-style-position: outside; padding-left: 12px;">
+	<li>{% blocktrans %}Expected Results reflect key commitments that were made by IHP+ signatories in the IHP+ Global Compact. Each expected result has corresponding standard performance measures to track progress over time. The progress of all agencies is rated against these mutually agreed expectations.{% endblocktrans %}</li>
+	<li>{% blocktrans with "<img class=\"icons\" src=\"/media/icons/tick.svg\"/>" as tick and "<img class=\"icons\" src=\"/media/icons/arrow.svg\"/>" as arrow and "<img class=\"icons\" src=\"/media/icons/cross.svg\"/>" as exclamation %}Rating symbols illustrate whether the Agency has achieved {{ tick }}, is working towards {{ arrow }}, or has not achieved {{ exclamation }} its targets over the most recent annual reporting cycle. Details of these independent assessments undertaken by the IHP+Results Consortium can be found online in the North-South Observatory for IHP+Results (www.ihpresults.net).{% endblocktrans %}</li>
+	<li>{% blocktrans %}Target describes the aggregate data on which the Rating is based, with a comparison of 2011 and baseline performance.{% endblocktrans %}</li>
+	<li>{% blocktrans %}Overall Progress shows a two-bar graph with the aggregate data for the agency in question across all the countries for which health sector support has been reported.  In most cases, the agreed target for each standard performance measure (SPM) is shown as a red line.{% endblocktrans %}</li>
+	<li>{% blocktrans %}Scorecard ratings are aggregates of performance across a number of countries. Aggregates might hide variations in the agency's
+performance. Disaggregated data can be found at www.ihpresults.net{% endblocktrans %}</li>
+	<li>{% blocktrans %}NB: The ratings presented here are based on self-reported data.  IHP+Results has taken steps to triangulate this data using other sources.  More details are vailable at www.ihpresults.net{% endblocktrans %}</li>
+      </ul>
+    </div>
+  </foreignObject>
+  </g>
 </svg>
