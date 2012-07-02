@@ -1,7 +1,7 @@
 from django.views.generic.simple import direct_to_template
 from functools import partial
 from submissions.models import Agency, Country, old_dataset, new_dataset
-from indicators import calc_agency_country_indicators, NA_STR, calc_overall_agency_indicators, positive_funcs, calc_country_indicators
+from indicators import calc_agency_country_indicators, NA_STR, calc_overall_agency_indicators, positive_funcs, calc_country_indicators, calc_indicator
 from highcharts import Chart, ChartObject
 import country_scorecard
 import agency_scorecard
@@ -328,10 +328,32 @@ class HighlevelBarChart(DPChart):
 def agency_graphs_by_indicator(request, indicator, language, template_name="submissions/agency_graphs_by_indicator.html", extra_context=None):
     extra_context = extra_context or {}
     translation = request.translation
-
-    indicators = calc_overall_agency_indicators(funcs=positive_funcs)
-    with old_dataset():
-        old_indicators = calc_overall_agency_indicators(funcs=positive_funcs)
+    
+    if request.GET.get("exclusions", False):
+        exclusions = {
+            "2DPa": [6, 7, 25, 26],
+            "2DPb": [6, 7],
+            "2DPc": [],
+            "3DP": [7, 25, 26, 28],
+            "4DP": [],
+            "5DPa": [7, 22, 24, 25, 26, 47],
+            "5DPb": [6, 7, 25],
+            "5DPc": [],
+            }
+        extra_context['excluded'] = models.Agency.objects.filter(id__in=exclusions[indicator])
+        qs = models.DPQuestion.objects.filter(submission__agency__type="Agency").exclude(submission__agency__in=exclusions[indicator]).select_related()
+        indicators = {
+            indicator: calc_indicator(qs, None, indicator, positive_funcs)
+            }
+        with old_dataset():
+            qs = models.DPQuestion.objects.filter(submission__agency__type="Agency").exclude(submission__agency__in=exclusions[indicator]).select_related()
+            old_indicators = {
+                indicator: calc_indicator(qs, None, indicator, positive_funcs)
+                }
+    else:
+        indicators = calc_overall_agency_indicators(funcs=positive_funcs)
+        with old_dataset():
+            old_indicators = calc_overall_agency_indicators(funcs=positive_funcs)
 
     extra_context["graphs"] = graphs = []
     name = "graph_%s" % indicator
@@ -491,7 +513,6 @@ def highlevelgraphs(request, language, template_name="submissions/highlevelgraph
     for indicator in indicators:
         (baseline_value, _, latest_value, _) = indicators[indicator][0]
         (_, _, previous_value, previous_year) = old_indicators[indicator][0]
-        print 'CHECK', previous_value, latest_value
         name = "graph_%s" % indicator.lower()
         if indicator not in ["5DPc"]:
             graph = highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, target_values[indicator])
