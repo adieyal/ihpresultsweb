@@ -27,8 +27,8 @@ class SubmissionAdmin(admin.ModelAdmin):
 admin.site.register(Submission, SubmissionAdmin)
 
 class DPQuestionAdmin(admin.ModelAdmin):
-    list_filter = ("question_number", "submission")
-    list_display = ("question_number", "country", "agency", "base_val", "cur_val")
+    list_filter = ("question_number", "submission", "baseline_year", "latest_year")
+    list_display = ("question_number", "country", "agency", "base_val", "baseline_year", "cur_val", "latest_year")
     search_fields = ("submission__country__country", "submission__agency__agency")
 
     def country(self, question):
