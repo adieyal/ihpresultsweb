@@ -19,7 +19,7 @@ def fragile_states(request, language=None):
     fragile_indicators = ["2DPa", "2DPc", "3DP", "4DP", "5DPb"]
 
     def slice_data(countries):
-        calculator = partial(indicators.calc_indicator, agency_or_country=None)
+        calculator = partial(indicators.calc_indicator, agency_or_country=None, funcs=indicators.positive_funcs)
         return [
             {
                 "indicator" : indicator, 
