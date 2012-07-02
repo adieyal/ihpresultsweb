@@ -156,9 +156,10 @@ class GovScorecard(object):
         else:
             seats = 0
         
+        r1G = self.ratings["1G"]
         return {
             "commitments": [
-                {"description": _("Signed Agreement"), "logo": self.gov_rating("1")},
+                {"description": _("Signed Agreement"), "logo": rating_icon(r1G["target"])},
                 {"description": self.gov_comment("1"), "bullet": False}
             ],
             "health_sector":[
