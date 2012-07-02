@@ -54,7 +54,6 @@ class IndicatorCalculator(object):
             return MISSING
 
         remaining_agency_countries = [ac for ac in agency_countries if not ac in excluded_agency_countries]
-
         remaining_qs = [
             q for q in qs 
             if not (q.submission.agency, q.submission.country) in excluded_agency_countries

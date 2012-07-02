@@ -12,6 +12,33 @@ def foz(val):
     except (TypeError, ValueError):
         return 0
 
+def volumes_by_country(request):
+    countries = models.Country.objects.order_by("country")
+    agencies = models.Agency.objects.order_by("agency")
+    qs = models.DPQuestion.objects.filter(question_number=6)
+
+    js = []
+    for agency in agencies:
+        countries_arr = []
+        for country in countries:
+            try:
+                aid = qs.get(submission__agency=agency, submission__country=country).cur_val
+                aid = float(aid)
+            except models.DPQuestion.DoesNotExist:
+                aid = 0 
+            except (ValueError, TypeError):
+                aid = 0
+            countries_arr.append({
+                "name" : country.country,
+                "value" : aid
+            })
+        js.append({
+            "agency" : agency.agency,
+            "countries" : countries_arr
+        })
+            
+    return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")
+
 def fragile_states(request, language=None):
     fragile_states = ["Burundi", "DRC", "Nepal", "Sierra Leone", "Sudan", "Togo"]
     fragile_countries = models.Country.objects.filter(country__in=fragile_states)
