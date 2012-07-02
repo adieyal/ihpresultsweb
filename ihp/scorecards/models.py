@@ -149,10 +149,11 @@ class GovScorecard(object):
     def get_country_ownership(self):
         if self.gov_ltv("13") == None:
             cs_logo = rating_icon("question")
+            seats = "?"
         else:
             cs_logo = self.tick_if_true(foz(self.gov_ltv("13")) >= 10)
+            seats = int(r1(self.question("13").cur_val))
 
-        seats = float(self.question("13").cur_val)
         
         r1G = self.ratings["1G"]
         r2Ga1 = self.ratings["1G"]
@@ -169,7 +170,7 @@ class GovScorecard(object):
             "aid_effectiveness": [
                 {"description": _("Active joint monitoring"), "logo": rating_icon(r7G["target"])},
                 {"description": _("Number of development partner missions"), "text": foz(self.gov_ltv("16"))},
-                {"description": _("%(percentage)g%% of seats in the health sector coordination mechanism are allocated to civil society") % { 'percentage': (r2(seats)) }, "logo": cs_logo},
+                {"description": _("%(percentage)s%% of seats in the health sector coordination mechanism are allocated to civil society") % { 'percentage': (seats) }, "logo": cs_logo},
             ]
         }
 
