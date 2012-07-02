@@ -152,11 +152,7 @@ class GovScorecard(object):
         else:
             cs_logo = self.tick_if_true(foz(self.gov_ltv("13")) >= 10)
 
-        # % of seats to CS calculation.
-        if foz(self.question("5").latest_value) > 0:
-            seats = foz(self.question("6").latest_value)/foz(self.question("5").latest_value)
-        else:
-            seats = 0
+        seats = float(self.question("13").cur_val)
         
         r1G = self.ratings["1G"]
         r2Ga1 = self.ratings["1G"]
@@ -173,7 +169,7 @@ class GovScorecard(object):
             "aid_effectiveness": [
                 {"description": _("Active joint monitoring"), "logo": rating_icon(r7G["target"])},
                 {"description": _("Number of development partner missions"), "text": foz(self.gov_ltv("16"))},
-                {"description": _("%(percentage)g%% of seats in the health sector coordination mechanism are allocated to civil society") % { 'percentage': (r2(seats*100)) }, "logo": cs_logo},
+                {"description": _("%(percentage)g%% of seats in the health sector coordination mechanism are allocated to civil society") % { 'percentage': (r2(seats)) }, "logo": cs_logo},
             ]
         }
 
