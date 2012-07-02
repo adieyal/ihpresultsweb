@@ -9,7 +9,7 @@ urlpatterns = patterns('ihp.submissions.table_views',
             "template" : "submissions/main_base_bootstrap.html", 
             "extra_context" : {"content_file" : "submissions/fragile_states.html"}
         }, 
-        "fragile_states"
+        name="fragile_states"
     ),
     url(
         r'two_by_two_analysis/$', 
@@ -18,7 +18,7 @@ urlpatterns = patterns('ihp.submissions.table_views',
             "template" : "submissions/main_base_bootstrap.html", 
             "extra_context" : {"content_file" : "submissions/two_by_two_analysis.html"}
         }, 
-        "two_by_two_analysis"
+        name="two_by_two_analysis"
     ),
     url(
         r'top5_countries/$', 
@@ -27,6 +27,15 @@ urlpatterns = patterns('ihp.submissions.table_views',
             "template" : "submissions/main_base_bootstrap.html", 
             "extra_context" : {"content_file" : "submissions/top5_countries.html"}
         }, 
-        "top5_countries"
+        name="top5_countries"
+    ),
+    url(
+        r'volumes_by_country/$', 
+        direct_to_template, 
+        {
+            "template" : "submissions/main_base_bootstrap.html", 
+            "extra_context" : {"content_file" : "submissions/volumes_by_country.html"}
+        }, 
+        name="volumes_by_country"
     ),
 )
