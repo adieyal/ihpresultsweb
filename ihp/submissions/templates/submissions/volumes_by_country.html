@@ -44,9 +44,14 @@
         loadStop();
 
         country_totals = {}
+        agency_totals = {}
         for (i in json[0].countries) {
             c = json[0].countries[i]
             country_totals[c.name] = 0; 
+        }
+
+        for (i in json) {
+            agency_totals[json[i].agency] = 0;
         }
 
         for (i in json) {
@@ -54,6 +59,7 @@
             for (j in agency.countries) {
                 country = agency.countries[j]
                 country_totals[country.name] += country.value;
+                agency_totals[agency.agency] += country.value;
             }
         }
 
@@ -61,11 +67,11 @@
         table
             .append("tr")
             .selectAll("th")
-            .data([""].concat(json[0].countries))
+            .data([""].concat(json[0].countries, "Total"))
             .enter()
             .append("th")
             .text(function(d, i) {
-                if (i == 0) return d;
+                if (i == 0 || d == "Total") return d;
                 return d.name;
             });
 
@@ -82,16 +88,19 @@
                     .enter()
                     .append("td")
                     .text(function(d2, i2) { return d3.round(d2.value, 2); })
+                d3.select(this)
+                    .append("td")
+                    .text(d3.round(agency_totals[d.agency], 2));
             });
 
         table
             .append("tr")
             .selectAll("th")
-            .data(["Total"].concat(json[0].countries))
+            .data(["Total"].concat(json[0].countries, ""))
             .enter()
             .append("th")
             .text(function(d, i) {
-                if (i == 0) return d;
+                if (i == 0 || d == "") return d;
                 return d3.round(country_totals[d.name], 2);
             });
     }

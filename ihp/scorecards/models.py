@@ -81,11 +81,13 @@ class GovScorecard(object):
         return smodels.GovQuestion.objects.get(question_number=qnum, submission=self.submission)
 
     def get_managing_for_results(self):
+        r6G = self.ratings["6G"]
+        r7G = self.ratings["7G"]
         return {
-            "national_results": self.gov_rating("11"),
+            "national_results": rating_icon(r6G["target"]),
             "functional_health": self.gov_rating("22"),
-            "decisons_results": self.gov_rating("11"),
-            "joint_health": self.gov_rating("12"),
+            "decisons_results": rating_icon(r6G["target"]),
+            "joint_health": rating_icon(r7G["target"]),
         }
 
     def get_health_systems(self):
@@ -156,9 +158,12 @@ class GovScorecard(object):
         else:
             seats = 0
         
+        r1G = self.ratings["1G"]
+        r2Ga1 = self.ratings["1G"]
+        r7G = self.ratings["7G"]
         return {
             "commitments": [
-                {"description": _("Signed Agreement"), "logo": self.gov_rating("1")},
+                {"description": _("Signed Agreement"), "logo": rating_icon(r1G["target"])},
                 {"description": self.gov_comment("1"), "bullet": False}
             ],
             "health_sector":[
@@ -166,7 +171,7 @@ class GovScorecard(object):
                 {"description": _("Jointly Assessed"), "logo": self.gov_rating("3")},
             ],
             "aid_effectiveness": [
-                {"description": _("Active joint monitoring"), "logo": self.gov_rating("12")},
+                {"description": _("Active joint monitoring"), "logo": rating_icon(r7G["target"])},
                 {"description": _("Number of development partner missions"), "text": foz(self.gov_ltv("16"))},
                 {"description": _("%(percentage)g%% of seats in the health sector coordination mechanism are allocated to civil society") % { 'percentage': (r2(seats*100)) }, "logo": cs_logo},
             ]
