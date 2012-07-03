@@ -328,6 +328,8 @@ class HighlevelBarChart(DPChart):
 def agency_graphs_by_indicator(request, indicator, language, template_name="submissions/agency_graphs_by_indicator.html", extra_context=None):
     extra_context = extra_context or {}
     translation = request.translation
+    my_calc_indicator = partial(calc_indicator, agency_or_country=None, funcs=positive_funcs)
+    my_calc_overall_agency_indicators = partial(calc_overall_agency_indicators, funcs=positive_funcs)
     
     if request.GET.get("exclusions", False):
         exclusions = {
@@ -339,21 +341,22 @@ def agency_graphs_by_indicator(request, indicator, language, template_name="subm
             "5DPa": [7, 22, 24, 25, 26, 47],
             "5DPb": [6, 7, 25],
             "5DPc": [],
-            }
+        }
+
         extra_context['excluded'] = models.Agency.objects.filter(id__in=exclusions[indicator])
         qs = models.DPQuestion.objects.filter(submission__agency__type="Agency").exclude(submission__agency__in=exclusions[indicator]).select_related()
         indicators = {
-            indicator: calc_indicator(qs, None, indicator, positive_funcs)
-            }
+            indicator: my_calc_indicator(qs, indicator=indicator)
+        }
         with old_dataset():
             qs = models.DPQuestion.objects.filter(submission__agency__type="Agency").exclude(submission__agency__in=exclusions[indicator]).select_related()
             old_indicators = {
-                indicator: calc_indicator(qs, None, indicator, positive_funcs)
-                }
+                indicator: my_calc_indicator(qs, indicator=indicator)
+            }
     else:
-        indicators = calc_overall_agency_indicators(funcs=positive_funcs)
+        indicators = my_calc_overall_agency_indicators()
         with old_dataset():
-            old_indicators = calc_overall_agency_indicators(funcs=positive_funcs)
+            old_indicators = my_calc_overall_agency_indicators()
 
     extra_context["graphs"] = graphs = []
     name = "graph_%s" % indicator
@@ -367,7 +370,10 @@ def agency_graphs_by_indicator(request, indicator, language, template_name="subm
         "obj" : graph
     })
 
-    agency_data = dict([(agency, agency_scorecard.get_agency_scorecard_data(agency)) for agency in Agency.objects.all()])
+    agency_data = dict([
+        (agency, agency_scorecard.get_agency_scorecard_data(agency)) 
+        for agency in Agency.objects.all()
+    ])
 
     name = "graph2_%s" % indicator
     graph = additional_graph_by_indicator(indicator, name, translation, agency_data)
