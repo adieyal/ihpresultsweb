@@ -173,12 +173,21 @@ class GovScorecard(object):
         }
 
     def get_health_finance(self):
+        min_value = min([
+                in_millions(foz(self.question("6").baseline_value)),
+                in_millions(foz(self.question("6").latest_value)),
+                in_millions(foz(self.question("7").baseline_value)),
+                in_millions(foz(self.question("7").latest_value))
+                ])
+        if min_value < 10:
+            r = r2
+        else:
+            r = r0
         
-        
-        domestic_baseline = r0(in_millions(foz(self.question("6").baseline_value)))
-        domestic_latest = r0(in_millions(foz(self.question("6").latest_value)))
-        all_baseline = r0(in_millions(foz(self.question("7").baseline_value)))
-        all_latest = r0(in_millions(foz(self.question("7").latest_value)))
+        domestic_baseline = r(in_millions(foz(self.question("6").baseline_value)))
+        domestic_latest = r(in_millions(foz(self.question("6").latest_value)))
+        all_baseline = r(in_millions(foz(self.question("7").baseline_value)))
+        all_latest = r(in_millions(foz(self.question("7").latest_value)))
 
         external_baseline = all_baseline - domestic_baseline if all_baseline > domestic_baseline else 0
         external_latest = all_latest - domestic_latest if all_latest > domestic_latest else 0
