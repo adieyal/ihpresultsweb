@@ -49,7 +49,7 @@ At the end of %(cur_year)s a costed and evidence based HRH plan was in place but
     },
 }
 
-rating_question_text = "Insufficient data has been provided to enable a rating for this Standard Performance Measure."
+rating_question_text = "Insufficient data has been provided to enable a rating for %s."
 rating_none_text = "This Standard Performance Measure was deemed not applicable to %s."
 gov_tb2 = "%s COUNTRY SCORECARD"
 gov_pc3 = "%0.1f %% allocated to health"

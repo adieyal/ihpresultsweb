@@ -47,8 +47,9 @@ rating_icon = lambda icon : "%sicons/%s.svg" % (media_url, icon)
 media_url = settings.MEDIA_URL
 
 class GovScorecard(object):
-    def __init__(self, country):
+    def __init__(self, country, language):
         self.country = country
+        self.language = language
         submission = self.submission = smodels.GovQuestion.objects.get(
             question_number=1, 
             submission__country=country
@@ -153,6 +154,13 @@ class GovScorecard(object):
         else:
             cs_logo = self.tick_if_true(foz(self.gov_ltv("13")) >= 10)
             seats = int(r1(self.question("13").cur_val))
+            
+        try:
+            override_comments = smodels.CountryScorecardOverrideComments.objects.get(
+                country=self.country, language__language=self.language )
+            cd2 = override_comments.cd2 or _("Signed Agreement")
+        except:
+            cd2 = _("Signed Agreement")
 
         
         r1G = self.ratings["1G"]
@@ -160,7 +168,7 @@ class GovScorecard(object):
         r7G = self.ratings["7G"]
         return {
             "commitments": [
-                {"description": _("Signed Agreement"), "logo": rating_icon(r1G["target"])},
+                {"description": cd2, "logo": rating_icon(r1G["target"])},
                 {"description": self.gov_comment("1"), "bullet": False}
             ],
             "health_sector":[
@@ -392,10 +400,11 @@ class GovScorecard(object):
                 "description": _("Improvement of at least one measure on the four-point scale used to assess performance for this sector."),
                 "rating": rating_icon(r5Gb["target"]),
                 "type":"dot",
-                "progress": add_previous_value(self.country, 'commitments.performance_scale', [
+                "progress": [
                     {"year": r5Gb["base_year"], "value":r5Gb["base_val"]},
+                    get2010value(self.country, 'commitments.performance_scale'),
                     {"year": r5Gb["cur_year"], "value":r5Gb["cur_val"]},
-                ])
+                ]
             },
 
             "resources":{

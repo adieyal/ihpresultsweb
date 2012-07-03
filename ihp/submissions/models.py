@@ -13,7 +13,7 @@ class old_dataset:
     def __enter__(self):
         DPQuestion._meta.db_table = 'submissions_dpquestion_2009'
         GovQuestion._meta.db_table = 'submissions_govquestion_2009'
-        Submission.submissions_table = 'submissions_submissions_2009'
+        Submission._meta.db_table  = 'submissions_submission_2009'
     def __exit__(self, type, value, tb):
         DPQuestion._meta.db_table = self.dp_table
         GovQuestion._meta.db_table = self.gov_table
@@ -222,7 +222,6 @@ class GovQuestion(models.Model):
         if len(sval) < 3:
             raise Exception("%s is an invalid currency string" % sval)
 
-        print val
         cur = sval[0:3].strip()
         val = sval[3:].strip()
 

@@ -329,8 +329,8 @@ var build_dot_graph = function(data){
         for (var j =0; j < options.length; j++){
             var o = options[j];
             var g = d3.select(grads[0][j]);
-
-            build_gradient(g, p.value == o);
+	    
+            build_gradient(g, (p.value || 'no').toLowerCase() == o);
         }
     }
 };
