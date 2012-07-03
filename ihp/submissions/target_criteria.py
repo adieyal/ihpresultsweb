@@ -115,6 +115,16 @@ def criterion_first_yes(base_val, cur_val, criterion_param):
         return True
     return False
 
+def criterion_under_development(base_val, cur_val, criterion_param):
+    if cur_val == NA_STR: 
+        raise CannotCalculateException() 
+    if cur_val == None or len(cur_val) == 0:
+        raise MissingValueException()
+
+    if cur_val.lower() == "under development":
+        return True
+    return False
+
 criteria_funcs = {
    "Absolute % Target" : criterion_absolute,
    "Minimum x% Increase relative to baseline" : criterion_relative_increase,
@@ -127,4 +137,5 @@ criteria_funcs = {
    "Absolute Value Decrease" : criterion_absolute_decrease,
    "Both Questions Yes" : criterion_both_yes,
    "First Question Yes" : criterion_first_yes,
+   "First Question Under Development" : criterion_under_development,
 }

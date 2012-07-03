@@ -101,6 +101,15 @@ def equals_yes_or_no(val):
         return _val
     return test
 
+def map_yes_no_under_development(qs, agency_or_country, selector, q):
+    assert len(qs) == 1
+    v = selector(qs[0]).lower()
+    return {
+        "yes" : "y",
+        "no" : "n",
+        "under_development" : "under development",
+    }.get(v, v)
+
 def identity(qs, agency_or_country, selector, *args):
     return selector(qs[0])
 

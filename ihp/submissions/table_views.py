@@ -283,14 +283,10 @@ def country_table(request, language="English", template_name="submissions/countr
             base_val, base_year, latest_val, latest_year = tpl
             rating = country_ratings[indicator]["target"]
 
-            if type(base_val) == str: base_val = base_val.upper()
-            if type(latest_val) == str: latest_val = latest_val.upper()
-            if indicator == "2Gb":
-                # The indicator turns this into 100/0
-                # This code turns it back - to much effort
-                # to figure out why it does this
-                base_val = "Y" if base_val == 100 else "N"
-                latest_val = "Y" if latest_val == 100 else "N"
+            if type(base_val) == str: 
+                base_val = base_val.upper()
+            if type(latest_val) == str: 
+                latest_val = latest_val.upper()
             if indicator == "2Ga":
                 base_val1 = base_val[0] if base_val else None
                 base_val2 = base_val[1] if base_val else None
