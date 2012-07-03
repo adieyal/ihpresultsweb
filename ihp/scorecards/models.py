@@ -66,7 +66,7 @@ class GovScorecard(object):
             True : "tick",
             "no" : "cross",
             False : "cross",
-            "under_development" : "cross",
+            "under_development" : "arrow",
             "" : "line",
         }
 
@@ -322,6 +322,7 @@ class GovScorecard(object):
         def progress_to_int(val):
             return {
                 "y" : 2, "yy" : 2, 100 : 2,
+                "under development" : 1,
                 0 : 0, "n" : 0, None : 0, "nn" : 0,
                 "yn" : 0,
             }[val]

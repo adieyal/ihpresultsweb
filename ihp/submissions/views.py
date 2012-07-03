@@ -216,7 +216,7 @@ def gov_questionnaire(request, template_name="submissions/gov_questionnaire.html
         with models.old_dataset():
             extra_context["questions"] = GovQuestion.objects.all()
     else:
-            extra_context["questions"] = GovQuestion.objects.all()
+        extra_context["questions"] = GovQuestion.objects.all()
     return direct_to_template(request, template=template_name, extra_context=extra_context)
 
 def dp_summary_edit(request, template_name="submissions/dp_summary_edit.html", extra_context=None):
