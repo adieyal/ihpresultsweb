@@ -9,6 +9,7 @@ from django.shortcuts import get_object_or_404
 from django.utils.translation import check_for_language
 
 from models import Submission, AgencyCountries, Agency, DPQuestion, GovQuestion, Country, MDGData, DPScorecardSummary, AgencyWorkingDraft, CountryWorkingDraft, Rating, Language
+import models
 from target import calc_agency_ratings, get_country_progress, calc_country_ratings, get_agency_progress, country_agency_indicator_ratings, country_agency_progress, agency_country_indicator_ratings
 from indicators import calc_country_indicators, calc_agency_country_indicators, NA_STR, calc_country_indicators, positive_funcs, dp_indicators, g_indicators, indicator_questions
 from forms import DPSummaryForm, DPRatingsForm, GovRatingsForm, CountryScorecardForm
@@ -115,11 +116,20 @@ def country_response_breakdown(request, template_name="submissions/country_respo
 def dp_questionnaire(request, template_name="submissions/dp_questionnaire.html", extra_context=None):
 
     extra_context = extra_context or {}
-    extra_context["questions"] = DPQuestion.objects.all().order_by(
-        "submission__agency", 
-        "submission__country", 
-        "question_number"
-    )
+    
+    if "use_2009" in extra_context:
+        with models.old_dataset():
+            extra_context["questions"] = DPQuestion.objects.all().order_by(
+                "submission__agency", 
+                "submission__country", 
+                "question_number"
+            )
+    else:
+        extra_context["questions"] = DPQuestion.objects.all().order_by(
+            "submission__agency", 
+            "submission__country", 
+            "question_number"
+        )
     return direct_to_template(request, template=template_name, extra_context=extra_context)
 
 def country_export(request, language):
@@ -202,7 +212,11 @@ def country_export(request, language):
 def gov_questionnaire(request, template_name="submissions/gov_questionnaire.html", extra_context=None):
 
     extra_context = extra_context or {}
-    extra_context["questions"] = GovQuestion.objects.all()
+    if "use_2009" in extra_context:
+        with models.old_dataset():
+            extra_context["questions"] = GovQuestion.objects.all()
+    else:
+            extra_context["questions"] = GovQuestion.objects.all()
     return direct_to_template(request, template=template_name, extra_context=extra_context)
 
 def dp_summary_edit(request, template_name="submissions/dp_summary_edit.html", extra_context=None):
