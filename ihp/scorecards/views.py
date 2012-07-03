@@ -142,7 +142,7 @@ def gov_scorecard_json(request, country_id, language):
 
     with force_lang(LANGUAGE_LOOKUP[language]):
         country = get_object_or_404(Country, id=country_id)
-        gov_scorecard = GovScorecard(country) 
+        gov_scorecard = GovScorecard(country, language) 
         media_url = settings.MEDIA_URL
         agencies = AgencyCountries.objects.get_country_agencies(country)
         

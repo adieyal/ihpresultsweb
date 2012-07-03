@@ -47,8 +47,9 @@ rating_icon = lambda icon : "%sicons/%s.svg" % (media_url, icon)
 media_url = settings.MEDIA_URL
 
 class GovScorecard(object):
-    def __init__(self, country):
+    def __init__(self, country, language):
         self.country = country
+        self.language = language
         submission = self.submission = smodels.GovQuestion.objects.get(
             question_number=1, 
             submission__country=country
@@ -155,10 +156,13 @@ class GovScorecard(object):
             seats = foz(self.question("6").latest_value)/foz(self.question("5").latest_value)
         else:
             seats = 0
+            
+        override_comments = smodels.CountryScorecardOverrideComments.objects.get(
+            country=self.country, language__language=self.language )
         
         return {
             "commitments": [
-                {"description": _("Signed Agreement"), "logo": self.gov_rating("1")},
+                {"description": override_comments.cd2 or _("Signed Agreement"), "logo": self.gov_rating("1")},
                 {"description": self.gov_comment("1"), "bullet": False}
             ],
             "health_sector":[
