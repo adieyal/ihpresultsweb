@@ -753,6 +753,11 @@ def government_graphs(request, language, template_name="submission/country_graph
     data_4G = dict([(c, calc_country_indicators(c)["4G"]) for c in countries])
 
     country_data = dict([(country, country_scorecard.get_country_export_data(country)) for country in Country.objects.all()])
+    with old_dataset():
+        data_3G_2009 = dict([(c, calc_country_indicators(c)["3G"]) for c in countries])
+        data_4G_2009 = dict([(c, calc_country_indicators(c)["4G"]) for c in countries])
+
+        country_data_2009 = dict([(country, country_scorecard.get_country_export_data(country)) for country in Country.objects.all()])
 
     # TODO
     # Request from James to zero negative values
@@ -772,6 +777,7 @@ def government_graphs(request, language, template_name="submission/country_graph
         countries_3g,
         "graph_3G",
         [data_3G[country][0][0] for country in countries_3g],
+        [data_3G_2009[country][0][2] for country in countries_3g],
         [data_3G[country][0][2] for country in countries_3g],
         translation.target_language["target"], 15,
         title=translation.government_graphs["3G"]["title"],
