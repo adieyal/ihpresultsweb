@@ -6814,7 +6814,7 @@
     
     <g transform="translate(245.38, 87.925)">
       <text transform="scale(1, 1)" class="head2">
-	{% blocktrans %}COUNTRIES WHERE THE ORGANISATION IS ACTIVE{% endblocktrans %}
+	{% blocktrans %}IHP+RESULTS COUNTRIES WHERE THE ORGANISATION IS ACTIVE{% endblocktrans %}
       </text>
     </g>
     <g transform="translate(31.432, 184.35)">
