@@ -424,7 +424,10 @@ class GovScorecard(object):
                 ])
             },
             "civilsociety":{
-                "description": _("At least 10%% of seats in the country's Health Sector Coordination mechanisms are allocated to Civil Society"),
+                # The empty list here is required to get rid of the %%, whihch in turn
+                # is required for translations to work. Removing it will cause a double
+                # % on the scorecard.
+                "description": _("At least 10%% of seats in the country's Health Sector Coordination mechanisms are allocated to Civil Society") % [],
                 "rating": rating_icon(r8Gb["target"]),
                 "max": 2,
                 "progress": add_previous_value(self.country, 'commitments.civilsociety', [
