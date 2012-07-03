@@ -157,12 +157,16 @@ class GovScorecard(object):
         else:
             seats = 0
             
-        override_comments = smodels.CountryScorecardOverrideComments.objects.get(
-            country=self.country, language__language=self.language )
+        try:
+            override_comments = smodels.CountryScorecardOverrideComments.objects.get(
+                country=self.country, language__language=self.language )
+            cd2 = override_comments.cd2 or _("Signed Agreement")
+        except:
+            cd2 = _("Signed Agreement")
         
         return {
             "commitments": [
-                {"description": override_comments.cd2 or _("Signed Agreement"), "logo": self.gov_rating("1")},
+                {"description": cd2, "logo": self.gov_rating("1")},
                 {"description": self.gov_comment("1"), "bullet": False}
             ],
             "health_sector":[
@@ -403,10 +407,11 @@ class GovScorecard(object):
                 "description": _("Improvement of at least one measure on the four-point scale used to assess performance for this sector."),
                 "rating": rating_icon(r5Gb["target"]),
                 "type":"dot",
-                "progress": add_previous_value(self.country, 'commitments.performance_scale', [
+                "progress": [
                     {"year": r5Gb["base_year"], "value":r5Gb["base_val"]},
+                    get2010value(self.country, 'commitments.performance_scale'),
                     {"year": r5Gb["cur_year"], "value":r5Gb["cur_val"]},
-                ])
+                ]
             },
 
             "resources":{
