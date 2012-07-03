@@ -82,11 +82,13 @@ class GovScorecard(object):
         return smodels.GovQuestion.objects.get(question_number=qnum, submission=self.submission)
 
     def get_managing_for_results(self):
+        r6G = self.ratings["6G"]
+        r7G = self.ratings["7G"]
         return {
-            "national_results": self.gov_rating("11"),
+            "national_results": rating_icon(r6G["target"]),
             "functional_health": self.gov_rating("22"),
-            "decisons_results": self.gov_rating("11"),
-            "joint_health": self.gov_rating("12"),
+            "decisons_results": rating_icon(r6G["target"]),
+            "joint_health": rating_icon(r7G["target"]),
         }
 
     def get_health_systems(self):
@@ -148,14 +150,10 @@ class GovScorecard(object):
     def get_country_ownership(self):
         if self.gov_ltv("13") == None:
             cs_logo = rating_icon("question")
+            seats = "?"
         else:
             cs_logo = self.tick_if_true(foz(self.gov_ltv("13")) >= 10)
-
-        # % of seats to CS calculation.
-        if foz(self.question("5").latest_value) > 0:
-            seats = foz(self.question("6").latest_value)/foz(self.question("5").latest_value)
-        else:
-            seats = 0
+            seats = int(r1(self.question("13").cur_val))
             
         try:
             override_comments = smodels.CountryScorecardOverrideComments.objects.get(
@@ -163,10 +161,14 @@ class GovScorecard(object):
             cd2 = override_comments.cd2 or _("Signed Agreement")
         except:
             cd2 = _("Signed Agreement")
+
         
+        r1G = self.ratings["1G"]
+        r2Ga1 = self.ratings["1G"]
+        r7G = self.ratings["7G"]
         return {
             "commitments": [
-                {"description": cd2, "logo": self.gov_rating("1")},
+                {"description": cd2, "logo": rating_icon(r1G["target"])},
                 {"description": self.gov_comment("1"), "bullet": False}
             ],
             "health_sector":[
@@ -174,28 +176,19 @@ class GovScorecard(object):
                 {"description": _("Jointly Assessed"), "logo": self.gov_rating("3")},
             ],
             "aid_effectiveness": [
-                {"description": _("Active joint monitoring"), "logo": self.gov_rating("12")},
+                {"description": _("Active joint monitoring"), "logo": rating_icon(r7G["target"])},
                 {"description": _("Number of development partner missions"), "text": foz(self.gov_ltv("16"))},
-                {"description": _("%(percentage)g%% of seats in the health sector coordination mechanism are allocated to civil society") % { 'percentage': (r2(seats*100)) }, "logo": cs_logo},
+                {"description": _("%(percentage)s%% of seats in the health sector coordination mechanism are allocated to civil society") % { 'percentage': (seats) }, "logo": cs_logo},
             ]
         }
 
     def get_health_finance(self):
-        min_value = min([
-                in_millions(foz(self.question("6").baseline_value)),
-                in_millions(foz(self.question("6").latest_value)),
-                in_millions(foz(self.question("7").baseline_value)),
-                in_millions(foz(self.question("7").latest_value))
-                ])
-        if min_value < 10:
-            r = r2
-        else:
-            r = r0
         
-        domestic_baseline = r(in_millions(foz(self.question("6").baseline_value)))
-        domestic_latest = r(in_millions(foz(self.question("6").latest_value)))
-        all_baseline = r(in_millions(foz(self.question("7").baseline_value)))
-        all_latest = r(in_millions(foz(self.question("7").latest_value)))
+        
+        domestic_baseline = r0(in_millions(foz(self.question("6").baseline_value)))
+        domestic_latest = r0(in_millions(foz(self.question("6").latest_value)))
+        all_baseline = r0(in_millions(foz(self.question("7").baseline_value)))
+        all_latest = r0(in_millions(foz(self.question("7").latest_value)))
 
         external_baseline = all_baseline - domestic_baseline if all_baseline > domestic_baseline else 0
         external_latest = all_latest - domestic_latest if all_latest > domestic_latest else 0
@@ -433,10 +426,7 @@ class GovScorecard(object):
                 ])
             },
             "civilsociety":{
-                # The empty list here is required to get rid of the %%, whihch in turn
-                # is required for translations to work. Removing it will cause a double
-                # % on the scorecard.
-                "description": _("At least 10%% of seats in the country's Health Sector Coordination mechanisms are allocated to Civil Society") % [],
+                "description": _("At least 10% of seats in the country's Health Sector Coordination mechanisms are allocated to Civil Society"),
                 "rating": rating_icon(r8Gb["target"]),
                 "max": 2,
                 "progress": add_previous_value(self.country, 'commitments.civilsociety', [
