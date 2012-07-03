@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-01 22:05+0200\n"
-"PO-Revision-Date: 2012-07-01 22:29\n"
+"POT-Creation-Date: 2012-07-03 09:00+0200\n"
+"PO-Revision-Date: 2012-07-03 09:00\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -55,14 +55,14 @@ msgstr ""
 "le mécanisme de coordina􀀉on du secteur de la\n"
 "santé"
 
-#: models.py:234 models.py:240
+#: models.py:243 models.py:249
 msgid "REFLECTS GOOD PRACTICE (OR REFORM IN PROGRESS)"
 msgstr ""
 "REFLETE UNE PRATIQUE\n"
 "EXEMPLAIRE (OU UNE\n"
 "REFORME EN COURS)"
 
-#: models.py:236 models.py:242 models.py:248
+#: models.py:245 models.py:251 models.py:257
 msgid ""
 "Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, "
 "neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, "
@@ -72,20 +72,20 @@ msgstr ""
 "neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, "
 "nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est."
 
-#: models.py:246
+#: models.py:255
 msgid "DONOR CAPACITY DEVELOPMENT PROVIDED THROUGH COORDINATED PROGRAMMES"
 msgstr ""
 "DEVELOPPEMENT DES CAPACITES PAR\n"
 "LES PROGRAMMES COORDONNES PAR\n"
 "LES BAILLEURS DE FONDS"
 
-#: models.py:335
+#: models.py:344
 msgid "An IHP+ Compact or equivalent mutual agreement is in place."
 msgstr ""
 "Un pacte IHP+ ou accord mutuel équivalent est\n"
 "en place"
 
-#: models.py:344
+#: models.py:353
 msgid ""
 "A National Health Sector Plan/ Strategy is in place with current targets & "
 "budgets that have been jointly assessed."
@@ -93,7 +93,7 @@ msgstr ""
 "Un plan / une stratégie du secteur national de la santé est en place dont "
 "les objectifs et lesbudgets sont actuels et ont évalués conjointement."
 
-#: models.py:353
+#: models.py:362
 msgid ""
 "A costed, comprehensive national HRH plan (integrated with the health plan) "
 "is being implemented or developed."
@@ -101,7 +101,7 @@ msgstr ""
 "Un plan national de ressources humaines de la santé chiffré et exhaustif (intégré dans le plan de\n"
 "santé national) est mis en oeuvre ou en cours de développement"
 
-#: models.py:362
+#: models.py:371
 #, python-format
 msgid ""
 "%(percentage)d%% (or an equivalent published target) of the national budget "
@@ -110,7 +110,7 @@ msgstr ""
 "%(percentage)d%% du budget national (ou un objectif equivalent publié) est "
 "alloué à la santé"
 
-#: models.py:372
+#: models.py:381
 msgid ""
 "Halve the proportion of health sector funding not disbursed against the "
 "approved annual budget."
@@ -118,7 +118,7 @@ msgstr ""
 "Réduire de moitié la proportion du financement du secteur de la santé qui "
 "n’est pas déboursé selon le budget annuel approuvé."
 
-#: models.py:381
+#: models.py:390
 msgid ""
 "Improvement of at least one measure (ie 0.5 points) on the PFM/CPIA scale of"
 " performance."
@@ -126,7 +126,7 @@ msgstr ""
 "Progrès d’au moins un degré (0.5 point) sur l’échelle de performance des "
 "systèmes de gestion des finances publiques de l’EPIN."
 
-#: models.py:390
+#: models.py:399
 msgid ""
 "Improvement of at least one measure on the four-point scale used to assess "
 "performance for this sector."
@@ -134,7 +134,7 @@ msgstr ""
 "Progrès d’au moins un degré sur l’échelle de quatre points utilisée pour "
 "évaluer les performances pour ce secteur"
 
-#: models.py:400
+#: models.py:409
 msgid ""
 "A transparent and monitorable performance assessment framework is in place "
 "to assess progress in the health sector."
@@ -142,24 +142,25 @@ msgstr ""
 "Un cadre d’évaluation transparent et controllable est en place afin "
 "d’évaluer les progrès dans le secteur de la santé"
 
-#: models.py:409
+#: models.py:418
 msgid ""
 "Mutual assesments (such as joint Annual Health Sector Review) are being made"
 " of progress implementing commitments in the health sector, including on aid"
 " effectiveness."
 msgstr ""
-"Des évaluations mutuelles des progrès accomplish , telles que les revues annuelles conjointes du secteur de la santé, ont été conduites, concernant\n"
-"la mise en oeuvre des engagements dans le secteur de la santé, y compris en ce qui concerne l’efficacité de l’aide."
+"Des évaluations mutuelles des progrès accomplis, telles que les revues "
+"annuelles conjointes du secteur de la santé, ont été conduites, concernant "
+"la mise en oeuvre des engagements dans le secteur de la santé, y compris en "
+"ce qui concerne l’efficacité de l’aide."
 
-#: models.py:418
+#: models.py:427
 #, python-format
 msgid ""
-"At least 10% of seats in the country's Health Sector Coordination mechanisms"
-" are allocated to Civil Society"
+"At least 10%% of seats in the country's Health Sector Coordination "
+"mechanisms are allocated to Civil Society"
 msgstr ""
-"> 10% des sièges alloués à la société civile dans\n"
-"le mécanisme de coordina􀀉on du secteur de la\n"
-"santé"
+"Des membres de la Société civile sont représentés à tous les moments clés du"
+" processus d’établissement des politiques et de planification"
 
 #: templates/scorecards/country-page-1.svg:5829
 msgid "ETHIOPIA"
@@ -251,7 +252,7 @@ msgstr "Budget national alloué à la santé"
 
 #: templates/scorecards/country-page-1.svg:5893
 msgid "Allocated to Health"
-msgstr "alloué à la santé"
+msgstr "Alloué à la santé"
 
 #: templates/scorecards/country-page-1.svg:5896
 msgid "Increase needed to meet the Abuja target"
@@ -263,9 +264,7 @@ msgstr "FINANCEMENT COMMUN"
 
 #: templates/scorecards/country-page-1.svg:5904
 msgid "Number of Development Partners using Pooled Mechanisms"
-msgstr ""
-"Nombre de partenaires de développement en utilisant les mécanismes de "
-"financement commun"
+msgstr "Nombre de partenaires qui fournissent des fonds communs"
 
 #: templates/scorecards/country-page-1.svg:5908
 msgid "COUNTRY OWNERSHIP &amp; ACCOUNTABILITY"
@@ -563,52 +562,52 @@ msgstr ""
 "IHP+"
 
 #: templates/scorecards/country-page-2.svg:7760
-#: templates/scorecards/ihp-page-1.svg:6926
+#: templates/scorecards/ihp-page-1.svg:6822
 msgid "EXPECTED RESULTS"
 msgstr "RESULTATS ATTENDUS"
 
 #: templates/scorecards/country-page-2.svg:7764
-#: templates/scorecards/ihp-page-1.svg:6931
+#: templates/scorecards/ihp-page-1.svg:6827
 msgid "RATING"
 msgstr "EVALUATION"
 
 #: templates/scorecards/country-page-2.svg:7768
-#: templates/scorecards/ihp-page-1.svg:6936
+#: templates/scorecards/ihp-page-1.svg:6832
 msgid "TARGET"
 msgstr "OBJECTIF-CIBLE"
 
 #: templates/scorecards/country-page-2.svg:7771
-#: templates/scorecards/ihp-page-1.svg:6941
+#: templates/scorecards/ihp-page-1.svg:6837
 msgid "OVERALL PROGRESS"
 msgstr "PROGRES GENERAUX"
 
 #: templates/scorecards/country-page-2.svg:7774
-#: templates/scorecards/ihp-page-1.svg:7003
+#: templates/scorecards/ihp-page-1.svg:6899
 msgid "target achieved"
 msgstr "objectif atteint"
 
 #: templates/scorecards/country-page-2.svg:7777
-#: templates/scorecards/ihp-page-1.svg:7013
+#: templates/scorecards/ihp-page-1.svg:6909
 msgid "progress made towards achieving target"
 msgstr "progrès accomplis vers la réalisation de l’objectif"
 
 #: templates/scorecards/country-page-2.svg:7780
-#: templates/scorecards/ihp-page-1.svg:7008
+#: templates/scorecards/ihp-page-1.svg:6904
 msgid "no progress or regression"
 msgstr "aucun progrès ou la régression"
 
 #: templates/scorecards/country-page-2.svg:7783
-#: templates/scorecards/ihp-page-1.svg:7018
+#: templates/scorecards/ihp-page-1.svg:6914
 msgid "data not provided"
 msgstr "données non fournies"
 
 #: templates/scorecards/country-page-2.svg:7786
-#: templates/scorecards/ihp-page-1.svg:7023
+#: templates/scorecards/ihp-page-1.svg:6919
 msgid "measure not applicable"
 msgstr "mesure ne s’applique pas"
 
 #: templates/scorecards/country-page-2.svg:7789
-#: templates/scorecards/ihp-page-1.svg:7028
+#: templates/scorecards/ihp-page-1.svg:6924
 msgid "indicates agreed target"
 msgstr "Objectif convenu"
 
@@ -626,7 +625,7 @@ msgid "No text."
 msgstr ""
 
 #: templates/scorecards/country-page-2.svg:7872
-#: templates/scorecards/ihp-page-1.svg:6947
+#: templates/scorecards/ihp-page-1.svg:6843
 msgid "Commitments are documented and mutually agreed."
 msgstr ""
 "Les engagements sont\n"
@@ -634,7 +633,7 @@ msgstr ""
 "mutuellement"
 
 #: templates/scorecards/country-page-2.svg:7879
-#: templates/scorecards/ihp-page-1.svg:6954
+#: templates/scorecards/ihp-page-1.svg:6850
 msgid ""
 "Support is based in country plans and strategies, including to strengthen "
 "Health Systems."
@@ -646,14 +645,14 @@ msgstr ""
 "de santé"
 
 #: templates/scorecards/country-page-2.svg:7886
-#: templates/scorecards/ihp-page-1.svg:6961
+#: templates/scorecards/ihp-page-1.svg:6857
 msgid "Funding commitments are long-term."
 msgstr ""
 "Les engagements financiers\n"
 "sont à long terme"
 
 #: templates/scorecards/country-page-2.svg:7893
-#: templates/scorecards/ihp-page-1.svg:6968
+#: templates/scorecards/ihp-page-1.svg:6864
 msgid "Funds are disbursed predictably, as committed."
 msgstr ""
 "Les fonds sont décaissés de\n"
@@ -661,7 +660,7 @@ msgstr ""
 "l'engagement"
 
 #: templates/scorecards/country-page-2.svg:7900
-#: templates/scorecards/ihp-page-1.svg:6975
+#: templates/scorecards/ihp-page-1.svg:6871
 msgid ""
 "Country systems for procurement and public financial management are used and"
 " strengthened."
@@ -673,7 +672,7 @@ msgstr ""
 "utilisés et renforcés"
 
 #: templates/scorecards/country-page-2.svg:7907
-#: templates/scorecards/ihp-page-1.svg:6982
+#: templates/scorecards/ihp-page-1.svg:6878
 msgid "Resources are being managed for Development Results."
 msgstr ""
 "Les ressources sont gérées\n"
@@ -681,33 +680,33 @@ msgstr ""
 "en matière de développment"
 
 #: templates/scorecards/country-page-2.svg:7914
-#: templates/scorecards/ihp-page-1.svg:6989
+#: templates/scorecards/ihp-page-1.svg:6885
 msgid "Mutual accountability is being demonstrated."
 msgstr ""
 "Une responsabilité mutuelle\n"
 "est perceptible"
 
 #: templates/scorecards/country-page-2.svg:7921
-#: templates/scorecards/ihp-page-1.svg:6996
+#: templates/scorecards/ihp-page-1.svg:6892
 msgid "Civil Society meaningfully engaged."
 msgstr ""
 "Participation significative de la\n"
 "société civile."
 
-#: templates/scorecards/ihp-page-1.svg:6904
+#: templates/scorecards/ihp-page-1.svg:6800
 msgid "WORKING DRAFT"
 msgstr ""
 
-#: templates/scorecards/ihp-page-1.svg:6909
+#: templates/scorecards/ihp-page-1.svg:6805
 msgid "2012 PARTNER SCORECARD FOR"
 msgstr "2012 SCORECARD DU PARTENAIRE POUR"
 
-#: templates/scorecards/ihp-page-1.svg:6915
+#: templates/scorecards/ihp-page-1.svg:6811
 msgid "ORGANISATION PROFILE"
 msgstr "PROFIL DE L'ORGANISATION"
 
-#: templates/scorecards/ihp-page-1.svg:6921
-msgid "COUNTRIES WHERE THE ORGANISATION IS ACTIVE"
+#: templates/scorecards/ihp-page-1.svg:6817
+msgid "IHP+RESULTS COUNTRIES WHERE THE ORGANISATION IS ACTIVE"
 msgstr "PAYS OU L'ORGANISATION S'ENGAGE"
 
 #: templates/scorecards/ihp-page-2.svg:1131

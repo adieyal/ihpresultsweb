@@ -424,7 +424,7 @@ class GovScorecard(object):
                 ])
             },
             "civilsociety":{
-                "description": _("At least 10% of seats in the country's Health Sector Coordination mechanisms are allocated to Civil Society"),
+                "description": _("At least 10%% of seats in the country's Health Sector Coordination mechanisms are allocated to Civil Society"),
                 "rating": rating_icon(r8Gb["target"]),
                 "max": 2,
                 "progress": add_previous_value(self.country, 'commitments.civilsociety', [
