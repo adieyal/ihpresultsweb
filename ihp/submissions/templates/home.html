@@ -11,6 +11,14 @@
     .indicatorblock li {
         display: inline;
     }
+
+    .by_indicator td {
+        padding: 3px;
+    } 
+
+    .by_indicator tr {
+        border-bottom: dotted 1px #898989;
+    } 
 </style>
 {% endblock head %}
 
@@ -60,20 +68,68 @@
                         <div>
                         <h2>Partner Data by Indicator</h2>
                         <p style="text-align:left">
-                            <ul style="text-align:left">
-                                <li><span class="indicatorblock"><a href="{% url agency_table_by_indicator "1DP" "English" %}">1DP</a></span></li>
-                                <li><span class="indicatorblock"><a href="{% url agency_table_by_indicator "2DPa" "English" %}">2DPa</a> <a href="{% url agency_graphs_by_indicator "2DPa" "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/></a> (<a href="{% url agency_graphs_by_indicator "2DPa" "English" %}?exclusions=true">with exclusions</a>)</span></li>
-                                <li><span class="indicatorblock"><a href="{% url agency_table_by_indicator "2DPb" "English" %}">2DPb</a> <a href="{% url agency_graphs_by_indicator "2DPb" "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/></a> (<a href="{% url agency_graphs_by_indicator "2DPb" "English" %}?exclusions=true">with exclusions</a>)</span></li>
-                                <li><span class="indicatorblock"><a href="{% url agency_table_by_indicator "2DPc" "English" %}">2DPc</a> <a href="{% url agency_graphs_by_indicator "2DPc" "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/></a></span></li>
-                                <li><span class="indicatorblock"><a href="{% url agency_table_by_indicator "3DP" "English" %}">3DP</a> <a href="{% url agency_graphs_by_indicator "3DP" "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/></a> (<a href="{% url agency_graphs_by_indicator "3DP" "English" %}?exclusions=true">with exclusions</a>)</span></li>
-                                <li><span class="indicatorblock"><a href="{% url agency_table_by_indicator "4DP" "English" %}">4DP</a> <a href="{% url agency_graphs_by_indicator "4DP" "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/></a></span></li>
-                                <li><span class="indicatorblock"><a href="{% url agency_table_by_indicator "5DPa" "English" %}">5DPa</a> <a href="{% url agency_graphs_by_indicator "5DPa" "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/></a> (<a href="{% url agency_graphs_by_indicator "5DPa" "English" %}?exclusions=true">with exclusions</a>)</span></li>
-                                <li><span class="indicatorblock"><a href="{% url agency_table_by_indicator "5DPb" "English" %}">5DPb</a> <a href="{% url agency_graphs_by_indicator "5DPb" "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/></a> (<a href="{% url agency_graphs_by_indicator "5DPb" "English" %}?exclusions=true">with exclusions</a>)</span></li>
-                                <li><span class="indicatorblock"><a href="{% url agency_table_by_indicator "5DPc" "English" %}">5DPc</a> <a href="{% url agency_graphs_by_indicator "5DPc" "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/></a></span></li>
-                                <li><span class="indicatorblock"><a href="{% url agency_table_by_indicator "6DP" "English" %}">6DP</a></span></li>
-                                <li><span class="indicatorblock"><a href="{% url agency_table_by_indicator "7DP" "English" %}">7DP</a></span></li>
-                                <li><span class="indicatorblock"><a href="{% url agency_table_by_indicator "8DP" "English" %}">8DP</a></span></li>
-                            </ul>
+                            <table class="by_indicator">
+                                <tr>
+                                    <td><span class="indicatorblock"><a href="{% url agency_table_by_indicator "1DP" "English" %}">1DP</a></span></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="indicatorblock"><a href="{% url agency_table_by_indicator "2DPa" "English" %}">2DPa</a></td>
+                                    <td><a href="{% url agency_graphs_by_indicator "2DPa" "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/></a></td>
+                                    <td><a href="{% url agency_graphs_by_indicator "2DPa" "English" %}?exclusions=true" title="with exclusions"><img src="{{ MEDIA_URL }}images/graph_icon_e.png"/></a></span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="indicatorblock"><a href="{% url agency_table_by_indicator "2DPb" "English" %}">2DPb</a></td>
+                                    <td><a href="{% url agency_graphs_by_indicator "2DPb" "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/></a></td>
+                                    <td><a href="{% url agency_graphs_by_indicator "2DPb" "English" %}?exclusions=true" title="with exclusions"><img src="{{ MEDIA_URL }}images/graph_icon_e.png"/></a></span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="indicatorblock"><a href="{% url agency_table_by_indicator "2DPc" "English" %}">2DPc</a></td>
+                                    <td><a href="{% url agency_graphs_by_indicator "2DPc" "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/></a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="indicatorblock"><a href="{% url agency_table_by_indicator "3DP" "English" %}">3DP</a></td>
+                                    <td><a href="{% url agency_graphs_by_indicator "3DP" "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/></a></td>
+                                    <td><a href="{% url agency_graphs_by_indicator "3DP" "English" %}?exclusions=true" title="with exclusions"><img src="{{ MEDIA_URL }}images/graph_icon_e.png"/></a></span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="indicatorblock"><a href="{% url agency_table_by_indicator "4DP" "English" %}">4DP</a></td>
+                                    <td><a href="{% url agency_graphs_by_indicator "4DP" "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/></a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="indicatorblock"><a href="{% url agency_table_by_indicator "5DPa" "English" %}">5DPa</a></td>
+                                    <td><a href="{% url agency_graphs_by_indicator "5DPa" "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/></a></td>
+                                    <td><a href="{% url agency_graphs_by_indicator "5DPa" "English" %}?exclusions=true" title="with exclusions"><img src="{{ MEDIA_URL }}images/graph_icon_e.png"/></a></span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="indicatorblock"><a href="{% url agency_table_by_indicator "5DPb" "English" %}">5DPb</a></td>
+                                    <td><a href="{% url agency_graphs_by_indicator "5DPb" "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/></a></td>
+                                    <td><a href="{% url agency_graphs_by_indicator "5DPb" "English" %}?exclusions=true" title="with exclusions"><img src="{{ MEDIA_URL }}images/graph_icon_e.png"/></a></span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="indicatorblock"><a href="{% url agency_table_by_indicator "5DPc" "English" %}">5DPc</a></td>
+                                    <td><a href="{% url agency_graphs_by_indicator "5DPc" "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/></a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="indicatorblock"><a href="{% url agency_table_by_indicator "6DP" "English" %}">6DP</a></span></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="indicatorblock"><a href="{% url agency_table_by_indicator "7DP" "English" %}">7DP</a></span></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="indicatorblock"><a href="{% url agency_table_by_indicator "8DP" "English" %}">8DP</a></span></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
                         </p>
                         </div>
                         <div>
