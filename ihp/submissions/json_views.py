@@ -12,6 +12,22 @@ def foz(val):
     except (TypeError, ValueError):
         return 0
 
+def hss(request):
+    countries = models.Country.objects.order_by("country")
+    
+    js = []
+    for country in countries:
+        js.append({
+            
+            "country" : country.country,
+            "phc_clincs" : country.normalise_by_population(country.phc_clinics),
+            "health_workers" : country.normalise_by_population(country.health_workers),
+            "health_systems" : country.funds_for_health_systems
+        })
+            
+    return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")
+    
+
 def volumes_by_country(request):
     countries = models.Country.objects.order_by("country")
     agencies = models.Agency.objects.order_by("agency")
