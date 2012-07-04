@@ -164,62 +164,14 @@ urlpatterns = patterns('',
         "template_name" : "submissions/agency_ratings2.html",
     }, 'agency_ratings2'),
 
-
-    # Export views
-    (
-        r'^scorecard/agency/questionnaires/$', 
-        'submissions.views.dp_questionnaire', 
-        {}, 
-        'agency_questionnaire'
-    ),
-
-    (
-        r'^scorecard/agency/questionnaires/2009/$', 
-        'submissions.views.dp_questionnaire', 
-        {
-            "use_2009" : True
-        }, 'agency_questionnaire_2009'
-    ),
-
-    (
-        r'^scorecard/agency/questionnaires/cols/$', 
-        'submissions.views.dp_questionnaire', 
-        {
-            "template_name" : "submissions/dp_questionnaire_cols.html"
-        }, 
-        'agency_questionnaire_cols'
-    ),
-
-    (
-        r'^scorecard/agency/questionnaires/2009/cols/$', 
-        'submissions.views.dp_questionnaire', 
-        {
-            "template_name" : "submissions/dp_questionnaire_cols.html",
-            "use_2009" : True
-        }, 
-        'agency_questionnaire_cols_2009'
-    ),
-
-    (
-        r'^scorecard/country/questionnaires/$', 
-        'submissions.views.gov_questionnaire', 
-        {}, 
-        'gov_questionnaire'
-    ),
-
-    (
-        r'^scorecard/country/questionnaires/2009/$', 
-        'submissions.views.gov_questionnaire', 
-        {
-            "use_2009" : True
-        }, 
-        'gov_questionnaire_2009'
-    ),
     
     # Public website views
     (r'^public/', include('ihp.publicweb.urls')),
 
     (r'^admin/', include(admin.site.urls)),
+
+    # Scorecards views
+    (r'^export/', include('ihp.submissions.export_urls')),
 
     # Scorecards views
     (r'^scorecards/', include('ihp.scorecards.urls')),
