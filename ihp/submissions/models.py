@@ -4,6 +4,18 @@ import math
 from django.utils.functional import curry
 from utils import memoize
 
+def safe_div(x, y):
+    try:
+        return float(x) / float(y)
+    except:
+        return None
+
+def safe_mul(x, y):
+    try:
+        return float(x) * float(y)
+    except:
+        return None
+
 # Nasty monkey patching ahead -- BEWARE!    
 class old_dataset:
     def __init__(self):
@@ -94,6 +106,56 @@ class Country(models.Model):
     def agencies(self):
         return Agency.objects.filter(agencycountries__country=self).filter(type="Agency").order_by("agency")
 
+    @property
+    def _submission(self):
+        submission = self.submission = GovQuestion.objects.get(
+            question_number=1, 
+            submission__country=self
+        ).submission
+        return submission
+
+    def _question(self, qnum):
+        return GovQuestion.objects.get(question_number=qnum, submission=self._submission)
+
+    @property
+    def phc_clinics(self):
+        q = self._question("20")
+        return {
+            "base_val" : q.base_val,
+            "cur_val" : q.cur_val,
+        }
+
+    @property
+    def population(self):
+        q = self._question("19")
+        return {
+            "base_val" : q.base_val,
+            "cur_val" : q.cur_val,
+        }
+
+    @property
+    def health_workers(self):
+        q = self._question("18")
+        return {
+            "base_val" : q.base_val,
+            "cur_val" : q.cur_val,
+        }
+
+    @property
+    def funds_for_health_systems(self):
+        funds = self._question("21")
+        return {
+            "base_val" : funds.base_val_as_dollars,
+            "cur_val" : funds.cur_val_as_dollars,
+        }
+
+    def normalise_by_population(self, val, by_pop=10000):
+        pop = self.population
+        return {
+            "base_val" : safe_mul(safe_div(val["base_val"], pop["base_val"]), by_pop),
+            "cur_val" : safe_mul(safe_div(val["cur_val"], pop["cur_val"]), by_pop),
+        }
+        
     def __unicode__(self):
         return self.country
 
