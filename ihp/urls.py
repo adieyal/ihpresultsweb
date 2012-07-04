@@ -37,22 +37,6 @@ urlpatterns = patterns('',
     (r'^api/gov_ratings/(?P<country_id>\d+)/$', 'submissions.api.gov_ratings', {}, 'api_gov_ratings'),
     (r'^api/country_scorecard/(?P<country_id>\d+)/$', 'submissions.api.country_scorecard_overrides', {}, 'api_country_scorecard'),
 
-    # Graph Views
-    (r"^agencies/graphs/highlevel/(?P<language>\w+)/$", "submissions.graphs.highlevelgraphs", {}, "highlevelgraphs"),
-    (r"^agencies/graphs/projection/(?P<language>\w+)/$", "submissions.graphs.projectiongraphs", {}, "projectiongraphs"),
-    (r"^agencies/graphs/(?P<indicator>\w+)/(?P<language>\w+)/$", "submissions.graphs.agency_graphs_by_indicator", {}, "agency_graphs_by_indicator"),
-
-
-    (r"^agencies/(?P<agency_name>[a-zA-Z\s]+)/graphs/(?P<language>\w+)/$", "submissions.graphs.agencygraphs", {}, "agencygraphs"),
-    (r"^agencies/graphs/by_country/(?P<country_name>[a-zA-Z\s]+)/graphs/(?P<language>\w+)/$", "submissions.graphs.countrygraphs", {}, "countrygraphs"),
-
-    (r"^countries/graphs/(?P<language>\w+)/$", "submissions.graphs.government_graphs", {
-        "template_name" : "submissions/main_base.html",
-        "extra_context" : {
-            "content_file" : "submissions/country_graphs_by_indicator.html"
-        }
-    }, "government_graphs"),
-
     # Table Views
     (r'^agencies/tables/by_country/(?P<country_id>\d+)/(?P<language>\w+)/$', 'submissions.views.agency_table_by_country', {
         "template_name" : "submissions/main_base.html",
@@ -179,6 +163,9 @@ urlpatterns = patterns('',
     # JSON views
     (r'^json/', include('ihp.submissions.json_urls')),
 
+    # Graph views
+    (r'^graphs/', include('ihp.submissions.graph_urls')),
+
     # Agency Tables
     (r'^agencies/tables', include('ihp.submissions.agencytable_urls')),
 
@@ -197,9 +184,10 @@ urlpatterns = patterns('',
 _media_url = settings.MEDIA_URL
 if _media_url.startswith('/'):
     _media_url = _media_url[1:]
-urlpatterns += patterns('',
-    (r'^%s(?P<path>.*)$' % _media_url, serve,
-        {'document_root' : settings.MEDIA_ROOT}, 'ihp-media'))
+    urlpatterns += patterns('',
+        (r'^%s(?P<path>.*)$' % _media_url, serve,
+        {'document_root' : settings.MEDIA_ROOT}, 'ihp-media')
+    )
 del(_media_url, serve)
 
 
