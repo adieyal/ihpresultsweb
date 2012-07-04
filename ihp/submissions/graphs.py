@@ -560,8 +560,14 @@ def agencygraphs(request, agency_name, language=None, template_name="submissions
             base_val, _, latest_val, _ = indicators[indicator][0]
             _, _, previous_val, _ = old_indicators[indicator][0]
             country_data[indicator] = calc_graph_values(indicator, base_val, previous_val, latest_val)
-            if indicator == "2DPa":
-                country_data["2DPa_2"] = (base_val, previous_val, latest_val)
+        # Calculate the 2DPa absolute value graphs. Ugly, but difficult to do it
+        # without changing indicators.py.
+        indicators = calc_agency_country_indicators(agency, country, funcs=positive_funcs)
+        with old_dataset():
+            old_indicators = calc_agency_country_indicators(agency, country, funcs=positive_funcs)
+        base_val, _, latest_val, _ = indicators["2DPa"][0]
+        _, _, previous_val, _ = old_indicators["2DPa"][0]
+        country_data["2DPa_2"] = (base_val, previous_val, latest_val)
         data[country.country] = country_data
     
     agency_name = agency.agency
@@ -660,8 +666,14 @@ def countrygraphs(request, country_name, language, template_name="submissions/co
             base_val, _, latest_val, _ = indicators[indicator][0]
             _, _, previous_val, _ = old_indicators[indicator][0]
             agency_data[indicator] = calc_graph_values(indicator, base_val, previous_val, latest_val)
-            if indicator == "2DPa":
-                agency_data["2DPa_2"] = (base_val, previous_val, latest_val)
+        # Calculate the 2DPa absolute value graphs. Ugly, but difficult to do it
+        # without changing indicators.py.
+        indicators = calc_agency_country_indicators(agency, country, funcs=positive_funcs)
+        with old_dataset():
+            old_indicators = calc_agency_country_indicators(agency, country, funcs=positive_funcs)
+        base_val, _, latest_val, _ = indicators["2DPa"][0]
+        _, _, previous_val, _ = old_indicators["2DPa"][0]
+        agency_data["2DPa_2"] = (base_val, previous_val, latest_val)
         data[agency.agency] = agency_data
 
     country_name = country.country
