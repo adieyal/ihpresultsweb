@@ -350,9 +350,13 @@ class Command(BaseCommand):
             return
 
         for f in glob("%s/*.xls" % import_dir):
-            parser = SubmissionParser.get_parser(f)
-            if parser.type == submission_type:
-                submission = parser.process()
+	    print 'Processing file: %s' % (f)
+            try:
+                parser = SubmissionParser.get_parser(f)
+                if parser.type == submission_type:
+                    submission = parser.process()
+            except Exception, e:
+                print '[ERROR] Error processing file: %s (%s)' % (f, e)
             # Ideally, the additional import could be injected in at the beginning of process responses
             # But there is a danger that the newly imported values would be overriden by older responses.
             # In this case I prefer to run it at the end of the import and manually copy across 10 and 11.

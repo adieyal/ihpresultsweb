@@ -75,6 +75,7 @@ class SubmissionParser(object):
     def get_parser(cls, f):
         sheet = cls.get_data_sheet(f)
         if not sheet:
+            print '[ERROR] Unable to find the required sheet.'
             raise Exception("Could not detect file type")
 
         if sheet["type"] == SubmissionParser.DP_SHEET:

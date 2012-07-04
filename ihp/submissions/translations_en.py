@@ -80,8 +80,8 @@ agency_graphs = {
         "yAxis" : "% change in funds not reported <br>on government\\'s budget",
     },
     "2DPa_2" : {
-        "title" : "2DPa: %% of %(agency_name)s\\'s aid flows to the health sector <br>not reported on goverment\\'s budget",
-        "yAxis" : "% of funds not reported <br>on government\\'s budget",
+        "title" : "2DPa: %% of %(agency_name)s\\'s aid flows to the health sector <br>reported on goverment\\'s budget",
+        "yAxis" : "% of funds reported <br>on government\\'s budget",
     },
     "2DPb" : {
         "title" : "2DPb: Change in %% of capacity development provided <br>by the %(agency_name)s through coordinated programmes",
@@ -119,8 +119,8 @@ country_graphs = {
         "yAxis" : "%% change in aid flows not reported <br/>on government\\'s budget",
     },
     "2DPa_2" : {
-        "title" : "2DPa: %% of %(country_name)s\\'s aid flows to the health sector <br>not reported on goverment\\'s budget",
-        "yAxis" : "%% of funds not reported <br>on government\\'s budget",
+        "title" : "2DPa: %% of %(country_name)s\\'s aid flows to the health sector <br>reported on goverment\\'s budget",
+        "yAxis" : "%% of funds reported <br>on government\\'s budget",
     },
     "2DPb" : {
         "title" : "2DPb: Change in %% of capacity development support provided to %(country_name)s <br/>health sector through coordinated programmes",
