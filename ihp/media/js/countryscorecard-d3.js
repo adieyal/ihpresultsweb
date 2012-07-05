@@ -247,7 +247,7 @@ var fill_svg = function(json){
                     data :series
                 };
                 hb = new HorizontalBarGraph(hb);
-            }else if (data.type == 'dot') {
+            } else if (data.type == 'dot') {
                 build_dot_graph(data);
 
             }
