@@ -115,44 +115,51 @@ class Country(models.Model):
         return submission
 
     def _question(self, qnum):
-        return GovQuestion.objects.get(question_number=qnum, submission=self._submission)
+        try:
+            return GovQuestion.objects.get(question_number=qnum, submission=self._submission)
+        except GovQuestion.DoesNotExist:
+            return None
+
+    def _prepare_output(self, qnum):
+        q = self._question(qnum)
+        with old_dataset():
+            q_2009 = self._question(qnum)
+
+        return {
+            "base_val" : q.base_val,
+            "2009_val" : q_2009.cur_val if q_2009 else None,
+            "cur_val" : q.cur_val,
+        }
 
     @property
     def phc_clinics(self):
-        q = self._question("20")
-        return {
-            "base_val" : q.base_val,
-            "cur_val" : q.cur_val,
-        }
+        return self._prepare_output("20")
 
     @property
     def population(self):
-        q = self._question("19")
-        return {
-            "base_val" : q.base_val,
-            "cur_val" : q.cur_val,
-        }
+        return self._prepare_output("19")
 
     @property
     def health_workers(self):
-        q = self._question("18")
-        return {
-            "base_val" : q.base_val,
-            "cur_val" : q.cur_val,
-        }
+        return self._prepare_output("18")
 
     @property
     def funds_for_health_systems(self):
-        funds = self._question("21")
+        q = self._question("21")
+        with old_dataset():
+            q_2009 = self._question("21")
+
         return {
-            "base_val" : funds.base_val_as_dollars,
-            "cur_val" : funds.cur_val_as_dollars,
+            "base_val" : q.base_val_as_dollars if q else None,
+            "2009_val" : q_2009.base_val_as_dollars if q_2009 else None,
+            "cur_val" : q.cur_val_as_dollars,
         }
 
     def normalise_by_population(self, val, by_pop=10000):
         pop = self.population
         return {
             "base_val" : safe_mul(safe_div(val["base_val"], pop["base_val"]), by_pop),
+            "2009_val" : safe_mul(safe_div(val["2009_val"], pop["2009_val"]), by_pop),
             "cur_val" : safe_mul(safe_div(val["cur_val"], pop["cur_val"]), by_pop),
         }
         
