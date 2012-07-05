@@ -201,9 +201,9 @@ class DPQuestion(models.Model):
     submission = models.ForeignKey(Submission, null=False)
     question_number = models.CharField(max_length=10, null=False)
     baseline_year = models.CharField(max_length=4, null=False)
-    baseline_value = models.CharField(max_length=20, null=False)
+    baseline_value = models.CharField(max_length=20, null=False, blank=True)
     latest_year = models.CharField(max_length=4, null=False)
-    latest_value = models.CharField(max_length=20, null=False)
+    latest_value = models.CharField(max_length=20, null=False, blank=True)
     comments = models.TextField()
     objects = DPQuestionManager()
 
@@ -228,7 +228,7 @@ class DPQuestion(models.Model):
             
         except (ValueError, TypeError):
             if old_val == None or old_val.strip() == "":
-                return "no"
+                return None
             #print "Warning: I don't know how to deal with this: ", self.submission.agency, self.submission.country, old_val, type(old_val)
             return old_val
         return "no"
