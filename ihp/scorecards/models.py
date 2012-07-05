@@ -167,12 +167,18 @@ class GovScorecard(object):
         }
 
     def get_health_finance(self):
-        
-        
-        domestic_baseline = r0(in_millions(foz(self.question("6").baseline_value)))
-        domestic_latest = r0(in_millions(foz(self.question("6").latest_value)))
-        all_baseline = r0(in_millions(foz(self.question("7").baseline_value)))
-        all_latest = r0(in_millions(foz(self.question("7").latest_value)))
+        if min([in_millions(foz(self.question("6").baseline_value)),
+	        in_millions(foz(self.question("6").latest_value)),
+                in_millions(foz(self.question("7").baseline_value)),
+                in_millions(foz(self.question("7").latest_value))]) < 10:
+            r = r2
+        else:
+            r = r0
+
+        domestic_baseline = r(in_millions(foz(self.question("6").baseline_value)))
+        domestic_latest = r(in_millions(foz(self.question("6").latest_value)))
+        all_baseline = r(in_millions(foz(self.question("7").baseline_value)))
+        all_latest = r(in_millions(foz(self.question("7").latest_value)))
 
         external_baseline = all_baseline - domestic_baseline if all_baseline > domestic_baseline else 0
         external_latest = all_latest - domestic_latest if all_latest > domestic_latest else 0
@@ -411,7 +417,10 @@ class GovScorecard(object):
                 ])
             },
             "civilsociety":{
-                "description": _("At least 10% of seats in the country's Health Sector Coordination mechanisms are allocated to Civil Society"),
+                # The empty list here is required to get rid of the %%, whihch in turn
+                # is required for translations to work. Removing it will cause a double
+                # % on the scorecard.
+                "description": _("At least 10%% of seats in the country's Health Sector Coordination mechanisms are allocated to Civil Society") % [],
                 "rating": rating_icon(r8Gb["target"]),
                 "max": 2,
                 "progress": add_previous_value(self.country, 'commitments.civilsociety', [
