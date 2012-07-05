@@ -99,6 +99,14 @@ def criterion_both_yes(base_val, cur_val, criterion_param):
         return True
     return False
 
+def criterion_either_yes(base_val, cur_val, criterion_param):
+    if cur_val == NA_STR: 
+        raise CannotCalculateException() 
+    if cur_val == None or len(cur_val.strip()) != 2:
+        raise MissingValueException()
+
+    return "y" in cur_val.lower()
+
 class MissingValueException(Exception):
     pass
 
@@ -136,6 +144,7 @@ criteria_funcs = {
    "Absolute Value Increase" : criterion_absolute_increase,
    "Absolute Value Decrease" : criterion_absolute_decrease,
    "Both Questions Yes" : criterion_both_yes,
+   "Either Question Yes" : criterion_either_yes,
    "First Question Yes" : criterion_first_yes,
    "First Question Under Development" : criterion_under_development,
 }
