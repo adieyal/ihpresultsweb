@@ -204,7 +204,7 @@ class DPQuestion(models.Model):
     baseline_value = models.CharField(max_length=20, null=False, blank=True)
     latest_year = models.CharField(max_length=4, null=False)
     latest_value = models.CharField(max_length=20, null=False, blank=True)
-    comments = models.TextField()
+    comments = models.TextField(blank=True)
     objects = DPQuestionManager()
 
     def __unicode__(self):
