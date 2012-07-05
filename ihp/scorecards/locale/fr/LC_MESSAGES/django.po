@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-03 09:00+0200\n"
-"PO-Revision-Date: 2012-07-03 09:00\n"
+"POT-Creation-Date: 2012-07-05 14:44+0200\n"
+"PO-Revision-Date: 2012-07-05 14:44\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,50 +19,50 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 "X-Translated-Using: django-rosetta 0.6.8\n"
 
-#: models.py:128
+#: models.py:115
 msgid "No data available"
 msgstr "Pas de donnees disponibles"
 
-#: models.py:161
+#: models.py:145 models.py:147
 msgid "Signed Agreement"
 msgstr "Accord signé"
 
-#: models.py:165
+#: models.py:159
 msgid "Includes current targets and budgets"
 msgstr "Inclut les cibles et les budgets actuels"
 
-#: models.py:166
+#: models.py:160
 msgid "Jointly Assessed"
 msgstr "Évalué conjointement"
 
-#: models.py:169
+#: models.py:163
 msgid "Active joint monitoring"
 msgstr "Suivi conjoint actif"
 
-#: models.py:170
+#: models.py:164
 msgid "Number of development partner missions"
 msgstr ""
 "Nombre de missions effectuées par les\n"
 "partenaires de développement"
 
-#: models.py:171
+#: models.py:165
 #, python-format
 msgid ""
-"%(percentage)g%% of seats in the health sector coordination mechanism are "
+"%(percentage)s%% of seats in the health sector coordination mechanism are "
 "allocated to civil society"
 msgstr ""
-"%(percentage)g%% des sièges alloués à la société civile dans\n"
+"%(percentage)s%% des sièges alloués à la société civile dans\n"
 "le mécanisme de coordina􀀉on du secteur de la\n"
 "santé"
 
-#: models.py:243 models.py:249
+#: models.py:234 models.py:240
 msgid "REFLECTS GOOD PRACTICE (OR REFORM IN PROGRESS)"
 msgstr ""
 "REFLETE UNE PRATIQUE\n"
 "EXEMPLAIRE (OU UNE\n"
 "REFORME EN COURS)"
 
-#: models.py:245 models.py:251 models.py:257
+#: models.py:236 models.py:242 models.py:248
 msgid ""
 "Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, "
 "neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, "
@@ -72,20 +72,20 @@ msgstr ""
 "neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, "
 "nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est."
 
-#: models.py:255
+#: models.py:246
 msgid "DONOR CAPACITY DEVELOPMENT PROVIDED THROUGH COORDINATED PROGRAMMES"
 msgstr ""
 "DEVELOPPEMENT DES CAPACITES PAR\n"
 "LES PROGRAMMES COORDONNES PAR\n"
 "LES BAILLEURS DE FONDS"
 
-#: models.py:344
+#: models.py:336
 msgid "An IHP+ Compact or equivalent mutual agreement is in place."
 msgstr ""
 "Un pacte IHP+ ou accord mutuel équivalent est\n"
 "en place"
 
-#: models.py:353
+#: models.py:345
 msgid ""
 "A National Health Sector Plan/ Strategy is in place with current targets & "
 "budgets that have been jointly assessed."
@@ -93,7 +93,7 @@ msgstr ""
 "Un plan / une stratégie du secteur national de la santé est en place dont "
 "les objectifs et lesbudgets sont actuels et ont évalués conjointement."
 
-#: models.py:362
+#: models.py:354
 msgid ""
 "A costed, comprehensive national HRH plan (integrated with the health plan) "
 "is being implemented or developed."
@@ -101,7 +101,7 @@ msgstr ""
 "Un plan national de ressources humaines de la santé chiffré et exhaustif (intégré dans le plan de\n"
 "santé national) est mis en oeuvre ou en cours de développement"
 
-#: models.py:371
+#: models.py:363
 #, python-format
 msgid ""
 "%(percentage)d%% (or an equivalent published target) of the national budget "
@@ -110,7 +110,7 @@ msgstr ""
 "%(percentage)d%% du budget national (ou un objectif equivalent publié) est "
 "alloué à la santé"
 
-#: models.py:381
+#: models.py:373
 msgid ""
 "Halve the proportion of health sector funding not disbursed against the "
 "approved annual budget."
@@ -118,7 +118,7 @@ msgstr ""
 "Réduire de moitié la proportion du financement du secteur de la santé qui "
 "n’est pas déboursé selon le budget annuel approuvé."
 
-#: models.py:390
+#: models.py:382
 msgid ""
 "Improvement of at least one measure (ie 0.5 points) on the PFM/CPIA scale of"
 " performance."
@@ -126,7 +126,7 @@ msgstr ""
 "Progrès d’au moins un degré (0.5 point) sur l’échelle de performance des "
 "systèmes de gestion des finances publiques de l’EPIN."
 
-#: models.py:399
+#: models.py:391
 msgid ""
 "Improvement of at least one measure on the four-point scale used to assess "
 "performance for this sector."
@@ -134,7 +134,7 @@ msgstr ""
 "Progrès d’au moins un degré sur l’échelle de quatre points utilisée pour "
 "évaluer les performances pour ce secteur"
 
-#: models.py:409
+#: models.py:402
 msgid ""
 "A transparent and monitorable performance assessment framework is in place "
 "to assess progress in the health sector."
@@ -142,7 +142,7 @@ msgstr ""
 "Un cadre d’évaluation transparent et controllable est en place afin "
 "d’évaluer les progrès dans le secteur de la santé"
 
-#: models.py:418
+#: models.py:411
 msgid ""
 "Mutual assesments (such as joint Annual Health Sector Review) are being made"
 " of progress implementing commitments in the health sector, including on aid"
@@ -153,7 +153,7 @@ msgstr ""
 "la mise en oeuvre des engagements dans le secteur de la santé, y compris en "
 "ce qui concerne l’efficacité de l’aide."
 
-#: models.py:427
+#: models.py:423
 #, python-format
 msgid ""
 "At least 10%% of seats in the country's Health Sector Coordination "
