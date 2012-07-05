@@ -21,4 +21,9 @@ urlpatterns = patterns('ihp.submissions.json_views',
         'volumes_by_country', 
         name='json_volumes_by_country'
     ),
+    url(
+        r'^countries/hss/$', 
+        'hss', 
+        name='json_hss'
+    ),
 )

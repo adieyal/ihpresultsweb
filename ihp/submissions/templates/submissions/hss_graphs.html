@@ -1,0 +1,100 @@
+{% block head %}
+    {{ block.super }}
+    <style>
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="graphblock">
+    <div id="container_phc" class="graph"></div>
+    <div id="container_hw" class="graph"></div>
+    <div id="container_funds" class="graph"></div>
+</div>
+<script>
+
+    build_graph = function(options) {
+        chart_559136 = new Highcharts.Chart({
+            series : [
+                {
+                    data : options.base_data,
+                    name : '2007 data'
+                },
+                {
+                    data : options.y2009_data,
+                    name : '2009 data'
+                },
+                {
+                    data : options.cur_data,
+                    name : '2011 data'
+                }
+            ],
+            yAxis : {
+                title : {
+                    text : options.yaxis
+                }
+            },
+            chart : {
+                renderTo : options.container,
+                type : 'column'
+            },
+            var_name : options.graph_name,
+            xAxis : {
+                categories : countries
+            },
+            title : {
+                text : options.title
+            },
+            legend : {
+                enabled : true
+            }
+        });
+    }
+
+    var build_table = function(json) {
+        loadStop();
+        countries = json.map(function(x) { return x.country; });
+
+        build_graph({
+            base_data : json.map(function(x) { return d3.round(x.phc_clincs["base_val"], 2); }),
+            y2009_data : json.map(function(x) { return d3.round(x.phc_clincs["2009_val"], 2); }),
+            cur_data : json.map(function(x) { return d3.round(x.phc_clincs["cur_val"], 2); }),
+            yaxis : 'outpatient dept visits per 10,000 population',
+            title : 'Access to PHC Clinics',
+            container : 'container_phc',
+            graph_name : 'chart_phc'
+        
+        });
+
+        build_graph({
+            base_data : json.map(function(x) { return d3.round(x.health_workers["base_val"], 2); }),
+            y2009_data : json.map(function(x) { return d3.round(x.health_workers["2009_val"], 2); }),
+            cur_data : json.map(function(x) { return d3.round(x.health_workers["cur_val"], 2); }),
+            yaxis : 'Skilled medical personnel per 10,000 population',
+            title : 'Availability of Health Workers',
+            container : 'container_hw',
+            graph_name : 'chart_hw'
+        
+        });
+
+        build_graph({
+            base_data : json.map(function(x) { return d3.round(x.health_systems["base_val"], 2); }),
+            y2009_data : json.map(function(x) { return d3.round(x.health_systems["2009_val"], 2); }),
+            cur_data : json.map(function(x) { return d3.round(x.health_systems["cur_val"], 2); }),
+            yaxis : 'USD spent on health workforce increasing',
+            title : 'Funds for Health Systems',
+            container : 'container_funds',
+            graph_name : 'chart_funds'
+        
+        });
+
+    }
+    $('tspan').last().text('Source: DP data returns');
+
+    var json = '{% url json_hss %}';
+
+    d3.json(json, function(e){
+        build_table(e);
+    });
+    loadStart();
+</script>
+{% endblock %}

@@ -113,24 +113,25 @@ def country_response_breakdown(request, template_name="submissions/country_respo
     extra_context["counts"] = counts    
     return direct_to_template(request, template=template_name, extra_context=extra_context)
 
-def dp_questionnaire(request, template_name="submissions/dp_questionnaire.html", extra_context=None):
+def dp_questionnaire(request, template_name="submissions/dp_questionnaire.html", use_2009=False, extra_context=None):
 
     extra_context = extra_context or {}
     
-    if "use_2009" in extra_context:
+    if use_2009:
         with models.old_dataset():
             extra_context["questions"] = DPQuestion.objects.all().order_by(
                 "submission__agency", 
                 "submission__country", 
                 "question_number"
             )
+            return direct_to_template(request, template=template_name, extra_context=extra_context)
     else:
         extra_context["questions"] = DPQuestion.objects.all().order_by(
             "submission__agency", 
             "submission__country", 
             "question_number"
         )
-    return direct_to_template(request, template=template_name, extra_context=extra_context)
+        return direct_to_template(request, template=template_name, extra_context=extra_context)
 
 def country_export(request, language):
     language = get_object_or_404(Language, language=language)
@@ -209,15 +210,16 @@ def country_export(request, language):
         ])
     return response
 
-def gov_questionnaire(request, template_name="submissions/gov_questionnaire.html", extra_context=None):
+def gov_questionnaire(request, template_name="submissions/gov_questionnaire.html", use_2009=False, extra_context=None):
 
     extra_context = extra_context or {}
-    if "use_2009" in extra_context:
+    if use_2009:
         with models.old_dataset():
             extra_context["questions"] = GovQuestion.objects.all()
+            return direct_to_template(request, template=template_name, extra_context=extra_context)
     else:
         extra_context["questions"] = GovQuestion.objects.all()
-    return direct_to_template(request, template=template_name, extra_context=extra_context)
+        return direct_to_template(request, template=template_name, extra_context=extra_context)
 
 def dp_summary_edit(request, template_name="submissions/dp_summary_edit.html", extra_context=None):
     extra_context = extra_context or {}

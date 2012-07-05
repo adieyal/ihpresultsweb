@@ -37,22 +37,6 @@ urlpatterns = patterns('',
     (r'^api/gov_ratings/(?P<country_id>\d+)/$', 'submissions.api.gov_ratings', {}, 'api_gov_ratings'),
     (r'^api/country_scorecard/(?P<country_id>\d+)/$', 'submissions.api.country_scorecard_overrides', {}, 'api_country_scorecard'),
 
-    # Graph Views
-    (r"^agencies/graphs/highlevel/(?P<language>\w+)/$", "submissions.graphs.highlevelgraphs", {}, "highlevelgraphs"),
-    (r"^agencies/graphs/projection/(?P<language>\w+)/$", "submissions.graphs.projectiongraphs", {}, "projectiongraphs"),
-    (r"^agencies/graphs/(?P<indicator>\w+)/(?P<language>\w+)/$", "submissions.graphs.agency_graphs_by_indicator", {}, "agency_graphs_by_indicator"),
-
-
-    (r"^agencies/(?P<agency_name>[a-zA-Z\s]+)/graphs/(?P<language>\w+)/$", "submissions.graphs.agencygraphs", {}, "agencygraphs"),
-    (r"^agencies/graphs/by_country/(?P<country_name>[a-zA-Z\s]+)/graphs/(?P<language>\w+)/$", "submissions.graphs.countrygraphs", {}, "countrygraphs"),
-
-    (r"^countries/graphs/(?P<language>\w+)/$", "submissions.graphs.government_graphs", {
-        "template_name" : "submissions/main_base.html",
-        "extra_context" : {
-            "content_file" : "submissions/country_graphs_by_indicator.html"
-        }
-    }, "government_graphs"),
-
     # Table Views
     (r'^agencies/tables/by_country/(?P<country_id>\d+)/(?P<language>\w+)/$', 'submissions.views.agency_table_by_country', {
         "template_name" : "submissions/main_base.html",
@@ -164,57 +148,6 @@ urlpatterns = patterns('',
         "template_name" : "submissions/agency_ratings2.html",
     }, 'agency_ratings2'),
 
-
-    # Export views
-    (
-        r'^scorecard/agency/questionnaires/$', 
-        'submissions.views.dp_questionnaire', 
-        {}, 
-        'agency_questionnaire'
-    ),
-
-    (
-        r'^scorecard/agency/questionnaires/2009/$', 
-        'submissions.views.dp_questionnaire', 
-        {
-            "use_2009" : True
-        }, 'agency_questionnaire_2009'
-    ),
-
-    (
-        r'^scorecard/agency/questionnaires/cols/$', 
-        'submissions.views.dp_questionnaire', 
-        {
-            "template_name" : "submissions/dp_questionnaire_cols.html"
-        }, 
-        'agency_questionnaire_cols'
-    ),
-
-    (
-        r'^scorecard/agency/questionnaires/2009/cols/$', 
-        'submissions.views.dp_questionnaire', 
-        {
-            "template_name" : "submissions/dp_questionnaire_cols.html",
-            "use_2009" : True
-        }, 
-        'agency_questionnaire_cols_2009'
-    ),
-
-    (
-        r'^scorecard/country/questionnaires/$', 
-        'submissions.views.gov_questionnaire', 
-        {}, 
-        'gov_questionnaire'
-    ),
-
-    (
-        r'^scorecard/country/questionnaires/2009/$', 
-        'submissions.views.gov_questionnaire', 
-        {
-            "use_2009" : True
-        }, 
-        'gov_questionnaire_2009'
-    ),
     
     # Public website views
     (r'^public/', include('ihp.publicweb.urls')),
@@ -222,10 +155,16 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
 
     # Scorecards views
+    (r'^export/', include('ihp.submissions.export_urls')),
+
+    # Scorecards views
     (r'^scorecards/', include('ihp.scorecards.urls')),
     
     # JSON views
     (r'^json/', include('ihp.submissions.json_urls')),
+
+    # Graph views
+    (r'^graphs/', include('ihp.submissions.graph_urls')),
 
     # Agency Tables
     (r'^agencies/tables', include('ihp.submissions.agencytable_urls')),
@@ -245,9 +184,10 @@ urlpatterns = patterns('',
 _media_url = settings.MEDIA_URL
 if _media_url.startswith('/'):
     _media_url = _media_url[1:]
-urlpatterns += patterns('',
-    (r'^%s(?P<path>.*)$' % _media_url, serve,
-        {'document_root' : settings.MEDIA_ROOT}, 'ihp-media'))
+    urlpatterns += patterns('',
+        (r'^%s(?P<path>.*)$' % _media_url, serve,
+        {'document_root' : settings.MEDIA_ROOT}, 'ihp-media')
+    )
 del(_media_url, serve)
 
 

@@ -109,39 +109,23 @@ class GovScorecard(object):
 
             return (v - 1) * 100
 
-        def for_10000_population(val, baseline=False):
-            population_cur = self.question("19").cur_val
-            population_base = self.question("19").base_val
-            if baseline:
-                return safe_mul(safe_div(val, population_base), 10000)
-            else:
-                return safe_mul(safe_div(val, population_cur), 10000)
-
-        try:
-            healthsystems = self.question("21").cur_val_as_dollars
-        except Exception:
-            healthsystems = None
-
-
-        phcclinics_cur = for_10000_population(self.question("20").cur_val)
-        phcclinics_base = for_10000_population(self.question("20").base_val, True)
-        healthworkers_cur = for_10000_population(self.question("18").cur_val)
-        healthworkers_base = for_10000_population(self.question("18").base_val, True)
+        phcclinics = self.country.normalise_by_population(self.country.phc_clinics)
+        healthworkers = self.country.normalise_by_population(self.country.health_workers)
         
         no_data_available = _("No data available")
         return {
             "phcclinincs": {
-                "value": phcclinics_cur,
-                "percent": proportions(phcclinics_cur, phcclinics_base),
+                "value": phcclinics["cur_val"],
+                "percent": proportions(phcclinics["cur_val"], phcclinics["base_val"]),
                 "missing_data_text" : no_data_available
             },
             "healthworkers": {
-                "value": healthworkers_cur,
-                "percent": proportions(healthworkers_cur, healthworkers_base),
+                "value": healthworkers["cur_val"],
+                "percent": proportions(healthworkers["cur_val"], healthworkers["base_val"]),
                 "missing_data_text" : no_data_available
             },
             "healthsystems": {
-                "value": healthsystems,
+                "value": self.country.funds_for_health_systems["cur_val"],
                 "percent": safe_diff(latest_div_baseline("21"), 100),
                 "missing_data_text" : no_data_available
             }
