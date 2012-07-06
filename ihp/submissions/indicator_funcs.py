@@ -46,12 +46,12 @@ def count_factory(value):
 
         matches = lambda x : x
         if value:
-            matches = lambda x : x == value.lower()
+            matches = lambda x : x and (x == value.lower())
 
         if selector == base_selector:
-            return len([q for q in qs if matches(q.base_val.lower())])
+            return len([q for q in qs if q.base_val and matches(q.base_val.lower())])
         elif selector == cur_selector:
-            return len([q for q in qs if matches(q.cur_val.lower())])
+            return len([q for q in qs if q.cur_val and matches(q.cur_val.lower())])
     return count_value
 
 def country_perc_factory(value):
