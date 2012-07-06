@@ -40,9 +40,6 @@ r0 = lambda x : myround(x, 0)
 r1 = lambda x : myround(x, 1)
 r2 = lambda x : myround(x, 2)
 
-def in_millions(x):
-    return float(x) / 1000000
-
 rating_icon = lambda icon : "%sicons/%s.svg" % (media_url, icon)
 media_url = settings.MEDIA_URL
 
@@ -167,24 +164,18 @@ class GovScorecard(object):
         }
 
     def get_health_finance(self):
-        if min([in_millions(foz(self.question("6").baseline_value)),
-	        in_millions(foz(self.question("6").latest_value)),
-                in_millions(foz(self.question("7").baseline_value)),
-                in_millions(foz(self.question("7").latest_value))]) < 10:
-            r = r2
-        else:
-            r = r0
-
-        domestic_baseline = r(in_millions(foz(self.question("6").baseline_value)))
-        domestic_latest = r(in_millions(foz(self.question("6").latest_value)))
-        all_baseline = r(in_millions(foz(self.question("7").baseline_value)))
-        all_latest = r(in_millions(foz(self.question("7").latest_value)))
+        
+        
+        domestic_baseline = foz(self.question("6").baseline_value)
+        domestic_latest = foz(self.question("6").latest_value)
+        all_baseline = foz(self.question("7").baseline_value)
+        all_latest = foz(self.question("7").latest_value)
 
         external_baseline = all_baseline - domestic_baseline if all_baseline > domestic_baseline else 0
         external_latest = all_latest - domestic_latest if all_latest > domestic_latest else 0
         
         try:
-            allocated_to_health = domestic_latest / r0(in_millions(foz(self.question("5").latest_value))) * 100
+            allocated_to_health = domestic_latest / (foz(self.question("5").latest_value)) * 100
         except ZeroDivisionError:
             allocated_to_health = None
 
@@ -417,10 +408,7 @@ class GovScorecard(object):
                 ])
             },
             "civilsociety":{
-                # The empty list here is required to get rid of the %%, whihch in turn
-                # is required for translations to work. Removing it will cause a double
-                # % on the scorecard.
-                "description": _("At least 10%% of seats in the country's Health Sector Coordination mechanisms are allocated to Civil Society") % [],
+                "description": _("At least 10% of seats in the country's Health Sector Coordination mechanisms are allocated to Civil Society"),
                 "rating": rating_icon(r8Gb["target"]),
                 "max": 2,
                 "progress": add_previous_value(self.country, 'commitments.civilsociety', [

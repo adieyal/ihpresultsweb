@@ -381,7 +381,6 @@ class GovSubmissionParser(SubmissionParser):
 
         if rate_current:
             rate_current = rate_current.rate
-
         return {
             "1" : self.extract_yesno_value(6),
             "2" : self.extract_yesno_value(7),
