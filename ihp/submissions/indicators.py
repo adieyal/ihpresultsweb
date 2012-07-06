@@ -8,9 +8,10 @@ import logging
 
 is_none = lambda x : x == None or (unicode(x)).strip() == ""
 class IndicatorCalculator(object):
-    def __init__(self, func, args):
+    def __init__(self, func, args, ignore_missing):
         self.func = func
         self.args = args 
+        self.ignore_missing = ignore_missing
 
     def calc(self, qs, agency_or_country):
         countries = set(q.submission.country for q in qs)
@@ -42,25 +43,30 @@ class IndicatorCalculator(object):
         if len(excluded_agency_countries) == len(agency_countries):
             return NA_STR
 
-        # Add any countries with a missing answer in one of their answers to the excluded list
-        excluded_agency_countries |= set(
-            (q.submission.agency, q.submission.country)
-            for q in qs 
-            if is_none(self._getvalue(q))
-        )
-
-        # If we no longer have any countries to check then return MISSING
-        if len(excluded_agency_countries) == len(agency_countries):
-            return MISSING
-
-        remaining_agency_countries = [ac for ac in agency_countries if not ac in excluded_agency_countries]
         remaining_qs = [
             q for q in qs 
             if not (q.submission.agency, q.submission.country) in excluded_agency_countries
         ]
 
-        if len(remaining_qs) == 0:
-            return MISSING
+        # Add any countries with a missing answer in one of their answers to the excluded list
+        if self.ignore_missing:
+            excluded_agency_countries |= set(
+                (q.submission.agency, q.submission.country)
+                for q in qs 
+                if is_none(self._getvalue(q))
+            )
+
+            # If we no longer have any countries to check then return MISSING
+            if len(excluded_agency_countries) == len(agency_countries):
+                return MISSING
+
+            remaining_qs = [
+                q for q in qs 
+                if not (q.submission.agency, q.submission.country) in excluded_agency_countries
+            ]
+
+            if len(remaining_qs) == 0:
+                return MISSING
             
         val = self.func(remaining_qs, agency_or_country, self._selector, *self.args)
         return val
@@ -95,7 +101,6 @@ class LatestIndicatorCalculator(IndicatorCalculator):
         return cur_selector
 
 def calc_indicator(qs, agency_or_country, indicator, funcs=None):
-    #if type(qs) == QuerySet: qs = list(qs)
     is_none = lambda x : x == None or (unicode(x)).strip() == ""
 
     funcs = funcs or indicator_funcs
@@ -104,10 +109,17 @@ def calc_indicator(qs, agency_or_country, indicator, funcs=None):
     qs2 = [q for q in qs if q.question_number in args]
     comments = [(question.question_number, question.submission.country, question.comments) for question in qs2]
 
-    #if len(qs2) > 0 and qs2[0].submission.country.country == "Burkina Faso" and qs2[0].submission.agency.agency == "AfDB":
-    base_val = BaselineIndicatorCalculator(func, args).calc(qs2, agency_or_country)
+    ignore_missing = True
+    # For these indicators below it distorts the picture to exclude missing values from the denominator except where we are looking at the disaggregated level
+    def is_disaggregated(qs):
+        return len(set((q.submission.country, q.submission.agency) for q in qs)) == 1
+
+    if indicator in ["1DP", "6DP", "7DP", "8DP"] and not is_disaggregated(qs):
+        ignore_missing = False
+
+    base_val = BaselineIndicatorCalculator(func, args, ignore_missing).calc(qs2, agency_or_country)
     
-    cur_val = LatestIndicatorCalculator(func, args).calc(qs2, agency_or_country)
+    cur_val = LatestIndicatorCalculator(func, args, ignore_missing).calc(qs2, agency_or_country)
 
     
     base_year = MISSING
