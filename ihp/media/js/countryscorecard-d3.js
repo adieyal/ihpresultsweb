@@ -209,8 +209,8 @@ var fill_svg = function(json){
         id = '#' + i;
         n = d3.select(id);
 
-        d3.select(id+'-text')
-	    .text(data.description);
+        d3.select(id + '-text')
+            .text(data.description);
 
         if (n.node() !== null){
             //var text= n.selectAll('.text');
@@ -223,12 +223,12 @@ var fill_svg = function(json){
             }
 
             var graph = n.selectAll('.graph');
-            if (graph.node() !== null && data.type != 'dot'){
+            if (graph.node() !== null && data.type != 'dot') {
 
                 var series = [];
-                for (var k = 0; k < data.progress.length; k ++){
+                for (var k = 0; k < data.progress.length; k ++) {
                     var d = data.progress[k];
-                    series.push({'key': d.year, 'value': d.value});
+                    series.push({'key': d.year, 'value': d.value <= data.max ? d.value : data.max});
                 }
                 var hb = {
                     width:165,
@@ -244,7 +244,7 @@ var fill_svg = function(json){
                     },
                     line : data.line,
 
-                    data :series
+                    data : series
                 };
                 hb = new HorizontalBarGraph(hb);
             } else if (data.type == 'dot') {
@@ -414,6 +414,10 @@ build_text_element = function(n, id, data, index){
 
 };
 
+in_millions = function(v) {
+    return v / 1000000;
+}
+
 build_total_health = function(data){
     var t, i;
     var h = 100;
@@ -423,6 +427,8 @@ build_total_health = function(data){
 
     var max = 0;
     for (i =0; i < data.length; i++){
+        data[i].domestic = in_millions(data[i].domestic)
+        data[i].external = in_millions(data[i].external)
         t = data[i].domestic + data[i].external;
         if (t > max){
             max = t;
@@ -444,11 +450,11 @@ build_total_health = function(data){
     }
 
     offset= [0, 55, 107];
-    for (i =0; i < data.length; i++){
+    for (i = 0; i < data.length; i++){
         var x = offset[i];
         var d = data[i];
 
-        t = d.domestic + d.external;
+        t = d3.round(d.domestic + d.external, 2);
         var height = y(t);
         var ext_height = y(d.external);
 
@@ -479,14 +485,14 @@ build_total_health = function(data){
             .attr('rx', 3)
             .attr('class', 'domestic');
 
-	if (t > 0) {
-            n.append('text')
-		.attr('x', x + 8)
-		.attr('y', height)
-		.attr('dy', -5)
-		.style('text-anchor', 'middle')
-		.text('$' + t + 'm');
-	}
+        if (t > 0) {
+                n.append('text')
+            .attr('x', x + 8)
+            .attr('y', height)
+            .attr('dy', -5)
+            .style('text-anchor', 'middle')
+            .text('$' + t + 'm');
+        }
     }
 
 
