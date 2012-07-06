@@ -209,8 +209,8 @@ var fill_svg = function(json){
         id = '#' + i;
         n = d3.select(id);
 
-        d3.select(id+'-text')
-	    .text(data.description);
+        d3.select(id + '-text')
+            .text(data.description);
 
         if (n.node() !== null){
             //var text= n.selectAll('.text');
@@ -223,12 +223,12 @@ var fill_svg = function(json){
             }
 
             var graph = n.selectAll('.graph');
-            if (graph.node() !== null && data.type != 'dot'){
+            if (graph.node() !== null && data.type != 'dot') {
 
                 var series = [];
-                for (var k = 0; k < data.progress.length; k ++){
+                for (var k = 0; k < data.progress.length; k ++) {
                     var d = data.progress[k];
-                    series.push({'key': d.year, 'value': d.value});
+                    series.push({'key': d.year, 'value': d.value <= data.max ? d.value : data.max});
                 }
                 var hb = {
                     width:165,
@@ -244,7 +244,7 @@ var fill_svg = function(json){
                     },
                     line : data.line,
 
-                    data :series
+                    data : series
                 };
                 hb = new HorizontalBarGraph(hb);
             } else if (data.type == 'dot') {
