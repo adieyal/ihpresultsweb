@@ -434,7 +434,17 @@ build_total_health = function(data){
             max = t;
         }
     }
-    max = sigFigs(max * 1.2, 1);
+    //max = sigFigs(max * 1.2, 1);
+    if (max < 1) { max=1; }
+    else if (max < 5) { max=5; }
+    else if (max < 25) { max=25; }
+    else if (max < 50) { max=50; }
+    else if (max < 100) { max=100; }
+    else if (max < 250) { max=250; }
+    else if (max < 500) { max=500; }
+    else if (max < 1000) { max=1000; }
+    else if (max < 2500) { max=2500; }
+    else if (max < 5000) { max=5000; }
 
     if (isNaN(max))
         max = 100;
@@ -444,8 +454,8 @@ build_total_health = function(data){
 
     var values = d3.selectAll('#_x5F_values text');
 
-    var ticks = y.ticks(values[0].length);
-    for (i = 0; i < values[0].length - 1; i++){
+    var ticks = y.ticks(values[0].length-1);
+    for (i = 0; i < values[0].length; i++){
         d3.select(values[0][i]).text( 'US $' + ticks[i] + 'm');
     }
 
