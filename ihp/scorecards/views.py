@@ -44,8 +44,18 @@ def dp_scorecard_json(request, agency_id, language):
             AgencyProfile, agency=agency,
             language__language='English'
             )
+    
+    try:
+        summary = get_object_or_404(
+            DPScorecardSummary, agency=agency,
+            language=language
+            )
+    except Http404:
+        summary = get_object_or_404(
+            DPScorecardSummary, agency=agency,
+            language__language='English'
+            )
         
-    summary = get_object_or_404(DPScorecardSummary, agency=agency, language=language)
 
     data = calc_agency_ratings(agency, language)
 
