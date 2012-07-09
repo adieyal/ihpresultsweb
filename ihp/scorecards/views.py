@@ -34,11 +34,28 @@ def dp_scorecard_json(request, agency_id, language):
 
     agency = get_object_or_404(Agency, id=agency_id)
     language = get_object_or_404(Language, language=language)
-    profile = get_object_or_404(
-        AgencyProfile, agency=agency,
-        language=language
-    )
-    summary = get_object_or_404(DPScorecardSummary, agency=agency, language=language)
+    try:
+        profile = get_object_or_404(
+            AgencyProfile, agency=agency,
+            language=language
+            )
+    except Http404:
+        profile = get_object_or_404(
+            AgencyProfile, agency=agency,
+            language__language='English'
+            )
+    
+    try:
+        summary = get_object_or_404(
+            DPScorecardSummary, agency=agency,
+            language=language
+            )
+    except Http404:
+        summary = get_object_or_404(
+            DPScorecardSummary, agency=agency,
+            language__language='English'
+            )
+        
 
     data = calc_agency_ratings(agency, language)
 
