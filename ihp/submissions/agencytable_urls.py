@@ -30,6 +30,15 @@ urlpatterns = patterns('ihp.submissions.table_views',
         name="top5_countries"
     ),
     url(
+        r'early_signatories/$', 
+        direct_to_template, 
+        {
+            "template" : "submissions/main_base_bootstrap.html", 
+            "extra_context" : {"content_file" : "submissions/early_signatories.html"}
+        }, 
+        name="early_signatories"
+    ),
+    url(
         r'volumes_by_country/$', 
         direct_to_template, 
         {

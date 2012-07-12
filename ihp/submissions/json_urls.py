@@ -17,6 +17,11 @@ urlpatterns = patterns('ihp.submissions.json_views',
         name='json_top5_countries'
     ),
     url(
+        r'^agencies/early_signatories/$', 
+        'early_signatories', 
+        name='json_early_signatories'
+    ),
+    url(
         r'^agencies/volumes_by_country/$', 
         'volumes_by_country', 
         name='json_volumes_by_country'
