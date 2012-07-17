@@ -1,0 +1,106 @@
+
+{% block head %}
+    {{ block.super }}
+    <style>
+        #top5_countries {
+            margin: 50px;
+        }
+        table {
+            margin-bottom: 10px;
+        }
+
+        table td {
+            padding: 8px;
+        }
+
+        td, tr, th {
+            border: solid thin black;
+            text-align: center;
+        }
+
+    </style>
+{% endblock %}
+
+{% block content %}
+<div id="DataDisplay"></div>
+<div id="top5_countries">
+    <div class="row" id="top3">
+        <h1>All 4 Pillars</h1>
+    </div>
+    <div class="row" id="next2">
+        <h1>&lt; 4 pillars</h1>
+    </div>
+</div>
+<script>
+
+    fmt_val = function(v) {
+        if (v == "__NA__")
+            return "N/A"
+        return d3.round(v, 2);
+    }
+
+    build_table = function(js, group) {
+        var table = d3.select("#" + group)
+            .append("table");
+
+        var header_row = table.append("tr");
+        header_row
+            .append("th")
+            .text("")
+
+        header_row
+            .selectAll("th.country")
+            .data(js[group][0].by_country)
+            .enter()
+            .append("th")
+                .attr("colspan", 3)
+                .text(function(d) { return d.name; });
+
+        var header_row2 = table.append("tr");
+        header_row2
+            .selectAll("th")
+            .data([""])
+            .enter()
+            .append("th")
+            .text(function(d) { return d; })
+
+        for (c in js[group][0].by_country) {
+            header_row2
+                .selectAll("th.country")
+                .data(["2007", "2009", "2011"])
+                .enter()
+                .append("th")
+                    .text(function(d) { return d; });
+        }
+
+        var data_rows = table.selectAll("tr.datarow")
+            .data(js[group])
+            .enter()
+            .append("tr");
+
+        data_rows
+            .append("th")
+            .text(function(d) { return d.indicator; });
+
+        data_rows
+            .each(function(d, i) {
+
+                for (c in d["by_country"]) {
+                    console.log(c);
+                    d3.select(this).append("td").text(fmt_val(d["by_country"][c]["2007"]));
+                    d3.select(this).append("td").text(fmt_val(d["by_country"][c]["2009"]));
+                    d3.select(this).append("td").text(fmt_val(d["by_country"][c]["2011"]));
+                }
+            });
+    }
+            
+    var json = '{% url json_early_signatories %}';
+    d3.json(json, function(e){
+        loadStop();
+        build_table(e, "top3");
+        build_table(e, "next2");
+    });
+    loadStart();
+    
+</script>
+{% endblock %}
