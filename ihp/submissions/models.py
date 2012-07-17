@@ -251,10 +251,10 @@ class DPQuestion(models.Model):
 class GovQuestion(models.Model):
     submission = models.ForeignKey(Submission, null=False)
     question_number = models.CharField(max_length=10, null=False)
-    baseline_year = models.CharField(max_length=4, null=False)
-    baseline_value = models.CharField(max_length=20, null=True)
+    baseline_year = models.CharField(max_length=4, null=False, blank=True)
+    baseline_value = models.CharField(max_length=20, null=True, blank=True)
     latest_year = models.CharField(max_length=4, null=False)
-    latest_value = models.CharField(max_length=20, null=True)
+    latest_value = models.CharField(max_length=20, null=True, blank=True)
     comments = models.TextField()
 
     def __unicode__(self):
