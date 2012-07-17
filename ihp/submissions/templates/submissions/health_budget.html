@@ -20,14 +20,17 @@
             yaxis : '%',
             title : '3G: Proportion of national budget allocated to health',
             container : 'container_hb',
-            graph_name : 'chart_hb'
+            graph_name : 'chart_hb',
+            target : '15',
+            target_text : 'Abuja Commitment'
         
         });
+        var tspans = d3.selectAll("tspan")[0][33]
+        d3.select(tspans).text("* Target for Nepal is 10%")
 
     }
     loadStart();
 
-    $('tspan').last().text('Source: DP data returns');
 
     var json = '{% url json_health_budget %}';
 

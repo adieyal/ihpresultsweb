@@ -17,7 +17,13 @@ build_graph = function(options) {
         yAxis : {
             title : {
                 text : options.yaxis
-            }
+            },
+            plotBands : [{
+                from : options.target,
+                to: options.target * 1.01,
+                color : 'rgba(0, 0, 0, 1.0)',
+                label : {text : options.target_text, y: -2},
+            }]
         },
         chart : {
             renderTo : options.container,
@@ -34,4 +40,5 @@ build_graph = function(options) {
             enabled : true
         }
     });
+
 }
