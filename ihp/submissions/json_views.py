@@ -26,7 +26,54 @@ def hss(request):
         })
             
     return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")
+
+def health_budget(request):
+    countries = models.Country.objects.order_by("country")
     
+    js = []
+    for country in countries:
+        qs = models.GovQuestion.objects.filter(submission__country=country).select_related()
+
+        res = indicators.calc_country_indicator(qs, country, "3G")[0]
+
+        with models.old_dataset():
+            qs_2009 = models.GovQuestion.objects.filter(submission__country=country).select_related()
+            res_2009 = indicators.calc_country_indicator(qs_2009, country, "3G")[0]
+
+        js.append({
+            "country" : country.country,
+            "budget" : {
+                "baseline" : res[0],
+                "2009" : foz(res_2009[2]),
+                "latest" : res[2],
+            }
+        })
+            
+    return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")
+
+def budget_disbursement(request):
+    countries = models.Country.objects.order_by("country")
+    
+    js = []
+    for country in countries:
+        qs = models.GovQuestion.objects.filter(submission__country=country).select_related()
+
+        res = indicators.calc_country_indicator(qs, country, "4G")[0]
+
+        with models.old_dataset():
+            qs_2009 = models.GovQuestion.objects.filter(submission__country=country).select_related()
+            res_2009 = indicators.calc_country_indicator(qs_2009, country, "4G")[0]
+
+        js.append({
+            "country" : country.country,
+            "budget" : {
+                "baseline" : res[0],
+                "2009" : foz(res_2009[2]),
+                "latest" : res[2],
+            }
+        })
+            
+    return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")
 
 def volumes_by_country(request):
     countries = models.Country.objects.order_by("country")

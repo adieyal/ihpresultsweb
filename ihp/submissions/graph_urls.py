@@ -8,7 +8,7 @@ urlpatterns = patterns('ihp.submissions.graphs',
     url(r"^agencies/(?P<agency_name>[a-zA-Z\s]+)/(?P<language>\w+)/$", "agencygraphs", name="agencygraphs"),
     url(r"^agencies/by_country/(?P<country_name>[a-zA-Z\s]+)/(?P<language>\w+)/$", "countrygraphs", name="countrygraphs"),
 
-    url(r"^countries/(?P<language>\w+)/$", "government_graphs", {
+    url(r"^countries/government_graphs/(?P<language>\w+)/$", "government_graphs", {
         "template_name" : "submissions/main_base.html",
         "extra_context" : {
             "content_file" : "submissions/country_graphs_by_indicator.html"
@@ -16,12 +16,30 @@ urlpatterns = patterns('ihp.submissions.graphs',
     }, "government_graphs"),
 
     url(
-        r"^countries/hss/(?P<language>\w+)/$",
+        r"^countries/hss/$",
         direct_to_template, 
         {
             "template" : "submissions/main_base_bootstrap.html", 
             "extra_context" : {"content_file" : "submissions/hss_graphs.html"}
         }, 
         name="hss_graphs"
+    ),
+    url(
+        r"^countries/health_budget/$",
+        direct_to_template, 
+        {
+            "template" : "submissions/main_base_bootstrap.html", 
+            "extra_context" : {"content_file" : "submissions/health_budget.html"}
+        }, 
+        name="health_budget_graphs"
+    ),
+    url(
+        r"^countries/budget_disbursement/$",
+        direct_to_template, 
+        {
+            "template" : "submissions/main_base_bootstrap.html", 
+            "extra_context" : {"content_file" : "submissions/budget_disbursement.html"}
+        }, 
+        name="budget_disbursement_graphs"
     ),
 )

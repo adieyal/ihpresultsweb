@@ -31,4 +31,14 @@ urlpatterns = patterns('ihp.submissions.json_views',
         'hss', 
         name='json_hss'
     ),
+    url(
+        r'^countries/health_budget/$', 
+        'health_budget', 
+        name='json_health_budget'
+    ),
+    url(
+        r'^countries/budget_disbursement/$', 
+        'budget_disbursement', 
+        name='json_budget_disbursement'
+    ),
 )

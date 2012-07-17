@@ -1,0 +1,38 @@
+{% block head %}
+    {{ block.super }}
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/graph_utils.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="graphblock">
+    <div id="container_hb" class="graph"></div>
+</div>
+<script>
+
+    var build_table = function(json) {
+        loadStop();
+        countries = json.map(function(x) { return x.country; });
+
+        build_graph({
+            base_data : json.map(function(x) { return d3.round(x.budget["baseline"], 2); }),
+            y2009_data : json.map(function(x) { return d3.round(x.budget["2009"], 2); }),
+            cur_data : json.map(function(x) { return d3.round(x.budget["latest"], 2); }),
+            yaxis : '%',
+            title : '4G: Actual disbursement of government health budgets',
+            container : 'container_hb',
+            graph_name : 'chart_hb'
+        
+        });
+
+    }
+    loadStart();
+
+    $('tspan').last().text('Source: DP data returns');
+
+    var json = '{% url json_budget_disbursement %}';
+
+    d3.json(json, function(e){
+        build_table(e);
+    });
+</script>
+{% endblock %}
