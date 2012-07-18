@@ -49,8 +49,35 @@ At the end of %(cur_year)s a costed and evidence based HRH plan was in place but
     },
 }
 
-rating_question_text = "Insufficient data has been provided to enable a rating for %s."
-rating_none_text = "This Standard Performance Measure was deemed not applicable to %s."
+rating_question_text = {
+    "1DP": "Insufficient data has been provided to enable a rating for the signing of country compacts or equivalent agreements by the agency.",
+    "2DPa": "Insufficient data has been provided to enable a rating for the health sector aid that was reported by the agency on national health sector budgets.",
+    "2DPb": "Insufficient data has been provided to enable a rating for the capacity development that was provided by the agency through coordinated programmes.",
+    "2DPc": "Insufficient data has been provided to enable a rating for the health sector aid that was provided by the agency through programme based approaches.",
+    "3DP": "Insufficient data has been provided to enable a rating for the health sector aid that was provided by the agency through multi-year commitments.",
+    "4DP": "Insufficient data has been provided to enable a rating for the health sector aid disbursements provided by the agency that were released according to agreed schedules.",
+    "5DPa": "Insufficient data has been provided to enable a rating for the health sector aid provided by the agency that used country procurement systems.",
+    "5DPb": "Insufficient data has been provided to enable a rating for the health sector aid provided by the agency that used national public financial management systems.",
+    "5DPc": "Insufficient data has been provided to enable a rating for the stock of parallel project implementation units used by the agency.",
+    "6DP": "Insufficient data has been provided to enable a rating for the agency’s use of national performance assessment frameworks to assess progress.",
+    "7DP": "Insufficient data has been provided to enable a rating for the agency’s participation in health sector mutual assessments of progress.",
+    "8DP": "Insufficient data has been provided to enable a rating for the agency’s support to civil society engagement in health sector policy processes.",
+    }
+rating_none_text = {
+    "1DP": "The signing of country compacts or equivalent agreements by the agency was deemed not applicable to %s.",
+    "2DPa": "The health sector aid that was reported by the agency on national health sector budgets was deemed not applicable to %s.",
+    "2DPb": "The capacity development that was provided by the agency through coordinated programmes was deemed not applicable to %s.",
+    "2DPc": "The health sector aid that was provided by the agency through programme based approaches was deemed not applicable to %s.",
+    "3DP": "The health sector aid that was provided by the agency through multi-year commitments was deemed not applicable to %s.",
+    "4DP": "The health sector aid disbursements provided by the agency that were released according to agreed schedules was deemed not applicable to %s.",
+    "5DPa": "The health sector aid provided by the agency that used country procurement systems was deemed not applicable to %s.",
+    "5DPb": "The health sector aid provided by the agency that used national public financial management systems was deemed not applicable to %s.",
+    "5DPc": "The stock of parallel project implementation units used by the agency  was deemed not applicable to %s.",
+    "6DP": "The agency’s use of national performance assessment frameworks to assess progress was deemed not applicable to %s.",
+    "7DP": "The agency’s participation in health sector mutual assessments of progress was deemed not applicable to %s.",
+    "8DP": "The agency’s support to civil society engagement in health sector policy processes was deemed not applicable to %s.",
+    }
+
 gov_tb2 = "%s COUNTRY SCORECARD"
 gov_pc3 = "%0.1f %% allocated to health"
 gov_pc4 = "%0.1f %% increase needed to meet the Abuja target (15%%)"

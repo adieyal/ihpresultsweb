@@ -2,81 +2,80 @@
 from models import Rating
 from django.template import Context, Template
 
+# Country Scorecard
 gov_commentary_text = {
     "1G": {
-        Rating.TICK : u"Un [space] a été signé en [space] qui se nomme [space].",
-        Rating.ARROW : u"Certaines données indiquent qu’un accord ou une entente équivalente est en cours d’élaboration. L’objectif poursuivi est la mise en place de cet accord ou de cette entente avant le [space].",
-        Rating.CROSS : u"Il n’y a actuellement aucun plan visant à élaborer un accord ou une entente équivalente.",
+        Rating.TICK : "An [space] was signed in [space] called [space].",
+        Rating.ARROW : "There is evidence of a Compact or equivalent agreement under development. The aim is to have this in place by [space].",
+        Rating.CROSS : "There are no current plans to develop a Compact or equivalent agreement.",
     },
     "2Ga" : {
-        Rating.TICK : u"Un plan et une stratégie nationaux sectoriels de santé ont été mis en place à l’aide des objectifs et des budgets actuels qui ont été évalués conjointement.",
-        Rating.ARROW : u"Mise en place de plans et d'une stratégie nationaux sectoriels de santé à l’aide des objectifs et des budgets actuels qui ont été évalués conjointement.",
-        Rating.CROSS : u"Mise en place de plans et d’une stratégie nationaux sectoriels de santé sans plan d’évaluation conjointe.",
+        Rating.TICK : "A National Health Sector Plan/Strategy is in place with current targets & budgets that have been jointly assessed.",
+        Rating.ARROW : "National Health Sector Plans/Strategy in place with current targets & budgets with evidence of plans for joint assessment.",
+        Rating.CROSS : "National Health Sector Plans/Strategy in place with no plans for joint assessment. Target = National Health Sector Plans/Strategy in place with current targets & budgets that have been jointly assessed.",
 
     },
     "2Gb" : {
-        Rating.TICK : u"Un plan relatif aux HRH chiffré et fondé sur des preuves qui est intégré au plan de santé national a été mis en place.",
-        Rating.ARROW : u"""
-À la fin de %(cur_year)s, un plan relatif aux HRH chiffré et fondé sur des preuves était en cours d’élaboration. 
+        Rating.TICK : "There is currently a costed and evidence based HRH plan in place that is integrated with the national health plan.",
+        Rating.ARROW : """At the end of %(cur_year)s a costed and evidence based HRH plan was under development. 
 
-À la fin de %(cur_year)s, un plan relatif aux HRH chiffré et fondé sur des preuves avait été mis en place, mais n’était pas encore intégré au plan de santé national. 
-""",
-        Rating.CROSS : u"À la fin de %(cur_year)s, aucun plan chiffré et fondé sur des preuves relatif aux HRH n’avait été mis en place ni aucun plan visant à en élaborer un.",
+At the end of %(cur_year)s a costed and evidence based HRH plan was in place but not yet integrated with the national health plan. """,
+        Rating.CROSS : "At the end of %(cur_year)s there was no costed and evidence based HRH plan in place, or plans to develop one. ",
     },
     "3G" : {
-        "all" : u"En %(cur_year)s, %(country_name)s a alloué %(cur_val).1f%% de son budget annuel ayant été approuvé pour le secteur de la santé.",
+        "all" : "In %(cur_year)s %(country_name)s allocated %(cur_val).1f%% of its approved annual national budget to health.",
     },
     "4G" : {
-        "all" : u"En %(cur_year)s, %(one_minus_cur_val).0f%% du financement alloué au secteur de la santé a été décaissé en fonction du budget annuel ayant été autorisé.",
+        "all" : "In %(cur_year)s, %(one_minus_cur_val).0f%% of health sector funding was disbursed against the approved annual budget.",
     },
     "5Ga" : {
-        "all" : u"En %(cur_year)s, %(country_name)s a obtenu un résultat de %(cur_val).1f sur l'échelle de performance GFP/EPIN."
+        "all" : "In %(cur_year)s, %(country_name)s achieved a score of %(cur_val).1f on the PFM/CPIA scale of performance."
     },
     "5Gb" : {
-        "all" : u"En %(cur_year)s, %(country_name)s a obtenu un résultat de %(cur_val).0f sur l’échelle d’évaluation à quatre points utilisée pour évaluer la performance du secteur de l’approvisionnement. "
+        "all" : "In %(cur_year)s, %(country_name)s achieved a score of %(cur_val).0f on the four point scale used to assess performance in the the procurement sector."
     },
     "6G" : {
-        Rating.TICK : u"En %(cur_year)s, un cadre d’évaluation de la performance transparent et contrôlable a été mis en place pour évaluer les progrès accomplis par rapport aux a) stratégies de développement national relatives à la santé et aux b) programmes sectoriels de santé.",
-        Rating.ARROW : u"À la fin de %(cur_year)s, certaines données indiquaient qu’un cadre d’évaluation de la performance transparent et contrôlable était en cours d’élaboration pour évaluer les progrès accomplis par rapport aux a) stratégies de développement national relatives à la santé et aux b) programmes sectoriels de santé.",
-        Rating.CROSS : u"À la fin de %(cur_year)s, aucun cadre d'évaluation de la performance transparent et contrôlable n’avait été mis en place et aucun plan visant à en développer un n’était clair ou sur le point d’être mis en œuvre.",
+        Rating.TICK : "In %(cur_year)s there was a transparent and monitorable performance assessment framework in place to assess progress against (a) the national development strategies relevant to health and (b) health sector programmes.",
+        Rating.ARROW : "At the end of %(cur_year)s there was evidence that a transparent and monitorable performance assessment framework was under development to assess progress against (a) the national development  strategies relevant to health and (b) health sector programmes.",
+        Rating.CROSS : "At the end of %(cur_year)s there was no transparent and monitorable performance assessment framework in place and no plans to develop one were clear or being implemented.",
     },
     "7G" : {
-        Rating.TICK : u"Des évaluations conjointes sont faites des progrès accomplis en ce qui concerne la mise en œuvre d’engagements dans le secteur de la santé, notamment en matière d’efficacité de l’aide.",
-        Rating.ARROW : u"Des évaluations conjointes sont faites des progrès accomplis en ce qui concerne la mise en œuvre d’engagements dans le secteur de la santé, mais pas en matière d’efficacité de l’aide.",
-        Rating.CROSS : u"Des évaluations conjointes sont faites des progrès accomplis en ce qui concerne la mise en œuvre d’engagements dans le secteur de la santé.",
+        Rating.TICK : "Mutual assessments are being made of progress implementing commitments in the health sector, including on aid effectiveness.",
+        Rating.ARROW : "Mutual assessments are being made of progress implementing commitments in the health sector, but not on aid effectiveness.",
+        Rating.CROSS : "Mutual assessments are not being made of progress implementing commitments in the health sector.",
     },
     "8G" : {
-        "all" : u"En %(cur_year)s, %(cur_val).0f%% des voix dans les mécanismes nationaux de coordination du secteur de la santé (ou un organe équivalent) ont été allouées aux représentants de la société civile."
+        "all" : "In %(cur_year)s %(cur_val).0f%% of seats in the Health Sector Coordination Mechanism (or equivalent body) were allocated to Civil Society representatives."
     },
 }
 
 rating_question_text = {
-    "1DP": u"Les données fournies étaient insuffisantes pour permettre d’évaluer la signature d’accords nationaux ou d’ententes équivalentes par l’agence.",
-    "2DPa": u"Les données fournies étaient insuffisantes pour permettre d’évaluer l’aide sectorielle en santé qui a été rapportée par l’agence dans les budgets nationaux sectoriels de santé.",
-    "2DPb": u"Les données fournies étaient insuffisantes pour permettre d’évaluer le développement de capacités qui a été offert par l’agence dans le cadre de programmes coordonnés.",
-    "2DPc": u"Les données fournies étaient insuffisantes pour permettre d’évaluer l’aide sectorielle en santé qui a été offerte par l’agence dans le cadre d’approches axées sur les programmes.",
-    "3DP": u"Les données fournies étaient insuffisantes pour permettre d’évaluer l’aide sectorielle en santé qui a été offerte par l’agence dans le cadre d’engagements pluriannuels.",
-    "4DP": u"Les données fournies étaient insuffisantes pour permettre d’évaluer les décaissements de fonds alloués dans le secteur de la santé par l’agence qui ont été faits selon les échéanciers convenus.",
-    "5DPa": u"Les données fournies étaient insuffisantes pour permettre d’évaluer l’aide sectorielle en santé offerte par l’agence qui a utilisé des systèmes d’approvisionnement nationaux.",
-    "5DPb": u"Les données fournies étaient insuffisantes pour permettre d’évaluer l’aide sectorielle en santé offerte par l’agence qui a utilisé des systèmes nationaux de gestion des finances publiques.",
-    "5DPc": u"Les données fournies étaient insuffisantes pour permettre d’évaluer le nombre d’unités de mise en œuvre de projets parallèles utilisées par l’agence.",
-    "6DP": u"Les données fournies étaient insuffisantes pour permettre d’évaluer l’utilisation de cadres nationaux d’évaluation de la performance par l’agence pour évaluer les progrès accomplis.",
-    "7DP": u"Les données fournies étaient insuffisantes pour permettre d’évaluer la participation de l’agence aux évaluations mutuelles des progrès accomplis dans le secteur de la santé.",
-    "8DP": u"Les données fournies étaient insuffisantes pour permettre d’évaluer le soutien offert par l’agence en ce qui a trait à l’engagement de la société civile à l’égard des processus relatifs aux politiques dans le secteur de la santé.",
+    "1DP": u"La información provista fue insuficiente para asignar una calificación a la suscripción de pactos IHP+ nacionales u otros acuerdos equivalentes por parte de la organización.",
+    "2DPa": u"La información provista fue insuficiente para asignar una calificación a la asistencia para el sector salud que según informes de la organización figura en los presupuestos nacionales de salud.",
+    "2DPb": u"La información provista fue insuficiente para asignar una calificación a el desarrollo de capacidades provisto por la organización a través de programas ejecutados en coordinación.",
+    "2DPc": u"La información provista fue insuficiente para asignar una calificación a la asistencia para el sector salud proporcionada por la organización a través de enfoques basados en programas.",
+    "3DP": u"La información provista fue insuficiente para asignar una calificación a la asistencia para el sector salud proporcionada por la organización a través de compromisos multianuales.",
+    "4DP": u"La información provista fue insuficiente para asignar una calificación a los desembolsos de asistencia para el sector salud proporcionados por la organización que fueron liberados de acuerdo a un cronograma establecido.",
+    "5DPa": u"La información provista fue insuficiente para asignar una calificación a la asistencia para el sector salud proporcionada por la organización en la cual se utilizaron los sistemas de adquisiciones del país.",
+    "5DPb": u"La información provista fue insuficiente para asignar una calificación a la asistencia para el sector salud proporcionada por la organización en la cual se utilizaron los sistemas de gestión de las finanzas públicas del país.",
+    "5DPc": u"La información provista fue insuficiente para asignar una calificación a el número de unidades de ejecución de proyectos paralelas utilizadas por la organización.",
+    "6DP": u"La información provista fue insuficiente para asignar una calificación a el uso por parte de la organización de marcos nacionales de evaluación del desempeño con el fin de evaluar los avances.",
+    "7DP": u"La información provista fue insuficiente para asignar una calificación a la participación de la organización en evaluaciones de avances mutuas sobre el sector salud.",
+    "8DP": u"La información provista fue insuficiente para asignar una calificación a el apoyo otorgado por la organización a la participación de la sociedad civil en procesos relacionados con la política del sector salud.",
     }
 rating_none_text = {
-    "1DP": u"La signature d’accords nationaux ou d’ententes équivalentes par l’agence se consideró que no procedía para %s.",
-    "2DPa": u"L’aide sectorielle en santé qui a été rapportée par l’agence dans les budgets nationaux sectoriels de santé se consideró que no procedía para %s.",
-    "2DPb": u"Le développement de capacités qui a été offert par l’agence dans le cadre de programmes coordonnés se consideró que no procedía para %s.",
-    "2DPc": u"L’aide sectorielle en santé qui a été offerte par l’agence dans le cadre d’approches axées sur les programmes se consideró que no procedía para %s.",
-    "3DP": u"L’aide sectorielle en santé qui a été offerte par l’agence dans le cadre d’engagements pluriannuels se consideró que no procedía para %s.",
-    "4DP": u"Les décaissements de fonds alloués dans le secteur de la santé par l’agence qui ont été faits selon les échéanciers convenus se consideró que no procedía para %s.",
-    "5DPa": u"L’aide sectorielle en santé offerte par l’agence qui a utilisé des systèmes d’approvisionnement nationaux se consideró que no procedía para %s.",
-    "5DPb": u"L’aide sectorielle en santé offerte par l’agence qui a utilisé des systèmes nationaux de gestion des finances publiques se consideró que no procedía para %s.",
-    "5DPc": u"Le nombre d’unités de mise en œuvre de projets parallèles utilisées par l’agence se consideró que no procedía para %s.",
-    "6DP": u"L’utilisation de cadres nationaux d’évaluation de la performance par l’agence pour évaluer les progrès accomplis se consideró que no procedía para %s.",
-    "7DP": u"La participation de l’agence aux évaluations mutuelles des progrès accomplis dans le secteur de la santé se consideró que no procedía para %s.",
-    "8DP": u"Le soutien offert par l’agence en ce qui a trait à l’engagement de la société civile à l’égard des processus relatifs aux politiques dans le secteur de la santé se consideró que no procedía para %s.",
+    "1DP": u"La suscripción de pactos IHP+ nacionales u otros acuerdos equivalentes por parte de la organización a été jugé non applicable à %s.",
+    "2DPa": u"La asistencia para el sector salud que según informes de la organización figura en los presupuestos nacionales de salud a été jugé non applicable à %s.",
+    "2DPb": u"El desarrollo de capacidades provisto por la organización a través de programas ejecutados en coordinación a été jugé non applicable à %s.",
+    "2DPc": u"La asistencia para el sector salud proporcionada por la organización a través de enfoques basados en programas a été jugé non applicable à %s.",
+    "3DP": u"La asistencia para el sector salud proporcionada por la organización a través de compromisos multianuales a été jugé non applicable à %s.",
+    "4DP": u"Los desembolsos de asistencia para el sector salud proporcionados por la organización que fueron liberados de acuerdo a un cronograma establecido a été jugé non applicable à %s.",
+    "5DPa": u"La asistencia para el sector salud proporcionada por la organización en la cual se utilizaron los sistemas de adquisiciones del país a été jugé non applicable à %s.",
+    "5DPb": u"La asistencia para el sector salud proporcionada por la organización en la cual se utilizaron los sistemas de gestión de las finanzas públicas del país a été jugé non applicable à %s.",
+    "5DPc": u"El número de unidades de ejecución de proyectos paralelas utilizadas por la organización a été jugé non applicable à %s.",
+    "6DP": u"El uso por parte de la organización de marcos nacionales de evaluación del desempeño con el fin de evaluar los avances a été jugé non applicable à %s.",
+    "7DP": u"La participación de la organización en evaluaciones de avances mutuas sobre el sector salud a été jugé non applicable à %s.",
+    "8DP": u"El apoyo otorgado por la organización a la participación de la sociedad civil en procesos relacionados con la política del sector salud a été jugé non applicable à %s.",
     }
 
 gov_tb2 = "%s COUNTRY SCORECARD"
@@ -84,23 +83,23 @@ gov_pc3 = "%0.1f %% allocated to health"
 gov_pc4 = "%0.1f %% increase needed to meet the Abuja target (15%%)"
 
 agency_commentary_text = {
-    "1DP" : u"Un accord national IHP+ ou une entente équivalente a été signé par l’agence dans %(cur_val).0f%% des pays IHP+ dans lesquels ils sont présents. Objectif-cible = 100%%.",
-    "2DPa" : u"En %(cur_year)s, %(one_minus_cur_val).0f%% de l’aide offerte dans le secteur de la santé a été rapporté par l’agence dans les budgets nationaux sectoriels de santé, %(one_minus_diff_direction)s par rapport à %(one_minus_base_val).0f%%. Objectif-cible = réduction de 50%% de l’aide n’apparaissant pas dans le budget (dont ≥ 85%% dans le budget).",
-    "2DPb" : Template(u"En {{ cur_year }}, {{ cur_val|floatformat }}% du développement des capacités a été offert par l’agence par l’intermédiaire de programmes coordonnés{% if diff_direction %}, {{ diff_direction }} par rapport à {{ base_val|floatformat }}%{% endif %}. Objectif-cible = 50%."),
-    "2DPc" : u"En %(cur_year)s, %(cur_val).0f%% de l’aide offerte dans le secteur de la santé a été fourni par l’agence par l’intermédiaire d’approches axées sur les programmes, %(diff_direction)s par rapport à %(base_val).0f%%. Objectif-cible = 66%%.",
-    "3DP" : u"En %(cur_year)s, %(cur_val).0f%% de l’aide offerte dans le secteur de la santé a été fourni par l’agence par l’intermédiaire d’engagements pluriannuels, %(diff_direction)s par rapport à %(base_val).0f%%. Objectif-cible = 90%%.",
-    "4DP" : u"En %(cur_year)s, %(cur_val).0f%% des décaissements de fonds alloués dans le secteur de la santé fournis par l’agence ont été faits conformément aux échéanciers convenus, %(diff_direction)s par rapport à %(base_val).0f%%. Objectif-cible = 90%%.",
-    "5DPa" : Template(u"En {{ cur_year }}, {{ one_minus_cur_val|floatformat }}% de l’aide offerte dans le secteur de la santé a été fourni par l’agence par l’intermédiaire des systèmes d’approvisionnement nationaux{% if one_minus_diff_direction %}, {{ one_minus_diff_direction }} par rapport à {{ one_minus_base_val|floatformat }}%{% endif %}. Objectif-cible = diminution de 33% de l’aide offerte sans utiliser les systèmes d’approvisionnement nationaux (dont ≥ 80% utilisent les systèmes nationaux)."),
-    "5DPb" : u"En %(cur_year)s, %(one_minus_cur_val).0f%% de l’aide offerte dans le secteur de la santé a été fourni par l’agence par l’intermédiaire des systèmes de gestion des finances publiques, %(one_minus_diff_direction)s par rapport à %(one_minus_base_val).0f%%. Objectif-cible = diminution de 33%% de l’aide offerte sans utiliser les systèmes de gestion des finances publiques (dont ≥ 80 %% utilisent les systèmes nationaux).",
-    "5DPc" : u"En %(cur_year)s, le nombre d’unités de mise en œuvre de projets parallèles utilisés par l’agence dans les pays étudiés était de %(cur_val)s, %(diff_direction)s par rapport à %(base_val)s. Object-cible = réduction de 66%% du nombre d’unités de mise en œuvre de projets parallèles.",
-    "6DP" : u"En %(cur_year)s, des cadres nationaux d’évaluation de la performance ont été utilisés de façon systématique par l’agence pour évaluer les progrès accomplis dans %(cur_val).0f%% les pays IHP+ où ils sont présents. Objectif-cible = 100%%.",
-    "7DP" : u"En %(cur_year)s, l’agence a participé aux évaluations mutuelles des progrès accomplis dans le secteur de la santé en dans %(cur_val).0f%% des pays IHP+ lesquels ils sont présents. Objectif-cible = 100%%.",
-    "8DP" : u"En %(cur_year)s, des données dans %(cur_val).0f%% des pays IHP+ indiquent que l’agence a soutenu l’engagement de la société civile envers les processus relatifs aux politiques dans le secteur de la santé. Objectif-cible = 100%%.",
+    "1DP" : "An IHP+ Country Compact or equivalent has been signed by the agency in %(cur_val).0f%% of IHP+ countries where they exist. Target = 100%%.",
+    "2DPa" : u"In %(cur_year)s %(one_minus_cur_val).0f%% of health sector aid was reported by the agency on national health sector budgets - %(one_minus_diff_direction)s from %(one_minus_base_val).0f%%. Target = 50%% reduction in aid not on budget (with ≥ 85%% on budget).",
+    "2DPb" : Template("In {{ cur_year }} {{ cur_val|floatformat }}% of capacity development was provided by the agency through coordinated programmes {% if diff_direction %}- {{ diff_direction }} from {{ base_val|floatformat }}%.{% endif %} Target = 50%."),
+    "2DPc" : "In %(cur_year)s %(cur_val).0f%% of health sector aid was provided by the agency through programme based approaches - %(diff_direction)s from %(base_val).0f%%. Target = 66%%.",
+    "3DP" : "In %(cur_year)s %(cur_val).0f%% of health sector aid was provided by the agency through multi-year commitments - %(diff_direction)s from %(base_val).0f%%. Target = 90%%.",
+    "4DP" : "In %(cur_year)s %(cur_val).0f%% of health sector aid disbursements provided by the agency were released according to agreed schedules - %(diff_direction)s from %(base_val).0f%% in %(base_year)s. Target = 90%%.",
+    "5DPa" : Template("In {{ cur_year }} {{ one_minus_cur_val|floatformat }}% of health sector aid provided by the agency used country procurement systems{% if one_minus_diff_direction %} - {{ one_minus_diff_direction }} from {{ one_minus_base_val|floatformat }}%{% endif %}. Target = 33% reduction in aid not using procurement systems (with ≥ 80% using country systems)."),
+    "5DPb" : u"In %(cur_year)s %(one_minus_cur_val).0f%% of health sector aid provided by the agency used national public financial management systems - %(one_minus_diff_direction)s from %(one_minus_base_val).0f%%. Target = 33%% reduction in aid not using PFM systems (with ≥ 80%% using country systems).",
+    "5DPc" : "In %(cur_year)s the stock of parallel project implementation units (PIUs) used by the agency in the surveyed countries was %(cur_val)s - %(diff_direction)s from %(base_val)s. Target = 66%% reduction in stock of PIUs.",
+    "6DP" : "In %(cur_year)s national performance assessment frameworks were routinely used by the agency to assess progress in %(cur_val).0f%% of IHP+ countries where they exist. Target = 100%%.",
+    "7DP" : "In %(cur_year)s the agency participated in health sector mutual assessments of progress in %(cur_val).0f%% of IHP+ countries where they exist. Target = 100%%.",
+    "8DP" : "In %(cur_year)s, evidence exists in %(cur_val).0f%% of IHP+ countries that the agency supported civil society engagement in health sector policy processes. Target = 100%%.",
 }
 
-direction_decrease = "une diminution" 
-direction_increase = "soit une augmentation" 
-direction_nochange = "aucun changement" 
+direction_decrease = "a decrease" 
+direction_increase = "an increase" 
+direction_nochange = "no change" 
 
 agency_graphs = {
     "2DPa" : {
@@ -184,41 +183,49 @@ highlevel_graphs = {
     "2DPa" : {
         "title" : "2DPa: Aggregate proportion of partner support reported on national budgets",
         "yAxis" : "%",
+        "subtitle" : "* Data with baseline values from 2008 are not included",
     },
     "2DPb" : {
         "title" : "2DPb: Aggregate proportion of partner support for capacity-development <br/>provided through coordinated programmes in line with national strategies",
         "yAxis" : "%",
+        "subtitle" : "* Data with baseline values from 2008 are not included",
     },
     "2DPc" : {
         "title" : "2DPc: Aggregate proportion of partner support <br/>provided as programme based approaches",
         "yAxis" : "%",
+        "subtitle" : "* Data with baseline values from 2008 are not included",
     },
     "3DP"  : {
         "title" : "3DP: Aggregate proportion partner support <br/>provided through multi-year commitments",
         "yAxis" : "%",
+        "subtitle" : "* Data with baseline values from 2008 are not included",
     },
     "4DP"  : {
-        "title" : "% of actual health spending planned for that year (4DP) ",
+        "title" : "4DP: % of actual health spending planned for that year",
         "yAxis" : "%",
+        "subtitle" : "* Data with baseline values from 2008 are not included",
     },
     "5DPa" : {
         "title" : "5DPa: Aggregate partner use of country procurement systems", 
         "yAxis" : "%",
+        "subtitle" : "* Data with baseline values from 2008 are not included",
     },
     "5DPb" : {
         "title" : "5DPb: Aggregate partner use of country public financial management systems", 
         "yAxis" : "%",
+        "subtitle" : "* Data with baseline values from 2008 are not included",
     },
     "5DPc" : {
         "title" : "5DPc: Aggregate number of parallel Project Implementation Units (PIUs)", 
         "yAxis" : "Total number of PIUs",
+        "subtitle" : "* Data with baseline values from 2008 are not included",
     }
 }
 
 additional_graphs = {
     "2DPa" : {
-        "series1" : "Health aid not on budget",
-        "series2" : "Health aid reported on budget",
+        "series1" : "Health aid reported on budget",
+        "series2" : "Health aid not on budget",
         "title" : "2DPa: Proportion of partner health aid on country budget",
     },
     "2DPb" : {
@@ -229,12 +236,12 @@ additional_graphs = {
     "2DPc" : {
         "series1" : "% of health aid as Programme Based Approach",
         "series2" : "% of health aid not as Programme Based Approach",
-        "title" : "2DPC: Support provided as Programme Based Approach",
+        "title" : "2DPc: Support provided as Programme Based Approach",
     },
     "3DP" : {
         "series1" : "% of multi-year commitments",
         "series2" : "% not provided through multi-year commitments",
-        "title" : "% of aid provided through multi-year commitments",
+        "title" : "3DP: % of aid provided through multi-year commitments",
     },
     "4DP" : {
         "series1" : "% of aid disbursed within the year for which it was scheduled",
@@ -253,7 +260,7 @@ additional_graphs = {
     },
     "5DPc" : {
         "yAxis" : "Total number of PIUs",
-        "title" : "5DPc: Aggregate number of parallel Project Implementation Units (PIU)s by development partner",
+        "title" : "5DPc: Aggregate number of parallel Project Implementation Units (PIU)s<br/> by development partner",
     }
 }
 
@@ -289,11 +296,11 @@ government_graphs = {
 }
 
 target_language = {
-    "target" : "objectif",
+    "target" : "target",
     "who" : "WHO Recommended"
 }
 
-rating = "Rating2"
+rating = "Rating"
 country_data = "Country Data"
 agency = "Agency"
 by_agency_title = "%s Data across IHP+ Countries"
