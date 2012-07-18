@@ -49,7 +49,10 @@ At the end of %(cur_year)s a costed and evidence based HRH plan was in place but
     },
 }
 
-rating_question_text = {
+rating_question_text = "Insufficient data has been provided to enable a rating for %s."
+rating_none_text = "This Standard Performance Measure was deemed not applicable to %s."
+
+agency_rating_question_text = {
     "1DP": "Insufficient data has been provided to enable a rating for the signing of country compacts or equivalent agreements by the agency.",
     "2DPa": "Insufficient data has been provided to enable a rating for the health sector aid that was reported by the agency on national health sector budgets.",
     "2DPb": "Insufficient data has been provided to enable a rating for the capacity development that was provided by the agency through coordinated programmes.",
@@ -63,7 +66,7 @@ rating_question_text = {
     "7DP": "Insufficient data has been provided to enable a rating for the agency’s participation in health sector mutual assessments of progress.",
     "8DP": "Insufficient data has been provided to enable a rating for the agency’s support to civil society engagement in health sector policy processes.",
     }
-rating_none_text = {
+agency_rating_none_text = {
     "1DP": "The signing of country compacts or equivalent agreements by the agency was deemed not applicable to %s.",
     "2DPa": "The health sector aid that was reported by the agency on national health sector budgets was deemed not applicable to %s.",
     "2DPb": "The capacity development that was provided by the agency through coordinated programmes was deemed not applicable to %s.",

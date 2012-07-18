@@ -50,7 +50,10 @@ gov_commentary_text = {
     },
 }
 
-rating_question_text = {
+rating_question_text = u"Une quantité insuffisante de données a été fournie pour permettre d’évaluer cette mesure %s."
+rating_none_text = u"Cette mesure de la performance standard a été jugée non applicable au %s"
+
+agency_rating_question_text = {
     "1DP": u"Les données fournies étaient insuffisantes pour permettre d’évaluer la signature d’accords nationaux ou d’ententes équivalentes par l’agence.",
     "2DPa": u"Les données fournies étaient insuffisantes pour permettre d’évaluer l’aide sectorielle en santé qui a été rapportée par l’agence dans les budgets nationaux sectoriels de santé.",
     "2DPb": u"Les données fournies étaient insuffisantes pour permettre d’évaluer le développement de capacités qui a été offert par l’agence dans le cadre de programmes coordonnés.",
@@ -64,7 +67,7 @@ rating_question_text = {
     "7DP": u"Les données fournies étaient insuffisantes pour permettre d’évaluer la participation de l’agence aux évaluations mutuelles des progrès accomplis dans le secteur de la santé.",
     "8DP": u"Les données fournies étaient insuffisantes pour permettre d’évaluer le soutien offert par l’agence en ce qui a trait à l’engagement de la société civile à l’égard des processus relatifs aux politiques dans le secteur de la santé.",
     }
-rating_none_text = {
+agency_rating_none_text = {
     "1DP": u"La signature d’accords nationaux ou d’ententes équivalentes par l’agence se consideró que no procedía para %s.",
     "2DPa": u"L’aide sectorielle en santé qui a été rapportée par l’agence dans les budgets nationaux sectoriels de santé se consideró que no procedía para %s.",
     "2DPb": u"Le développement de capacités qui a été offert par l’agence dans le cadre de programmes coordonnés se consideró que no procedía para %s.",

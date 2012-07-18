@@ -180,11 +180,11 @@ def calc_agency_ratings(agency, language=None):
 
             if result["target"] == Rating.NONE:
             #if NA_STR in [base_val, cur_val]:
-                result["commentary"] = translation.rating_none_text[indicator] % agency.agency
+                result["commentary"] = translation.agency_rating_none_text[indicator] % agency.agency
             elif result["target"] == Rating.QUESTION:
-                result["commentary"] = translation.rating_question_text[indicator]
+                result["commentary"] = translation.agency_rating_question_text[indicator]
             elif result["commentary"] == "":
-                result["commentary"] = translation.rating_question_text[indicator]
+                result["commentary"] = translation.agency_rating_question_text[indicator]
 
         results[indicator] = result
 

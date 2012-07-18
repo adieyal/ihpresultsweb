@@ -49,7 +49,10 @@ At the end of %(cur_year)s a costed and evidence based HRH plan was in place but
     },
 }
 
-rating_question_text = {
+rating_question_text = "Insufficient data has been provided to enable a rating for %s."
+rating_none_text = "This Standard Performance Measure was deemed not applicable to %s."
+
+agency_rating_question_text = {
     "1DP": u"La información provista fue insuficiente para asignar una calificación a la suscripción de pactos IHP+ nacionales u otros acuerdos equivalentes por parte de la organización.",
     "2DPa": u"La información provista fue insuficiente para asignar una calificación a la asistencia para el sector salud que según informes de la organización figura en los presupuestos nacionales de salud.",
     "2DPb": u"La información provista fue insuficiente para asignar una calificación a el desarrollo de capacidades provisto por la organización a través de programas ejecutados en coordinación.",
@@ -63,7 +66,7 @@ rating_question_text = {
     "7DP": u"La información provista fue insuficiente para asignar una calificación a la participación de la organización en evaluaciones de avances mutuas sobre el sector salud.",
     "8DP": u"La información provista fue insuficiente para asignar una calificación a el apoyo otorgado por la organización a la participación de la sociedad civil en procesos relacionados con la política del sector salud.",
     }
-rating_none_text = {
+agency_rating_none_text = {
     "1DP": u"La suscripción de pactos IHP+ nacionales u otros acuerdos equivalentes por parte de la organización a été jugé non applicable à %s.",
     "2DPa": u"La asistencia para el sector salud que según informes de la organización figura en los presupuestos nacionales de salud a été jugé non applicable à %s.",
     "2DPb": u"El desarrollo de capacidades provisto por la organización a través de programas ejecutados en coordinación a été jugé non applicable à %s.",
