@@ -175,8 +175,8 @@ def calc_agency_ratings(agency, language=None):
                     result["commentary"] = template.render(Context(result))
                 else:
                     result["commentary"] = template % result
-            except:
-                pass
+            except Exception, e:
+                print e
 
             if result["target"] == Rating.NONE:
             #if NA_STR in [base_val, cur_val]:
