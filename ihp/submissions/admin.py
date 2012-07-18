@@ -99,8 +99,8 @@ class MDGDataAdminForm(forms.ModelForm):
     class Meta:
         model = MDGData
 
-    baseline_year = forms.ChoiceField(choices=[(x, x) for x in range(1990, 2011)]) 
-    latest_year = forms.ChoiceField(choices=[(x, x) for x in range(1990, 2011)]) 
+    baseline_year = forms.ChoiceField(choices=[(x, x) for x in range(1990, 2015)]) 
+    latest_year = forms.ChoiceField(choices=[(x, x) for x in range(1990, 2015)]) 
     arrow = forms.ChoiceField(choices=[(None, "")] + [(x, x) for x in ["upgreen", "upred", "downgreen", "downred", "equals"]]) 
 
 class MDGDataAdmin(admin.ModelAdmin):
