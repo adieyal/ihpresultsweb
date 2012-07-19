@@ -555,7 +555,18 @@ def highlevelgraphs(request, language, template_name="submissions/highlevelgraph
 
 def calc_graph_values(indicator, base_val, previous_val, latest_val):
     if indicator in ["2DPa", "5DPa", "5DPb"]:
-        return None, safe_mul(safe_div(safe_diff(latest_val, base_val), base_val), 100), safe_mul(safe_div(safe_diff(previous_val, base_val), base_val), 100)
+        return None, safe_mul(
+            safe_div(
+                safe_diff(latest_val, base_val), 
+                base_val
+            ), 
+        100), 
+        safe_mul(
+            safe_div(
+                safe_diff(previous_val, base_val), 
+                base_val
+            ), 
+        100)
     else:
         return base_val, previous_val, latest_val
 
