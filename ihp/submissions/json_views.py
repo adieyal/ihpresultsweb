@@ -17,9 +17,9 @@ def country_by_indicator(request, indicator):
     
     js = []
     for country in countries:
-        res = indicators.calc_agency_indicator_by_country(country, indicator)[0]
+        res = indicators.calc_agency_indicator_by_country(country, indicator, indicators.positive_funcs)[0]
         with models.old_dataset():
-            res_2009 = indicators.calc_agency_indicator_by_country(country, indicator)[0]
+            res_2009 = indicators.calc_agency_indicator_by_country(country, indicator, indicators.positive_funcs)[0]
         js.append({
             "country" : country.country,
             "data" : {

@@ -130,9 +130,9 @@ def calc_indicator(qs, agency_or_country, indicator, funcs=None):
     return (base_val, base_year, cur_val, cur_year), comments
 
     
-def calc_agency_indicator_by_country(country, indicator):
+def calc_agency_indicator_by_country(country, indicator, funcs=None):
     qs = DPQuestion.objects.filter(submission__country=country)
-    return calc_indicator(qs, country, indicator)
+    return calc_indicator(qs, country, indicator, funcs=funcs)
 
 def calc_agency_indicator(qs, agency, indicator):
     """
