@@ -255,7 +255,7 @@ indicator_funcs = {
     "3DP"  : (calc_numdenom, ("8", "6")),
     "4DP"  : (calc_numdenom, ("11old", "10old")),
     "5DPa" : (calc_one_minus_numdenom, ("11", "10")),
-    "5DPb" : (calc_one_minus_numdenom, ("12", "2")),
+    "5DPb" : (calc_one_minus_numdenom_5DP, ("12", "2", "3")),
     "5DPc" : (sum_values, ("13",)),
     "6DP"  : (country_perc_factory("yes"), ("14",)),
     "7DP"  : (country_perc_factory("yes"), ("15",)),
@@ -289,5 +289,5 @@ positive_funcs = dict(indicator_funcs)
 positive_funcs["2DPa"] = (calc_numdenom, indicator_funcs["2DPa"][1])
 positive_funcs["4DP"] = indicator_funcs["4DP"]
 positive_funcs["5DPa"] = (calc_numdenom, indicator_funcs["5DPa"][1])
-positive_funcs["5DPb"] = (calc_numdenom, indicator_funcs["5DPb"][1])
+positive_funcs["5DPb"] = (calc_numdenom_5DP, indicator_funcs["5DPb"][1])
 positive_funcs["4G"] = (calc_numdenom, indicator_funcs["4G"][1])
