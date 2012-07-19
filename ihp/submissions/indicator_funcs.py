@@ -141,16 +141,24 @@ def calc_one_minus_numdenom(qs, agency_or_country, selector, numq, denomq):
     ratio = 100 - ratio if ratio not in [NA_STR, MISSING] else ratio
     return ratio
 
-def calc_numdenom_5DP(qs, agency_or_country, selector, numq, denomq, denomq2):
-    def get_denomq(q):
+def calc_numdenom_2DPa(qs, agency_or_country, selector, numq, denomq):
+
+    def is_match(q):
         s = q.submission
-        if s.country.country in ["Niger", "Nepal", "Togo"] and s.agency.agency == "GFATM":
-            return denomq2
-        else:
+        return s.country.country in ["Niger", "Nepal", "Togo"] and s.agency.agency == "GFATM"
+        
+    def get_denomq(q):
+        if is_match(q):
+            return numq
+        return denomq
+
+    def get_numq(q):
+        if is_match(q):
             return denomq
+        return numq
 
     den = _sum_values([q for q in qs if q.question_number==get_denomq(q)], selector)
-    num = _sum_values([q for q in qs if q.question_number==numq], selector)
+    num = _sum_values([q for q in qs if q.question_number==get_numq(q)], selector)
 
     if den in [NA_STR, MISSING] or num in [NA_STR, MISSING]:
         return MISSING
@@ -158,8 +166,8 @@ def calc_numdenom_5DP(qs, agency_or_country, selector, numq, denomq, denomq2):
     if den > 0: ratio = num / den * 100
     return ratio
 
-def calc_one_minus_numdenom_5DP(qs, agency_or_country, selector, numq, denomq, denomq2):
-    ratio = calc_numdenom_5DP(qs, agency_or_country, selector, numq, denomq, denomq2)
+def calc_one_minus_numdenom_2DPa(qs, agency_or_country, selector, numq, denomq):
+    ratio = calc_numdenom_2DPa(qs, agency_or_country, selector, numq, denomq)
     ratio = 100 - ratio if ratio not in [NA_STR, MISSING] else ratio
     return ratio
 
