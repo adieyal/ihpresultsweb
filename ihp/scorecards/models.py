@@ -224,19 +224,19 @@ class GovScorecard(object):
             "management":{
                 "header": _("REFLECTS GOOD PRACTICE (OR REFORM IN PROGRESS)"),
                 "logo": rating_icon(self.ratings["5Ga"]["target"]),
-                "description": _("Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est.")
+                "description": _(" ")
             },
 
             "procurement": {
                 "header": _("REFLECTS GOOD PRACTICE (OR REFORM IN PROGRESS)"),
                 "logo": rating_icon(self.ratings["5Gb"]["target"]),
-                "description": _("Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est.")
+                "description": _(" ")
             },
 
             "technical": {
                 "header": _("DONOR CAPACITY DEVELOPMENT PROVIDED THROUGH COORDINATED PROGRAMMES"),
                 "logo": self.donor_capacity(),
-                "description": _("Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est.")
+                "description": _(" ")
             }
         }
 
