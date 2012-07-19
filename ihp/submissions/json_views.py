@@ -12,6 +12,25 @@ def foz(val):
     except (TypeError, ValueError):
         return 0
 
+def country_by_indicator(request, indicator):
+    countries = models.Country.objects.order_by("country")
+    
+    js = []
+    for country in countries:
+        res = indicators.calc_agency_indicator_by_country(country, indicator)[0]
+        with models.old_dataset():
+            res_2009 = indicators.calc_agency_indicator_by_country(country, indicator)[0]
+        js.append({
+            "country" : country.country,
+            "data" : {
+                "baseline" : foz(res[0]),
+                "2009" : foz(res_2009[2]),
+                "latest" : foz(res[2]),
+            }
+        })
+            
+    return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")
+
 def hss(request):
     countries = models.Country.objects.order_by("country")
     

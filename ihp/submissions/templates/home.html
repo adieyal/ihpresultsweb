@@ -19,6 +19,12 @@
     .by_indicator tr {
         border-bottom: dotted 1px #898989;
     } 
+
+    p a {
+        margin-right: 5px;
+        padding-right: 5px;
+        border-right: solid thin white;
+    }
 </style>
 {% endblock head %}
 
@@ -182,7 +188,6 @@
                             <ul>
                                 <li><a href="{% url country_table "English" %}">Country Table</a></li>
                                 <li><a href="{% url country_matrix "English" %}">Country Table without Figures</a></li>
-                                <!--<li><a href="{% url government_graphs "English" %}">Government Graphs (<a href="{% url government_graphs "French" %}">French</a>)</li>-->
                                 <li><a href="{% url hss_graphs %}">HSS Graphs</a></li>
                                 <li><a href="{% url country_response_breakdown %}">Response Breakdown</a></li>
                                 <li><a href="{% url top5_countries %}">Top5 Countries</a></li>
@@ -190,6 +195,21 @@
                                 <li><a href="{% url health_budget_graphs %}">Health Budgets</a></li>
                                 <li><a href="{% url budget_disbursement_graphs %}">Budget Disbursements</a></li>
                             </ul>
+                        </p>
+                        <h2>Graphs by Indicator</h2>
+                        <p>
+                        <a href="{% url countries_by_indicator_graphs "1DP" %}">1DP</a>
+                        <a href="{% url countries_by_indicator_graphs "2DPa" %}">2DPa</a>
+                        <a href="{% url countries_by_indicator_graphs "2DPb" %}">2DPb</a>
+                        <a href="{% url countries_by_indicator_graphs "2DPc" %}">2DPc</a>
+                        <a href="{% url countries_by_indicator_graphs "3DP" %}">3DP</a>
+                        <a href="{% url countries_by_indicator_graphs "4DP" %}">4DP</a>
+                        <a href="{% url countries_by_indicator_graphs "5DPa" %}">5DPa</a>
+                        <a href="{% url countries_by_indicator_graphs "5DPb" %}">5DPb</a>
+                        <a href="{% url countries_by_indicator_graphs "5DPc" %}">5DPc</a>
+                        <a href="{% url countries_by_indicator_graphs "6DP" %}">6DP</a>
+                        <a href="{% url countries_by_indicator_graphs "7DP" %}">7DP</a>
+                        <a href="{% url countries_by_indicator_graphs "8DP" %}">8DP</a>
                         </p>
                     </div>
                 </div> <!-- end row 2 -->
