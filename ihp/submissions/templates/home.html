@@ -20,7 +20,7 @@
         border-bottom: dotted 1px #898989;
     } 
 
-    p a {
+    p#country_indicators a {
         margin-right: 5px;
         padding-right: 5px;
         border-right: solid thin white;
@@ -197,7 +197,7 @@
                             </ul>
                         </p>
                         <h2>Graphs by Indicator</h2>
-                        <p>
+                        <p id="country_indicators">
                         <a href="{% url countries_by_indicator_graphs "1DP" %}">1DP</a>
                         <a href="{% url countries_by_indicator_graphs "2DPa" %}">2DPa</a>
                         <a href="{% url countries_by_indicator_graphs "2DPb" %}">2DPb</a>
