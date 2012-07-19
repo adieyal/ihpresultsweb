@@ -131,10 +131,13 @@ class StackedAgencyBarGraph(DPChart):
         kwargs["yAxis"] = "%"
         super(StackedAgencyBarGraph, self).__init__(chart_name, **kwargs)
         categories = map(lambda x: x[0].agency, dataset["data"])
-        data = map(lambda x: x[1], dataset["data"])
+        cur_data = map(lambda x: x[1], dataset["data"])
+        base_data = map(lambda x: x[2], dataset["data"])
 
-        data1 = data
-        data2 = map(lambda x: 100 - x, data)
+        cur_data1 = cur_data
+        cur_data2 = map(lambda x: 100 - x, cur_data)
+        base_data1 = base_data
+        base_data2 = map(lambda x: 100 - x, base_data)
 
         self.chart["defaultSeriesType"] = "column"
         self.xAxis = {
@@ -147,24 +150,24 @@ class StackedAgencyBarGraph(DPChart):
 
         if hasattr(self, "yAxis"):
             self.yAxis["max"] = 100
+            self.yAxis["plotBands"] = [{
+                "from" : target,
+                "to": target * 1.01,
+                "color" : "#F68B1F",
+            }]
 
-        self.series = [{
-            "name" : dataset["name2"],
-            "data" : data2, 
-            "color" : "#82A8A0"
-        }, {
-            "name" : dataset["name1"],
-            "data" : data1,
-            "color" : "#2D5352",
-        }, {
-            "name" : "Target = %s%%" % (target),
-            "data" : [target] * len(categories),
-            "type" : "line",
-            "color" : "#F68B1F",
-            "marker" : {
-                "enabled" : "false"
+        self.series = [
+            {
+                "name" : dataset["name2"],
+                "data" : cur_data2, 
+                "color" : "#82A8A0"
             },
-        }]
+            {
+                "name" : dataset["name1"],
+                "data" : cur_data1,
+                "color" : "#2D5352",
+            }, 
+        ]
 
         self.plotOptions = {"column" : {"stacking" : "percent"}}
 
@@ -314,16 +317,11 @@ class HighlevelBarChart(DPChart):
         }]
 
         if "target" in kwargs:
-            self.series.append({
-                "type" : "line",
-                "name" : "Target",
-                "data" : [kwargs["target"]] * 2,
-                "dashStyle" : "shortDash",
-                "marker" : {
-                    "enabled" : "false"
-                },
-                "color": "#F68B1F",
-            })
+            self.yAxis["plotBands"] = [{
+                "from" : kwargs["target"],
+                "to": kwargs["target"] * 1.01,
+                "color" : "#F68B1F",
+            }]
 
 def agency_graphs_by_indicator(request, indicator, language, template_name="submissions/agency_graphs_by_indicator.html", extra_context=None):
     extra_context = extra_context or {}
@@ -471,7 +469,7 @@ def additional_graph_by_indicator(indicator, name, translation, agency_data):
         f = lambda x: x
         if reverse: f = lambda x : 100.0 - x
         data = [
-            (agency, f(datum[indicator]["cur_val"]))
+            (agency, f(datum[indicator]["cur_val"]), f(datum[indicator]["base_val"]))
             for (agency, datum) in agency_data.items()
             if datum[indicator]["cur_val"] not in (NA_STR, None)
         ]
