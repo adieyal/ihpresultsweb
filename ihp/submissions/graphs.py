@@ -154,18 +154,33 @@ class StackedAgencyBarGraph(DPChart):
                 "from" : target,
                 "to": target * 1.01,
                 "color" : "#F68B1F",
-            }]
+            }
+        ]
 
         self.series = [
             {
-                "name" : dataset["name2"],
-                "data" : cur_data2, 
-                "color" : "#82A8A0"
+                "name" : dataset["name2_baseline"],
+                "data" : base_data2, 
+                "color" : "#82A8A0",
+                "stack" : "baseline"
             },
             {
-                "name" : dataset["name1"],
+                "name" : dataset["name1_baseline"],
+                "data" : base_data1,
+                "color" : "#2D5352",
+                "stack" : "baseline"
+            }, 
+            {
+                "name" : dataset["name2_current"],
+                "data" : cur_data2, 
+                "color" : "#82A8A0",
+                "stack" : "current"
+            },
+            {
+                "name" : dataset["name1_current"],
                 "data" : cur_data1,
                 "color" : "#2D5352",
+                "stack" : "current"
             }, 
         ]
 
@@ -498,8 +513,10 @@ def additional_graph_by_indicator(indicator, name, translation, agency_data):
         return StackedAgencyBarGraph(
             name,
             {
-                "name1" : translation.additional_graphs[indicator]["series1"],
-                "name2" : translation.additional_graphs[indicator]["series2"],
+                "name1_current" : "Latest: " + translation.additional_graphs[indicator]["series1"],
+                "name2_current" : "Latest: " + translation.additional_graphs[indicator]["series2"],
+                "name1_baseline" : "Baseline: " + translation.additional_graphs[indicator]["series1"],
+                "name2_baseline" : "Baseline: " + translation.additional_graphs[indicator]["series2"],
                 "data" : indicator_data(indicator, reverse=True if indicator in reverse else False)
             },
             "target", target,
