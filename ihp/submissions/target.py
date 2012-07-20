@@ -134,6 +134,7 @@ def calc_agency_ratings(agency, language=None):
 
         result["target"] = ratings_target(indicator) or evaluate_indicator(target, base_val, cur_val)
         result["target_val"] = target.tick_criterion_value
+        result["target_round"] = round(result["target_val"])
 
         if ratings_comments(indicator):
             result["commentary"] = ratings_comments(indicator)
