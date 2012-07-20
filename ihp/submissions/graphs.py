@@ -554,8 +554,11 @@ def highlevelgraphs(request, language, template_name="submissions/highlevelgraph
     return direct_to_template(request, template=template_name, extra_context=extra_context)
 
 def calc_graph_values(indicator, base_val, previous_val, latest_val):
+    base_val = foz(base_val)
+    previous_val = foz(previous_val)
+    latest_val = foz(latest_val)
     if indicator in ["2DPa", "5DPa", "5DPb"]:
-        return None, safe_mul(
+        return safe_mul(
             safe_div(
                 safe_diff(latest_val, base_val), 
                 base_val
@@ -593,18 +596,18 @@ def agencygraphs(request, agency_name, language=None, template_name="submissions
             old_indicators = calc_agency_country_indicators(agency, country, funcs=positive_funcs)
         base_val, _, latest_val, _ = indicators["2DPa"][0]
         _, _, previous_val, _ = old_indicators["2DPa"][0]
-        country_data["2DPa_2"] = (base_val, previous_val, latest_val)
+        country_data["2DPa_2"] = (foz(base_val), foz(previous_val), foz(latest_val))
         data[country.country] = country_data
     
     agency_name = agency.agency
 
     extra_context["graph_2DPa"] = AgencyCountryLatestBarGraph(
         agency.countries, "graph_2DPa", 
-        [data[country.country]["2DPa"][1] for country in agency.countries],
+        [data[country.country]["2DPa"][0] for country in agency.countries],
         title=translation.agency_graphs["2DPa"]["title"] % locals(),
         yAxis=translation.agency_graphs["2DPa"]["yAxis"],
     )
-    
+
     extra_context["graph_2DPa_2"] = AgencyCountryBarGraph(
         agency.countries, "graph_2DPa_2", 
         [data[country.country]["2DPa_2"][0] for country in agency.countries],
@@ -652,14 +655,14 @@ def agencygraphs(request, agency_name, language=None, template_name="submissions
 
     extra_context["graph_5DPa"] = AgencyCountryLatestBarGraph(
         agency.countries, "graph_5DPa",
-        [data[country.country]["5DPa"][2] for country in agency.countries],
+        [data[country.country]["5DPa"][0] for country in agency.countries],
         title=translation.agency_graphs["5DPa"]["title"],
         yAxis=translation.agency_graphs["5DPa"]["yAxis"],
     )
 
     extra_context["graph_5DPb"] = AgencyCountryLatestBarGraph(
         agency.countries, "graph_5DPb",
-        [data[country.country]["5DPb"][2] for country in agency.countries],
+        [data[country.country]["5DPb"][0] for country in agency.countries],
         title=translation.agency_graphs["5DPb"]["title"] % agency.agency,
         yAxis=translation.agency_graphs["5DPb"]["yAxis"],
     )
