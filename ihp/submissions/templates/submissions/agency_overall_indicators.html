@@ -14,7 +14,6 @@
     var build_table = function(json) {
         loadStop();
         indicators = json.map(function(x) { return x.indicator; });
-        console.log(json);
 
         build_graph({
             base_data : json.map(function(x) { return d3.round(x["baseline"], 2); }),
