@@ -5,12 +5,28 @@ import target
 from functools import partial
 
 from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
 
 def foz(val):
     try:
         return float(val)
     except (TypeError, ValueError):
         return 0
+
+def all_indicators(request, agency_id):
+    agency = get_object_or_404(models.Agency, pk=agency_id)
+    results = indicators.calc_agency_indicators(agency) 
+    
+    js = [
+        {
+            "indicator" : indicator,
+            "baseline" : foz(result[0][0]),
+            "latest" : foz(result[0][2]),
+        } 
+        for (indicator, result) in results.items()
+    ]
+
+    return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")
 
 def country_by_indicator(request, indicator):
     countries = models.Country.objects.order_by("country")
