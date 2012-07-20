@@ -13,6 +13,15 @@ urlpatterns = patterns('ihp.submissions.graphs',
     url(r"^agencies/by_country/(?P<country_name>[a-zA-Z\s]+)/(?P<language>\w+)/$", "countrygraphs", name="countrygraphs"),
 
     url(
+        r"^agencies/overall_indicators/(?P<agency_id>\d+)/$",
+        direct_to_template, 
+        {
+            "template" : "submissions/main_base_bootstrap.html", 
+            "extra_context" : {"content_file" : "submissions/agency_overall_indicators.html"}
+        }, 
+        name="agency_overall_indicators_graphs"
+    ),
+    url(
         r"^countries/hss/$",
         direct_to_template, 
         {

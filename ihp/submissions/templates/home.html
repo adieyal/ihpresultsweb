@@ -56,6 +56,7 @@
                                 <li>
                                     <a href="{% url agencygraphs agency.agency "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/><span class="language">(En)</span></a>
                                     <a href="{% url agencygraphs agency.agency "French" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/><span class="language">(Fr)</span></a>
+                                    <a href="{% url agency_overall_indicators_graphs agency.id %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/><span class="language">(All Indicators)</span></a>
                                 </li> 
                                 <li><a href="{% url agency_table_by_agency agency.id "English" %}">Table</a></li>
                             </ul>

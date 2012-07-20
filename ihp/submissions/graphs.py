@@ -600,6 +600,7 @@ def agencygraphs(request, agency_name, language=None, template_name="submissions
         data[country.country] = country_data
     
     agency_name = agency.agency
+    extra_context["agency"] = agency
 
     extra_context["graph_2DPa"] = AgencyCountryLatestBarGraph(
         agency.countries, "graph_2DPa", 

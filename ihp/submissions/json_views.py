@@ -16,16 +16,20 @@ def foz(val):
 def all_indicators(request, agency_id):
     agency = get_object_or_404(models.Agency, pk=agency_id)
     results = indicators.calc_agency_indicators(agency) 
+    with models.old_dataset():
+        results_2009 = indicators.calc_agency_indicators(agency) 
     
     js = [
         {
             "indicator" : indicator,
             "baseline" : foz(result[0][0]),
+            "2009" : foz(results_2009[indicator][0][2]),
             "latest" : foz(result[0][2]),
         } 
         for (indicator, result) in results.items()
     ]
 
+    js = sorted(js, key=lambda x : x["indicator"])
     return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")
 
 def country_by_indicator(request, indicator):
