@@ -41,4 +41,9 @@ urlpatterns = patterns('ihp.submissions.json_views',
         'budget_disbursement', 
         name='json_budget_disbursement'
     ),
+    url(
+        r'^countries/by_indicator/(?P<indicator>\w+)/$', 
+        'country_by_indicator', 
+        name='json_country_by_indicator'
+    ),
 )

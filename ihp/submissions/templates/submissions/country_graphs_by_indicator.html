@@ -1,25 +1,42 @@
-{% extends "submissions/graph_base.html" %}
-
-{% block graphdefs %}
-
-<script>
-{{ graph_3G|safe }}
-{{ graph_4G|safe }}
-{{ graph_hw|safe }}
-{{ graph_outpatient_visits|safe }}
-{{ graph_skilled_medical|safe }}
-{{ graph_health_budget|safe }}
-</script>
+{% block head %}
+    {{ block.super }}
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/graph_utils.js"></script>
 {% endblock %}
 
-{% block body %}
-<h1>{{ agency }}</h1>
+{% block content %}
+<div class="graphblock">
+    <div id="container_hb" class="graph"></div>
+</div>
+<script>
 
-<div class="graphblock"><div id="graph_3G" class="graph"></div></div>
-<div class="graphblock"><div id="graph_4G" class="graph"></div></div>
-<div class="graphblock"><div id="graph_hw" class="graph"></div></div>
-<div class="graphblock"><div id="graph_outpatient_visits" class="graph"></div></div>
-<div class="graphblock"><div id="graph_skilled_medical" class="graph"></div></div>
-<div class="graphblock"><div id="graph_health_budget" class="graph"></div></div>
+    var build_table = function(json) {
+        loadStop();
+        countries = json.map(function(x) { return x.country; });
+        console.log(json);
 
+        build_graph({
+            base_data : json.map(function(x) { return d3.round(x.data["baseline"], 2); }),
+            y2009_data : json.map(function(x) { return d3.round(x.data["2009"], 2); }),
+            cur_data : json.map(function(x) { return d3.round(x.data["latest"], 2); }),
+            yaxis : '%',
+            title : 'Indicator: {{ params.indicator }}',
+            container : 'container_hb',
+            graph_name : 'chart_hb',
+            target : '0',
+            target_text : ''
+        
+        });
+        var tspans = d3.selectAll("tspan")[0][33]
+        d3.select(tspans).text("* Target for Nepal is 10%")
+
+    }
+    loadStart();
+
+
+    var json = '{% url json_country_by_indicator params.indicator %}';
+
+    d3.json(json, function(e){
+        build_table(e);
+    });
+</script>
 {% endblock %}

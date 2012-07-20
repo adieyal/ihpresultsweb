@@ -110,23 +110,23 @@ agency_graphs = {
         "yAxis" : "% change in funds not reported <br>on government\\'s budget",
     },
     "2DPa_2" : {
-        "title" : "2DPa: %% of %(agency_name)s\\'s aid flows to the health sector <br>reported on goverment\\'s budget",
+        "title" : "2DPa: Absolute %% of %(agency_name)s\\'s aid flows to the health sector <br>reported on goverment\\'s budget",
         "yAxis" : "% of funds reported <br>on government\\'s budget",
     },
     "2DPb" : {
-        "title" : "2DPb: Change in %% of capacity development provided <br>by the %(agency_name)s through coordinated programmes",
+        "title" : "2DPb: Absolute %% of capacity development provided <br>by the %(agency_name)s through coordinated programmes",
         "yAxis" : "%% of capacity development support <br/>provided through coordinated programmes",
     },
     "2DPc" : {
-        "title" : "2DPc: Change in %% of aid provided through programme based approaches",
+        "title" : "2DPc: Absolute %% of aid provided through programme based approaches",
         "yAxis" : "%% of health sector aid provided <br/>through programme based approaches",
     },
     "3DP" : {
-        "title" : "3DP: % of health sector funding provided through multi-year commitments",
+        "title" : "3DP: Absolute %% of health sector funding provided through multi-year commitments",
         "yAxis" : "%% of health sector funding provided <br>through multi-year commitments",
     },
     "4DP" : {
-        "title" : "4DP: Change in %% of %s\\'s health sector aid not disbursed <br>within the year for which it was scheduled",
+        "title" : "4DP: Absolute %% of %s\\'s health sector aid not disbursed <br>within the year for which it was scheduled",
         "yAxis" : "%% of health sector aid disbursed <br>within the year for which it was scheduled",
     },
     "5DPa" : {
@@ -150,22 +150,22 @@ country_graphs = {
     },
     "2DPa_2" : {
         "title" : "2DPa: %% of %(country_name)s\\'s aid flows to the health sector <br>reported on goverment\\'s budget",
-        "yAxis" : "%% of funds reported <br>on government\\'s budget",
+        "yAxis" : "Absolute %% of funds reported <br>on government\\'s budget",
     },
     "2DPb" : {
-        "title" : "2DPb: Change in %% of capacity development support provided to %(country_name)s <br/>health sector through coordinated programmes",
+        "title" : "2DPb: Absolute %% of capacity development support provided to %(country_name)s <br/>health sector through coordinated programmes",
         "yAxis" : "%% of capacity development support <br/>provided through coordinated programmes",
     },
     "2DPc" : {
-        "title" : "2DPc: Change in %% of health sector aid provided to %(country_name)s <br/>through programme based approaches",
+        "title" : "2DPc: Absolute %% of health sector aid provided to %(country_name)s <br/>through programme based approaches",
         "yAxis" : "%% of health sector aid provided <br/>through programme based approaches",
     },
     "3DP" : {
-        "title" : "3DP: Change in %% of health sector aid provided to %(country_name)s<br/> through multi-year commitments",
+        "title" : "3DP: Absolute %% of health sector aid provided to %(country_name)s<br/> through multi-year commitments",
         "yAxis" : "%% of health sector funding provided <br>through multi-year commitments",
     },
     "4DP" : {
-        "title" : "4DP: Change in %% of health sector aid to %(country_name)s <br/>disbursed within the year for which it was scheduled",
+        "title" : "4DP: Absolute %% of health sector aid to %(country_name)s <br/>disbursed within the year for which it was scheduled",
         "yAxis" : "%% of health sector aid disbursed <br>within the year for which it was scheduled",
     },
     "5DPa" : {

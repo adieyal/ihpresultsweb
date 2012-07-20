@@ -131,10 +131,13 @@ class StackedAgencyBarGraph(DPChart):
         kwargs["yAxis"] = "%"
         super(StackedAgencyBarGraph, self).__init__(chart_name, **kwargs)
         categories = map(lambda x: x[0].agency, dataset["data"])
-        data = map(lambda x: x[1], dataset["data"])
+        cur_data = map(lambda x: x[1], dataset["data"])
+        base_data = map(lambda x: x[2], dataset["data"])
 
-        data1 = data
-        data2 = map(lambda x: 100 - x, data)
+        cur_data1 = cur_data
+        cur_data2 = map(lambda x: 100 - x, cur_data)
+        base_data1 = base_data
+        base_data2 = map(lambda x: 100 - x, base_data)
 
         self.chart["defaultSeriesType"] = "column"
         self.xAxis = {
@@ -147,24 +150,39 @@ class StackedAgencyBarGraph(DPChart):
 
         if hasattr(self, "yAxis"):
             self.yAxis["max"] = 100
+            self.yAxis["plotBands"] = [{
+                "from" : target,
+                "to": target * 1.01,
+                "color" : "#F68B1F",
+            }
+        ]
 
-        self.series = [{
-            "name" : dataset["name2"],
-            "data" : data2, 
-            "color" : "#82A8A0"
-        }, {
-            "name" : dataset["name1"],
-            "data" : data1,
-            "color" : "#2D5352",
-        }, {
-            "name" : "Target = %s%%" % (target),
-            "data" : [target] * len(categories),
-            "type" : "line",
-            "color" : "#F68B1F",
-            "marker" : {
-                "enabled" : "false"
+        self.series = [
+            {
+                "name" : dataset["name2_baseline"],
+                "data" : base_data2, 
+                "color" : "#82A8A0",
+                "stack" : "baseline"
             },
-        }]
+            {
+                "name" : dataset["name1_baseline"],
+                "data" : base_data1,
+                "color" : "#2D5352",
+                "stack" : "baseline"
+            }, 
+            {
+                "name" : dataset["name2_current"],
+                "data" : cur_data2, 
+                "color" : "#82A8A0",
+                "stack" : "current"
+            },
+            {
+                "name" : dataset["name1_current"],
+                "data" : cur_data1,
+                "color" : "#2D5352",
+                "stack" : "current"
+            }, 
+        ]
 
         self.plotOptions = {"column" : {"stacking" : "percent"}}
 
@@ -314,16 +332,11 @@ class HighlevelBarChart(DPChart):
         }]
 
         if "target" in kwargs:
-            self.series.append({
-                "type" : "line",
-                "name" : "Target",
-                "data" : [kwargs["target"]] * 2,
-                "dashStyle" : "shortDash",
-                "marker" : {
-                    "enabled" : "false"
-                },
-                "color": "#F68B1F",
-            })
+            self.yAxis["plotBands"] = [{
+                "from" : kwargs["target"],
+                "to": kwargs["target"] * 1.01,
+                "color" : "#F68B1F",
+            }]
 
 def agency_graphs_by_indicator(request, indicator, language, template_name="submissions/agency_graphs_by_indicator.html", extra_context=None):
     extra_context = extra_context or {}
@@ -471,7 +484,7 @@ def additional_graph_by_indicator(indicator, name, translation, agency_data):
         f = lambda x: x
         if reverse: f = lambda x : 100.0 - x
         data = [
-            (agency, f(datum[indicator]["cur_val"]))
+            (agency, f(datum[indicator]["cur_val"]), f(datum[indicator]["base_val"]))
             for (agency, datum) in agency_data.items()
             if datum[indicator]["cur_val"] not in (NA_STR, None)
         ]
@@ -500,8 +513,10 @@ def additional_graph_by_indicator(indicator, name, translation, agency_data):
         return StackedAgencyBarGraph(
             name,
             {
-                "name1" : translation.additional_graphs[indicator]["series1"],
-                "name2" : translation.additional_graphs[indicator]["series2"],
+                "name1_current" : "Latest: " + translation.additional_graphs[indicator]["series1"],
+                "name2_current" : "Latest: " + translation.additional_graphs[indicator]["series2"],
+                "name1_baseline" : "Baseline: " + translation.additional_graphs[indicator]["series1"],
+                "name2_baseline" : "Baseline: " + translation.additional_graphs[indicator]["series2"],
                 "data" : indicator_data(indicator, reverse=True if indicator in reverse else False)
             },
             "target", target,
@@ -540,7 +555,18 @@ def highlevelgraphs(request, language, template_name="submissions/highlevelgraph
 
 def calc_graph_values(indicator, base_val, previous_val, latest_val):
     if indicator in ["2DPa", "5DPa", "5DPb"]:
-        return None, safe_mul(safe_div(safe_diff(latest_val, base_val), base_val), 100), safe_mul(safe_div(safe_diff(previous_val, base_val), base_val), 100)
+        return None, safe_mul(
+            safe_div(
+                safe_diff(latest_val, base_val), 
+                base_val
+            ), 
+        100), 
+        safe_mul(
+            safe_div(
+                safe_diff(previous_val, base_val), 
+                base_val
+            ), 
+        100)
     else:
         return base_val, previous_val, latest_val
 
@@ -754,96 +780,3 @@ def countrygraphs(request, country_name, language, template_name="submissions/co
     
     return direct_to_template(request, template=template_name, extra_context=extra_context)
 
-    
-def government_graphs(request, language, template_name="submission/country_graphs_by_indicator.html", extra_context=None):
-    extra_context = extra_context or {}
-
-    translation = request.translation
-
-    countries = sorted(Country.objects.all(), key=lambda x: x.country)
-    data_3G = dict([(c, calc_country_indicators(c)["3G"]) for c in countries])
-    data_4G = dict([(c, calc_country_indicators(c)["4G"]) for c in countries])
-
-    country_data = dict([(country, country_scorecard.get_country_export_data(country)) for country in Country.objects.all()])
-    with old_dataset():
-        data_3G_2009 = dict([(c, calc_country_indicators(c)["3G"]) for c in countries])
-        data_4G_2009 = dict([(c, calc_country_indicators(c)["4G"]) for c in countries])
-
-        country_data_2009 = dict([(country, country_scorecard.get_country_export_data(country)) for country in Country.objects.all()])
-
-    # TODO
-    # Request from James to zero negative values
-    neg_to_zero = lambda x : 0 if x < 0 else x
-
-    # TODO
-    # Request from James to remove overly large values
-    remove_large = lambda x : 0 if x > 100 else x
-
-
-    # Nepal needs to be shown at the end of the list and with an asterix
-    nepal = Country.objects.get(country="Nepal")
-    nepal.country = nepal.country + "*"
-    countries_3g = list(countries) + [nepal]
-    countries_3g.remove(nepal)
-    extra_context["graph_3G"] = TargetCountryBarGraph(
-        countries_3g,
-        "graph_3G",
-        [data_3G[country][0][0] for country in countries_3g],
-        [data_3G_2009[country][0][2] for country in countries_3g],
-        [data_3G[country][0][2] for country in countries_3g],
-        translation.target_language["target"], 15,
-        title=translation.government_graphs["3G"]["title"],
-    )
-    extra_context["graph_3G"].subtitle = {
-        "text": translation.government_graphs["3G"]["subtitle"],
-        "align": 'left',
-        "x": 50,
-        "y": 388,
-        "floating" : "true",
-    }
-
-    extra_context["graph_4G"] = CountryBarGraph(
-        countries,
-        "graph_4G",
-        [neg_to_zero(data_4G[country][0][0]) for country in countries],
-        [neg_to_zero(data_4G[country][0][2]) for country in countries],
-        title=translation.government_graphs["4G"]["title"],
-    )
-
-    extra_context["graph_hw"] = CountryBarGraph(
-        countries,
-        "graph_hw",
-        [remove_large(country_data[country]["indicators"]["other"]["health_workforce_perc_of_budget_baseline"] * 100) for country in countries],
-        [remove_large(country_data[country]["indicators"]["other"]["health_workforce_perc_of_budget_latest"] * 100) for country in countries],
-        title=translation.government_graphs["health_workforce"]["title"],
-    )
-
-    extra_context["graph_outpatient_visits"] = CountryBarGraph(
-        countries,
-        "graph_outpatient_visits",
-        [country_data[country]["indicators"]["other"]["outpatient_visits_baseline"] for country in countries],
-        [country_data[country]["indicators"]["other"]["outpatient_visits_latest"] for country in countries],
-        title=translation.government_graphs["outpatient_visits"]["title"],
-    )
-    extra_context["graph_outpatient_visits"].yAxis = {"title" : {"text" : ""}} 
-
-    extra_context["graph_skilled_medical"] = TargetCountryBarGraph(
-        countries,
-        "graph_skilled_medical",
-        [country_data[country]["indicators"]["other"]["skilled_personnel_baseline"] for country in countries],
-        [country_data[country]["indicators"]["other"]["skilled_personnel_latest"] for country in countries],
-        translation.target_language["who"], 23,
-        title=translation.government_graphs["skilled_medical"]["title"],
-    )
-    extra_context["graph_skilled_medical"].yAxis = {"title" : {"text" : ""}} 
-
-    extra_context["graph_health_budget"] = TargetCountryBarGraph(
-        countries,
-        "graph_health_budget",
-        [country_data[country]["indicators"]["3G"]["baseline_value"] for country in countries],
-        [country_data[country]["indicators"]["3G"]["latest_value"] for country in countries],
-        translation.target_language["target"], 15,
-        title=translation.government_graphs["health_budget"]["title"],
-    )
-    
-    return direct_to_template(request, template=template_name, extra_context=extra_context)

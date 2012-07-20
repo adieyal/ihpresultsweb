@@ -130,6 +130,10 @@ def calc_indicator(qs, agency_or_country, indicator, funcs=None):
     return (base_val, base_year, cur_val, cur_year), comments
 
     
+def calc_agency_indicator_by_country(country, indicator, funcs=None):
+    qs = DPQuestion.objects.filter(submission__country=country)
+    return calc_indicator(qs, country, indicator, funcs=funcs)
+
 def calc_agency_indicator(qs, agency, indicator):
     """
     Calculate the value of a particular indicator for the given agency
@@ -245,7 +249,7 @@ g_indicators = [
 #TODO do checks to ensure that questions that aren't answered to break anything
 indicator_funcs = {
     "1DP"  : (country_perc_factory("yes"), ("1",)),
-    "2DPa" : (calc_one_minus_numdenom, ("3", "2")),
+    "2DPa" : (calc_one_minus_numdenom_2DPa, ("3", "2")),
     "2DPb" : (calc_numdenom, ("5", "4")),
     "2DPc" : (calc_numdenom, ("7", "6")),
     "3DP"  : (calc_numdenom, ("8", "6")),
@@ -282,7 +286,7 @@ indicator_questions = dict([
 
 # Functions that calculate values in a positive sense - i.e. how much on budget, not how much off budget
 positive_funcs = dict(indicator_funcs)
-positive_funcs["2DPa"] = (calc_numdenom, indicator_funcs["2DPa"][1])
+positive_funcs["2DPa"] = (calc_numdenom_2DPa, indicator_funcs["2DPa"][1])
 positive_funcs["4DP"] = indicator_funcs["4DP"]
 positive_funcs["5DPa"] = (calc_numdenom, indicator_funcs["5DPa"][1])
 positive_funcs["5DPb"] = (calc_numdenom, indicator_funcs["5DPb"][1])
