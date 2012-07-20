@@ -5,7 +5,7 @@ urlpatterns = patterns('ihp.submissions.graphs',
     url(r"^agencies/highlevel/(?P<language>\w+)/$", "highlevelgraphs", name="highlevelgraphs"),
     url(r"^agencies/projection/(?P<language>\w+)/$", "projectiongraphs", name="projectiongraphs"),
     url(
-        r"^agencies/(?P<indicator>\w+)/(?P<language>\w+)/$", 
+        r"^agencies/by_indicator/(?P<indicator>\w+)/(?P<language>\w+)/$", 
         "agency_graphs_by_indicator", 
         name="agency_graphs_by_indicator"
     ),
