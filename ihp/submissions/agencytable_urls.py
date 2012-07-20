@@ -3,7 +3,16 @@ from django.views.generic.simple import direct_to_template
 
 urlpatterns = patterns('ihp.submissions.table_views',
     url(
-        r"fragile_states/$", 
+        r"^dfid_2dpa/$", 
+        direct_to_template, 
+        {
+            "template" : "submissions/main_base_bootstrap.html", 
+            "extra_context" : {"content_file" : "submissions/dfid_2dpa.html"}
+        }, 
+        name="dfid_2dpa"
+    ),
+    url(
+        r"^fragile_states/$", 
         direct_to_template, 
         {
             "template" : "submissions/main_base_bootstrap.html", 
@@ -12,7 +21,7 @@ urlpatterns = patterns('ihp.submissions.table_views',
         name="fragile_states"
     ),
     url(
-        r'two_by_two_analysis/$', 
+        r'^two_by_two_analysis/$', 
         direct_to_template, 
         {
             "template" : "submissions/main_base_bootstrap.html", 
@@ -21,7 +30,7 @@ urlpatterns = patterns('ihp.submissions.table_views',
         name="two_by_two_analysis"
     ),
     url(
-        r'top5_countries/$', 
+        r'^top5_countries/$', 
         direct_to_template, 
         {
             "template" : "submissions/main_base_bootstrap.html", 
@@ -30,7 +39,7 @@ urlpatterns = patterns('ihp.submissions.table_views',
         name="top5_countries"
     ),
     url(
-        r'early_signatories/$', 
+        r'^early_signatories/$', 
         direct_to_template, 
         {
             "template" : "submissions/main_base_bootstrap.html", 
@@ -39,7 +48,7 @@ urlpatterns = patterns('ihp.submissions.table_views',
         name="early_signatories"
     ),
     url(
-        r'volumes_by_country/$', 
+        r'^volumes_by_country/$', 
         direct_to_template, 
         {
             "template" : "submissions/main_base_bootstrap.html", 

@@ -167,7 +167,7 @@ urlpatterns = patterns('',
     (r'^graphs/', include('ihp.submissions.graph_urls')),
 
     # Agency Tables
-    (r'^agencies/tables', include('ihp.submissions.agencytable_urls')),
+    (r'^agencies/tables/', include('ihp.submissions.agencytable_urls')),
 
     # dashboard is URL to access underlying data indirectly
     (r'^dashboard/$', direct_to_template, {

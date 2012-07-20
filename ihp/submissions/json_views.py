@@ -13,6 +13,39 @@ def foz(val):
     except (TypeError, ValueError):
         return 0
 
+def dfid_2dpa(request):
+    agency = get_object_or_404(models.Agency, agency="UK")
+    first_wave = ["Burundi", "Cambodia", "Ethiopia", "Kenya", "Mali", "Mozambique", "Nepal", "Zambia"]
+
+    all_results = indicators.calc_agency_indicator(
+        models.DPQuestion.objects.filter(
+            submission__agency=agency, submission__country__in=agency.countries
+        ),
+        agency, "2DPa", funcs=indicators.positive_funcs
+    )[0]
+
+    first_wave_results = indicators.calc_agency_indicator(
+        models.DPQuestion.objects.filter(
+            submission__agency=agency, submission__country__country__in=first_wave
+        ),
+        agency, "2DPa", funcs=indicators.positive_funcs
+    )[0]
+    
+    js = {
+        "all" : {
+            "num_countries" : len(agency.countries),
+            "baseline" : all_results[0],
+            "latest" : all_results[2],
+        },
+        "first_wave" : {
+            "num_countries" : len(first_wave),
+            "baseline" : first_wave_results[0],
+            "latest" : first_wave_results[2],
+        },
+    }
+
+    return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")
+
 def all_indicators(request, agency_id):
     agency = get_object_or_404(models.Agency, pk=agency_id)
     results = indicators.calc_agency_indicators(agency) 
