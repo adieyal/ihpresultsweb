@@ -50,9 +50,9 @@ var fill_svg = function(json){
             data = json.systems[i];
 
 
-            load_svg_image(data.logo, id + ' .icon');
-            insert_text(n.select('.header'), data.header ,"header-text");
-            insert_text(n.select('.description'), data.description, "description-text");
+            load_svg_image(data.logo, id + '-icon .icon');
+	    n.select(".header").text(data.header);
+            
         }
     }
 

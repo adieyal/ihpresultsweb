@@ -2892,49 +2892,11 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
 						</g>
 				</g>
 				<g
-   id="management">
+   id="management-icon">
 					<path
    d="m676.99 795.03c0 4.696-3.808 8.504-8.504 8.504h-201.1c-4.697 0-8.504-3.808-8.504-8.504v-150.76c0-4.696 3.807-8.504 8.504-8.504h201.09c4.696 0 8.504 3.808 8.504 8.504v150.76z"
    id="path762"
    fill="#D1DDD9" />
-					<switch
-   id="switch764">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject766">
-						</foreignObject>
-						<g
-   id="g768">
-							<rect
-   class="header"
-   height="25.237"
-   width="142.06"
-   y="690.21"
-   x="525.31"
-   id="rect770"
-   fill="none" />
-							<text
-   class="remove"
-   id="SVGID_35_"
-   font-size="11"
-   transform="translate(525.31 700.89)"
-   font-family="'Calibri-Bold'"
-   fill="#013333"><tspan
-     y="0"
-     x="0"
-     id="tspan773">REFLECTS GOOD PRACTICE  </tspan><tspan
-     y="12"
-     x="0"
-     id="tspan775">(OR REFORM IN PROGRESS)</tspan></text>
-
-
-
-						</g>
-					</switch>
 					<path
    clip-rule="evenodd"
    d="m466.18 653.75c0.045-4.546 3.768-8.194 8.313-8.148l186.43-0.001c4.547 0.046 8.193 4.644 8.148 9.19l-0.023-0.28c0 4.546-3.686 9.038-8.232 9.038h-186.44c-4.545 0-8.23-3.684-8.23-8.23l0.03-1.57z"
@@ -2943,7 +2905,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    fill="#86A49A" />
                <g
    class="icon"
-   transform="translate(472,688)scale(1.2)"
+   transform="translate(472,718)scale(1.2)"
    id="g788"> </g>
                <g
    class="remove"
@@ -3179,49 +3141,11 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
 						</switch>
 				</g>
 				<g
-   id="procurement">
+   id="procurement-icon">
 						<path
    id="_x5F_block_8_"
    d="m904.84 795.03c0 4.696-3.807 8.504-8.504 8.504h-201.09c-4.697 0-8.504-3.808-8.504-8.504v-150.76c0-4.696 3.807-8.504 8.504-8.504h201.09c4.697 0 8.504 3.808 8.504 8.504v150.76z"
    fill="#D1DDD9" />
-						<switch
-   id="switch923">
-							<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject925">
-							</foreignObject>
-							<g
-   id="g927">
-								<rect
-   class="header"
-   height="27.623"
-   width="142.95"
-   y="692.29"
-   x="754.36"
-   id="rect929"
-   fill="none" />
-								<text
-   class="remove"
-   id="SVGID_38_"
-   font-size="11"
-   font-family="'Calibri-Bold'"
-   fill="#0E3D3D"
-   transform="translate(754.36 702.97)"><tspan
-     y="0"
-     x="0"
-     id="tspan932">REFLECTS GOOD PRACTICE  </tspan><tspan
-     y="11"
-     x="0"
-     id="tspan934">(OR REFORM IN PROGRESS)</tspan></text>
-
-
-
-							</g>
-						</switch>
 						<path
    id="_x5F_headerblock"
    d="m694.36 653.75c0.045-4.546 3.768-8.194 8.312-8.148l186.44-0.001c4.547 0.046 8.193 4.644 8.148 9.19l-0.023-0.28c0 4.546-3.686 9.038-8.232 9.038h-186.45c-4.546 0-8.23-3.684-8.23-8.23l0.03-1.57z"
@@ -3230,7 +3154,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    fill="#86A49A" />
                   <g
    class="icon"
-   transform="translate(700,688)scale(1.2)"
+   transform="translate(700,718)scale(1.2)"
    id="g946"> </g>
 						<g
    id="_x5F_questionmark"
@@ -3471,55 +3395,11 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
 						</switch>
 				</g>
 				<g
-   id="technical">
+   id="technical-icon">
 					<path
    id="_x5F_block_6_"
    d="m1132.6 795.03c0 4.696-3.807 8.504-8.504 8.504h-201.08c-4.697 0-8.504-3.808-8.504-8.504v-150.76c0-4.696 3.807-8.504 8.504-8.504h201.09c4.697 0 8.504 3.808 8.504 8.504v150.76z"
    fill="#D1DDD9" />
-					<switch
-   id="_x5F_donorcapacity">
-						<foreignObject
-   requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-   height="1"
-   width="1"
-   y="0"
-   x="0"
-   id="foreignObject1082">
-						</foreignObject>
-						<g
-   id="g1084">
-							<rect
-   class="header"
-   height="75.526"
-   width="145.11"
-   y="675.08"
-   x="982.32"
-   id="rect1086"
-   fill="none" />
-							<text
-   class="remove"
-   id="_x5F_donorcapacity_1_"
-   font-size="11"
-   transform="translate(982.32 701.77)"
-   font-family="'Calibri-Bold'"
-   fill="#013333"><tspan
-     y="0"
-     x="0"
-     id="tspan1089">DONOR CAPACITY </tspan><tspan
-     y="11"
-     x="0"
-     id="tspan1091">DEVELOPMENT PROVIDED </tspan><tspan
-     y="22"
-     x="0"
-     id="tspan1093">THROUGH COORDINATED </tspan><tspan
-     y="33"
-     x="0"
-     id="tspan1095">PROGRAMMES</tspan></text>
-
-
-
-						</g>
-					</switch>
 					<path
    id="_x5F_block_7_"
    d="m922.13 653.75c0.045-4.546 3.768-8.194 8.312-8.148l186.44-0.001c4.547 0.046 8.193 4.644 8.148 9.19l-0.023-0.28c0 4.546-3.686 9.038-8.232 9.038h-186.46c-4.546 0-8.23-3.684-8.23-8.23l0.02-1.57z"
@@ -3528,7 +3408,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
    fill="#86A49A" />
                <g
    class="icon"
-   transform="translate(930,688)scale(1.2)"
+   transform="translate(930,718)scale(1.2)"
    id="g1107"> </g>
 					<g
    id="_x5F_arrow"
@@ -5825,6 +5705,18 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
 
 <!-- Custom hand typed SVG starts here. Isolated all text for translation. -->
 <g>
+  <style>
+    div.systems-box {
+    display: table;
+    }
+    div.systems-text {
+    font-size: 11px;
+    text-color: #0E3D3D;
+    line-height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    }
+  </style>
   <text x="173.43" y="63.66" style="font-size: 27px; font-family: Calibri; fill: #0E3D3D;">
     <tspan class="country_name" id="tspan365">{% blocktrans %}ETHIOPIA{% endblocktrans %}</tspan> {% blocktrans %}COUNTRY SCORECARD 2012{% endblocktrans %}
   </text>
@@ -5874,7 +5766,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
     {% blocktrans %}HEALTH FINANCING{% endblocktrans %}
   </text>
   <text x="716.355" y="593.355" style="font-size: 15px; font-family: Calibri; fill: #0E3D3D;">
-   {% blocktrans %}TOTAL HEALTH FINANCING{% endblocktrans %}
+    {% blocktrans %}TOTAL HEALTH FINANCING{% endblocktrans %}
   </text>
   <g transform="translate(1063.68,647.01)">
     <text transform="scale(0.9,1)" style="font-size: 12px; font-family: Calibri; fill: #000;">
@@ -5944,5 +5836,28 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
       {% blocktrans %}NATIONAL RESULTS FRAMEWORK AGREED{% endblocktrans %}
     </div>
   </foreignObject>
+  <g transform="scale(1.5, 1.5)">
+    <foreignObject x="525" y="670" width="142" height="130">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="systems-box" style="width: 142px; height: 130px;" id="management">
+	<div class="systems-text header">
+	  This text is to be replaced.
+	</div>
+      </div>
+    </foreignObject>
+    <foreignObject x="754" y="670" width="142" height="130">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="systems-box" style="width: 142px; height: 130px;" id="procurement">
+	<div class="systems-text header">
+	  This text is to be replaced.
+	</div>
+      </div>
+    </foreignObject>
+    <foreignObject x="982" y="670" width="142" height="130">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="systems-box" style="width: 142px; height: 130px;" id="technical">
+	<div class="systems-text header">
+	  This text is to be replaced.
+	</div>
+      </div>
+    </foreignObject>
+  </g>
 </g>
 </svg>
