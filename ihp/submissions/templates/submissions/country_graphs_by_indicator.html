@@ -6,6 +6,7 @@
 {% block content %}
 <div class="graphblock">
     <div id="container_hb" class="graph"></div>
+    <div id="container_hb2" class="graph"></div>
 </div>
 <script>
 
@@ -28,6 +29,36 @@
         });
         var tspans = d3.selectAll("tspan")[0][33]
         d3.select(tspans).text("* Target for Nepal is 10%")
+
+        var chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container_hb2',
+                type: 'line',
+                height: 900,
+            },
+            xAxis : {
+                categories: ['Baseline', '2009', 'Latest'],
+            },
+            yAxis : {
+                min : 0
+            },
+            legend : {
+                width: 300
+            },
+            title : {
+                text : 'Indicator: {{ params.indicator }}'
+            },
+            series : json.map(function(x) {
+                return {
+                    name : x.country,
+                    data : [
+                        d3.round(x.data.baseline, 2), 
+                        d3.round(x.data["2009"], 2),
+                        d3.round(x.data.latest, 2)
+                    ]
+                }
+            })
+        });
 
     }
     loadStart();
