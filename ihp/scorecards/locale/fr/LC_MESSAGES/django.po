@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-05 14:44+0200\n"
-"PO-Revision-Date: 2012-07-05 14:44\n"
+"POT-Creation-Date: 2012-07-22 14:47+0200\n"
+"PO-Revision-Date: 2012-07-22 14:50\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,33 +19,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 "X-Translated-Using: django-rosetta 0.6.8\n"
 
-#: models.py:115
+#: models.py:112
 msgid "No data available"
 msgstr "Pas de donnees disponibles"
 
-#: models.py:145 models.py:147
+#: models.py:142 models.py:144
 msgid "Signed Agreement"
 msgstr "Accord signé"
 
-#: models.py:159
+#: models.py:156
 msgid "Includes current targets and budgets"
 msgstr "Inclut les cibles et les budgets actuels"
 
-#: models.py:160
+#: models.py:157
 msgid "Jointly Assessed"
 msgstr "Évalué conjointement"
 
-#: models.py:163
+#: models.py:160
 msgid "Active joint monitoring"
 msgstr "Suivi conjoint actif"
 
-#: models.py:164
+#: models.py:161
 msgid "Number of development partner missions"
 msgstr ""
 "Nombre de missions effectuées par les\n"
 "partenaires de développement"
 
-#: models.py:165
+#: models.py:162
 #, python-format
 msgid ""
 "%(percentage)s%% of seats in the health sector coordination mechanism are "
@@ -55,37 +55,31 @@ msgstr ""
 "le mécanisme de coordina􀀉on du secteur de la\n"
 "santé"
 
-#: models.py:234 models.py:240
+#: models.py:225 models.py:231
 msgid "REFLECTS GOOD PRACTICE (OR REFORM IN PROGRESS)"
 msgstr ""
 "REFLETE UNE PRATIQUE\n"
 "EXEMPLAIRE (OU UNE\n"
 "REFORME EN COURS)"
 
-#: models.py:236 models.py:242 models.py:248
-msgid ""
-"Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, "
-"neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, "
-"nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est."
+#: models.py:227 models.py:233 models.py:239
+msgid " "
 msgstr ""
-"Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, "
-"neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, "
-"nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est."
 
-#: models.py:246
+#: models.py:237
 msgid "DONOR CAPACITY DEVELOPMENT PROVIDED THROUGH COORDINATED PROGRAMMES"
 msgstr ""
 "DEVELOPPEMENT DES CAPACITES PAR\n"
 "LES PROGRAMMES COORDONNES PAR\n"
 "LES BAILLEURS DE FONDS"
 
-#: models.py:336
+#: models.py:327
 msgid "An IHP+ Compact or equivalent mutual agreement is in place."
 msgstr ""
 "Un pacte IHP+ ou accord mutuel équivalent est\n"
 "en place"
 
-#: models.py:345
+#: models.py:336
 msgid ""
 "A National Health Sector Plan/ Strategy is in place with current targets & "
 "budgets that have been jointly assessed."
@@ -93,7 +87,7 @@ msgstr ""
 "Un plan / une stratégie du secteur national de la santé est en place dont "
 "les objectifs et lesbudgets sont actuels et ont évalués conjointement."
 
-#: models.py:354
+#: models.py:345
 msgid ""
 "A costed, comprehensive national HRH plan (integrated with the health plan) "
 "is being implemented or developed."
@@ -101,7 +95,7 @@ msgstr ""
 "Un plan national de ressources humaines de la santé chiffré et exhaustif (intégré dans le plan de\n"
 "santé national) est mis en oeuvre ou en cours de développement"
 
-#: models.py:363
+#: models.py:354
 #, python-format
 msgid ""
 "%(percentage)d%% (or an equivalent published target) of the national budget "
@@ -110,7 +104,7 @@ msgstr ""
 "%(percentage)d%% du budget national (ou un objectif equivalent publié) est "
 "alloué à la santé"
 
-#: models.py:373
+#: models.py:364
 msgid ""
 "Halve the proportion of health sector funding not disbursed against the "
 "approved annual budget."
@@ -118,7 +112,7 @@ msgstr ""
 "Réduire de moitié la proportion du financement du secteur de la santé qui "
 "n’est pas déboursé selon le budget annuel approuvé."
 
-#: models.py:382
+#: models.py:373
 msgid ""
 "Improvement of at least one measure (ie 0.5 points) on the PFM/CPIA scale of"
 " performance."
@@ -126,7 +120,7 @@ msgstr ""
 "Progrès d’au moins un degré (0.5 point) sur l’échelle de performance des "
 "systèmes de gestion des finances publiques de l’EPIN."
 
-#: models.py:391
+#: models.py:382
 msgid ""
 "Improvement of at least one measure on the four-point scale used to assess "
 "performance for this sector."
@@ -134,7 +128,7 @@ msgstr ""
 "Progrès d’au moins un degré sur l’échelle de quatre points utilisée pour "
 "évaluer les performances pour ce secteur"
 
-#: models.py:402
+#: models.py:393
 msgid ""
 "A transparent and monitorable performance assessment framework is in place "
 "to assess progress in the health sector."
@@ -142,7 +136,7 @@ msgstr ""
 "Un cadre d’évaluation transparent et controllable est en place afin "
 "d’évaluer les progrès dans le secteur de la santé"
 
-#: models.py:411
+#: models.py:402
 msgid ""
 "Mutual assesments (such as joint Annual Health Sector Review) are being made"
 " of progress implementing commitments in the health sector, including on aid"
@@ -153,31 +147,28 @@ msgstr ""
 "la mise en oeuvre des engagements dans le secteur de la santé, y compris en "
 "ce qui concerne l’efficacité de l’aide."
 
-#: models.py:423
-#, python-format
-msgid ""
-"At least 10%% of seats in the country's Health Sector Coordination "
-"mechanisms are allocated to Civil Society"
+#: models.py:411
+msgid "CSOs are represented at all key points of policy and planning process."
 msgstr ""
 "Des membres de la Société civile sont représentés à tous les moments clés du"
 " processus d’établissement des politiques et de planification"
 
-#: templates/scorecards/country-page-1.svg:5829
+#: templates/scorecards/country-page-1.svg:5721
 msgid "ETHIOPIA"
 msgstr ""
 
-#: templates/scorecards/country-page-1.svg:5829
+#: templates/scorecards/country-page-1.svg:5721
 msgid "COUNTRY SCORECARD 2012"
 msgstr "SCORECARD DE PAYS 2012"
 
-#: templates/scorecards/country-page-1.svg:5832
+#: templates/scorecards/country-page-1.svg:5724
 #: templates/scorecards/country-page-2.svg:7793
 msgid "Ratings are calculated using data up to and including 2011."
 msgstr ""
 "Les évaluations sont calculées à l'aide des données allant jusqu'en 2011 "
 "inclusivement."
 
-#: templates/scorecards/country-page-1.svg:5835
+#: templates/scorecards/country-page-1.svg:5727
 #: templates/scorecards/country-page-2.svg:7796
 msgid ""
 "This work is licensed under the Creative Commons Atribution-NonCommercial "
@@ -185,120 +176,120 @@ msgid ""
 "http://creativecommons.org.licenses/by-nc/3.0"
 msgstr ""
 
-#: templates/scorecards/country-page-1.svg:5839
+#: templates/scorecards/country-page-1.svg:5731
 msgid "HEALTH SYSTEMS STRENGTHENING"
 msgstr "RENFORCEMENT DES SYSTEMES DE SANTE"
 
-#: templates/scorecards/country-page-1.svg:5842
+#: templates/scorecards/country-page-1.svg:5734
 msgid "ACCESS TO PHC CLINICS"
-msgstr "L’ACCESS A DECS CENTRES DE SANTE PRIMAIRE"
+msgstr "L’ACCESS A DES CENTRES DE SANTE PRIMAIRE"
 
-#: templates/scorecards/country-page-1.svg:5845
+#: templates/scorecards/country-page-1.svg:5737
 msgid "outpatient department visits per 10,000 population per year"
 msgstr ""
 "visites ambulatoires aux services sanitaires pour 10,000 habitants par an"
 
-#: templates/scorecards/country-page-1.svg:5848
+#: templates/scorecards/country-page-1.svg:5740
 msgid "AVAILABILITY OF HEALTH WORKERS"
 msgstr "DISPONIBILITE DES EFFECTIFS"
 
-#: templates/scorecards/country-page-1.svg:5851
+#: templates/scorecards/country-page-1.svg:5743
 msgid "skilled medical personnel per 10,000 population"
 msgstr "employés médicaux qualifiés pour 10,000 habitants"
 
-#: templates/scorecards/country-page-1.svg:5854
+#: templates/scorecards/country-page-1.svg:5746
 msgid "FUNDS FOR HEALTH SYSTEMS"
 msgstr "FONDS POUR LES SYSTÈMES DE SANTÉ"
 
-#: templates/scorecards/country-page-1.svg:5857
+#: templates/scorecards/country-page-1.svg:5749
 msgid "spent on health workforce increasing"
 msgstr "dépensés sur le personnel de la santé"
 
-#: templates/scorecards/country-page-1.svg:5861
+#: templates/scorecards/country-page-1.svg:5753
 msgid "COUNTRY SYSTEMS"
 msgstr "SYSTEMES NATIONAUX"
 
-#: templates/scorecards/country-page-1.svg:5864
+#: templates/scorecards/country-page-1.svg:5756
 msgid "PUBLIC FINANCIAL MANAGEMENT"
 msgstr "GESTION DES FINANCES PUBLIQUES"
 
-#: templates/scorecards/country-page-1.svg:5867
+#: templates/scorecards/country-page-1.svg:5759
 msgid "PROCUREMENT"
 msgstr "APPROVISIONNEMENT"
 
-#: templates/scorecards/country-page-1.svg:5870
+#: templates/scorecards/country-page-1.svg:5762
 msgid "TECHNICAL ASSISTANCE"
 msgstr "ASSISTANCE TECHNIQUE"
 
-#: templates/scorecards/country-page-1.svg:5874
+#: templates/scorecards/country-page-1.svg:5766
 msgid "HEALTH FINANCING"
 msgstr "FINANCEMENT DE LA SANTE"
 
-#: templates/scorecards/country-page-1.svg:5877
+#: templates/scorecards/country-page-1.svg:5769
 msgid "TOTAL HEALTH FINANCING"
 msgstr "FINANCEMENT DE LA SANTE TOTALE"
 
-#: templates/scorecards/country-page-1.svg:5881
+#: templates/scorecards/country-page-1.svg:5773
 msgid "Domestic Financing"
 msgstr "Financement na􀀉onal"
 
-#: templates/scorecards/country-page-1.svg:5886
+#: templates/scorecards/country-page-1.svg:5778
 msgid "External Financing"
 msgstr "Financement exterieur"
 
-#: templates/scorecards/country-page-1.svg:5890
+#: templates/scorecards/country-page-1.svg:5782
 msgid "NATIONAL BUDGET ALLOCATED TO HEALTH"
 msgstr "Budget national alloué à la santé"
 
-#: templates/scorecards/country-page-1.svg:5893
+#: templates/scorecards/country-page-1.svg:5785
 msgid "Allocated to Health"
 msgstr "Alloué à la santé"
 
-#: templates/scorecards/country-page-1.svg:5896
+#: templates/scorecards/country-page-1.svg:5788
 msgid "Increase needed to meet the Abuja target"
 msgstr "Augmentation nécessaire pour atteindre la cible d'Abuja"
 
-#: templates/scorecards/country-page-1.svg:5900
+#: templates/scorecards/country-page-1.svg:5792
 msgid "POOLED FUNDING"
 msgstr "FINANCEMENT COMMUN"
 
-#: templates/scorecards/country-page-1.svg:5904
+#: templates/scorecards/country-page-1.svg:5796
 msgid "Number of Development Partners using Pooled Mechanisms"
 msgstr "Nombre de partenaires qui fournissent des fonds communs"
 
-#: templates/scorecards/country-page-1.svg:5908
+#: templates/scorecards/country-page-1.svg:5800
 msgid "COUNTRY OWNERSHIP &amp; ACCOUNTABILITY"
 msgstr "APPROPRIATION ET RESPONSABILITE"
 
-#: templates/scorecards/country-page-1.svg:5911
+#: templates/scorecards/country-page-1.svg:5803
 msgid "COMMITMENTS DOCUMENTED"
 msgstr "ENGAGEMENTS DOCUMENTES"
 
-#: templates/scorecards/country-page-1.svg:5915
+#: templates/scorecards/country-page-1.svg:5807
 msgid "HEALTH SECTOR PLAN &amp; AIDS STRATEGIES"
 msgstr "PLAN DU SECTEUR DE LA SANTE"
 
-#: templates/scorecards/country-page-1.svg:5920
+#: templates/scorecards/country-page-1.svg:5812
 msgid "HEALTH SECTOR AID EFFECTIVENESS MONITORING"
 msgstr "SECTEUR DE LA SANTE SUIVI DE L'EFFICACITE DE L'AIDE"
 
-#: templates/scorecards/country-page-1.svg:5925
+#: templates/scorecards/country-page-1.svg:5817
 msgid "MANAGING FOR DEVELOPMENT RESULTS"
 msgstr "GESTION AXEE SUR LES RESULTATS EN MATIERE DE DEVELOPPEMENT"
 
-#: templates/scorecards/country-page-1.svg:5929
+#: templates/scorecards/country-page-1.svg:5821
 msgid "DECISONS BASED ON RESULTS"
 msgstr "DECISIONS FONDEES SUR LES RESULTATS"
 
-#: templates/scorecards/country-page-1.svg:5934
+#: templates/scorecards/country-page-1.svg:5826
 msgid "JOINT HEALTH SECTOR REVIEWS CONDUCTED"
 msgstr "REVUES CONJOINTES MENEES DANS LE SECTEUR DE LA SANTE"
 
-#: templates/scorecards/country-page-1.svg:5939
+#: templates/scorecards/country-page-1.svg:5831
 msgid "FUNCTIONING HEALTH MANAGEMENT INFORMATION SYSTEMS (HMIS)"
 msgstr "FONCTIONNEMENT DU SYSTEME NATIONAL D'INFORMATION SANITAIRE (SNIS)"
 
-#: templates/scorecards/country-page-1.svg:5944
+#: templates/scorecards/country-page-1.svg:5836
 msgid "NATIONAL RESULTS FRAMEWORK AGREED"
 msgstr "CADRE NATIONAL DE RESULTATS CONVENUS"
 
@@ -789,3 +780,19 @@ msgstr ""
 "autodéclarées. IHP+Results a pris des mesures pour trianguler ces données à "
 "l'aide d'autres sources.De plus amples renseignements sont accessibles sur "
 "le site Web : www.ihpresults.net"
+
+#~ msgid ""
+#~ "Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, "
+#~ "neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, "
+#~ "nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est."
+#~ msgstr ""
+#~ "Homines plous oinvorsei virei atque mulieres sacra ne quisquam ecise velet, "
+#~ "neve inter ibei virei plous duobus, mulieribus plous tribus arfuise velent, "
+#~ "nisei de praitoris urbani senatuosque sententiad, utei suprad scriptum est."
+
+#~ msgid ""
+#~ "At least 10%% of seats in the country's Health Sector Coordination "
+#~ "mechanisms are allocated to Civil Society"
+#~ msgstr ""
+#~ "Des membres de la Société civile sont représentés à tous les moments clés du"
+#~ " processus d’établissement des politiques et de planification"
