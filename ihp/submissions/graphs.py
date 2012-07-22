@@ -296,10 +296,13 @@ class CountryAgencyBarGraph(DPChart):
         }]
 
 class CountryAgencyLatestBarGraph(CountryAgencyBarGraph):
-    def __init__(self, agencies, chart_name, latest_data, **kwargs):
+    def __init__(self, agencies, chart_name, latest_data, data_2009, **kwargs):
         super(CountryAgencyLatestBarGraph, self).__init__(agencies, chart_name, [], [], latest_data, **kwargs)
 
         self.series = [{
+            "name" : "2009",
+            "data" : data_2009 
+        }, {
             "name" : "2011",
             "data" : latest_data 
         }]
@@ -708,7 +711,8 @@ def countrygraphs(request, country_name, language, template_name="submissions/co
     country_name = country.country
     extra_context["graph_2DPa"] = CountryAgencyLatestBarGraph(
         country.agencies, "graph_2DPa", 
-        [data[agency.agency]["2DPa"][2] for agency in country.agencies],
+        [data[agency.agency]["2DPa"][0] for agency in country.agencies],
+        [data[agency.agency]["2DPa"][1] for agency in country.agencies],
         title=translation.country_graphs["2DPa"]["title"] % locals(),
         yAxis=translation.country_graphs["2DPa"]["yAxis"] % locals(),
     )
@@ -760,14 +764,16 @@ def countrygraphs(request, country_name, language, template_name="submissions/co
 
     extra_context["graph_5DPa"] = CountryAgencyLatestBarGraph(
         country.agencies, "graph_5DPa",
-        [data[agency.agency]["5DPa"][2] for agency in country.agencies],
+        [data[agency.agency]["5DPa"][0] for agency in country.agencies],
+        [data[agency.agency]["5DPa"][1] for agency in country.agencies],
         title=translation.country_graphs["5DPa"]["title"] % locals(),
         yAxis=translation.country_graphs["5DPa"]["yAxis"] % locals(),
     )
 
     extra_context["graph_5DPb"] = CountryAgencyLatestBarGraph(
         country.agencies, "graph_5DPb",
-        [data[agency.agency]["5DPb"][2] for agency in country.agencies],
+        [data[agency.agency]["5DPb"][0] for agency in country.agencies],
+        [data[agency.agency]["5DPa"][1] for agency in country.agencies],
         title=translation.country_graphs["5DPb"]["title"] % locals(),
         yAxis=translation.country_graphs["5DPb"]["yAxis"] % locals(),
     )
