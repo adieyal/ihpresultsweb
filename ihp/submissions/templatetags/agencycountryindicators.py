@@ -1,6 +1,7 @@
 from django.template import Library, Node, TemplateSyntaxError, Variable, VariableDoesNotExist
 from django.template import resolve_variable
 from submissions.indicators import calc_agency_country_indicators, NA_STR
+from submissions import models
 import traceback
 
 register = Library()
@@ -58,5 +59,9 @@ def parse_agencycountryindicators(parser, token):
         
     return AgencyCountryIndicatorNode(tokens[1], tokens[2], tokens[4])
 
+def as_agency(val):
+    return models.Agency.objects.get(pk=val)
+
 register.tag('agencycountryindicators', parse_agencycountryindicators)
+register.filter('as_agency', as_agency)
 

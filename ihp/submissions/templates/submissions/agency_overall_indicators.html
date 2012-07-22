@@ -1,0 +1,42 @@
+{% load agencycountryindicators %}
+
+{% block head %}
+    {{ block.super }}
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/graph_utils.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="graphblock">
+    <div id="container_hb" class="graph"></div>
+</div>
+<script>
+
+    var build_table = function(json) {
+        loadStop();
+        indicators = json.map(function(x) { return x.indicator; });
+
+        build_graph({
+            base_data : json.map(function(x) { return d3.round(x["baseline"], 2); }),
+            y2009_data : json.map(function(x) { return d3.round(x["2009"], 2); }),
+            cur_data : json.map(function(x) { return d3.round(x["latest"], 2); }),
+            yaxis : '%',
+            title : 'Agency: {{ params.agency_id|as_agency }}',
+            container : 'container_hb',
+            graph_name : 'chart_hb',
+            categories : indicators,
+            target : '0',
+            target_text : ''
+        
+        });
+
+    }
+    loadStart();
+
+
+    var json = '{% url json_agency_all_indicators params.agency_id %}';
+
+    d3.json(json, function(e){
+        build_table(e);
+    });
+</script>
+{% endblock %}

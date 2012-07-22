@@ -2,6 +2,7 @@ from collections import defaultdict
 from django.conf.urls.defaults import *
 from django.views.static import serve
 from django.conf import settings
+from django.http import HttpResponseRedirect
 
 from django.views.generic.simple import direct_to_template
 from django.contrib import admin
@@ -167,7 +168,7 @@ urlpatterns = patterns('',
     (r'^graphs/', include('ihp.submissions.graph_urls')),
 
     # Agency Tables
-    (r'^agencies/tables', include('ihp.submissions.agencytable_urls')),
+    (r'^agencies/tables/', include('ihp.submissions.agencytable_urls')),
 
     # dashboard is URL to access underlying data indirectly
     (r'^dashboard/$', direct_to_template, {
@@ -178,7 +179,9 @@ urlpatterns = patterns('',
             "countries" : Country.objects.all().order_by("country")}
         }, 
         "home"
-    )
+    ),
+
+    (r'^$', lambda x: HttpResponseRedirect('/dashboard/'))
 )
 
 _media_url = settings.MEDIA_URL

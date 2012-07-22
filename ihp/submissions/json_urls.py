@@ -2,6 +2,11 @@ from django.conf.urls.defaults import patterns, url
 
 urlpatterns = patterns('ihp.submissions.json_views',
     url(
+        r"^agencies/all_indicators/(?P<agency_id>\d+)/$", 
+        "all_indicators", 
+        name="json_agency_all_indicators"
+    ),
+    url(
         r"^agencies/fragile_states/$", 
         "fragile_states", 
         name="json_fragile_states"
@@ -45,5 +50,10 @@ urlpatterns = patterns('ihp.submissions.json_views',
         r'^countries/by_indicator/(?P<indicator>\w+)/$', 
         'country_by_indicator', 
         name='json_country_by_indicator'
+    ),
+    url(
+        r"^dfid/2DPa/$",
+        "dfid_2dpa", 
+        name="json_dfid_2dpa"
     ),
 )

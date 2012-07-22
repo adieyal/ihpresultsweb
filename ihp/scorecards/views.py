@@ -101,7 +101,8 @@ def dp_scorecard_json(request, agency_id, language):
                     "height" : 50,
                     "data" : [
                         {
-                            "key" : data[indicator]["base_year"],
+                            #"key" : data[indicator]["base_year"],
+                            "key" : "2005/7",
                             "value" : data[indicator]['base_val']
                         },
                         {   

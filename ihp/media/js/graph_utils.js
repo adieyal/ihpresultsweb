@@ -31,7 +31,7 @@ build_graph = function(options) {
         },
         var_name : options.graph_name,
         xAxis : {
-            categories : countries
+            categories : options.categories
         },
         title : {
             text : options.title

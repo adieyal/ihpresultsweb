@@ -25,6 +25,12 @@
         padding-right: 5px;
         border-right: solid thin white;
     }
+
+    .language {
+        font-size: 11px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
 </style>
 {% endblock head %}
 
@@ -47,8 +53,11 @@
                             <div class="acblock">
                             <h3>{{ agency.agency }}</h3>
                             <ul>
-                                <li><a href="{% url agencygraphs agency.agency "English" %}">Graphs (English)</a></li> 
-                                <li><a href="{% url agencygraphs agency.agency "French" %}">Graphs (French)</a></li> 
+                                <li>
+                                    <a href="{% url agencygraphs agency.agency "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/><span class="language">(En)</span></a>
+                                    <a href="{% url agencygraphs agency.agency "French" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/><span class="language">(Fr)</span></a>
+                                    <a href="{% url agency_overall_indicators_graphs agency.id %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/><span class="language">(All Indicators)</span></a>
+                                </li> 
                                 <li><a href="{% url agency_table_by_agency agency.id "English" %}">Table</a></li>
                             </ul>
                             </div>
@@ -62,8 +71,10 @@
                             <div class="acblock">
                             <h3>{{ country.country }}</h3>
                             <ul>
-                                <li><a href="{% url countrygraphs country.country "English" %}">Graphs (English)</a></li>
-                                <li><a href="{% url countrygraphs country.country "French" %}">Graphs (French)</a></li>
+                                <li>
+                                    <a href="{% url countrygraphs country.country "English" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/><span class="language">(En)</span></a>
+                                    <a href="{% url countrygraphs country.country "French" %}"><img src="{{ MEDIA_URL }}images/graph_icon.png"/><span class="language">(Fr)</span></a>
+                                </li>
                                 <li><a href="{% url agency_table_by_country country.id "English" %}">Table</a></li>
                             </ul>
                             </div>
@@ -167,6 +178,7 @@
                                 <li><a href="{% url two_by_two_analysis %}">2x2 Analysis Tables</a></li>
                                 <li><a href="{% url fragile_states %}">Fragile States Tables</a></li>
                                 <li><a href="{% url volumes_by_country %}">Volume of Aid</a></li>
+                                <li><a href="{% url dfid_2dpa %}">DFID Table</a></li>
                             </ul>
                         </p>
                     </div>

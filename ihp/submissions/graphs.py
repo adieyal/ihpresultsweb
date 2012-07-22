@@ -259,10 +259,13 @@ class AgencyCountryBarGraph(DPChart):
         }]
 
 class AgencyCountryLatestBarGraph(AgencyCountryBarGraph):
-    def __init__(self, countries, chart_name, latest_data, **kwargs):
+    def __init__(self, countries, chart_name, latest_data, data_2009, **kwargs):
         super(AgencyCountryLatestBarGraph, self).__init__(countries, chart_name, [], [], latest_data, **kwargs)
 
         self.series = [{
+            "name" : "% change in 2009 from baseline year",
+            "data" : data_2009 
+        },{
             "name" : "% change from baseline year",
             "data" : latest_data 
         }]
@@ -293,10 +296,13 @@ class CountryAgencyBarGraph(DPChart):
         }]
 
 class CountryAgencyLatestBarGraph(CountryAgencyBarGraph):
-    def __init__(self, agencies, chart_name, latest_data, **kwargs):
+    def __init__(self, agencies, chart_name, latest_data, data_2009, **kwargs):
         super(CountryAgencyLatestBarGraph, self).__init__(agencies, chart_name, [], [], latest_data, **kwargs)
 
         self.series = [{
+            "name" : "2009",
+            "data" : data_2009 
+        }, {
             "name" : "2011",
             "data" : latest_data 
         }]
@@ -554,19 +560,15 @@ def highlevelgraphs(request, language, template_name="submissions/highlevelgraph
     return direct_to_template(request, template=template_name, extra_context=extra_context)
 
 def calc_graph_values(indicator, base_val, previous_val, latest_val):
+
+    def change_from_base(val):
+        return safe_mul(safe_div(safe_diff(val, base_val), base_val), 100)
+
+    base_val = foz(base_val)
+    previous_val = foz(previous_val)
+    latest_val = foz(latest_val)
     if indicator in ["2DPa", "5DPa", "5DPb"]:
-        return None, safe_mul(
-            safe_div(
-                safe_diff(latest_val, base_val), 
-                base_val
-            ), 
-        100), 
-        safe_mul(
-            safe_div(
-                safe_diff(previous_val, base_val), 
-                base_val
-            ), 
-        100)
+        return change_from_base(latest_val), change_from_base(previous_val)
     else:
         return base_val, previous_val, latest_val
 
@@ -593,18 +595,20 @@ def agencygraphs(request, agency_name, language=None, template_name="submissions
             old_indicators = calc_agency_country_indicators(agency, country, funcs=positive_funcs)
         base_val, _, latest_val, _ = indicators["2DPa"][0]
         _, _, previous_val, _ = old_indicators["2DPa"][0]
-        country_data["2DPa_2"] = (base_val, previous_val, latest_val)
+        country_data["2DPa_2"] = (foz(base_val), foz(previous_val), foz(latest_val))
         data[country.country] = country_data
     
     agency_name = agency.agency
+    extra_context["agency"] = agency
 
     extra_context["graph_2DPa"] = AgencyCountryLatestBarGraph(
         agency.countries, "graph_2DPa", 
+        [data[country.country]["2DPa"][0] for country in agency.countries],
         [data[country.country]["2DPa"][1] for country in agency.countries],
         title=translation.agency_graphs["2DPa"]["title"] % locals(),
         yAxis=translation.agency_graphs["2DPa"]["yAxis"],
     )
-    
+
     extra_context["graph_2DPa_2"] = AgencyCountryBarGraph(
         agency.countries, "graph_2DPa_2", 
         [data[country.country]["2DPa_2"][0] for country in agency.countries],
@@ -652,14 +656,16 @@ def agencygraphs(request, agency_name, language=None, template_name="submissions
 
     extra_context["graph_5DPa"] = AgencyCountryLatestBarGraph(
         agency.countries, "graph_5DPa",
-        [data[country.country]["5DPa"][2] for country in agency.countries],
+        [data[country.country]["5DPa"][0] for country in agency.countries],
+        [data[country.country]["5DPa"][1] for country in agency.countries],
         title=translation.agency_graphs["5DPa"]["title"],
         yAxis=translation.agency_graphs["5DPa"]["yAxis"],
     )
 
     extra_context["graph_5DPb"] = AgencyCountryLatestBarGraph(
         agency.countries, "graph_5DPb",
-        [data[country.country]["5DPb"][2] for country in agency.countries],
+        [data[country.country]["5DPb"][0] for country in agency.countries],
+        [data[country.country]["5DPb"][1] for country in agency.countries],
         title=translation.agency_graphs["5DPb"]["title"] % agency.agency,
         yAxis=translation.agency_graphs["5DPb"]["yAxis"],
     )
@@ -705,7 +711,8 @@ def countrygraphs(request, country_name, language, template_name="submissions/co
     country_name = country.country
     extra_context["graph_2DPa"] = CountryAgencyLatestBarGraph(
         country.agencies, "graph_2DPa", 
-        [data[agency.agency]["2DPa"][2] for agency in country.agencies],
+        [data[agency.agency]["2DPa"][0] for agency in country.agencies],
+        [data[agency.agency]["2DPa"][1] for agency in country.agencies],
         title=translation.country_graphs["2DPa"]["title"] % locals(),
         yAxis=translation.country_graphs["2DPa"]["yAxis"] % locals(),
     )
@@ -757,14 +764,16 @@ def countrygraphs(request, country_name, language, template_name="submissions/co
 
     extra_context["graph_5DPa"] = CountryAgencyLatestBarGraph(
         country.agencies, "graph_5DPa",
-        [data[agency.agency]["5DPa"][2] for agency in country.agencies],
+        [data[agency.agency]["5DPa"][0] for agency in country.agencies],
+        [data[agency.agency]["5DPa"][1] for agency in country.agencies],
         title=translation.country_graphs["5DPa"]["title"] % locals(),
         yAxis=translation.country_graphs["5DPa"]["yAxis"] % locals(),
     )
 
     extra_context["graph_5DPb"] = CountryAgencyLatestBarGraph(
         country.agencies, "graph_5DPb",
-        [data[agency.agency]["5DPb"][2] for agency in country.agencies],
+        [data[agency.agency]["5DPb"][0] for agency in country.agencies],
+        [data[agency.agency]["5DPa"][1] for agency in country.agencies],
         title=translation.country_graphs["5DPb"]["title"] % locals(),
         yAxis=translation.country_graphs["5DPb"]["yAxis"] % locals(),
     )

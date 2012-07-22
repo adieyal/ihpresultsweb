@@ -5,13 +5,22 @@ urlpatterns = patterns('ihp.submissions.graphs',
     url(r"^agencies/highlevel/(?P<language>\w+)/$", "highlevelgraphs", name="highlevelgraphs"),
     url(r"^agencies/projection/(?P<language>\w+)/$", "projectiongraphs", name="projectiongraphs"),
     url(
-        r"^agencies/(?P<indicator>\w+)/(?P<language>\w+)/$", 
+        r"^agencies/by_indicator/(?P<indicator>\w+)/(?P<language>\w+)/$", 
         "agency_graphs_by_indicator", 
         name="agency_graphs_by_indicator"
     ),
     url(r"^agencies/(?P<agency_name>[a-zA-Z\s]+)/(?P<language>\w+)/$", "agencygraphs", name="agencygraphs"),
     url(r"^agencies/by_country/(?P<country_name>[a-zA-Z\s]+)/(?P<language>\w+)/$", "countrygraphs", name="countrygraphs"),
 
+    url(
+        r"^agencies/overall_indicators/(?P<agency_id>\d+)/$",
+        direct_to_template, 
+        {
+            "template" : "submissions/main_base_bootstrap.html", 
+            "extra_context" : {"content_file" : "submissions/agency_overall_indicators.html"}
+        }, 
+        name="agency_overall_indicators_graphs"
+    ),
     url(
         r"^countries/hss/$",
         direct_to_template, 
