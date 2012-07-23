@@ -7922,6 +7922,6 @@
       </div>
     </div>
   </foreignObject>
-  <text x="695" y="390" style="font-size: 6px; fill: #0d3e3e;">Lower is better.</text>
+  <text x="695" y="390" style="font-size: 6px; fill: #0d3e3e;">{% blocktrans %}Lower values are better{% endblocktrans %}</text>
 </g>
 </svg>
