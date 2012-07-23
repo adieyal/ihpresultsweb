@@ -30,7 +30,9 @@ urlpatterns = patterns('',
     (r'^scorecard/edit/agencies/summary/$', 'submissions.views.dp_summary_edit', {}, 'dp_summary_edit'),
     (r'^scorecard/edit/agencies/ratings/$', 'submissions.views.dp_ratings_edit', {}, 'dp_ratings_edit'),
     (r'^scorecard/edit/countries/ratings/$', 'submissions.views.gov_ratings_edit', {}, 'gov_ratings_edit'),
-    (r'^scorecard/edit/countries/general/$', 'submissions.views.country_scorecard_ratings_edit', {}, 'country_scorecard_ratings_edit'),
+    #TODO: Properly remove all files and code for this next line. It is now done using
+    # the admin suite.
+    #(r'^scorecard/edit/countries/general/$', 'submissions.views.country_scorecard_ratings_edit', {}, 'country_scorecard_ratings_edit'),
 
     # Api views
     (r'^api/dp_summary/(?P<agency_id>\d+)/$', 'submissions.api.dp_summary', {}, 'api_dp_summary'),
