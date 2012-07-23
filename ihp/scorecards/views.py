@@ -28,6 +28,8 @@ def dp_scorecard_json(request, agency_id, language):
     """
     json dump of scorecard data takes agency and language
     """
+    
+    translation = request.translation
 
     def normalise_name(v):
         return v.lower().replace(" ", ".")
@@ -82,7 +84,7 @@ def dp_scorecard_json(request, agency_id, language):
 
     a = {
         'agency': {
-            'name': agency.agency,
+            'name': translation.agency_name.get(agency.agency, agency.agency),
             'profile': profile.description,
             'logo_url': '/media/logos/%s.png' % normalise_name(agency.agency),
             'active_countries': [

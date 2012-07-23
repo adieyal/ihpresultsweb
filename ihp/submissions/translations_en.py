@@ -2,6 +2,17 @@
 from models import Rating
 from django.template import Context, Template
 
+# agency full names
+agency_name = {
+    'AfDB': 'African Development Bank',
+    'EC': 'European Comission',
+    'GAVI': 'GAVI Alliance',
+    'GFATM': 'Global Fund to fight AIDS, TB and Malaria',
+    'UK': 'United Kingdom',
+    'WHO': 'World Health Organisation',
+    'World Bank': 'World Bank'
+}
+
 # Country Scorecard
 gov_commentary_text = {
     "1G": {
