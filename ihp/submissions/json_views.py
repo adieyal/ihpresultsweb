@@ -106,11 +106,11 @@ def health_budget(request):
     for country in countries:
         qs = models.GovQuestion.objects.filter(submission__country=country).select_related()
 
-        res = indicators.calc_country_indicator(qs, country, "3G")[0]
+        res = indicators.calc_country_indicator(qs, country, "3G", funcs=indicators.positive_funcs)[0]
 
         with models.old_dataset():
             qs_2009 = models.GovQuestion.objects.filter(submission__country=country).select_related()
-            res_2009 = indicators.calc_country_indicator(qs_2009, country, "3G")[0]
+            res_2009 = indicators.calc_country_indicator(qs_2009, country, "3G", funcs=indicators.positive_funcs)[0]
 
         js.append({
             "country" : country.country,
@@ -130,11 +130,11 @@ def budget_disbursement(request):
     for country in countries:
         qs = models.GovQuestion.objects.filter(submission__country=country).select_related()
 
-        res = indicators.calc_country_indicator(qs, country, "4G")[0]
+        res = indicators.calc_country_indicator(qs, country, "4G", funcs=indicators.positive_funcs)[0]
 
         with models.old_dataset():
             qs_2009 = models.GovQuestion.objects.filter(submission__country=country).select_related()
-            res_2009 = indicators.calc_country_indicator(qs_2009, country, "4G")[0]
+            res_2009 = indicators.calc_country_indicator(qs_2009, country, "4G", funcs=indicators.positive_funcs)[0]
 
         js.append({
             "country" : country.country,
