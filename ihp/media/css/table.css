@@ -7,7 +7,7 @@ h1 {
 }
 
 table {
-    border: solid thin black
+    border: solid thin black;
     float: left;
     margin: auto;
 }
@@ -23,7 +23,7 @@ tr.head {
 }
 
 tr.head2 {
-    font-size: 0.8em
+    font-size: 0.8em;
 }
 
 tr.even{
@@ -80,7 +80,7 @@ th.spm {
     padding: 3px;
     text-align: left;
     font-size: 0.95em;
-    width: 500px;
+    width: 20em;
 }
 
 h1 {
