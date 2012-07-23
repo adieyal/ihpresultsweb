@@ -137,7 +137,7 @@ class StackedAgencyBarGraph(DPChart):
         cur_data1 = cur_data
         cur_data2 = map(lambda x: 100 - x, cur_data)
         base_data1 = base_data
-        base_data2 = map(lambda x: 100 - x, base_data)
+        base_data2 = map(lambda x: 100 - x if x else 0, base_data)
 
         self.chart["defaultSeriesType"] = "column"
         self.xAxis = {
