@@ -141,7 +141,7 @@ def calc_agency_indicator(qs, agency, indicator, funcs=None):
     """
     return calc_indicator(qs, agency, indicator, funcs)
 
-def calc_agency_indicators(agency):
+def calc_agency_indicators(agency, funcs=None):
     """
     Calculates all the indicators for the given agency
     Returns a dict with the following form
@@ -154,7 +154,7 @@ def calc_agency_indicators(agency):
     }
     """
     qs = DPQuestion.objects.filter(submission__agency=agency, submission__country__in=agency.countries).select_related()
-    results = [calc_agency_indicator(qs, agency, indicator) for indicator in dp_indicators]
+    results = [calc_agency_indicator(qs, agency, indicator, funcs) for indicator in dp_indicators]
     return dict(zip(dp_indicators, results))
 
 def calc_overall_agency_indicators(funcs=None):
@@ -287,7 +287,6 @@ indicator_questions = dict([
 # Functions that calculate values in a positive sense - i.e. how much on budget, not how much off budget
 positive_funcs = dict(indicator_funcs)
 positive_funcs["2DPa"] = (calc_numdenom_2DPa, indicator_funcs["2DPa"][1])
-positive_funcs["4DP"] = indicator_funcs["4DP"]
 positive_funcs["5DPa"] = (calc_numdenom, indicator_funcs["5DPa"][1])
 positive_funcs["5DPb"] = (calc_numdenom, indicator_funcs["5DPb"][1])
 positive_funcs["4G"] = (calc_numdenom, indicator_funcs["4G"][1])

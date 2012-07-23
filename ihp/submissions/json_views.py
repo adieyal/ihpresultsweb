@@ -48,9 +48,9 @@ def dfid_2dpa(request):
 
 def all_indicators(request, agency_id):
     agency = get_object_or_404(models.Agency, pk=agency_id)
-    results = indicators.calc_agency_indicators(agency) 
+    results = indicators.calc_agency_indicators(agency, funcs=indicators.positive_funcs) 
     with models.old_dataset():
-        results_2009 = indicators.calc_agency_indicators(agency) 
+        results_2009 = indicators.calc_agency_indicators(agency, funcs=indicators.positive_funcs) 
     
     js = [
         {
@@ -233,7 +233,7 @@ def two_by_two_analysis(request):
     notallweak = not_all_indicators & weak_pfm
 
     def indicator_dict(indicator):
-        calculator = partial(indicators.calc_indicator, indicator=indicator, agency_or_country=None)
+        calculator = partial(indicators.calc_indicator, indicator=indicator, agency_or_country=None, funcs=indicators.positive_funcs)
 
         def slice_data(countries):
             return {
