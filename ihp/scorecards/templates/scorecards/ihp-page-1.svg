@@ -6924,5 +6924,6 @@
 	{% blocktrans %}indicates agreed target{% endblocktrans %}
       </text>
     </g>
+    <text x="430.5" y="630" style="font-size: 6px; fill: #0d3e3e;">Lower is better.</text>
   </g>
 </svg>
