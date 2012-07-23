@@ -348,8 +348,25 @@ def agency_graphs_by_indicator(request, indicator, language, template_name="subm
     extra_context = extra_context or {}
     translation = request.translation
     my_calc_indicator = partial(calc_indicator, agency_or_country=None, funcs=positive_funcs)
-    my_calc_overall_agency_indicators = partial(calc_overall_agency_indicators, funcs=positive_funcs)
     
+    qs = models.DPQuestion.objects.filter(submission__agency__type="Agency")
+    qs2 = qs
+    with old_dataset():
+        old_submissions = list(models.Submission.objects.all()) 
+
+        old_agency_countries = set((s.agency, s.country) for s in old_submissions)
+
+        qs_old = models.DPQuestion.objects.filter(submission__agency__type="Agency")
+        qs2_old = qs_old
+
+        for s in old_submissions:
+            if not (s.agency, s.country) in old_agency_countries:
+                qs2_old = qs2_old.exclude(submission__agency=s.agency, submission__country=s.country)
+    for s in models.Submission.objects.all():
+        if not (s.agency, s.country) in old_agency_countries:
+            qs2 = qs2.exclude(submission__agency=s.agency, submission__country=s.country)
+
+    # Special exclusions - may need to get rid of this at some point
     if request.GET.get("exclusions", False):
         exclusions = {
             "2DPa": [6, 7, 25, 26],
@@ -363,27 +380,38 @@ def agency_graphs_by_indicator(request, indicator, language, template_name="subm
         }
 
         extra_context['excluded'] = models.Agency.objects.filter(id__in=exclusions[indicator])
-        qs = models.DPQuestion.objects.filter(submission__agency__type="Agency").exclude(submission__agency__in=exclusions[indicator]).select_related()
-        indicators = {
-            indicator: my_calc_indicator(qs, indicator=indicator)
-        }
+        qs = qs.exclude(submission__agency__in=exclusions[indicator]).select_related()
+        qs2 = qs2.exclude(submission__agency__in=exclusions[indicator])
+
         with old_dataset():
-            qs = models.DPQuestion.objects.filter(submission__agency__type="Agency").exclude(submission__agency__in=exclusions[indicator]).select_related()
-            old_indicators = {
-                indicator: my_calc_indicator(qs, indicator=indicator)
-            }
-    else:
-        indicators = my_calc_overall_agency_indicators()
-        with old_dataset():
-            old_indicators = my_calc_overall_agency_indicators()
+            qs_old = qs_old.exclude(submission__agency__in=exclusions[indicator])
+            qs2_old = qs2_old.exclude(submission__agency__in=exclusions[indicator])
+
+    result = my_calc_indicator(qs=qs, indicator=indicator)
+    result2 = my_calc_indicator(qs=qs2, indicator=indicator)
+    with old_dataset():
+        old_result = my_calc_indicator(qs_old, indicator=indicator)
+        old_result2 = my_calc_indicator(qs2_old, indicator=indicator)
 
     extra_context["graphs"] = graphs = []
+    target = target_values[indicator]
+    ####### Include all countries and agencies
     name = "graph_%s" % indicator
 
-    (baseline_value, baseline_year, latest_value, latest_year) = indicators[indicator][0]
-    (_, _, previous_value, previous_year) = old_indicators[indicator][0]
-    target = target_values[indicator]
+    (baseline_value, baseline_year, latest_value, latest_year) = result[0]
+    (_, _, previous_value, previous_year) = old_result[0]
     graph = highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, target=target)
+    graphs.append({
+        "name" : name,
+        "obj" : graph
+    })
+
+    ####### Include only last years countries and agencies
+    name = "graph2_%s" % indicator
+
+    (baseline_value, baseline_year, latest_value, latest_year) = result2[0]
+    (_, _, previous_value, previous_year) = old_result2[0]
+    graph = highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, target=target, has_filter=True)
     graphs.append({
         "name" : name,
         "obj" : graph
@@ -394,7 +422,7 @@ def agency_graphs_by_indicator(request, indicator, language, template_name="subm
         for agency in Agency.objects.all()
     ])
 
-    name = "graph2_%s" % indicator
+    name = "graph3_%s" % indicator
     graph = additional_graph_by_indicator(indicator, name, translation, agency_data)
     graphs.append({
         "name" : name,
@@ -458,13 +486,14 @@ def projectiongraphs(request, language, template_name="submissions/projectiongra
 
     return direct_to_template(request, template=template_name, extra_context=extra_context)
 
-def highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, target=None):
+def highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, target=None, has_filter=False):
 
+    title_suffix = "(All submissions)" if not has_filter else "(2009 filter)"
     if target:
         graph = HighlevelBarChart(
             name, 
             foz(baseline_value), foz(previous_value), foz(latest_value),
-            title=translation.highlevel_graphs[indicator]["title"],
+            title=translation.highlevel_graphs[indicator]["title"] + " " + title_suffix,
             subtitle=translation.highlevel_graphs[indicator]["subtitle"],
             target=target_values[indicator],
             yAxis=translation.highlevel_graphs[indicator]["yAxis"],
@@ -473,7 +502,7 @@ def highlevel_graph_by_indicator(indicator, name, translation, baseline_value, p
         graph = HighlevelBarChart(
             name, 
             foz(baseline_value), foz(previous_value), foz(latest_value),
-            title=translation.highlevel_graphs[indicator]["title"],
+            title=translation.highlevel_graphs[indicator]["title"] + " " + title_suffix,
             subtitle=translation.highlevel_graphs[indicator]["subtitle"],
             yAxis=translation.highlevel_graphs[indicator]["yAxis"],
         )
