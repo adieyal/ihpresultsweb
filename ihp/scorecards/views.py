@@ -159,6 +159,8 @@ def gov_scorecard_json(request, country_id, language):
     """
     json dump of scorecard data takes country and language
     """
+    
+    translation = request.translation
 
     with force_lang(LANGUAGE_LOOKUP[language]):
         country = get_object_or_404(Country, id=country_id)
@@ -170,7 +172,7 @@ def gov_scorecard_json(request, country_id, language):
         agency_logo = lambda agency : "%slogos/%s.png" % (media_url, agency.lower())
         a = {
             "info": {
-                "country": country.country.upper(),
+                "country": translation.country_name.get(country.country, country.country).upper(),
                 "flag": country_flag(country.country)
                 },
             

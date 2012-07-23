@@ -13,6 +13,9 @@ agency_name = {
     'World Bank': 'World Bank'
 }
 
+# country names - empty for now. will default to no translation.
+country_name = {}
+
 gov_commentary_text = {
     "1G": {
         Rating.TICK : u"Un [space] a été signé en [space] qui se nomme [space].",

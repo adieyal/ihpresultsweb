@@ -13,6 +13,9 @@ agency_name = {
     'World Bank': 'World Bank'
 }
 
+# country names - empty for now. will default to no translation.
+country_name = {}
+
 # Country Scorecard
 gov_commentary_text = {
     "1G": {
