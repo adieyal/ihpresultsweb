@@ -57,6 +57,15 @@ class DPSummaryForm(AgencyForm):
     erb7_French = TextField(label="7DP Summary (French)")
     erb8_French = TextField(label="8DP Summary (French)")
 
+    erb1_Spanish = TextField(label="1DP Summary (Spanish)")
+    erb2_Spanish = TextField(label="2DP Summary (Spanish)")
+    erb3_Spanish = TextField(label="3DP Summary (Spanish)")
+    erb4_Spanish = TextField(label="4DP Summary (Spanish)")
+    erb5_Spanish = TextField(label="5DP Summary (Spanish)")
+    erb6_Spanish = TextField(label="6DP Summary (Spanish)")
+    erb7_Spanish = TextField(label="7DP Summary (Spanish)")
+    erb8_Spanish = TextField(label="8DP Summary (Spanish)")
+
     class Media:
         js = ("js/dpsummaryform.js", )
 
