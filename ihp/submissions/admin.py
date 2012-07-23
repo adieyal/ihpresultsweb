@@ -93,7 +93,10 @@ class GovScorecardRatingsAdmin(admin.ModelAdmin):
     list_display = ("country", "r1" , "r2a", "r2b", "r3", "r4", "r5a", "r5b", "r6", "r7", "r8")
 
 admin.site.register(GovScorecardRatings, GovScorecardRatingsAdmin)
-admin.site.register(CountryScorecardOverrideComments)
+
+class CountryScorecardOverrideCommentsAdmin(admin.ModelAdmin):
+    exclude = ("rf2", "rf3", "dbr2", "hmis2", "jar4", "pfm2", "pr2", "ta2", "pf2",)
+admin.site.register(CountryScorecardOverrideComments, CountryScorecardOverrideCommentsAdmin)
 
 class MDGDataAdminForm(forms.ModelForm):
     class Meta:
