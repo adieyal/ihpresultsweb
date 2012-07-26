@@ -64,6 +64,7 @@ class GovScorecard(object):
             "no" : "cross",
             False : "cross",
             "under_development" : "arrow",
+            "under development" : "arrow",
             "" : "line",
         }
 
@@ -290,6 +291,7 @@ class GovScorecard(object):
     def get_ratings(self):
         r1G = self.ratings["1G"]
         r2Ga = self.ratings["2Ga"]
+        print r2Ga['cur_val']
         r2Gb = self.ratings["2Gb"]
         r3G = self.ratings["3G"]
         r4G = self.ratings["4G"]
@@ -304,8 +306,9 @@ class GovScorecard(object):
             return {
                 "y" : 2, "yy" : 2, 100 : 2,
                 "under development" : 1,
+                "yu": 1, "uy": 1, "un": 1, "nu": 1,
                 0 : 0, "n" : 0, None : 0, "nn" : 0,
-                "yn" : 0,
+                "yn" : 1, "ny": 1
             }[val]
 
         def cs_progress(val):

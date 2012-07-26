@@ -120,8 +120,13 @@ def combine_yesnos(qs, agency_or_country, selector, *args):
 
         if selector(qs1[0]) == None:
             val = " "
-        else: 
-            val = "y" if selector(qs1[0]).lower() == "yes" else "n"
+        else:
+            if selector(qs1[0]).lower() == "yes":
+                val = "y"
+            elif selector(qs1[0]).lower() == "under development":
+                val = "u"
+            else:
+                val = "n"
 
         values.append(val)
     return "".join(values)
