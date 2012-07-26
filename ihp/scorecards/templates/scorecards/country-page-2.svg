@@ -7647,7 +7647,7 @@
   <foreignObject x="875.07" y="330" width="262.68" height="410">
     <div xmlns="http://www.w3.org/1999/xhtml" style="color: #000; text-align: left; font-family: Calibri; font-size: 9px; line-height: 120%; padding: 0; margin: 0;" id="howtointerpret">
       <ul style="list-style-position: outside; padding-left: 12px;">
-	<li>{% blocktrans %}The majority of data presented in this Scorecard is from the Ministry of Health. There are two exceptions - the ratings for Technical Assistance and the quality of civil society engagement*.{% endblocktrans %}</li>
+	<li>{% blocktrans %}The majority of data presented in this Scorecard is from the Ministry of Health. There are two exceptions - the ratings for Technical Assistance and the quality of civil society engagement*. In the majority of cases data on MDG progress is taken from th UN Statistics Division.{% endblocktrans %}</li>
 	<li>{% blocktrans %}The Scorecard shows results using 5 Results Areas (see below) to tell the story of IHP+ implementation in a logical flow: from the national health plan to monitoring and evaluation of that plan.{% endblocktrans %}</li>
 	<li>{% blocktrans with "<img class=\"icons\" src=\"/media/icons/tick.svg\"/>" as tick and "<img class=\"icons\" src=\"/media/icons/arrow.svg\"/>" as arrow and "<img class=\"icons\" src=\"/media/icons/cross.svg\"/>" as exclamation %}Where they are used, rating symbols illustrate whether the government has achieved {{ tick }}, is working towards {{ arrow }}, or hasn’t made progress {{ exclamation }} against agreed targets.{% endblocktrans %}</li>
 	<li>{% blocktrans %}Progress against the Millennium Development Goals is provided for contextual purposes.{% endblocktrans %}</li>
