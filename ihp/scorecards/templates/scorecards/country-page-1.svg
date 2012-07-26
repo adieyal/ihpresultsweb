@@ -5710,7 +5710,7 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
     display: table;
     }
     div.systems-text {
-    font-size: 11px;
+    font-size: 16px;
     text-color: #0E3D3D;
     line-height: 100%;
     display: table-cell;
@@ -5836,28 +5836,26 @@ q7FXYq7FXYq//9k=</xmpGImg:image>
       {% blocktrans %}NATIONAL RESULTS FRAMEWORK AGREED{% endblocktrans %}
     </div>
   </foreignObject>
-  <g transform="scale(1.5, 1.5)">
-    <foreignObject x="525" y="670" width="142" height="130">
-      <div xmlns="http://www.w3.org/1999/xhtml" class="systems-box" style="width: 142px; height: 130px;" id="management">
-	<div class="systems-text header">
-	  This text is to be replaced.
-	</div>
+  <foreignObject x="787.5" y="1005" width="213" height="195">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="systems-box" style="width: 213px; height: 195px;" id="management">
+      <div class="systems-text header">
+	This text is to be replaced.
       </div>
-    </foreignObject>
-    <foreignObject x="754" y="670" width="142" height="130">
-      <div xmlns="http://www.w3.org/1999/xhtml" class="systems-box" style="width: 142px; height: 130px;" id="procurement">
-	<div class="systems-text header">
-	  This text is to be replaced.
+    </div>
+  </foreignObject>
+  <foreignObject x="1131" y="1005" width="213" height="195">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="systems-box" style="width: 213px; height: 195px;" id="procurement">
+      <div class="systems-text header">
+	This text is to be replaced.
 	</div>
+    </div>
+  </foreignObject>
+  <foreignObject x="1473" y="1005" width="213" height="195">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="systems-box" style="width: 213px; height: 195px;" id="technical">
+      <div class="systems-text header">
+	This text is to be replaced.
       </div>
-    </foreignObject>
-    <foreignObject x="982" y="670" width="142" height="130">
-      <div xmlns="http://www.w3.org/1999/xhtml" class="systems-box" style="width: 142px; height: 130px;" id="technical">
-	<div class="systems-text header">
-	  This text is to be replaced.
-	</div>
-      </div>
-    </foreignObject>
-  </g>
+    </div>
+  </foreignObject>
 </g>
 </svg>
