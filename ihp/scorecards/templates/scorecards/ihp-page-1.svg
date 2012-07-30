@@ -388,7 +388,7 @@
            style="fill:#dfe7e5;fill-rule:evenodd"
            inkscape:connector-curvature="0"
            clip-rule="evenodd"
-           d="m 25.307,811.06 c 0,-3.131 2.539,-5.669 5.67,-5.669 h 534.46 c 3.131,0 5.669,2.538 5.669,5.669 v 11.509 c 0,3.131 -2.538,5.67 -5.669,5.67 H 30.977 c -3.131,0 -5.67,-2.539 -5.67,-5.67 V 811.06 z"
+           d="m 25.307,808 c 0,-3.131 2.539,-5.669 5.67,-5.669 h 534.46 c 3.131,0 5.669,2.538 5.669,5.669 v 16 c 0,3.131 -2.538,5.67 -5.669,5.67 H 30.977 c -3.131,0 -5.67,-2.539 -5.67,-5.67 V 811.06 z"
            id="path604" />
       </g>
       <g
@@ -777,7 +777,7 @@
           </g>
         </g>
         <g
-           id="g868">
+           id="g868" transform="translate(0,-7)">
           <g
              id="g870">
             <g
@@ -3134,7 +3134,7 @@
            x1="186.10001"
            id="line1534" />
         <g
-           id="g1536">
+           id="g1536" transform="translate(0,-7)">
           <g
              style="stroke:#000000;stroke-width:0.28349999"
              id="g1547">
@@ -3235,7 +3235,7 @@
           </g>
         </g>
         <g
-           id="g1591">
+           id="g1591" transform="translate(0,-7)">
           <g
              id="g1602">
             <g
@@ -3419,7 +3419,7 @@
           </g>
         </g>
         <g
-           id="g1690">
+           id="g1690" transform="translate(0,-7)">
           <g
              id="g1692">
             <g
@@ -3673,7 +3673,7 @@
           </g>
         </g>
         <g
-           id="g1805">
+           id="g1805" transform="translate(0,-7)">
           <g
              id="g1816">
             <g
@@ -3803,7 +3803,7 @@
           </g>
         </g>
         <g
-           id="g1881">
+           id="g1881" transform="translate(0,-7)">
           <g
              style="fill:#939598"
              id="g1883">
@@ -6894,36 +6894,40 @@
       </div>
     </foreignObject>
     
-    <g transform="translate(50.923, 819.09)">
+    <g transform="translate(50.923, 812)">
       <text transform="scale(0.8, 1)" class="normal">
 	{% blocktrans %}target achieved{% endblocktrans %}
       </text>
     </g>
-    <g transform="translate(247.63, 819.09)">
+    <g transform="translate(247.63, 812)">
       <text transform="scale(0.8, 1)" class="normal">
 	{% blocktrans %}no progress or regression{% endblocktrans %}
       </text>
     </g>
-    <g transform="translate(115.42, 819.09)">
+    <g transform="translate(115.42, 812)">
       <text transform="scale(0.8, 1)" class="normal">
 	{% blocktrans %}progress made towards achieving target{% endblocktrans %}
       </text>
     </g>
-    <g transform="translate(341.24, 819.09)">
+    <g transform="translate(341.24, 812)">
       <text transform="scale(0.8, 1)" class="normal">
 	{% blocktrans %}data not provided{% endblocktrans %}
       </text>
     </g>
-    <g transform="translate(413.82, 819.09)">
+    <g transform="translate(413.82, 812)">
       <text transform="scale(0.8, 1)" class="normal">
 	{% blocktrans %}measure not applicable{% endblocktrans %}
       </text>
     </g>
-    <g transform="translate(499.29, 819.09)">
+    <g transform="translate(499.29, 812)">
       <text transform="scale(0.8, 1)" class="normal">
 	{% blocktrans %}indicates agreed target{% endblocktrans %}
       </text>
     </g>
     <text x="430.5" y="630" style="font-size: 6px; fill: #0d3e3e;">{% blocktrans %}Lower values are better{% endblocktrans %}</text>
+    <text x="222" y="517" class="normal">*</text>
+    <g transform="translate(35, 822.5)">
+      <text transform="scale(0.8, 1)" class="normal">{% blocktrans %}*Performance is assessed in only Niger, Rwanda, Senegal, Sierra Leone and Uganda. Budget support is also not counted. The rating may therefore not fully reflect progress, and could be an underestimate.{% endblocktrans %}</text>
+    </g>
   </g>
 </svg>
