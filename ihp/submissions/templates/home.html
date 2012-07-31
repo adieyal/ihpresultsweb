@@ -149,16 +149,6 @@
                             </table>
                         </p>
                         </div>
-                        <div>
-                        <h2>GBS Comparison Tables</h2>
-                        <p>
-                            <ul class="blockrow">
-                                {% for gbsagency in gbsagencies %}
-                                <li><a href="{% url gbs_table gbsagency.id %}">{{ gbsagency.agency }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </p>
-                        </div>
                     </div>
                 </div> <!-- end row 1 -->
                 <br/>
