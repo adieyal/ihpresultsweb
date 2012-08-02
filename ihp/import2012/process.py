@@ -308,7 +308,7 @@ class GovSubmissionParser(SubmissionParser):
                 question_number=qnum
             )
             
-            if created:
+            if not q.baseline_value:
                 q.baseline_value = qhash["base_val"]
                 q.baseline_year = metadata["baseline_year"]
             q.latest_value = qhash["cur_val"]
