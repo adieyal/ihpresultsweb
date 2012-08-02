@@ -221,8 +221,8 @@ class DPSubmissionParser(SubmissionParser):
         }
 
     def _4dp_switcheroo(self, submission, answers):
-        answers["10old"] = answers["9"]
-        answers["11old"] = answers["6"]
+        answers["10old"] = dict(answers["9"])
+        answers["11old"] = dict(answers["6"])
         if submission.country not in new_countries: 
             try:
                 q10 = DPQuestion.objects.get(submission=submission, question_number="10")
@@ -267,7 +267,7 @@ class DPSubmissionParser(SubmissionParser):
                 qhash["base_val"] = json.dumps(qhash["base_val"])
                 qhash["cur_val"] = json.dumps(qhash["cur_val"])
 
-            if created or qnum in ["10old", "11old"]:
+            if agency.id >= 46 or qnum in ["10old", "11old"]:
                 question.baseline_value = qhash["base_val"]
                 question.baseline_year = qhash["base_year"] if "base_year" in qhash else metadata["baseline_year"]
             question.latest_value = qhash["cur_val"]
@@ -308,7 +308,7 @@ class GovSubmissionParser(SubmissionParser):
             )
             
             # don't update the baseline values of old countries
-            if not country.id >= 12:
+            if country.id >= 12:
                 q.baseline_value = qhash["base_val"]
                 q.baseline_year = metadata["baseline_year"]
             q.latest_value = qhash["cur_val"]
