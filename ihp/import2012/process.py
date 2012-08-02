@@ -122,7 +122,7 @@ class SubmissionParser(object):
             elif val in under_development_values:
                 return SubmissionParser.UNDER_DEVELOPMENT
 
-        sys.stderr.write("WARNING: Unknown yes/no value: %s in row: %d, col: %d\n" % (val, row, col))
+        #sys.stderr.write("WARNING: Unknown yes/no value: %s in row: %d, col: %d\n" % (val, row, col))
         return None
 
     def extract_yesno_value(self, row):
@@ -244,7 +244,6 @@ class DPSubmissionParser(SubmissionParser):
         metadata = self.extract_metadata()
         country = Country.objects.get(country=metadata["country"])
         agency_name = metadata["agency"]
-        print agency_name
         agency = Agency.objects.all_types().get(agency=agency_name)
         submission, created = Submission.objects.get_or_create(
             country=country,
@@ -308,6 +307,8 @@ class GovSubmissionParser(SubmissionParser):
                 question_number=qnum
             )
             
+            if country.country == "El Salvador" and qnum == "20":
+                import pdb; pdb.set_trace()
             if not q.baseline_value:
                 q.baseline_value = qhash["base_val"]
                 q.baseline_year = metadata["baseline_year"]
@@ -319,11 +320,10 @@ class GovSubmissionParser(SubmissionParser):
         return submission
 
     def extract_metadata(self):
-        
         return {
             "country" : self._v(0, 1),
             "currency" : self._v(1, 1),
-            "baseline_year" : self.parse_year(self._v(2, 1)),
+            "baseline_year" : self.parse_year(unfloat(self._v(2, 1))),
             "latest_year" : self.parse_year(unfloat(self._v(3, 1))),
             "completed_by" : self._v(0, 5),
             "job_title" : self._v(1, 5)
