@@ -307,9 +307,8 @@ class GovSubmissionParser(SubmissionParser):
                 question_number=qnum
             )
             
-            if country.country == "El Salvador" and qnum == "20":
-                import pdb; pdb.set_trace()
-            if not q.baseline_value:
+            # don't update the baseline values of old countries
+            if not country.id >= 12:
                 q.baseline_value = qhash["base_val"]
                 q.baseline_year = metadata["baseline_year"]
             q.latest_value = qhash["cur_val"]
