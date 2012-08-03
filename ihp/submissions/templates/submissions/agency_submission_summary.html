@@ -1,0 +1,110 @@
+{% block head %}
+    {{ block.super }}
+    <style>
+        td:first-child {
+            text-align: left;
+        }
+
+        #displaytable {
+            text-align: center;
+            width: 100%;
+        }
+
+        #displaytable th {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #displaytable td, #displaytable th, #displaytable tr {
+            padding: 4px;
+            border: solid thin black;
+        }
+
+        #displaytable p {
+            padding: 10px;
+            width: 50%;
+            text-align: center;
+        }
+        #displaytable p.latest {
+            color: red;
+        }
+        #displaytable p.baseline {
+            color: blue;
+        }
+
+    </style>
+{% endblock %}
+
+{% block content %}
+<div id="DataDisplay"></div>
+<div id="displaytable">
+</div>
+<script>
+
+    fmt_countries = function(countries) {
+        s = "<ul>"
+        for (c in countries) {
+            s += "<li>" + countries[c] + "</li>";
+        }
+        
+        s += "</ul>"
+        return s
+    }
+
+    var build_table = function(json) {
+        loadStop();
+        var table = d3.select("#displaytable").append("table");
+        var hr = table.append("tr");
+
+        hr.append("th").text("Agency")
+        hr.selectAll("th.indicator")
+            .data(json[0]["indicators"])
+            .enter()
+            .append("th").text(function(d) {return d["indicator"]});
+
+        var rows = table
+            .selectAll("tr.agency")
+            .data(json)
+            .enter()
+            .append("tr")
+            .each(function(d, i) {
+                me = d3.select(this);
+                me.append("th").text(d["agency"]);
+                me.selectAll("td")
+                    .data(d["indicators"])
+                    .enter()
+                    .append("td")
+                    .each(function(d2) {
+                        me2 = d3.select(this);
+                        me2.selectAll("p")
+                        .data(["baseline", "latest"])
+                        .enter()
+                        .append("p")
+                            .attr("class", function(d3) { return d3; })
+                            .text(function(d3) {
+                                return d2[d3]["num_submissions"];
+                            })
+                            .each(function(d3) {
+                                console.log(d2);
+                                if (d2[d3]["countries_not_in_set"].length > 0) {
+                                    $(this).popover({
+                                        title : "Countries not included in " + d3 + " year",
+                                        content : fmt_countries(d2[d3]["countries_not_in_set"])
+                                    });
+                                } else {
+                                    $(this).popover({
+                                        title : "All countries included in " + d3 + " year"
+                                    });
+                                }
+                            })
+                    });
+            });
+    }
+
+    var json = '{% url json_agency_submission_summary %}';
+    d3.json(json, function(e){
+        build_table(e);
+    });
+    loadStart();
+</script>
+{% endblock %}

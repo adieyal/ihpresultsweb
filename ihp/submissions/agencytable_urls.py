@@ -3,6 +3,15 @@ from django.views.generic.simple import direct_to_template
 
 urlpatterns = patterns('ihp.submissions.table_views',
     url(
+        r"^submissions_summary/$", 
+        direct_to_template, 
+        {
+            "template" : "submissions/main_base_bootstrap.html", 
+            "extra_context" : {"content_file" : "submissions/agency_submission_summary.html"}
+        }, 
+        name="agency_submissions_summary"
+    ),
+    url(
         r"^dfid_2dpa/$", 
         direct_to_template, 
         {
