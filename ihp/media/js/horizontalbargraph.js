@@ -142,6 +142,16 @@ HorizontalBarGraph.prototype = {
                 .style('fill', function(d, i) { return me.colors(d, i); });
         }
 
+        rects.enter().append('text')
+            .attr('x', function(d, i){ return me.bar.start; })
+            .attr('text-anchor', 'start')
+            .attr('dx', '0.5em')
+            .attr('y', function(d, i){ return y(i) + (me.bar.height / 10) * 8; return (y(i) + y(i + 1)) / 2; })
+            .attr('height', this.bar.height)
+            .attr('font-size', '5px')
+            .attr('class', function(d, i) { return 'hb-rect hb-rect-text-nodata hg-group-' + i; })
+            .style('fill', function(d, i) { return me.colors(d, i); })
+            .text(function(d, i) { if ((d.value == '__NA__') || (d.value == null)) { return 'NO DATA'; } else { return ''; }});
 
         if (this.bar.text){
             rects.enter().append('text')
