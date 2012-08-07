@@ -140,9 +140,9 @@ class GovScorecard(object):
         try:
             override_comments = smodels.CountryScorecardOverrideComments.objects.get(
                 country=self.country, language__language=self.language )
-            cd2 = override_comments.cd2 or _("Signed Agreement")
+            cd2 = override_comments.cd2 or ""
         except:
-            cd2 = _("Signed Agreement")
+            cd2 = ""
 
         
         r1G = self.ratings["1G"]
@@ -150,8 +150,8 @@ class GovScorecard(object):
         r7G = self.ratings["7G"]
         return {
             "commitments": [
-                {"description": cd2, "logo": rating_icon(r1G["target"])},
-                {"description": self.gov_comment("1"), "bullet": False}
+                {"description": _("Signed Agreement"), "logo": rating_icon(r1G["target"])},
+                {"description": cd2, "bullet": False}
             ],
             "health_sector":[
                 {"description": _("Includes current targets and budgets"), "logo": self.gov_rating("2")},
