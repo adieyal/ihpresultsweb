@@ -307,8 +307,8 @@ var fill_svg = function(json){
                     return y (parseInt(i / 4, 10));
                 })
                 .attr('xlink:href', function(d){ return d; })
-                .attr('width', '70')
-                .attr('height', '50');
+                .attr('width', '60')
+                .attr('height', '43');
 
 
     }
