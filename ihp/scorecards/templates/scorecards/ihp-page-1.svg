@@ -6927,7 +6927,7 @@
     <text x="430.5" y="630" style="font-size: 6px; fill: #0d3e3e;">{% blocktrans %}Lower values are better{% endblocktrans %}</text>
     <text x="222" y="517" class="normal">*</text>
     <g transform="translate(35, 822.5)">
-      <text transform="scale(0.8, 1)" class="normal">{% blocktrans %}*Performance is assessed in only Niger, Rwanda, Senegal, Sierra Leone and Uganda. Budget support is also not counted. The rating may therefore not fully reflect progress, and could be an underestimate.{% endblocktrans %}</text>
+      <text transform="scale(0.65, 1)" class="normal">{% blocktrans %}*Performance is assessed in only Niger, Rwanda, Senegal, Sierra Leone and Uganda. Budget support is also not counted. The rating may therefore not fully reflect progress, and could be an underestimate.{% endblocktrans %}</text>
     </g>
   </g>
 </svg>
