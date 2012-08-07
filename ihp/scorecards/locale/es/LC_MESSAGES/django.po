@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-30 09:12+0200\n"
-"PO-Revision-Date: 2012-08-07 08:20\n"
+"POT-Creation-Date: 2012-08-07 17:03+0200\n"
+"PO-Revision-Date: 2012-08-07 17:03\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -23,28 +23,28 @@ msgstr ""
 msgid "No data available"
 msgstr "No hay datos disponibles"
 
-#: models.py:143 models.py:145
+#: models.py:158
 msgid "Signed Agreement"
 msgstr "Acuerdo suscrito"
 
-#: models.py:157
+#: models.py:162
 msgid "Includes current targets and budgets"
 msgstr "Incluye metas y presupuestos actualizados."
 
-#: models.py:158
+#: models.py:163
 msgid "Jointly Assessed"
 msgstr "Evaluados en conjunto"
 
-#: models.py:161
+#: models.py:166
 msgid "Active joint monitoring"
 msgstr "Monitoreo activo realizado en conjunto"
 
-#: models.py:162
+#: models.py:167
 msgid "Number of development partner missions"
 msgstr ""
 "Número de organizaciones que proporcionan la financiación mancomunados"
 
-#: models.py:163
+#: models.py:168
 #, python-format
 msgid ""
 "%(percentage)s%% of seats in the health sector coordination mechanism are "
@@ -53,27 +53,27 @@ msgstr ""
 "%(percentage)s%% de los asientos en el mecanismo de coordinación del sector "
 "salud son ocupados por la sociedad "
 
-#: models.py:226 models.py:232
+#: models.py:231 models.py:237
 msgid "REFLECTS GOOD PRACTICE (OR REFORM IN PROGRESS)"
 msgstr "EVIDENCIA BUENAS PRÁCTICAS (O ESTÁ SIENDO REFORMADO)"
 
-#: models.py:228 models.py:234 models.py:240
+#: models.py:233 models.py:239 models.py:245
 msgid " "
 msgstr ""
 
-#: models.py:238
+#: models.py:243
 msgid "DONOR CAPACITY DEVELOPMENT PROVIDED THROUGH COORDINATED PROGRAMMES"
 msgstr ""
 "DESARROLLO DE CAPACIDADES PROVISTO POR DONANTES A TRAVÉS DE PROGRAMAS "
 "EJECUTADOS EN COORDINACIÓN"
 
-#: models.py:330
+#: models.py:335
 msgid "An IHP+ Compact or equivalent mutual agreement is in place."
 msgstr ""
 "Se halla vigente un Pacto IHP+ u otro acuerdo equivalente\n"
 "conjuntamente acordado"
 
-#: models.py:339
+#: models.py:344
 msgid ""
 "A National Health Sector Plan/ Strategy is in place with current targets & "
 "budgets that have been jointly assessed."
@@ -81,7 +81,7 @@ msgstr ""
 "Se halla vigente un Plan/Estrategia Nacional de Salud, con metas y\n"
 "presupuestos actualizados que han sido monitoreados conjuntamente"
 
-#: models.py:348
+#: models.py:353
 msgid ""
 "A costed, comprehensive national HRH plan (integrated with the health plan) "
 "is being implemented or developed."
@@ -89,7 +89,7 @@ msgstr ""
 "Se está aplicando (o elaborando) un plan nacional de recursos humanos "
 "sanitarios integral, presupuestado e integrado en el plan sanitario nacional"
 
-#: models.py:357
+#: models.py:362
 #, python-format
 msgid ""
 "%(percentage)d%% (or an equivalent published target) of the national budget "
@@ -98,7 +98,7 @@ msgstr ""
 "Se asigna a sanidad el %(percentage)d%% (o una meta pública equivalente) de "
 "los presupuestos nacionales"
 
-#: models.py:367
+#: models.py:372
 msgid ""
 "Halve the proportion of health sector funding not disbursed against the "
 "approved annual budget."
@@ -106,7 +106,7 @@ msgstr ""
 "Reducir a la mitad la financiación destinada al sector sanitario no\n"
 "desembolsada según el presupuesto anual aprobado"
 
-#: models.py:376
+#: models.py:381
 msgid ""
 "Improvement of at least one measure (ie 0.5 points) on the PFM/CPIA scale of"
 " performance."
@@ -114,7 +114,7 @@ msgstr ""
 "Mejora de al menos un nivel (es decir 0,5 puntos) en la escala de\n"
 "desempeño de la gestión de las finanzas públicas/evaluación de las políticas e instituciones nacionales (PFM/CPIA, por sus siglas en inglés)"
 
-#: models.py:385
+#: models.py:390
 msgid ""
 "Improvement of at least one measure on the four-point scale used to assess "
 "performance for this sector."
@@ -122,7 +122,7 @@ msgstr ""
 "Mejora de al menos un nivel en la escala de cuatro puntos utilizada para "
 "evaluar el desempeño en este sector"
 
-#: models.py:396
+#: models.py:401
 msgid ""
 "A transparent and monitorable performance assessment framework is in place "
 "to assess progress in the health sector."
@@ -130,7 +130,7 @@ msgstr ""
 "Se ha implantado un marco de evaluación de desempeño ransparente y "
 "susceptible de supervisión, a fin de analizar los avances en el sector salud"
 
-#: models.py:405
+#: models.py:410
 msgid ""
 "Mutual assesments (such as joint Annual Health Sector Review) are being made"
 " of progress implementing commitments in the health sector, including on aid"
@@ -140,7 +140,7 @@ msgstr ""
 "Sector Salud) sobre los avances en la aplicación de los compromisos "
 "relativos al sector, incluyendo la eficacia de la ayuda"
 
-#: models.py:414
+#: models.py:419
 msgid "CSOs are represented at all key points of policy and planning process."
 msgstr ""
 "t représentés à tous les moments clés du processus d’établissement des "
@@ -518,8 +518,8 @@ msgstr ""
 #: templates/scorecards/country-page-2.svg:7735
 #, python-format
 msgid ""
-"TB incidence per %(value)s per 100,000 in %(year)s. "
-"(%(arrow)s%(change_value)s since %(change_year)s)"
+"TB incidence %(value)s per 100,000 in %(year)s. (%(arrow)s%(change_value)s "
+"since %(change_year)s)"
 msgstr ""
 "Incidencia de TBC por %(value)s por cada 100,000 habitantes en el %(year)s. "
 "(%(arrow)s%(change_value)s desde el %(change_year)s)"
