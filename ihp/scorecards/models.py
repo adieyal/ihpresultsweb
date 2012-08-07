@@ -144,6 +144,11 @@ class GovScorecard(object):
         except:
             cd2 = ""
 
+        dpm = self.gov_ltv("16")
+        if dpm == "null":
+            dpm = "?"
+        else:
+            dpm = foz(dpm)
         
         r1G = self.ratings["1G"]
         r2Ga1 = self.ratings["1G"]
@@ -159,7 +164,7 @@ class GovScorecard(object):
             ],
             "aid_effectiveness": [
                 {"description": _("Active joint monitoring"), "logo": rating_icon(r7G["target"])},
-                {"description": _("Number of development partner missions"), "text": foz(self.gov_ltv("16"))},
+                {"description": _("Number of development partner missions"), "text": dpm},
                 {"description": _("%(percentage)s%% of seats in the health sector coordination mechanism are allocated to civil society") % { 'percentage': (seats) }, "logo": cs_logo},
             ]
         }
