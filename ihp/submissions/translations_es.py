@@ -100,23 +100,23 @@ gov_pc3 = "%0.1f %% allocated to health"
 gov_pc4 = "%0.1f %% increase needed to meet the Abuja target (15%%)"
 
 agency_commentary_text = {
-    "1DP" : "An IHP+ Country Compact or equivalent has been signed by the agency in %(cur_val).0f%% of IHP+ countries where they exist. Target = %(target_round)d%%.",
-    "2DPa" : u"In %(cur_year)s %(one_minus_cur_val).0f%% of health sector aid was reported by the agency on national health sector budgets - %(one_minus_diff_direction)s from %(one_minus_base_val).0f%%. Target = %(target_round)d%% reduction in aid not on budget (with ≥ 85%% on budget).",
-    "2DPb" : Template("In {{ cur_year }} {{ cur_val|floatformat }}% of capacity development was provided by the agency through coordinated programmes {% if diff_direction %}- {{ diff_direction }} from {{ base_val|floatformat }}%.{% endif %} Target = {{ target_round }}%."),
-    "2DPc" : "In %(cur_year)s %(cur_val).0f%% of health sector aid was provided by the agency through programme based approaches - %(diff_direction)s from %(base_val).0f%%. Target = %(target_round)d%%.",
-    "3DP" : "In %(cur_year)s %(cur_val).0f%% of health sector aid was provided by the agency through multi-year commitments - %(diff_direction)s from %(base_val).0f%%. Target = %(target_round)d%%.",
-    "4DP" : "In %(cur_year)s %(cur_val).0f%% of health sector aid disbursements provided by the agency were released according to agreed schedules - %(diff_direction)s from %(base_val).0f%% in %(base_year)s. Target = %(target_round)d%%.",
-    "5DPa" : Template("In {{ cur_year }} {{ one_minus_cur_val|floatformat }}% of health sector aid provided by the agency used country procurement systems{% if one_minus_diff_direction %} - {{ one_minus_diff_direction }} from {{ one_minus_base_val|floatformat }}%{% endif %}. Target = {{ target_round }}% reduction in aid not using procurement systems (with ≥ 80% using country systems)."),
-    "5DPb" : u"In %(cur_year)s %(one_minus_cur_val).0f%% of health sector aid provided by the agency used national public financial management systems - %(one_minus_diff_direction)s from %(one_minus_base_val).0f%%. Target = %(target_round)d%% reduction in aid not using PFM systems (with ≥ 80%% using country systems).",
-    "5DPc" : "In %(cur_year)s the stock of parallel project implementation units (PIUs) used by the agency in the surveyed countries was %(cur_val)s - %(diff_direction)s from %(base_val)s. Target = %(target_round)d%% reduction in stock of PIUs.",
-    "6DP" : "In %(cur_year)s national performance assessment frameworks were routinely used by the agency to assess progress in %(cur_val).0f%% of IHP+ countries where they exist. Target = %(target_round)d%%.",
-    "7DP" : "In %(cur_year)s the agency participated in health sector mutual assessments of progress in %(cur_val).0f%% of IHP+ countries where they exist. Target = %(target_round)d%%.",
-    "8DP" : "In %(cur_year)s, evidence exists in %(cur_val).0f%% of IHP+ countries that the agency supported civil society engagement in health sector policy processes. Target = %(target_round)d%%.",
+    "1DP" : u"Un Pacto Nacional IHP+ u otro acuerdo equivalente ha sido suscrito por la organización en el %(cur_val).0f%% de los países firmantes del Pacto IHP+ ahí donde existe. La meta establecida es del %(target_round)d%%.",
+    "2DPa" : u"En el %(cur_year)s, la organización informó que el %(one_minus_cur_val).0f%% de la asistencia para el sector salud figuraba en los presupuestos nacionales del sector salud – %(one_minus_diff_direction)s frente al %(one_minus_base_val).0f%%. La meta establecida es reducir en un %(target_round)d%% la asistencia que no aparece en el presupuesto (en que ≥ 85%% debe figurar en el presupuesto).",
+    "2DPb" : Template(u"En el {{ cur_year }}, el {{ cur_val|floatformat }}% del desarrollo de capacidades fue provisto por la organización a través de programas ejecutados en coordinación{% if diff_direction %} – {{ diff_direction }} frente al {{ base_val|floatformat }}%{% endif %}. La meta establecida es del {{ target_round }}%."),
+    "2DPc" : u"En el %(cur_year)s, el %(cur_val).0f%% de la asistencia para el sector salud fue provisto por la organización utilizando enfoques basados en programas – %(diff_direction)s frente al %(base_val).0f%%. La meta establecida es del %(target_round)d%%.",
+    "3DP" : u"En el %(cur_year)s, el %(cur_val).0f%% de la asistencia para el sector salud fue provisto por la organización en forma de compromisos multianuales – %(diff_direction)s frente al %(base_val).0f%%. La meta establecida es del %(target_round)d%%.",
+    "4DP" : u"En el %(cur_year)s, el %(cur_val).0f%% de los desembolsos de la asistencia para el sector salud provista por la organización fueron liberados con base en un cronograma acordado – %(diff_direction)s frente al %(base_val).0f%% en el %(base_year)s. La meta establecida es del %(target_round)d%%.",
+    "5DPa" : Template(u"En el {{ cur_year }} se utilizaron sistemas nacionales de adquisiciones para el {{ one_minus_cur_val|floatformat }}% de la asistencia para el sector salud provista por la organización{% if one_minus_diff_direction %} – {{ one_minus_diff_direction }} frente al {{ one_minus_base_val|floatformat }}%{% endif %}. La meta establecida es reducir en un {{ target_round }}% la asistencia otorgada prescindiendo de sistemas de adquisiciones (en que ≥80% debe otorgarse utilizando sistemas nacionales)."),
+    "5DPb" : u"En el %(cur_year)s se utilizaron sistemas nacionales de gestión de las finanzas públicas para el %(one_minus_cur_val).0f%% de la asistencia provista por la organización – %(one_minus_diff_direction)s frente al %(one_minus_base_val).0f%%. La meta establecida es reducir en un %(target_round)d%% la asistencia otorgada prescindiendo de sistemas de gestión de las finanzas públicas (en que ≥80%% debe otorgarse utilizando sistemas nacionales).",
+    "5DPc" : u"En el %(cur_year)s, el número de unidades de ejecución de proyectos (UEP) paralelas utilizadas por la organización fue de %(cur_val)s – %(diff_direction)s frente a %(base_val)s. La meta establecida es reducir en un %(target_round)d%% el número de UEP paralelas.",
+    "6DP" : u"En el %(cur_year)s, la organización utilizó de manera rutinaria marcos de evaluación del desempeño con el fin de evaluar los avances en el %(cur_val).0f%% de los países firmantes del Pacto IHP+ ahí donde existe. La meta establecida es del %(target_round)d%%.",
+    "7DP" : u"En el %(cur_year)s, la organización participó en evaluaciones mutuas de los avances en el sector salud en el %(cur_val).0f%% de los países firmantes del Pacto IHP+ ahí donde existe. La meta establecida es del %(target_round)d%%.",
+    "8DP" : u"En el 2011, existe evidencia en el %(cur_val).0f%% de los países firmantes del Pacto IHP+ de que la organización apoyó la participación de la sociedad civil en procesos relacionados con la política del sector salud. La meta establecida es del %(target_round)d%%."
 }
 
-direction_decrease = "a decrease" 
-direction_increase = "an increase" 
-direction_nochange = "no change" 
+direction_decrease = u"una reducción" 
+direction_increase = u"un incremento"
+direction_nochange = u"ningún cambio" 
 
 agency_graphs = {
     "2DPa" : {

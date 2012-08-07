@@ -6800,8 +6800,8 @@
 	{% blocktrans %}WORKING DRAFT{% endblocktrans %}
       </text>
     </g>
-    <g transform="translate(214.26, 41.864)">
-      <text transform="scale(1, 1)" class="head2">
+    <g transform="translate(135, 41.864)">
+      <text transform="scale(0.8, 1)" class="head2">
 	{% blocktrans %}2012 PARTNER SCORECARD FOR{% endblocktrans %}
 	<tspan x="0" y="10.667" style="fill:#013333;" id="agency-name"></tspan>
       </text>

@@ -7732,7 +7732,7 @@
 	  {% blocktrans with "<img class=\"arrow\" src=\"/media/icons/arrow_up_good.svg\"/>" as arrow and "<tspan class=\"value\">xx</tspan>" as value and "<tspan class=\"year\">xxxx</tspan>" as year and "<tspan class=\"change_value\">xx</tspan>" as change_value and "<tspan class=\"change_year\">xxxx</tspan>" as change_year %}Children U-5 sleeping under insecticide treated bednet {{ value }} in {{ year }}. ({{ arrow }}{{ change_value }} since {{ change_year }}){% endblocktrans %}
 	</li>
 	<li id="tb">
-	  {% blocktrans with "<img class=\"arrow\" src=\"/media/icons/arrow_up_good.svg\"/>" as arrow and "<tspan class=\"value\">xx</tspan>" as value and "<tspan class=\"year\">xxxx</tspan>" as year and "<tspan class=\"change_value\">xx</tspan>" as change_value and "<tspan class=\"change_year\">xxxx</tspan>" as change_year %}TB incidence per {{ value }} per 100,000 in {{ year }}. ({{ arrow }}{{ change_value }} since {{ change_year }}){% endblocktrans %}
+	  {% blocktrans with "<img class=\"arrow\" src=\"/media/icons/arrow_up_good.svg\"/>" as arrow and "<tspan class=\"value\">xx</tspan>" as value and "<tspan class=\"year\">xxxx</tspan>" as year and "<tspan class=\"change_value\">xx</tspan>" as change_value and "<tspan class=\"change_year\">xxxx</tspan>" as change_year %}TB incidence {{ value }} per 100,000 in {{ year }}. ({{ arrow }}{{ change_value }} since {{ change_year }}){% endblocktrans %}
 	</li>
       </ul>
     </div>
