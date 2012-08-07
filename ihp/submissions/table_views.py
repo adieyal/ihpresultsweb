@@ -259,17 +259,6 @@ def agency_table_by_country(request, country_id, language="English", template_na
     
     return direct_to_template(request, template=template_name, extra_context=extra_context)
 
-def gbs_table(request, agency_id, template_name="submissions/gbs_table.html", extra_context=None):
-    extra_context = extra_context or {} 
-    gbsagency = models.Agency.objects.all_types().get(pk=agency_id)
-    agency = get_object_or_404(models.Agency, agency=gbsagency.agency.replace("GBS", ""))
-
-    extra_context["agency"] = agency
-    extra_context["agency_data"] = target.calc_agency_ratings(agency)
-    extra_context["gbs_agency_data"] = target.calc_agency_ratings(gbsagency)
-
-    return direct_to_template(request, template=template_name, extra_context=extra_context)
-
 def country_table(request, language="English", template_name="submissions/country_table.html", extra_context=None):
     extra_context = extra_context or {}
     extra_context["translation"] = translation = request.translation
@@ -347,14 +336,16 @@ def agency_ratings(request, language="English", template_name="submissions/agenc
             base_val = data[agency][indicator]["base_val"]
             perc_change = ""
             try:
+                cur_val = 100 - cur_val
+                base_val = 100 - base_val
                 perc_change = ((cur_val - base_val) / base_val) * 100
             except:
                 pass
 
             rating[agency] = {
                 "rating" : data[agency][indicator]["target"],
-                "base_val" : data[agency][indicator]["base_val"],
-                "cur_val" : data[agency][indicator]["cur_val"],
+                "base_val" : base_val,
+                "cur_val" : cur_val,
                 "perc_change" : perc_change
             }
         ratings.append((indicator, rating, translation.spm_map[indicator]))

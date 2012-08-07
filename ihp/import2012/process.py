@@ -122,7 +122,7 @@ class SubmissionParser(object):
             elif val in under_development_values:
                 return SubmissionParser.UNDER_DEVELOPMENT
 
-        sys.stderr.write("WARNING: Unknown yes/no value: %s in row: %d, col: %d\n" % (val, row, col))
+        #sys.stderr.write("WARNING: Unknown yes/no value: %s in row: %d, col: %d\n" % (val, row, col))
         return None
 
     def extract_yesno_value(self, row):
@@ -221,8 +221,8 @@ class DPSubmissionParser(SubmissionParser):
         }
 
     def _4dp_switcheroo(self, submission, answers):
-        answers["10old"] = answers["9"]
-        answers["11old"] = answers["6"]
+        answers["10old"] = dict(answers["9"])
+        answers["11old"] = dict(answers["6"])
         if submission.country not in new_countries: 
             try:
                 q10 = DPQuestion.objects.get(submission=submission, question_number="10")
@@ -244,7 +244,6 @@ class DPSubmissionParser(SubmissionParser):
         metadata = self.extract_metadata()
         country = Country.objects.get(country=metadata["country"])
         agency_name = metadata["agency"]
-        print agency_name
         agency = Agency.objects.all_types().get(agency=agency_name)
         submission, created = Submission.objects.get_or_create(
             country=country,
@@ -268,7 +267,7 @@ class DPSubmissionParser(SubmissionParser):
                 qhash["base_val"] = json.dumps(qhash["base_val"])
                 qhash["cur_val"] = json.dumps(qhash["cur_val"])
 
-            if created or qnum in ["10old", "11old"]:
+            if agency.id >= 46 or qnum in ["10old", "11old"]:
                 question.baseline_value = qhash["base_val"]
                 question.baseline_year = qhash["base_year"] if "base_year" in qhash else metadata["baseline_year"]
             question.latest_value = qhash["cur_val"]
@@ -308,7 +307,8 @@ class GovSubmissionParser(SubmissionParser):
                 question_number=qnum
             )
             
-            if created:
+            # don't update the baseline values of old countries
+            if country.id >= 12:
                 q.baseline_value = qhash["base_val"]
                 q.baseline_year = metadata["baseline_year"]
             q.latest_value = qhash["cur_val"]
@@ -319,11 +319,10 @@ class GovSubmissionParser(SubmissionParser):
         return submission
 
     def extract_metadata(self):
-        
         return {
             "country" : self._v(0, 1),
             "currency" : self._v(1, 1),
-            "baseline_year" : self.parse_year(self._v(2, 1)),
+            "baseline_year" : self.parse_year(unfloat(self._v(2, 1))),
             "latest_year" : self.parse_year(unfloat(self._v(3, 1))),
             "completed_by" : self._v(0, 5),
             "job_title" : self._v(1, 5)

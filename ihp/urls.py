@@ -62,13 +62,6 @@ urlpatterns = patterns('',
         }
     }, 'agency_table_by_indicator'),
 
-    (r'^agencies/agency/gbs/(?P<agency_id>.+)/$', 'submissions.views.gbs_table', {
-        "template_name" : "submissions/main_base.html",
-        "extra_context" : {
-            "content_file" : "submissions/gbs_table.html"
-        }
-    }, 'gbs_table'),
-
     (r'^agencies/tables/alternative_baselines/$', 'submissions.views.agency_alternative_baselines', {
         "template_name" : "submissions/main_base.html",
         "extra_context" : {
@@ -177,7 +170,6 @@ urlpatterns = patterns('',
         "template" : "home.html", 
         "extra_context" : {
             "agencies" : Agency.objects.filter(type="Agency").order_by("display_name"),
-            "gbsagencies" : Agency.objects.get_by_type("GBS"),
             "countries" : Country.objects.all().order_by("country")}
         }, 
         "home"

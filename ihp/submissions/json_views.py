@@ -13,6 +13,66 @@ def foz(val):
     except (TypeError, ValueError):
         return 0
 
+
+def agency_submission_summary(request):
+    agencies = models.Agency.objects.all()
+
+    js = []
+
+    for agency in agencies:
+        agency_js = {
+            "agency" : agency.agency,
+            "active_countries" : agency.countries.count(),
+            "indicators" : []
+        }
+        js.append(agency_js)
+
+        #js.append({
+        #    "baseline" : {
+        #        "num_submissions" : len(baseline_countries),
+        #        "countries" : list(baseline_countries)
+        #    },
+        #    "latest" : {
+        #        "num_submissions" : len(latest_countries),
+        #        "countries" : list(latest_countries)
+        #    },
+        for indicator in indicators.dp_indicators:
+
+            qnums = indicators.indicator_funcs[indicator][1]
+            questions = models.DPQuestion.objects.filter(submission__agency=agency, question_number__in=qnums)
+
+            baseline_submissions = questions\
+                .exclude(baseline_value=None)\
+                .exclude(baseline_value="")\
+                .values("submission__country__country")
+
+            baseline_countries = set(v["submission__country__country"] for v in baseline_submissions)
+
+            latest_submissions = questions\
+                .exclude(latest_value=None)\
+                .exclude(latest_value="")\
+                .values("submission__country__country")
+
+            latest_countries = set(v["submission__country__country"] for v in latest_submissions)
+
+            indicator_js = {
+                "indicator" : indicator,
+                "baseline" : {
+                    "num_submissions" : len(baseline_countries),
+                    "countries" : list(baseline_countries),
+                    "countries_not_in_set" : list(latest_countries - baseline_countries)
+                },
+                "latest" : {
+                    "num_submissions" : len(latest_countries),
+                    "countries" : list(latest_countries),
+                    "countries_not_in_set" : list(baseline_countries - latest_countries)
+                },
+            } 
+            agency_js["indicators"].append(indicator_js)
+
+
+    return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")
+
 def dfid_2dpa(request):
     agency = get_object_or_404(models.Agency, agency="UK")
     first_wave = ["Burundi", "Cambodia", "Ethiopia", "Kenya", "Mali", "Mozambique", "Nepal", "Zambia"]

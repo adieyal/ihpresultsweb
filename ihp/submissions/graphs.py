@@ -321,7 +321,7 @@ class TargetCountryBarGraph(CountryBarGraph):
         })
 
 class HighlevelBarChart(DPChart):
-    def __init__(self, target_element, baseline_value, previous_value, latest_value, **kwargs):
+    def __init__(self, target_element, baseline_value, previous_value, latest_value, other_latest_value=None, **kwargs):
         super(HighlevelBarChart, self).__init__(target_element, **kwargs)
 
         self.xAxis = {"categories" : ["Baseline", "2009", "2011"]} 
@@ -336,6 +336,13 @@ class HighlevelBarChart(DPChart):
                     ],
             "color" : '#82A8A0',
         }]
+
+        if (other_latest_value != None):
+            self.xAxis["categories"].append("2011 (All submissions)")
+            self.series[0]["data"].append({
+                "y" : float(other_latest_value),
+                "color" : "#000066"
+            })
 
         if "target" in kwargs:
             self.yAxis["plotBands"] = [{
@@ -409,9 +416,10 @@ def agency_graphs_by_indicator(request, indicator, language, template_name="subm
     ####### Include only last years countries and agencies
     name = "graph2_%s" % indicator
 
+    other_latest_value = latest_value
     (baseline_value, baseline_year, latest_value, latest_year) = result2[0]
     (_, _, previous_value, previous_year) = old_result2[0]
-    graph = highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, target=target, has_filter=True)
+    graph = highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, other_latest_value=other_latest_value, target=target, has_filter=True)
     graphs.append({
         "name" : name,
         "obj" : graph
@@ -486,13 +494,13 @@ def projectiongraphs(request, language, template_name="submissions/projectiongra
 
     return direct_to_template(request, template=template_name, extra_context=extra_context)
 
-def highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, target=None, has_filter=False):
+def highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, other_latest_value=None, target=None, has_filter=False):
 
     title_suffix = "(All submissions)" if not has_filter else "(2009 filter)"
     if target:
         graph = HighlevelBarChart(
             name, 
-            foz(baseline_value), foz(previous_value), foz(latest_value),
+            foz(baseline_value), foz(previous_value), foz(latest_value), other_latest_value,
             title=translation.highlevel_graphs[indicator]["title"] + " " + title_suffix,
             subtitle=translation.highlevel_graphs[indicator]["subtitle"],
             target=target_values[indicator],
@@ -501,7 +509,7 @@ def highlevel_graph_by_indicator(indicator, name, translation, baseline_value, p
     else:
         graph = HighlevelBarChart(
             name, 
-            foz(baseline_value), foz(previous_value), foz(latest_value),
+            foz(baseline_value), foz(previous_value), foz(latest_value), other_latest_value,
             title=translation.highlevel_graphs[indicator]["title"] + " " + title_suffix,
             subtitle=translation.highlevel_graphs[indicator]["subtitle"],
             yAxis=translation.highlevel_graphs[indicator]["yAxis"],

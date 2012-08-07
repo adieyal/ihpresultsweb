@@ -2,6 +2,11 @@ from django.conf.urls.defaults import patterns, url
 
 urlpatterns = patterns('ihp.submissions.json_views',
     url(
+        r"^agencies/submission_summary/$",
+        "agency_submission_summary", 
+        name="json_agency_submission_summary"
+    ),
+    url(
         r"^agencies/all_indicators/(?P<agency_id>\d+)/$", 
         "all_indicators", 
         name="json_agency_all_indicators"
