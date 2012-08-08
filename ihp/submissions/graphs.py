@@ -186,6 +186,54 @@ class StackedAgencyBarGraph(DPChart):
 
         self.plotOptions = {"column" : {"stacking" : "percent"}}
 
+class StackedAgencyBarGraphLatest(DPChart):
+    def __init__(self, chart_name, dataset, target_name, target, **kwargs):
+        kwargs["yAxis"] = "%"
+        super(StackedAgencyBarGraphLatest, self).__init__(chart_name, **kwargs)
+        categories = map(lambda x: x[0].agency, dataset["data"])
+        cur_data = map(lambda x: x[1], dataset["data"])
+        base_data = map(lambda x: x[2], dataset["data"])
+
+        cur_data1 = cur_data
+        cur_data2 = map(lambda x: 100 - x, cur_data)
+        base_data1 = base_data
+        base_data2 = map(lambda x: 100 - x if x else 0, base_data)
+
+        self.chart["defaultSeriesType"] = "column"
+        self.xAxis = {
+            "categories" : categories,
+            "labels" : {
+                "rotation" : -90,
+                "y" : 40,
+            }
+        } 
+
+        if hasattr(self, "yAxis"):
+            self.yAxis["max"] = 100
+            self.yAxis["plotBands"] = [{
+                "from" : target,
+                "to": target * 1.01,
+                "color" : "#F68B1F",
+            }
+        ]
+
+        self.series = [
+            {
+                "name" : dataset["name2_current"],
+                "data" : cur_data2, 
+                "color" : "#82A8A0",
+                "stack" : "current"
+            },
+            {
+                "name" : dataset["name1_current"],
+                "data" : cur_data1,
+                "color" : "#2D5352",
+                "stack" : "current"
+            }, 
+        ]
+
+        self.plotOptions = {"column" : {"stacking" : "percent"}}
+
 class AgencyBarGraph(DPChart):
     def __init__(self, agencies, chart_name, series, **kwargs):
         agency_names = map(lambda x: x.agency, agencies)
@@ -351,6 +399,35 @@ class HighlevelBarChart(DPChart):
                 "color" : "#F68B1F",
             }]
 
+class HighlevelBarChartLatest(DPChart):
+    def __init__(self, target_element, latest_value, other_latest_value=None, **kwargs):
+        super(HighlevelBarChartLatest, self).__init__(target_element, **kwargs)
+
+        self.xAxis = {"categories" : ["2011"]} 
+
+        self.series = [{
+            "name" : "Aggregated Data",
+            "type" : "column",
+            "data" : [
+                    float(latest_value)
+                    ],
+            "color" : '#82A8A0',
+        }]
+
+        if (other_latest_value != None):
+            self.xAxis["categories"].append("2011 (All submissions)")
+            self.series[0]["data"].append({
+                "y" : float(other_latest_value),
+                "color" : "#000066"
+            })
+
+        if "target" in kwargs:
+            self.yAxis["plotBands"] = [{
+                "from" : kwargs["target"],
+                "to": kwargs["target"] * 1.01,
+                "color" : "#F68B1F",
+            }]
+
 def agency_graphs_by_indicator(request, indicator, language, template_name="submissions/agency_graphs_by_indicator.html", extra_context=None):
     extra_context = extra_context or {}
     translation = request.translation
@@ -407,7 +484,10 @@ def agency_graphs_by_indicator(request, indicator, language, template_name="subm
     
     (baseline_value, baseline_year, latest_value, latest_year) = result[0]
     (_, _, previous_value, previous_year) = old_result[0]
-    graph = highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, target=target)
+    if indicator == "4DP":
+        graph = highlevel_latest_graph_by_indicator(indicator, name, translation, latest_value, target=target)
+    else:
+        graph = highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, target=target)
 
     if indicator != "5DPc":
         graphs.append({
@@ -422,10 +502,12 @@ def agency_graphs_by_indicator(request, indicator, language, template_name="subm
     (baseline_value, baseline_year, latest_value, latest_year) = result2[0]
     (_, _, previous_value, previous_year) = old_result2[0]
     graph = highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, other_latest_value=other_latest_value, target=target, has_filter=True)
-    graphs.append({
-        "name" : name,
-        "obj" : graph
-    })
+    
+    if indicator != "4DP":
+        graphs.append({
+            "name" : name,
+            "obj" : graph
+        })
 
     agency_data = dict([
         (agency, agency_scorecard.get_agency_scorecard_data(agency)) 
@@ -523,6 +605,33 @@ def highlevel_graph_by_indicator(indicator, name, translation, baseline_value, p
 
     return graph
 
+def highlevel_latest_graph_by_indicator(indicator, name, translation, latest_value, other_latest_value=None, target=None, has_filter=False):
+
+    title_suffix = "(All submissions)" if not has_filter else "(2009 filter)"
+    if target:
+        graph = HighlevelBarChartLatest(
+            name, 
+            foz(latest_value), other_latest_value,
+            title=translation.highlevel_graphs[indicator]["title"] + " " + title_suffix,
+            subtitle=translation.highlevel_graphs[indicator]["subtitle"],
+            target=target_values[indicator],
+            yAxis=translation.highlevel_graphs[indicator]["yAxis"],
+        )
+    else:
+        graph = HighlevelBarChartLatest(
+            name, 
+            foz(latest_value), other_latest_value,
+            title=translation.highlevel_graphs[indicator]["title"] + " " + title_suffix,
+            subtitle=translation.highlevel_graphs[indicator]["subtitle"],
+            yAxis=translation.highlevel_graphs[indicator]["yAxis"],
+        )
+
+    graph.legend = {
+        "enabled" : "false"
+    }
+
+    return graph
+
 def additional_graph_by_indicator(indicator, name, translation, agency_data):
 
     def indicator_data(indicator, reverse=False):
@@ -552,6 +661,19 @@ def additional_graph_by_indicator(indicator, name, translation, agency_data):
             legend={"enabled" : "false"},
         )
         return graph
+
+    elif indicator == "4DP":
+        reverse = ["2DPa", "5DPa", "5DPb"]
+        return StackedAgencyBarGraphLatest(
+            name,
+            {
+                "name1_current" : "Latest: " + translation.additional_graphs[indicator]["series1"],
+                "name2_current" : "Latest: " + translation.additional_graphs[indicator]["series2"],
+                "data" : indicator_data(indicator, reverse=True if indicator in reverse else False)
+            },
+            "target", target,
+            title=translation.additional_graphs[indicator]["title"]
+        )
 
     else:
         reverse = ["2DPa", "5DPa", "5DPb"]
