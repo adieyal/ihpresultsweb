@@ -404,14 +404,16 @@ def agency_graphs_by_indicator(request, indicator, language, template_name="subm
     target = target_values[indicator]
     ####### Include all countries and agencies
     name = "graph_%s" % indicator
-
+    
     (baseline_value, baseline_year, latest_value, latest_year) = result[0]
     (_, _, previous_value, previous_year) = old_result[0]
     graph = highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, target=target)
-    graphs.append({
-        "name" : name,
-        "obj" : graph
-    })
+
+    if indicator != "5DPc":
+        graphs.append({
+            "name" : name,
+            "obj" : graph
+        })
 
     ####### Include only last years countries and agencies
     name = "graph2_%s" % indicator
