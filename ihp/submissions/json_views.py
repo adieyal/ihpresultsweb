@@ -110,6 +110,40 @@ def dfid_2dpa(request):
 
     return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")
 
+def overall_2dpa(request):
+    countries = models.Country.objects.all()
+    first_wave = ["Burundi", "Cambodia", "Ethiopia", "Kenya", "Mali", "Mozambique", "Nepal", "Zambia"]
+
+    all_results = indicators.calc_indicator(
+        models.DPQuestion.objects.filter(
+            submission__country__in=countries
+        ),
+        None, "2DPa", funcs=indicators.positive_funcs
+    )[0]
+    print all_results
+
+    first_wave_results = indicators.calc_agency_indicator(
+        models.DPQuestion.objects.filter(
+            submission__country__country__in=first_wave
+        ),
+        None, "2DPa", funcs=indicators.positive_funcs
+    )[0]
+    
+    js = {
+        "all" : {
+            "num_countries" : len(countries),
+            "baseline" : all_results[0],
+            "latest" : all_results[2],
+        },
+        "first_wave" : {
+            "num_countries" : len(first_wave),
+            "baseline" : first_wave_results[0],
+            "latest" : first_wave_results[2],
+        },
+    }
+
+    return HttpResponse(json.dumps(js, indent=4), mimetype="application/json")
+
 def all_indicators(request, agency_id):
     agency = get_object_or_404(models.Agency, pk=agency_id)
     results = indicators.calc_agency_indicators(agency, funcs=indicators.positive_funcs) 
