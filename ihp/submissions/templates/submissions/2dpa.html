@@ -1,0 +1,67 @@
+{% block head %}
+    {{ block.super }}
+    <style>
+        td:first-child {
+            text-align: left;
+        }
+
+        #displaytable {
+            text-align: center;
+            width: 100%;
+        }
+
+        #displaytable th {
+            font-weight: bold;
+        }
+
+        #displaytable td, #displaytable th, #displaytable tr {
+            padding: 4px;
+            border: solid thin black;
+        }
+
+    </style>
+{% endblock %}
+
+{% block content %}
+<div id="DataDisplay"></div>
+<div id="displaytable">
+</div>
+<script>
+
+    fmt_countries = function(countries) {
+        s = "<ul>"
+        for (c in countries) {
+            s += "<li>" + countries[c] + "</li>";
+        }
+        
+        s += "</ul>"
+        return s
+    }
+
+    var build_table = function(json) {
+        loadStop();
+        var table = d3.select("#displaytable").append("table");
+        var hr = table.append("tr");
+        var allr = table.append("tr");
+        var fwr = table.append("tr");
+
+        hr.append("th").text("");
+        hr.append("th").text("Baseline");
+        hr.append("th").text("Latest");
+
+        allr.append("th").text("All countries (" + json.all.num_countries + ")");
+        allr.append("td").text(d3.round(json.all.baseline, 2));
+        allr.append("td").text(d3.round(json.all.latest, 2));
+
+        fwr.append("th").text("First Wave Countries (" + json.first_wave.num_countries + ")");
+        fwr.append("td").text(d3.round(json.first_wave.baseline, 2));
+        fwr.append("td").text(d3.round(json.first_wave.latest, 2));
+    }
+
+    var json = '{% url json_2dpa %}';
+    d3.json(json, function(e){
+        build_table(e);
+    });
+    loadStart();
+</script>
+{% endblock %}
