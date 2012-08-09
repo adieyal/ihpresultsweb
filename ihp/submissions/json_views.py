@@ -75,6 +75,7 @@ def agency_submission_summary(request):
 
 def dfid_2dpa(request):
     agency = get_object_or_404(models.Agency, agency="UK")
+    print agency.countries
     first_wave = ["Burundi", "Cambodia", "Ethiopia", "Kenya", "Mali", "Mozambique", "Nepal", "Zambia"]
 
     all_results = indicators.calc_agency_indicator(
@@ -91,6 +92,9 @@ def dfid_2dpa(request):
         agency, "2DPa", funcs=indicators.positive_funcs
     )[0]
     
+    agency_first_wave_countries = [c for c in agency.countries if c.country in first_wave]
+    print agency_first_wave_countries
+    
     js = {
         "all" : {
             "num_countries" : len(agency.countries),
@@ -98,7 +102,7 @@ def dfid_2dpa(request):
             "latest" : all_results[2],
         },
         "first_wave" : {
-            "num_countries" : len(first_wave),
+            "num_countries" : len(agency_first_wave_countries),
             "baseline" : first_wave_results[0],
             "latest" : first_wave_results[2],
         },
