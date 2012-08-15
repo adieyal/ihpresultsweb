@@ -61,4 +61,9 @@ urlpatterns = patterns('ihp.submissions.json_views',
         "dfid_2dpa", 
         name="json_dfid_2dpa"
     ),
+    url(
+        r"^2DPa/$",
+        "overall_2dpa", 
+        name="json_2dpa"
+    ),
 )

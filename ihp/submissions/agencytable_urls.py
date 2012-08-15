@@ -21,6 +21,15 @@ urlpatterns = patterns('ihp.submissions.table_views',
         name="dfid_2dpa"
     ),
     url(
+        r"^2dpa/$", 
+        direct_to_template, 
+        {
+            "template" : "submissions/main_base_bootstrap.html", 
+            "extra_context" : {"content_file" : "submissions/2dpa.html"}
+        }, 
+        name="2dpa"
+    ),
+    url(
         r"^fragile_states/$", 
         direct_to_template, 
         {
