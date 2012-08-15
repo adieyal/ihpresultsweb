@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-07 17:03+0200\n"
-"PO-Revision-Date: 2012-08-07 17:03\n"
+"PO-Revision-Date: 2012-08-15 14:50\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -143,9 +143,8 @@ msgstr ""
 #: models.py:419
 msgid "CSOs are represented at all key points of policy and planning process."
 msgstr ""
-"t représentés à tous les moments clés du processus d’établissement des "
-"politiques et de planification Las Organizaciones de la Sociedad Civil "
-"participan de forma significativa (espacio, amplitud, proceso)"
+"Las Organizaciones de la Sociedad Civil participan de forma significativa "
+"(espacio, amplitud, proceso)"
 
 #: templates/scorecards/country-page-1.svg:5721
 msgid "ETHIOPIA"
@@ -495,7 +494,7 @@ msgstr ""
 
 #: templates/scorecards/country-page-2.svg:7723
 msgid "Combat HIV/AIDS, Malaria and other Diseases"
-msgstr "Combattre le VIH/sida, le paludisme et d'autres maladies"
+msgstr "Combatir el VIH/SIDA, la malaria y otras enfermedades"
 
 #: templates/scorecards/country-page-2.svg:7729
 #, python-format
