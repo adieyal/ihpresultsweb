@@ -263,25 +263,29 @@ var fill_svg = function(json){
 	    console.log('doing '+i);
             value_mode = data.type == "percent" ? '%' : '';
             change_mode = data.change_type == "percent" ? '%' : '';
-
-            n.select('.year')
-                .text(data.year);
-
-            n.select('.value')
-                .attr('class', data.color)
-                .text(data.value + value_mode);
-
-            n.select('.change_year')
-                .text(data.change_year);
-
-            n.select('.change_value')
-                .attr('class', data.color)
-                .text(data.change_value + change_mode);
-
-            var src = '/media/icons/arrow_' + data.arrow + '_'
-		+ data.color + '.svg';
-	    n.select('img.arrow')
-		.attr('src', '/media/icons/arrow_' + data.arrow + '_' + data.color + '.svg')
+	    
+	    if ((i == 'children_u5') && (data.value == null)) {
+		n.remove();
+	    } else {
+		n.select('.year')
+                    .text(data.year);
+		
+		n.select('.value')
+                    .attr('class', data.color)
+                    .text(data.value + value_mode);
+		
+		n.select('.change_year')
+                    .text(data.change_year);
+		
+		n.select('.change_value')
+                    .attr('class', data.color)
+                    .text(data.change_value + change_mode);
+		
+		var src = '/media/icons/arrow_' + data.arrow + '_'
+		    + data.color + '.svg';
+		n.select('img.arrow')
+		    .attr('src', '/media/icons/arrow_' + data.arrow + '_' + data.color + '.svg')
+	    }
             //load_svg_image('/media/icons/arrow_' + data.arrow + '_' + data.color + '.svg',
             //id + ' .arrow');
             //load_svg_image('/media/icons/arrow_' + data.arrow + '_' + data.color + '.svg',
