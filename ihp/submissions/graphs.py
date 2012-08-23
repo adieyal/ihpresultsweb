@@ -370,27 +370,37 @@ class TargetCountryBarGraph(CountryBarGraph):
 
 class HighlevelBarChart(DPChart):
     def __init__(self, target_element, baseline_value, previous_value, latest_value, other_latest_value=None, **kwargs):
+        legends = kwargs.get("legends", False)
+        if legends:
+            legend = legends
+        else:
+            legend = ["Aggregated Data", "All Submissions"]
+        del kwargs["legends"]
+
         super(HighlevelBarChart, self).__init__(target_element, **kwargs)
 
         self.xAxis = {"categories" : ["Baseline", "2009", "2011"]} 
 
         self.series = [{
-            "name" : "Aggregated Data",
+            "name" : legend[0],
             "type" : "column",
             "data" : [
-                    float(baseline_value),
-                    float(previous_value),
-                    float(latest_value)
+                    [0, float(baseline_value)],
+                    [1, float(previous_value)],
+                    [2, float(latest_value)]
                     ],
             "color" : '#82A8A0',
         }]
 
         if (other_latest_value != None):
-            self.xAxis["categories"].append("2011 (All submissions)")
-            self.series[0]["data"].append({
-                "y" : float(other_latest_value),
-                "color" : "#000066"
-            })
+            self.series.append({
+                    "name" : legend[1],
+                    "type" : "column",
+                    "data" : [
+                        [2, float(other_latest_value)],
+                        ],
+                    "color" : '#000066',
+                    })
 
         if "target" in kwargs:
             self.yAxis["plotBands"] = [{
@@ -477,6 +487,18 @@ def agency_graphs_by_indicator(request, indicator, language, template_name="subm
         old_result = my_calc_indicator(qs_old, indicator=indicator)
         old_result2 = my_calc_indicator(qs2_old, indicator=indicator)
 
+    submissions = list(models.Submission.objects.all())
+    agencies = set(s.agency for s in submissions)
+    countries = set(s.country for s in submissions)
+    with old_dataset():
+        old_submissions = list(models.Submission.objects.all())
+        old_agencies = set(s.agency for s in old_submissions)
+        old_countries = set(s.country for s in old_submissions)
+    legend = [
+        "Filtered: %d countries, %d development partners" % (len(old_countries), len(old_agencies)),
+        "All submissions: %d countries, %d development partners" % (len(countries), len(agencies)),
+        ]
+
     extra_context["graphs"] = graphs = []
     target = target_values[indicator]
     ####### Include all countries and agencies
@@ -501,7 +523,7 @@ def agency_graphs_by_indicator(request, indicator, language, template_name="subm
     other_latest_value = latest_value
     (baseline_value, baseline_year, latest_value, latest_year) = result2[0]
     (_, _, previous_value, previous_year) = old_result2[0]
-    graph = highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, other_latest_value=other_latest_value, target=target, has_filter=True)
+    graph = highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, other_latest_value=other_latest_value, target=target, has_filter=True, legend=legend)
     
     if indicator != "4DP":
         graphs.append({
@@ -578,8 +600,8 @@ def projectiongraphs(request, language, template_name="submissions/projectiongra
 
     return direct_to_template(request, template=template_name, extra_context=extra_context)
 
-def highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, other_latest_value=None, target=None, has_filter=False):
-
+def highlevel_graph_by_indicator(indicator, name, translation, baseline_value, previous_value, latest_value, other_latest_value=None, target=None, has_filter=False, legend=False):
+    
     title_suffix = "(All submissions)" if not has_filter else "(2009 filter)"
     if target:
         graph = HighlevelBarChart(
@@ -589,6 +611,7 @@ def highlevel_graph_by_indicator(indicator, name, translation, baseline_value, p
             subtitle=translation.highlevel_graphs[indicator]["subtitle"],
             target=target_values[indicator],
             yAxis=translation.highlevel_graphs[indicator]["yAxis"],
+            legends=legend
         )
     else:
         graph = HighlevelBarChart(
@@ -597,12 +620,18 @@ def highlevel_graph_by_indicator(indicator, name, translation, baseline_value, p
             title=translation.highlevel_graphs[indicator]["title"] + " " + title_suffix,
             subtitle=translation.highlevel_graphs[indicator]["subtitle"],
             yAxis=translation.highlevel_graphs[indicator]["yAxis"],
+            legends=legend
         )
 
-    graph.legend = {
-        "enabled" : "false"
-    }
-
+    if legend:
+        graph.legend = {
+            "enabled" : "true"
+            }
+    else:
+        graph.legend = {
+            "enabled" : "false"
+            }
+                
     return graph
 
 def highlevel_latest_graph_by_indicator(indicator, name, translation, latest_value, other_latest_value=None, target=None, has_filter=False):
