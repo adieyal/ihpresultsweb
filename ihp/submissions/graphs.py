@@ -488,11 +488,11 @@ def agency_graphs_by_indicator(request, indicator, language, template_name="subm
         old_result2 = my_calc_indicator(qs2_old, indicator=indicator)
 
     submissions = list(models.Submission.objects.all())
-    agencies = set(s.agency for s in submissions)
+    agencies = set(s.agency for s in submissions if not s.agency.agency.startswith("Government of"))
     countries = set(s.country for s in submissions)
     with old_dataset():
         old_submissions = list(models.Submission.objects.all())
-        old_agencies = set(s.agency for s in old_submissions)
+        old_agencies = set(s.agency for s in old_submissions if not s.agency.agency.startswith("Government of"))
         old_countries = set(s.country for s in old_submissions)
     legend = [
         "Filtered: %d countries, %d development partners" % (len(old_countries), len(old_agencies)),
