@@ -273,6 +273,12 @@ class GovScorecard(object):
                 "change_year": mdg.baseline_year,
                 "arrow": "up" if mdg.is_increase else "down"
             }
+            
+            #Bad custom per country code. I tried to sell a general approach
+            #of changing rounding when we are below a threshold for all countires
+            #but I am obviously a bad salesman.
+            if self.country.country == "Sudan" and mdg.mdg_target == "MDG3":
+                d["change_value"] = r2(mdg.change)
 
             if is_percentage:
                 d["change_type"] = "percent" 
