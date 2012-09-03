@@ -17,6 +17,7 @@
    inkscape:version="0.48.0 r9654"
    width="744.09448"
    height="1052.36"
+   viewBox="-10 -15 1524 2154"
    sodipodi:docname="ihp-page-2.svg">
   <defs
      id="defs5714" />
@@ -67,11 +68,9 @@
        transform="scale(2,2)">
       <g
          id="Foreground">
-        <polygon
-           id="polygon25"
-           transform="translate(-686.42,2.6209)"
-           points="687.55,0.055 687.55,0.055 1282.8,0.055 1282.8,841.94 687.55,841.94 "
-           style="fill:#b3c6c0" />
+        <rect
+            x="-15" y="-10" width="757" height="1069.5"
+            style="fill:#b3c6c0" />
         <path
            id="path27"
            d="M 298.76,355.88"
@@ -1157,4 +1156,26 @@ performance. Disaggregated data can be found at www.ihpresults.net{% endblocktra
     </div>
   </foreignObject>
   </g>
+<g>
+  <!-- Trimlines for printing. -->
+  <line x1="-10" y1="0" x2="-5" y2="0" style="stroke: black; stroke-width: 1px;" />
+  <line x1="0" y1="-15" x2="0" y2="-5" style="stroke: black; stroke-width: 1px;" />
+
+  <line x1="1514" y1="0" x2="1509" y2="0" style="stroke: black; stroke-width: 1px;" />
+  <line x1="1504" y1="-15" x2="1504" y2="-5" style="stroke: black; stroke-width: 1px;" />
+
+  <line x1="0" y1="2139" x2="0" y2="2129" style="stroke: black; stroke-width: 1px;" />
+  <line x1="-10" y1="2124" x2="-5" y2="2124" style="stroke: black; stroke-width: 1px;" />
+
+  <line x1="1504" y1="2139" x2="1504" y2="2129" style="stroke: black; stroke-width: 1px;" />
+  <line x1="1514" y1="2124" x2="1509" y2="2124" style="stroke: black; stroke-width: 1px;" />
+
+  <!-- Uncomment lines below to show bounding box. -->
+  <!--
+  <line x1="0" y1="0" x2="0" y2="2124" style="stroke: black; stroke-width: 1px;" />
+  <line x1="0" y1="2124" x2="1504" y2="2124" style="stroke: black; stroke-width: 1px;" />
+  <line x1="1504" y1="2124" x2="1504" y2="0" style="stroke: black; stroke-width: 1px;" />
+  <line x1="1504" y1="0" x2="0" y2="0" style="stroke: black; stroke-width: 1px;" />
+  -->
+</g>
 </svg>
