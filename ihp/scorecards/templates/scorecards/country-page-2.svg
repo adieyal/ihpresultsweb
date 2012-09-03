@@ -31,7 +31,8 @@
     inkscape:version="0.48.0 r9654"
     width="100%"
     height="100%"
-    sodipodi:docname="country-page-2.svg"><defs
+    sodipodi:docname="country-page-2.svg"
+    viewBox="0 -5 1800 1279"><defs
     id="defs3026" /><sodipodi:namedview
     pagecolor="#ffffff"
     bordercolor="#666666"
@@ -932,7 +933,7 @@
 	    id="_x5F_backgroundpg2">
 	  <path
 	      id="_x5F_pg2background"
-	      d="m0.225 0.055v841.89h1190.6v-841.88h-1190.6zm843.16 812.04c0 5.479-4.442 9.922-9.922 9.922h-522.04c-5.48 0-7.922-2.442-7.922-7.922v-784.49c0-5.479 2.441-7.921 7.922-7.921h522.04c5.479 0 9.922 4.442 9.922 9.921v780.49z"
+	      d="M 0,-15 V 859.333 H 1200 V -10 z M 843.385,812.095 C 843.385,817.574 838.943,822.017 833.463,822.017 H 311.423 C 305.943,822.017 303.501,819.575 303.501,814.095 V 29.605 C 303.501,24.126 305.942,21.684 311.423,21.684 H 833.463 C 838.942,21.684 843.385,26.126 843.385,31.605 V 812.095 z"
 	      fill="#B3C6C0" />
 	</g>
 	<g
@@ -7923,5 +7924,27 @@
     </div>
   </foreignObject>
   <text x="695" y="390" style="font-size: 6px; fill: #0d3e3e;">{% blocktrans %}Lower values are better{% endblocktrans %}</text>
+</g>
+<g>
+  <!-- Trimlines for printing. -->
+  <line x1="0" y1="13" x2="15" y2="13" style="stroke: black; stroke-width: 1px;" />
+  <line x1="23" y1="-10" x2="23" y2="5" style="stroke: black; stroke-width: 1px;" />
+
+  <line x1="1800" y1="13" x2="1785" y2="13" style="stroke: black; stroke-width: 1px;" />
+  <line x1="1777" y1="-10" x2="1777" y2="5" style="stroke: black; stroke-width: 1px;" />
+
+  <line x1="23" y1="1279" x2="23" y2="1264" style="stroke: black; stroke-width: 1px;" />
+  <line x1="0" y1="1256" x2="15" y2="1256" style="stroke: black; stroke-width: 1px;" />
+
+  <line x1="1777" y1="1279" x2="1777" y2="1264" style="stroke: black; stroke-width: 1px;" />
+  <line x1="1800" y1="1256" x2="1785" y2="1256" style="stroke: black; stroke-width: 1px;" />
+
+  <!-- Uncomment lines below to show bounding box. -->
+  <!--
+  <line x1="23" y1="13" x2="23" y2="1256" style="stroke: black; stroke-width: 1px;" />
+  <line x1="23" y1="1256" x2="1777" y2="1256" style="stroke: black; stroke-width: 1px;" />
+  <line x1="1777" y1="1256" x2="1777" y2="13" style="stroke: black; stroke-width: 1px;" />
+  <line x1="1777" y1="13" x2="23" y2="13" style="stroke: black; stroke-width: 1px;" />
+  -->
 </g>
 </svg>
