@@ -6796,11 +6796,13 @@
 	  vertical-align: middle;
         }
     </style>
+    <!--
     <g transform="translate(253.59, 16.583)">
       <text transform="scale(1, 1)" style="fill:#95afa8;font-size:10px;" class="head2">
 	{% blocktrans %}WORKING DRAFT{% endblocktrans %}
       </text>
     </g>
+    -->
     <g transform="translate(135, 41.864)">
       <text transform="scale(0.8, 1)" class="head2">
 	{% blocktrans %}2012 PARTNER SCORECARD FOR{% endblocktrans %}
