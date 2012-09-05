@@ -5,7 +5,7 @@ from django.template import Context, Template
 # agency full names
 agency_name = {
     'AfDB': 'African Development Bank',
-    'EC': 'European Comission',
+    'EC': 'European Commission',
     'GAVI': 'GAVI Alliance',
     'GFATM': 'Global Fund to fight AIDS, TB and Malaria',
     'UK': 'United Kingdom',
