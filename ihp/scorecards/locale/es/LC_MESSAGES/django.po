@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-07 17:03+0200\n"
-"PO-Revision-Date: 2012-08-15 14:50\n"
+"PO-Revision-Date: 2012-09-05 22:31\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -41,8 +41,7 @@ msgstr "Monitoreo activo realizado en conjunto"
 
 #: models.py:167
 msgid "Number of development partner missions"
-msgstr ""
-"Número de organizaciones que proporcionan la financiación mancomunados"
+msgstr "Número de organizaciones que proporcionan financiamiento mancomunado"
 
 #: models.py:168
 #, python-format
@@ -51,7 +50,7 @@ msgid ""
 "allocated to civil society"
 msgstr ""
 "%(percentage)s%% de los asientos en el mecanismo de coordinación del sector "
-"salud son ocupados por la sociedad "
+"salud son ocupados por la sociedad civil"
 
 #: models.py:231 models.py:237
 msgid "REFLECTS GOOD PRACTICE (OR REFORM IN PROGRESS)"
@@ -86,8 +85,8 @@ msgid ""
 "A costed, comprehensive national HRH plan (integrated with the health plan) "
 "is being implemented or developed."
 msgstr ""
-"Se está aplicando (o elaborando) un plan nacional de recursos humanos "
-"sanitarios integral, presupuestado e integrado en el plan sanitario nacional"
+"Se está aplicando (o elaborando) un plan nacional integral de recursos "
+"humanos de salud, presupuestado e integrado en el plan nacional de salud"
 
 #: models.py:362
 #, python-format
@@ -95,16 +94,16 @@ msgid ""
 "%(percentage)d%% (or an equivalent published target) of the national budget "
 "is allocated to health."
 msgstr ""
-"Se asigna a sanidad el %(percentage)d%% (o una meta pública equivalente) de "
-"los presupuestos nacionales"
+"Se asigna al sector salud el %(percentage)d%% (o una meta pública "
+"equivalente) de los presupuestos nacionales"
 
 #: models.py:372
 msgid ""
 "Halve the proportion of health sector funding not disbursed against the "
 "approved annual budget."
 msgstr ""
-"Reducir a la mitad la financiación destinada al sector sanitario no\n"
-"desembolsada según el presupuesto anual aprobado"
+"Reducir a la mitad el financiamiento destinado al sector salud no "
+"desembolsado según el presupuesto anual aprobado"
 
 #: models.py:381
 msgid ""
@@ -127,7 +126,7 @@ msgid ""
 "A transparent and monitorable performance assessment framework is in place "
 "to assess progress in the health sector."
 msgstr ""
-"Se ha implantado un marco de evaluación de desempeño ransparente y "
+"Se ha implantado un marco de evaluación del desempeño ransparente y "
 "susceptible de supervisión, a fin de analizar los avances en el sector salud"
 
 #: models.py:410
@@ -158,8 +157,8 @@ msgstr "SCORECARD PARA EL PAÍS 2012"
 #: templates/scorecards/country-page-2.svg:7793
 msgid "Ratings are calculated using data up to and including 2011."
 msgstr ""
-"Las calificaciones se calculan con base en las estadísticas disponibles "
-"hasta el 2011 inclusive. "
+"Las calificaciones se calculan con base en la información disponible hasta "
+"el 2011 inclusive. "
 
 #: templates/scorecards/country-page-1.svg:5727
 #: templates/scorecards/country-page-2.svg:7796
@@ -247,8 +246,7 @@ msgstr "FINANCIAMIENTO MANCOMUNADO"
 
 #: templates/scorecards/country-page-1.svg:5796
 msgid "Number of Development Partners using Pooled Mechanisms"
-msgstr ""
-"Número de organizaciones que proporcionan la financiación mancomunados"
+msgstr "Número de organizaciones que proporcionan financiamiento mancomunado"
 
 #: templates/scorecards/country-page-1.svg:5800
 msgid "COUNTRY OWNERSHIP &amp; ACCOUNTABILITY"
@@ -520,7 +518,7 @@ msgid ""
 "TB incidence %(value)s per 100,000 in %(year)s. (%(arrow)s%(change_value)s "
 "since %(change_year)s)"
 msgstr ""
-"Incidencia de TBC por %(value)s por cada 100,000 habitantes en el %(year)s. "
+"Incidencia de TBC %(value)s por cada 100,000 habitantes en el %(year)s. "
 "(%(arrow)s%(change_value)s desde el %(change_year)s)"
 
 #: templates/scorecards/country-page-2.svg:7741
@@ -534,7 +532,7 @@ msgid ""
 "(%(arrow)s%(change_value)s since %(change_year)s)"
 msgstr ""
 "Población que utilizaba fuentes de agua potable mejoradas %(value)s en el "
-"%(year)s. (%(arrow)s%(change_value)s desde e%(change_year)s)"
+"%(year)s. (%(arrow)s%(change_value)s desde el %(change_year)s)"
 
 #: templates/scorecards/country-page-2.svg:7750
 #, python-format
