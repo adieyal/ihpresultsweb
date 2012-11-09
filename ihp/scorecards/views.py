@@ -176,6 +176,7 @@ def gov_scorecard_json(request, country_id, language):
                 "flag": country_flag(country.country)
                 },
             
+            "agencies": gov_scorecard.get_agencies(),
             "managing_results": gov_scorecard.get_managing_for_results(),
             "countries": [agency_logo(agency.agency) for agency in agencies],
             "health_systems": gov_scorecard.get_health_systems(),
@@ -184,7 +185,7 @@ def gov_scorecard_json(request, country_id, language):
             "systems": gov_scorecard.get_systems(),
             "progress": gov_scorecard.get_mdg_progress(),
             "commitments" : gov_scorecard.get_ratings(),
-            }
+        }
         r = json.dumps(a, indent=4)
     return HttpResponse(r, mimetype="application/json")
 

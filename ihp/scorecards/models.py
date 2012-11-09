@@ -79,6 +79,9 @@ class GovScorecard(object):
     def question(self, qnum):
         return smodels.GovQuestion.objects.get(question_number=qnum, submission=self.submission)
 
+    def get_agencies(self):
+        return [agency.agency for agency in self.country.agencies]
+
     def get_managing_for_results(self):
         r6G = self.ratings["6G"]
         r7G = self.ratings["7G"]
